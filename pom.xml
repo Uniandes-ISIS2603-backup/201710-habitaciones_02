@@ -2,13 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>co.edu.uniandes.csw.habitaciones</groupId>
-    <artifactId>habitaciones</artifactId>
-    <name>habitaciones</name>
+    <artifactId>habitaciones-02</artifactId>
+    <name>habitaciones-02</name>
     <packaging>pom</packaging>
     <version>0.1.0</version>
     <modules>
-        <module>habitaciones-logic</module>
-        <module>habitaciones-web</module>
+        <module>habitaciones-02-logic</module>
+        <module>habitaciones-02-web</module>
     </modules>
     
     <properties>
