@@ -3,21 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.habitaciones.entities;
+package co.edu.uniandes.csw.habitaciones.ejbs;
 
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
+import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
+import javax.ejb.Stateless;
+import javax.inject.Inject;
 
 /**
  *
  * @author s.cortes
  */
-@Entity
-@PrimaryKeyJoinColumn(referencedColumnName="idUsuario")
-public class ViajeroEntity extends UsuarioEntity
+@Stateless
+public class ViajeroLogic 
 {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
+    //----------------------------------------------------------------------------------------------------
+    
+    @Inject
+    private ViajeroPersistence persistence;
+    
+    //----------------------------------------------------------------------------------------------------
+    // METODO CONSTRUCTOR
     //----------------------------------------------------------------------------------------------------
 
     
@@ -25,5 +32,4 @@ public class ViajeroEntity extends UsuarioEntity
     // METODOS
     //----------------------------------------------------------------------------------------------------
 
-    
 }
