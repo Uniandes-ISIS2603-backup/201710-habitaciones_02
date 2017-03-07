@@ -3,32 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.habitaciones.entities;
+package co.edu.uniandes.csw.habitaciones.dtos;
 
+import co.edu.uniandes.csw.habitaciones.entities.UsuarioEntity;
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author s.cortes
  */
-@Entity
-@Table
-@Inheritance (strategy = InheritanceType.JOINED)
-public class UsuarioEntity implements Serializable
+@XmlRootElement
+public class UsuarioDTO implements Serializable
 {
+    
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     /**
      * El ID del usuario (el de todos los usuarios)
      */
@@ -38,7 +31,7 @@ public class UsuarioEntity implements Serializable
      * Nombre del usuario
      */
     private String nombre;
-    
+
     /**
      * Contrasena del usuario
      */
@@ -68,13 +61,60 @@ public class UsuarioEntity implements Serializable
      * telefono del usuario
      */
     private Integer telefono;
-
-
+    
+    //----------------------------------------------------------------------------------------------------
+    // CONTRUCTORES
+    //----------------------------------------------------------------------------------------------------
+    
+    /**
+     * Metodo Constructor por defecto de la clase
+     */
+    public UsuarioDTO()
+    {
+        
+    }
+    
+    /**
+     * Metodo contructor que inicializa los atributos a partir de la información contenida en el objeto UsuarioEntity
+     * @param entity Entidad con la que se crea el objeto DTO
+     */
+    public UsuarioDTO(UsuarioEntity entity)
+    {
+        if(entity != null)
+        {
+            this.nombre = entity.getNombre();
+            this.correoElectronico = entity.getCorreoElectronico();
+            this.contrasena = entity.getContrasena();
+            this.idUsuario = entity.getIdUsuario();
+            this.tipoDocumento = entity.getTipoDocumento();
+            this.numeroDocumento = entity.getNumeroDocumento();
+            this.direccion  =entity.getDireccion();
+            this.telefono = entity.getTelefono();
+        }
+    }
+    
+    
     //----------------------------------------------------------------------------------------------------
     // METODOS
     //----------------------------------------------------------------------------------------------------
     
-    
+    public UsuarioEntity toEntity()
+    {
+        UsuarioEntity entity = new UsuarioEntity();
+        
+        entity.setContrasena(this.getContrasena());
+        entity.setCorreoElectronico(this.getCorreoElectronico());
+        entity.setDireccion(this.getDireccion());
+        entity.setIdUsuario(this.getIdUsuario());
+        entity.setNombre(this.getNombre());
+        entity.setNumeroDocumento(this.getNumeroDocumento());
+        entity.setTelefono(this.getTelefono());
+        entity.setTipoDocumento(this.getTipoDocumento());
+       
+        
+        return entity;
+    }
+
     public Long getIdUsuario() {
         return idUsuario;
     }
@@ -139,4 +179,5 @@ public class UsuarioEntity implements Serializable
         this.telefono = telefono;
     }
     
+
 }
