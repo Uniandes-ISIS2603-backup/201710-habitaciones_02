@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.UsuarioEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 
 /**
  *
@@ -18,6 +19,9 @@ public class ViajeroDTO extends UsuarioDTO
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
 
+    /**
+     * Relacion One-to-Many con las Reservas 
+     */
     
     //----------------------------------------------------------------------------------------------------
     // METODOS CONSTRUCTORES
@@ -45,5 +49,20 @@ public class ViajeroDTO extends UsuarioDTO
     // METODOS
     //----------------------------------------------------------------------------------------------------
 
+    public ViajeroEntity toEntity()
+    {
+        ViajeroEntity entity  = new ViajeroEntity();
+        
+        entity.setContrasena(this.getContrasena());
+        entity.setCorreoElectronico(this.getCorreoElectronico());
+        entity.setDireccion(this.getDireccion());
+        entity.setIdUsuario(this.getIdUsuario());
+        entity.setNombre(this.getNombre());
+        entity.setNumeroDocumento(this.getNumeroDocumento());
+        entity.setTelefono(this.getTelefono());
+        entity.setTipoDocumento(this.getTipoDocumento());
+        
+        return entity;
+    }
     
 }

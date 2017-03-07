@@ -5,6 +5,8 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
+import co.edu.uniandes.csw.habitaciones.entities.UsuarioEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -12,7 +14,33 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author s.cortes
  */
 @XmlRootElement
-public class ViajeroDetailDTO extends ViajeroDTO
-{
-    
+public class ViajeroDetailDTO extends ViajeroDTO {
+    //----------------------------------------------------------------------------------------------------
+    // ATRIBUTOS DEL DETAIL DTO
+    //----------------------------------------------------------------------------------------------------
+
+    //----------------------------------------------------------------------------------------------------
+    // METODOS CONSTRUCTORES
+    //----------------------------------------------------------------------------------------------------
+    public ViajeroDetailDTO()
+    {
+
+    }
+
+    public ViajeroDetailDTO(UsuarioEntity entity)
+    {
+        super(entity);
+    }
+
+    //----------------------------------------------------------------------------------------------------
+    // METODOS
+    //----------------------------------------------------------------------------------------------------
+
+    @Override
+    public ViajeroEntity toEntity()
+    {
+        ViajeroEntity entity = super.toEntity();
+        
+        return entity;
+    }
 }
