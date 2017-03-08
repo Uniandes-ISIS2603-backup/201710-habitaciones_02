@@ -24,6 +24,8 @@ public class ViajeroEntity extends UsuarioEntity
      * Relacion One-to-Many con las Reservas
      */
     
+    //private List <ReservaEntity> reservas;
+    
     //----------------------------------------------------------------------------------------------------
     // METODOS
     //----------------------------------------------------------------------------------------------------
