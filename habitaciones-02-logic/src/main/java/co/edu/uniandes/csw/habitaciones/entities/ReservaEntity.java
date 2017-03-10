@@ -13,12 +13,14 @@ import javax.persistence.Temporal;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+
 /**
  *
  * @author dg.guarin20
  */
 
 @Entity
+
 
 public class ReservaEntity implements Serializable{
     
