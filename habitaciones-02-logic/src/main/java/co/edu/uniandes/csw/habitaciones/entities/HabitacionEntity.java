@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -26,7 +27,12 @@ public class HabitacionEntity implements Serializable{
     
     private double valorAlquiler;
     
+    private String rutaImagen;
+    
     private String descripcion;
+    
+    @OneToOne(mappedBy = "habitacion")
+    private DisponibilidadEntity disponibilidad;
 
     public Long getId() {
         return id;
@@ -59,6 +65,16 @@ public class HabitacionEntity implements Serializable{
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
+    }
+    
+    
     
      @Override
     public boolean equals(Object obj) {
