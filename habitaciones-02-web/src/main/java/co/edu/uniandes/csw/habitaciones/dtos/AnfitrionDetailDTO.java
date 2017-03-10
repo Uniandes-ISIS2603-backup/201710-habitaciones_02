@@ -6,11 +6,9 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.List;
+
 
 /**
  *
@@ -20,11 +18,6 @@ import java.util.List;
 public class AnfitrionDetailDTO extends AnfitrionDTO
 {
     
-    @OneToMany(fetch =FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="anfitrion" )
-    private List<ViviendaDetailDTO> viviendas;
-    
-    //@OneToMany(fetch =FetchType.EAGER, cascade = CascadeType.ALL, mappedBy="anfitrion" )
-    //private List<ReservaDetailDTO> reservas;
     
     /**
      * Constructor por defecto del Detail DTO

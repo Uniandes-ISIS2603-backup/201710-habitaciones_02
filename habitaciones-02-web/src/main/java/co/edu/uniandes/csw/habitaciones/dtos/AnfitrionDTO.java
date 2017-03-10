@@ -6,6 +6,9 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,6 +16,8 @@ import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
  */
 public class AnfitrionDTO extends UsuarioDTO
 {
+    
+    private List<ViviendaDTO> viviendas;
     /*
     Constructor por defecto
     */
@@ -29,6 +34,11 @@ public class AnfitrionDTO extends UsuarioDTO
     public AnfitrionDTO(AnfitrionEntity entity)
     {   
         super(entity);
+        viviendas  = new ArrayList<ViviendaDTO>();
+        for(ViviendaEntity entity2 : entity.getViviendas() )
+        {
+            viviendas.add(new ViviendaDTO(entity2));
+        }
     }
     
     
@@ -43,6 +53,12 @@ public class AnfitrionDTO extends UsuarioDTO
         entity.setNumeroDocumento(this.getNumeroDocumento());
         entity.setTelefono(this.getTelefono());
         entity.setDireccion(this.getDireccion());
+        List<ViviendaEntity> vivs = new ArrayList<ViviendaEntity> ();
+        for (ViviendaDTO viv : this.viviendas) 
+        {
+            vivs.add(viv.toEntity());
+        }
+        entity.setViviendas(vivs);
         return entity;
     }
 }
