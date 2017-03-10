@@ -19,6 +19,7 @@ import javax.persistence.OneToMany;
  *
  * @author ne.cabrera
  */
+
 @Entity
 public class ViviendaEntity implements Serializable 
 {
