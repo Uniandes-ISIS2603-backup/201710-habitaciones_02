@@ -33,12 +33,23 @@ public class AnfitrionDTO extends UsuarioDTO
      */
     public AnfitrionDTO(AnfitrionEntity entity)
     {   
-        super(entity);
+         if(entity != null)
+        {
+            this.nombre = entity.getNombre();
+            this.correoElectronico = entity.getCorreoElectronico();
+            this.contrasena = entity.getContrasena();
+            this.idUsuario = entity.getIdUsuario();
+            this.tipoDocumento = entity.getTipoDocumento();
+            this.numeroDocumento = entity.getNumeroDocumento();
+            this.direccion  =entity.getDireccion();
+            this.telefono = entity.getTelefono();
         viviendas  = new ArrayList<ViviendaDTO>();
         for(ViviendaEntity entity2 : entity.getViviendas() )
         {
             viviendas.add(new ViviendaDTO(entity2));
         }
+        }
+        
     }
     
     

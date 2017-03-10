@@ -13,7 +13,7 @@ import javax.persistence.Temporal;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+
 /**
  *
  * @author dg.guarin20
