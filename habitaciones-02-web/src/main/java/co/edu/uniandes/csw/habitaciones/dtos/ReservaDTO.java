@@ -39,13 +39,16 @@ public ReservaDTO(ReservaEntity entity)
     }
 }
 public ReservaEntity toEntity()
-{
+{   
+     
     ReservaEntity entity = new ReservaEntity(); 
+    
     entity.setId(this.id);
-    entity.setFechaInicioEstadia(fechaIniciodeEstadia);
-    entity.setFechaTerminacionEstadia(fechaTerminacionEstadia);
-    entity.setCancelado(cancelado);
+    entity.setFechaInicioEstadia(this.fechaIniciodeEstadia);
+    entity.setFechaTerminacionEstadia(this.fechaTerminacionEstadia);
+    entity.setCancelado(this.cancelado);
     return entity;
+    
 }
 /**
      * @return id long
@@ -100,7 +103,7 @@ public ReservaEntity toEntity()
       /**
      * @param can lo que cancela
      */ 
-    public void setCancelado (boolean can)
+    public void setCancelado (Boolean can)
     {
         this.cancelado = can;
     }
