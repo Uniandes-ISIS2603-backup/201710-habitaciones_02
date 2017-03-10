@@ -32,8 +32,8 @@ public class PagoEntity implements Serializable
     
     private String tipoTramite;
     
-    //@OneToOne(mappedBy = "pago")
-    //private ReservaEntity reserva;
+    @OneToOne(mappedBy = "pago")
+    private ReservaEntity reserva;
     
     //public ReservaEntity getReserva()
     //{
