@@ -6,6 +6,10 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -18,7 +22,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class AnfitrionDetailDTO extends AnfitrionDTO
 {
     
-    
+    private List<ViviendaDTO> viviendas;
+    private List<ReservaDTO> reservas;
     /**
      * Constructor por defecto del Detail DTO
      */
@@ -33,6 +38,20 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
     public AnfitrionDetailDTO(AnfitrionEntity entity)
     {
         super(entity);
+        if(entity!=null)
+        {   
+            viviendas  = new ArrayList<ViviendaDTO>();
+        for(ViviendaEntity entity2 : entity.getViviendas() )
+        {
+            viviendas.add(new ViviendaDTO(entity2));
+        }
+        reservas = new ArrayList<>();
+        for(ReservaEntity entityReserva : entity.getReservas())
+        {
+            ReservaDTO reserva = new ReservaDTO(entityReserva);
+            reservas.add(reserva);
+        }
+        }
     }
     
     @Override
