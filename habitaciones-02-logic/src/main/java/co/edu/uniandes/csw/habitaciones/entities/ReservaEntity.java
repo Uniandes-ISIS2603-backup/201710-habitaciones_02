@@ -11,10 +11,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import java.util.Date;
+import javax.persistence.Entity;
 /**
  *
  * @author dg.guarin20
  */
+@Entity
 public class ReservaEntity implements Serializable{
     
     @Id
