@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.habitaciones.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,6 +18,7 @@ import javax.persistence.Temporal;
  *
  * @author ne.cabrera
  */
+@Entity
 public class PagoEntity implements Serializable
 {
     @Id
@@ -31,14 +33,14 @@ public class PagoEntity implements Serializable
     private String tipoTramite;
     
     //@OneToOne(mappedBy = "pago")
-    //private Reserva reserva;
+    //private ReservaEntity reserva;
     
-    //public Reserva getReserva()
+    //public ReservaEntity getReserva()
     //{
     //    return reserva;
     //}
     
-    //public void setReserva(Reserva pReserva)
+    //public void setReserva(ReservaEntity pReserva)
     //{
     //    this.reserva = pReserva;
     //}

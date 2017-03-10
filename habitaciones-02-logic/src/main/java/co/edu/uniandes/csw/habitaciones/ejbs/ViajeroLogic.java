@@ -5,23 +5,23 @@
  */
 package co.edu.uniandes.csw.habitaciones.ejbs;
 
-import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
+//import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
+//import javax.ejb.Stateless;
+//import javax.inject.Inject;
 
 /**
  *
  * @author s.cortes
  */
-@Stateless
-public class ViajeroLogic 
-{
+//@Stateless
+//public class ViajeroLogic 
+//{
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
     
-    @Inject
-    private ViajeroPersistence persistence;
+//    @Inject
+//    private ViajeroPersistence persistence;
     
     //----------------------------------------------------------------------------------------------------
     // METODO CONSTRUCTOR
@@ -32,4 +32,4 @@ public class ViajeroLogic
     // METODOS
     //----------------------------------------------------------------------------------------------------
 
-}
+//}
