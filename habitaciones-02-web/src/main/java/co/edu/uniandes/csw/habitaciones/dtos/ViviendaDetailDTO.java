@@ -5,7 +5,10 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
+import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -15,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ViviendaDetailDTO extends ViviendaDTO
 {
-    //private List<HabitacionDTO> habitaciones;
+    private List<HabitacionDTO> habitaciones;
     public ViviendaDetailDTO()
     {
         super();
@@ -24,15 +27,23 @@ public class ViviendaDetailDTO extends ViviendaDTO
     public ViviendaDetailDTO(ViviendaEntity entity)
     {
         super(entity);
-        //if(entity != null)
-        //{   
-        //}
+        habitaciones = new ArrayList<HabitacionDTO>();
+        for(HabitacionEntity ent: entity.getHabitaciones())
+        {
+            habitaciones.add(new HabitacionDTO(ent));
+        }
     }
     
     @Override
     public ViviendaEntity toEntity()
     {
         ViviendaEntity entity = super.toEntity();
+        List<HabitacionEntity> habs = new ArrayList<HabitacionEntity>();
+        for(HabitacionDTO habs2 : this.habitaciones)
+        {
+            habs.add(habs2.toEntity());
+        }
+        entity.setHabitaciones(habs);
         return entity;
     }
 }

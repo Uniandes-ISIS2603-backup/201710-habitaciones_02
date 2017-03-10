@@ -32,20 +32,20 @@ public class ViviendaEntity implements Serializable
     private String direccion;
     
     @OneToMany(fetch =FetchType.LAZY, mappedBy = "vivienda")
-    private List<HabitacionEntity> habitaciones;
+    private List<HabitacionEntity> habitacion;
     
     @ManyToOne
     private AnfitrionEntity anfitrion;
     
     public List<HabitacionEntity> getHabitaciones()
     {
-        return habitaciones;
+        return habitacion;
     }
     
-    //public void setHabitaciones(List<HabitacionEntity> pHabitaciones)
-    //{
-    //    this.habitaciones = pHabitaciones;
-    //}
+    public void setHabitaciones(List<HabitacionEntity> pHabitaciones)
+    {
+        this.habitacion = pHabitaciones;
+    }
 
     /**
      * @return the id
