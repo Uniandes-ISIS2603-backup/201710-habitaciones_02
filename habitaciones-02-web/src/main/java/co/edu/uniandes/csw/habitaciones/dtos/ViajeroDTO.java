@@ -36,9 +36,19 @@ public class ViajeroDTO extends UsuarioDTO
      * Metodo contructor que inicializa los atributos a partir de la información contenida en el objeto UsuarioEntity
      * @param entity Entidad con la que se crea el objeto DTO
      */
-    public ViajeroDTO(UsuarioEntity entity)
+    public ViajeroDTO(ViajeroEntity entity)
     {
-        super(entity);
+        if(entity != null)
+        {
+            this.nombre = entity.getNombre();
+            this.correoElectronico = entity.getCorreoElectronico();
+            this.contrasena = entity.getContrasena();
+            this.idUsuario = entity.getIdUsuario();
+            this.tipoDocumento = entity.getTipoDocumento();
+            this.numeroDocumento = entity.getNumeroDocumento();
+            this.direccion  =entity.getDireccion();
+            this.telefono = entity.getTelefono();
+        }
     }
     
     

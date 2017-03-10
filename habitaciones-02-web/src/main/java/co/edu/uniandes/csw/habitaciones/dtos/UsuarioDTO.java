@@ -25,42 +25,42 @@ public class UsuarioDTO implements Serializable
     /**
      * El ID del usuario (el de todos los usuarios)
      */
-    private Long idUsuario;
+    protected Long idUsuario;
     
     /**
      * Nombre del usuario
      */
-    private String nombre;
+    protected String nombre;
 
     /**
      * Contrasena del usuario
      */
-    private String contrasena;
+    protected String contrasena;
     
     /**
      * Correo electronico del usuario
      */
-    private String correoElectronico;
+    protected String correoElectronico;
     
     /**
      * tipo de documento de identificacion
      */
-    private String tipoDocumento;
+    protected String tipoDocumento;
     
     /**
      * numero del documento de identificacion
      */
-    private Integer numeroDocumento;
+    protected Integer numeroDocumento;
     
     /**
      * direccion del usuario
      */
-    private String direccion;
+    protected String direccion;
     
     /**
      * telefono del usuario
      */
-    private Integer telefono;
+    protected Integer telefono;
     
     //----------------------------------------------------------------------------------------------------
     // CONTRUCTORES
@@ -68,16 +68,16 @@ public class UsuarioDTO implements Serializable
     
     /**
      * Metodo Constructor por defecto de la clase
-     */
+     
     public UsuarioDTO()
     {
         
     }
-    
+    */
     /**
      * Metodo contructor que inicializa los atributos a partir de la información contenida en el objeto UsuarioEntity
      * @param entity Entidad con la que se crea el objeto DTO
-     */
+     
     public UsuarioDTO(UsuarioEntity entity)
     {
         if(entity != null)
@@ -92,12 +92,12 @@ public class UsuarioDTO implements Serializable
             this.telefono = entity.getTelefono();
         }
     }
-    
+    */
     
     //----------------------------------------------------------------------------------------------------
     // METODOS
     //----------------------------------------------------------------------------------------------------
-    
+    /**
     public UsuarioEntity toEntity()
     {
         UsuarioEntity entity = new UsuarioEntity();
@@ -114,6 +114,7 @@ public class UsuarioDTO implements Serializable
         
         return entity;
     }
+    **/
 
     public Long getIdUsuario() {
         return idUsuario;
