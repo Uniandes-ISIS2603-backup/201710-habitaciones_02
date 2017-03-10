@@ -21,11 +21,16 @@ import javax.persistence.ManyToOne;
 
 @Entity
 
-
 public class ReservaEntity implements Serializable{
     
     @ManyToOne
     private ViajeroEntity viajero;
+    @ManyToOne
+    private AnfitrionEntity anfitrion;
+    @ManyToOne
+    private HabitacionEntity habitacion;
+    @OneToOne
+    private PagoEntity pago;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
