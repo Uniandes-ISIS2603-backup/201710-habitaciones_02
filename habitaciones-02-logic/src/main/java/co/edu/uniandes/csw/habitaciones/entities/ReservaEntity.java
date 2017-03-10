@@ -13,6 +13,7 @@ import javax.persistence.Temporal;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -29,7 +30,7 @@ public class ReservaEntity implements Serializable{
     private AnfitrionEntity anfitrion;
     @ManyToOne
     private HabitacionEntity habitacion;
-    @OneToOne
+    @OneToOne(mappedBy = "reserva")
     private PagoEntity pago;
     
     @Id
