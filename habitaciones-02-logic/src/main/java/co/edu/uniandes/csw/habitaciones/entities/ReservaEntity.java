@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 /**
  *
  * @author dg.guarin20
@@ -21,7 +22,8 @@ import javax.persistence.Entity;
 
 public class ReservaEntity implements Serializable{
     
-    
+    @ManyToOne
+    private ViajeroEntity viajero;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
