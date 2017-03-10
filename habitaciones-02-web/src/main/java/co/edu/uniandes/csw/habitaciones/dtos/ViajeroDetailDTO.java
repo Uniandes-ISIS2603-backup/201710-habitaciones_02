@@ -5,8 +5,11 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
+import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.UsuarioEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -19,6 +22,8 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     // ATRIBUTOS DEL DETAIL DTO
     //----------------------------------------------------------------------------------------------------
 
+    private List<ReservaDTO> reservas;
+    
     //----------------------------------------------------------------------------------------------------
     // METODOS CONSTRUCTORES
     //----------------------------------------------------------------------------------------------------
@@ -27,9 +32,18 @@ public class ViajeroDetailDTO extends ViajeroDTO {
 
     }
 
-    public ViajeroDetailDTO(UsuarioEntity entity)
+    public ViajeroDetailDTO(ViajeroEntity entity)
     {
         super(entity);
+        if(entity != null)
+        {
+            reservas = new ArrayList<>();
+            for(ReservaEntity entityReserva : entity.getReservas())
+            {
+                ReservaDTO reserva = new ReservaDTO(entityReserva);
+                reservas.add(reserva);
+            }
+        }
     }
 
     //----------------------------------------------------------------------------------------------------
