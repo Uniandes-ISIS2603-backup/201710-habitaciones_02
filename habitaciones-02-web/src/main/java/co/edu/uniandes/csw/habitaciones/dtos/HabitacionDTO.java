@@ -19,6 +19,7 @@ public class HabitacionDTO implements Serializable {
     private Long id;
     private double area;
     private double valorAlquiler;
+    private String rutaImagen;
     private String descripcion;
     
     public HabitacionDTO()
@@ -34,6 +35,7 @@ public class HabitacionDTO implements Serializable {
             this.area = entity.getArea();
             this.valorAlquiler = entity.getValorAlquiler();
             this.descripcion = entity.getDescripcion();
+            this.rutaImagen = entity.getRutaImagen();
         }
     }
     
@@ -44,6 +46,7 @@ public class HabitacionDTO implements Serializable {
         entity.setArea(this.getArea());
         entity.setValorAlquiler(this.getValorAlquiler());
         entity.setDescripcion(this.getDescripcion());
+        entity.setRutaImagen(this.getRutaImagen());
         return entity;
     }
 
@@ -77,6 +80,14 @@ public class HabitacionDTO implements Serializable {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
     }
     
     

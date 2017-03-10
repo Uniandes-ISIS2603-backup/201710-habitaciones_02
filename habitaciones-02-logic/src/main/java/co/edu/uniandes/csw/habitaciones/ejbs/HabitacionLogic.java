@@ -5,8 +5,8 @@
  */
 package co.edu.uniandes.csw.habitaciones.ejbs;
 
-
 import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
+import co.edu.uniandes.csw.habitaciones.persistence.HabitacionPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -17,11 +17,33 @@ import javax.inject.Inject;
  */
 @Stateless
 public class HabitacionLogic {
+
+    @Inject
+    private HabitacionPersistence persistence;
+
+    public List<HabitacionEntity> getHabitaciones() {
+        
+        return persistence.findAll();
+    }
     
-  //  @Inject private HabitacionPersistence persistence;
-    
-   // public List<HabitacionEntity> getHabitaciones()
-    //{
-    //    return persistence.findAll();s
-   // }
+    public HabitacionEntity getHabitacion(Long id) {
+
+        return persistence.find(id);
+    }
+
+    public HabitacionEntity createHabitacion(HabitacionEntity entity) {
+
+        persistence.create(entity);
+        return entity;
+    }
+
+    public HabitacionEntity updateHabitacion(HabitacionEntity entity) {
+
+        return persistence.update(entity);
+    }
+
+    public void deleteHabitacion(Long id) {
+
+        persistence.delete(id);
+    }
 }
