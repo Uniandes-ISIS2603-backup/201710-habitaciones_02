@@ -33,6 +33,39 @@ public class ReservaEntity implements Serializable{
     @OneToOne(mappedBy = "reserva")
     private PagoEntity pago;
     
+    public ViajeroEntity getviajero()
+    {
+        return viajero;
+    }
+    public void setViajero(ViajeroEntity v)
+    {
+        viajero =v;
+    }
+    public AnfitrionEntity getanfitrion()
+    {
+        return anfitrion;
+    }
+     public void setAnfitrion(AnfitrionEntity an)
+    {
+        anfitrion =an;
+    }
+    public HabitacionEntity getHabitacion()
+    {
+        return habitacion;
+        
+    }
+     public void setHabitacion(HabitacionEntity h)
+    {
+        habitacion = h;
+    }
+    public PagoEntity getPago()
+    {
+        return pago;
+    }
+     public void setPago(PagoEntity p)
+    {
+        pago = p;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
@@ -51,6 +84,7 @@ public class ReservaEntity implements Serializable{
     {
         return id;
     }
+    
      /**
      * @param i long
      */ 

@@ -6,7 +6,11 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
+
+
 
 /**
  *
@@ -14,6 +18,9 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class ReservaDetailDTO extends ReservaDTO {
+    
+    private HabitacionDTO habitacion;
+    private PagoDTO pago;
     
     public ReservaDetailDTO()
     {
@@ -23,6 +30,15 @@ public class ReservaDetailDTO extends ReservaDTO {
     public ReservaDetailDTO(ReservaEntity entity)
     {
         super(entity);
+        if(entity!= null)
+        {
+         PagoDTO pdto = new PagoDTO( entity.getPago());
+         HabitacionDTO hdto = new HabitacionDTO (entity.getHabitacion());
+         habitacion = hdto;
+         pago = pdto;
+        }
+        
+        
     }
     
     @Override
