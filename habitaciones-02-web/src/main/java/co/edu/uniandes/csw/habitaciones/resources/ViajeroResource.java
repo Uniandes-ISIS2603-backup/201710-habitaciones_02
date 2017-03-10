@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
 
@@ -56,6 +57,12 @@ public class ViajeroResource
     public ViajeroDetailDTO getViajero(@PathParam("id") Long id)
     {
         return new ViajeroDetailDTO(viajeroLogic.getViajero(id));
+    }
+    
+    @POST
+    public ViajeroDetailDTO crearViajero(ViajeroDetailDTO dto)
+    {
+        return new ViajeroDetailDTO(viajeroLogic.createViajero(dto.toEntity()));
     }
     
     @PUT
