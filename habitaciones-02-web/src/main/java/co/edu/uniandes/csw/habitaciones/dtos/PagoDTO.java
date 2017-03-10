@@ -39,7 +39,7 @@ public class PagoDTO
             fechaDePago = entity.getFechaDePago();
             pago = entity.getPago();
             tipoTramite = entity.getTipoTramite();
-            
+            reserva = new ReservaDTO(entity.getReserva());
         }
     }
     
@@ -48,7 +48,6 @@ public class PagoDTO
         PagoEntity entity = new PagoEntity();
         entity.setId(this.getId());
         entity.setFechaDePago(this.fechaDePago);
-        entity.setPago(this.getPago());
         entity.setPago(this.getPago());
         return entity;
     }
