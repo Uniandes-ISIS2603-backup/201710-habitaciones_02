@@ -34,8 +34,8 @@ public class ViviendaEntity implements Serializable
     @OneToMany(fetch =FetchType.LAZY, mappedBy = "vivienda")
     private List<HabitacionEntity> habitaciones;
     
-    //@ManyToOne
-    //private AnfitrionEntity anfitrion;
+    @ManyToOne
+    private AnfitrionEntity anfitrion;
     
     public List<HabitacionEntity> getHabitaciones()
     {
