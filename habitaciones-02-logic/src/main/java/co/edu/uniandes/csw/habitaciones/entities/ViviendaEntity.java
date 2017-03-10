@@ -11,12 +11,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
  *
  * @author ne.cabrera
  */
+
 @Entity
 public class ViviendaEntity implements Serializable 
 {
@@ -28,13 +30,16 @@ public class ViviendaEntity implements Serializable
     
     private String direccion;
     
-    //@OneToMany(mappedBy = "vivienda")
-    //private List<HabitacionEntity> habitaciones;
+    @OneToMany(fetch =FetchType.LAZY, mappedBy = "vivienda")
+    private List<HabitacionEntity> habitaciones;
     
-    //public List<HabitacionEntity> getHabitaciones()
-    //{
-    //    return habitaciones;
-    //}
+    //@ManyToOne
+    //private AnfitrionEntity anfitrion;
+    
+    public List<HabitacionEntity> getHabitaciones()
+    {
+        return habitaciones;
+    }
     
     //public void setHabitaciones(List<HabitacionEntity> pHabitaciones)
     //{
