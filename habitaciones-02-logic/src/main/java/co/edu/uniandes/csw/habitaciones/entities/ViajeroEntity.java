@@ -27,8 +27,7 @@ public class ViajeroEntity extends UsuarioEntity
      */
     @OneToMany(mappedBy = "viajero")
     private List<ReservaEntity> reservas;
-    
-    //private List <ReservaEntity> reservas;
+
     
     //----------------------------------------------------------------------------------------------------
     // METODO
