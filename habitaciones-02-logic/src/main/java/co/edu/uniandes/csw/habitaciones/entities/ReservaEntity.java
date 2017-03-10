@@ -12,12 +12,20 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+
 /**
  *
  * @author dg.guarin20
  */
+
 @Entity
+
+
 public class ReservaEntity implements Serializable{
+    
+    @ManyToOne
+    private ViajeroEntity viajero;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +34,7 @@ public class ReservaEntity implements Serializable{
     
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaIniciodeEstadia;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaTerminacionEstadia;
     private Boolean cancelado;
    
