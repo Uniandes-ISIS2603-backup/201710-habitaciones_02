@@ -9,6 +9,8 @@
     <class>co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity</class>
     <class>co.edu.uniandes.csw.habitaciones.entities.UsuarioEntity</class>
     <class>co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity</class>
+    <class>co.edu.uniandes.csw.habitaciones.entities.ReservaEntity</class>
+    <class>co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity</class>
     <properties>
       <property name="eclipselink.logging.level" value="FINE"/>
       <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>

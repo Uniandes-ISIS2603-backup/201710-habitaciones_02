@@ -16,11 +16,19 @@ import javax.persistence.OneToMany;
 @Entity
 public class AnfitrionEntity extends UsuarioEntity 
 {
-    @OneToMany(fetch =FetchType.EAGER, cascade = CascadeType.ALL, mappedBy="anfitrion" )
+    @OneToMany(fetch =FetchType.EAGER, mappedBy="anfitrion" )
     private List<ViviendaEntity> viviendas;
     
-    //@OneToMany(fetch =FetchType.EAGER, cascade = CascadeType.ALL, mappedBy="anfitrion" )
-    //private List<ReservaDetailDTO> reservas;
+    @OneToMany(fetch =FetchType.EAGER, mappedBy="anfitrion" )
+    private List<ReservaEntity> reservas;
+
+    public List<ReservaEntity> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<ReservaEntity> reservas) {
+        this.reservas = reservas;
+    }
 
 
     public List<ViviendaEntity> getViviendas() {
