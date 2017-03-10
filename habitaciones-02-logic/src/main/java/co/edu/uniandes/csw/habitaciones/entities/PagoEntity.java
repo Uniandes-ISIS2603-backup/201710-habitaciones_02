@@ -35,15 +35,15 @@ public class PagoEntity implements Serializable
     @OneToOne
     private ReservaEntity reserva;
     
-    //public ReservaEntity getReserva()
-    //{
-    //    return reserva;
-    //}
+    public ReservaEntity getReserva()
+    {
+        return reserva;
+    }
     
-    //public void setReserva(ReservaEntity pReserva)
-    //{
-    //    this.reserva = pReserva;
-    //}
+    public void setReserva(ReservaEntity pReserva)
+    {
+        this.reserva = pReserva;
+    }
 
     /**
      * @return the id
