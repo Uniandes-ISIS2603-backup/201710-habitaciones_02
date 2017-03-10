@@ -24,8 +24,11 @@ public class PagoDTO
     
     private String tipoTramite;
     
+    private ReservaDTO reserva;
+    
     public PagoDTO()
     {
+        
     }
     
     public PagoDTO(PagoEntity entity)
@@ -36,6 +39,7 @@ public class PagoDTO
             fechaDePago = entity.getFechaDePago();
             pago = entity.getPago();
             tipoTramite = entity.getTipoTramite();
+            
         }
     }
     

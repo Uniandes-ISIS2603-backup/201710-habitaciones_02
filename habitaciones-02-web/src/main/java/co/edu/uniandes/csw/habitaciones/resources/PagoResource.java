@@ -5,7 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
-import co.edu.uniandes.csw.habitaciones.dtos.PagoDetailDTO;
+import co.edu.uniandes.csw.habitaciones.dtos.PagoDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.PagoLogic;
 import co.edu.uniandes.csw.habitaciones.entities.PagoEntity;
 import java.util.ArrayList;
@@ -38,42 +38,42 @@ public class PagoResource
     @QueryParam("page") private Integer page;
     @QueryParam("limit") private Integer maxRecords;
     
-    private List<PagoDetailDTO> listEntity2DTO(List<PagoEntity> entityList)
+    private List<PagoDTO> listEntity2DTO(List<PagoEntity> entityList)
     {
-        List<PagoDetailDTO> list = new ArrayList<>();
+        List<PagoDTO> list = new ArrayList<>();
         for (PagoEntity entity : entityList) 
         {
-            list.add(new PagoDetailDTO(entity));
+            list.add(new PagoDTO(entity));
         }
         return list;
     }
     
     @GET
-    public List<PagoDetailDTO> getPagos() 
+    public List<PagoDTO> getPagos() 
     {
         return listEntity2DTO(pagoLogic.getPagos());
     }
     
     @GET
     @Path("{id: \\d+}")
-    public PagoDetailDTO getPago(@PathParam("id") Long id) 
+    public PagoDTO getPago(@PathParam("id") Long id) 
     {
-        return new PagoDetailDTO(pagoLogic.getPago(id));
+        return new PagoDTO(pagoLogic.getPago(id));
     }
     
     @POST
-    public PagoDetailDTO createPago(PagoDetailDTO dto) 
+    public PagoDTO createPago(PagoDTO dto) 
     {
-        return new PagoDetailDTO(pagoLogic.createPago(dto.toEntity()));
+        return new PagoDTO(pagoLogic.createPago(dto.toEntity()));
     }
     
     @PUT
     @Path("{id: \\d+}")
-    public PagoDetailDTO updatePago(@PathParam("id") Long id, PagoDetailDTO dto) 
+    public PagoDTO updatePago(@PathParam("id") Long id, PagoDTO dto) 
     {
         PagoEntity entity = dto.toEntity();
         entity.setId(id);
-        return new PagoDetailDTO(pagoLogic.updatePago(entity));
+        return new PagoDTO(pagoLogic.updatePago(entity));
     }
     
     @DELETE
