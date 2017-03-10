@@ -5,7 +5,9 @@
  */
 package co.edu.uniandes.csw.habitaciones.entities;
 
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 
 /**
@@ -23,12 +25,30 @@ public class ViajeroEntity extends UsuarioEntity
     /**
      * Relacion One-to-Many con las Reservas
      */
+    @OneToMany(mappedBy = "viajero")
+    private List<ReservaEntity> reservas;
     
     //private List <ReservaEntity> reservas;
     
     //----------------------------------------------------------------------------------------------------
-    // METODOS
+    // METODO
     //----------------------------------------------------------------------------------------------------
 
+    /**
+     * 
+     * @return 
+     */
+    public List<ReservaEntity> getReservas() {
+        return reservas;
+    }
+
+    /**
+     * 
+     * @param reservas 
+     */
+    public void setReservas(List<ReservaEntity> reservas) {
+        this.reservas = reservas;
+    }
+    
     
 }
