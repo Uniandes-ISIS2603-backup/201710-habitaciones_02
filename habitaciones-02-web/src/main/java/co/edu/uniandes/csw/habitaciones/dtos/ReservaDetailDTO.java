@@ -22,6 +22,7 @@ public class ReservaDetailDTO extends ReservaDTO {
     private HabitacionDTO habitacion;
     private PagoDTO pago;
     
+    
     public ReservaDetailDTO()
     {
         
@@ -41,10 +42,12 @@ public class ReservaDetailDTO extends ReservaDTO {
         
     }
     
-    @Override
-     public ReservaEntity toEntity() {
+     @Override
+     public ReservaEntity toEntity() {   
+         
         ReservaEntity entity = super.toEntity();
         return entity;
+        
     }
     
     
