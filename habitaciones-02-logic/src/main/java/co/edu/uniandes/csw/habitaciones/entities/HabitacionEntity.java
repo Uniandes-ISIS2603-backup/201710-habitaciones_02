@@ -6,10 +6,13 @@
 package co.edu.uniandes.csw.habitaciones.entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 /**
@@ -31,8 +34,14 @@ public class HabitacionEntity implements Serializable{
     
     private String descripcion;
     
-    @OneToOne(mappedBy = "habitacion")
-    private DisponibilidadEntity disponibilidad;
+    @OneToMany(mappedBy = "habitacion")
+    private List<DisponibilidadEntity> disponibilidades;
+    
+    @OneToMany(mappedBy = "habitacion")
+    private List<ReservaEntity> reservas;
+    
+    @ManyToOne
+    private ViviendaEntity vivienda;
 
     public Long getId() {
         return id;
