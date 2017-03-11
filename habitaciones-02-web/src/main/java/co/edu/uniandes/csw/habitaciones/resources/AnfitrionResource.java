@@ -47,6 +47,7 @@ public class AnfitrionResource
     @GET
     public List<AnfitrionDetailDTO> getAnfitriones()
     {
+        
         return listEntity2DTO(logica.getAnfitriones());
     }
     
