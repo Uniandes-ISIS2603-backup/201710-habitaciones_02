@@ -10,7 +10,7 @@ import co.edu.uniandes.csw.habitaciones.persistence.ReservaPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
+
 
 /**
  *
@@ -19,31 +19,31 @@ import javax.persistence.EntityManager;
 @Stateless
 public class ReservaLogic {
     
-    @Inject private ReservaPersistence resP;
+    @Inject private ReservaPersistence persistence;
   
+    public List<ReservaEntity> findReservas()
+    {
+        return persistence.findAll();
+    }
+   
     public ReservaEntity findReserva(Long id)
     {
-        return resP.find(id);
+        return persistence.find(id);
     }
      public ReservaEntity createReserva(ReservaEntity entity)
     {
-        return resP.create(entity);
+        return persistence.create(entity);
     }
      
       public ReservaEntity updateReserva(ReservaEntity entity)
     {
-        return resP.update(entity);
+        return persistence.update(entity);
     }
       
     public void delete(Long id)
     {
-        resP.delete(id);
+        persistence.delete(id);
         
     }
-    public List<ReservaEntity> findReservas()
-    {
-  
-        return resP.findAll();
-    }
-   
+
 }
