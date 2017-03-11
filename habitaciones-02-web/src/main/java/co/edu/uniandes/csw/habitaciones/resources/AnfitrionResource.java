@@ -58,13 +58,13 @@ public class AnfitrionResource
         return new AnfitrionDetailDTO (logica.getAnfitrion(id));
     }
     @POST
-    public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo)
+    public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo) throws BusinessLogicException
     {
         if(dtoo!=null)
         {
         return new AnfitrionDetailDTO (logica.createAnfitrion(dtoo.toEntity()));
         }
-        
+        else throw new BusinessLogicException("Objeto inválido");
     }
     
     @PUT
