@@ -55,27 +55,27 @@ public class HabitacionResource {
     }
 
     @GET
-    public List<HabitacionDetailDTO> getEmployees() {
+    public List<HabitacionDetailDTO> getHabitaciones() {
 
         return listEntity2DTO(habitacionLogic.getHabitaciones());
     }
 
     @GET
     @Path("{id: \\d+}")
-    public HabitacionDetailDTO getEmployee(@PathParam("id") Long id) {
+    public HabitacionDetailDTO getHabitacion(@PathParam("id") Long id) {
 
         return new HabitacionDetailDTO(habitacionLogic.getHabitacion(id));
     }
 
     @POST
-    public HabitacionDetailDTO createEmployee(HabitacionDetailDTO dto) {
+    public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) {
 
         return new HabitacionDetailDTO(habitacionLogic.createHabitacion(dto.toEntity()));
     }
 
     @PUT
     @Path("{id: \\d+}")
-    public HabitacionDetailDTO updateEmployee(@PathParam("id") Long id, HabitacionDetailDTO dto) {
+    public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, HabitacionDetailDTO dto) {
 
         HabitacionEntity entity = dto.toEntity();
         entity.setId(id);
@@ -85,7 +85,7 @@ public class HabitacionResource {
 
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteEmployee(@PathParam("id") Long id) {
+    public void deleteHabitacion(@PathParam("id") Long id) {
 
         habitacionLogic.deleteHabitacion(id);
     }
