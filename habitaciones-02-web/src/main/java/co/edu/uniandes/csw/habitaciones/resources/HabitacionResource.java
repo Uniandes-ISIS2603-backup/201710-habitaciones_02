@@ -7,7 +7,6 @@ package co.edu.uniandes.csw.habitaciones.resources;
 
 import co.edu.uniandes.csw.habitaciones.ejbs.HabitacionLogic;
 import co.edu.uniandes.csw.habitaciones.dtos.HabitacionDetailDTO;
-import co.edu.uniandes.csw.habitaciones.dtos.HabitacionDTO;
 import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +69,9 @@ public class HabitacionResource {
     @POST
     public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) {
 
-        return new HabitacionDetailDTO(habitacionLogic.createHabitacion(dto.toEntity()));
+        HabitacionDetailDTO nuevaH = new HabitacionDetailDTO(habitacionLogic.createHabitacion(dto.toEntity()));
+        
+        return nuevaH ;
     }
 
     @PUT
