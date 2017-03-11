@@ -8,6 +8,7 @@ package co.edu.uniandes.csw.habitaciones.resources;
 import co.edu.uniandes.csw.habitaciones.dtos.ViviendaDetailDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.ViviendaLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -62,8 +63,9 @@ public class ViviendaResource
     }
     
     @POST
-    public ViviendaDetailDTO createVivienda(ViviendaDetailDTO dto) 
+    public ViviendaDetailDTO createVivienda(ViviendaDetailDTO dto) throws  BusinessLogicException
     {
+        System.out.println("aaaa");
         return new ViviendaDetailDTO(viviendaLogic.createVivienda(dto.toEntity()));
     }
     

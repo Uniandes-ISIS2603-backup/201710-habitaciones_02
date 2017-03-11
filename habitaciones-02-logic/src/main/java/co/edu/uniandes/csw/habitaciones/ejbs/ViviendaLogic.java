@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.habitaciones.ejbs;
 
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import co.edu.uniandes.csw.habitaciones.persistence.ViviendaPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -30,9 +31,16 @@ public class ViviendaLogic
         return persistence.find(id);
     }
     
-    public ViviendaEntity createVivienda(ViviendaEntity vivienda)
+    public ViviendaEntity createVivienda(ViviendaEntity vivienda) throws BusinessLogicException
     {
-        persistence.create(vivienda);
+        if(vivienda.getHabitaciones().isEmpty())
+        {
+            throw new BusinessLogicException("Se debe agregar almenos 1 habitacion");
+        }
+        else
+        {
+            persistence.create(vivienda);
+        }
         return vivienda;
     }
     
