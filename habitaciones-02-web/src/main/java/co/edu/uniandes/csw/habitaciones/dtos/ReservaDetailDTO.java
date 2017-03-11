@@ -25,7 +25,7 @@ public class ReservaDetailDTO extends ReservaDTO {
     
     public ReservaDetailDTO()
     {
-        
+        super();
     }
     
     public ReservaDetailDTO(ReservaEntity entity)
@@ -33,21 +33,20 @@ public class ReservaDetailDTO extends ReservaDTO {
         super(entity);
         if(entity!= null)
         {
-         PagoDTO pdto = new PagoDTO( entity.getPago());
-         HabitacionDTO hdto = new HabitacionDTO (entity.getHabitacion());
-         habitacion = hdto;
-         pago = pdto;
+            habitacion = new HabitacionDTO( entity.getHabitacion( ) );
+            pago = new PagoDTO( entity.getPago());
         }
         
         
     }
     
      @Override
-     public ReservaEntity toEntity() {   
-         
+     public ReservaEntity toEntity()
+     {   
         ReservaEntity entity = super.toEntity();
-        return entity;
-        
+        entity.setPago(this.pago.toEntity());
+        entity.setHabitacion(this.habitacion.toEntity());
+        return entity;        
     }
     
     

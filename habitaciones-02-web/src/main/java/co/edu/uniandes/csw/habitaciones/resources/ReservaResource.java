@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
+import co.edu.uniandes.csw.habitaciones.dtos.ReservaDTO;
 import co.edu.uniandes.csw.habitaciones.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.ReservaLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
@@ -29,47 +30,48 @@ import javax.ws.rs.core.MediaType;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class ReservaResource {
-  
-    @Inject private ReservaLogic logic;
-    
-   private List<ReservaDetailDTO> listEntity2DTO(List<ReservaEntity> listEntity) 
-   {
-       List<ReservaDetailDTO> lista = new ArrayList<>();
-       for (ReservaEntity entity : listEntity) {
-       
-           lista.add(new ReservaDetailDTO(entity));
-       }
-       return lista;
-   }
-   
-   @GET
-    public List<ReservaDetailDTO> getEmployees() {
-        
+
+    @Inject
+    private ReservaLogic logic;
+
+    private List<ReservaDetailDTO> listEntity2DTO(List<ReservaEntity> listEntity) {
+        List<ReservaDetailDTO> lista = new ArrayList<>();
+        for (ReservaEntity entity : listEntity) {
+
+            lista.add(new ReservaDetailDTO(entity));
+        }
+        return lista;
+    }
+
+    @GET
+    public List<ReservaDetailDTO> getReservas() {
+
         return listEntity2DTO(logic.findReservas());
     }
-   
+
     @GET
     @Path("{id: \\d+}")
-    public ReservaDetailDTO getEmployee(@PathParam("id") Long id) {
+    public ReservaDetailDTO getReserva(@PathParam("id") Long id) {
         return new ReservaDetailDTO(logic.findReserva(id));
     }
-    
+
     @POST
-    public ReservaDetailDTO createEmployee(ReservaDetailDTO dto) {
-        return new ReservaDetailDTO(logic.createReserva(dto.toEntity()));
+    public ReservaDTO createReserva(ReservaDTO dto) 
+    {
+        return new ReservaDTO(logic.createReserva(dto.toEntity()));
     }
-    
+
     @PUT
     @Path("{id: \\d+}")
-    public ReservaDetailDTO updateEmployee(@PathParam("id") Long id, ReservaDetailDTO dto) {
+    public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO dto) {
         ReservaEntity entity = dto.toEntity();
         entity.setId(id);
         return new ReservaDetailDTO(logic.updateReserva(entity));
     }
-    
-     @DELETE
+
+    @DELETE
     @Path("{id: \\d+}")
-    public void deleteEmployee(@PathParam("id") Long id) {
+    public void deleteReserva(@PathParam("id") Long id) {
         logic.delete(id);
     }
 }
