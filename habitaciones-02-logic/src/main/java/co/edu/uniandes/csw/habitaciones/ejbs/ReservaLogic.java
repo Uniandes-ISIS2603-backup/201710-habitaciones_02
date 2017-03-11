@@ -17,12 +17,9 @@ import javax.persistence.EntityManager;
  * @author dg.guarin20
  */
 @Stateless
-
 public class ReservaLogic {
     
     @Inject private ReservaPersistence resP;
-    
-    protected EntityManager em;
   
     public ReservaEntity findReserva(Long id)
     {
@@ -48,5 +45,5 @@ public class ReservaLogic {
   
         return resP.findAll();
     }
-    
+   
 }

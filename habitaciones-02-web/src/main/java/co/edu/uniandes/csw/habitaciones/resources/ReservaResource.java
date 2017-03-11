@@ -54,11 +54,12 @@ public class ReservaResource {
         return new ReservaDetailDTO(logic.findReserva(id));
     }
     
-     @POST
+    @POST
     public ReservaDetailDTO createEmployee(ReservaDetailDTO dto) {
         return new ReservaDetailDTO(logic.createReserva(dto.toEntity()));
     }
-     @PUT
+    
+    @PUT
     @Path("{id: \\d+}")
     public ReservaDetailDTO updateEmployee(@PathParam("id") Long id, ReservaDetailDTO dto) {
         ReservaEntity entity = dto.toEntity();

@@ -17,8 +17,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class HabitacionDTO implements Serializable {
     
     private Long id;
-    private double area;
-    private double valorAlquiler;
+    private Double area;
+    private Double valorAlquiler;
     private String rutaImagen;
     private String descripcion;
     
@@ -58,19 +58,19 @@ public class HabitacionDTO implements Serializable {
         this.id = id;
     }
 
-    public double getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(double area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 
-    public double getValorAlquiler() {
+    public Double getValorAlquiler() {
         return valorAlquiler;
     }
 
-    public void setValorAlquiler(double valorAlquiler) {
+    public void setValorAlquiler(Double valorAlquiler) {
         this.valorAlquiler = valorAlquiler;
     }
 

@@ -28,7 +28,8 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     //----------------------------------------------------------------------------------------------------
     public ViajeroDetailDTO()
     {
-
+        super();
+        reservas = new ArrayList<>();
     }
 
     public ViajeroDetailDTO(ViajeroEntity entity)
@@ -53,6 +54,15 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     public ViajeroEntity toEntity()
     {
         ViajeroEntity entity = super.toEntity();
+        if(entity != null)
+        {
+            List<ReservaEntity> pReservas = new ArrayList<>();
+            for(ReservaDTO dtoReserva : reservas)
+            {
+                pReservas.add(dtoReserva.toEntity());
+            }
+            entity.setReservas(pReservas);
+        }
         
         return entity;
     }

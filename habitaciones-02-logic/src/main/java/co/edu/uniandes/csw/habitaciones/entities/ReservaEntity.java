@@ -14,6 +14,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -21,15 +22,29 @@ import javax.persistence.OneToOne;
  */
 
 @Entity
-
 public class ReservaEntity implements Serializable{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Temporal(TemporalType.DATE)
+    private Date fechaIniciodeEstadia;
+    
+    @Temporal(TemporalType.DATE)
+    private Date fechaTerminacionEstadia;
+    
+    private Boolean cancelado;
     
     @ManyToOne
     private ViajeroEntity viajero;
+    
     @ManyToOne
     private AnfitrionEntity anfitrion;
+    
     @ManyToOne
     private HabitacionEntity habitacion;
+    
     @OneToOne(mappedBy = "reserva")
     private PagoEntity pago;
     
@@ -66,16 +81,6 @@ public class ReservaEntity implements Serializable{
     {
         pago = p;
     }
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
-    private Long id;
-    
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fechaIniciodeEstadia;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fechaTerminacionEstadia;
-    private Boolean cancelado;
    
     /**
      * @return id long
@@ -88,9 +93,9 @@ public class ReservaEntity implements Serializable{
      /**
      * @param i long
      */ 
-    public void setId(Long i)
+    public void setId(Long id)
     {
-        this.id = i;
+        this.id = id;
     }
      /**
      * @return fechaInicioEstadia Date
@@ -102,9 +107,9 @@ public class ReservaEntity implements Serializable{
      /**
      * @param fechaIn Date
      */ 
-    public void setFechaInicioEstadia(Date fechaIn)
+    public void setFechaInicioEstadia(Date fechaIniciodeEstadia)
     {
-        this.fechaIniciodeEstadia = fechaIn;
+        this.fechaIniciodeEstadia = fechaIniciodeEstadia;
     }
      /**
      * @return fechaTerminacionEstadia date
@@ -117,9 +122,9 @@ public class ReservaEntity implements Serializable{
       /**
      * @param fechaT date
      */ 
-    public void setFechaTerminacionEstadia(Date fechaT)
+    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia)
     {
-        this.fechaTerminacionEstadia = fechaT;
+        this.fechaTerminacionEstadia = fechaTerminacionEstadia;
     }
      /**
      * @return cancelad un boolean
@@ -131,9 +136,9 @@ public class ReservaEntity implements Serializable{
       /**
      * @param can lo que cancela
      */ 
-    public void setCancelado (boolean can)
+    public void setCancelado (Boolean cancelado)
     {
-        this.cancelado = can;
+       this.cancelado = cancelado;
     }
     
      @Override

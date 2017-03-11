@@ -12,7 +12,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 
 /**
@@ -58,6 +57,16 @@ public class DisponibilidadEntity implements Serializable{
     public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia) {
         this.fechaTerminacionEstadia = fechaTerminacionEstadia;
     }
+
+    public HabitacionEntity getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(HabitacionEntity habitacion) {
+        this.habitacion = habitacion;
+    }
+    
+    
     
      @Override
     public boolean equals(Object obj) {
