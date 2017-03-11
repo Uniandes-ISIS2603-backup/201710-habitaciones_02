@@ -26,9 +26,9 @@ public class HabitacionEntity implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private double area;
+    private Double area;
     
-    private double valorAlquiler;
+    private Double valorAlquiler;
     
     private String rutaImagen;
     
@@ -51,19 +51,19 @@ public class HabitacionEntity implements Serializable{
         this.id = id;
     }
 
-    public double getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(double area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 
-    public double getValorAlquiler() {
+    public Double getValorAlquiler() {
         return valorAlquiler;
     }
 
-    public void setValorAlquiler(double valorAlquiler) {
+    public void setValorAlquiler(Double valorAlquiler) {
         this.valorAlquiler = valorAlquiler;
     }
 
@@ -81,6 +81,30 @@ public class HabitacionEntity implements Serializable{
 
     public void setRutaImagen(String rutaImagen) {
         this.rutaImagen = rutaImagen;
+    }
+
+    public List<DisponibilidadEntity> getDisponibilidades() {
+        return disponibilidades;
+    }
+
+    public void setDisponibilidades(List<DisponibilidadEntity> disponibilidades) {
+        this.disponibilidades = disponibilidades;
+    }
+
+    public List<ReservaEntity> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<ReservaEntity> reservas) {
+        this.reservas = reservas;
+    }
+
+    public ViviendaEntity getVivienda() {
+        return vivienda;
+    }
+
+    public void setVivienda(ViviendaEntity vivienda) {
+        this.vivienda = vivienda;
     }
     
     
