@@ -6,7 +6,9 @@
 package co.edu.uniandes.csw.habitaciones.entities;
 
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 
@@ -25,7 +27,7 @@ public class ViajeroEntity extends UsuarioEntity
     /**
      * Relacion One-to-Many con las Reservas
      */
-    @OneToMany(mappedBy = "viajero")
+    @OneToMany(mappedBy = "viajero", fetch = FetchType.EAGER, targetEntity = ReservaEntity.class)
     private List<ReservaEntity> reservas;
 
     
