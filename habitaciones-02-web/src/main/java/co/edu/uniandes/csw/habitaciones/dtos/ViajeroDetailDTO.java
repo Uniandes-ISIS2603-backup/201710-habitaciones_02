@@ -29,7 +29,8 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     //----------------------------------------------------------------------------------------------------
     public ViajeroDetailDTO()
     {
-
+        super();
+        reservas = new ArrayList<>();
     }
 
     public ViajeroDetailDTO(ViajeroEntity entity)

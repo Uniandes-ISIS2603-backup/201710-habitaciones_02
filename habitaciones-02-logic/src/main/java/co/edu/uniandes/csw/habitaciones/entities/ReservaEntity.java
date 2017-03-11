@@ -14,6 +14,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -21,15 +22,29 @@ import javax.persistence.OneToOne;
  */
 
 @Entity
-
 public class ReservaEntity implements Serializable{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Temporal(TemporalType.DATE)
+    private Date fechaIniciodeEstadia;
+    
+    @Temporal(TemporalType.DATE)
+    private Date fechaTerminacionEstadia;
+    
+    private Boolean cancelado;
     
     @ManyToOne
     private ViajeroEntity viajero;
+    
     @ManyToOne
     private AnfitrionEntity anfitrion;
+    
     @ManyToOne
     private HabitacionEntity habitacion;
+    
     @OneToOne(mappedBy = "reserva")
     private PagoEntity pago;
     
@@ -66,16 +81,6 @@ public class ReservaEntity implements Serializable{
     {
         pago = p;
     }
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
-    private Long id;
-    
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fechaIniciodeEstadia;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fechaTerminacionEstadia;
-    private Boolean cancelado;
    
     /**
      * @return id long
