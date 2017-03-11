@@ -9,17 +9,19 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 /**
  *
  * @author df.sanabria761
  */
 @Entity
+@PrimaryKeyJoinColumn(referencedColumnName="idUsuario")
 public class AnfitrionEntity extends UsuarioEntity 
 {
-    @OneToMany(fetch =FetchType.EAGER, mappedBy="anfitrion" )
+    @OneToMany( mappedBy="anfitrion" )
     private List<ViviendaEntity> viviendas;
     
-    @OneToMany(fetch =FetchType.EAGER, mappedBy="anfitrion" )
+    @OneToMany( mappedBy="anfitrion" )
     private List<ReservaEntity> reservas;
 
     public List<ReservaEntity> getReservas() {

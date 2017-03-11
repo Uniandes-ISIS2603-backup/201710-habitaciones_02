@@ -8,13 +8,12 @@ package co.edu.uniandes.csw.habitaciones.resources;
 import co.edu.uniandes.csw.habitaciones.dtos.AnfitrionDetailDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.AnfitrionLogic;
 import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
-
-
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -27,7 +26,6 @@ import javax.ws.rs.core.MediaType;
  * @author df.sanabria761
  */
 @Path("/anfitriones")
-
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class AnfitrionResource 
@@ -35,36 +33,42 @@ public class AnfitrionResource
     @Inject
     private AnfitrionLogic logica;
     
-    private List<AnfitrionDetailDTO> listEntityToDTO(List<AnfitrionEntity> entityList) {
-        List<AnfitrionDetailDTO> lista = new ArrayList();
+    private List<AnfitrionDetailDTO> listEntity2DTO(List<AnfitrionEntity> entityList)
+    {
+        List<AnfitrionDetailDTO> lista = new ArrayList<>();
         for(AnfitrionEntity entity : entityList){
-            lista.add(new AnfitrionDetailDTO(entity));
+            AnfitrionDetailDTO nD = new AnfitrionDetailDTO(entity);
+            lista.add(nD);
         }
         
-        return lista;
+        return lista;   
     }
     
     @GET
-    private List<AnfitrionDetailDTO> getAnfitriones()
+    public List<AnfitrionDetailDTO> getAnfitriones()
     {
-        return listEntityToDTO(logica.getAnfitriones());
+        return listEntity2DTO(logica.getAnfitriones());
     }
     
     @GET
     @Path("{id: \\d+}")
-    private AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id)
+    public AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id)
     {
         return new AnfitrionDetailDTO (logica.getAnfitrion(id));
     }
     @POST
-    private AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo)
+    public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo)
     {
+        if(dtoo!=null)
+        {
         return new AnfitrionDetailDTO (logica.createAnfitrion(dtoo.toEntity()));
+        }
+        
     }
     
     @PUT
     @Path("{id: \\d+}")
-    private AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id)
+    public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id)
     {
         AnfitrionEntity en = dto.toEntity();
         en.setIdUsuario(id);
@@ -73,7 +77,7 @@ public class AnfitrionResource
     
     @DELETE
     @Path("{id: \\d+}")
-    private void deleteAnfitrion(@PathParam("id") Long id)
+    public void deleteAnfitrion(@PathParam("id") Long id)
     {
         logica.deleteAnfitrion(id);
     }

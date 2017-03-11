@@ -9,7 +9,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.Query;
 
 /**
  *
@@ -30,9 +30,8 @@ public class AnfitrionPersistence {
     */
     public List<AnfitrionEntity> findAll()
     {
-        TypedQuery<AnfitrionEntity> q = em.createQuery("select u from AnfitrionEntity u", AnfitrionEntity.class);
-          List<AnfitrionEntity> anfitriones = q.getResultList();
-        return anfitriones;
+        Query query = em.createQuery("select u from AnfitrionEntity u");
+        return query.getResultList();
     } 
     
     public AnfitrionEntity create(AnfitrionEntity entity)

@@ -23,6 +23,7 @@ public class AnfitrionLogic {
     public List<AnfitrionEntity> getAnfitriones() 
     {
         return persistence.findAll();
+        
     }
     public AnfitrionEntity getAnfitrion(Long id)
     {
