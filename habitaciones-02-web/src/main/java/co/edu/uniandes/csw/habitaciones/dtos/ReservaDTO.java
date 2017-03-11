@@ -40,7 +40,6 @@ public ReservaDTO(ReservaEntity entity)
 }
 public ReservaEntity toEntity()
 {   
-     
     ReservaEntity entity = new ReservaEntity(); 
     
     entity.setId(this.id);
