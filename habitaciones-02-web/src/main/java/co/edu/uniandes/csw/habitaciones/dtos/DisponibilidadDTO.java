@@ -26,9 +26,11 @@ public class DisponibilidadDTO implements Serializable {
     }
 
     public DisponibilidadDTO(DisponibilidadEntity entity) {
-        this.id = entity.getId();
-        this.fechaInicioEstadia = entity.getFechaInicioEstadia();
-        this.fechaTerminacionEstadia = entity.getFechaTerminacionEstadia();
+        if (entity != null) {
+            this.id = entity.getId();
+            this.fechaInicioEstadia = entity.getFechaInicioEstadia();
+            this.fechaTerminacionEstadia = entity.getFechaTerminacionEstadia();
+        }
     }
 
     public DisponibilidadEntity toEntity() {
