@@ -20,31 +20,29 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class HabitacionDetailDTO extends HabitacionDTO {
 
-    private List<DisponibilidadDTO> disponibilidades;
+    private List<DisponibilidadDTO> disponibilidades = new ArrayList<>();
 
-    private List<ReservaDTO> reservas;
+    private List<ReservaDTO> reservas = new ArrayList<>();;
 
     private ViviendaEntity vivienda;
 
     public HabitacionDetailDTO() {
         
         super();
-        disponibilidades = new ArrayList<>();
-        reservas = new ArrayList<>();
+ 
     }
 
     public HabitacionDetailDTO(HabitacionEntity entity) {
         super(entity);
         
         if (entity != null) {
-            disponibilidades = new ArrayList<>();
+            
             for (DisponibilidadEntity entityDis : entity.getDisponibilidades()) {
                 
                 DisponibilidadDTO disponibilidad = new DisponibilidadDTO(entityDis);
                 disponibilidades.add(disponibilidad);
             }
             
-            reservas = new ArrayList<>();
             for (ReservaEntity entityRes : entity.getReservas()) {
                 
                 ReservaDTO reserva = new ReservaDTO(entityRes);
