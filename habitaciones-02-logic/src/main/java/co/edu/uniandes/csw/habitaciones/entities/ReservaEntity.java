@@ -29,10 +29,10 @@ public class ReservaEntity implements Serializable{
     private Long id;
     
     @Temporal(TemporalType.DATE)
-    private Date fechaIniciodeEstadia;
+    private Date fechaInicio;
     
     @Temporal(TemporalType.DATE)
-    private Date fechaTerminacionEstadia;
+    private Date fechaTerminacion;
     
     private Boolean cancelado;
     
@@ -47,100 +47,72 @@ public class ReservaEntity implements Serializable{
     
     @OneToOne(mappedBy = "reserva")
     private PagoEntity pago;
-    
-    public ViajeroEntity getviajero()
-    {
-        return viajero;
-    }
-    public void setViajero(ViajeroEntity v)
-    {
-        viajero =v;
-    }
-    public AnfitrionEntity getanfitrion()
-    {
-        return anfitrion;
-    }
-     public void setAnfitrion(AnfitrionEntity an)
-    {
-        anfitrion =an;
-    }
-    public HabitacionEntity getHabitacion()
-    {
-        return habitacion;
-        
-    }
-     public void setHabitacion(HabitacionEntity h)
-    {
-        habitacion = h;
-    }
-    public PagoEntity getPago()
-    {
-        return pago;
-    }
-     public void setPago(PagoEntity p)
-    {
-        pago = p;
-    }
-   
-    /**
-     * @return id long
-     */ 
-    public Long getId()
-    {
+
+    public Long getId() {
         return id;
     }
-    
-     /**
-     * @param i long
-     */ 
-    public void setId(Long id)
-    {
+
+    public void setId(Long id) {
         this.id = id;
     }
-     /**
-     * @return fechaInicioEstadia Date
-     */ 
-    public Date getFechaInicio()
-    {
-        return fechaIniciodeEstadia;
+
+    public Date getFechaInicio() {
+        return fechaInicio;
     }
-     /**
-     * @param fechaIn Date
-     */ 
-    public void setFechaInicioEstadia(Date fechaIniciodeEstadia)
-    {
-        this.fechaIniciodeEstadia = fechaIniciodeEstadia;
+
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
     }
-     /**
-     * @return fechaTerminacionEstadia date
-     */ 
-    public Date getfechaTerminacionEstadia()
-    {
-        return fechaTerminacionEstadia;
-        
+
+    public Date getFechaTerminacion() {
+        return fechaTerminacion;
     }
-      /**
-     * @param fechaT date
-     */ 
-    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia)
-    {
-        this.fechaTerminacionEstadia = fechaTerminacionEstadia;
+
+    public void setFechaTerminacion(Date fechaTerminacion) {
+        this.fechaTerminacion = fechaTerminacion;
     }
-     /**
-     * @return cancelad un boolean
-     */ 
-    public Boolean getCancelado()
-    {
+
+    public Boolean getCancelado() {
         return cancelado;
     }
-      /**
-     * @param can lo que cancela
-     */ 
-    public void setCancelado (Boolean cancelado)
-    {
-       this.cancelado = cancelado;
+
+    public void setCancelado(Boolean cancelado) {
+        this.cancelado = cancelado;
+    }
+
+    public ViajeroEntity getViajero() {
+        return viajero;
+    }
+
+    public void setViajero(ViajeroEntity viajero) {
+        this.viajero = viajero;
+    }
+
+    public AnfitrionEntity getAnfitrion() {
+        return anfitrion;
+    }
+
+    public void setAnfitrion(AnfitrionEntity anfitrion) {
+        this.anfitrion = anfitrion;
+    }
+
+    public HabitacionEntity getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(HabitacionEntity habitacion) {
+        this.habitacion = habitacion;
+    }
+
+    public PagoEntity getPago() {
+        return pago;
+    }
+
+    public void setPago(PagoEntity pago) {
+        this.pago = pago;
     }
     
+   
      @Override
     public boolean equals(Object obj) {
         if (this.getId() != null) {

@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.habitaciones.ejbs;
 
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -34,9 +35,18 @@ public class ViajeroLogic
      * Crea una nueva entidad en la base de datos
      * @param entity entidad que se desea agregar
      * @return la entidad que fue agregada a la base de datos
+     * @throws BusinessLogicException
      */
-    public ViajeroEntity createViajero (ViajeroEntity entity)
+    public ViajeroEntity createViajero (ViajeroEntity entity) throws BusinessLogicException
     {
+        if(!entity.informacionCompleta())
+        {
+            throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
+        }
+        else if(persistence.searchByEmail(entity.getCorreoElectronico()) != null)
+        {
+            throw new BusinessLogicException("Ya exisite un usuario viajero con el correo ingresado. Por favor, intente nuevamente con un correo distinto");
+        }
         return persistence.create(entity);
     }
     

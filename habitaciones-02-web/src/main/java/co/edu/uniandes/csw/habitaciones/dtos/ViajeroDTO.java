@@ -5,7 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
-import co.edu.uniandes.csw.habitaciones.entities.UsuarioEntity;
+
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 
 /**

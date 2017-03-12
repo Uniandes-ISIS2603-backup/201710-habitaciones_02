@@ -5,7 +5,6 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
-import co.edu.uniandes.csw.habitaciones.dtos.ReservaDTO;
 import co.edu.uniandes.csw.habitaciones.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.ReservaLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
@@ -56,9 +55,9 @@ public class ReservaResource {
     }
 
     @POST
-    public ReservaDTO createReserva(ReservaDTO dto) 
+    public ReservaDetailDTO createReserva(ReservaDetailDTO dto) 
     {
-        return new ReservaDTO(logic.createReserva(dto.toEntity()));
+        return new ReservaDetailDTO(logic.createReserva(dto.toEntity()));
     }
 
     @PUT

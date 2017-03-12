@@ -57,7 +57,7 @@ public class UsuarioEntity implements Serializable
     /**
      * numero del documento de identificacion
      */
-    private Integer numeroDocumento;
+    private String numeroDocumento;
     
     /**
      * direccion del usuario
@@ -67,7 +67,7 @@ public class UsuarioEntity implements Serializable
     /**
      * telefono del usuario
      */
-    private Integer telefono;
+    private String telefono;
 
 
     //----------------------------------------------------------------------------------------------------
@@ -115,11 +115,11 @@ public class UsuarioEntity implements Serializable
         this.tipoDocumento = tipoDocumento;
     }
 
-    public Integer getNumeroDocumento() {
+    public String getNumeroDocumento() {
         return numeroDocumento;
     }
 
-    public void setNumeroDocumento(Integer numeroDocumento) {
+    public void setNumeroDocumento(String numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
     }
 
@@ -131,12 +131,24 @@ public class UsuarioEntity implements Serializable
         this.direccion = direccion;
     }
 
-    public Integer getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(Integer telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+    
+    public Boolean informacionCompleta()
+    {
+        return (stringUtilizable(contrasena) && stringUtilizable(correoElectronico)
+               && stringUtilizable(direccion) && stringUtilizable(nombre) && stringUtilizable(tipoDocumento)
+               &&  stringUtilizable(telefono) && stringUtilizable(numeroDocumento));
+    }
+    
+    private Boolean stringUtilizable(String palabra)
+    {
+       return (palabra != null)? !palabra.isEmpty() : false;
     }
     
 }
