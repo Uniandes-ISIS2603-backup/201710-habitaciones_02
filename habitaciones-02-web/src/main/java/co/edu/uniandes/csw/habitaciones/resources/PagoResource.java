@@ -8,6 +8,7 @@ package co.edu.uniandes.csw.habitaciones.resources;
 import co.edu.uniandes.csw.habitaciones.dtos.PagoDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.PagoLogic;
 import co.edu.uniandes.csw.habitaciones.entities.PagoEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -62,7 +63,7 @@ public class PagoResource
     }
     
     @POST
-    public PagoDTO createPago(PagoDTO dto) 
+    public PagoDTO createPago(PagoDTO dto) throws  BusinessLogicException
     {
         return new PagoDTO(pagoLogic.createPago(dto.toEntity()));
     }

@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
+import co.edu.uniandes.csw.habitaciones.dtos.ViviendaDTO;
 import co.edu.uniandes.csw.habitaciones.dtos.ViviendaDetailDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.ViviendaLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
@@ -39,18 +40,18 @@ public class ViviendaResource
     @QueryParam("page") private Integer page;
     @QueryParam("limit") private Integer maxRecords;
     
-    private List<ViviendaDetailDTO> listEntity2DTO(List<ViviendaEntity> entityList)
+    private List<ViviendaDTO> listEntity2DTO(List<ViviendaEntity> entityList)
     {
-        List<ViviendaDetailDTO> list = new ArrayList<>();
+        List<ViviendaDTO> list = new ArrayList<>();
         for (ViviendaEntity entity : entityList) 
         {
-            list.add(new ViviendaDetailDTO(entity));
+            list.add(new ViviendaDTO(entity));
         }
         return list;
     }
     
     @GET
-    public List<ViviendaDetailDTO> getViviendas() 
+    public List<ViviendaDTO> getViviendas() 
     {
         return listEntity2DTO(viviendaLogic.getViviendas());
     }
