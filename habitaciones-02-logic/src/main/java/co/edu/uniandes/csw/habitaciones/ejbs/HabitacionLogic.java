@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.habitaciones.ejbs;
 
 import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import co.edu.uniandes.csw.habitaciones.persistence.HabitacionPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -22,24 +23,50 @@ public class HabitacionLogic {
     private HabitacionPersistence persistence;
 
     public List<HabitacionEntity> getHabitaciones() {
-        
+
         return persistence.findAll();
     }
-    
+
     public HabitacionEntity getHabitacion(Long id) {
 
         return persistence.find(id);
     }
 
-    public HabitacionEntity createHabitacion(HabitacionEntity entity) {
+    public HabitacionEntity createHabitacion(HabitacionEntity entity) throws BusinessLogicException {
 
-        persistence.create(entity);
-        return entity;
+        if (entity.getArea() < 0) {
+            throw new BusinessLogicException("El area debe ser mayor que cero.");
+        }
+        if (entity.getDescripcion() == null || entity.getDescripcion().equals("")) {
+            throw new BusinessLogicException("Debe escribir la descripcion de la habitacion.");
+        }
+        if (entity.getRutaImagen() == null) {
+            throw new BusinessLogicException("Debe ingresar la ruta de la imagen de la habitacion.");
+        }
+        if (entity.getValorAlquiler() < 0) {
+            throw new BusinessLogicException("El valor del alquiler debe ser mayor que cero.");
+        } else {
+            persistence.create(entity);
+            return entity;
+        }
     }
 
-    public HabitacionEntity updateHabitacion(HabitacionEntity entity) {
+    public HabitacionEntity updateHabitacion(HabitacionEntity entity) throws BusinessLogicException {
 
-        return persistence.update(entity);
+        if (entity.getArea() < 0) {
+            throw new BusinessLogicException("El area debe ser mayor que cero.");
+        }
+        if (entity.getDescripcion() == null || entity.getDescripcion().equals("")) {
+            throw new BusinessLogicException("Debe escribir la descripcion de la habitacion.");
+        }
+        if (entity.getRutaImagen() == null) {
+            throw new BusinessLogicException("Debe ingresar la ruta de la imagen de la habitacion.");
+        }
+        if (entity.getValorAlquiler() < 0) {
+            throw new BusinessLogicException("El valor del alquiler debe ser mayor que cero.");
+        } else {
+            return persistence.update(entity);
+        }
     }
 
     public void deleteHabitacion(Long id) {

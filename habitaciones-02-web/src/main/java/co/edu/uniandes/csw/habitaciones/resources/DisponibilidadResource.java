@@ -8,6 +8,7 @@ package co.edu.uniandes.csw.habitaciones.resources;
 import co.edu.uniandes.csw.habitaciones.ejbs.DisponibilidadLogic;
 import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
 import co.edu.uniandes.csw.habitaciones.dtos.DisponibilidadDetailDTO;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -28,7 +29,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author b.gamba10
  */
-@Path("/disponibilidades")
+@Path("/habitaciones/{id: \\d+}/disponibilidades")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class DisponibilidadResource {
@@ -67,7 +68,7 @@ public class DisponibilidadResource {
     }
 
     @POST
-    public DisponibilidadDetailDTO createDisponibilidad(DisponibilidadDetailDTO dto) {
+    public DisponibilidadDetailDTO createDisponibilidad(DisponibilidadDetailDTO dto) throws BusinessLogicException {
 
         return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
     }

@@ -5,40 +5,37 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
-import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ResenaEntity;
 import javax.xml.bind.annotation.XmlRootElement;
-
-
 
 /**
  *
- * @author dg.guarin20
+ * @author s.cortes
  */
 @XmlRootElement
-public class ReservaDetailDTO extends ReservaDTO {
+public class ResenaDetailDTO extends ResenaDTO
+{
     
-    //private HabitacionDTO habitacion;
-    private PagoDTO pago;
     private ViajeroDTO viajero;
+    
     private AnfitrionDTO anfitrion;
     
-    
-    public ReservaDetailDTO()
+    private HabitacionDTO habitacion;
+
+    public ResenaDetailDTO() 
     {
         super();
     }
-    
-    public ReservaDetailDTO(ReservaEntity entity)
+
+    public ResenaDetailDTO(ResenaEntity entity) 
     {
         super(entity);
         if(entity!= null)
         {
-            //habitacion = new HabitacionDTO( entity.getHabitacion( ) );
-            //pago = new PagoDTO( entity.getPago());
+            habitacion = new HabitacionDTO( entity.getHabitacion( ) );
             viajero = new ViajeroDTO(entity.getViajero());
             anfitrion = new AnfitrionDTO(entity.getAnfitrion());
         }
- 
     }
 
     public ViajeroDTO getViajero() {
@@ -56,12 +53,19 @@ public class ReservaDetailDTO extends ReservaDTO {
     public void setAnfitrion(AnfitrionDTO anfitrion) {
         this.anfitrion = anfitrion;
     }
-    
-     @Override
-     public ReservaEntity toEntity()
-     {   
-        ReservaEntity entity = super.toEntity();
 
+    public HabitacionDTO getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(HabitacionDTO habitacion) {
+        this.habitacion = habitacion;
+    }
+
+    @Override
+    public ResenaEntity toEntity() {
+        ResenaEntity entity = super.toEntity();
+        
         if(this.getViajero() != null)
         {
             entity.setViajero(viajero.toEntity());
@@ -70,12 +74,14 @@ public class ReservaDetailDTO extends ReservaDTO {
         {
             entity.setAnfitrion(anfitrion.toEntity());
         }
-
-        //entity.setPago(this.pago.toEntity());
-        //entity.setHabitacion(this.habitacion.toEntity());
-
-        return entity;        
+        if(this.getHabitacion() != null)
+        {
+            entity.setHabitacion(habitacion.toEntity());
+        }
+        
+        return entity;
     }
+    
     
     
 }

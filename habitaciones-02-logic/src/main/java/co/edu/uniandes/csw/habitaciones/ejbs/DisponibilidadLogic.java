@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.habitaciones.ejbs;
 
 import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import co.edu.uniandes.csw.habitaciones.persistence.DisponibilidadPersistence;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -31,10 +32,16 @@ public class DisponibilidadLogic {
         return persistence.find(id);
     }
 
-    public DisponibilidadEntity createDisponibilidad(DisponibilidadEntity entity) {
+    public DisponibilidadEntity createDisponibilidad(DisponibilidadEntity entity) throws BusinessLogicException {
 
-        persistence.create(entity);
-        return entity;
+        if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia())) {
+
+            throw new BusinessLogicException("La fecha de termincion de la estadia debe ser posterior a la del inicio.");
+
+        } else {
+            persistence.create(entity);
+            return entity;
+        }
     }
 
     public DisponibilidadEntity updateDisponibilidad(DisponibilidadEntity entity) {

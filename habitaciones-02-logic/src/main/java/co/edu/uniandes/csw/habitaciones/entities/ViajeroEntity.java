@@ -28,6 +28,8 @@ public class ViajeroEntity extends UsuarioEntity
     @OneToMany(mappedBy = "viajero")
     private List<ReservaEntity> reservas;
 
+    @OneToMany(mappedBy = "viajero")
+    private List<ResenaEntity> resenas;
     
     //----------------------------------------------------------------------------------------------------
     // METODO
@@ -47,6 +49,14 @@ public class ViajeroEntity extends UsuarioEntity
      */
     public void setReservas(List<ReservaEntity> reservas) {
         this.reservas = reservas;
+    }
+
+    public List<ResenaEntity> getResenas() {
+        return resenas;
+    }
+
+    public void setResenas(List<ResenaEntity> resenas) {
+        this.resenas = resenas;
     }
     
     
