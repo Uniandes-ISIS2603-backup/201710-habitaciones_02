@@ -7,6 +7,7 @@ package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
 import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ResenaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
 import java.util.ArrayList;
@@ -22,7 +23,9 @@ public class HabitacionDetailDTO extends HabitacionDTO {
 
     private List<DisponibilidadDTO> disponibilidades = new ArrayList<>();
 
-    private List<ReservaDTO> reservas = new ArrayList<>();;
+    private List<ReservaDTO> reservas = new ArrayList<>();
+    
+    private List<ResenaDTO> resenas = new ArrayList<>();
 
     private ViviendaEntity vivienda;
 
@@ -48,6 +51,13 @@ public class HabitacionDetailDTO extends HabitacionDTO {
                 ReservaDTO reserva = new ReservaDTO(entityRes);
                 reservas.add(reserva);
             }
+            
+            for(ResenaEntity entityResena : entity.getResenas())
+            {
+                
+                ResenaDTO resena = new ResenaDTO(entityResena);
+                resenas.add(resena);
+            }
         }
         
     }
@@ -66,6 +76,13 @@ public class HabitacionDetailDTO extends HabitacionDTO {
         for (ReservaDTO dtoReserva : reservas) {
 
             listaReservas.add(dtoReserva.toEntity());
+        }
+        
+        List<ResenaEntity> listaResenas = new ArrayList<>();
+        for (ResenaDTO dtoResena : resenas)
+        {
+            
+            listaResenas.add(dtoResena.toEntity());
         }
 
         entity.setDisponibilidades(listaDisponibilidades);
