@@ -42,8 +42,8 @@ public class DisponibilidadDetailDTO extends DisponibilidadDTO {
 
         DisponibilidadEntity entity = super.toEntity();
         
-        if (this.getHabitacion() != null) {
-            
+        if (this.getHabitacion() != null) 
+        {
             entity.setHabitacion(habitacion.toEntity());
         }
         return entity;
