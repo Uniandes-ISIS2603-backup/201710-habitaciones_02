@@ -38,21 +38,20 @@ public class ViviendaDetailDTO extends ViviendaDTO
     }
     
     @Override
-    public ViviendaEntity toEntity()
-    {
+    public ViviendaEntity toEntity() {
         ViviendaEntity entity = super.toEntity();
-        if(entity != null)
+        if (entity != null) 
         {
-            if(getHabitaciones() == null)
+            if (getHabitaciones() == null) 
             {
                 setHabitaciones(new ArrayList<>());
             }
-        List<HabitacionEntity> habs = new ArrayList<>();
-        for(HabitacionDTO habs2 : this.getHabitaciones())
-        {
-            habs.add(habs2.toEntity());
-        }
-        entity.setHabitaciones(habs);
+            List<HabitacionEntity> habs = new ArrayList<>();
+            for (HabitacionDTO habs2 : this.getHabitaciones()) 
+            {
+                habs.add(habs2.toEntity());
+            }
+            entity.setHabitaciones(habs);
         }
         return entity;
     }

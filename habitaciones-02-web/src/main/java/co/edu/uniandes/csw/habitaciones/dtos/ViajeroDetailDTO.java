@@ -40,8 +40,7 @@ public class ViajeroDetailDTO extends ViajeroDTO {
             reservas = new ArrayList<>();
             for(ReservaEntity entityReserva : entity.getReservas())
             {
-                ReservaDTO reserva = new ReservaDTO(entityReserva);
-                reservas.add(reserva);
+                reservas.add(new ReservaDTO(entityReserva));
             }
         }
     }
@@ -66,4 +65,14 @@ public class ViajeroDetailDTO extends ViajeroDTO {
         
         return entity;
     }
+
+    public List<ReservaDTO> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<ReservaDTO> reservas) {
+        this.reservas = reservas;
+    }
+    
+    
 }

@@ -17,11 +17,14 @@ import co.edu.uniandes.csw.habitaciones.dtos.ViajeroDetailDTO;
 import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
 
 /**
  *
@@ -32,8 +35,10 @@ import javax.ws.rs.PathParam;
 @Produces(MediaType.APPLICATION_JSON)
 public class ViajeroResource 
 {
-    @Inject
-    private ViajeroLogic viajeroLogic;
+    @Inject private ViajeroLogic viajeroLogic;
+    @Context private HttpServletResponse response;
+    @QueryParam("page") private Integer page;
+    @QueryParam("limit") private Integer maxRecords;
     
     
     public List<ViajeroDTO> listEntity2DTO(List<ViajeroEntity> listEntity)
@@ -41,7 +46,7 @@ public class ViajeroResource
         List<ViajeroDTO> listDto = new ArrayList<>();
         for(ViajeroEntity entity : listEntity)
         {
-            ViajeroDetailDTO ndto = new ViajeroDetailDTO(entity);
+            ViajeroDTO ndto = new ViajeroDTO(entity);
             listDto.add(ndto);
         }
         
@@ -81,6 +86,6 @@ public class ViajeroResource
     @Path("{id: \\d+}")
     public void deleteViajero(@PathParam("id") Long id) 
     {
-        viajeroLogic.removeViajero(id);
+        viajeroLogic.deleteViajero(id);
     }
 }
