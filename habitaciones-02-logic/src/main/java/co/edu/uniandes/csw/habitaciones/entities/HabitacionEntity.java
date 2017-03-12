@@ -40,6 +40,9 @@ public class HabitacionEntity implements Serializable{
     @OneToMany(mappedBy = "habitacion")
     private List<ReservaEntity> reservas;
     
+    @OneToMany(mappedBy = "habitacion")
+    private List<ResenaEntity> resenas;
+    
     @ManyToOne
     private ViviendaEntity vivienda;
 
@@ -105,6 +108,14 @@ public class HabitacionEntity implements Serializable{
 
     public void setVivienda(ViviendaEntity vivienda) {
         this.vivienda = vivienda;
+    }
+
+    public List<ResenaEntity> getResenas() {
+        return resenas;
+    }
+
+    public void setResenas(List<ResenaEntity> resenas) {
+        this.resenas = resenas;
     }
     
     
