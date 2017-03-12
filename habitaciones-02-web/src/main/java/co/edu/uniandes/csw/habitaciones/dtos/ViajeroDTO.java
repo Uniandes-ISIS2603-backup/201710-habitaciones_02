@@ -59,7 +59,6 @@ public class ViajeroDTO extends UsuarioDTO
     public ViajeroEntity toEntity()
     {
         ViajeroEntity entity  = new ViajeroEntity();
-        
         entity.setContrasena(this.getContrasena());
         entity.setCorreoElectronico(this.getCorreoElectronico());
         entity.setDireccion(this.getDireccion());

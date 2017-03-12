@@ -6,7 +6,6 @@
 package co.edu.uniandes.csw.habitaciones.persistence;
 
 
-import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -59,11 +58,6 @@ public class ViajeroPersistence
     public ViajeroEntity find(Long id)
     {
         ViajeroEntity entity = em.find(ViajeroEntity.class, id);
-
-        TypedQuery<ReservaEntity> q = em.createQuery("select u from ReservaEntity u where u.viajero_idusuario = :pidUsuario", ReservaEntity.class);
-        q = q.setParameter("pidUsuario", id);
-        entity.setReservas(q.getResultList());
-
         return entity;
     }
     

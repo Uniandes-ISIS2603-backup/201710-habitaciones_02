@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
+import co.edu.uniandes.csw.habitaciones.dtos.ViajeroDTO;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Path;
@@ -35,9 +36,9 @@ public class ViajeroResource
     private ViajeroLogic viajeroLogic;
     
     
-    public List<ViajeroDetailDTO> listEntity2DTO(List<ViajeroEntity> listEntity)
+    public List<ViajeroDTO> listEntity2DTO(List<ViajeroEntity> listEntity)
     {
-        List<ViajeroDetailDTO> listDto = new ArrayList<ViajeroDetailDTO>();
+        List<ViajeroDTO> listDto = new ArrayList<>();
         for(ViajeroEntity entity : listEntity)
         {
             ViajeroDetailDTO ndto = new ViajeroDetailDTO(entity);
@@ -48,7 +49,7 @@ public class ViajeroResource
     }
     
     @GET
-    public List<ViajeroDetailDTO> getViajeros()
+    public List<ViajeroDTO> getViajeros()
     {
         return listEntity2DTO(viajeroLogic.getViajeros());
     }
