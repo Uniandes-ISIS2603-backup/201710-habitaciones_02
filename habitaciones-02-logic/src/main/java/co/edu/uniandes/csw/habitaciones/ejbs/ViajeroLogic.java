@@ -83,7 +83,7 @@ public class ViajeroLogic
      * Elimina un viajero a partir del id dado por parámetro
      * @param id 
      */
-    public void removeViajero(Long id)
+    public void deleteViajero(Long id)
     {
         persistence.delete(id);
     }

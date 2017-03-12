@@ -7,11 +7,13 @@ package co.edu.uniandes.csw.habitaciones.dtos;
 
 
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author s.cortes
  */
+@XmlRootElement
 public class ViajeroDTO extends UsuarioDTO
 {
 

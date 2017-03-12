@@ -41,6 +41,7 @@ public class DisponibilidadEntity implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
+    
 
     public Date getFechaInicioEstadia() {
         return fechaInicioEstadia;

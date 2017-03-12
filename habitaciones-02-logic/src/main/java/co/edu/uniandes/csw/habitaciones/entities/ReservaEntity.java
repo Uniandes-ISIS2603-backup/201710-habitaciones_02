@@ -14,7 +14,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import javax.persistence.TemporalType;
+
 
 /**
  *
@@ -28,10 +28,10 @@ public class ReservaEntity implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Temporal(TemporalType.DATE)
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaInicio;
     
-    @Temporal(TemporalType.DATE)
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaTerminacion;
     
     private Boolean cancelado;
