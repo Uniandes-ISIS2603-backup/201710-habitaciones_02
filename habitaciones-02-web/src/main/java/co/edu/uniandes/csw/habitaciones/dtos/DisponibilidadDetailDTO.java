@@ -6,7 +6,6 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
-import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -15,9 +14,17 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class DisponibilidadDetailDTO extends DisponibilidadDTO {
+
+    private HabitacionDTO habitacion;
     
-    private HabitacionEntity habitacion;
-    
+    public HabitacionDTO getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(HabitacionDTO habitacion) {
+        this.habitacion = habitacion;
+    }
+
     public DisponibilidadDetailDTO() {
         super();
     }
@@ -25,12 +32,22 @@ public class DisponibilidadDetailDTO extends DisponibilidadDTO {
     public DisponibilidadDetailDTO(DisponibilidadEntity entity) {
         super(entity);
         
+        if (entity != null) {
+            habitacion = new HabitacionDTO(entity.getHabitacion());
+        }
+
     }
-    
-    public DisponibilidadEntity toEntity(){
-        
+
+    public DisponibilidadEntity toEntity() {
+
         DisponibilidadEntity entity = super.toEntity();
-        entity.setHabitacion(habitacion);
+        
+        if (this.getHabitacion() != null) {
+            
+            entity.setHabitacion(habitacion.toEntity());
+        }
         return entity;
     }
+    
+    
 }

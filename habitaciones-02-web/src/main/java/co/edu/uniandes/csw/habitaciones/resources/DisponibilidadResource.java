@@ -7,7 +7,7 @@ package co.edu.uniandes.csw.habitaciones.resources;
 
 import co.edu.uniandes.csw.habitaciones.ejbs.DisponibilidadLogic;
 import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
-import co.edu.uniandes.csw.habitaciones.dtos.DisponibilidadDTO;
+import co.edu.uniandes.csw.habitaciones.dtos.DisponibilidadDetailDTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -42,43 +42,43 @@ public class DisponibilidadResource {
     @QueryParam("limit")
     private Integer maxRecords;
 
-    private List<DisponibilidadDTO> listEntity2DTO(List<DisponibilidadEntity> entityList) {
+    private List<DisponibilidadDetailDTO> listEntity2DTO(List<DisponibilidadEntity> entityList) {
 
-        List<DisponibilidadDTO> list = new ArrayList<>();
+        List<DisponibilidadDetailDTO> list = new ArrayList<>();
 
         for (DisponibilidadEntity entity : entityList) {
 
-            list.add(new DisponibilidadDTO(entity));
+            list.add(new DisponibilidadDetailDTO(entity));
         }
         return list;
     }
 
     @GET
-    public List<DisponibilidadDTO> getDisponibilidad() {
+    public List<DisponibilidadDetailDTO> getDisponibilidad() {
 
         return listEntity2DTO(disponibilidadLogic.getDisponibilidades());
     }
 
     @GET
     @Path("{id: \\d+}")
-    public DisponibilidadDTO getDisponibilidad(@PathParam("id") Long id) {
+    public DisponibilidadDetailDTO getDisponibilidad(@PathParam("id") Long id) {
 
-        return new DisponibilidadDTO(disponibilidadLogic.getDisponibilidad(id));
+        return new DisponibilidadDetailDTO(disponibilidadLogic.getDisponibilidad(id));
     }
 
     @POST
-    public DisponibilidadDTO createDisponibilidad(DisponibilidadDTO dto) {
+    public DisponibilidadDetailDTO createDisponibilidad(DisponibilidadDetailDTO dto) {
 
-        return new DisponibilidadDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
+        return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
     }
 
     @PUT
     @Path("{id: \\d+}")
-    public DisponibilidadDTO updateDisponibilidad(@PathParam("id") Long id, DisponibilidadDTO dto) {
+    public DisponibilidadDetailDTO updateDisponibilidad(@PathParam("id") Long id, DisponibilidadDetailDTO dto) {
 
         DisponibilidadEntity entity = dto.toEntity();
         entity.setId(id);
-        return new DisponibilidadDTO(disponibilidadLogic.updateDisponibilidad(entity));
+        return new DisponibilidadDetailDTO(disponibilidadLogic.updateDisponibilidad(entity));
 
     }
 
