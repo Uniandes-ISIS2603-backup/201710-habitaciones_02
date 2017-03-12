@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ViviendaDetailDTO extends ViviendaDTO
 {
-    private List<HabitacionDTO> habitaciones;
+    private List<HabitacionDTO> habitacion;
     public ViviendaDetailDTO()
     {
         super();
@@ -27,10 +27,13 @@ public class ViviendaDetailDTO extends ViviendaDTO
     public ViviendaDetailDTO(ViviendaEntity entity)
     {
         super(entity);
-        habitaciones = new ArrayList<HabitacionDTO>();
+        if(entity != null)
+        {
+        habitacion = new ArrayList<>();
         for(HabitacionEntity ent: entity.getHabitaciones())
         {
-            habitaciones.add(new HabitacionDTO(ent));
+            habitacion.add(new HabitacionDTO(ent));
+        }
         }
     }
     
@@ -38,12 +41,38 @@ public class ViviendaDetailDTO extends ViviendaDTO
     public ViviendaEntity toEntity()
     {
         ViviendaEntity entity = super.toEntity();
-        List<HabitacionEntity> habs = new ArrayList<HabitacionEntity>();
-        for(HabitacionDTO habs2 : this.habitaciones)
+        if(entity != null)
+        {
+            if(getHabitaciones() == null)
+            {
+                setHabitaciones(new ArrayList<>());
+            }
+        List<HabitacionEntity> habs = new ArrayList<>();
+        for(HabitacionDTO habs2 : this.getHabitaciones())
         {
             habs.add(habs2.toEntity());
         }
         entity.setHabitaciones(habs);
+        }
         return entity;
     }
+
+    /**
+     * @return the habitaciones
+     */
+    public List<HabitacionDTO> getHabitaciones() 
+    {
+        return habitacion;
+    }
+
+    /**
+     * @param habitaciones the habitaciones to set
+     */
+    public void setHabitaciones(List<HabitacionDTO> habitaciones) 
+    {
+        this.habitacion = habitaciones;
+    }
+    
+    
 }
+

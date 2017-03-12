@@ -65,7 +65,7 @@ public class ViviendaResource
     @POST
     public ViviendaDetailDTO createVivienda(ViviendaDetailDTO dto) throws  BusinessLogicException
     {
-        System.out.println("aaaa");
+        //System.out.println("aaaa");
         return new ViviendaDetailDTO(viviendaLogic.createVivienda(dto.toEntity()));
     }
     

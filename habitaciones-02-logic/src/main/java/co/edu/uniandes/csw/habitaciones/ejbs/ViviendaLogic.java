@@ -33,14 +33,14 @@ public class ViviendaLogic
     
     public ViviendaEntity createVivienda(ViviendaEntity vivienda) throws BusinessLogicException
     {
-        if(vivienda.getHabitaciones().isEmpty())
-        {
-            throw new BusinessLogicException("Se debe agregar almenos 1 habitacion");
-        }
-        else
-        {
+        //if(vivienda.getHabitaciones().isEmpty())
+        //{
+        //    throw new BusinessLogicException("Se debe agregar almenos 1 habitacion");
+        //}
+        //else
+        //{
             persistence.create(vivienda);
-        }
+        //}
         return vivienda;
     }
     
