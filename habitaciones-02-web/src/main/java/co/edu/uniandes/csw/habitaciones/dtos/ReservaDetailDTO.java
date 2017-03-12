@@ -6,8 +6,6 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -19,8 +17,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ReservaDetailDTO extends ReservaDTO {
     
-    private HabitacionDTO habitacion;
-    private PagoDTO pago;
+    //private HabitacionDTO habitacion;
+    //private PagoDTO pago;
+    private ViajeroDTO viajero;
+    //private AnfitrionDTO anfitrion;
     
     
     public ReservaDetailDTO()
@@ -33,19 +33,37 @@ public class ReservaDetailDTO extends ReservaDTO {
         super(entity);
         if(entity!= null)
         {
-            habitacion = new HabitacionDTO( entity.getHabitacion( ) );
-            pago = new PagoDTO( entity.getPago());
+            //habitacion = new HabitacionDTO( entity.getHabitacion( ) );
+            //pago = new PagoDTO( entity.getPago());
+            viajero = new ViajeroDTO(entity.getViajero());
+            //anfitrion = new AnfitrionDTO(entity.getAnfitrion());
         }
-        
-        
+ 
     }
+
+    public ViajeroDTO getViajero() {
+        return viajero;
+    }
+
+    public void setViajero(ViajeroDTO viajero) {
+        this.viajero = viajero;
+    }
+    
+    
     
      @Override
      public ReservaEntity toEntity()
      {   
         ReservaEntity entity = super.toEntity();
-        entity.setPago(this.pago.toEntity());
-        entity.setHabitacion(this.habitacion.toEntity());
+
+        if(this.getViajero() != null)
+        {
+            entity.setViajero(viajero.toEntity());
+        }
+
+        //entity.setPago(this.pago.toEntity());
+        //entity.setHabitacion(this.habitacion.toEntity());
+        //entity.setAnfitrion(anfitrion.toEntity());
         return entity;        
     }
     

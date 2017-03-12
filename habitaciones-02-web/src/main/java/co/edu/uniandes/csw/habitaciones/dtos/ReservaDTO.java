@@ -19,8 +19,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ReservaDTO implements Serializable{
     
     private Long id;
-    private Date fechaIniciodeEstadia;
-    private Date fechaTerminacionEstadia;
+    private Date fechaInicio;
+    private Date fechaTerminacion;
     private Boolean cancelado;
 
 public ReservaDTO()
@@ -33,19 +33,18 @@ public ReservaDTO(ReservaEntity entity)
     if(entity!= null)
     {
         this.id = entity.getId();
-        this.fechaIniciodeEstadia = entity.getFechaInicio();
-        this.fechaTerminacionEstadia = entity.getfechaTerminacionEstadia();
+        this.fechaInicio = entity.getFechaInicio();
+        this.fechaTerminacion = entity.getFechaTerminacion();
         this.cancelado = entity.getCancelado();
     }
 }
 public ReservaEntity toEntity()
 {   
     ReservaEntity entity = new ReservaEntity(); 
-    
-    entity.setId(this.id);
-    entity.setFechaInicioEstadia(this.fechaIniciodeEstadia);
-    entity.setFechaTerminacionEstadia(this.fechaTerminacionEstadia);
-    entity.setCancelado(this.cancelado);
+    entity.setId(this.getId());
+    entity.setFechaInicio(this.getFechaInicio());
+    entity.setFechaTerminacion(this.getFechaTerminacion());
+    entity.setCancelado(this.getCancelado());
     return entity;
     
 }
@@ -68,29 +67,29 @@ public ReservaEntity toEntity()
      */ 
     public Date getFechaInicio()
     {
-        return fechaIniciodeEstadia;
+        return fechaInicio;
     }
      /**
      * @param fechaIn Date
      */ 
-    public void setFechaInicioEstadia(Date fechaIn)
+    public void setFechaInicio(Date fechaIn)
     {
-        this.fechaIniciodeEstadia = fechaIn;
+        this.fechaInicio = fechaIn;
     }
      /**
      * @return fechaTerminacionEstadia date
      */ 
-    public Date getfechaTerminacionEstadia()
+    public Date getFechaTerminacion()
     {
-        return fechaTerminacionEstadia;
+        return fechaTerminacion;
         
     }
       /**
      * @param fechaT date
      */ 
-    public void setFechaTerminacionEstadia(Date fechaT)
+    public void setFechaTerminacion(Date fechaT)
     {
-        this.fechaTerminacionEstadia = fechaT;
+        this.fechaTerminacion = fechaT;
     }
      /**
      * @return cancelad un boolean

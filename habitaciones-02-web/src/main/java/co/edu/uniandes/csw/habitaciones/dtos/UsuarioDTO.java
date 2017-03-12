@@ -5,7 +5,6 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
-import co.edu.uniandes.csw.habitaciones.entities.UsuarioEntity;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -50,7 +49,7 @@ public class UsuarioDTO implements Serializable
     /**
      * numero del documento de identificacion
      */
-    protected Integer numeroDocumento;
+    protected String numeroDocumento;
     
     /**
      * direccion del usuario
@@ -60,7 +59,7 @@ public class UsuarioDTO implements Serializable
     /**
      * telefono del usuario
      */
-    protected Integer telefono;
+    protected String telefono;
     
     //----------------------------------------------------------------------------------------------------
     // CONTRUCTORES
@@ -156,11 +155,11 @@ public class UsuarioDTO implements Serializable
         this.tipoDocumento = tipoDocumento;
     }
 
-    public Integer getNumeroDocumento() {
+    public String getNumeroDocumento() {
         return numeroDocumento;
     }
 
-    public void setNumeroDocumento(Integer numeroDocumento) {
+    public void setNumeroDocumento(String numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
     }
 
@@ -172,11 +171,11 @@ public class UsuarioDTO implements Serializable
         this.direccion = direccion;
     }
 
-    public Integer getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(Integer telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
     

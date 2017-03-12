@@ -5,12 +5,15 @@
  */
 package co.edu.uniandes.csw.habitaciones.persistence;
 
+
+import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import java.util.List;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 /**
  *
  * @author s.cortes
@@ -55,7 +58,27 @@ public class ViajeroPersistence
     
     public ViajeroEntity find(Long id)
     {
-        return em.find(ViajeroEntity.class, id);
+        ViajeroEntity entity = em.find(ViajeroEntity.class, id);
+
+        TypedQuery<ReservaEntity> q = em.createQuery("select u from ReservaEntity u where u.viajero_idusuario = :pidUsuario", ReservaEntity.class);
+        q = q.setParameter("pidUsuario", id);
+        entity.setReservas(q.getResultList());
+
+        return entity;
+    }
+    
+    public ViajeroEntity searchByEmail(String correoElectronico)
+    {
+        TypedQuery<ViajeroEntity> q
+                = em.createQuery("select u from UsuarioEntity u where u.correoElectronico = :correo", ViajeroEntity.class);
+        q = q.setParameter("correo", correoElectronico);
+
+       List<ViajeroEntity> sameCorreo = q.getResultList();
+        if (sameCorreo.isEmpty() ) {
+            return null; 
+        } else {
+            return sameCorreo.get(0);
+        }
     }
     
     public void delete(Long id)

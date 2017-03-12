@@ -21,7 +21,7 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     // ATRIBUTOS DEL DETAIL DTO
     //----------------------------------------------------------------------------------------------------
 
-    private List<ReservaDTO> reservas;
+    private List<ReservaDTO> reservas = new ArrayList<>();
     
     //----------------------------------------------------------------------------------------------------
     // METODOS CONSTRUCTORES
@@ -29,7 +29,7 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     public ViajeroDetailDTO()
     {
         super();
-        reservas = new ArrayList<>();
+
     }
 
     public ViajeroDetailDTO(ViajeroEntity entity)
@@ -37,7 +37,6 @@ public class ViajeroDetailDTO extends ViajeroDTO {
         super(entity);
         if(entity != null)
         {
-            reservas = new ArrayList<>();
             for(ReservaEntity entityReserva : entity.getReservas())
             {
                 ReservaDTO reserva = new ReservaDTO(entityReserva);

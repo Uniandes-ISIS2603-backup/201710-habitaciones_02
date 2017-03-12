@@ -13,6 +13,7 @@ import javax.ws.rs.core.MediaType;
 import co.edu.uniandes.csw.habitaciones.ejbs.ViajeroLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import co.edu.uniandes.csw.habitaciones.dtos.ViajeroDetailDTO;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.DELETE;
@@ -60,9 +61,10 @@ public class ViajeroResource
     }
     
     @POST
-    public ViajeroDetailDTO crearViajero(ViajeroDetailDTO dto)
+    public ViajeroDetailDTO crearViajero(ViajeroDetailDTO dto)throws BusinessLogicException
     {
-        return new ViajeroDetailDTO(viajeroLogic.createViajero(dto.toEntity()));
+        ViajeroEntity entity = viajeroLogic.createViajero(dto.toEntity());
+        return new ViajeroDetailDTO(entity);
     }
     
     @PUT
