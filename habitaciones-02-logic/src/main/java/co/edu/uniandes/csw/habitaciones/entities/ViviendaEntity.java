@@ -104,4 +104,14 @@ public class ViviendaEntity implements Serializable
         }
         return super.hashCode();
     }
+    
+    public Boolean informacionCompleta()
+    {
+        return (stringUtilizable(ciudad) && stringUtilizable(direccion));
+    }
+    
+    private Boolean stringUtilizable(String palabra)
+    {
+       return (palabra != null)? !palabra.isEmpty() : false;
+    }
 }
