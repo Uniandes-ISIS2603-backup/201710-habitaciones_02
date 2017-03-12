@@ -8,6 +8,7 @@ package co.edu.uniandes.csw.habitaciones.resources;
 import co.edu.uniandes.csw.habitaciones.ejbs.HabitacionLogic;
 import co.edu.uniandes.csw.habitaciones.dtos.HabitacionDetailDTO;
 import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -67,7 +68,7 @@ public class HabitacionResource {
     }
 
     @POST
-    public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) {
+    public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) throws BusinessLogicException {
 
         HabitacionDetailDTO nuevaH = new HabitacionDetailDTO(habitacionLogic.createHabitacion(dto.toEntity()));
         
@@ -76,7 +77,7 @@ public class HabitacionResource {
 
     @PUT
     @Path("{id: \\d+}")
-    public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, HabitacionDetailDTO dto) {
+    public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, HabitacionDetailDTO dto) throws BusinessLogicException {
 
         HabitacionEntity entity = dto.toEntity();
         entity.setId(id);
