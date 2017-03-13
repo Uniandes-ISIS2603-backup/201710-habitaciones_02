@@ -48,6 +48,7 @@ public class PagoDTO
         PagoEntity entity = new PagoEntity();
         entity.setId(this.getId());
         entity.setFechaDePago(this.fechaDePago);
+        entity.setTipoTramite(tipoTramite);
         entity.setPago(this.getPago());
         return entity;
     }
