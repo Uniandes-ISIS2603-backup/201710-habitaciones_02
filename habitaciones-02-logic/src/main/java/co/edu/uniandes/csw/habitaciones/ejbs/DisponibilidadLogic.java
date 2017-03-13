@@ -22,7 +22,9 @@ public class DisponibilidadLogic {
     @Inject
     private DisponibilidadPersistence persistence;
 
+
     public DisponibilidadEntity getDisponibilidad(Long idHabitacion, Long id) {
+
 
         return persistence.find(idHabitacion, id);
     }
