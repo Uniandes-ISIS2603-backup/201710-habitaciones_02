@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ResenaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
     
     private List<ViviendaDTO> viviendas;
     private List<ReservaDTO> reservas;
+    private List<ResenaDTO> resenas;
     /**
      * Constructor por defecto del Detail DTO
      */
@@ -35,22 +37,23 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
      * Constructor del detail dto a partir de un entity anfitrión
      * @param entity Entity del anfitrión a crear
      */
-    public AnfitrionDetailDTO(AnfitrionEntity entity)
-    {
+    public AnfitrionDetailDTO(AnfitrionEntity entity) {
         super(entity);
-        if(entity!=null)
-        {   
-            viviendas  = new ArrayList<ViviendaDTO>();
-        for(ViviendaEntity entity2 : entity.getViviendas() )
-        {
-            viviendas.add(new ViviendaDTO(entity2));
-        }
-        reservas = new ArrayList<>();
-        for(ReservaEntity entityReserva : entity.getReservas())
-        {
-            ReservaDTO reserva = new ReservaDTO(entityReserva);
-            reservas.add(reserva);
-        }
+        if (entity != null) {
+            viviendas = new ArrayList<ViviendaDTO>();
+            for (ViviendaEntity entity2 : entity.getViviendas()) {
+                viviendas.add(new ViviendaDTO(entity2));
+            }
+            reservas = new ArrayList<>();
+            for (ReservaEntity entityReserva : entity.getReservas()) {
+                ReservaDTO reserva = new ReservaDTO(entityReserva);
+                reservas.add(reserva);
+            }
+            resenas = new ArrayList<>();
+            for(ResenaEntity enitytResena : entity.getResenas())
+            {
+                resenas.add(new ResenaDTO(enitytResena));
+            }
         }
     }
     
@@ -59,4 +62,30 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
     {
         return super.toEntity();
     }
+
+    public List<ViviendaDTO> getViviendas() {
+        return viviendas;
+    }
+
+    public void setViviendas(List<ViviendaDTO> viviendas) {
+        this.viviendas = viviendas;
+    }
+
+    public List<ReservaDTO> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<ReservaDTO> reservas) {
+        this.reservas = reservas;
+    }
+
+    public List<ResenaDTO> getResenas() {
+        return resenas;
+    }
+
+    public void setResenas(List<ResenaDTO> resenas) {
+        this.resenas = resenas;
+    }
+    
+    
 }

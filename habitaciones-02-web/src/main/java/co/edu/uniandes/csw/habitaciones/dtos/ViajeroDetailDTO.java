@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
+import co.edu.uniandes.csw.habitaciones.entities.ResenaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     //----------------------------------------------------------------------------------------------------
 
     private List<ReservaDTO> reservas;
+    
+    private List<ResenaDTO> resenas;
     
     //----------------------------------------------------------------------------------------------------
     // METODOS CONSTRUCTORES
@@ -41,6 +44,12 @@ public class ViajeroDetailDTO extends ViajeroDTO {
             for(ReservaEntity entityReserva : entity.getReservas())
             {
                 reservas.add(new ReservaDTO(entityReserva));
+            }
+            
+            resenas = new ArrayList<>();
+            for(ResenaEntity enitytResena : entity.getResenas())
+            {
+                resenas.add(new ResenaDTO(enitytResena));
             }
         }
     }
@@ -62,6 +71,15 @@ public class ViajeroDetailDTO extends ViajeroDTO {
             }
             entity.setReservas(reservasEntity);
         }
+        if(resenas != null)
+        {
+            List<ResenaEntity> resenasEntity = new ArrayList<>();
+            for(ResenaDTO dtoResena : resenas)
+            {
+                resenasEntity.add(dtoResena.toEntity());
+            }
+            entity.setResenas(resenasEntity);
+        }
         
         return entity;
     }
@@ -72,6 +90,14 @@ public class ViajeroDetailDTO extends ViajeroDTO {
 
     public void setReservas(List<ReservaDTO> reservas) {
         this.reservas = reservas;
+    }
+
+    public List<ResenaDTO> getResenas() {
+        return resenas;
+    }
+
+    public void setResenas(List<ResenaDTO> resenas) {
+        this.resenas = resenas;
     }
     
     
