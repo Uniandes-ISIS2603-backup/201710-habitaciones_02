@@ -27,7 +27,7 @@ public class HabitacionDetailDTO extends HabitacionDTO {
     
     private List<ResenaDTO> resenas = new ArrayList<>();
 
-    private ViviendaEntity vivienda;
+    private ViviendaDTO vivienda;
 
     public HabitacionDetailDTO() {
         
@@ -58,6 +58,8 @@ public class HabitacionDetailDTO extends HabitacionDTO {
                 ResenaDTO resena = new ResenaDTO(entityResena);
                 resenas.add(resena);
             }
+            
+            vivienda = new ViviendaDTO();
         }
         
     }
@@ -87,7 +89,7 @@ public class HabitacionDetailDTO extends HabitacionDTO {
 
         entity.setDisponibilidades(listaDisponibilidades);
         entity.setReservas(listaReservas);
-        entity.setVivienda(vivienda);
+        entity.setVivienda(vivienda.toEntity());
 
         return entity;
     }
@@ -116,11 +118,11 @@ public class HabitacionDetailDTO extends HabitacionDTO {
         this.resenas = resenas;
     }
 
-    public ViviendaEntity getVivienda() {
+    public ViviendaDTO getVivienda() {
         return vivienda;
     }
 
-    public void setVivienda(ViviendaEntity vivienda) {
+    public void setVivienda(ViviendaDTO vivienda) {
         this.vivienda = vivienda;
     }
     
