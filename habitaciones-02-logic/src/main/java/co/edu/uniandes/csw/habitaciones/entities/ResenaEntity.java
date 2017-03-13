@@ -27,7 +27,7 @@ public class ResenaEntity
     /**
      * El ID del usuario (el de todos los usuarios)
      */
-    private Long idUsuario;
+    private Long id;
     
     private Double calificacion;
     
@@ -47,12 +47,12 @@ public class ResenaEntity
     // Metodos
     //----------------------------------------------------------------------------------------------------
 
-    public Long getIdUsuario() {
-        return idUsuario;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Double getCalificacion() {

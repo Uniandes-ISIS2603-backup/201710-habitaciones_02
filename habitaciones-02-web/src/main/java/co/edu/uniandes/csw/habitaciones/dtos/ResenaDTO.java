@@ -20,6 +20,8 @@ public class ResenaDTO implements Serializable
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
     
+    private Long id;
+    
     private Double calificacion;
     
     private String comentario;
@@ -39,6 +41,7 @@ public class ResenaDTO implements Serializable
         {
             calificacion = entity.getCalificacion();
             comentario = entity.getComentario();
+            id = entity.getId();
         }
     }
 
@@ -63,6 +66,7 @@ public class ResenaDTO implements Serializable
         ResenaEntity entity = new ResenaEntity();
         entity.setCalificacion(this.getCalificacion());
         entity.setComentario(this.getComentario());
+        entity.setId(id);
         return entity;
     }
     
