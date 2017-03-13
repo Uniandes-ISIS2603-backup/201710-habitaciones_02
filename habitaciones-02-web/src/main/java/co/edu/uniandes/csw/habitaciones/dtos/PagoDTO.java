@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.habitaciones.dtos;
 
 import co.edu.uniandes.csw.habitaciones.entities.PagoEntity;
+import java.io.Serializable;
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -14,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ne.cabrera
  */
 @XmlRootElement
-public class PagoDTO 
+public class PagoDTO implements Serializable 
 {
     private Long id;
     
@@ -46,10 +47,14 @@ public class PagoDTO
     public PagoEntity toEntity()
     {
         PagoEntity entity = new PagoEntity();
-        entity.setId(this.getId());
-        entity.setFechaDePago(this.fechaDePago);
-        entity.setTipoTramite(tipoTramite);
-        entity.setPago(this.getPago());
+        entity.setId(this.id);
+        entity.setFechaDePago(this.getFechaDePago());
+        entity.setTipoTramite(this.tipoTramite);
+        entity.setPago(this.pago);
+        if(getReserva() != null)
+        {
+        entity.setReserva(getReserva().toEntity());
+        }
         return entity;
     }
     
@@ -108,4 +113,20 @@ public class PagoDTO
     public void setTipoTramite(String tipoTramite) {
         this.tipoTramite = tipoTramite;
     }
+
+    /**
+     * @return the reserva
+     */
+    public ReservaDTO getReserva() {
+        return reserva;
+    }
+
+    /**
+     * @param reserva the reserva to set
+     */
+    public void setReserva(ReservaDTO reserva) {
+        this.reserva = reserva;
+    }
+    
+    
 }
