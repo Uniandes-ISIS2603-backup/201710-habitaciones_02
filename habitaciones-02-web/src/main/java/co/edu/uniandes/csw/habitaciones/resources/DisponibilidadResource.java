@@ -29,7 +29,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author b.gamba10
  */
-@Path("/habitaciones/{id: \\d+}/disponibilidades")
+@Path("/habitaciones/{idHabitacion: \\d+}/disponibilidades")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class DisponibilidadResource {
@@ -55,7 +55,7 @@ public class DisponibilidadResource {
     }
 
     @GET
-    public List<DisponibilidadDetailDTO> getDisponibilidades(@PathParam("id") Long idHabitacion) {
+    public List<DisponibilidadDetailDTO> getDisponibilidades(@PathParam("idHabitacion") Long idHabitacion) {
 
         return listEntity2DTO(disponibilidadLogic.getDisponibilidades(idHabitacion));
     }
@@ -68,9 +68,9 @@ public class DisponibilidadResource {
     }
 
     @POST
-    public DisponibilidadDetailDTO createDisponibilidad(@PathParam("id") Long idHabitacion, DisponibilidadDetailDTO dto) throws BusinessLogicException {
+    public DisponibilidadDetailDTO createDisponibilidad( DisponibilidadDetailDTO dto) throws BusinessLogicException {
 
-        return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(idHabitacion, dto.toEntity()));
+        return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
     }
 
     @PUT

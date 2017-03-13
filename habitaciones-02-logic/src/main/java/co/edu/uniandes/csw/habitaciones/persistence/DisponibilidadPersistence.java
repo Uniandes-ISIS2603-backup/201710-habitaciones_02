@@ -37,10 +37,7 @@ public class DisponibilidadPersistence {
         return q.getResultList();
     }
 
-    public DisponibilidadEntity create(Long idHabitacion, DisponibilidadEntity entity) {
-
-        Query q = em.createQuery("insert into DisponibilidadEntity u (u.habitacion.id) values idHabitacion ", DisponibilidadEntity.class);
-        q.setParameter("idHabitacion", idHabitacion);
+    public DisponibilidadEntity create( DisponibilidadEntity entity) {
         
         em.persist(entity);
 
