@@ -62,7 +62,7 @@ public class DisponibilidadResource {
 
     @GET
     @Path("{id: \\d+}")
-    public DisponibilidadDetailDTO getDisponibilidad(@PathParam("id") Long idHabitacion, @PathParam("id") Long id) {
+    public DisponibilidadDetailDTO getDisponibilidad(@PathParam("idHabitacion") Long idHabitacion, @PathParam("id") Long id) {
 
         return new DisponibilidadDetailDTO(disponibilidadLogic.getDisponibilidad(idHabitacion, id));
     }
@@ -70,12 +70,12 @@ public class DisponibilidadResource {
     @POST
     public DisponibilidadDetailDTO createDisponibilidad(@PathParam("id") Long idHabitacion, DisponibilidadDetailDTO dto) throws BusinessLogicException {
 
-        return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
+        return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(idHabitacion, dto.toEntity()));
     }
 
     @PUT
     @Path("{id: \\d+}")
-    public DisponibilidadDetailDTO updateDisponibilidad(@PathParam("id") Long id, DisponibilidadDetailDTO dto) {
+    public DisponibilidadDetailDTO updateDisponibilidad(@PathParam("id") Long id, DisponibilidadDetailDTO dto) throws BusinessLogicException {
 
         DisponibilidadEntity entity = dto.toEntity();
         entity.setId(id);

@@ -119,6 +119,16 @@ public class HabitacionEntity implements Serializable{
     }
     
     
+    public Boolean informacionCompleta()
+    {
+        return (stringUtilizable(area.toString()) && stringUtilizable(valorAlquiler.toString()) 
+                && stringUtilizable(descripcion) && stringUtilizable(rutaImagen));
+    }
+    
+    private Boolean stringUtilizable(String palabra)
+    {
+       return (palabra != null)? !palabra.isEmpty() : false;
+    }
     
      @Override
     public boolean equals(Object obj) {
