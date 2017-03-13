@@ -55,20 +55,20 @@ public class DisponibilidadResource {
     }
 
     @GET
-    public List<DisponibilidadDetailDTO> getDisponibilidad() {
+    public List<DisponibilidadDetailDTO> getDisponibilidades(@PathParam("id") Long idHabitacion) {
 
-        return listEntity2DTO(disponibilidadLogic.getDisponibilidades());
+        return listEntity2DTO(disponibilidadLogic.getDisponibilidades(idHabitacion));
     }
 
     @GET
     @Path("{id: \\d+}")
-    public DisponibilidadDetailDTO getDisponibilidad(@PathParam("id") Long id) {
+    public DisponibilidadDetailDTO getDisponibilidad(@PathParam("id") Long idHabitacion, @PathParam("id") Long id) {
 
-        return new DisponibilidadDetailDTO(disponibilidadLogic.getDisponibilidad(id));
+        return new DisponibilidadDetailDTO(disponibilidadLogic.getDisponibilidad(idHabitacion, id));
     }
 
     @POST
-    public DisponibilidadDetailDTO createDisponibilidad(DisponibilidadDetailDTO dto) throws BusinessLogicException {
+    public DisponibilidadDetailDTO createDisponibilidad(@PathParam("id") Long idHabitacion, DisponibilidadDetailDTO dto) throws BusinessLogicException {
 
         return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
     }
@@ -89,5 +89,4 @@ public class DisponibilidadResource {
 
         disponibilidadLogic.deleteDisponibilidad(id);
     }
-
 }

@@ -6,6 +6,7 @@
 package co.edu.uniandes.csw.habitaciones.ejbs;
 import co.edu.uniandes.csw.habitaciones.entities.ResenaEntity;
 import co.edu.uniandes.csw.habitaciones.persistence.ResenaPersistence;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -28,8 +29,17 @@ public class ResenaLogic
     {
         return persistence.find(id);
     }
-     public ResenaEntity createResena(ResenaEntity entity)
+     public ResenaEntity createResena(ResenaEntity entity) throws BusinessLogicException
     {
+        if(entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
+        {
+            throw new BusinessLogicException("La resena debe tener un acalificacion que sea entre 0 y 5");
+        }
+        else if(entity.getHabitacion() == null)
+        {
+            throw new BusinessLogicException("La resena debe estar dirijida a una habitacion especifica");
+        }
+        
         return persistence.create(entity);
     }
      
