@@ -34,39 +34,69 @@ public class HabitacionLogic {
 
     public HabitacionEntity createHabitacion(HabitacionEntity entity) throws BusinessLogicException {
 
-        if (entity.getArea() < 0) {
-            throw new BusinessLogicException("El area debe ser mayor que cero.");
-        }
-        if (entity.getDescripcion() == null || entity.getDescripcion().equals("")) {
-            throw new BusinessLogicException("Debe escribir la descripcion de la habitacion.");
-        }
-        if (entity.getRutaImagen() == null) {
-            throw new BusinessLogicException("Debe ingresar la ruta de la imagen de la habitacion.");
-        }
-        if (entity.getValorAlquiler() < 0) {
-            throw new BusinessLogicException("El valor del alquiler debe ser mayor que cero.");
+        String problemas = "Se generaron errores al intentar agregar una habitacion:\n";
+        Boolean problema = false;
+
+        if (!entity.informacionCompleta()) {
+            problemas += "La informacion no esta completa:\n"
+                    + "   -Area: <" + entity.getArea().toString() + ">\n"
+                    + "   -Valor Alquier: <" + entity.getValorAlquiler().toString() + ">\n"
+                    + "   -Ruta imagen: <" + entity.getRutaImagen() + ">\n"
+                    + "   -Descripcion: <" + entity.getDescripcion() + ">\n";
+            problema = true;
         } else {
-            persistence.create(entity);
-            return entity;
+            if (entity.getArea() <= 0) {
+                problemas += "El area debe ser mayor que cero. \n";
+                problema = true;
+            }
+
+            if (entity.getValorAlquiler() <= 0) {
+                problemas += "El valor del alquiler debe ser mayor que cero.";
+                problema = true;
+            }
+
         }
+
+        if (problema) {
+            throw new BusinessLogicException(problemas);
+        }
+
+        persistence.create(entity);
+        return entity;
+
     }
 
     public HabitacionEntity updateHabitacion(HabitacionEntity entity) throws BusinessLogicException {
 
-        if (entity.getArea() < 0) {
-            throw new BusinessLogicException("El area debe ser mayor que cero.");
-        }
-        if (entity.getDescripcion() == null || entity.getDescripcion().equals("")) {
-            throw new BusinessLogicException("Debe escribir la descripcion de la habitacion.");
-        }
-        if (entity.getRutaImagen() == null) {
-            throw new BusinessLogicException("Debe ingresar la ruta de la imagen de la habitacion.");
-        }
-        if (entity.getValorAlquiler() < 0) {
-            throw new BusinessLogicException("El valor del alquiler debe ser mayor que cero.");
+        String problemas = "Se generaron errores al intentar actualizar la habitacion:\n";
+        Boolean problema = false;
+
+        if (!entity.informacionCompleta()) {
+            problemas += "La informacion no esta completa:\n"
+                    + "   -Area: <" + entity.getArea().toString() + ">\n"
+                    + "   -Valor Alquier: <" + entity.getValorAlquiler().toString() + ">\n"
+                    + "   -Ruta imagen: <" + entity.getRutaImagen() + ">\n"
+                    + "   -Descripcion: <" + entity.getDescripcion() + ">\n";
+            problema = true;
         } else {
-            return persistence.update(entity);
+            if (entity.getArea() <= 0) {
+                problemas += "El area debe ser mayor que cero. \n";
+                problema = true;
+            }
+
+            if (entity.getValorAlquiler() <= 0) {
+                problemas += "El valor del alquiler debe ser mayor que cero.";
+                problema = true;
+            }
+
         }
+
+        if (problema) {
+            throw new BusinessLogicException(problemas);
+        }
+
+        return persistence.update(entity);
+
     }
 
     public void deleteHabitacion(Long id) {
