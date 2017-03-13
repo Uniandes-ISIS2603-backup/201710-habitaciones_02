@@ -92,4 +92,38 @@ public class HabitacionDetailDTO extends HabitacionDTO {
         return entity;
     }
 
+    public List<DisponibilidadDTO> getDisponibilidades() {
+        return disponibilidades;
+    }
+
+    public void setDisponibilidades(List<DisponibilidadDTO> disponibilidades) {
+        this.disponibilidades = disponibilidades;
+    }
+
+    public List<ReservaDTO> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<ReservaDTO> reservas) {
+        this.reservas = reservas;
+    }
+
+    public List<ResenaDTO> getResenas() {
+        return resenas;
+    }
+
+    public void setResenas(List<ResenaDTO> resenas) {
+        this.resenas = resenas;
+    }
+
+    public ViviendaEntity getVivienda() {
+        return vivienda;
+    }
+
+    public void setVivienda(ViviendaEntity vivienda) {
+        this.vivienda = vivienda;
+    }
+    
+    
+
 }
