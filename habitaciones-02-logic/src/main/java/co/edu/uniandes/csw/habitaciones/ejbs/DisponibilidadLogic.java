@@ -34,7 +34,7 @@ public class DisponibilidadLogic {
         return  persistence.findAll(idHabitacion);
     }
 
-    public DisponibilidadEntity createDisponibilidad(Long idHabitacion, DisponibilidadEntity entity) throws BusinessLogicException {
+    public DisponibilidadEntity createDisponibilidad( DisponibilidadEntity entity) throws BusinessLogicException {
 
         if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia())) {
 
@@ -42,7 +42,7 @@ public class DisponibilidadLogic {
 
         }
 
-        persistence.create(idHabitacion, entity);
+        persistence.create(entity);
         return entity;
 
     }
