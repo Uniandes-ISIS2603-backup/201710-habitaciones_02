@@ -25,7 +25,6 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
     
     private List<ViviendaDTO> viviendas;
     private List<ReservaDTO> reservas;
-    private List<ResenaDTO> resenas;
     /**
      * Constructor por defecto del Detail DTO
      */
@@ -48,11 +47,6 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
             for (ReservaEntity entityReserva : entity.getReservas()) {
                 ReservaDTO reserva = new ReservaDTO(entityReserva);
                 reservas.add(reserva);
-            }
-            resenas = new ArrayList<>();
-            for(ResenaEntity enitytResena : entity.getResenas())
-            {
-                resenas.add(new ResenaDTO(enitytResena));
             }
         }
     }
@@ -79,13 +73,5 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
         this.reservas = reservas;
     }
 
-    public List<ResenaDTO> getResenas() {
-        return resenas;
-    }
-
-    public void setResenas(List<ResenaDTO> resenas) {
-        this.resenas = resenas;
-    }
-    
     
 }

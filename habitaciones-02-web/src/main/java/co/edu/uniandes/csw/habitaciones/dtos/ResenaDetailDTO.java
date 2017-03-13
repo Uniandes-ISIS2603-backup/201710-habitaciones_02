@@ -18,8 +18,6 @@ public class ResenaDetailDTO extends ResenaDTO
     
     private ViajeroDTO viajero;
     
-    private AnfitrionDTO anfitrion;
-    
     private HabitacionDTO habitacion;
 
     public ResenaDetailDTO() 
@@ -34,7 +32,6 @@ public class ResenaDetailDTO extends ResenaDTO
         {
             habitacion = new HabitacionDTO( entity.getHabitacion( ) );
             viajero = new ViajeroDTO(entity.getViajero());
-            anfitrion = new AnfitrionDTO(entity.getAnfitrion());
         }
     }
 
@@ -45,15 +42,7 @@ public class ResenaDetailDTO extends ResenaDTO
     public void setViajero(ViajeroDTO viajero) {
         this.viajero = viajero;
     }
-
-    public AnfitrionDTO getAnfitrion() {
-        return anfitrion;
-    }
-
-    public void setAnfitrion(AnfitrionDTO anfitrion) {
-        this.anfitrion = anfitrion;
-    }
-
+    
     public HabitacionDTO getHabitacion() {
         return habitacion;
     }
@@ -69,10 +58,6 @@ public class ResenaDetailDTO extends ResenaDTO
         if(this.getViajero() != null)
         {
             entity.setViajero(viajero.toEntity());
-        }
-        if(this.getAnfitrion() != null)
-        {
-            entity.setAnfitrion(anfitrion.toEntity());
         }
         if(this.getHabitacion() != null)
         {

@@ -37,9 +37,6 @@ public class ResenaEntity
     private ViajeroEntity viajero;
     
     @ManyToOne
-    private AnfitrionEntity anfitrion;
-    
-    @ManyToOne
     private HabitacionEntity habitacion;
     
     
@@ -77,14 +74,6 @@ public class ResenaEntity
 
     public void setViajero(ViajeroEntity viajero) {
         this.viajero = viajero;
-    }
-
-    public AnfitrionEntity getAnfitrion() {
-        return anfitrion;
-    }
-
-    public void setAnfitrion(AnfitrionEntity anfitrion) {
-        this.anfitrion = anfitrion;
     }
 
     public HabitacionEntity getHabitacion() {
