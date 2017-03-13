@@ -34,23 +34,40 @@ public class PagoLogic
     
     public PagoEntity createPago(PagoEntity pago) throws BusinessLogicException
     {
-        if(pago.getPago() < 0)
+        String problemas = "Se generaron errores al intentar ingresar el registro de pago:\n";
+        Boolean problema = false;
+        
+        if(!pago.informacionCompleta())
         {
-            throw new BusinessLogicException("el pago debe ser mayor a 0");
-        }
-        else if(pago.getFechaDePago().after(new Date()))
-        {
-            throw new BusinessLogicException("la fecha de pago no puede ser mayor a la actual");
-        }
-        else if(!pago.informacionCompleta())
-        {
-            throw new BusinessLogicException("la informacion no esta completa");
+            problemas += "la informacion no esta completa:\n" 
+                            + "   -Pago: <"+pago.getPago()+">\n"
+                            + "   -Fecha: <"+pago.getFechaDePago().toString()+">\n"
+                            + "   -Tipo: <"+pago.getTipoTramite()+">\n";
+            problema = true;
         }
         else
         {
+            if (pago.getPago() < 0) 
+            {
+                problemas += "el pago debe ser mayor a 0.\n";
+                problema = true;
+            }
+            if (pago.getFechaDePago().after(new Date())) 
+            {
+                problemas += "la fecha de pago no puede ser mayor a la actual.\n";
+                problema = true;
+            }
+        }
+
+
+        if(problema)
+        {
+            throw new BusinessLogicException(problemas);
+        }
+        
         persistence.create(pago);
         return pago;
-        }
+
     }
     
     public PagoEntity updatePago(PagoEntity pago)
