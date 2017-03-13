@@ -43,10 +43,10 @@ public class ViajeroLogic
         {
             throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
         }
-        else if(persistence.searchByEmail(entity.getCorreoElectronico()) != null)
-        {
-            throw new BusinessLogicException("Ya exisite un usuario viajero con el correo ingresado. Por favor, intente nuevamente con un correo distinto");
-        }
+//        else if(persistence.searchByEmail(entity.getCorreoElectronico()) != null)
+//        {
+//            throw new BusinessLogicException("Ya exisite un usuario viajero con el correo ingresado. Por favor, intente nuevamente con un correo distinto");
+//        }
         return persistence.create(entity);
     }
     

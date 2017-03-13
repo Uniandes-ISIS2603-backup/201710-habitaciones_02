@@ -43,8 +43,12 @@ public class ResenaLogic
         return persistence.create(entity);
     }
      
-      public ResenaEntity updateResena(ResenaEntity entity)
+     public ResenaEntity updateResena(ResenaEntity entity) throws BusinessLogicException
     {
+        if(entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
+        {
+            throw new BusinessLogicException("La resena debe tener un acalificacion que sea entre 0 y 5");
+        }
         return persistence.update(entity);
     }
       
