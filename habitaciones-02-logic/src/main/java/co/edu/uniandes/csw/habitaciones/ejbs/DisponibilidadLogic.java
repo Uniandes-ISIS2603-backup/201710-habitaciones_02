@@ -28,7 +28,7 @@ public class DisponibilidadLogic {
         List<DisponibilidadEntity> lista = new ArrayList<>();
 
         for (DisponibilidadEntity entity : persistence.findAll()) {
-            if (entity.getId().equals(id)) {
+            if (entity.getHabitacion().getId().equals(id)) {
 
                 lista.add(entity);
 
