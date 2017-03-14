@@ -5,7 +5,9 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
+import co.edu.uniandes.csw.habitaciones.entities.PagoEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
+import java.awt.List;
 import java.io.Serializable;
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -22,7 +24,7 @@ public class ReservaDTO implements Serializable{
     private Date fechaInicio;
     private Date fechaTerminacion;
     private Boolean cancelado;
-
+    
 public ReservaDTO()
 {
     

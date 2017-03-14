@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
@@ -46,7 +47,8 @@ public class ReservaEntity implements Serializable{
     private HabitacionEntity habitacion;
     
     @OneToOne(mappedBy = "reserva")
-    private PagoEntity pago;
+    private List<PagoEntity> pago;
+   
 
     public Long getId() {
         return id;
@@ -104,11 +106,11 @@ public class ReservaEntity implements Serializable{
         this.habitacion = habitacion;
     }
 
-    public PagoEntity getPago() {
+    public List<PagoEntity> getPago() {
         return pago;
     }
 
-    public void setPago(PagoEntity pago) {
+    public void setPago(List<PagoEntity> pago) {
         this.pago = pago;
     }
     
