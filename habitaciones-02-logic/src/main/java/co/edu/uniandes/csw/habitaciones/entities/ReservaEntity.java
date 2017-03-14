@@ -48,8 +48,7 @@ public class ReservaEntity implements Serializable{
     @OneToOne(mappedBy = "reserva")
     private PagoEntity pago;
 
-    public Long getId() {
-        return id;
+    public Long getId() { return id;
     }
 
     public void setId(Long id) {
