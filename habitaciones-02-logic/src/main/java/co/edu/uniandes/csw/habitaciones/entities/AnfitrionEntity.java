@@ -23,9 +23,7 @@ public class AnfitrionEntity extends UsuarioEntity
     
     @OneToMany( mappedBy="anfitrion" )
     private List<ReservaEntity> reservas;
-    
-    @OneToMany(mappedBy = "viajero")
-    private List<ResenaEntity> resenas;
+
 
     public List<ReservaEntity> getReservas() {
         return reservas;
@@ -43,14 +41,4 @@ public class AnfitrionEntity extends UsuarioEntity
         this.viviendas = viviendas;
     }
 
-    public List<ResenaEntity> getResenas() {
-        return resenas;
-    }
-
-    public void setResenas(List<ResenaEntity> resenas) {
-        this.resenas = resenas;
-    }
-    
-    
-   
 }
