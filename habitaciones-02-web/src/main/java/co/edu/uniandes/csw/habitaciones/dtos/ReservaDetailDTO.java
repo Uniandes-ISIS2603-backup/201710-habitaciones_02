@@ -9,7 +9,6 @@ import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
-
 /**
  *
  * @author dg.guarin20
