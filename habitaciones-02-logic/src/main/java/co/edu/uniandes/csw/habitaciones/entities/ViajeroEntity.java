@@ -51,10 +51,18 @@ public class ViajeroEntity extends UsuarioEntity
         this.reservas = reservas;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public List<ResenaEntity> getResenas() {
         return resenas;
     }
 
+    /**
+     * 
+     * @param resenas 
+     */
     public void setResenas(List<ResenaEntity> resenas) {
         this.resenas = resenas;
     }
