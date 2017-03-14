@@ -80,6 +80,7 @@ public class AnfitrionResource
     @Path("{id: \\d+}")
     public void deleteAnfitrion(@PathParam("id") Long id)
     {
+        int i = 0;
         logica.deleteAnfitrion(id);
     }
     

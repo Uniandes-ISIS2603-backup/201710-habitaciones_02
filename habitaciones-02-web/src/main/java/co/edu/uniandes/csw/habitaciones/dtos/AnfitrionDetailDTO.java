@@ -60,7 +60,23 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
     @Override
     public AnfitrionEntity toEntity()
     {
-        return super.toEntity();
+        AnfitrionEntity entity = super.toEntity();
+        if(reservas != null)
+        {
+            List<ReservaEntity> reservasEntity = new ArrayList<>();
+            for(ReservaDTO dtoReserva : reservas)
+            {
+                reservasEntity.add(dtoReserva.toEntity());
+            }
+            entity.setReservas(reservasEntity);
+        }
+        if(viviendas != null){
+            List<ViviendaEntity> viviendasEntity = new ArrayList<>();
+            for (ViviendaDTO vivienda : viviendas) {
+                viviendasEntity.add(vivienda.toEntity());
+            }  
+        }
+        return entity;
     }
 
     public List<ViviendaDTO> getViviendas() {
