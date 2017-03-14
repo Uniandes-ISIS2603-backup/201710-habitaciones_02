@@ -34,7 +34,7 @@ public class ReservaDetailDTO extends ReservaDTO {
         if(entity!= null)
         {
             //habitacion = new HabitacionDTO( entity.getHabitacion( ) );
-            //pago = new PagoDTO( entity.getPago());
+            pago = new PagoDTO( entity.getPago());
             viajero = new ViajeroDTO(entity.getViajero());
             anfitrion = new AnfitrionDTO(entity.getAnfitrion());
         }
@@ -52,7 +52,16 @@ public class ReservaDetailDTO extends ReservaDTO {
     public AnfitrionDTO getAnfitrion() {
         return anfitrion;
     }
-
+    public PagoDTO getPago()
+           
+    {
+        return pago;
+    }
+    public void setPago(PagoDTO pago)   
+    {
+        this.pago = pago;
+    }
+    
     public void setAnfitrion(AnfitrionDTO anfitrion) {
         this.anfitrion = anfitrion;
     }
@@ -70,9 +79,11 @@ public class ReservaDetailDTO extends ReservaDTO {
         {
             entity.setAnfitrion(anfitrion.toEntity());
         }
-
-        //entity.setPago(this.pago.toEntity());
-        //entity.setHabitacion(this.habitacion.toEntity());
+        if(this.getPago()!= null)
+        {
+            entity.setPago(this.pago.toEntity());
+        }
+        
 
         return entity;        
     }
