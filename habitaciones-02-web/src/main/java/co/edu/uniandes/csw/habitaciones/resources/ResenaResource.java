@@ -95,10 +95,12 @@ public class ResenaResource
      * @param id el id de una reseña
      * @param dto el DTO con la informacion actualizada
      * @return la reseña actualizado
+     * @throws BusinessLogicException Exception de las reglas del negocio
      */
     @PUT
     @Path("{id: \\d+}")
-    public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto) throws BusinessLogicException {
+    public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto) throws BusinessLogicException
+    {
         ResenaEntity entity = dto.toEntity();
         entity.setId(id);
         return new ResenaDetailDTO(logic.updateResena(entity));
@@ -113,6 +115,7 @@ public class ResenaResource
     public void deleteResena(@PathParam("id") Long id) {
         logic.delete(id);
     }
+    
 
     
 }

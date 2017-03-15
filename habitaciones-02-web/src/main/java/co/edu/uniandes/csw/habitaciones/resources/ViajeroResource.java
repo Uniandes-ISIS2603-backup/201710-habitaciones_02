@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
+import co.edu.uniandes.csw.habitaciones.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.habitaciones.dtos.ViajeroDTO;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -100,10 +101,11 @@ public class ViajeroResource
      * @param id el id de un viajero
      * @param dto el DTO con la informacion actualizada
      * @return el viajero actualizado
+     * @throws BusinessLogicException Exception de las reglas del negocio
      */
     @PUT
     @Path("{id: \\d+}")
-    public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto)
+    public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto) throws BusinessLogicException
     {
         ViajeroEntity entity = dto.toEntity();
         entity.setIdUsuario(id);
@@ -120,4 +122,5 @@ public class ViajeroResource
     {
         viajeroLogic.deleteViajero(id);
     }
+
 }

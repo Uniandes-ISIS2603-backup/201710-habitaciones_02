@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -62,11 +62,15 @@ public class ResenaLogic
     {
         if(entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
         {
-            throw new BusinessLogicException("La resena debe tener un acalificacion que sea entre 0 y 5");
+            throw new BusinessLogicException("La reseña debe tener un acalificacion que sea entre 0 y 5");
         }
-        else if(entity.getHabitacion() == null)
+        else if(entity.getHabitacion() == null )
         {
-            throw new BusinessLogicException("La resena debe estar dirijida a una habitacion especifica");
+            throw new BusinessLogicException("La reseña debe estar dirijida a una habitacion especifica");
+        }
+        else if(entity.getViajero() == null)
+        {
+            throw new BusinessLogicException("La reseña debe tener la referencia del viajero quien la escribió");
         }
         
         return persistence.create(entity);
@@ -82,6 +86,14 @@ public class ResenaLogic
         if(entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
         {
             throw new BusinessLogicException("La resena debe tener un acalificacion que sea entre 0 y 5");
+        }
+        else if(entity.getHabitacion() == null )
+        {
+            throw new BusinessLogicException("La reseña debe estar dirijida a una habitacion especifica");
+        }
+        else if(entity.getViajero() == null)
+        {
+            throw new BusinessLogicException("La reseña debe tener la referencia del viajero quien la escribió");
         }
         return persistence.update(entity);
     }
