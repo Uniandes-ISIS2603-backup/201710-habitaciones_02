@@ -21,6 +21,7 @@ public class ViajeroDTO extends UsuarioDTO
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
     
+    //Se encuentran en la Clase UsuarioDTO
     
     //----------------------------------------------------------------------------------------------------
     // METODOS CONSTRUCTORES
@@ -31,7 +32,7 @@ public class ViajeroDTO extends UsuarioDTO
      */
     public ViajeroDTO()
     {
-        
+        // metodo default del constructor
     }
 
     /**
@@ -58,6 +59,10 @@ public class ViajeroDTO extends UsuarioDTO
     // METODOS
     //----------------------------------------------------------------------------------------------------
 
+    /**
+     * Metodo encargado de converitr un DTO a un Entity 
+     * @return una entidad viajero
+     */
     public ViajeroEntity toEntity()
     {
         ViajeroEntity entity  = new ViajeroEntity();

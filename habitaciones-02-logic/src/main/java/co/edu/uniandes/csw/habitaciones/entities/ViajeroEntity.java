@@ -28,6 +28,9 @@ public class ViajeroEntity extends UsuarioEntity
     @OneToMany(mappedBy = "viajero")
     private List<ReservaEntity> reservas;
 
+    /**
+     * Relacion One-to-Many con las reseñas
+     */
     @OneToMany(mappedBy = "viajero")
     private List<ResenaEntity> resenas;
     
@@ -36,32 +39,32 @@ public class ViajeroEntity extends UsuarioEntity
     //----------------------------------------------------------------------------------------------------
 
     /**
-     * 
-     * @return 
+     * Retorna las resevas del viajero
+     * @return lista de reservas
      */
     public List<ReservaEntity> getReservas() {
         return reservas;
     }
 
     /**
-     * 
-     * @param reservas 
+     * asigna las reservas del viajero
+     * @param reservas la lista de reservas a asignar
      */
     public void setReservas(List<ReservaEntity> reservas) {
         this.reservas = reservas;
     }
 
     /**
-     * 
-     * @return 
+     * retorna la lista de reseñas
+     * @return lista de reseñas
      */
     public List<ResenaEntity> getResenas() {
         return resenas;
     }
 
     /**
-     * 
-     * @param resenas 
+     * asigna las reseñas del viajero
+     * @param resenas la lista de las reseñas a asignar
      */
     public void setResenas(List<ResenaEntity> resenas) {
         this.resenas = resenas;

@@ -22,19 +22,33 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     // ATRIBUTOS DEL DETAIL DTO
     //----------------------------------------------------------------------------------------------------
 
+    /**
+     * Lista de reservas
+     */
     private List<ReservaDTO> reservas;
     
+    /**
+     * lista de reseñas
+     */
     private List<ResenaDTO> resenas;
     
     //----------------------------------------------------------------------------------------------------
     // METODOS CONSTRUCTORES
     //----------------------------------------------------------------------------------------------------
+    
+    /**
+     * Metodo constructor por defecto
+     */
     public ViajeroDetailDTO()
     {
         super();
-
+        //metodo constructor por defecto
     }
 
+    /**
+     * Metodo constructor
+     * @param entity  entidad del viajero
+     */
     public ViajeroDetailDTO(ViajeroEntity entity)
     {
         super(entity);
@@ -58,6 +72,39 @@ public class ViajeroDetailDTO extends ViajeroDTO {
     // METODOS
     //----------------------------------------------------------------------------------------------------
 
+    /**
+     * Retorna las resevas del viajero
+     * @return lista de reservas
+     */
+    public List<ReservaDTO> getReservas() {
+        return reservas;
+    }
+
+    /**
+     * asigna las reservas del viajero
+     * @param reservas la lista de reservas a asignar
+     */
+    public void setReservas(List<ReservaDTO> reservas) {
+        this.reservas = reservas;
+    }
+
+    /**
+     * retorna la lista de reseñas
+     * @return lista de reseñas
+     */
+    public List<ResenaDTO> getResenas() {
+        return resenas;
+    }
+
+    /**
+     * asigna las reseñas del viajero
+     * @param resenas la lista de las reseñas a asignar
+     */
+    public void setResenas(List<ResenaDTO> resenas) {
+        this.resenas = resenas;
+    }
+    
+    
     @Override
     public ViajeroEntity toEntity()
     {
@@ -84,21 +131,6 @@ public class ViajeroDetailDTO extends ViajeroDTO {
         return entity;
     }
 
-    public List<ReservaDTO> getReservas() {
-        return reservas;
-    }
-
-    public void setReservas(List<ReservaDTO> reservas) {
-        this.reservas = reservas;
-    }
-
-    public List<ResenaDTO> getResenas() {
-        return resenas;
-    }
-
-    public void setResenas(List<ResenaDTO> resenas) {
-        this.resenas = resenas;
-    }
     
     
 }
