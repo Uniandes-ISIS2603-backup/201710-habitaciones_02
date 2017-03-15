@@ -35,12 +35,19 @@ import javax.ws.rs.core.Context;
 @Produces(MediaType.APPLICATION_JSON)
 public class ViajeroResource 
 {
+    /**
+     * Atributo del logic del viajero
+     */
     @Inject private ViajeroLogic viajeroLogic;
     @Context private HttpServletResponse response;
     @QueryParam("page") private Integer page;
     @QueryParam("limit") private Integer maxRecords;
     
-    
+    /**
+     * Metodo encargado de convertir la entidad a DTO
+     * @param listEntity la lista con las entidades
+     * @return una lista con DTOs
+     */
     public List<ViajeroDTO> listEntity2DTO(List<ViajeroEntity> listEntity)
     {
         List<ViajeroDTO> listDto = new ArrayList<>();
@@ -53,12 +60,21 @@ public class ViajeroResource
         return listDto;
     }
     
+    /**
+     * Metodo encargado de obtener todos los DTOs de los viajeros
+     * @return 
+     */
     @GET
     public List<ViajeroDTO> getViajeros()
     {
         return listEntity2DTO(viajeroLogic.getViajeros());
     }
     
+    /**
+     * Metodo encargado de retornar un DTO viajero a partir de un id
+     * @param id el id de la entidad
+     * @return 
+     */
     @GET
     @Path("{id: \\d+}")
     public ViajeroDetailDTO getViajero(@PathParam("id") Long id)
@@ -66,6 +82,12 @@ public class ViajeroResource
         return new ViajeroDetailDTO(viajeroLogic.getViajero(id));
     }
     
+    /**
+     * Metodo encargado de agregar un nuevo viajero a la base de datos
+     * @param dto el nuevo DTO
+     * @return el viajero creado
+     * @throws BusinessLogicException Exception de las reglas del negocio
+     */
     @POST
     public ViajeroDetailDTO crearViajero(ViajeroDetailDTO dto)throws BusinessLogicException
     {
@@ -73,6 +95,12 @@ public class ViajeroResource
         return new ViajeroDetailDTO(entity);
     }
     
+    /**
+     * Metodo encargado de actualizar la informacion de un viajero
+     * @param id el id de un viajero
+     * @param dto el DTO con la informacion actualizada
+     * @return el viajero actualizado
+     */
     @PUT
     @Path("{id: \\d+}")
     public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto)
@@ -82,6 +110,10 @@ public class ViajeroResource
         return new ViajeroDetailDTO(viajeroLogic.updateViajero(entity));
     }
     
+    /**
+     * Elimina un viajero de la base de datos
+     * @param id el id del viajero
+     */
     @DELETE
     @Path("{id: \\d+}")
     public void deleteViajero(@PathParam("id") Long id) 

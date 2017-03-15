@@ -34,12 +34,20 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class ResenaResource
 {
+    /**
+     * Atributo del logic de la reserva
+     */
     @Inject private ResenaLogic logic;
     @Context private HttpServletResponse response;
     @QueryParam("page") private Integer page;
     @QueryParam("limit") private Integer maxRecords;
     
    
+    /**
+     * Metodo encargado de convertir la entidad a DTO
+     * @param listEntity la lista con las entidades
+     * @return una lista con DTOs
+     */
     private List<ResenaDetailDTO> listEntity2DTO(List<ResenaEntity> listEntity) {
         List<ResenaDetailDTO> lista = new ArrayList<>();
         for (ResenaEntity entity : listEntity) {
@@ -49,24 +57,45 @@ public class ResenaResource
         return lista;
     }
 
+    /**
+     * Metodo encargado de obtener todos los DTOs de los reseñas
+     * @return 
+     */
     @GET
     public List<ResenaDetailDTO> getResenas() {
 
         return listEntity2DTO(logic.findResenas());
     }
 
+    /**
+     * Metodo encargado de retornar un DTO reseña a partir de un id
+     * @param id el id de la entidad
+     * @return 
+     */
     @GET
     @Path("{id: \\d+}")
     public ResenaDetailDTO getResena(@PathParam("id") Long id) {
         return new ResenaDetailDTO(logic.findResena(id));
     }
 
+    /**
+     * Metodo encargado de agregar un nuevo reseña a la base de datos
+     * @param dto el nuevo DTO
+     * @return la reseña creado
+     * @throws BusinessLogicException Exception de las reglas del negocio
+     */
     @POST
     public ResenaDetailDTO createResena(ResenaDetailDTO dto) throws BusinessLogicException 
     {
         return new ResenaDetailDTO(logic.createResena(dto.toEntity()));
     }
 
+    /**
+     * Metodo encargado de actualizar la informacion de una reseña
+     * @param id el id de una reseña
+     * @param dto el DTO con la informacion actualizada
+     * @return la reseña actualizado
+     */
     @PUT
     @Path("{id: \\d+}")
     public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto) throws BusinessLogicException {
@@ -75,6 +104,10 @@ public class ResenaResource
         return new ResenaDetailDTO(logic.updateResena(entity));
     }
 
+    /**
+     * Elimina una reseña de la base de datos
+     * @param id el id dla reseña
+     */
     @DELETE
     @Path("{id: \\d+}")
     public void deleteResena(@PathParam("id") Long id) {

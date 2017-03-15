@@ -15,16 +15,28 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ResenaDetailDTO extends ResenaDTO
 {
-    
+    /**
+     * Viajero que publicó la reseña
+     */
     private ViajeroDTO viajero;
     
+    /**
+     * habitacion que fue reseñada
+     */
     private HabitacionDTO habitacion;
 
+    /**
+     * metodo default para el DetailDTO
+     */
     public ResenaDetailDTO() 
     {
         super();
     }
 
+    /**
+     * Metodo constructor
+     * @param entity entidad de la reseña
+     */
     public ResenaDetailDTO(ResenaEntity entity) 
     {
         super(entity);
@@ -35,18 +47,34 @@ public class ResenaDetailDTO extends ResenaDTO
         }
     }
 
+    /**
+     * retorna el viajero creador de la reseña
+     * @return el viajero 
+     */
     public ViajeroDTO getViajero() {
         return viajero;
     }
 
+    /**
+     * asigna el ciajero a la entidad
+     * @param viajero el viajero
+     */
     public void setViajero(ViajeroDTO viajero) {
         this.viajero = viajero;
     }
     
+    /**
+     * retorna la habitacin de la reseña
+     * @return la habitacion
+     */
     public HabitacionDTO getHabitacion() {
         return habitacion;
     }
 
+     /**
+     * asigna la habitacin a la reserva
+     * @param habitacion la habitacion
+     */
     public void setHabitacion(HabitacionDTO habitacion) {
         this.habitacion = habitacion;
     }

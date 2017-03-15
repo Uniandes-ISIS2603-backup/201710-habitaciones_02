@@ -23,6 +23,9 @@ public class ViajeroLogic
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
     
+    /**
+     * persistencia para la entidad del viajero
+     */
     @Inject
     private ViajeroPersistence persistence;
 

@@ -18,18 +18,47 @@ import javax.inject.Inject;
 @Stateless
 public class ResenaLogic
 {
+    //----------------------------------------------------------------------------------------------------
+    // ATRIBUTOS
+    //----------------------------------------------------------------------------------------------------
+
+    /**
+     * persistencia para la entidad del Resena
+     */
     @Inject private ResenaPersistence persistence;
     
+    
+    //----------------------------------------------------------------------------------------------------
+    // METODOS
+    //----------------------------------------------------------------------------------------------------
+
+    
+    /**
+     * Retorna una lista con todos los Resenas que se encuentran persistidos
+     * @return 
+     */
     public List<ResenaEntity> findResenas()
     {
         return persistence.findAll();
     }
    
+    /**
+     * Retorna un un ResenaEntity a partir de un id dado por parámetro
+     * @param id el id del ResenaEntity que se desea buscar
+     * @return un VIajeroEntity si se encuentra en la base datos, de lo contrario null
+     */
     public ResenaEntity findResena(Long id)
     {
         return persistence.find(id);
     }
-     public ResenaEntity createResena(ResenaEntity entity) throws BusinessLogicException
+    
+    /**
+     * Crea una nueva entidad en la base de datos
+     * @param entity entidad que se desea agregar
+     * @return la entidad que fue agregada a la base de datos
+     * @throws BusinessLogicException
+     */
+    public ResenaEntity createResena(ResenaEntity entity) throws BusinessLogicException
     {
         if(entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
         {
@@ -43,6 +72,11 @@ public class ResenaLogic
         return persistence.create(entity);
     }
      
+    /**
+     * Actualiza la información de un ResenaEntoty que se encuentre en la base de datos
+     * @param entity la entidad que desea actualizar
+     * @return la entidad actualizada
+     */
      public ResenaEntity updateResena(ResenaEntity entity) throws BusinessLogicException
     {
         if(entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
@@ -51,7 +85,11 @@ public class ResenaLogic
         }
         return persistence.update(entity);
     }
-      
+    
+     /**
+     * Elimina un Resena a partir del id dado por parámetro
+     * @param id 
+     */
     public void delete(Long id)
     {
         persistence.delete(id);
