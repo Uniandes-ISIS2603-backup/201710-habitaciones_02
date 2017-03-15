@@ -46,10 +46,7 @@ public class ViajeroLogic
         {
             throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
         }
-//        else if(persistence.searchByEmail(entity.getCorreoElectronico()) != null)
-//        {
-//            throw new BusinessLogicException("Ya exisite un usuario viajero con el correo ingresado. Por favor, intente nuevamente con un correo distinto");
-//        }
+
         return persistence.create(entity);
     }
     
@@ -58,8 +55,12 @@ public class ViajeroLogic
      * @param entity la entidad que desea actualizar
      * @return la entidad actualizada
      */
-    public ViajeroEntity updateViajero (ViajeroEntity entity)
+    public ViajeroEntity updateViajero (ViajeroEntity entity) throws BusinessLogicException
     {
+        if(!entity.informacionCompleta())
+        {
+            throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
+        }
         return persistence.update(entity);
     }
     
