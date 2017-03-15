@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.entities;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,7 @@ import javax.persistence.ManyToOne;
  * @author s.cortes
  */
 @Entity
-public class ResenaEntity
+public class ResenaEntity implements Serializable
 {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
