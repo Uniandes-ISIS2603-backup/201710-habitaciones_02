@@ -51,6 +51,7 @@ public class ReservaResource {
     @GET
     @Path("{id: \\d+}")
     public ReservaDetailDTO getReserva(@PathParam("id") Long id) {
+        // TODO Si la reserva  no existe debe disparar WebApplicationException 404
         return new ReservaDetailDTO(logic.findReserva(id));
     }
 
@@ -63,6 +64,7 @@ public class ReservaResource {
     @PUT
     @Path("{id: \\d+}")
     public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO dto) {
+         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
         ReservaEntity entity = dto.toEntity();
         entity.setId(id);
         return new ReservaDetailDTO(logic.updateReserva(entity));
@@ -71,6 +73,9 @@ public class ReservaResource {
     @DELETE
     @Path("{id: \\d+}")
     public void deleteReserva(@PathParam("id") Long id) {
+         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
         logic.delete(id);
     }
+    
+    //TODO cómo se puede saber cuáles son las reservas de un ahabitación?
 }

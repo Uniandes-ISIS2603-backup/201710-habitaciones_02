@@ -9,7 +9,7 @@ import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
 import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ResenaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
-import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity; //TODO quitar
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -58,7 +58,7 @@ public class HabitacionDetailDTO extends HabitacionDTO {
                 ResenaDTO resena = new ResenaDTO(entityResena);
                 resenas.add(resena);
             }
-            
+            // TODO esto depende del valor que traiga el entity. Si no es null entity.getVivienda() entonces se hace el new con ese valor
             vivienda = new ViviendaDTO();
         }
         

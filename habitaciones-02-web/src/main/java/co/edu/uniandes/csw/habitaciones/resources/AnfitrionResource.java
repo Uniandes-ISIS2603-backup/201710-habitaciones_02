@@ -55,22 +55,23 @@ public class AnfitrionResource
     @Path("{id: \\d+}")
     public AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id)
     {
+        // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
         return new AnfitrionDetailDTO (logica.getAnfitrion(id));
     }
     @POST
     public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo) throws BusinessLogicException
     {
-        if(dtoo!=null)
+        if(dtoo!=null)  // TODO Esta pregunta no tiene snetido porque nunca será null. Puede traer cosa snull por dentro
         {
         return new AnfitrionDetailDTO (logica.createAnfitrion(dtoo.toEntity()));
         }
-        else throw new BusinessLogicException("Objeto inválido");
+        else throw new BusinessLogicException("Objeto inválido"); // En los recursos no se dispara Business 
     }
     
     @PUT
     @Path("{id: \\d+}")
     public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id)
-    {
+    {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
         AnfitrionEntity en = dto.toEntity();
         en.setIdUsuario(id);
         return new AnfitrionDetailDTO(logica.updateAnfitrion(en));
@@ -79,7 +80,8 @@ public class AnfitrionResource
     @DELETE
     @Path("{id: \\d+}")
     public void deleteAnfitrion(@PathParam("id") Long id)
-    {
+    {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
+        // TODO para que sirve i?
         int i = 0;
         logica.deleteAnfitrion(id);
     }

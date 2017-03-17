@@ -34,6 +34,7 @@ public class PagoLogic
     
     public PagoEntity createPago(PagoEntity pago) throws BusinessLogicException
     {
+        // TODO se debe verificar que el pago esté asociado con una reserva
         String problemas = "Se generaron errores al intentar ingresar el registro de pago:\n";
         Boolean problema = false;
         
@@ -71,7 +72,8 @@ public class PagoLogic
     }
     
     public PagoEntity updatePago(PagoEntity pago)
-    {
+    {// TODO se debe verificar que el pago esté asociado con una reserva
+        // Se debe volver a verificar las fechas, ...
         return persistence.update(pago);
     }
     

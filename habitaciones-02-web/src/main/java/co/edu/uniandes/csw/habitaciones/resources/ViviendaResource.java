@@ -59,7 +59,7 @@ public class ViviendaResource
     @GET
     @Path("{id: \\d+}")
     public ViviendaDetailDTO getVivienda(@PathParam("id") Long id) 
-    {
+    { // TODO Si la vivienda no existe debe disparar WebApplicationException 404
         return new ViviendaDetailDTO(viviendaLogic.getVivienda(id));
     }
     
@@ -73,7 +73,7 @@ public class ViviendaResource
     @PUT
     @Path("{id: \\d+}")
     public ViviendaDetailDTO updateVivienda(@PathParam("id") Long id, ViviendaDetailDTO dto) 
-    {
+    {// TODO Si la vivienda no existe debe disparar WebApplicationException 404
         ViviendaEntity entity = dto.toEntity();
         entity.setId(id);
         return new ViviendaDetailDTO(viviendaLogic.updateVivienda(entity));
@@ -82,7 +82,9 @@ public class ViviendaResource
     @DELETE
     @Path("{id: \\d+}")
     public void deleteVivienda(@PathParam("id") Long id) 
-    {
+    {// TODO Si la vivienda no existe debe disparar WebApplicationException 404
         viviendaLogic.deleteVivienda(id);
     }
+    
+    // TODO falta get /viviendas/:id/habitaciones las habitaciones de una vivienda
 }

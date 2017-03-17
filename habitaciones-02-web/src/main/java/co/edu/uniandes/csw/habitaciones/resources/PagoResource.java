@@ -58,7 +58,7 @@ public class PagoResource
     @GET
     @Path("{id: \\d+}")
     public PagoDTO getPago(@PathParam("id") Long id) 
-    {
+    {  // TODO Si el pago no existe debe disparar WebApplicationException 404
         return new PagoDTO(pagoLogic.getPago(id));
     }
     
@@ -71,7 +71,7 @@ public class PagoResource
     @PUT
     @Path("{id: \\d+}")
     public PagoDTO updatePago(@PathParam("id") Long id, PagoDTO dto) 
-    {
+    {// TODO Si el pago no existe debe disparar WebApplicationException 404
         PagoEntity entity = dto.toEntity();
         entity.setId(id);
         return new PagoDTO(pagoLogic.updatePago(entity));
@@ -80,7 +80,9 @@ public class PagoResource
     @DELETE
     @Path("{id: \\d+}")
     public void deletePago(@PathParam("id") Long id) 
-    {
+    {// TODO Si el pago no existe debe disparar WebApplicationException 404
         pagoLogic.deletePago(id);
     }
+    
+    
 }

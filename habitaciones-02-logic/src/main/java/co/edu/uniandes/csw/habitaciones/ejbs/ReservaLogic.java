@@ -31,12 +31,14 @@ public class ReservaLogic {
         return persistence.find(id);
     }
      public ReservaEntity createReserva(ReservaEntity entity)
-    {
+    { //TODO no hay ninguna validación de las reglas de negocio. QUé pasa si la habitación no está disponible
+        //TOD qué pasa con la validez de las fechas de las reservas
         return persistence.create(entity);
     }
      
       public ReservaEntity updateReserva(ReservaEntity entity)
-    {
+    {//TODO no hay ninguna validación de las reglas de negocio. QUé pasa si la habitación no está disponible
+        //TOD qué pasa con la validez de las fechas de las reservas
         return persistence.update(entity);
     }
       

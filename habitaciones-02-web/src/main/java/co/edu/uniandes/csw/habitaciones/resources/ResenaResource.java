@@ -57,6 +57,10 @@ public class ResenaResource
         return lista;
     }
 
+    //TODO traer todas las reseñas del sistema no parece tener mucho sentido. 
+    // TODO deberia ser get /viajeros/:id/resenas las reseñas del viajero (en el recurso viajero)
+    // TODO deberia ser get /habitaciones/:id/resenas las reseñas de la habitacion (en el recurso habitación)
+     // TODO deberia ser get /anfitriones/:id/resenas las reseñas del anfitrion (en el recurso anfitrion)
     /**
      * Metodo encargado de obtener todos los DTOs de los reseñas
      * @return 
@@ -75,6 +79,7 @@ public class ResenaResource
     @GET
     @Path("{id: \\d+}")
     public ResenaDetailDTO getResena(@PathParam("id") Long id) {
+        // TODO Si la resena no existe debe disparar WebApplicationException 404
         return new ResenaDetailDTO(logic.findResena(id));
     }
 
@@ -100,7 +105,7 @@ public class ResenaResource
     @PUT
     @Path("{id: \\d+}")
     public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto) throws BusinessLogicException
-    {
+    {// TODO Si la resena no existe debe disparar WebApplicationException 404
         ResenaEntity entity = dto.toEntity();
         entity.setId(id);
         return new ResenaDetailDTO(logic.updateResena(entity));
@@ -112,6 +117,7 @@ public class ResenaResource
      */
     @DELETE
     @Path("{id: \\d+}")
+    // TODO Si la resena no existe debe disparar WebApplicationException 404
     public void deleteResena(@PathParam("id") Long id) {
         logic.delete(id);
     }

@@ -73,6 +73,8 @@ public class ResenaLogic
             throw new BusinessLogicException("La reseña debe tener la referencia del viajero quien la escribió");
         }
         
+        // TODO qué pasa si la reseña es de un anfitrion? esa info dónde va?
+        
         return persistence.create(entity);
     }
      

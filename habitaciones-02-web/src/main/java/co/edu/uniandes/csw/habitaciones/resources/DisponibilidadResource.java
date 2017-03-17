@@ -55,27 +55,30 @@ public class DisponibilidadResource {
     }
 
     @GET
-    public List<DisponibilidadDetailDTO> getDisponibilidades(@PathParam("idHabitacion") Long idHabitacion) {
-
+    public List<DisponibilidadDetailDTO> getDisponibilidades(@PathParam(" // TODO Si el id no existe debe disparar WebApplicationException 404") Long idHabitacion) {
+        // TODO Si la habitación no existe debe disparar WebApplicationException 404
         return listEntity2DTO(disponibilidadLogic.getDisponibilidades(idHabitacion));
     }
 
     @GET
     @Path("{id: \\d+}")
     public DisponibilidadDetailDTO getDisponibilidad(@PathParam("idHabitacion") Long idHabitacion, @PathParam("id") Long id) {
-
+// TODO Si la habitación no existe debe disparar WebApplicationException 404
+// TODO Si la disponibilidad no existe debe disparar WebApplicationException 404
         return new DisponibilidadDetailDTO(disponibilidadLogic.getDisponibilidad(idHabitacion, id));
     }
 
     @POST
-    public DisponibilidadDetailDTO createDisponibilidad( DisponibilidadDetailDTO dto) throws BusinessLogicException {
-
+    public DisponibilidadDetailDTO createDisponibilidad(DisponibilidadDetailDTO dto) throws BusinessLogicException {
+// TODO Si la habitación no existe debe disparar WebApplicationException 404
         return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
     }
 
     @PUT
     @Path("{id: \\d+}")
     public DisponibilidadDetailDTO updateDisponibilidad(@PathParam("id") Long id, DisponibilidadDetailDTO dto) throws BusinessLogicException {
+// TODO Si la habitación no existe debe disparar WebApplicationException 404
+// TODO Si la disponibilidad no existe debe disparar WebApplicationException 404
 
         DisponibilidadEntity entity = dto.toEntity();
         entity.setId(id);
@@ -86,7 +89,8 @@ public class DisponibilidadResource {
     @DELETE
     @Path("{id: \\d+}")
     public void deleteDisponibilidad(@PathParam("id") Long id) {
-
+// TODO Si la habitación no existe debe disparar WebApplicationException 404
+// TODO Si la disponibilidad no existe debe disparar WebApplicationException 404
         disponibilidadLogic.deleteDisponibilidad(id);
     }
 }

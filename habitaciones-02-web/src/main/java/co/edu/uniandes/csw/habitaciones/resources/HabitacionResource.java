@@ -63,7 +63,7 @@ public class HabitacionResource {
     @GET
     @Path("{id: \\d+}")
     public HabitacionDetailDTO getHabitacion(@PathParam("id") Long id) {
-
+        // TODO Si el id no existe debe disparar WebApplicationException 404
         return new HabitacionDetailDTO(habitacionLogic.getHabitacion(id));
     }
 
@@ -71,14 +71,14 @@ public class HabitacionResource {
     public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) throws BusinessLogicException {
 
         HabitacionDetailDTO nuevaH = new HabitacionDetailDTO(habitacionLogic.createHabitacion(dto.toEntity()));
-        
-        return nuevaH ;
+
+        return nuevaH;
     }
 
     @PUT
     @Path("{id: \\d+}")
     public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, HabitacionDetailDTO dto) throws BusinessLogicException {
-
+        // TODO Si el id no existe debe disparar WebApplicationException 404
         HabitacionEntity entity = dto.toEntity();
         entity.setId(id);
 
@@ -87,6 +87,7 @@ public class HabitacionResource {
 
     @DELETE
     @Path("{id: \\d+}")
+    // TODO Si el id no existe debe disparar WebApplicationException 404
     public void deleteHabitacion(@PathParam("id") Long id) {
 
         habitacionLogic.deleteHabitacion(id);

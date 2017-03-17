@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class DisponibilidadDetailDTO extends DisponibilidadDTO {
 
     private HabitacionDTO habitacion;
-    
+
     public HabitacionDTO getHabitacion() {
         return habitacion;
     }
@@ -31,7 +31,7 @@ public class DisponibilidadDetailDTO extends DisponibilidadDTO {
 
     public DisponibilidadDetailDTO(DisponibilidadEntity entity) {
         super(entity);
-        
+        // TODO Si entity.getHabitacion() != null se hace el new
         if (entity != null) {
             habitacion = new HabitacionDTO(entity.getHabitacion());
         }
@@ -41,13 +41,11 @@ public class DisponibilidadDetailDTO extends DisponibilidadDTO {
     public DisponibilidadEntity toEntity() {
 
         DisponibilidadEntity entity = super.toEntity();
-        
-        if (this.getHabitacion() != null) 
-        {
+// TODO aquí no hace falta el if
+        if (this.getHabitacion() != null) {
             entity.setHabitacion(habitacion.toEntity());
         }
         return entity;
     }
-    
-    
+
 }
