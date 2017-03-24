@@ -16,39 +16,47 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ne.cabrera
  */
 @XmlRootElement
-public class ViviendaDetailDTO extends ViviendaDTO
-{
+public class ViviendaDetailDTO extends ViviendaDTO {
+
+    /**
+     * lista de habitaciones
+     */
     private List<HabitacionDTO> habitacion;
-    public ViviendaDetailDTO()
-    {
+
+    /**
+     * Metodo constructor por defecto
+     */
+    public ViviendaDetailDTO() {
         super();
     }
-    
-    public ViviendaDetailDTO(ViviendaEntity entity)
-    {
+
+    /**
+     * Metodo constructor
+     *
+     * @param entity entidad de la vivienda
+     */
+    public ViviendaDetailDTO(ViviendaEntity entity) {
         super(entity);
-        if(entity != null)
-        {
-        habitacion = new ArrayList<>();
-        for(HabitacionEntity ent: entity.getHabitaciones())
-        {
-            habitacion.add(new HabitacionDTO(ent));
-        }
+        if (entity != null) {
+            habitacion = new ArrayList<>();
+            for (HabitacionEntity ent : entity.getHabitaciones()) {
+                habitacion.add(new HabitacionDTO(ent));
+            }
         }
     }
-    
+
     @Override
+    /**
+     * @return viviendaEntity a partir de la informacion de la viviendaDTO
+     */
     public ViviendaEntity toEntity() {
         ViviendaEntity entity = super.toEntity();
-        if (entity != null) 
-        {
-            if (getHabitaciones() == null) 
-            {
+        if (entity != null) {
+            if (getHabitaciones() == null) {
                 setHabitaciones(new ArrayList<>());
             }
             List<HabitacionEntity> habs = new ArrayList<>();
-            for (HabitacionDTO habs2 : this.getHabitaciones()) 
-            {
+            for (HabitacionDTO habs2 : this.getHabitaciones()) {
                 habs.add(habs2.toEntity());
             }
             entity.setHabitaciones(habs);
@@ -59,19 +67,15 @@ public class ViviendaDetailDTO extends ViviendaDTO
     /**
      * @return the habitaciones
      */
-    public List<HabitacionDTO> getHabitaciones() 
-    {
+    public List<HabitacionDTO> getHabitaciones() {
         return habitacion;
     }
 
     /**
      * @param habitaciones the habitaciones to set
      */
-    public void setHabitaciones(List<HabitacionDTO> habitaciones) 
-    {
+    public void setHabitaciones(List<HabitacionDTO> habitaciones) {
         this.habitacion = habitaciones;
     }
-    
-    
-}
 
+}

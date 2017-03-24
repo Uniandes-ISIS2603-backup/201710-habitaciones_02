@@ -19,31 +19,53 @@ import javax.persistence.OneToMany;
  *
  * @author ne.cabrera
  */
-
 @Entity
-public class ViviendaEntity implements Serializable 
-{
+public class ViviendaEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /**
+     * El id de la vivienda
+     */
     private Long id;
-    
+
+    /**
+     * Ciudad en la que esta ubicada la vivienda
+     */
     private String ciudad;
-    
+
+    /**
+     * Direccion de la vivienda
+     */
     private String direccion;
-    
-    @OneToMany(fetch =FetchType.LAZY, mappedBy = "vivienda")
+
+    /**
+     * Relacion one to many entre vivienda y habitacion
+     */
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "vivienda")
     private List<HabitacionEntity> habitacion;
-    
+
+    /**
+     * Relacion many to one entre vivienda y anfitrion
+     */
     @ManyToOne
     private AnfitrionEntity anfitrion;
-    
-    public List<HabitacionEntity> getHabitaciones()
-    {
+
+    /**
+     * Retorna la lista de habitaciones de la vivienda
+     *
+     * @return habitacion
+     */
+    public List<HabitacionEntity> getHabitaciones() {
         return habitacion;
     }
-    
-    public void setHabitaciones(List<HabitacionEntity> pHabitaciones)
-    {
+
+    /**
+     * Asigna una lista de habitaciones
+     *
+     * @param pHabitaciones
+     */
+    public void setHabitaciones(List<HabitacionEntity> pHabitaciones) {
         this.habitacion = pHabitaciones;
     }
 
@@ -88,9 +110,10 @@ public class ViviendaEntity implements Serializable
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
+
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj) 
+    {
         if (this.getId() != null) {
             return this.getId().equals(((ViviendaEntity) obj).getId());
         }
@@ -98,20 +121,32 @@ public class ViviendaEntity implements Serializable
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() 
+    {
         if (this.getId() != null) {
             return this.getId().hashCode();
         }
         return super.hashCode();
     }
-    
-    public Boolean informacionCompleta()
+
+    /**
+     * Verfica que los atributos String no sean ni null ni vacios
+     *
+     * @return true si no sin null ni vacios, false de lo contrario
+     */
+    public Boolean informacionCompleta() 
     {
         return (stringUtilizable(ciudad) && stringUtilizable(direccion));
     }
-    
-    private Boolean stringUtilizable(String palabra)
+
+    /**
+     * Verifica si un String es null o vacio
+     *
+     * @param palabra el string a verificar
+     * @return true si no es ni vacio ni null, false de lo contrario
+     */
+    private Boolean stringUtilizable(String palabra) 
     {
-       return (palabra != null)? !palabra.isEmpty() : false;
+        return (palabra != null) ? !palabra.isEmpty() : false;
     }
 }

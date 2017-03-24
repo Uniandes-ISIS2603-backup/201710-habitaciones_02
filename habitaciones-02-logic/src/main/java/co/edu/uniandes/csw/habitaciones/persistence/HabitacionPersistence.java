@@ -32,6 +32,14 @@ public class HabitacionPersistence {
         return q.getResultList();
     }
     
+    //Hecho por Nicolas, es parte de un TODO
+     public List<HabitacionEntity> findAllVivienda(Long idVivienda) {
+
+        Query q = em.createQuery("select u from HabitacionEntity u where (u.vivienda.id = :idVivienda) ", HabitacionEntity.class);
+        q.setParameter("idVivienda", idVivienda);
+        return q.getResultList();
+    }
+    
     public HabitacionEntity create(HabitacionEntity entity) {
         
         em.persist(entity);

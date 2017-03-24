@@ -17,47 +17,63 @@ import javax.inject.Inject;
  * @author ne.cabrera
  */
 @Stateless
-public class ViviendaLogic
-{
-    @Inject private ViviendaPersistence persistence;
-    
-    public List<ViviendaEntity> getViviendas()
-    {
+public class ViviendaLogic {
+
+    /**
+     * persistencia para la entidad de la vivienda
+     */
+    @Inject
+    private ViviendaPersistence persistence;
+
+    /**
+     * @return lista de viviendas
+     */
+    public List<ViviendaEntity> getViviendas() {
         return persistence.findAll();
     }
-    
-    public ViviendaEntity getVivienda(Long id)
-    {
+
+    /**
+     * @param id el id de la vivienda buscada
+     * @return vivienda con el mismo id al dado por parametro
+     */
+    public ViviendaEntity getVivienda(Long id) {
         return persistence.find(id);
     }
-    
-    public ViviendaEntity createVivienda(ViviendaEntity vivienda) throws BusinessLogicException
-    {
+
+    /**
+     * @param vivienda vivienda a agregar a la persistencia
+     * @return la vivienda agregada
+     * @throws BusinessLogicException si los datos de la vivienda estan
+     * incompletos
+     */
+    public ViviendaEntity createVivienda(ViviendaEntity vivienda) throws BusinessLogicException {
         //if(vivienda.getHabitaciones().isEmpty())
         //{
         //    throw new BusinessLogicException("Se debe agregar almenos 1 habitacion");
         //}
         //else
         //{
-        if(!vivienda.informacionCompleta())
-        {
+        if (!vivienda.informacionCompleta()) {
             throw new BusinessLogicException("Algunos de los datos para registrar la vivienda no fueron ingresados. Por favor, intente nuevamente");
-        }
-        else
-        {
+        } else {
             persistence.create(vivienda);
         }
         //}
         return vivienda;
     }
-    
-    public ViviendaEntity updateVivienda(ViviendaEntity vivienda)
-    {
+
+    /**
+     * @param vivienda la vivienda a actualizar
+     * @return la vivienda actulizada
+     */
+    public ViviendaEntity updateVivienda(ViviendaEntity vivienda) {
         return persistence.update(vivienda);
     }
-    
-    public void deleteVivienda( Long id )
-    {
+
+    /**
+     * @param id el id de la vivienda a eliminar
+     */
+    public void deleteVivienda(Long id) {
         persistence.delete(id);
     }
 }

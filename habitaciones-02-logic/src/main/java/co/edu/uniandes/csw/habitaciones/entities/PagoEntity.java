@@ -20,29 +20,50 @@ import javax.persistence.Temporal;
  * @author ne.cabrera
  */
 @Entity
-public class PagoEntity implements Serializable
-{
+public class PagoEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /**
+     * El id del pago
+     */
     private Long id;
-    
+
+    /**
+     * Fecha del pago
+     */
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaDePago;
-    
+
+    /**
+     * El monto pagado
+     */
     private Double pago;
-    
+
+    /**
+     * El tipo de tramite
+     */
     private String tipoTramite;
-    
+
+    /**
+     * Relacion one to one entre el pago y la reserva
+     */
     @OneToOne(fetch = FetchType.LAZY)
     private ReservaEntity reserva;
-    
-    public ReservaEntity getReserva()
-    {
+
+    /**
+     * Retorna la reserva
+     *
+     * @return reserva
+     */
+    public ReservaEntity getReserva() {
         return reserva;
     }
-    
-    public void setReserva(ReservaEntity pReserva)
-    {
+
+    /**
+     * @param pReserva la reserva a asignar
+     */
+    public void setReserva(ReservaEntity pReserva) {
         this.reserva = pReserva;
     }
 
@@ -101,7 +122,7 @@ public class PagoEntity implements Serializable
     public void setTipoTramite(String tipoTramite) {
         this.tipoTramite = tipoTramite;
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this.getId() != null) {
@@ -117,15 +138,16 @@ public class PagoEntity implements Serializable
         }
         return super.hashCode();
     }
-    
-    public Boolean informacionCompleta()
-    {
-        return (stringUtilizable(fechaDePago.toString()) && stringUtilizable(tipoTramite) 
+
+    /**
+     * @return
+     */
+    public Boolean informacionCompleta() {
+        return (stringUtilizable(fechaDePago.toString()) && stringUtilizable(tipoTramite)
                 && stringUtilizable(pago.toString()));
     }
-    
-    private Boolean stringUtilizable(String palabra)
-    {
-       return (palabra != null)? !palabra.isEmpty() : false;
+
+    private Boolean stringUtilizable(String palabra) {
+        return (palabra != null) ? !palabra.isEmpty() : false;
     }
 }
