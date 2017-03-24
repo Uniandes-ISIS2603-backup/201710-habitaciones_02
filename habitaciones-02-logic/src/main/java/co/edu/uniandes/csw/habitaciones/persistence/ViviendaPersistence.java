@@ -16,38 +16,53 @@ import javax.persistence.Query;
  *
  * @author ne.cabrera
  */
-
 @Stateless
-public class ViviendaPersistence 
-{
-    @PersistenceContext(unitName="habitacionesPU")
+public class ViviendaPersistence {
+
+    /**
+     * Entity manager de la persistencia
+     */
+    @PersistenceContext(unitName = "habitacionesPU")
     protected EntityManager em;
-    
-    public ViviendaEntity find(Long id)
-    {
+
+    /**
+     * @param id el id de la vivienda buscada
+     * @return la vivienda buscada si existe, de lo contrario retorna null
+     */
+    public ViviendaEntity find(Long id) {
         return em.find(ViviendaEntity.class, id);
     }
-    
-    public List<ViviendaEntity> findAll()
-    {
+
+    /**
+     * @return lista con todas las viviendas existentes
+     */
+    public List<ViviendaEntity> findAll() {
         Query q = em.createQuery("select u from ViviendaEntity u");
         return q.getResultList();
     }
-    
-    public ViviendaEntity create(ViviendaEntity entity)
-    {
+
+    /**
+     * @param entity viviendaEntity a agregar
+     * @return la vivienda agregada
+     */
+    public ViviendaEntity create(ViviendaEntity entity) {
         em.persist(entity);
         return entity;
     }
-    
-    public ViviendaEntity update(ViviendaEntity entity)
-    {
+
+    /**
+     * @param entity viviendaEntity a ser actualizada
+     * @return viviendaEntity actualizada
+     */
+    public ViviendaEntity update(ViviendaEntity entity) {
         em.merge(entity);
         return entity;
     }
-    
-    public void delete(Long id)
-    {
+
+    /**
+     * @param id el id de la vivienda a eliminar
+     */
+    public void delete(Long id) {
         ViviendaEntity entity = em.find(ViviendaEntity.class, id);
         em.remove(entity);
     }

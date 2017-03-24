@@ -15,27 +15,48 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ne.cabrera
  */
 @XmlRootElement
-public class PagoDTO implements Serializable 
-{
+public class PagoDTO implements Serializable {
+
+    /**
+     * id del pago
+     */
     private Long id;
-    
+
+    /**
+     * fecha del pago
+     */
     private Date fechaDePago;
-    
+
+    /**
+     * monto pagado
+     */
     private Double pago;
-    
+
+    /**
+     * tipo del tramite
+     */
     private String tipoTramite;
-    
+
+    /**
+     * reserva relacionada con el tramite
+     */
     private ReservaDTO reserva;
-    
-    public PagoDTO()
-    {
-        
+
+    /**
+     * constructor por defecto
+     */
+    public PagoDTO() {
+
     }
-    
-    public PagoDTO(PagoEntity entity)
-    {
-        if(entity != null)
-        {
+
+    /**
+     * Metodo contructor que inicializa los atributos a partir de la información
+     * contenida en el objeto PagoEntity
+     *
+     * @param entity Entidad con la que se crea el objeto DTO
+     */
+    public PagoDTO(PagoEntity entity) {
+        if (entity != null) {
             id = entity.getId();
             fechaDePago = entity.getFechaDePago();
             pago = entity.getPago();
@@ -43,21 +64,24 @@ public class PagoDTO implements Serializable
             reserva = new ReservaDTO(entity.getReserva());
         }
     }
-    
-    public PagoEntity toEntity()
-    {
+
+    /**
+     * Metodo encargado de converitr un DTO a un Entity
+     *
+     * @return una entidad pago
+     */
+    public PagoEntity toEntity() {
         PagoEntity entity = new PagoEntity();
         entity.setId(this.id);
         entity.setFechaDePago(this.getFechaDePago());
         entity.setTipoTramite(this.tipoTramite);
         entity.setPago(this.pago);
-        if(getReserva() != null)
-        {
-        entity.setReserva(getReserva().toEntity());
+        if (getReserva() != null) {
+            entity.setReserva(getReserva().toEntity());
         }
         return entity;
     }
-    
+
     /**
      * @return the id
      */
@@ -127,6 +151,5 @@ public class PagoDTO implements Serializable
     public void setReserva(ReservaDTO reserva) {
         this.reserva = reserva;
     }
-    
-    
+
 }

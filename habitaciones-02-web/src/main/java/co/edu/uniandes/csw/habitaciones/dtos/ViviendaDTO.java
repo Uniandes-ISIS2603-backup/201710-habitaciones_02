@@ -8,43 +8,58 @@ package co.edu.uniandes.csw.habitaciones.dtos;
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+
 /**
  *
  * @author ne.cabrera
  */
-
 @XmlRootElement
-public class ViviendaDTO implements Serializable
-{
+public class ViviendaDTO implements Serializable {
+
+    /**
+     * el id de la vivienda
+     */
     private Long id;
-    
+
+    /**
+     * la ciudad en la que esta ubicada la vivienda
+     */
     private String ciudad;
-    
+
+    /**
+     * la direccion de la vivienda
+     */
     private String direccion;
-    
-    public ViviendaDTO()
-    {
+
+    /**
+     * constructor por defecto de la vivienda
+     */
+    public ViviendaDTO() {
     }
-    
-    public ViviendaDTO(ViviendaEntity entity)
-    {
-        if(entity != null)
-        {
+
+    /**
+     * @param entity metodo constructor que inicializa la viviendaDTO a partir
+     * de la informacion de la viviendaEntity
+     */
+    public ViviendaDTO(ViviendaEntity entity) {
+        if (entity != null) {
             id = entity.getId();
             ciudad = entity.getCiudad();
             direccion = entity.getDireccion();
         }
     }
-    
-    public ViviendaEntity toEntity()
-    {
+
+    /**
+     * @return viviendaEntity a partir de la informacion de la viviendaDTO
+     */
+    public ViviendaEntity toEntity() {
         ViviendaEntity entity = new ViviendaEntity();
         entity.setId(this.getId());
         entity.setCiudad(this.getCiudad());
         entity.setDireccion(this.getDireccion());
         return entity;
     }
-    
+
     /**
      * @return the id
      */
