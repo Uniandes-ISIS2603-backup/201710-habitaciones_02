@@ -14,26 +14,26 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-
 /**
  *
  * @author df.sanabria761
  */
 @XmlRootElement
-public class AnfitrionDetailDTO extends AnfitrionDTO
-{
-    
+public class AnfitrionDetailDTO extends AnfitrionDTO {
+
     private List<ViviendaDTO> viviendas;
     private List<ReservaDTO> reservas;
+
     /**
      * Constructor por defecto del Detail DTO
      */
-    public AnfitrionDetailDTO()
-    {
-        
+    public AnfitrionDetailDTO() {
+
     }
+
     /**
      * Constructor del detail dto a partir de un entity anfitrión
+     *
      * @param entity Entity del anfitrión a crear
      */
     public AnfitrionDetailDTO(AnfitrionEntity entity) {
@@ -50,25 +50,22 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
             }
         }
     }
-    
+
     @Override
-    public AnfitrionEntity toEntity()
-    {
+    public AnfitrionEntity toEntity() {
         AnfitrionEntity entity = super.toEntity();
-        if(reservas != null)
-        {
+        if (reservas != null) {
             List<ReservaEntity> reservasEntity = new ArrayList<>();
-            for(ReservaDTO dtoReserva : reservas)
-            {
+            for (ReservaDTO dtoReserva : reservas) {
                 reservasEntity.add(dtoReserva.toEntity());
             }
             entity.setReservas(reservasEntity);
         }
-        if(viviendas != null){
+        if (viviendas != null) {
             List<ViviendaEntity> viviendasEntity = new ArrayList<>();
             for (ViviendaDTO vivienda : viviendas) {
                 viviendasEntity.add(vivienda.toEntity());
-            }  
+            }
         }
         return entity;
     }
@@ -89,5 +86,4 @@ public class AnfitrionDetailDTO extends AnfitrionDTO
         this.reservas = reservas;
     }
 
-    
 }

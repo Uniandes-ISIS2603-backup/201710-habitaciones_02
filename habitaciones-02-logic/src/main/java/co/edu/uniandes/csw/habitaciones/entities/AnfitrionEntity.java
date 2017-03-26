@@ -4,26 +4,27 @@
  * and open the template in the editor.
  */
 package co.edu.uniandes.csw.habitaciones.entities;
+
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
+
 /**
  *
  * @author df.sanabria761
  */
 @Entity
-@PrimaryKeyJoinColumn(referencedColumnName="idUsuario")
-public class AnfitrionEntity extends UsuarioEntity 
-{
-    @OneToMany( mappedBy="anfitrion" )
-    private List<ViviendaEntity> viviendas;
-    
-    @OneToMany( mappedBy="anfitrion" )
-    private List<ReservaEntity> reservas;
+@PrimaryKeyJoinColumn(referencedColumnName = "idUsuario")
+public class AnfitrionEntity extends UsuarioEntity {
 
+    @OneToMany(mappedBy = "anfitrion")
+    private List<ViviendaEntity> viviendas;
+
+    @OneToMany(mappedBy = "anfitrion")
+    private List<ReservaEntity> reservas;
 
     public List<ReservaEntity> getReservas() {
         return reservas;
@@ -33,10 +34,10 @@ public class AnfitrionEntity extends UsuarioEntity
         this.reservas = reservas;
     }
 
-
     public List<ViviendaEntity> getViviendas() {
         return viviendas;
     }
+
     public void setViviendas(List<ViviendaEntity> viviendas) {
         this.viviendas = viviendas;
     }

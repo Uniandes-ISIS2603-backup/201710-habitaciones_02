@@ -21,6 +21,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+
 /**
  *
  * @author df.sanabria761
@@ -28,62 +29,53 @@ import javax.ws.rs.core.MediaType;
 @Path("/anfitriones")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class AnfitrionResource 
-{
+public class AnfitrionResource {
+
     @Inject
     private AnfitrionLogic logica;
-    
-    private List<AnfitrionDetailDTO> listEntity2DTO(List<AnfitrionEntity> entityList)
-    {
+
+    private List<AnfitrionDetailDTO> listEntity2DTO(List<AnfitrionEntity> entityList) {
         List<AnfitrionDetailDTO> lista = new ArrayList<>();
-        for(AnfitrionEntity entity : entityList){
+        for (AnfitrionEntity entity : entityList) {
             AnfitrionDetailDTO nD = new AnfitrionDetailDTO(entity);
             lista.add(nD);
         }
-        
-        return lista;   
+
+        return lista;
     }
-    
+
     @GET
-    public List<AnfitrionDetailDTO> getAnfitriones()
-    {
-        
+    public List<AnfitrionDetailDTO> getAnfitriones() {
+
         return listEntity2DTO(logica.getAnfitriones());
     }
-    
+
     @GET
     @Path("{id: \\d+}")
-    public AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id)
-    {
+    public AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id) {
         // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
-        return new AnfitrionDetailDTO (logica.getAnfitrion(id));
+        return new AnfitrionDetailDTO(logica.getAnfitrion(id));
     }
+
     @POST
-    public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo) throws BusinessLogicException
-    {
-        if(dtoo!=null)  // TODO Esta pregunta no tiene snetido porque nunca será null. Puede traer cosa snull por dentro
-        {
-        return new AnfitrionDetailDTO (logica.createAnfitrion(dtoo.toEntity()));
-        }
-        else throw new BusinessLogicException("Objeto inválido"); // En los recursos no se dispara Business 
+    public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo) throws BusinessLogicException {
+
+        return new AnfitrionDetailDTO(logica.createAnfitrion(dtoo.toEntity()));
+
     }
-    
+
     @PUT
     @Path("{id: \\d+}")
-    public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id)
-    {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
+    public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id) {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
         AnfitrionEntity en = dto.toEntity();
         en.setIdUsuario(id);
         return new AnfitrionDetailDTO(logica.updateAnfitrion(en));
     }
-    
+
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteAnfitrion(@PathParam("id") Long id)
-    {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
-        // TODO para que sirve i?
-        int i = 0;
+    public void deleteAnfitrion(@PathParam("id") Long id) {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
         logica.deleteAnfitrion(id);
     }
-    
+
 }

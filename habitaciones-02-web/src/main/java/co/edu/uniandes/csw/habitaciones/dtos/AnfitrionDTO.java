@@ -14,44 +14,38 @@ import java.util.List;
  *
  * @author df.sanabria761
  */
-public class AnfitrionDTO extends UsuarioDTO
-{
-    
-    
+public class AnfitrionDTO extends UsuarioDTO {
+
     /*
     Constructor por defecto
-    */
-    public AnfitrionDTO()
-    {
-        
-    }
-    
-    /**
-     *Constructor a partir de un Entity, inicializa los atributos a partir de un entity que
-     * llega por parámetro
-     * @param entity Entidad a partir de la cual se genera el DTO 
      */
-    public AnfitrionDTO(AnfitrionEntity entity)
-    {   
-         if(entity != null)
-        {
+    public AnfitrionDTO() {
+
+    }
+
+    /**
+     * Constructor a partir de un Entity, inicializa los atributos a partir de
+     * un entity que llega por parámetro
+     *
+     * @param entity Entidad a partir de la cual se genera el DTO
+     */
+    public AnfitrionDTO(AnfitrionEntity entity) {
+        if (entity != null) {
             this.nombre = entity.getNombre();
             this.correoElectronico = entity.getCorreoElectronico();
             this.contrasena = entity.getContrasena();
             this.idUsuario = entity.getIdUsuario();
             this.tipoDocumento = entity.getTipoDocumento();
             this.numeroDocumento = entity.getNumeroDocumento();
-            this.direccion  =entity.getDireccion();
+            this.direccion = entity.getDireccion();
             this.telefono = entity.getTelefono();
-        
+
         }
-        
+
     }
-    
-    
-    public AnfitrionEntity toEntity()
-    {
-        AnfitrionEntity entity  = new AnfitrionEntity();
+
+    public AnfitrionEntity toEntity() {
+        AnfitrionEntity entity = new AnfitrionEntity();
         entity.setCorreoElectronico(this.getCorreoElectronico());
         entity.setContrasena(this.getContrasena());
         entity.setIdUsuario(this.getIdUsuario());
@@ -60,7 +54,7 @@ public class AnfitrionDTO extends UsuarioDTO
         entity.setNumeroDocumento(this.getNumeroDocumento());
         entity.setTelefono(this.getTelefono());
         entity.setDireccion(this.getDireccion());
-        
+
         return entity;
     }
 }
