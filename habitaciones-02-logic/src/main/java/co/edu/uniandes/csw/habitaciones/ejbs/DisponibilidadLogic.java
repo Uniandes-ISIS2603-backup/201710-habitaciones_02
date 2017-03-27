@@ -22,19 +22,37 @@ public class DisponibilidadLogic {
     @Inject
     private DisponibilidadPersistence persistence;
 
-
+    /**
+     * Retorna una disponibilidad de una habitacion
+     *
+     * @param idHabitacion
+     * @param id
+     * @return
+     */
     public DisponibilidadEntity getDisponibilidad(Long idHabitacion, Long id) {
-
 
         return persistence.find(idHabitacion, id);
     }
 
+    /**
+     * Retorna todas las disponibilidades de una habitacion
+     *
+     * @param idHabitacion
+     * @return
+     */
     public List<DisponibilidadEntity> getDisponibilidades(Long idHabitacion) {
 
-        return  persistence.findAll(idHabitacion);
+        return persistence.findAll(idHabitacion);
     }
 
-    public DisponibilidadEntity createDisponibilidad( DisponibilidadEntity entity) throws BusinessLogicException {
+    /**
+     * Crea una nueva disponibilidad
+     *
+     * @param entity
+     * @return
+     * @throws BusinessLogicException
+     */
+    public DisponibilidadEntity createDisponibilidad(DisponibilidadEntity entity) throws BusinessLogicException {
 
         if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia())) {
 
@@ -47,6 +65,13 @@ public class DisponibilidadLogic {
 
     }
 
+    /**
+     * Modifica una disponibilidad ya existente
+     *
+     * @param entity
+     * @return
+     * @throws BusinessLogicException
+     */
     public DisponibilidadEntity updateDisponibilidad(DisponibilidadEntity entity) throws BusinessLogicException {
 
         if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia())) {
@@ -57,6 +82,11 @@ public class DisponibilidadLogic {
         return persistence.update(entity);
     }
 
+    /**
+     * Elimina una disponibilidad
+     *
+     * @param id
+     */
     public void deleteDisponibilidad(Long id) {
 
         persistence.delete(id);

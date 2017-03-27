@@ -21,10 +21,17 @@ public class DisponibilidadDTO implements Serializable {
     private Date fechaInicioEstadia;
     private Date fechaTerminacionEstadia;
 
+    /**
+     * Constructor 
+     */
     public DisponibilidadDTO() {
 
     }
 
+    /**
+     * Constructor que recibe un entity por parametro
+     * @param entity 
+     */
     public DisponibilidadDTO(DisponibilidadEntity entity) {
         if (entity != null) {
             this.id = entity.getId();
@@ -33,6 +40,10 @@ public class DisponibilidadDTO implements Serializable {
         }
     }
 
+    /**
+     * Pasa el objeto de DTO a Entidad
+     * @return 
+     */
     public DisponibilidadEntity toEntity() {
         DisponibilidadEntity entity = new DisponibilidadEntity();
         entity.setId(this.getId());
@@ -41,26 +52,50 @@ public class DisponibilidadDTO implements Serializable {
         return entity;
     }
 
+    /**
+     * Retorna el id de la disponibilidad
+     * @return 
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Coloca el id de la disponibilidad
+     * @param id 
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * Retorna la fecha de inicio de la estadia
+     * @return 
+     */
     public Date getFechaInicioEstadia() {
         return fechaInicioEstadia;
     }
 
+    /**
+     * Coloca la fecha de inicio de la estadia
+     * @param fechaInicioEstadia 
+     */
     public void setFechaInicioEstadia(Date fechaInicioEstadia) {
         this.fechaInicioEstadia = fechaInicioEstadia;
     }
 
+    /**
+     * Retorna la fecha de terminacion de la estadia
+     * @return 
+     */
     public Date getFechaTerminacionEstadia() {
         return fechaTerminacionEstadia;
     }
 
+    /**
+     * Coloca la fecha de terminacion de la estadia
+     * @param fechaTerminacionEstadia 
+     */
     public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia) {
         this.fechaTerminacionEstadia = fechaTerminacionEstadia;
     }
