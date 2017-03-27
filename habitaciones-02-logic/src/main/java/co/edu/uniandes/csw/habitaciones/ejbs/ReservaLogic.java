@@ -25,6 +25,11 @@ public class ReservaLogic {
     {
         return persistence.findAll();
     }
+    
+    public List<ReservaEntity> findReservasByViajero(Long idViajero)
+    {
+        return persistence.findAllByViajero(idViajero);
+    }
    
     public ReservaEntity findReserva(Long id)
     {

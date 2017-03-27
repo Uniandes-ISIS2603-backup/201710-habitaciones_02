@@ -11,6 +11,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -46,6 +47,16 @@ public class ResenaPersistence
      Query q = em.createQuery("select u from ReservaEntity u");
      return q.getResultList();
         
+    }
+    
+    public List<ResenaEntity> findAllByViajero(Long idViajero)
+    {
+        TypedQuery<ResenaEntity> q
+                = em.createQuery("select u from ResenaEntity u where u.viajero.idUsuario = :idViajero", ResenaEntity.class);
+        q = q.setParameter("idViajero", idViajero);
+
+       return q.getResultList();
+       
     }
     
     /**
