@@ -42,10 +42,18 @@ public class ReservaResource {
         return lista;
     }
 
+    /**
     @GET
     public List<ReservaDetailDTO> getReservas() {
 
         return listEntity2DTO(logic.findReservas());
+    }
+    **/
+    
+    @GET
+    public List<ReservaDetailDTO> getReservasByViajero(@PathParam("viajeroId")Long idViajero)
+    {
+        return listEntity2DTO(logic.findReservasByViajero(idViajero));
     }
 
     @GET

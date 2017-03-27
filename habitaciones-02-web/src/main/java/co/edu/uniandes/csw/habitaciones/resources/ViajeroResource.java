@@ -5,7 +5,6 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
-import co.edu.uniandes.csw.habitaciones.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.habitaciones.dtos.ViajeroDTO;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -85,10 +84,31 @@ public class ViajeroResource {
     public ViajeroDetailDTO getViajero(@PathParam("id") Long id) { // TODO Si el viajero  no existe debe disparar WebApplicationException 404
         return new ViajeroDetailDTO(viajeroLogic.getViajero(id));
     }
+    
+    /**
+     * Metodo encargado de llamar a la clase ResenaResourse para retornar las resenas de un viajero respectivo
+     * @return la clase ResenaResourse encargada de retornar las resenas de viajero.
+     */
+    @GET
+    @Path("{viajeroId: \\d+}/resenas")
+    public Class<ResenaResource> getResenasViajero()
+    {
+        return ResenaResource.class;
+    }
+    
+    /**
+     * Metodo encargado de llamar a la clase ReservaResourse para retornar las resenas de un viajero respectivo
+     * @return la clase ReservaResourse encargada de retornar las resenas de viajero.
+     */
+    @GET
+    @Path("{viajeroId: \\d+}/reservas")
+    public Class<ReservaResource> getReservasViajeo()
+    {
+        return ReservaResource.class;
+    }
 
     /**
      * Metodo encargado de agregar un nuevo viajero a la base de datos
-     *
      * @param dto el nuevo DTO
      * @return el viajero creado
      * @throws BusinessLogicException Exception de las reglas del negocio
@@ -125,7 +145,6 @@ public class ViajeroResource {
     public void deleteViajero(@PathParam("id") Long id) {// TODO Si el viajero  no existe debe disparar WebApplicationException 404
         viajeroLogic.deleteViajero(id);
     }
-     // TODO falta get /viajeros/:id/reservas las reservas del viajero
-    //  TODO falta get /viajeros/:id/resenas las reseñas del viajero
+
     
 }

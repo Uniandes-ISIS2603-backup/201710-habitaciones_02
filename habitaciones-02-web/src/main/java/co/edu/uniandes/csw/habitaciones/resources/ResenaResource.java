@@ -65,10 +65,23 @@ public class ResenaResource
      * Metodo encargado de obtener todos los DTOs de los reseñas
      * @return 
      */
+    /**
     @GET
     public List<ResenaDetailDTO> getResenas() {
 
         return listEntity2DTO(logic.findResenas());
+    }
+    **/
+    
+    /**
+     * 
+     * @param idViajero
+     * @return 
+     */
+    @GET
+    public List<ResenaDetailDTO> getResenasByViajero(@PathParam("viajeroId")Long idViajero)
+    {
+        return listEntity2DTO(logic.findResenasViajero(idViajero));
     }
 
     /**
