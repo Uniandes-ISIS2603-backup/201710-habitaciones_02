@@ -8,6 +8,7 @@ package co.edu.uniandes.csw.habitaciones.resources;
 import co.edu.uniandes.csw.habitaciones.ejbs.DisponibilidadLogic;
 import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
 import co.edu.uniandes.csw.habitaciones.dtos.DisponibilidadDetailDTO;
+import co.edu.uniandes.csw.habitaciones.ejbs.HabitacionLogic;
 import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,13 +23,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
-/**
- *
- * @author b.gamba10
- */
 @Path("/habitaciones/{idHabitacion: \\d+}/disponibilidades")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
@@ -36,6 +34,10 @@ public class DisponibilidadResource {
 
     @Inject
     private DisponibilidadLogic disponibilidadLogic;
+
+    @Inject
+    private HabitacionLogic habitacionLogic;
+
     @Context
     private HttpServletResponse response;
     @QueryParam("page")
@@ -43,6 +45,12 @@ public class DisponibilidadResource {
     @QueryParam("limit")
     private Integer maxRecords;
 
+    /**
+     * Convierte una lista de Entidades en DTO
+     *
+     * @param entityList
+     * @return
+     */
     private List<DisponibilidadDetailDTO> listEntity2DTO(List<DisponibilidadEntity> entityList) {
 
         List<DisponibilidadDetailDTO> list = new ArrayList<>();
@@ -54,31 +62,82 @@ public class DisponibilidadResource {
         return list;
     }
 
+    /**
+     * Retorna las disponibilidades de una habitacion
+     *
+     * @param idHabitacion
+     * @return
+     */
     @GET
-    public List<DisponibilidadDetailDTO> getDisponibilidades(@PathParam(" // TODO Si el id no existe debe disparar WebApplicationException 404") Long idHabitacion) {
+    public List<DisponibilidadDetailDTO> getDisponibilidades(@PathParam("idHabitacion") Long idHabitacion) {
         // TODO Si la habitación no existe debe disparar WebApplicationException 404
+        if (habitacionLogic.getHabitacion(idHabitacion) == null) {
+
+            throw new WebApplicationException(404);
+        }
         return listEntity2DTO(disponibilidadLogic.getDisponibilidades(idHabitacion));
+
     }
 
+    /**
+     * Retorna una disponibilidad de una habitacion especifica
+     * @param idHabitacion
+     * @param id
+     * @return 
+     */
     @GET
     @Path("{id: \\d+}")
     public DisponibilidadDetailDTO getDisponibilidad(@PathParam("idHabitacion") Long idHabitacion, @PathParam("id") Long id) {
 // TODO Si la habitación no existe debe disparar WebApplicationException 404
 // TODO Si la disponibilidad no existe debe disparar WebApplicationException 404
+        if (habitacionLogic.getHabitacion(idHabitacion) == null) {
+
+            throw new WebApplicationException(404);
+        }
+        if (disponibilidadLogic.getDisponibilidad(idHabitacion, id) == null) {
+
+            throw new WebApplicationException(404);
+        }
         return new DisponibilidadDetailDTO(disponibilidadLogic.getDisponibilidad(idHabitacion, id));
+
     }
 
+    /**
+     * Crear una nueva disponibilidad para una habitacion
+     * @param dto
+     * @return
+     * @throws BusinessLogicException 
+     */
     @POST
     public DisponibilidadDetailDTO createDisponibilidad(DisponibilidadDetailDTO dto) throws BusinessLogicException {
 // TODO Si la habitación no existe debe disparar WebApplicationException 404
+        if (habitacionLogic.getHabitacion(dto.getHabitacion().getId()) == null) {
+
+            throw new WebApplicationException(404);
+        }
         return new DisponibilidadDetailDTO(disponibilidadLogic.createDisponibilidad(dto.toEntity()));
     }
 
+    /**
+     * Modidfica una disponibilidad ya existente
+     * @param id
+     * @param dto
+     * @return
+     * @throws BusinessLogicException 
+     */
     @PUT
     @Path("{id: \\d+}")
     public DisponibilidadDetailDTO updateDisponibilidad(@PathParam("id") Long id, DisponibilidadDetailDTO dto) throws BusinessLogicException {
 // TODO Si la habitación no existe debe disparar WebApplicationException 404
 // TODO Si la disponibilidad no existe debe disparar WebApplicationException 404
+        if (habitacionLogic.getHabitacion(dto.getHabitacion().getId()) == null) {
+
+            throw new WebApplicationException(404);
+        }
+        if (disponibilidadLogic.getDisponibilidad(dto.getHabitacion().getId(), id) == null) {
+
+            throw new WebApplicationException(404);
+        }
 
         DisponibilidadEntity entity = dto.toEntity();
         entity.setId(id);
@@ -86,11 +145,24 @@ public class DisponibilidadResource {
 
     }
 
+    /**
+     * Elimina una disponibilidad asociada a una habitacion
+     * @param idHabitacion
+     * @param id 
+     */
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteDisponibilidad(@PathParam("id") Long id) {
+    public void deleteDisponibilidad(@PathParam("idHabitacion") Long idHabitacion, @PathParam("id") Long id) {
 // TODO Si la habitación no existe debe disparar WebApplicationException 404
 // TODO Si la disponibilidad no existe debe disparar WebApplicationException 404
+        if (habitacionLogic.getHabitacion(idHabitacion) == null) {
+
+            throw new WebApplicationException(404);
+        }
+        if (disponibilidadLogic.getDisponibilidad(idHabitacion, id) == null) {
+
+            throw new WebApplicationException(404);
+        }
         disponibilidadLogic.deleteDisponibilidad(id);
     }
 }

@@ -22,6 +22,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
@@ -43,6 +44,12 @@ public class HabitacionResource {
     @QueryParam("limit")
     private Integer maxRecords;
 
+    /**
+     * Metodo encargado de convertir la entidad a DTO
+     *
+     * @param listEntity la lista con las entidades
+     * @return una lista con DTOs
+     */
     private List<HabitacionDetailDTO> listEntity2DTO(List<HabitacionEntity> entityList) {
 
         List<HabitacionDetailDTO> list = new ArrayList<>();
@@ -54,19 +61,40 @@ public class HabitacionResource {
         return list;
     }
 
+    /**
+     * Retorna todas las habitaciones
+     *
+     * @return lista con habitaciones
+     */
     @GET
     public List<HabitacionDetailDTO> getHabitaciones() {
 
         return listEntity2DTO(habitacionLogic.getHabitaciones());
     }
 
+    /**
+     * Retorna una habitacion
+     *
+     * @param id de la habitacion
+     * @return Habitacion
+     */
     @GET
     @Path("{id: \\d+}")
     public HabitacionDetailDTO getHabitacion(@PathParam("id") Long id) {
         // TODO Si el id no existe debe disparar WebApplicationException 404
+        if (habitacionLogic.getHabitacion(id) == null) {
+            throw new WebApplicationException(404);
+        }
         return new HabitacionDetailDTO(habitacionLogic.getHabitacion(id));
     }
 
+    /**
+     * Crea una nueva habitacion
+     *
+     * @param dto
+     * @return
+     * @throws BusinessLogicException
+     */
     @POST
     public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) throws BusinessLogicException {
 
@@ -75,21 +103,40 @@ public class HabitacionResource {
         return nuevaH;
     }
 
+    /**
+     * Modifiac una habitacion ya existente
+     *
+     * @param id
+     * @param dto
+     * @return
+     * @throws BusinessLogicException
+     */
     @PUT
     @Path("{id: \\d+}")
     public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, HabitacionDetailDTO dto) throws BusinessLogicException {
         // TODO Si el id no existe debe disparar WebApplicationException 404
+        if (habitacionLogic.getHabitacion(id) == null) {
+            throw new WebApplicationException(404);
+        }
         HabitacionEntity entity = dto.toEntity();
         entity.setId(id);
 
         return new HabitacionDetailDTO(habitacionLogic.updateHabitacion(entity));
     }
 
+    /**
+     * Elimina una habitacion ya existente
+     *
+     * @param id
+     */
     @DELETE
     @Path("{id: \\d+}")
     // TODO Si el id no existe debe disparar WebApplicationException 404
     public void deleteHabitacion(@PathParam("id") Long id) {
 
+        if (habitacionLogic.getHabitacion(id) == null) {
+            throw new WebApplicationException(404);
+        }
         habitacionLogic.deleteHabitacion(id);
     }
 }
