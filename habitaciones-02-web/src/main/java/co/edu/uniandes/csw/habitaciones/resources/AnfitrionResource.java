@@ -20,6 +20,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -53,7 +54,9 @@ public class AnfitrionResource {
     @GET
     @Path("{id: \\d+}")
     public AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id) {
-        // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
+        if (logica.getAnfitrion(id) == null) {
+            throw new WebApplicationException(404);
+        }
         return new AnfitrionDetailDTO(logica.getAnfitrion(id));
     }
 
@@ -66,7 +69,10 @@ public class AnfitrionResource {
 
     @PUT
     @Path("{id: \\d+}")
-    public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id) {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
+    public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id) {  
+        if (logica.getAnfitrion(id) == null) {
+            throw new WebApplicationException(404);
+        }
         AnfitrionEntity en = dto.toEntity();
         en.setIdUsuario(id);
         return new AnfitrionDetailDTO(logica.updateAnfitrion(en));
@@ -74,7 +80,10 @@ public class AnfitrionResource {
 
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteAnfitrion(@PathParam("id") Long id) {  // TODO si el recurso no existe debe disparar WebApplicationExceptioon con error 404
+    public void deleteAnfitrion(@PathParam("id") Long id) {  
+        if (logica.getAnfitrion(id) == null) {
+            throw new WebApplicationException(404);
+        }
         logica.deleteAnfitrion(id);
     }
 

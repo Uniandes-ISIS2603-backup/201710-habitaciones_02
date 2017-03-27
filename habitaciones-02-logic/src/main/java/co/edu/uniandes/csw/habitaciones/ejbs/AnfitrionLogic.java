@@ -9,7 +9,9 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
 import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
+import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import co.edu.uniandes.csw.habitaciones.persistence.AnfitrionPersistence;
+import javax.ws.rs.WebApplicationException;
 
 /**
  *
@@ -30,15 +32,22 @@ public class AnfitrionLogic {
         return persistence.find(id);
     }
 
-    public AnfitrionEntity createAnfitrion(AnfitrionEntity entity) {
-        return persistence.create(entity);
+    public AnfitrionEntity createAnfitrion(AnfitrionEntity entity) throws BusinessLogicException {
+        if (!entity.informacionCompleta()) {
+            throw new BusinessLogicException("La información ingresada no está completa. Favor rectificar e intentar nuevamente");
+        } return persistence.create(entity);
     }
 
     public AnfitrionEntity updateAnfitrion(AnfitrionEntity entity) {
-        return persistence.update(entity);
+        AnfitrionEntity en = getAnfitrion(entity.getIdUsuario());
+        if(en == null){
+            throw new WebApplicationException("No existe tal anftrión para actualizar ");
+        }else{
+            return persistence.update(entity);
+        }
     }
 
     public void deleteAnfitrion(Long id) {
-        persistence.delete(id);
+        persistence.delete(id);        
     }
 }
