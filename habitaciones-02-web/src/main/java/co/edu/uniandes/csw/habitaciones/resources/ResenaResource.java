@@ -57,8 +57,8 @@ public class ResenaResource
         return lista;
     }
 
-    //TODO traer todas las reseñas del sistema no parece tener mucho sentido. 
-    // TODO deberia ser get /viajeros/:id/resenas las reseñas del viajero (en el recurso viajero)
+    //TODO traer todas las reseñas del sistema no parece tener mucho sentido. COMPLETADO
+    // TODO deberia ser get /viajeros/:id/resenas las reseñas del viajero (en el recurso viajero) COMPLETADO
     // TODO deberia ser get /habitaciones/:id/resenas las reseñas de la habitacion (en el recurso habitación)
      // TODO deberia ser get /anfitriones/:id/resenas las reseñas del anfitrion (en el recurso anfitrion)
     /**

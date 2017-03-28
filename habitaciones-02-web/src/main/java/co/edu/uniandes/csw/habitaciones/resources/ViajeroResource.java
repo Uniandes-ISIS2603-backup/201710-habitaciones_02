@@ -33,19 +33,35 @@ import javax.ws.rs.core.Context;
 @Path("/viajeros")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ViajeroResource {
-
+public class ViajeroResource 
+{
+    //----------------------------------------------------------------------------------------------------
+    // ATRIBUTOS DEL RECURSO
+    //----------------------------------------------------------------------------------------------------
+   
     /**
      * Atributo del logic del viajero
      */
-    @Inject
-    private ViajeroLogic viajeroLogic;
-    @Context
-    private HttpServletResponse response;
-    @QueryParam("page")
-    private Integer page;
-    @QueryParam("limit")
-    private Integer maxRecords;
+    @Inject private ViajeroLogic viajeroLogic;
+    
+    /**
+     * Atributo Response
+     */
+    @Context private HttpServletResponse response;
+    
+    /**
+     * Atributo page
+     */
+    @QueryParam("page") private Integer page;
+    
+    /**
+     * Atributo maxRecords
+     */
+    @QueryParam("limit") private Integer maxRecords;
+    
+    //----------------------------------------------------------------------------------------------------
+    // METODOS AUXILIARES DEL RECURSO
+    //----------------------------------------------------------------------------------------------------
 
     /**
      * Metodo encargado de convertir la entidad a DTO
@@ -63,6 +79,10 @@ public class ViajeroResource {
         return listDto;
     }
 
+    //----------------------------------------------------------------------------------------------------
+    // METODOS GET DEL RECURSO
+    //----------------------------------------------------------------------------------------------------
+    
     /**
      * Metodo encargado de obtener todos los DTOs de los viajeros
      *
@@ -84,31 +104,38 @@ public class ViajeroResource {
     public ViajeroDetailDTO getViajero(@PathParam("id") Long id) { // TODO Si el viajero  no existe debe disparar WebApplicationException 404
         return new ViajeroDetailDTO(viajeroLogic.getViajero(id));
     }
-    
+
     /**
-     * Metodo encargado de llamar a la clase ResenaResourse para retornar las resenas de un viajero respectivo
-     * @return la clase ResenaResourse encargada de retornar las resenas de viajero.
+     * Metodo encargado de llamar a la clase ResenaResourse para retornar las
+     * resenas de un viajero respectivo
+     * @return la clase ResenaResourse encargada de retornar las resenas de
+     * viajero.
      */
-    @GET
     @Path("{viajeroId: \\d+}/resenas")
-    public Class<ResenaResource> getResenasViajero()
-    {
-        return ResenaResource.class;
-    }
-    
-    /**
-     * Metodo encargado de llamar a la clase ReservaResourse para retornar las resenas de un viajero respectivo
-     * @return la clase ReservaResourse encargada de retornar las resenas de viajero.
-     */
-    @GET
-    @Path("{viajeroId: \\d+}/reservas")
-    public Class<ReservaResource> getReservasViajeo()
-    {
-        return ReservaResource.class;
+    public Class<ResenaResource> getResenasViajero() {
+        return  ResenaResource.class;
     }
 
     /**
+     * Metodo encargado de llamar a la clase ReservaResourse para retornar las
+     * resenas de un viajero respectivo
+     * @return la clase ReservaResourse encargada de retornar las resenas de
+     * viajero.
+     */
+    @Path("{viajeroId: \\d+}/reservas")
+    public Class<ReservaResource> getReservasViajeo() {
+        return ReservaResource.class;
+    }
+
+    
+    //----------------------------------------------------------------------------------------------------
+    // METODOS POST DEL RECURSO
+    //----------------------------------------------------------------------------------------------------
+    
+    
+    /**
      * Metodo encargado de agregar un nuevo viajero a la base de datos
+     *
      * @param dto el nuevo DTO
      * @return el viajero creado
      * @throws BusinessLogicException Exception de las reglas del negocio
@@ -118,6 +145,10 @@ public class ViajeroResource {
         ViajeroEntity entity = viajeroLogic.createViajero(dto.toEntity());
         return new ViajeroDetailDTO(entity);
     }
+
+    //----------------------------------------------------------------------------------------------------
+    // METODOS PUT DEL RECURSO
+    //----------------------------------------------------------------------------------------------------    
 
     /**
      * Metodo encargado de actualizar la informacion de un viajero
@@ -134,6 +165,12 @@ public class ViajeroResource {
         entity.setIdUsuario(id);
         return new ViajeroDetailDTO(viajeroLogic.updateViajero(entity));
     }
+    
+    
+    //----------------------------------------------------------------------------------------------------
+    // METODOS DELETE DEL RECURSO
+    //----------------------------------------------------------------------------------------------------    
+    
 
     /**
      * Elimina un viajero de la base de datos
@@ -146,5 +183,4 @@ public class ViajeroResource {
         viajeroLogic.deleteViajero(id);
     }
 
-    
 }
