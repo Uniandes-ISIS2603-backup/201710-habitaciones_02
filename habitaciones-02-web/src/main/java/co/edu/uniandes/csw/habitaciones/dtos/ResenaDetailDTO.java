@@ -42,8 +42,8 @@ public class ResenaDetailDTO extends ResenaDTO
         super(entity);
         if(entity!= null)
         {
-            habitacion = new HabitacionDTO( entity.getHabitacion( ) );
             viajero = new ViajeroDTO(entity.getViajero());
+            habitacion = new HabitacionDTO( entity.getHabitacion( ) );
         }
     }
 
@@ -85,11 +85,11 @@ public class ResenaDetailDTO extends ResenaDTO
         
         if(this.getViajero() != null)
         {
-            entity.setViajero(viajero.toEntity());
+            entity.setViajero(this.viajero.toEntity());
         }
         if(this.getHabitacion() != null)
         {
-            entity.setHabitacion(habitacion.toEntity());
+            entity.setHabitacion(this.habitacion.toEntity());
         }
         
         return entity;
