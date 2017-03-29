@@ -1,1 +1,14 @@
-pago list html
+<div class="container-fluid">
+    <div class="row">
+        <!-- booksRecords fue inicializada en el controlador del estado pagosList -->
+        <!-- Itera sobre cada uno de los pagos en la colección pagosRecords -->
+        <div class="col-sm-2 col-md-2" ng-repeat="pago in pagosRecords">
+             <!--Despliega la imagen  -->
+            <div class="thumbnail">
+                 <!-- Despliega en el caption de la imagen el nombre del libro -->
+                <div class="caption text-center">{{pago.id}}</div>
+                 <div class="caption text-center">{{pago.pago}}</div>
+            </div>
+        </div>
+    </div>
+</div>

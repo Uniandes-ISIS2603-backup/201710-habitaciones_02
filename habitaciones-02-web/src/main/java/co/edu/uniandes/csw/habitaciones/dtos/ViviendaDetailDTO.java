@@ -24,6 +24,11 @@ public class ViviendaDetailDTO extends ViviendaDTO {
     private List<HabitacionDTO> habitacion;
 
     /**
+     * anfitrion de la vivienda
+     */
+    private AnfitrionDTO anfitrion;
+
+    /**
      * Metodo constructor por defecto
      */
     public ViviendaDetailDTO() {
@@ -42,6 +47,9 @@ public class ViviendaDetailDTO extends ViviendaDTO {
             for (HabitacionEntity ent : entity.getHabitaciones()) {
                 habitacion.add(new HabitacionDTO(ent));
             }
+
+            anfitrion = new AnfitrionDTO(entity.getAnfitrion());
+
         }
     }
 
@@ -60,6 +68,9 @@ public class ViviendaDetailDTO extends ViviendaDTO {
                 habs.add(habs2.toEntity());
             }
             entity.setHabitaciones(habs);
+            if (this.getAnfitrion() != null) {
+                entity.setAnfitrion(getAnfitrion().toEntity());
+            }
         }
         return entity;
     }
@@ -76,6 +87,20 @@ public class ViviendaDetailDTO extends ViviendaDTO {
      */
     public void setHabitaciones(List<HabitacionDTO> habitaciones) {
         this.habitacion = habitaciones;
+    }
+
+    /**
+     * @return the anfitrion
+     */
+    public AnfitrionDTO getAnfitrion() {
+        return anfitrion;
+    }
+
+    /**
+     * @param anfitrion the anfitrion to set
+     */
+    public void setAnfitrion(AnfitrionDTO anfitrion) {
+        this.anfitrion = anfitrion;
     }
 
 }
