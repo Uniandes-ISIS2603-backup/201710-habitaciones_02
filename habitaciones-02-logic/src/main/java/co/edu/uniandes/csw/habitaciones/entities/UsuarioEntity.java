@@ -20,9 +20,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table
-@Inheritance (strategy = InheritanceType.JOINED)
-public class UsuarioEntity implements Serializable
-{
+@Inheritance(strategy = InheritanceType.JOINED)
+public class UsuarioEntity implements Serializable {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
@@ -33,49 +32,52 @@ public class UsuarioEntity implements Serializable
      * El ID del usuario (el de todos los usuarios)
      */
     private Long idUsuario;
-    
+
+    /**
+     * Ruta de la imagen del usuario
+     */
+    private String imagen;
     /**
      * Nombre del usuario
      */
     private String nombre;
-    
+
     /**
      * Contrasena del usuario
      */
     private String contrasena;
-    
+
     /**
      * Correo electronico del usuario
      */
     private String correoElectronico;
-    
+
     /**
      * tipo de documento de identificacion
      */
     private String tipoDocumento;
-    
+
     /**
      * numero del documento de identificacion
      */
     private String numeroDocumento;
-    
+
     /**
      * direccion del usuario
      */
     private String direccion;
-    
+
     /**
      * telefono del usuario
      */
     private String telefono;
 
-
     //----------------------------------------------------------------------------------------------------
     // METODOS
     //----------------------------------------------------------------------------------------------------
-    
     /**
      * retorna el atributo ID de la entidad
+     *
      * @return el id
      */
     public Long getIdUsuario() {
@@ -84,6 +86,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * Le asigna a la entidad el valor del atibuto ID
+     *
      * @param idUsuario el id a asignar
      */
     public void setIdUsuario(Long idUsuario) {
@@ -92,6 +95,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * retorna el atributo nombre de la entidad
+     *
      * @return el nombre
      */
     public String getNombre() {
@@ -99,15 +103,33 @@ public class UsuarioEntity implements Serializable
     }
 
     /**
-     * Le asigna a la entidad el valor del atibuto nombre 
+     * Le asigna a la entidad el valor del atibuto nombre
+     *
      * @param nombre el nombre a asignar
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    /**
+     * Retorna la ruta de la imagen de la entidad
+     * @return imagen
+     */
+    
+    public String getImagen() {
+        return imagen;
+    }
+    
+    /**
+     * Asigna a la imagen el valor correspondiente
+     * @param imagen Imagen que se va a agregar imagen != null imagen != ""
+     */
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 
     /**
      * retorna el atributo contraseña de la entidad
+     *
      * @return la contraseña
      */
     public String getContrasena() {
@@ -116,6 +138,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * Le asigna a la entidad el valor del atibuto contraseña
+     *
      * @param contrasena la contraseña a asignar
      */
     public void setContrasena(String contrasena) {
@@ -124,6 +147,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * retorna el atributo correoElectronico de la entidad
+     *
      * @return el correo electronico
      */
     public String getCorreoElectronico() {
@@ -132,7 +156,8 @@ public class UsuarioEntity implements Serializable
 
     /**
      * Le asigna a la entidad el valor del atibuto correoElectronico
-     * @param correoElectronico  el correo electronico a asignar
+     *
+     * @param correoElectronico el correo electronico a asignar
      */
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
@@ -140,6 +165,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * retorna el atributo tipoDocumento de la entidad
+     *
      * @return el tipo de documento
      */
     public String getTipoDocumento() {
@@ -148,7 +174,8 @@ public class UsuarioEntity implements Serializable
 
     /**
      * Le asigna a la entidad el valor del atibuto tipoDocumento
-     * @param tipoDocumento  el tipo de documento a asignar
+     *
+     * @param tipoDocumento el tipo de documento a asignar
      */
     public void setTipoDocumento(String tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
@@ -156,6 +183,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * retorna el atributo numeroDocumento de la entidad
+     *
      * @return el numero de documento
      */
     public String getNumeroDocumento() {
@@ -164,6 +192,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * Le asigna a la entidad el valor del atibuto numeroDocumento
+     *
      * @param numeroDocumento el numero de documento a asignar
      */
     public void setNumeroDocumento(String numeroDocumento) {
@@ -172,6 +201,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * retorna el atributo direccion de la entidad
+     *
      * @return la direccion
      */
     public String getDireccion() {
@@ -180,6 +210,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * Le asigna a la entidad el valor del atibuto direccion
+     *
      * @param direccion la direccion a asignar
      */
     public void setDireccion(String direccion) {
@@ -188,6 +219,7 @@ public class UsuarioEntity implements Serializable
 
     /**
      * retorna el atributo telefono de la entidad
+     *
      * @return el telefono
      */
     public String getTelefono() {
@@ -196,31 +228,32 @@ public class UsuarioEntity implements Serializable
 
     /**
      * Le asigna a la entidad el valor del atibuto telefono
+     *
      * @param telefono el telefono a asignar
      */
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
+
     /**
      * Verfica que los atributos String no sean ni null ni vacios
+     *
      * @return true si no sin null ni vacios, false de lo contrario
      */
-    public Boolean informacionCompleta()
-    {
+    public Boolean informacionCompleta() {
         return (stringUtilizable(contrasena) && stringUtilizable(correoElectronico)
-               && stringUtilizable(direccion) && stringUtilizable(nombre) && stringUtilizable(tipoDocumento)
-               &&  stringUtilizable(telefono) && stringUtilizable(numeroDocumento));
+                && stringUtilizable(direccion) && stringUtilizable(nombre) && stringUtilizable(tipoDocumento)
+                && stringUtilizable(telefono) && stringUtilizable(numeroDocumento));
     }
-    
+
     /**
      * Verifica si un String es null o vacio
+     *
      * @param palabra el string a verificar
      * @return true si no es ni vacio ni null, false de lo contrario
      */
-    private Boolean stringUtilizable(String palabra)
-    {
-       return (palabra != null)? !palabra.isEmpty() : false;
+    private Boolean stringUtilizable(String palabra) {
+        return (palabra != null) ? !palabra.isEmpty() : false;
     }
-    
+
 }
