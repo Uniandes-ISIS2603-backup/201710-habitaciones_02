@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- booksRecords fue inicializada en el controlador del estado booksList -->
+        <!-- Itera sobre cada uno de los libros en la colección booksRecords -->
+        <div class="col-sm-6 col-md-3" ng-repeat="resena in RecordsResena">
+             <!--Despliega la imagen  -->
+            <div class="caption text-center">
+                <h4>Informacion de la Resena</h4>
+                {{resena.calificacion}}
+                {{resena.descripcion}}
+            </div>
+        </div>
+    </div>
+</div>
