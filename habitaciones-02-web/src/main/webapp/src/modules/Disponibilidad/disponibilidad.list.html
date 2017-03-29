@@ -1,13 +1,20 @@
+
 <div class="container-fluid">
     <div class="row">
         <!-- disponibilidadesRecords fue inicializada en el controlador del estado disponibilidadesList -->
-        <!-- Itera sobre cada uno de los libros en la colección booksRecords -->
-        <div class="col-sm-2 col-md-2" ng-repeat="disponibilidad in disponibilidadesRecords">
-           
-                  
-                 <!-- Despliega en el caption de la imagen el nombre del libro -->
-                <div class="caption text-center">{{disponibilidad.id}}</div>
-            
+        <!-- Itera sobre cada uno de las disponibilidades en la colección disponibilidadesRecords -->
+        <div class="col-sm-4 col-md-3" ng-repeat="disponibilidad in disponibilidadesRecords">
+             <!--Despliega la imagen  -->
+            <div class="disponibilidadesHabitacion">
+                 <!-- Despliega en el caption la informacion de la disponibilidad -->
+                 <!-- <h3>{{viajero.nombre}}</h3> -->
+                 
+                 <div class="caption text-center">
+                     <h4>Informacion Fechas Diaponibilidad</h4>
+                     {{disponibilidad.fechaInicioEstadia}}
+                     {{disponibilidad.fechaTerminacionEstadia}}
+                 </div>
+            </div>
         </div>
     </div>
 </div>

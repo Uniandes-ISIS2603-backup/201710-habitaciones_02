@@ -22,6 +22,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
@@ -83,7 +84,15 @@ public class ResenaResource
     {
         return listEntity2DTO(logic.findResenasViajero(idViajero));
     }
-
+    
+    /**
+    @GET
+    public List<ResenaDetailDTO> getResenasByHabitacion(@PathParam("habitacionId")Long idHabitacion)
+    {
+        return listEntity2DTO(logic.findResenasHabitacion(idHabitacion));
+    }
+    **/
+    
     /**
      * Metodo encargado de retornar un DTO reseña a partir de un id
      * @param id el id de la entidad
@@ -91,9 +100,14 @@ public class ResenaResource
      */
     @GET
     @Path("{id: \\d+}")
-    public ResenaDetailDTO getResena(@PathParam("id") Long id) {
-        // TODO Si la resena no existe debe disparar WebApplicationException 404
-        return new ResenaDetailDTO(logic.findResena(id));
+    public ResenaDetailDTO getResena(@PathParam("id") Long id) throws WebApplicationException
+    {
+        ResenaDetailDTO resena = new ResenaDetailDTO(logic.findResena(id));
+        if(resena == null)
+        {
+            throw new WebApplicationException(404);
+        }
+        return resena;
     }
 
     /**
@@ -117,8 +131,12 @@ public class ResenaResource
      */
     @PUT
     @Path("{id: \\d+}")
-    public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto) throws BusinessLogicException
-    {// TODO Si la resena no existe debe disparar WebApplicationException 404
+    public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto) throws BusinessLogicException,WebApplicationException
+    {
+        if(logic.findResena(id) == null)
+        {
+            throw new WebApplicationException(404);
+        }
         ResenaEntity entity = dto.toEntity();
         entity.setId(id);
         return new ResenaDetailDTO(logic.updateResena(entity));
@@ -130,8 +148,12 @@ public class ResenaResource
      */
     @DELETE
     @Path("{id: \\d+}")
-    // TODO Si la resena no existe debe disparar WebApplicationException 404
-    public void deleteResena(@PathParam("id") Long id) {
+    public void deleteResena(@PathParam("id") Long id) throws WebApplicationException
+    {
+        if(logic.findResena(id) == null)
+        {
+            throw new WebApplicationException(404);
+        }
         logic.delete(id);
     }
     

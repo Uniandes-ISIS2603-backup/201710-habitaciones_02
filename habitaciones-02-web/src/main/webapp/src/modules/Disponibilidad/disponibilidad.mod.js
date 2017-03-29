@@ -6,7 +6,7 @@
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Disponibilidad/';
-            // Mostrar la lista de libros será el estado por defecto del módulo
+            // Mostrar la lista de dispponibilidades será el estado por defecto del módulo
             $urlRouterProvider.otherwise("/disponibilidadesList");
             // Definición del estado 'disponibilidadesList' donde se listan las disponibilidades
             $stateProvider.state('disponibilidadesList', {

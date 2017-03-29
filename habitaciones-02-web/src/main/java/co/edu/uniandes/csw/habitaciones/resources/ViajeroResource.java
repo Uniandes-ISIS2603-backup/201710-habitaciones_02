@@ -24,6 +24,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 
 /**
@@ -69,7 +70,8 @@ public class ViajeroResource
      * @param listEntity la lista con las entidades
      * @return una lista con DTOs
      */
-    public List<ViajeroDTO> listEntity2DTO(List<ViajeroEntity> listEntity) {
+    public List<ViajeroDTO> listEntity2DTO(List<ViajeroEntity> listEntity)
+    {
         List<ViajeroDTO> listDto = new ArrayList<>();
         for (ViajeroEntity entity : listEntity) {
             ViajeroDTO ndto = new ViajeroDTO(entity);
@@ -89,7 +91,8 @@ public class ViajeroResource
      * @return
      */
     @GET
-    public List<ViajeroDTO> getViajeros() {
+    public List<ViajeroDTO> getViajeros()
+    {
         return listEntity2DTO(viajeroLogic.getViajeros());
     }
 
@@ -101,18 +104,25 @@ public class ViajeroResource
      */
     @GET
     @Path("{id: \\d+}")
-    public ViajeroDetailDTO getViajero(@PathParam("id") Long id) { // TODO Si el viajero  no existe debe disparar WebApplicationException 404
-        return new ViajeroDetailDTO(viajeroLogic.getViajero(id));
+    public ViajeroDetailDTO getViajero(@PathParam("id") Long id) throws WebApplicationException
+    { 
+        ViajeroDetailDTO viajero = new ViajeroDetailDTO(viajeroLogic.getViajero(id));
+        if(viajero == null)
+        {
+            throw new WebApplicationException(404);
+        }
+        return viajero;
     }
 
     /**
      * Metodo encargado de llamar a la clase ResenaResourse para retornar las
      * resenas de un viajero respectivo
-     * @return la clase ResenaResourse encargada de retornar las resenas de
+     * @return la clase ResenaResourse encargada de retornar las resenas de el
      * viajero.
      */
     @Path("{viajeroId: \\d+}/resenas")
-    public Class<ResenaResource> getResenasViajero() {
+    public Class<ResenaResource> getResenasViajero()
+    {
         return  ResenaResource.class;
     }
 
@@ -123,7 +133,8 @@ public class ViajeroResource
      * viajero.
      */
     @Path("{viajeroId: \\d+}/reservas")
-    public Class<ReservaResource> getReservasViajeo() {
+    public Class<ReservaResource> getReservasViajeo()
+    {
         return ReservaResource.class;
     }
 
@@ -141,7 +152,8 @@ public class ViajeroResource
      * @throws BusinessLogicException Exception de las reglas del negocio
      */
     @POST
-    public ViajeroDetailDTO crearViajero(ViajeroDetailDTO dto) throws BusinessLogicException {
+    public ViajeroDetailDTO crearViajero(ViajeroDetailDTO dto) throws BusinessLogicException
+    {
         ViajeroEntity entity = viajeroLogic.createViajero(dto.toEntity());
         return new ViajeroDetailDTO(entity);
     }
@@ -160,7 +172,12 @@ public class ViajeroResource
      */
     @PUT
     @Path("{id: \\d+}")
-    public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto) throws BusinessLogicException { // TODO Si el viajero  no existe debe disparar WebApplicationException 404
+    public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto) throws BusinessLogicException, WebApplicationException
+    { 
+        if(viajeroLogic.getViajero(id) == null)
+        {
+            throw new WebApplicationException(404);
+        }
         ViajeroEntity entity = dto.toEntity();
         entity.setIdUsuario(id);
         return new ViajeroDetailDTO(viajeroLogic.updateViajero(entity));
@@ -179,7 +196,12 @@ public class ViajeroResource
      */
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteViajero(@PathParam("id") Long id) {// TODO Si el viajero  no existe debe disparar WebApplicationException 404
+    public void deleteViajero(@PathParam("id") Long id) throws WebApplicationException
+    {
+        if(viajeroLogic.getViajero(id) == null)
+        {
+            throw new WebApplicationException(404);
+        }
         viajeroLogic.deleteViajero(id);
     }
 
