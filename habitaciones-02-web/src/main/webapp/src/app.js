@@ -3,7 +3,8 @@
         // External dependencies
         'ui.router',
         // Internal modules dependencies       
-        'anfitrionModule'
+        'anfitrionModule',
+        'viajeroModule'
         
     ]);
     // Resuelve problemas de las promesas
