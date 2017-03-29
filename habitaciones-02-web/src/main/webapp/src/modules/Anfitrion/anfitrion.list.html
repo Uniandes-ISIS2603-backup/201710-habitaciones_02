@@ -1,1 +1,16 @@
-Anfitrion list html
+<div class="container-fluid">
+    <div class="col-md-4">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="anfitrion in anfitrionesRecords">
+                    <td id="{{$index}}-name">{{anfitrion.nombre}}</td>                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
