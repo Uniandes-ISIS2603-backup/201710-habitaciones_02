@@ -38,6 +38,11 @@ public class ViviendaEntity implements Serializable {
      * Direccion de la vivienda
      */
     private String direccion;
+    
+    /**
+     * ruta de la imagen
+     */
+    private String rutaImagen;
 
     /**
      * Relacion one to many entre vivienda y habitacion
@@ -67,6 +72,16 @@ public class ViviendaEntity implements Serializable {
      */
     public void setHabitaciones(List<HabitacionEntity> pHabitaciones) {
         this.habitacion = pHabitaciones;
+    }
+    
+    public AnfitrionEntity getAnfitrion()
+    {
+        return anfitrion;
+    }
+    
+    public void setAnfitrion( AnfitrionEntity pAnfitrion)
+    {
+        anfitrion = pAnfitrion;
     }
 
     /**
@@ -148,5 +163,19 @@ public class ViviendaEntity implements Serializable {
     private Boolean stringUtilizable(String palabra) 
     {
         return (palabra != null) ? !palabra.isEmpty() : false;
+    }
+
+    /**
+     * @return the rutaImagen
+     */
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+
+    /**
+     * @param rutaImagen the rutaImagen to set
+     */
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
     }
 }

@@ -1,0 +1,100 @@
+[{
+  "id": 1,
+  "ciudad": "Shīeli",
+  "direccion": "3 Cody Junction",
+  "rutaImagent": "http://dummyimage.com/192x192.bmp/cc0000/ffffff",
+  "habitacion": [
+    {
+      "area": 76.6,
+      "descripcion": "nulla nunc purus phasellus in felis donec semper sapien a libero nam dui",
+      "rutaImagen": "http://dummyimage.com/223x102.bmp/ff4444/ffffff",
+      "valorAlquiler": "$6.76",
+      "capacidad": 5,
+      "id": 1
+    },
+    {
+      "area": 56.0,
+      "descripcion": "condimentum curabitur in libero ut massa volutpat convallis morbi odio",
+      "rutaImagen": "http://dummyimage.com/222x203.jpg/5fa2dd/ffffff",
+      "valorAlquiler": "$6.92",
+      "capacidad": 2,
+      "id": 2
+    }
+  ]
+}, {
+  "id": 2,
+  "ciudad": "Obrenovac",
+  "direccion": "7 Westend Trail",
+  "rutaImagent": "http://dummyimage.com/116x244.bmp/ff4444/ffffff",
+  "habitacion": [
+    {
+      "area": 76.4,
+      "descripcion": "lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in",
+      "rutaImagen": "http://dummyimage.com/130x106.bmp/cc0000/ffffff",
+      "valorAlquiler": "$5.86",
+      "capacidad": 1,
+      "id": 1
+    }
+  ]
+}, {
+  "id": 3,
+  "ciudad": "Jiangtian",
+  "direccion": "95012 Nancy Park",
+  "rutaImagent": "http://dummyimage.com/156x129.jpg/5fa2dd/ffffff",
+  "habitacion": [
+    {
+      "area": 73.5,
+      "descripcion": "blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis",
+      "rutaImagen": "http://dummyimage.com/146x187.bmp/dddddd/000000",
+      "valorAlquiler": "$4.52",
+      "capacidad": 4,
+      "id": 1
+    }
+  ]
+}, {
+  "id": 4,
+  "ciudad": "Panganiban",
+  "direccion": "084 Hermina Avenue",
+  "rutaImagent": "http://dummyimage.com/126x188.jpg/cc0000/ffffff",
+  "habitacion": [
+    {
+      "area": 69.4,
+      "descripcion": "ut massa volutpat convallis morbi odio odio elementum eu interdum",
+      "rutaImagen": "http://dummyimage.com/152x110.png/ff4444/ffffff",
+      "valorAlquiler": "$2.97",
+      "capacidad": 1,
+      "id": 1
+    },
+    {
+      "area": 14.5,
+      "descripcion": "vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis",
+      "rutaImagen": "http://dummyimage.com/246x208.bmp/cc0000/ffffff",
+      "valorAlquiler": "$5.15",
+      "capacidad": 2,
+      "id": 2
+    }
+  ]
+}, {
+  "id": 5,
+  "ciudad": "Xamtay",
+  "direccion": "83 Esch Park",
+  "rutaImagent": "http://dummyimage.com/115x226.bmp/5fa2dd/ffffff",
+  "habitacion": [
+    {
+      "area": 29.3,
+      "descripcion": "eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui",
+      "rutaImagen": "http://dummyimage.com/196x209.png/5fa2dd/ffffff",
+      "valorAlquiler": "$8.60",
+      "capacidad": 2,
+      "id": 1
+    },
+    {
+      "area": 87.3,
+      "descripcion": "ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in",
+      "rutaImagen": "http://dummyimage.com/119x118.jpg/cc0000/ffffff",
+      "valorAlquiler": "$5.42",
+      "capacidad": 2,
+      "id": 2
+    }
+  ]
+}]
