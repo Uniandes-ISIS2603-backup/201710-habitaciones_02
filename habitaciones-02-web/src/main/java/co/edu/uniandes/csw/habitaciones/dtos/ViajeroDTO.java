@@ -44,6 +44,7 @@ public class ViajeroDTO extends UsuarioDTO
         if(entity != null)
         {
             this.nombre = entity.getNombre();
+            this.imagen = entity.getImagen();
             this.correoElectronico = entity.getCorreoElectronico();
             this.contrasena = entity.getContrasena();
             this.idUsuario = entity.getIdUsuario();
@@ -74,6 +75,7 @@ public class ViajeroDTO extends UsuarioDTO
         entity.setNumeroDocumento(this.getNumeroDocumento());
         entity.setTelefono(this.getTelefono());
         entity.setTipoDocumento(this.getTipoDocumento());
+        entity.setImagen(this.getImagen());
         
         return entity;
     }

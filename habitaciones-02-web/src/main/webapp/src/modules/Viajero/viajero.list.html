@@ -7,11 +7,8 @@
             <div class="perfilViajero">
                  <!-- Despliega en el caption de la imagen el nombre del libro -->
                  <h3>{{viajero.nombre}}</h3>
-                 
+                 <img class="img-responsive" ng-src ='{{viajero.imagen}}' alt ="{{viajero.nombre}}"/>
                  <div class="caption text-center">
-                     <h4>Informacion Basica</h4>
-                     <p>{{viajero.correoElectronico}}</p>
-                     <p>{{viajero.telefono}}</p>
                      <p>{{viajero.direccion}}</p>
                  </div>
             </div>
