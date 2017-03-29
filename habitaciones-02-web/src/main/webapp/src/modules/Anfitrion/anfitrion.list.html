@@ -4,12 +4,14 @@
             <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Documento</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="anfitrion in anfitrionesRecords">
                    
                     <td id="{{$index}}-name">{{anfitrion.nombre}}</td>
+                    <td id="{{$index}}-id">{{anfitrion.id}}</td>
                 </tr>
             </tbody>
         </table>
