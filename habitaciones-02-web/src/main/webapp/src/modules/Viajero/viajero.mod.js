@@ -8,7 +8,7 @@
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Viajero/';
             // Mostrar la lista de viajeros será el estado por defecto del módulo
-            $urlRouterProvider.otherwise("/viajerosList");
+            $urlRouterProvider.otherwise("/ViajerosList");
             
             // Definición del estado 'ViajerosList' donde se listan los libros
             $stateProvider.state('ViajerosList', 
