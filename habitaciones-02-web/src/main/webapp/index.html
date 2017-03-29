@@ -50,14 +50,17 @@ SOFTWARE.
                 <div class="navbar-header">
                     <a class="navbar-brand" >¡Los Favoritos!</a>
                 </div>
+                
                 <ul class="nav navbar-nav">
                     <li class="active"><a ui-sref="anfitrionesList">Anfitriones</a></li>
                     <li class="active"><a ui-sref="ViajerosList">Viajeros</a></li>
                     <li><a href="#">Viviendas</a></li>
-                    <li><a href="#">Habitaciones</a></li>
+                    <li><a ui-sref="habitacionesList">Habitaciones</a></li>
+                    <li><a ui-sref="disponibilidadesList">Disponibilidades</a></li>
                     <li class="active"><a ui-sref="resenasList">Resenas</a></li>
                 </ul>
             </div>
+            <div ui-view></div> 
         </nav>
     </body>
 </html>
