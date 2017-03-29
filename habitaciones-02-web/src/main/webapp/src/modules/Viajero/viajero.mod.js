@@ -1,4 +1,4 @@
-(function (ng) {
+(function (ng) { 
     // Definición del módulo
     var mod = ng.module("viajeroModule", ['ui.router']);
     
@@ -8,10 +8,10 @@
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Viajero/';
             // Mostrar la lista de viajeros será el estado por defecto del módulo
-            $urlRouterProvider.otherwise("/ViajerosList");
+            $urlRouterProvider.otherwise("/viajerosList");
             
             // Definición del estado 'ViajerosList' donde se listan los libros
-            $stateProvider.state('ViajerosList', 
+            $stateProvider.state('viajerosList', 
             {
                 // Url que aparecerá en el browser
                 url: '/viajeros/list',
