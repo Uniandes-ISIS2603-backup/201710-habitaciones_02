@@ -30,7 +30,12 @@ public class UsuarioDTO implements Serializable
      * Nombre del usuario
      */
     protected String nombre;
-
+    
+    /**
+     * Imagen del usuario
+     */
+    protected String imagen;
+    
     /**
      * Contrasena del usuario
      */
@@ -137,6 +142,21 @@ public class UsuarioDTO implements Serializable
      */
     public String getNombre() {
         return nombre;
+    }
+    /**
+     * Retorna el atributo Imagen del DTO
+     * @return  Imagen del usuario
+     */
+    public String getImagen() {
+        return imagen;
+    }
+    
+    /**
+     * Asigna al DTO la imagen
+     * @param imagen  La imagen a asignar
+     */
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     /**
