@@ -1,1 +1,22 @@
-habitacion list html
+<div class="container-fluid">
+    <div class="row">
+        <!-- habitacionesRecords fue inicializada en el controlador del estado habitacionesList -->
+        <!-- Itera sobre cada uno de las habitaciones en la colección habitacionesRecords -->
+        <div class="col-sm-4 col-md-3" ng-repeat="habitacion in habitacionesRecords">
+             <!--Despliega la imagen  -->
+            <div class="habitaciones">
+                 <!-- Despliega en el caption la informacion de la habitacion -->
+                 <!-- <h3>{{viajero.nombre}}</h3> -->
+                 
+                 <div class="caption text-center">
+                     <h4>Informacion Habitacion</h4>
+                     {{habitacion.area}}
+                     {{habitacion.descripcion}}
+                     {{habitacion.rutaImagen}}
+                     {{habitacion.valorAlquiler}}
+                     {{habitacion.capacidad}}
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
