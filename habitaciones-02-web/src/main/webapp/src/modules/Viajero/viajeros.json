@@ -1,0 +1,60 @@
+[{
+	"idUsuario":6,
+	"nombre":"Roy Sanders",
+	"contrasena":"ivD4Pt",
+	"correoElectronico":"rsanders0@ow.ly",
+	"tipoDocumento":"Mongolian",
+	"numeroDocumento":"238.158.179.213/30",
+	"direccion":"83 Oriole Street",
+	"telefono":"86-(273)976-8194",
+	"reservas":null,
+	"resenas":null
+},
+{
+	"idUsuario":7,
+	"nombre":"Ashley Johnson",
+	"contrasena":"2mvaUZDLq37",
+	"correoElectronico":"ajohnson1@newsvine.com",
+	"tipoDocumento":"Haitian Creole",
+	"numeroDocumento":"48.63.107.91/24",
+	"direccion":"1 Valley Edge Junction",
+	"telefono":"7-(439)995-0222",
+	"reservas":null,
+	"resenas":null
+},
+{
+	"idUsuario":8,
+	"nombre":"Phillip Hawkins",
+	"contrasena":"0EP6eZvHsa0n",
+	"correoElectronico":"phawkins2@bizjournals.com",
+	"tipoDocumento":"Punjabi",
+	"numeroDocumento":"39.58.180.176/6",
+	"direccion":"4 Pine View Way",
+	"telefono":"48-(238)355-2603",
+	"reservas":null,
+	"resenas":null
+},
+{
+	"idUsuario":9,
+	"nombre":"Billy Cox",
+	"contrasena":"d903M15G",
+	"correoElectronico":"bcox3@howstuffworks.com",
+	"tipoDocumento":"Czech",
+	"numeroDocumento":"25.122.213.237/17",
+	"direccion":"020 Novick Street",
+	"telefono":"63-(475)161-0687",
+	"reservas":null,
+	"resenas":null
+},
+{
+	"idUsuario":10,
+	"nombre":"Willie Fields",
+	"contrasena":"Br1Fg42",
+	"correoElectronico":"wfields4@cmu.edu",
+	"tipoDocumento":"Aymara",
+	"numeroDocumento":"88.210.167.42/6",
+	"direccion":"5619 Novick Terrace",
+	"telefono":"55-(867)914-9036",
+	"reservas":null,
+	"resenas":null
+}]
