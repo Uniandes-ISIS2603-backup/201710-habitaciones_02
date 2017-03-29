@@ -4,10 +4,7 @@
         'ui.router',
         // Internal modules dependencies       
         'anfitrionModule',
-        'viajeroModule',
-        'resenaModule',
-        'habitacionModule',
-        'disponibilidadModule'
+        'viajeroModule'
         
     ]);
     // Resuelve problemas de las promesas
