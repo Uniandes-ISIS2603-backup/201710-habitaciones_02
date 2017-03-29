@@ -87,6 +87,18 @@ public class HabitacionResource {
         }
         return new HabitacionDetailDTO(habitacionLogic.getHabitacion(id));
     }
+    
+    /**
+     * Metodo encargado de llamar a la clase ResenaResourse para retornar las
+     * resenas de una habitacion respectiva
+     * @return la clase ResenaResourse encargada de retornar las resenas de
+     * la habitacion.
+     */
+    @Path("{habitacionId: \\d+}/resenas")
+    public Class<ResenaResource> getResenasHabitacion()
+    {
+        return  ResenaResource.class;
+    }
 
     /**
      * Crea una nueva habitacion

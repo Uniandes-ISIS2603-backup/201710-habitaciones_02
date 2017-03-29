@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- booksRecords fue inicializada en el controlador del estado booksList -->
+        <!-- Itera sobre cada uno de los libros en la colección booksRecords -->
+        <div class="col-sm-4 col-md-3" ng-repeat="viajero in RecordsViajero">
+             <!--Despliega la imagen  -->
+            <div class="perfilViajero">
+                 <!-- Despliega en el caption de la imagen el nombre del libro -->
+                 <h3>{{viajero.nombre}}</h3>
+                 
+                 <div class="caption text-center">
+                     <h4>Informacion Basica</h4>
+                     {{viajero.correoElectronico}}
+                     {{viajero.telefono}}
+                     {{viajero.direccion}}
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>

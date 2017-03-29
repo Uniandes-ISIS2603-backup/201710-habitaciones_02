@@ -51,6 +51,11 @@ public class ResenaLogic
     {
         return persistence.findAllByViajero(idViajero);
     }
+    
+    public List<ResenaEntity> findResenasHabitacion(Long idHabitacion)
+    {
+        return persistence.findAllByHabitacion(idHabitacion);
+    }
    
     /**
      * Retorna un un ResenaEntity a partir de un id dado por parámetro
@@ -103,6 +108,7 @@ public class ResenaLogic
      * Actualiza la información de un ResenaEntoty que se encuentre en la base de datos
      * @param entity la entidad que desea actualizar
      * @return la entidad actualizada
+     * @throws co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException
      */
      public ResenaEntity updateResena(ResenaEntity entity) throws BusinessLogicException
     {

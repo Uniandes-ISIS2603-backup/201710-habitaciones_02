@@ -59,6 +59,15 @@ public class ResenaPersistence
        
     }
     
+    public List<ResenaEntity> findAllByHabitacion(Long idHabitacion)
+    {
+        TypedQuery<ResenaEntity> q
+                = em.createQuery("select u from ResenaEntity u where u.habitacion.id = :idHabitacion", ResenaEntity.class);
+        q = q.setParameter("idHabitacion", idHabitacion);
+
+       return q.getResultList();
+    }
+    
     /**
      * inserta a la tabla de Resenas un nuevo ViajeroEntity
      * @param entity la entidad que se desea agregar
