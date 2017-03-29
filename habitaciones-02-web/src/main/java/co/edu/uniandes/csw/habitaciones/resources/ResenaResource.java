@@ -85,12 +85,14 @@ public class ResenaResource
         return listEntity2DTO(logic.findResenasViajero(idViajero));
     }
     
+    /**
     @GET
     public List<ResenaDetailDTO> getResenasByHabitacion(@PathParam("habitacionId")Long idHabitacion)
     {
         return listEntity2DTO(logic.findResenasHabitacion(idHabitacion));
     }
-
+    **/
+    
     /**
      * Metodo encargado de retornar un DTO reseña a partir de un id
      * @param id el id de la entidad
