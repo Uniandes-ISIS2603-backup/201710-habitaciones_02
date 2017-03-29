@@ -34,30 +34,28 @@ SOFTWARE.
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
+        <script src="src/app.js" type="text/javascript"></script>
         <!-- Anfitrion -->
         <script src="src/modules/Anfitrion/anfitrion.mod.js" type="text/javascript"></script>
-        
-        
-        
-        
-        
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="src/app.js" type="text/javascript"></script>
+        <script src="src/modules/Anfitrion/anfitrion.ctrl.js" type="text/javascript"></script>
     </head>
-    <body style="padding-top: 60px;">
+    <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" >¡Los Favoritos!</a>
                 </div>
                 <ul class="nav navbar-nav">
+
                     <li class="active"><a ui-sref="anfitrionesList">Anfitriones</a></li>
                     <li class="active"><a ui-sref="viajerosList">Viajeros</a></li>
                     <li><a href="#">Viviendas</a></li>
-                    <li><a href="#">Habitaciones</a></li>
-                    <li class="active"><a ui-sref="resenasList">Resenas</a></li>
+                    <li><a ui-sref="habitacionesList">Habitaciones</a></li>
+                    <li><a ui-sref="disponibilidadesList">Disponibilidades</a></li>
+                    <li><a ui-sref="resenasList">Resenas</a></li>
                 </ul>
             </div>
         </nav>
+        <div ui-view></div>
     </body>
 </html>
