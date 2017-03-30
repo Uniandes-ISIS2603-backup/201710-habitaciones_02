@@ -15,7 +15,10 @@
                     "telefono":"86-(273)976-8194"
                     
         },
-        "habitacion":null
+        "habitacion":{
+                    "rutaImagen":"https://dummyimage.com/300x300.png/DC3510/ffffff"
+        }
+        
     },
     {
         "id":2,
@@ -32,7 +35,9 @@
                     "direccion":"1 Valley Edge Junction",
                     "telefono":"7-(439)995-0222"
         },
-        "habitacion":null
+        "habitacion":{
+                    "rutaImagen":"https://dummyimage.com/300x300.png/DC3510/ffffff"
+        }
     },
     {
         "id":3,
@@ -49,7 +54,9 @@
                     "direccion":"4 Pine View Way",
                     "telefono":"48-(238)355-2603"
         },
-        "habitacion":null
+        "habitacion":{
+                    "rutaImagen":"https://dummyimage.com/300x300.png/DC3510/ffffff"
+        }
     },
     {
         "id":4,
@@ -66,7 +73,9 @@
                     "direccion":"020 Novick Street",
                     "telefono":"63-(475)161-0687"
         },
-        "habitacion":null
+        "habitacion":{
+                    "rutaImagen":"https://dummyimage.com/300x300.png/DC3510/ffffff"
+        }
     },
     {
         "id":5,
@@ -83,6 +92,8 @@
                     "direccion":"5619 Novick Terrace",
                     "telefono":"55-(867)914-9036"
         },
-        "habitacion":null
+        "habitacion":{
+                    "rutaImagen":"https://dummyimage.com/300x300.png/DC3510/ffffff"
+        }
     }
 ]
