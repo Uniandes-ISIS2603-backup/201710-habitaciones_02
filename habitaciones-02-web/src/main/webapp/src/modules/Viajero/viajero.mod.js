@@ -17,6 +17,12 @@
                 url: '/viajeros/list',
                 // Se define una variable viajeros (del estado) que toma por valor 
                 // la colección de libros que obtiene utilizando $http.get 
+                 // Template que se utilizara para ejecutar el estado
+                templateUrl: basePath + 'viajero.list.html',
+                // El controlador guarda en el scope en la variable booksRecords los datos que trajo el resolve
+                // booksRecords será visible en el template
+                controller: 'viajeroListCtrl',
+                controllerAs: 'ctrl',
                  resolve: 
                 {
                     viajeros: ['$http', function ($http) 
@@ -24,13 +30,7 @@
                         return $http.get('data/viajeros.json'); // $http retorna un apromesa que aquí no se está manejando si viene con error.
                     }]
                 },
-                // Template que se utilizara para ejecutar el estado
-                templateUrl: basePath + 'viajero.list.html',
-                // El controlador guarda en el scope en la variable booksRecords los datos que trajo el resolve
-                // booksRecords será visible en el template
-                controller: ['$scope', 'viajeros', function ($scope, viajeros) {
-                        $scope.RecordsViajero = viajeros.data;
-                    }]              
+               
             });
         }
     ]);
