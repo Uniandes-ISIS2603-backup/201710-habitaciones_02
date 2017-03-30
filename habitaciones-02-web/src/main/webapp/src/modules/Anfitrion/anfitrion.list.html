@@ -2,8 +2,14 @@
     <div class="row">
         <div class="col-sm-2 col-md-2" ng-repeat="anfitrion in anfitrionesRecords">
 
-
+                
             <div class="thumbnail">
+               <style scoped>
+                    img{
+                         width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                    }
+                     </style>
+
                 <a ui-sref="anfitrionDetail({anfitrionId: anfitrion.idUsuario})">
                     <img class="img-responsive" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
                     <div class="caption text-center">{{anfitrion.nombre}}</div>

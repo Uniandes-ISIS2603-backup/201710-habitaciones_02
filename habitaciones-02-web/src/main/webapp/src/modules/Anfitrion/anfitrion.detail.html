@@ -1,18 +1,38 @@
 <div class="panel panel-default"> 
     <div class="panel-body">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="thumb">
+        <div style =" margin-bottom: 0px;border-bottom: 0px; " class="row">
+            <div class="col-md-6">
+                
+                <div  class="thumb">
+                    <style scoped>
+                    img{
+                         width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                    }
+                     </style>
                     <img class="img-responsive" ng-src="{{currentAnfitrion.imagen}}"/>
                 </div>
-
+                
             </div>
-            <div class="col-md-3">
+            <div style=" border-left: none; margin-left: 0px; "class="col-md-6">
                 <dl>     
-                    <dt>{{currentAnfitrion.nombre}}</dt>
+                    <dt style="font-size: 35px ">{{currentAnfitrion.nombre}}</dt>
                     <hr>
-                    <dt> Correo</dt>
+                    <br></br>
+                    <dt style="font-size: 16px "> Correo</dt>
                     <dd>{{currentAnfitrion.correoElectronico}}</dd>
+                    <dt style="font-size: 16px "> Número de documento</dt>
+                    <dd>{{currentAnfitrion.numeroDocumento}}</dd>
+                    <dt style="font-size: 16px "> Dirección</dt>
+                    <dd>{{currentAnfitrion.direccion}}</dd>
+                    <dt style="font-size: 16px "> Teléfono</dt>
+                    <dd>{{currentAnfitrion.telefono}}</dd>
+                    <dt style="font-size: 16px "> Viviendas    </dt>
+                    <ul ng-repeat="vivienda in currentAnfitrion.viviendas">
+                        <dt style="font-size: 16px ">Vivienda: {{vivienda.id}}</dt>
+                        <dd style="font-size: 14px ">Ciudad: {{vivienda.ciudad}}</dd>
+                        
+                        
+                    </ul>
                     
                 </dl>
             </div>

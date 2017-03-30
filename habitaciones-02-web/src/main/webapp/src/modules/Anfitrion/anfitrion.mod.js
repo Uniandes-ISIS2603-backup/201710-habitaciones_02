@@ -20,9 +20,7 @@
                         
                        
                         templateUrl: basePath + 'anfitrion.html',
-                        controller: ['$scope', 'anfitriones', function ($scope, anfitriones) {
-                                $scope.anfitrionesRecords = anfitriones.data;
-                            }]
+                        controller: 'anfitrionListCtrl'
                     }
                 }
             }).state('anfitrionesList', {
@@ -37,7 +35,7 @@
                         }]
                 },
                 views:{
-                    mainView: {
+                    'mainView': {
                         templateUrl: basePath+'anfitrion.list.html',
                          controller: 'anfitrionListCtrl',
                          controllerAs: 'ctrl',

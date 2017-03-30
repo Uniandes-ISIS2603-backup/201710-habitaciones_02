@@ -1,7 +1,7 @@
 [{
   "idUsuario": 1,
   "nombre": "Eric Lewis",
-  "imagen": "http://dummyimage.com/300x300.jpg/5fa2dd/ffffff",
+  "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
   "contrasena": "tg5ZPng3zG5D",
   "correoElectronico": "elewis0@prweb.com",
   "tipoDocumento": "Tianjiaba",
@@ -83,7 +83,7 @@
 }, {
   "idUsuario": 2,
   "nombre": "Rachel Washington",
-  "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+  "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
   "contrasena": "oJrPxt82V",
   "correoElectronico": "rwashington1@mashable.com",
   "tipoDocumento": "Veles",
@@ -245,7 +245,7 @@
 }, {
   "idUsuario": 3,
   "nombre": "Raymond Larson",
-  "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+  "imagen": "http://dummyimage.com/994x890.bmp/dddddd/000000",
   "contrasena": "XYE7OfnZOGE",
   "correoElectronico": "rlarson2@surveymonkey.com",
   "tipoDocumento": "Babasakhib",
@@ -458,7 +458,7 @@
 }, {
   "idUsuario": 5,
   "nombre": "Christine Oliver",
-  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "imagen": "http://dummyimage.com/341x713.png/cc0000/ffffff",
   "contrasena": "Hz8mjgm0",
   "correoElectronico": "coliver4@mysql.com",
   "tipoDocumento": "Si Somdet",
@@ -632,7 +632,7 @@
 }, {
   "idUsuario": 6,
   "nombre": "Melissa Kim",
-  "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+  "imagen": "http://dummyimage.com/846x951.jpg/ff4444/ffffff",
   "contrasena": "vX6tHc68lGKU",
   "correoElectronico": "mkim5@indiegogo.com",
   "tipoDocumento": "Krajan Puger Wetan",
@@ -732,7 +732,7 @@
 }, {
   "idUsuario": 7,
   "nombre": "Amanda Snyder",
-  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "imagen": "http://dummyimage.com/982x360.jpg/ff4444/ffffff",
   "contrasena": "okk5UV",
   "correoElectronico": "asnyder6@wired.com",
   "tipoDocumento": "Urus-Martan",
@@ -864,7 +864,7 @@
 }, {
   "idUsuario": 8,
   "nombre": "Kathryn Rose",
-  "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+  "imagen": "http://dummyimage.com/527x435.png/ff4444/ffffff",
   "contrasena": "K1sGhV",
   "correoElectronico": "krose7@yellowpages.com",
   "tipoDocumento": "Las Parejas",
@@ -927,7 +927,7 @@
 }, {
   "idUsuario": 9,
   "nombre": "Gary Adams",
-  "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+  "imagen": "http://dummyimage.com/746x636.png/dddddd/000000",
   "contrasena": "nof3P4C7",
   "correoElectronico": "gadams8@sun.com",
   "tipoDocumento": "Arapuey",
@@ -1028,7 +1028,7 @@
 }, {
   "idUsuario": 10,
   "nombre": "Tammy Ramirez",
-  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "imagen": "http://dummyimage.com/828x819.png/dddddd/000000",
   "contrasena": "2ZE3eqQB0",
   "correoElectronico": "tramirez9@sciencedaily.com",
   "tipoDocumento": "Kameyama",
@@ -1135,7 +1135,7 @@
 }, {
   "idUsuario": 11,
   "nombre": "Walter Lopez",
-  "imagen": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+  "imagen": "http://dummyimage.com/839x537.jpg/dddddd/000000",
   "contrasena": "9PukFYEL2H",
   "correoElectronico": "wlopeza@networksolutions.com",
   "tipoDocumento": "Fengpo",
@@ -1198,7 +1198,7 @@
 }, {
   "idUsuario": 12,
   "nombre": "Lois Webb",
-  "imagen": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+  "imagen": "http://dummyimage.com/533x904.jpg/ff4444/ffffff",
   "contrasena": "9RBtm4ADsc",
   "correoElectronico": "lwebbb@ebay.com",
   "tipoDocumento": "Tomakivka",

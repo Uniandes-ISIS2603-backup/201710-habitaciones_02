@@ -6,4 +6,5 @@
             $scope.anfitrionesRecords = anfitriones.data;
         }
     ]);
+    
 })(window.angular);
