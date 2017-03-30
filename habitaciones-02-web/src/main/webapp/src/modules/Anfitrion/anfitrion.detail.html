@@ -2,16 +2,16 @@
     <div class="panel-body">
         <div style =" margin-bottom: 0px;border-bottom: 0px; " class="row">
             <div class="col-md-6">
-                
+
                 <div  class="thumb">
                     <style scoped>
-                    img{
-                         width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
-                    }
-                     </style>
+                        img{
+                            width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                        }
+                    </style>
                     <img class="img-responsive" ng-src="{{currentAnfitrion.imagen}}"/>
                 </div>
-                
+
             </div>
             <div style=" border-left: none; margin-left: 0px; "class="col-md-6">
                 <dl>     
@@ -26,14 +26,30 @@
                     <dd>{{currentAnfitrion.direccion}}</dd>
                     <dt style="font-size: 16px "> Teléfono</dt>
                     <dd>{{currentAnfitrion.telefono}}</dd>
-                    <dt style="font-size: 16px "> Viviendas    </dt>
-                    <ul ng-repeat="vivienda in currentAnfitrion.viviendas">
-                        <dt style="font-size: 16px ">Vivienda: {{vivienda.id}}</dt>
-                        <dd style="font-size: 14px ">Ciudad: {{vivienda.ciudad}}</dd>
-                        
-                        
-                    </ul>
                     
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+
+                                <div class="col-md-6">
+                                    <dt style="font-size: 16px "> Viviendas    </dt>
+                                    <ul ng-repeat="vivienda in currentAnfitrion.viviendas">
+                                        <dt style="font-size: 16px ">Vivienda: {{vivienda.id}}</dt>
+                                        <dd style="font-size: 14px ">Ciudad: {{vivienda.ciudad}}</dd>
+                                        <dd style="font-size: 14px ">Dirección: {{vivienda.direccion}}</dd>
+                                    </ul>
+                                </div>    
+                                <div class="col-md-6">
+                                    <dt style="font-size: 16px "> Reservas    </dt>
+                                    <ul ng-repeat="reserva in currentAnfitrion.reservas">
+                                        <dt style="font-size: 16px ">Inicio: {{reserva.fechaInicioEstadia}}</dt>
+                                        <dt style="font-size: 16px ">Fin: {{reserva.fechaInicioEstadia}}</dt>
+                                    </ul>
+                                </div>   
+
+                            </div>
+                        </div>
+                    </div>
                 </dl>
             </div>
         </div>
