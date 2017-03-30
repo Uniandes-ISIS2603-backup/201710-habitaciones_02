@@ -1,37 +1,3122 @@
 [{
-    "idUsuario":1,
-    "nombre":"Paula Freeman",
-    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGrSURBVDjLvZPZLkNhFIV75zjvYm7VGFNCqoZUJ+roKUUpjRuqp61Wq0NKDMelGGqOxBSUIBKXWtWGZxAvobr8lWjChRgSF//dv9be+9trCwAI/vIE/26gXmviW5bqnb8yUK028qZjPfoPWEj4Ku5HBspgAz941IXZeze8N1bottSo8BTZviVWrEh546EO03EXpuJOdG63otJbjBKHkEp/Ml6yNYYzpuezWL4s5VMtT8acCMQcb5XL3eJE8VgBlR7BeMGW9Z4yT9y1CeyucuhdTGDxfftaBO7G4L+zg91UocxVmCiy51NpiP3n2treUPujL8xhOjYOzZYsQWANyRYlU4Y9Br6oHd5bDh0bCpSOixJiWx71YY09J5pM/WEbzFcDmHvwwBu2wnikg+lEj4mwBe5bC5h1OUqcwpdC60dxegRmR06TyjCF9G9z+qM2uCJmuMJmaNZaUrCSIi6X+jJIBBYtW5Cge7cd7sgoHDfDaAvKQGAlRZYc6ltJlMxX03UzlaRlBdQrzSCwksLRbOpHUSb7pcsnxCCwngvM2Rm/ugUCi84fycr4l2t8Bb6iqTxSCgNIAAAAAElFTkSuQmCC",
-    "contrasena":"9LD0asx10U",
-    "correoElectronico": "gsnyder0@illinois.edu",    
-    "tipoDocumento":"jcb",
-    "numeroDocumento":"3550213207445401",
-    "direccion":"55 Fair Oaks Hill",
-    "telefono":"62-(503)539-8145",
-    "viviendas":[{
-        "id":1,
-        "ciudad":"Piltown",
-        "direccion":"9 Cody Pass"},
-        {"id":2,"ciudad":"Nantes",
-        "direccion":"97616 Talmadge Parkway"},
-        {"id":3,"ciudad":"Oygon","direccion":"29138 Dakota Hill"}
-       ,{"id":4,"ciudad":"Saboyá","direccion":"652 Rockefeller Park"}
-       ,{"id":5,"ciudad":"Aramayuan","direccion":"72 Novick Plaza"}]
-   ,"reservas":[{"id":1,"fechaInicio":"14/06/2016","fechaFin":"12/01/2018","cancelado":true},{"id":2,"fechaInicio":"03/05/2016","fechaFin":"14/04/2017","cancelado":false},{"id":3,"fechaInicio":"06/10/2016","fechaFin":"02/12/2017","cancelado":true}]},
-{"idUsuario":2,
-    "correoElectronico": "jross1@moonfruit.com",
-  "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJFSURBVDjLpZPNS1RhFMZ/5733zkzjR/ZBCUpoJdUiBCkll4m0CUKJIGpVSLjyL2gntDFop6shAolWbcSNIW0ircHBUHCloo3VjNY0jjP3831bWA5ai8Bnfc7vPOfhHDHGcBjZAENji7N1cSj7IcdqY2zkKoiC2qSFNsKPYoXpTPbBynj/4j8BlbLL9c4L3OqoZWLmM4/vXdpX9OJtHq0lBXQdBIgxhvtPZmZ7ui+yspZrjwKfWExxtMbh66YLAgj4geZnyd2YzmT7Vsb75/c5UEqwDLgVl55r57hxuYY3c18Y6mtDgO1KSBBETMwV0VpeA2f3ARKOwvUCcgWX9bzH0NhqvC4Okx9zBzNpPdGQ4OHIrJnOZLtWxvs/2AChNnhRiFIKy8j/ZjILiALYLgc4YnO8zsJSIWUv4Pt2CMBU+tteoxtC0YN8wUdEV1eItMHCIdSagru5l0kQaZ4OdqC1wQAWhqQNnudR3PGrANu2aGmE9FJATSxJwinhegHDr1ZRAmGk0ZHGAMYYMJB0dh0ogOVs6VNqcoGtosYv1+9lYikHERvBQsQCozBGCMIQ3w+rDtKjvQMAd4bfL59vFqYzQasjNoM36wi1vzvHgBFNwo4x8nKNreJOFfBHy9nSXGpyoSPSYOGgqZCae8TJ5BkERb68zsDVZygSlD3/b0B6tPf2byempRFO127T095JQ6wJFBTcJk7VhCRjYItUT/mgrgxOvWtrPtLdEG8gYdcT6gDRGjERWsosrS2TKwbMP78rcth3/gX/0SEvLZFG1QAAAABJRU5ErkJggg==",  
-    "nombre":"Barbara Coleman","contrasena":"qmfzc2wqmZ","tipoDocumento":"jcb","numeroDocumento":"3530276338864886","direccion":"05984 Cambridge Street","telefono":"351-(350)930-8417","viviendas":[{"id":1,"ciudad":"Hậu Nghĩa","direccion":"886 Crest Line Center"}],"reservas":[{"id":1,"fechaInicio":"04/12/2016","fechaFin":"22/09/2017","cancelado":false}]},
-{"idUsuario":3,
-    "correoElectronico": "ilopez2@dedecms.com",
-"nombre":"Kathryn Larson",
- "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFySURBVDjLpZM9a1RhEIWf7C6mWASLSEBsbUWb/AdrW8HKRrC3EgWttbCzUgQRtRK0ERVEm/Q2aiPoBtJEosZ7Z+Yci3tvdosgKxkY5m3eZ77OrNjmMDYBePhu55rNpbJOSqIEKVElSiZLC15UmpI2b104tTEBkH3l/MbRtf/JfP3x59P7FZS0BjB9dhlsqAQVRHTvtoFooQmI4NfV10TU6gJgmIPhxHFQdu7sIQ1EA9nCxxkAkTWfQZV6wAp83warq0TqKqkhAuvrALQ9ANvcfTnzz72wbd9/M/tnfPLhm7d/7Pni7U3bZgQQJbTkOpswu7+DNroKRkMLy6qhyaINkak5IEpYSwJC/bgXASmWVWT0maerkzkgpaUFNACGzU0AMhMDD95uMR51UTb3Xs2IKu68+Eobxc2nXzgy7j6ORwu3ENW1cO7sMbIG7Xv/Fg4yqZtaLyS/v/Ho05m2NI0sIotKESWy8kDAzu6f5wArhz3nv90eObvZ0Hw1AAAAAElFTkSuQmCC",
-"contrasena":"DOhiX0Dh3ZxH","tipoDocumento":"maestro","numeroDocumento":"0604368760328167543","direccion":"8403 Comanche Parkway","telefono":"86-(647)590-0498","viviendas":[{"id":1,"ciudad":"Kodra","direccion":"9 Coolidge Drive"},{"id":2,"ciudad":"Kasli","direccion":"1 Mccormick Plaza"},{"id":3,"ciudad":"Sishilichengzi","direccion":"432 Macpherson Alley"}],"reservas":[{"id":1,"fechaInicio":"17/07/2016","fechaFin":"15/03/2018","cancelado":true}]},    
-{"idUsuario":4,"nombre":"Theresa Williams",
-    "correoElectronico": "cfreeman3@parallels.com",
-     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAL9SURBVDjLddN9MNNxHAfw31/Vf6LoLq4HRVdxpaurDnEdESepUxTCJVe5U52eyFNFp9iMeS5n19ZankZu2q3IUOZh2WweaiOnyeSI8tBF775bl0vmj++fr+/78/l8vx8KALXUUTDpyzqYtF1dLHr0YJOoWvNWKFVw0lr5Ab4clqtjJG3bRguDsDObvkKZw/BXZjNaZEzabBc7B70CNsZ6lRj7IENXaR4Ytpt/3TE3bl+Mc+imnbkZdIJnx9VKaFtEGGx4jh4eDd3P0qGVv8Gw/C0UHBri1xp/W4CVzDQPZRa9U80rwJBEAG2zEFPDn6CuzEdbeiQaEwJRF3sKfTWl0DSLwD9tNzOPO+j3PDsyUlV9/EJM9CuhEZdhUtuPbpI8M6pFK+MKqs85oOSYNarDXdBfVwlpfvxPPZalJK6UpSaVq0vy8LmxAgMiDqZHNOhkJaHuqifkBQlQV7P1mOdtBe4RK4iiTqLxfsRPqi3++nLp3diMtqS4uXG1XI+/D/ZCxc8lA2vHu+xoVPhtn8dPvDaB7WmF4kBHJFqYTlKSG5d9JDFRfR946fqyp79ooChMwKsIZ9Tf8oeqqmgBfnzYEmUhzuD62eP8mpUjVENk+IN2Rize81Ix/K5WPzBdsjTrBvgnti7CLHdLkn5Ah+fC1hg1UuLLwbWyzBjIc66hJSUMr6M8ybQDDCaz3DaiJMgJT/wdQPBkqJnRBUolYA8pHt2GJDkE4ptHIQx3NJxMcKHrBjwNcNThOYKbg8yMllOqF5yv2vYG1Mf5QRC8G+W+Wwxjl/XgkdKz3e1A8ATBoboXpJroUaNaqRgfa8ogOGtvEBe5b9bjzEM7dHiAYN+//4fKXLda+b7iITQSEdRCLirO7AfX2xpcHxvw/Pb86fmUA9IP2uqwhmCPf38vlWphUld8fB96ygv0l/S9LEbVRS+wffch120nkvda6XqeIriMYKf/d4dKNjd2JltVmWhu8ll4yWuqlRn9QxwfNBltvqqbPFU5wdcJtllq5X8DFM+Gyf3nvIYAAAAASUVORK5CYII="
-,"contrasena":"v266GFLv4j77","tipoDocumento":"jcb","numeroDocumento":"3562957071973551","direccion":"5289 Sachtjen Hill","telefono":"62-(979)193-3382","viviendas":[{"id":1,"ciudad":"Sintung Timur","direccion":"604 Anniversary Plaza"}],"reservas":[{"id":1,"fechaInicio":"01/02/2017","fechaFin":"28/11/2017","cancelado":true},{"id":2,"fechaInicio":"06/05/2016","fechaFin":"28/11/2017","cancelado":false}]},
-{"idUsuario":5,
-    "correoElectronico": "sfreeman4@imageshack.us",
-  "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGvSURBVDjLpZO7alZREEbXiSdqJJDKYJNCkPBXYq12prHwBezSCpaidnY+graCYO0DpLRTQcR3EFLl8p+9525xgkRIJJApB2bN+gZmqCouU+NZzVef9isyUYeIRD0RTz482xouBBBNHi5u4JlkgUfx+evhxQ2aJRrJ/oFjUWysXeG45cUBy+aoJ90Sj0LGFY6anw2o1y/mK2ZS5pQ50+2XiBbdCvPk+mpw2OM/Bo92IJMhgiGCox+JeNEksIC11eLwvAhlzuAO37+BG9y9x3FTuiWTzhH61QFvdg5AdAZIB3Mw50AKsaRJYlGsX0tymTzf2y1TR9WwbogYY3ZhxR26gBmocrxMuhZNE435FtmSx1tP8QgiHEvj45d3jNlONouAKrjjzWaDv4CkmmNu/Pz9CzVh++Yd2rIz5tTnwdZmAzNymXT9F5AtMFeaTogJYkJfdsaaGpyO4E62pJ0yUCtKQFxo0hAT1JU2CWNOJ5vvP4AIcKeao17c2ljFE8SKEkVdWWxu42GYK9KE4c3O20pzSpyyoCx4v/6ECkCTCqccKorNxR5uSXgQnmQkw2Xf+Q+0iqQ9Ap64TwAAAABJRU5ErkJggg==",
-    "nombre":"Susan Rivera","contrasena":"n9MHnvWG0fs1","tipoDocumento":"china-unionpay","numeroDocumento":"5602211973413150","direccion":"8338 Service Plaza","telefono":"380-(170)453-0017","viviendas":[{"id":1,"ciudad":"Mulandoro","direccion":"104 Northport Point"},{"id":2,"ciudad":"Magrath","direccion":"36962 Hazelcrest Place"}],"reservas":[{"id":1,"fechaInicio":"15/01/2017","fechaFin":"23/08/2017","cancelado":false},{"id":2,"fechaInicio":"11/04/2016","fechaFin":"18/01/2018","cancelado":false},{"id":3,"fechaInicio":"30/11/2016","fechaFin":"01/04/2017","cancelado":false},{"id":4,"fechaInicio":"04/07/2016","fechaFin":"23/05/2017","cancelado":false}]}]
+  "idUsuario": 1,
+  "nombre": "Eric Lewis",
+  "imagen": "http://dummyimage.com/300x300.jpg/5fa2dd/ffffff",
+  "contrasena": "tg5ZPng3zG5D",
+  "correoElectronico": "elewis0@prweb.com",
+  "tipoDocumento": "Tianjiaba",
+  "numeroDocumento": "5610927266790273",
+  "direccion": "8556 Onsgard Pass",
+  "telefono": "86-(955)969-4771",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Nyanza",
+      "direccion": "63 Drewry Drive",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 86,
+          "descripcion": "Centralized static firmware"
+        },
+        {
+          "id": 2,
+          "area": 6,
+          "valorAlquiler": 55,
+          "descripcion": "Realigned stable strategy"
+        },
+        {
+          "id": 3,
+          "area": 4,
+          "valorAlquiler": 95,
+          "descripcion": "Total coherent customer loyalty"
+        },
+        {
+          "id": 4,
+          "area": 10,
+          "valorAlquiler": 67,
+          "descripcion": "Team-oriented composite process improvement"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Caen",
+      "direccion": "5 Redwing Road",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 6,
+          "valorAlquiler": 69,
+          "descripcion": "Implemented clear-thinking knowledge base"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 63,
+          "descripcion": "Implemented leading edge alliance"
+        },
+        {
+          "id": 3,
+          "area": 8,
+          "valorAlquiler": 91,
+          "descripcion": "Organic full-range application"
+        },
+        {
+          "id": 4,
+          "area": 8,
+          "valorAlquiler": 92,
+          "descripcion": "Quality-focused transitional task-force"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 65,
+      "fechaInicioEstadia": "10/28/2016",
+      "fechaTerminacionEstadia": "1/24/2018",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 2,
+  "nombre": "Rachel Washington",
+  "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+  "contrasena": "oJrPxt82V",
+  "correoElectronico": "rwashington1@mashable.com",
+  "tipoDocumento": "Veles",
+  "numeroDocumento": "3549014352723327",
+  "direccion": "8 Nelson Street",
+  "telefono": "389-(498)606-6756",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Mojo",
+      "direccion": "7 Utah Parkway",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 84,
+          "descripcion": "Visionary responsive success"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Pérama",
+      "direccion": "82 Anniversary Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 70,
+          "descripcion": "Cross-group 24 hour ability"
+        },
+        {
+          "id": 2,
+          "area": 10,
+          "valorAlquiler": 61,
+          "descripcion": "Reduced non-volatile definition"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 81,
+          "descripcion": "Enhanced modular superstructure"
+        },
+        {
+          "id": 4,
+          "area": 1,
+          "valorAlquiler": 64,
+          "descripcion": "Ameliorated bottom-line intranet"
+        },
+        {
+          "id": 5,
+          "area": 9,
+          "valorAlquiler": 97,
+          "descripcion": "Synchronised client-driven open architecture"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Cidade Velha",
+      "direccion": "8444 Lunder Park",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 92,
+          "descripcion": "Operative solution-oriented contingency"
+        },
+        {
+          "id": 2,
+          "area": 4,
+          "valorAlquiler": 69,
+          "descripcion": "Switchable mission-critical encryption"
+        },
+        {
+          "id": 3,
+          "area": 3,
+          "valorAlquiler": 66,
+          "descripcion": "Programmable 4th generation superstructure"
+        },
+        {
+          "id": 4,
+          "area": 1,
+          "valorAlquiler": 53,
+          "descripcion": "Vision-oriented asynchronous superstructure"
+        },
+        {
+          "id": 5,
+          "area": 1,
+          "valorAlquiler": 58,
+          "descripcion": "Profound 4th generation functionalities"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Sölvesborg",
+      "direccion": "8 Warner Alley",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 66,
+          "descripcion": "Reactive transitional parallelism"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 88,
+          "descripcion": "Polarised 3rd generation frame"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 66,
+          "descripcion": "Centralized 24/7 flexibility"
+        },
+        {
+          "id": 4,
+          "area": 8,
+          "valorAlquiler": 59,
+          "descripcion": "Monitored contextually-based orchestration"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 56,
+      "fechaInicioEstadia": "5/20/2016",
+      "fechaTerminacionEstadia": "3/30/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 73,
+      "fechaInicioEstadia": "6/21/2016",
+      "fechaTerminacionEstadia": "8/22/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 98,
+      "fechaInicioEstadia": "6/23/2016",
+      "fechaTerminacionEstadia": "2/19/2018",
+      "cancelado": false
+    },
+    {
+      "precio": 83,
+      "fechaInicioEstadia": "7/13/2016",
+      "fechaTerminacionEstadia": "5/19/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 87,
+      "fechaInicioEstadia": "3/18/2017",
+      "fechaTerminacionEstadia": "4/26/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 3,
+  "nombre": "Raymond Larson",
+  "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+  "contrasena": "XYE7OfnZOGE",
+  "correoElectronico": "rlarson2@surveymonkey.com",
+  "tipoDocumento": "Babasakhib",
+  "numeroDocumento": "374288064190076",
+  "direccion": "6 Truax Trail",
+  "telefono": "93-(112)658-4334",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Caringin",
+      "direccion": "04 Stoughton Road",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 72,
+          "descripcion": "Profit-focused hybrid emulation"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Kusak",
+      "direccion": "5 Carioca Park",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 56,
+          "descripcion": "Multi-layered responsive toolset"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Helsingborg",
+      "direccion": "7847 Paget Plaza",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 6,
+          "valorAlquiler": 99,
+          "descripcion": "Synergized content-based policy"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 94,
+          "descripcion": "Compatible exuding parallelism"
+        },
+        {
+          "id": 3,
+          "area": 10,
+          "valorAlquiler": 56,
+          "descripcion": "Re-engineered optimal policy"
+        },
+        {
+          "id": 4,
+          "area": 8,
+          "valorAlquiler": 92,
+          "descripcion": "Re-contextualized hybrid emulation"
+        },
+        {
+          "id": 5,
+          "area": 6,
+          "valorAlquiler": 100,
+          "descripcion": "Automated content-based framework"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 55,
+      "fechaInicioEstadia": "9/5/2016",
+      "fechaTerminacionEstadia": "10/18/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 65,
+      "fechaInicioEstadia": "1/30/2017",
+      "fechaTerminacionEstadia": "12/8/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 98,
+      "fechaInicioEstadia": "1/18/2017",
+      "fechaTerminacionEstadia": "1/28/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 99,
+      "fechaInicioEstadia": "8/20/2016",
+      "fechaTerminacionEstadia": "9/22/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 60,
+      "fechaInicioEstadia": "5/6/2016",
+      "fechaTerminacionEstadia": "11/9/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 4,
+  "nombre": "Jacqueline Bowman",
+  "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+  "contrasena": "OMKU0qWKs",
+  "correoElectronico": "jbowman3@devhub.com",
+  "tipoDocumento": "Norrköping",
+  "numeroDocumento": "3558703661680701",
+  "direccion": "943 Marcy Hill",
+  "telefono": "46-(819)167-1343",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Shuidong",
+      "direccion": "0 Stephen Way",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 94,
+          "descripcion": "Enhanced multi-tasking leverage"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 66,
+          "descripcion": "Profit-focused clear-thinking emulation"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 100,
+          "descripcion": "Balanced uniform contingency"
+        },
+        {
+          "id": 4,
+          "area": 10,
+          "valorAlquiler": 57,
+          "descripcion": "Object-based local support"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Reggada",
+      "direccion": "15891 Ridgeway Avenue",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 67,
+          "descripcion": "Synchronised heuristic workforce"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 50,
+          "descripcion": "Profound mission-critical strategy"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 56,
+          "descripcion": "Automated bandwidth-monitored contingency"
+        },
+        {
+          "id": 4,
+          "area": 10,
+          "valorAlquiler": 86,
+          "descripcion": "Team-oriented modular workforce"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 56,
+      "fechaInicioEstadia": "9/4/2016",
+      "fechaTerminacionEstadia": "7/9/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 95,
+      "fechaInicioEstadia": "7/28/2016",
+      "fechaTerminacionEstadia": "11/3/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 80,
+      "fechaInicioEstadia": "6/29/2016",
+      "fechaTerminacionEstadia": "1/29/2018",
+      "cancelado": false
+    },
+    {
+      "precio": 84,
+      "fechaInicioEstadia": "3/22/2017",
+      "fechaTerminacionEstadia": "12/8/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 97,
+      "fechaInicioEstadia": "5/5/2016",
+      "fechaTerminacionEstadia": "2/12/2018",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 5,
+  "nombre": "Christine Oliver",
+  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "contrasena": "Hz8mjgm0",
+  "correoElectronico": "coliver4@mysql.com",
+  "tipoDocumento": "Si Somdet",
+  "numeroDocumento": "5324448307883701",
+  "direccion": "47 Stone Corner Point",
+  "telefono": "66-(376)854-8713",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Falun",
+      "direccion": "70 Little Fleur Park",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 9,
+          "valorAlquiler": 64,
+          "descripcion": "Organic system-worthy instruction set"
+        },
+        {
+          "id": 2,
+          "area": 6,
+          "valorAlquiler": 75,
+          "descripcion": "Balanced composite paradigm"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 76,
+          "descripcion": "Ergonomic context-sensitive forecast"
+        },
+        {
+          "id": 4,
+          "area": 1,
+          "valorAlquiler": 79,
+          "descripcion": "Optional encompassing moratorium"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Pahing Pamulihan",
+      "direccion": "08908 Maryland Drive",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 1,
+          "valorAlquiler": 84,
+          "descripcion": "Multi-tiered tertiary solution"
+        },
+        {
+          "id": 2,
+          "area": 2,
+          "valorAlquiler": 60,
+          "descripcion": "Multi-layered empowering function"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 92,
+          "descripcion": "User-friendly optimizing infrastructure"
+        },
+        {
+          "id": 4,
+          "area": 6,
+          "valorAlquiler": 92,
+          "descripcion": "Networked system-worthy functionalities"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Slobidka",
+      "direccion": "9549 Prairieview Trail",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 6,
+          "valorAlquiler": 86,
+          "descripcion": "Phased modular installation"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 79,
+          "descripcion": "Seamless intermediate capacity"
+        },
+        {
+          "id": 3,
+          "area": 8,
+          "valorAlquiler": 77,
+          "descripcion": "Stand-alone intangible array"
+        },
+        {
+          "id": 4,
+          "area": 7,
+          "valorAlquiler": 79,
+          "descripcion": "Total client-server throughput"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Boucherville",
+      "direccion": "190 Kropf Park",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 98,
+          "descripcion": "Sharable multimedia hub"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 78,
+          "descripcion": "De-engineered high-level application"
+        },
+        {
+          "id": 3,
+          "area": 10,
+          "valorAlquiler": 81,
+          "descripcion": "Switchable content-based emulation"
+        },
+        {
+          "id": 4,
+          "area": 10,
+          "valorAlquiler": 62,
+          "descripcion": "Multi-lateral methodical moratorium"
+        },
+        {
+          "id": 5,
+          "area": 6,
+          "valorAlquiler": 100,
+          "descripcion": "Devolved regional orchestration"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 59,
+      "fechaInicioEstadia": "5/7/2016",
+      "fechaTerminacionEstadia": "9/14/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 84,
+      "fechaInicioEstadia": "4/1/2016",
+      "fechaTerminacionEstadia": "6/2/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 78,
+      "fechaInicioEstadia": "10/25/2016",
+      "fechaTerminacionEstadia": "11/14/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 84,
+      "fechaInicioEstadia": "12/7/2016",
+      "fechaTerminacionEstadia": "9/24/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 64,
+      "fechaInicioEstadia": "8/5/2016",
+      "fechaTerminacionEstadia": "5/16/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 6,
+  "nombre": "Melissa Kim",
+  "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+  "contrasena": "vX6tHc68lGKU",
+  "correoElectronico": "mkim5@indiegogo.com",
+  "tipoDocumento": "Krajan Puger Wetan",
+  "numeroDocumento": "4405897752835159",
+  "direccion": "0 Moose Park",
+  "telefono": "62-(788)878-3112",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Lido",
+      "direccion": "84949 Katie Center",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 55,
+          "descripcion": "Customer-focused multi-state project"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 71,
+          "descripcion": "Customer-focused dynamic middleware"
+        },
+        {
+          "id": 3,
+          "area": 5,
+          "valorAlquiler": 69,
+          "descripcion": "Mandatory static framework"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Keleleng",
+      "direccion": "4 Moland Drive",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 85,
+          "descripcion": "User-friendly discrete throughput"
+        },
+        {
+          "id": 2,
+          "area": 4,
+          "valorAlquiler": 68,
+          "descripcion": "Persevering asynchronous service-desk"
+        },
+        {
+          "id": 3,
+          "area": 5,
+          "valorAlquiler": 84,
+          "descripcion": "Robust content-based portal"
+        },
+        {
+          "id": 4,
+          "area": 9,
+          "valorAlquiler": 94,
+          "descripcion": "Managed dynamic standardization"
+        },
+        {
+          "id": 5,
+          "area": 4,
+          "valorAlquiler": 78,
+          "descripcion": "Triple-buffered holistic synergy"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 100,
+      "fechaInicioEstadia": "1/3/2017",
+      "fechaTerminacionEstadia": "7/5/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 90,
+      "fechaInicioEstadia": "1/23/2017",
+      "fechaTerminacionEstadia": "4/15/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 50,
+      "fechaInicioEstadia": "9/23/2016",
+      "fechaTerminacionEstadia": "10/12/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 59,
+      "fechaInicioEstadia": "1/28/2017",
+      "fechaTerminacionEstadia": "11/10/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 7,
+  "nombre": "Amanda Snyder",
+  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "contrasena": "okk5UV",
+  "correoElectronico": "asnyder6@wired.com",
+  "tipoDocumento": "Urus-Martan",
+  "numeroDocumento": "3574498474189889",
+  "direccion": "39033 Del Mar Drive",
+  "telefono": "7-(775)409-6225",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Noshiro",
+      "direccion": "9375 Westport Street",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 1,
+          "valorAlquiler": 91,
+          "descripcion": "Multi-lateral systemic synergy"
+        },
+        {
+          "id": 2,
+          "area": 2,
+          "valorAlquiler": 81,
+          "descripcion": "Monitored user-facing protocol"
+        },
+        {
+          "id": 3,
+          "area": 7,
+          "valorAlquiler": 90,
+          "descripcion": "Devolved coherent contingency"
+        },
+        {
+          "id": 4,
+          "area": 2,
+          "valorAlquiler": 92,
+          "descripcion": "Integrated non-volatile intranet"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Velké Opatovice",
+      "direccion": "036 Northview Court",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 4,
+          "valorAlquiler": 99,
+          "descripcion": "Multi-tiered zero administration software"
+        },
+        {
+          "id": 2,
+          "area": 6,
+          "valorAlquiler": 97,
+          "descripcion": "Horizontal bandwidth-monitored service-desk"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Uryupinsk",
+      "direccion": "44236 Nova Junction",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 79,
+          "descripcion": "Expanded explicit matrix"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 52,
+          "descripcion": "Reduced optimal interface"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Quime",
+      "direccion": "5 Montana Street",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 70,
+          "descripcion": "Right-sized local function"
+        },
+        {
+          "id": 2,
+          "area": 4,
+          "valorAlquiler": 71,
+          "descripcion": "Synchronised value-added emulation"
+        },
+        {
+          "id": 3,
+          "area": 1,
+          "valorAlquiler": 96,
+          "descripcion": "Compatible content-based moratorium"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 73,
+      "fechaInicioEstadia": "9/21/2016",
+      "fechaTerminacionEstadia": "10/10/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 63,
+      "fechaInicioEstadia": "6/18/2016",
+      "fechaTerminacionEstadia": "1/28/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 95,
+      "fechaInicioEstadia": "8/4/2016",
+      "fechaTerminacionEstadia": "4/22/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 88,
+      "fechaInicioEstadia": "4/14/2016",
+      "fechaTerminacionEstadia": "10/3/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 8,
+  "nombre": "Kathryn Rose",
+  "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+  "contrasena": "K1sGhV",
+  "correoElectronico": "krose7@yellowpages.com",
+  "tipoDocumento": "Las Parejas",
+  "numeroDocumento": "3544163754736653",
+  "direccion": "50 Mifflin Avenue",
+  "telefono": "54-(317)490-7075",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "A dos Cunhados",
+      "direccion": "3 Hallows Center",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 77,
+          "descripcion": "Reduced interactive intranet"
+        },
+        {
+          "id": 2,
+          "area": 4,
+          "valorAlquiler": 96,
+          "descripcion": "Open-source composite success"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 68,
+          "descripcion": "Fully-configurable full-range system engine"
+        },
+        {
+          "id": 4,
+          "area": 7,
+          "valorAlquiler": 64,
+          "descripcion": "Universal value-added strategy"
+        },
+        {
+          "id": 5,
+          "area": 7,
+          "valorAlquiler": 55,
+          "descripcion": "Expanded full-range collaboration"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 97,
+      "fechaInicioEstadia": "12/13/2016",
+      "fechaTerminacionEstadia": "6/25/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 99,
+      "fechaInicioEstadia": "2/7/2017",
+      "fechaTerminacionEstadia": "5/14/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 9,
+  "nombre": "Gary Adams",
+  "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+  "contrasena": "nof3P4C7",
+  "correoElectronico": "gadams8@sun.com",
+  "tipoDocumento": "Arapuey",
+  "numeroDocumento": "3547085756511395",
+  "direccion": "73 Elmside Avenue",
+  "telefono": "58-(926)596-1621",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Dashev",
+      "direccion": "933 Springview Pass",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 55,
+          "descripcion": "Assimilated static analyzer"
+        },
+        {
+          "id": 2,
+          "area": 7,
+          "valorAlquiler": 63,
+          "descripcion": "Horizontal actuating moratorium"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 51,
+          "descripcion": "Up-sized zero administration frame"
+        },
+        {
+          "id": 4,
+          "area": 7,
+          "valorAlquiler": 57,
+          "descripcion": "Secured coherent extranet"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Khursā",
+      "direccion": "3353 Forest Road",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 56,
+          "descripcion": "Function-based next generation infrastructure"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 91,
+          "descripcion": "Expanded next generation array"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 70,
+          "descripcion": "Synergistic motivating benchmark"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Woto",
+      "direccion": "3 Cardinal Center",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 9,
+          "valorAlquiler": 77,
+          "descripcion": "Multi-lateral dedicated adapter"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 52,
+          "descripcion": "Mandatory regional secured line"
+        },
+        {
+          "id": 3,
+          "area": 1,
+          "valorAlquiler": 64,
+          "descripcion": "Open-architected impactful flexibility"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 82,
+      "fechaInicioEstadia": "11/8/2016",
+      "fechaTerminacionEstadia": "12/31/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 10,
+  "nombre": "Tammy Ramirez",
+  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "contrasena": "2ZE3eqQB0",
+  "correoElectronico": "tramirez9@sciencedaily.com",
+  "tipoDocumento": "Kameyama",
+  "numeroDocumento": "4508155848371879",
+  "direccion": "51 Delaware Crossing",
+  "telefono": "81-(727)982-9715",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Crespo",
+      "direccion": "7567 South Circle",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 4,
+          "valorAlquiler": 61,
+          "descripcion": "Cloned eco-centric intranet"
+        },
+        {
+          "id": 2,
+          "area": 10,
+          "valorAlquiler": 80,
+          "descripcion": "Polarised web-enabled concept"
+        },
+        {
+          "id": 3,
+          "area": 1,
+          "valorAlquiler": 63,
+          "descripcion": "Implemented methodical benchmark"
+        },
+        {
+          "id": 4,
+          "area": 7,
+          "valorAlquiler": 69,
+          "descripcion": "Distributed neutral moderator"
+        },
+        {
+          "id": 5,
+          "area": 8,
+          "valorAlquiler": 81,
+          "descripcion": "Monitored client-server complexity"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Baguinge",
+      "direccion": "88617 Lakeland Alley",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 65,
+          "descripcion": "Quality-focused leading edge portal"
+        },
+        {
+          "id": 2,
+          "area": 4,
+          "valorAlquiler": 54,
+          "descripcion": "Virtual multi-state workforce"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Sitabamba",
+      "direccion": "3190 Oneill Avenue",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 67,
+          "descripcion": "Expanded attitude-oriented parallelism"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 52,
+          "descripcion": "Function-based impactful time-frame"
+        },
+        {
+          "id": 3,
+          "area": 9,
+          "valorAlquiler": 82,
+          "descripcion": "Optional global software"
+        },
+        {
+          "id": 4,
+          "area": 1,
+          "valorAlquiler": 82,
+          "descripcion": "Profit-focused modular attitude"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 69,
+      "fechaInicioEstadia": "10/18/2016",
+      "fechaTerminacionEstadia": "9/28/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 11,
+  "nombre": "Walter Lopez",
+  "imagen": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+  "contrasena": "9PukFYEL2H",
+  "correoElectronico": "wlopeza@networksolutions.com",
+  "tipoDocumento": "Fengpo",
+  "numeroDocumento": "30136941115988",
+  "direccion": "9 Kensington Way",
+  "telefono": "86-(594)237-4300",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Huangchuan",
+      "direccion": "38504 Waubesa Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 7,
+          "valorAlquiler": 68,
+          "descripcion": "Right-sized upward-trending emulation"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 95,
+          "descripcion": "Cloned heuristic portal"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 94,
+          "descripcion": "Re-contextualized fault-tolerant pricing structure"
+        },
+        {
+          "id": 4,
+          "area": 6,
+          "valorAlquiler": 99,
+          "descripcion": "Self-enabling transitional encoding"
+        },
+        {
+          "id": 5,
+          "area": 10,
+          "valorAlquiler": 64,
+          "descripcion": "Programmable multi-state system engine"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 58,
+      "fechaInicioEstadia": "1/13/2017",
+      "fechaTerminacionEstadia": "6/4/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 51,
+      "fechaInicioEstadia": "1/16/2017",
+      "fechaTerminacionEstadia": "5/22/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 12,
+  "nombre": "Lois Webb",
+  "imagen": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+  "contrasena": "9RBtm4ADsc",
+  "correoElectronico": "lwebbb@ebay.com",
+  "tipoDocumento": "Tomakivka",
+  "numeroDocumento": "374288620171008",
+  "direccion": "97084 Porter Drive",
+  "telefono": "380-(800)941-6643",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Sekirnik",
+      "direccion": "53633 Scott Parkway",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 62,
+          "descripcion": "Quality-focused empowering customer loyalty"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Norrköping",
+      "direccion": "42 Kinsman Lane",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 70,
+          "descripcion": "Multi-layered directional focus group"
+        },
+        {
+          "id": 2,
+          "area": 2,
+          "valorAlquiler": 88,
+          "descripcion": "Horizontal well-modulated functionalities"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 67,
+          "descripcion": "Advanced intangible architecture"
+        },
+        {
+          "id": 4,
+          "area": 7,
+          "valorAlquiler": 50,
+          "descripcion": "Managed intermediate project"
+        },
+        {
+          "id": 5,
+          "area": 8,
+          "valorAlquiler": 57,
+          "descripcion": "Synchronised systemic instruction set"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Ambato",
+      "direccion": "5 Loeprich Parkway",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 82,
+          "descripcion": "Advanced zero defect parallelism"
+        },
+        {
+          "id": 2,
+          "area": 10,
+          "valorAlquiler": 83,
+          "descripcion": "Inverse bifurcated project"
+        },
+        {
+          "id": 3,
+          "area": 3,
+          "valorAlquiler": 55,
+          "descripcion": "Seamless systemic solution"
+        },
+        {
+          "id": 4,
+          "area": 4,
+          "valorAlquiler": 62,
+          "descripcion": "Stand-alone motivating focus group"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 80,
+      "fechaInicioEstadia": "8/9/2016",
+      "fechaTerminacionEstadia": "11/15/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 73,
+      "fechaInicioEstadia": "8/7/2016",
+      "fechaTerminacionEstadia": "8/17/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 13,
+  "nombre": "Martha Coleman",
+  "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+  "contrasena": "1JnM70bZRC",
+  "correoElectronico": "mcolemanc@wordpress.com",
+  "tipoDocumento": "Candon",
+  "numeroDocumento": "4421867449639058",
+  "direccion": "21931 Meadow Ridge Terrace",
+  "telefono": "63-(748)711-0216",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Ōsaka-shi",
+      "direccion": "04460 Clemons Drive",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 95,
+          "descripcion": "Enhanced transitional hub"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 50,
+          "descripcion": "Ergonomic multi-tasking matrices"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 84,
+      "fechaInicioEstadia": "5/6/2016",
+      "fechaTerminacionEstadia": "1/5/2018",
+      "cancelado": false
+    },
+    {
+      "precio": 85,
+      "fechaInicioEstadia": "11/29/2016",
+      "fechaTerminacionEstadia": "12/8/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 80,
+      "fechaInicioEstadia": "7/17/2016",
+      "fechaTerminacionEstadia": "10/22/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 14,
+  "nombre": "Joan Cox",
+  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "contrasena": "xyRiUHt",
+  "correoElectronico": "jcoxd@webmd.com",
+  "tipoDocumento": "Vila Nova de Gaia",
+  "numeroDocumento": "3535103715629150",
+  "direccion": "5 Shoshone Point",
+  "telefono": "351-(121)639-5730",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Jiujie",
+      "direccion": "7107 Dexter Drive",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 86,
+          "descripcion": "Adaptive actuating middleware"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 61,
+          "descripcion": "Monitored value-added Graphical User Interface"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 56,
+          "descripcion": "De-engineered stable workforce"
+        },
+        {
+          "id": 4,
+          "area": 10,
+          "valorAlquiler": 50,
+          "descripcion": "Decentralized national productivity"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 98,
+      "fechaInicioEstadia": "1/20/2017",
+      "fechaTerminacionEstadia": "8/13/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 82,
+      "fechaInicioEstadia": "11/5/2016",
+      "fechaTerminacionEstadia": "11/27/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 97,
+      "fechaInicioEstadia": "5/1/2016",
+      "fechaTerminacionEstadia": "11/2/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 56,
+      "fechaInicioEstadia": "8/23/2016",
+      "fechaTerminacionEstadia": "6/4/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 67,
+      "fechaInicioEstadia": "11/6/2016",
+      "fechaTerminacionEstadia": "12/22/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 15,
+  "nombre": "Eric Gomez",
+  "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+  "contrasena": "qVVQtzoKMYR",
+  "correoElectronico": "egomeze@mayoclinic.com",
+  "tipoDocumento": "Vlycháda",
+  "numeroDocumento": "3544001403784114",
+  "direccion": "0568 Milwaukee Plaza",
+  "telefono": "30-(753)669-7663",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Wuma",
+      "direccion": "6212 Lighthouse Bay Trail",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 7,
+          "valorAlquiler": 50,
+          "descripcion": "Open-source needs-based moderator"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 86,
+          "descripcion": "Managed uniform flexibility"
+        },
+        {
+          "id": 3,
+          "area": 7,
+          "valorAlquiler": 67,
+          "descripcion": "Synergistic contextually-based software"
+        },
+        {
+          "id": 4,
+          "area": 9,
+          "valorAlquiler": 92,
+          "descripcion": "Networked user-facing forecast"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Limboto",
+      "direccion": "433 American Ash Crossing",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 86,
+          "descripcion": "Customizable system-worthy customer loyalty"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 59,
+          "descripcion": "Vision-oriented clear-thinking access"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 83,
+          "descripcion": "Organized full-range implementation"
+        },
+        {
+          "id": 4,
+          "area": 3,
+          "valorAlquiler": 74,
+          "descripcion": "Decentralized exuding portal"
+        },
+        {
+          "id": 5,
+          "area": 3,
+          "valorAlquiler": 66,
+          "descripcion": "Seamless web-enabled time-frame"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Além Paraíba",
+      "direccion": "58199 Monument Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 67,
+          "descripcion": "Compatible maximized website"
+        },
+        {
+          "id": 2,
+          "area": 7,
+          "valorAlquiler": 73,
+          "descripcion": "Polarised solution-oriented project"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 61,
+      "fechaInicioEstadia": "11/29/2016",
+      "fechaTerminacionEstadia": "2/11/2018",
+      "cancelado": false
+    },
+    {
+      "precio": 63,
+      "fechaInicioEstadia": "8/29/2016",
+      "fechaTerminacionEstadia": "11/12/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 83,
+      "fechaInicioEstadia": "4/7/2016",
+      "fechaTerminacionEstadia": "4/13/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 91,
+      "fechaInicioEstadia": "8/28/2016",
+      "fechaTerminacionEstadia": "7/11/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 77,
+      "fechaInicioEstadia": "8/26/2016",
+      "fechaTerminacionEstadia": "9/5/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 16,
+  "nombre": "Wayne Bell",
+  "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+  "contrasena": "qik8XktrjTM",
+  "correoElectronico": "wbellf@fc2.com",
+  "tipoDocumento": "Bromma",
+  "numeroDocumento": "3548889783969057",
+  "direccion": "5 Cottonwood Place",
+  "telefono": "46-(184)749-8607",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Katsuura",
+      "direccion": "2 Holmberg Center",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 7,
+          "valorAlquiler": 59,
+          "descripcion": "Synchronised logistical data-warehouse"
+        },
+        {
+          "id": 2,
+          "area": 10,
+          "valorAlquiler": 76,
+          "descripcion": "Networked real-time leverage"
+        },
+        {
+          "id": 3,
+          "area": 5,
+          "valorAlquiler": 74,
+          "descripcion": "Re-engineered secondary Graphical User Interface"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Melun",
+      "direccion": "7 Londonderry Lane",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 55,
+          "descripcion": "Intuitive non-volatile attitude"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 63,
+          "descripcion": "Re-contextualized scalable protocol"
+        },
+        {
+          "id": 3,
+          "area": 7,
+          "valorAlquiler": 53,
+          "descripcion": "Synergized 6th generation firmware"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Agra",
+      "direccion": "57 Killdeer Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 9,
+          "valorAlquiler": 71,
+          "descripcion": "Expanded zero administration strategy"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 69,
+          "descripcion": "Decentralized holistic conglomeration"
+        },
+        {
+          "id": 3,
+          "area": 1,
+          "valorAlquiler": 72,
+          "descripcion": "Versatile high-level migration"
+        },
+        {
+          "id": 4,
+          "area": 8,
+          "valorAlquiler": 76,
+          "descripcion": "Down-sized object-oriented structure"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Inashiki",
+      "direccion": "6446 Pierstorff Crossing",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 1,
+          "valorAlquiler": 58,
+          "descripcion": "Phased empowering knowledge user"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 69,
+          "descripcion": "Configurable secondary contingency"
+        },
+        {
+          "id": 3,
+          "area": 10,
+          "valorAlquiler": 94,
+          "descripcion": "Managed composite internet solution"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 94,
+      "fechaInicioEstadia": "2/1/2017",
+      "fechaTerminacionEstadia": "5/7/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 17,
+  "nombre": "Brenda Nelson",
+  "imagen": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+  "contrasena": "q2Zxg97om",
+  "correoElectronico": "bnelsong@gnu.org",
+  "tipoDocumento": "Kozloduy",
+  "numeroDocumento": "3539282731741466",
+  "direccion": "7791 Pleasure Way",
+  "telefono": "359-(695)527-1669",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Al Marsá",
+      "direccion": "997 Cascade Junction",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 70,
+          "descripcion": "Distributed system-worthy analyzer"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 91,
+          "descripcion": "Networked transitional artificial intelligence"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 97,
+          "descripcion": "Expanded disintermediate encryption"
+        },
+        {
+          "id": 4,
+          "area": 6,
+          "valorAlquiler": 88,
+          "descripcion": "Customizable composite project"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Ra-ngae",
+      "direccion": "0962 Drewry Center",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 7,
+          "valorAlquiler": 97,
+          "descripcion": "Sharable local service-desk"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 52,
+          "descripcion": "Object-based encompassing knowledge user"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Morales",
+      "direccion": "1 Washington Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 52,
+          "descripcion": "Down-sized multimedia moratorium"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 59,
+      "fechaInicioEstadia": "11/27/2016",
+      "fechaTerminacionEstadia": "10/4/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 61,
+      "fechaInicioEstadia": "11/18/2016",
+      "fechaTerminacionEstadia": "1/6/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 90,
+      "fechaInicioEstadia": "3/9/2017",
+      "fechaTerminacionEstadia": "9/17/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 90,
+      "fechaInicioEstadia": "7/5/2016",
+      "fechaTerminacionEstadia": "1/20/2018",
+      "cancelado": false
+    },
+    {
+      "precio": 52,
+      "fechaInicioEstadia": "7/16/2016",
+      "fechaTerminacionEstadia": "12/2/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 18,
+  "nombre": "Jessica Austin",
+  "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+  "contrasena": "9r0PS1FON",
+  "correoElectronico": "jaustinh@icq.com",
+  "tipoDocumento": "Zeqin",
+  "numeroDocumento": "3555837797821434",
+  "direccion": "28 Buena Vista Parkway",
+  "telefono": "86-(916)715-1782",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Cansolungon",
+      "direccion": "91127 Tony Court",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 9,
+          "valorAlquiler": 98,
+          "descripcion": "Face to face heuristic forecast"
+        },
+        {
+          "id": 2,
+          "area": 2,
+          "valorAlquiler": 52,
+          "descripcion": "Fully-configurable asymmetric orchestration"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Aberdeen",
+      "direccion": "849 Center Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 97,
+          "descripcion": "Intuitive uniform knowledge base"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 83,
+          "descripcion": "Self-enabling asymmetric customer loyalty"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Morawica",
+      "direccion": "568 Pierstorff Avenue",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 1,
+          "valorAlquiler": 87,
+          "descripcion": "Devolved intangible standardization"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 75,
+          "descripcion": "Universal national challenge"
+        },
+        {
+          "id": 3,
+          "area": 3,
+          "valorAlquiler": 68,
+          "descripcion": "Open-source encompassing product"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Al Fukhkhārī",
+      "direccion": "35987 Cambridge Plaza",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 4,
+          "valorAlquiler": 83,
+          "descripcion": "Advanced upward-trending conglomeration"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 62,
+          "descripcion": "Managed zero defect data-warehouse"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 59,
+      "fechaInicioEstadia": "10/13/2016",
+      "fechaTerminacionEstadia": "9/19/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 52,
+      "fechaInicioEstadia": "2/12/2017",
+      "fechaTerminacionEstadia": "2/22/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 76,
+      "fechaInicioEstadia": "5/7/2016",
+      "fechaTerminacionEstadia": "6/30/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 88,
+      "fechaInicioEstadia": "2/17/2017",
+      "fechaTerminacionEstadia": "6/2/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 66,
+      "fechaInicioEstadia": "8/23/2016",
+      "fechaTerminacionEstadia": "8/19/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 19,
+  "nombre": "Evelyn Bryant",
+  "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+  "contrasena": "MZwM8KDNgpD",
+  "correoElectronico": "ebryanti@nydailynews.com",
+  "tipoDocumento": "Iwatsuki",
+  "numeroDocumento": "3542691885373840",
+  "direccion": "531 Aberg Road",
+  "telefono": "81-(680)106-5056",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Néa Ankhíalos",
+      "direccion": "49 Golf Pass",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 100,
+          "descripcion": "Reduced optimal moderator"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 60,
+          "descripcion": "Profound high-level installation"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Emiliano Zapata",
+      "direccion": "0837 Havey Terrace",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 55,
+          "descripcion": "Reduced modular capacity"
+        },
+        {
+          "id": 2,
+          "area": 10,
+          "valorAlquiler": 72,
+          "descripcion": "Polarised fresh-thinking groupware"
+        },
+        {
+          "id": 3,
+          "area": 4,
+          "valorAlquiler": 62,
+          "descripcion": "Switchable bi-directional core"
+        },
+        {
+          "id": 4,
+          "area": 8,
+          "valorAlquiler": 56,
+          "descripcion": "Monitored well-modulated hub"
+        },
+        {
+          "id": 5,
+          "area": 4,
+          "valorAlquiler": 94,
+          "descripcion": "Inverse client-driven strategy"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 91,
+      "fechaInicioEstadia": "3/27/2017",
+      "fechaTerminacionEstadia": "8/27/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 92,
+      "fechaInicioEstadia": "10/6/2016",
+      "fechaTerminacionEstadia": "7/3/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 61,
+      "fechaInicioEstadia": "11/21/2016",
+      "fechaTerminacionEstadia": "10/29/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 20,
+  "nombre": "Alan Turner",
+  "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+  "contrasena": "Uz2tsWRtKL",
+  "correoElectronico": "aturnerj@jalbum.net",
+  "tipoDocumento": "Xindian",
+  "numeroDocumento": "3580953075327538",
+  "direccion": "1250 Colorado Park",
+  "telefono": "86-(675)842-0376",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Pancanagara",
+      "direccion": "8294 Blue Bill Park Pass",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 62,
+          "descripcion": "Self-enabling asynchronous algorithm"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Katur",
+      "direccion": "79 Dawn Drive",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 98,
+          "descripcion": "Diverse zero defect throughput"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 62,
+          "descripcion": "Proactive optimal data-warehouse"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Zdovbytsya",
+      "direccion": "1638 Dexter Road",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 84,
+          "descripcion": "Sharable intangible hierarchy"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 51,
+          "descripcion": "Visionary next generation initiative"
+        },
+        {
+          "id": 3,
+          "area": 9,
+          "valorAlquiler": 55,
+          "descripcion": "Programmable 6th generation model"
+        },
+        {
+          "id": 4,
+          "area": 10,
+          "valorAlquiler": 98,
+          "descripcion": "Ameliorated transitional conglomeration"
+        },
+        {
+          "id": 5,
+          "area": 1,
+          "valorAlquiler": 82,
+          "descripcion": "Enhanced tertiary workforce"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Tres Isletas",
+      "direccion": "68467 Debs Way",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 86,
+          "descripcion": "Operative heuristic product"
+        },
+        {
+          "id": 2,
+          "area": 4,
+          "valorAlquiler": 51,
+          "descripcion": "Focused dynamic service-desk"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 57,
+          "descripcion": "Virtual well-modulated projection"
+        },
+        {
+          "id": 4,
+          "area": 5,
+          "valorAlquiler": 83,
+          "descripcion": "Ameliorated responsive implementation"
+        },
+        {
+          "id": 5,
+          "area": 1,
+          "valorAlquiler": 98,
+          "descripcion": "Multi-channelled full-range collaboration"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "ciudad": "Klonowa",
+      "direccion": "423 Mallard Crossing",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 63,
+          "descripcion": "Centralized solution-oriented project"
+        },
+        {
+          "id": 2,
+          "area": 4,
+          "valorAlquiler": 60,
+          "descripcion": "Switchable impactful alliance"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 54,
+          "descripcion": "Front-line directional matrix"
+        },
+        {
+          "id": 4,
+          "area": 7,
+          "valorAlquiler": 66,
+          "descripcion": "Grass-roots asynchronous initiative"
+        },
+        {
+          "id": 5,
+          "area": 8,
+          "valorAlquiler": 50,
+          "descripcion": "Fundamental solution-oriented hub"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 67,
+      "fechaInicioEstadia": "5/13/2016",
+      "fechaTerminacionEstadia": "11/2/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 72,
+      "fechaInicioEstadia": "1/20/2017",
+      "fechaTerminacionEstadia": "5/6/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 77,
+      "fechaInicioEstadia": "6/5/2016",
+      "fechaTerminacionEstadia": "3/20/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 97,
+      "fechaInicioEstadia": "7/14/2016",
+      "fechaTerminacionEstadia": "1/15/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 50,
+      "fechaInicioEstadia": "6/29/2016",
+      "fechaTerminacionEstadia": "9/5/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 21,
+  "nombre": "Eugene Howard",
+  "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+  "contrasena": "sl94kCFIWsC",
+  "correoElectronico": "ehowardk@ask.com",
+  "tipoDocumento": "Seaforth",
+  "numeroDocumento": "5610284664526556",
+  "direccion": "68 Melrose Drive",
+  "telefono": "1-(110)850-6128",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Pensilvania",
+      "direccion": "8272 Kennedy Hill",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 6,
+          "valorAlquiler": 56,
+          "descripcion": "Distributed upward-trending infrastructure"
+        },
+        {
+          "id": 2,
+          "area": 3,
+          "valorAlquiler": 59,
+          "descripcion": "Object-based 6th generation internet solution"
+        },
+        {
+          "id": 3,
+          "area": 4,
+          "valorAlquiler": 80,
+          "descripcion": "Implemented methodical protocol"
+        },
+        {
+          "id": 4,
+          "area": 3,
+          "valorAlquiler": 87,
+          "descripcion": "Profit-focused composite capacity"
+        },
+        {
+          "id": 5,
+          "area": 1,
+          "valorAlquiler": 84,
+          "descripcion": "Operative disintermediate throughput"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Huangdi",
+      "direccion": "317 Crownhardt Place",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 83,
+          "descripcion": "Vision-oriented zero tolerance structure"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 96,
+          "descripcion": "Synergistic incremental synergy"
+        },
+        {
+          "id": 3,
+          "area": 5,
+          "valorAlquiler": 85,
+          "descripcion": "Automated dynamic interface"
+        },
+        {
+          "id": 4,
+          "area": 2,
+          "valorAlquiler": 87,
+          "descripcion": "Total full-range data-warehouse"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 90,
+      "fechaInicioEstadia": "11/14/2016",
+      "fechaTerminacionEstadia": "2/9/2018",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 22,
+  "nombre": "Shawn Phillips",
+  "imagen": "http://dummyimage.com/300x300.jpg/dddddd/000000",
+  "contrasena": "lt9D6t6Vg",
+  "correoElectronico": "sphillipsl@scientificamerican.com",
+  "tipoDocumento": "Az Zuwaytīnah",
+  "numeroDocumento": "3530595509159259",
+  "direccion": "4696 Westport Point",
+  "telefono": "218-(308)431-9821",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Yamango",
+      "direccion": "4707 Utah Pass",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 7,
+          "valorAlquiler": 72,
+          "descripcion": "Down-sized analyzing info-mediaries"
+        },
+        {
+          "id": 2,
+          "area": 9,
+          "valorAlquiler": 90,
+          "descripcion": "Streamlined global emulation"
+        },
+        {
+          "id": 3,
+          "area": 1,
+          "valorAlquiler": 82,
+          "descripcion": "Polarised scalable workforce"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Hilversum",
+      "direccion": "272 Warrior Terrace",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 6,
+          "valorAlquiler": 93,
+          "descripcion": "Intuitive contextually-based paradigm"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 88,
+      "fechaInicioEstadia": "2/15/2017",
+      "fechaTerminacionEstadia": "5/26/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 63,
+      "fechaInicioEstadia": "6/10/2016",
+      "fechaTerminacionEstadia": "8/14/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 66,
+      "fechaInicioEstadia": "3/21/2017",
+      "fechaTerminacionEstadia": "4/28/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 23,
+  "nombre": "Kenneth Cooper",
+  "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+  "contrasena": "EUy9WW6",
+  "correoElectronico": "kcooperm@seesaa.net",
+  "tipoDocumento": "Nansan",
+  "numeroDocumento": "3535085622535283",
+  "direccion": "7848 Cottonwood Terrace",
+  "telefono": "86-(869)240-3260",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Mendoza",
+      "direccion": "1 Ohio Crossing",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 5,
+          "valorAlquiler": 88,
+          "descripcion": "Progressive bi-directional matrices"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 67,
+          "descripcion": "Streamlined heuristic collaboration"
+        },
+        {
+          "id": 3,
+          "area": 9,
+          "valorAlquiler": 94,
+          "descripcion": "Synergistic encompassing success"
+        },
+        {
+          "id": 4,
+          "area": 1,
+          "valorAlquiler": 78,
+          "descripcion": "Persistent uniform infrastructure"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 95,
+      "fechaInicioEstadia": "11/24/2016",
+      "fechaTerminacionEstadia": "11/8/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 24,
+  "nombre": "Gary Hart",
+  "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+  "contrasena": "CSFNt5Hr8ah",
+  "correoElectronico": "ghartn@example.com",
+  "tipoDocumento": "Koncang",
+  "numeroDocumento": "3534700572141103",
+  "direccion": "7 Mallory Lane",
+  "telefono": "62-(146)769-6566",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Qalyūb",
+      "direccion": "6 Ryan Center",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 95,
+          "descripcion": "Front-line multi-state support"
+        },
+        {
+          "id": 2,
+          "area": 3,
+          "valorAlquiler": 82,
+          "descripcion": "Multi-channelled system-worthy matrices"
+        },
+        {
+          "id": 3,
+          "area": 8,
+          "valorAlquiler": 84,
+          "descripcion": "Total stable process improvement"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 53,
+      "fechaInicioEstadia": "12/31/2016",
+      "fechaTerminacionEstadia": "7/30/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 93,
+      "fechaInicioEstadia": "5/30/2016",
+      "fechaTerminacionEstadia": "8/28/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 67,
+      "fechaInicioEstadia": "4/30/2016",
+      "fechaTerminacionEstadia": "12/28/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 82,
+      "fechaInicioEstadia": "11/16/2016",
+      "fechaTerminacionEstadia": "10/4/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 25,
+  "nombre": "Scott Fernandez",
+  "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+  "contrasena": "G87Kuvy9cEh1",
+  "correoElectronico": "sfernandezo@soup.io",
+  "tipoDocumento": "Granja",
+  "numeroDocumento": "5436978327776555",
+  "direccion": "80192 Gale Center",
+  "telefono": "351-(922)755-3814",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Baranti",
+      "direccion": "1 Leroy Crossing",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 69,
+          "descripcion": "Face to face hybrid system engine"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 66,
+          "descripcion": "Grass-roots 5th generation local area network"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 81,
+      "fechaInicioEstadia": "12/12/2016",
+      "fechaTerminacionEstadia": "9/7/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 65,
+      "fechaInicioEstadia": "5/24/2016",
+      "fechaTerminacionEstadia": "9/11/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 69,
+      "fechaInicioEstadia": "1/24/2017",
+      "fechaTerminacionEstadia": "5/21/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 57,
+      "fechaInicioEstadia": "10/29/2016",
+      "fechaTerminacionEstadia": "8/11/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 26,
+  "nombre": "Deborah Ramos",
+  "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+  "contrasena": "ga8zMN6VutCa",
+  "correoElectronico": "dramosp@bigcartel.com",
+  "tipoDocumento": "Qiaojia",
+  "numeroDocumento": "5602224770304829",
+  "direccion": "07667 Golden Leaf Avenue",
+  "telefono": "86-(387)240-6780",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Český Těšín",
+      "direccion": "8 Dexter Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 6,
+          "valorAlquiler": 76,
+          "descripcion": "Automated background internet solution"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 64,
+          "descripcion": "Ergonomic demand-driven contingency"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 67,
+          "descripcion": "Versatile heuristic analyzer"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 67,
+      "fechaInicioEstadia": "12/24/2016",
+      "fechaTerminacionEstadia": "6/19/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 27,
+  "nombre": "Shawn Carr",
+  "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+  "contrasena": "hqeRzjlag",
+  "correoElectronico": "scarrq@ucoz.com",
+  "tipoDocumento": "Nyapar",
+  "numeroDocumento": "3539028470837001",
+  "direccion": "47 Nevada Avenue",
+  "telefono": "62-(659)189-9250",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Kopral",
+      "direccion": "80145 3rd Plaza",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 4,
+          "valorAlquiler": 68,
+          "descripcion": "Stand-alone object-oriented approach"
+        },
+        {
+          "id": 2,
+          "area": 2,
+          "valorAlquiler": 85,
+          "descripcion": "Pre-emptive interactive protocol"
+        },
+        {
+          "id": 3,
+          "area": 6,
+          "valorAlquiler": 78,
+          "descripcion": "Monitored empowering conglomeration"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Jeponkrajan",
+      "direccion": "62 Utah Alley",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 85,
+          "descripcion": "Sharable client-driven service-desk"
+        },
+        {
+          "id": 2,
+          "area": 7,
+          "valorAlquiler": 74,
+          "descripcion": "Exclusive explicit toolset"
+        },
+        {
+          "id": 3,
+          "area": 3,
+          "valorAlquiler": 74,
+          "descripcion": "Distributed motivating flexibility"
+        },
+        {
+          "id": 4,
+          "area": 5,
+          "valorAlquiler": 74,
+          "descripcion": "Enhanced value-added architecture"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Ocumare del Tuy",
+      "direccion": "9220 Kedzie Avenue",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 95,
+          "descripcion": "Synergistic empowering flexibility"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Paris 18",
+      "direccion": "063 Fairfield Plaza",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 1,
+          "valorAlquiler": 90,
+          "descripcion": "Customer-focused client-driven projection"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 67,
+      "fechaInicioEstadia": "11/22/2016",
+      "fechaTerminacionEstadia": "5/13/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 99,
+      "fechaInicioEstadia": "6/12/2016",
+      "fechaTerminacionEstadia": "1/28/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 84,
+      "fechaInicioEstadia": "12/9/2016",
+      "fechaTerminacionEstadia": "11/7/2017",
+      "cancelado": false
+    }
+  ]
+}, {
+  "idUsuario": 28,
+  "nombre": "Shawn Mills",
+  "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+  "contrasena": "ky6wRLnpp",
+  "correoElectronico": "smillsr@loc.gov",
+  "tipoDocumento": "Roma",
+  "numeroDocumento": "3565999898740208",
+  "direccion": "54404 Muir Crossing",
+  "telefono": "39-(865)239-3992",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Limbangan",
+      "direccion": "79 Oxford Court",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 7,
+          "valorAlquiler": 51,
+          "descripcion": "Enhanced hybrid database"
+        },
+        {
+          "id": 2,
+          "area": 8,
+          "valorAlquiler": 66,
+          "descripcion": "Progressive attitude-oriented help-desk"
+        },
+        {
+          "id": 3,
+          "area": 10,
+          "valorAlquiler": 86,
+          "descripcion": "Upgradable zero tolerance support"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Gununglajang",
+      "direccion": "5 Darwin Court",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 86,
+          "descripcion": "Ergonomic system-worthy knowledge user"
+        },
+        {
+          "id": 2,
+          "area": 2,
+          "valorAlquiler": 82,
+          "descripcion": "Customizable 4th generation open system"
+        },
+        {
+          "id": 3,
+          "area": 9,
+          "valorAlquiler": 87,
+          "descripcion": "Re-contextualized content-based collaboration"
+        },
+        {
+          "id": 4,
+          "area": 3,
+          "valorAlquiler": 71,
+          "descripcion": "Upgradable well-modulated hierarchy"
+        },
+        {
+          "id": 5,
+          "area": 8,
+          "valorAlquiler": 80,
+          "descripcion": "Decentralized clear-thinking intranet"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Valinhos",
+      "direccion": "90303 Linden Junction",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 9,
+          "valorAlquiler": 89,
+          "descripcion": "Cloned maximized open system"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 62,
+          "descripcion": "Fundamental maximized intranet"
+        },
+        {
+          "id": 3,
+          "area": 4,
+          "valorAlquiler": 84,
+          "descripcion": "Multi-lateral non-volatile hub"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Imġarr",
+      "direccion": "413 Armistice Point",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 1,
+          "valorAlquiler": 86,
+          "descripcion": "Front-line fresh-thinking array"
+        },
+        {
+          "id": 2,
+          "area": 7,
+          "valorAlquiler": 98,
+          "descripcion": "Automated coherent secured line"
+        },
+        {
+          "id": 3,
+          "area": 1,
+          "valorAlquiler": 63,
+          "descripcion": "Enhanced client-driven moderator"
+        },
+        {
+          "id": 4,
+          "area": 3,
+          "valorAlquiler": 95,
+          "descripcion": "Open-source non-volatile open architecture"
+        },
+        {
+          "id": 5,
+          "area": 3,
+          "valorAlquiler": 74,
+          "descripcion": "Sharable coherent firmware"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "ciudad": "Saint Louis",
+      "direccion": "4 Nelson Pass",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 64,
+          "descripcion": "Total reciprocal array"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 96,
+      "fechaInicioEstadia": "11/23/2016",
+      "fechaTerminacionEstadia": "8/11/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 93,
+      "fechaInicioEstadia": "11/18/2016",
+      "fechaTerminacionEstadia": "7/27/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 99,
+      "fechaInicioEstadia": "10/18/2016",
+      "fechaTerminacionEstadia": "1/12/2018",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 29,
+  "nombre": "Mark Fowler",
+  "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+  "contrasena": "feziYWjf8W",
+  "correoElectronico": "mfowlers@altervista.org",
+  "tipoDocumento": "Umingan",
+  "numeroDocumento": "5602233147685470524",
+  "direccion": "024 Saint Paul Street",
+  "telefono": "63-(177)513-5574",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Seremban",
+      "direccion": "3 David Park",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 3,
+          "valorAlquiler": 67,
+          "descripcion": "Reduced discrete open system"
+        },
+        {
+          "id": 2,
+          "area": 1,
+          "valorAlquiler": 70,
+          "descripcion": "Integrated dedicated artificial intelligence"
+        },
+        {
+          "id": 3,
+          "area": 7,
+          "valorAlquiler": 89,
+          "descripcion": "Reactive even-keeled website"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Minzheng",
+      "direccion": "2303 Crowley Center",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 7,
+          "valorAlquiler": 84,
+          "descripcion": "Business-focused systematic throughput"
+        },
+        {
+          "id": 2,
+          "area": 7,
+          "valorAlquiler": 67,
+          "descripcion": "Realigned optimizing support"
+        },
+        {
+          "id": 3,
+          "area": 8,
+          "valorAlquiler": 60,
+          "descripcion": "Organic neutral algorithm"
+        },
+        {
+          "id": 4,
+          "area": 3,
+          "valorAlquiler": 53,
+          "descripcion": "Optimized exuding interface"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Bunder",
+      "direccion": "7 East Circle",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 2,
+          "valorAlquiler": 59,
+          "descripcion": "Multi-channelled 5th generation help-desk"
+        },
+        {
+          "id": 2,
+          "area": 10,
+          "valorAlquiler": 57,
+          "descripcion": "User-friendly dedicated collaboration"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ciudad": "Al Quţayfah",
+      "direccion": "74 Mitchell Park",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 9,
+          "valorAlquiler": 55,
+          "descripcion": "Multi-tiered human-resource analyzer"
+        },
+        {
+          "id": 2,
+          "area": 10,
+          "valorAlquiler": 85,
+          "descripcion": "Synergized heuristic installation"
+        },
+        {
+          "id": 3,
+          "area": 2,
+          "valorAlquiler": 97,
+          "descripcion": "Team-oriented multimedia process improvement"
+        },
+        {
+          "id": 4,
+          "area": 2,
+          "valorAlquiler": 63,
+          "descripcion": "Fundamental intermediate moratorium"
+        },
+        {
+          "id": 5,
+          "area": 9,
+          "valorAlquiler": 75,
+          "descripcion": "Operative optimal task-force"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 99,
+      "fechaInicioEstadia": "8/10/2016",
+      "fechaTerminacionEstadia": "5/10/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 98,
+      "fechaInicioEstadia": "11/28/2016",
+      "fechaTerminacionEstadia": "8/28/2017",
+      "cancelado": true
+    },
+    {
+      "precio": 94,
+      "fechaInicioEstadia": "6/14/2016",
+      "fechaTerminacionEstadia": "10/11/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 94,
+      "fechaInicioEstadia": "5/1/2016",
+      "fechaTerminacionEstadia": "4/2/2017",
+      "cancelado": true
+    }
+  ]
+}, {
+  "idUsuario": 30,
+  "nombre": "Henry Schmidt",
+  "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+  "contrasena": "X2m64sp",
+  "correoElectronico": "hschmidtt@is.gd",
+  "tipoDocumento": "Bang Ban",
+  "numeroDocumento": "3582114600207723",
+  "direccion": "2556 Logan Drive",
+  "telefono": "66-(305)688-7015",
+  "viviendas": [
+    {
+      "id": 1,
+      "ciudad": "Bangkle",
+      "direccion": "39732 Rigney Crossing",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 10,
+          "valorAlquiler": 75,
+          "descripcion": "Progressive directional application"
+        },
+        {
+          "id": 2,
+          "area": 7,
+          "valorAlquiler": 80,
+          "descripcion": "Secured next generation alliance"
+        },
+        {
+          "id": 3,
+          "area": 7,
+          "valorAlquiler": 77,
+          "descripcion": "Mandatory radical hub"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ciudad": "Marne-la-Vallée",
+      "direccion": "7582 Jana Hill",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 70,
+          "descripcion": "Innovative dedicated migration"
+        },
+        {
+          "id": 2,
+          "area": 3,
+          "valorAlquiler": 87,
+          "descripcion": "Fully-configurable composite approach"
+        },
+        {
+          "id": 3,
+          "area": 7,
+          "valorAlquiler": 70,
+          "descripcion": "Decentralized fault-tolerant flexibility"
+        },
+        {
+          "id": 4,
+          "area": 5,
+          "valorAlquiler": 64,
+          "descripcion": "Triple-buffered user-facing encryption"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ciudad": "Västerås",
+      "direccion": "02 American Alley",
+      "habitaciones": [
+        {
+          "id": 1,
+          "area": 8,
+          "valorAlquiler": 63,
+          "descripcion": "Optional full-range portal"
+        },
+        {
+          "id": 2,
+          "area": 5,
+          "valorAlquiler": 63,
+          "descripcion": "Grass-roots demand-driven emulation"
+        }
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "precio": 64,
+      "fechaInicioEstadia": "2/11/2017",
+      "fechaTerminacionEstadia": "8/30/2017",
+      "cancelado": false
+    },
+    {
+      "precio": 75,
+      "fechaInicioEstadia": "2/28/2017",
+      "fechaTerminacionEstadia": "1/7/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 95,
+      "fechaInicioEstadia": "10/6/2016",
+      "fechaTerminacionEstadia": "2/5/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 79,
+      "fechaInicioEstadia": "12/13/2016",
+      "fechaTerminacionEstadia": "1/27/2018",
+      "cancelado": true
+    },
+    {
+      "precio": 77,
+      "fechaInicioEstadia": "11/16/2016",
+      "fechaTerminacionEstadia": "12/8/2017",
+      "cancelado": true
+    }
+  ]
+}]
