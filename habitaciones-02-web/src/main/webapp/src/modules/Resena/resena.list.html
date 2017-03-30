@@ -2,24 +2,21 @@
     <div class="row">
         <!-- booksRecords fue inicializada en el controlador del estado booksList -->
         <!-- Itera sobre cada uno de los libros en la colección booksRecords -->
-        <div class="col-sm-4 col-md-3" ng-repeat="resena in RecordsResena">
+        <div class="col-sm-3 col-md-3" ng-repeat="resena in RecordsResena">
              <!--Despliega la imagen  -->
              <div class="thumbnail">
                 <div class="caption text-center">
                     <h4>Habitacion</h4>
-                    <p>//info. habitacion//</p>
-                </div>
-                
-                 <div>
-                    <h5>Por: {{resena.viajero.nombre}}</h5>
-                 </div>
-                 
-                 <div>
-                     <h4 class="caption text-center" style="color: rgb(185,133,36)">{{resena.calificacion}} de 5 estrellas </h4>
+                    <img class="img-responsive" align="middle"  ng-src ='{{resena.habitacion.rutaImagen}}'/>
                     
+                    <div class="caption text-left">
+                    <h5>Por: {{resena.viajero.nombre}}</h5>
+                    </div>
+                    
+                    <h4 class="caption text-center" style="color: rgb(185,133,36)">{{resena.calificacion}} de 5 estrellas </h4>
                     <p class="caption text-center">{{resena.comentario}}</p>
-                 </div>
-                 
+                </div>
+
              </div>
             
         </div>
