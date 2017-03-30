@@ -2,7 +2,7 @@
   "id": 1,
   "ciudad": "Shīeli",
   "direccion": "3 Cody Junction",
-  "rutaImagent": "http://dummyimage.com/192x192.bmp/cc0000/ffffff",
+  "rutaImagen": "https://image.freepik.com/vector-gratis/feliz-excursionista-viajando-alrededor-del-mundo_23-2147556103.jpg",
   "habitacion": [
     {
       "area": 76.6,

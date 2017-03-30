@@ -4,8 +4,8 @@
         'ui.router',
         // Internal modules dependencies       
         'anfitrionModule',
-        'viajeroModule'
-        
+        'viajeroModule',
+        'viviendaModule'
     ]);
     // Resuelve problemas de las promesas
     app.config(['$qProvider', function ($qProvider) {
