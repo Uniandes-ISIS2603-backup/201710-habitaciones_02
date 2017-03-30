@@ -1,14 +1,17 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-2 col-md-2" ng-repeat="anfitrion in anfitrionesRecords">
-            
+
+
             <div class="thumbnail">
-                   <img class="img-responsive" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
-                   <div class="caption text-center">{{anfitrion.nombre}}</div>
-                   <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
-                
+                <a ui-sref="anfitrionDetail({anfitrionId: anfitrion.idUsuario})">
+                    <img class="img-responsive" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
+                    <div class="caption text-center">{{anfitrion.nombre}}</div>
+                    <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
+                </a>
+
             </div>
-            
-        
+
+
+        </div>
     </div>
-</div>
