@@ -1,5 +1,6 @@
 [{
 	"idUsuario":6,
+        "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
 	"nombre":"Roy Sanders",
 	"contrasena":"ivD4Pt",
 	"correoElectronico":"rsanders0@ow.ly",
@@ -8,11 +9,18 @@
 	"direccion":"83 Oriole Street",
 	"telefono":"86-(273)976-8194",
 	"reservas":null,
-	"resenas":null
+	"resenas":[
+                    {
+                        "id":1,
+                        "calificacion":1,
+                        "comentario":"venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat"
+                    }
+        ]
 },
 {
 	"idUsuario":7,
 	"nombre":"Ashley Johnson",
+        "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
 	"contrasena":"2mvaUZDLq37",
 	"correoElectronico":"ajohnson1@newsvine.com",
 	"tipoDocumento":"Haitian Creole",
@@ -20,11 +28,18 @@
 	"direccion":"1 Valley Edge Junction",
 	"telefono":"7-(439)995-0222",
 	"reservas":null,
-	"resenas":null
+	"resenas":[
+                    {
+                        "id":2,
+                        "calificacion":3,
+                        "comentario":"in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin"
+                    }
+        ]
 },
 {
 	"idUsuario":8,
 	"nombre":"Phillip Hawkins",
+        "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
 	"contrasena":"0EP6eZvHsa0n",
 	"correoElectronico":"phawkins2@bizjournals.com",
 	"tipoDocumento":"Punjabi",
@@ -32,11 +47,18 @@
 	"direccion":"4 Pine View Way",
 	"telefono":"48-(238)355-2603",
 	"reservas":null,
-	"resenas":null
+	"resenas":[
+                    {
+                        "id":3,
+                        "calificacion":2,
+                        "comentario":"sed magna at nunc commodo placerat praesent blandit nam nulla"
+                    }
+        ]
 },
 {
 	"idUsuario":9,
 	"nombre":"Billy Cox",
+        "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
 	"contrasena":"d903M15G",
 	"correoElectronico":"bcox3@howstuffworks.com",
 	"tipoDocumento":"Czech",
@@ -44,11 +66,18 @@
 	"direccion":"020 Novick Street",
 	"telefono":"63-(475)161-0687",
 	"reservas":null,
-	"resenas":null
+	"resenas":[
+                    {
+                        "id":4,
+                        "calificacion":4,
+                        "comentario":"nisi eu orci mauris lacinia sapien quis libero nullam sit amet"
+                    }
+        ]
 },
 {
 	"idUsuario":10,
 	"nombre":"Willie Fields",
+        "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
 	"contrasena":"Br1Fg42",
 	"correoElectronico":"wfields4@cmu.edu",
 	"tipoDocumento":"Aymara",
@@ -56,5 +85,11 @@
 	"direccion":"5619 Novick Terrace",
 	"telefono":"55-(867)914-9036",
 	"reservas":null,
-	"resenas":null
+	"resenas":[
+                    {
+                        "id":5,
+                        "calificacion":1,
+                        "comentario":"consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac"
+                    }
+        ]
 }]

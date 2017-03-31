@@ -5,8 +5,11 @@
         // Internal modules dependencies       
         'anfitrionModule',
         'viajeroModule',
+
         'habitacionModule',
-        'disponibilidadModule'
+        'disponibilidadModule',
+        'resenaModule'
+
         
     ]);
     // Resuelve problemas de las promesas
