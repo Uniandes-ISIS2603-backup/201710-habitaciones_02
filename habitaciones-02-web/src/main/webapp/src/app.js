@@ -5,11 +5,7 @@
         // Internal modules dependencies       
         'anfitrionModule',
         'viajeroModule',
-
-        'habitacionModule',
-        'disponibilidadModule',
         'resenaModule',
-        'reservaModule'
 
         
     ]);
