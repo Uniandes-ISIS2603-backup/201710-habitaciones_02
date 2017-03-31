@@ -1,21 +1,48 @@
 <div class="panel panel-default"> 
     <div class="panel-body">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="thumb">
-                    <img class="img-responsive" ng-src="{{currentViajero.imagen}}"/>
+        
+        <div class="col-md-3">
+            
+            <div class="row">
+                
+                <div class="thumbnail">
+                    <img style="width: 100%; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px;" class="img-responsive" ng-src="{{currentViajero.imagen}}" alt="{{currentViajero.nombre}}"/>
                 </div>
-
+                
             </div>
-            <div class="col-md-3">
-                <dl>     
-                    <dt>{{currentViajero.nombre}}</dt>
+            
+            <div class="row">
+                
+                <dl>
+                    <dt style="font-size: 35px ">{{currentViajero.nombre}}</dt>
                     <hr>
-                    <dt> Correo</dt>
+                    
+                    <dt>Identificacion</dt>
+                    <dd>{{currentViajero.tipoDocumento}} : {{currentViajero.numeroDocumento}}</dd>
+                    <hr />
+                    <dt>correo Electronico</dt>
                     <dd>{{currentViajero.correoElectronico}}</dd>
                     
+                    <dt>telefono</dt>
+                    <dd>{{currentViajero.telefono}}</dd>
+                    
+                    <dt>direccion</dt>
+                    <dd>{{currentViajero.direccion}}</dd>
+                    
                 </dl>
+                
             </div>
+        </div>
+        <div class="col-md-9">
+            <nav style="margin-top: -5px;border-top: none;background-color: white; border-color: #d1eeff"class="navbar navbar-default">
+                
+                <ul class="nav navbar-nav">
+                
+                    <li><a  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><b>Reservas</b></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=feA64wXhbjo"><b>Reseñas Escritas</b></a></li>
+                </ul>
+                
+            </nav>
         </div>
     </div>
 </div>
