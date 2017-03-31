@@ -5,8 +5,10 @@
         // Internal modules dependencies       
         'anfitrionModule',
         'viajeroModule',
+
         'resenaModule'
         
+      'viviendaModule'
     ]);
     // Resuelve problemas de las promesas
     app.config(['$qProvider', function ($qProvider) {
