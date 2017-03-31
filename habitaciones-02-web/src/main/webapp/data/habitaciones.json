@@ -1,7 +1,91 @@
 [{
-    "area": 45.3,
-    "descripcion": "La mejor habitacion",
-    "rutaImagen": "png",
-    "valorAlquiler": 55,
-    "capacidad": 5              
+  "area": 17.12,
+  "descripcion": "Zoonotic bact dis NEC",
+  "rutaImagen": "http://dummyimage.com/209x176.bmp/ff4444/ffffff",
+  "valorAlquiler": "$22.00",
+  "capacidad": 3
+}, {
+  "area": 46.74,
+  "descripcion": "Tooth pulp degeneration",
+  "rutaImagen": "http://dummyimage.com/117x131.bmp/ff4444/ffffff",
+  "valorAlquiler": "$28.95",
+  "capacidad": 2
+}, {
+  "area": 38.82,
+  "descripcion": "Sprain shoulder/arm NEC",
+  "rutaImagen": "http://dummyimage.com/232x240.jpg/dddddd/000000",
+  "valorAlquiler": "$12.02",
+  "capacidad": 3
+}, {
+  "area": 27.33,
+  "descripcion": "Sealpox",
+  "rutaImagen": "http://dummyimage.com/212x189.jpg/5fa2dd/ffffff",
+  "valorAlquiler": "$44.24",
+  "capacidad": 5
+}, {
+  "area": 10.27,
+  "descripcion": "Sed,hyp,anxiolyt dep-rem",
+  "rutaImagen": "http://dummyimage.com/107x231.jpg/dddddd/000000",
+  "valorAlquiler": "$19.13",
+  "capacidad": 3
+}, {
+  "area": 49.61,
+  "descripcion": "Dis external ear NOS",
+  "rutaImagen": "http://dummyimage.com/231x116.bmp/dddddd/000000",
+  "valorAlquiler": "$24.77",
+  "capacidad": 10
+}, {
+  "area": 14.94,
+  "descripcion": "TB pneumothorax-no exam",
+  "rutaImagen": "http://dummyimage.com/120x100.png/ff4444/ffffff",
+  "valorAlquiler": "$12.81",
+  "capacidad": 10
+}, {
+  "area": 34.16,
+  "descripcion": "Large cell lymph spleen",
+  "rutaImagen": "http://dummyimage.com/162x229.png/dddddd/000000",
+  "valorAlquiler": "$34.62",
+  "capacidad": 7
+}, {
+  "area": 23.08,
+  "descripcion": "Crushing injury finger",
+  "rutaImagen": "http://dummyimage.com/205x116.jpg/ff4444/ffffff",
+  "valorAlquiler": "$35.48",
+  "capacidad": 4
+}, {
+  "area": 41.98,
+  "descripcion": "Heart disease NOS",
+  "rutaImagen": "http://dummyimage.com/158x223.bmp/5fa2dd/ffffff",
+  "valorAlquiler": "$16.88",
+  "capacidad": 5
+}, {
+  "area": 24.13,
+  "descripcion": "Prsnl hst peptic ulcr ds",
+  "rutaImagen": "http://dummyimage.com/246x172.jpg/dddddd/000000",
+  "valorAlquiler": "$11.65",
+  "capacidad": 5
+}, {
+  "area": 48.4,
+  "descripcion": "Acc pois-phosph pesticid",
+  "rutaImagen": "http://dummyimage.com/169x119.png/cc0000/ffffff",
+  "valorAlquiler": "$21.39",
+  "capacidad": 7
+}, {
+  "area": 12.45,
+  "descripcion": "Lactat dis NOS-antepart",
+  "rutaImagen": "http://dummyimage.com/153x227.bmp/ff4444/ffffff",
+  "valorAlquiler": "$44.99",
+  "capacidad": 8
+}, {
+  "area": 33.29,
+  "descripcion": "2nd deg burn chin",
+  "rutaImagen": "http://dummyimage.com/125x199.bmp/cc0000/ffffff",
+  "valorAlquiler": "$49.90",
+  "capacidad": 2
+}, {
+  "area": 11.95,
+  "descripcion": "Chr mono leuk in relapse",
+  "rutaImagen": "http://dummyimage.com/140x241.bmp/cc0000/ffffff",
+  "valorAlquiler": "$41.08",
+  "capacidad": 2
 }]

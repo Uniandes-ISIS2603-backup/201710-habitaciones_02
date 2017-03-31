@@ -1,0 +1,30 @@
+<div class="panel panel-default"> 
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumb">
+                    <img class="img-responsive" ng-src="{{currentHabitacion.rutaImagen}}"/>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <dl>     
+                    <dt>{{currentHabitacion.name}}</dt>
+                    <ul ng-repeat="disponibilidades in currentHabitacion.disponibilidades">
+                        <li>{{disponibilidades.fechaInicioEstadia}}</li>
+                    </ul>
+                    <dt> Area</dt>
+                    <dd>{{currentHabitacion.area}}</dd>
+                    <hr>
+                    <dt>Capacidad</dt>
+                    <dd>{{currentHabitacion.capacidad}}</dd>
+                    <hr>
+                    <dt class="bold">Valor Alquiler</dt>
+                    <dd>{{currentHabitacion.valorAlquiler}}</dd>
+                    <hr>
+                    <dt class="bold">Descripcion</dt>
+                    <dd>{{currentHabitacion.descripcion}}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

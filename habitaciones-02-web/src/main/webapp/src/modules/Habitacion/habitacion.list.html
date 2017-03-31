@@ -4,15 +4,19 @@
         <!-- Itera sobre cada uno de las habitaciones en la colección habitacionesRecords -->
         <div class="col-sm-4 col-md-3" ng-repeat="habitacion in habitacionesRecords">
              <!--Despliega la imagen  -->
-            <div class="habitaciones">
-                 <!-- Despliega en el caption la informacion de la habitacion -->
-                 <!-- <h3>{{viajero.nombre}}</h3> -->
-                 
+            <div class="thumbnail">
+                
+                 <style scoped>
+                    img{
+                         width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                    }
+                     </style>
+                     <img class="img-responsive" ng-src='{{habitacion.rutaImagen}}'/>
+                     
                  <div class="caption text-center">
-                     <h4>Informacion Habitacion</h4>
+                     <h4>Información Habitación</h4>
                      <p>{{habitacion.area}}</p>
                      <p>{{habitacion.descripcion}}</p>
-                     <p>{{habitacion.rutaImagen}}</p>
                      <p>{{habitacion.valorAlquiler}}</p>
                      <p>{{habitacion.capacidad}}</p>
                  </div>

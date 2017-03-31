@@ -9,9 +9,10 @@
             // Mostrar la lista de habitaciones será el estado por defecto del módulo
             $urlRouterProvider.otherwise("/habitacionesList");
             // Definición del estado 'habitacionesList' donde se listan las habitaciones
-            $stateProvider.state('habitacionesList', {
+            $stateProvider.state('habitaciones', {
                 // Url que aparecerá en el browser
-                url: '/habitaciones/list',
+                url: '/habitaciones',
+                abstract: true,
                 // Se define una variable habitaciones (del estado) que toma por valor 
                 // la colección de habitaciones que obtiene utilizando $http.get 
                  resolve: {
@@ -19,13 +20,41 @@
                             return $http.get('data/habitaciones.json'); // $http retorna una promesa que aquí no se está manejando si viene con error.
                         }]
                 },
-                // Template que se utilizara para ejecutar el estado
-                templateUrl: basePath + 'habitacion.list.html',
-                // El controlador guarda en el scope en la variable habitacionesRecords los datos que trajo el resolve
-                // habitacionesRecords será visible en el template
-                controller: ['$scope', 'habitaciones', function ($scope, habitaciones) {
-                        $scope.habitacionesRecords = habitaciones.data;
-                    }]              
+                views: {
+                    'mainView': {
+                        templateUrl: basePath + 'habitacion.html',
+                        controller: ['$scope', 'habitaciones', function ($scope, habitaciones) {
+                                $scope.habitacionesRecords = habitaciones.data;
+                            }]
+                    }
+                }
+            }).state('habitacionesList', {
+                url: '/list',
+                parent: 'habitaciones',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'habitacion.list.html'
+                    }
+                }
+            }).state('habitacionDetail', {
+                url: '/{habitacionId:int}/detail',
+                parent: 'habitaciones',
+                param: {
+                    habitacionId: null
+                },
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'habitacion.list.html'
+                    },
+                    'detailView': {
+                        templateUrl: basePath + 'habitacion.detail.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentHabitacion = $scope.habitacionesRecords[$params.habitacionId-1];
+                            }]
+                    }
+
+                }
+           
             });
         }
     ]);

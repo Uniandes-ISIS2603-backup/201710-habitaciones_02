@@ -11,8 +11,12 @@
                  
                  <div class="caption text-center">
                      
-                     <h4>Informacion Fechas Diaponibilidad</h4>
+                     <a ui-sref="anfitrionDetail({anfitrionId: anfitrion.idUsuario})">
+                    <img class="img-responsive" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
+                     <h4>Informacion Fechas Disponibilidad</h4>
+                     <p>Fecha Inicio</p>
                      {{disponibilidad.fechaInicioEstadia}}
+                     <p>Fecha Terminacion</p>
                      {{disponibilidad.fechaTerminacionEstadia}}
                  </div>
             </div>
