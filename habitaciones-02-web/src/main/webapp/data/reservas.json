@@ -1,10 +1,276 @@
-[{"id":1,"fechaInicioEstadia":"2/13/2017","fechaTerminacionEstadia":"9/14/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":2,"fechaInicioEstadia":"1/19/2017","fechaTerminacionEstadia":"8/8/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":3,"fechaInicioEstadia":"4/24/2016","fechaTerminacionEstadia":"12/8/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":4,"fechaInicioEstadia":"10/25/2016","fechaTerminacionEstadia":"9/16/2016","cancelado":false,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":5,"fechaInicioEstadia":"2/5/2017","fechaTerminacionEstadia":"5/2/2016","cancelado":false,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":6,"fechaInicioEstadia":"9/7/2016","fechaTerminacionEstadia":"6/20/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":7,"fechaInicioEstadia":"5/1/2016","fechaTerminacionEstadia":"4/25/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":8,"fechaInicioEstadia":"2/6/2017","fechaTerminacionEstadia":"11/18/2016","cancelado":false,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":9,"fechaInicioEstadia":"1/30/2017","fechaTerminacionEstadia":"7/9/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
-{"id":10,"fechaInicioEstadia":"11/13/2016","fechaTerminacionEstadia":"1/16/2017","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]}]
+[{
+  "id": 1,
+  "fechaInicioEstadia": "4/11/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "cancelado": true
+}, {
+  "id": 2,
+  "fechaInicioEstadia": "4/25/2016",
+  "fechaTerminacionEstadia": "2/13/2017",
+  "cancelado": true
+}, {
+  "id": 3,
+  "fechaInicioEstadia": "5/12/2016",
+  "fechaTerminacionEstadia": "2/28/2017",
+  "cancelado": false
+}, {
+  "id": 4,
+  "fechaInicioEstadia": "5/24/2016",
+  "fechaTerminacionEstadia": "2/25/2017",
+  "cancelado": false
+}, {
+  "id": 5,
+  "fechaInicioEstadia": "5/25/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "cancelado": true
+}, {
+  "id": 6,
+  "fechaInicioEstadia": "4/3/2016",
+  "fechaTerminacionEstadia": "2/3/2017",
+  "cancelado": false
+}, {
+  "id": 7,
+  "fechaInicioEstadia": "4/19/2016",
+  "fechaTerminacionEstadia": "3/19/2017",
+  "cancelado": false
+}, {
+  "id": 8,
+  "fechaInicioEstadia": "5/28/2016",
+  "fechaTerminacionEstadia": "3/5/2017",
+  "cancelado": false
+}, {
+  "id": 9,
+  "fechaInicioEstadia": "5/22/2016",
+  "fechaTerminacionEstadia": "2/27/2017",
+  "cancelado": true
+}, {
+  "id": 10,
+  "fechaInicioEstadia": "4/3/2016",
+  "fechaTerminacionEstadia": "3/30/2017",
+  "cancelado": false
+}, {
+  "id": 11,
+  "fechaInicioEstadia": "4/24/2016",
+  "fechaTerminacionEstadia": "2/22/2017",
+  "cancelado": false
+}, {
+  "id": 12,
+  "fechaInicioEstadia": "5/27/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "cancelado": true
+}, {
+  "id": 13,
+  "fechaInicioEstadia": "5/1/2016",
+  "fechaTerminacionEstadia": "2/13/2017",
+  "cancelado": false
+}, {
+  "id": 14,
+  "fechaInicioEstadia": "5/1/2016",
+  "fechaTerminacionEstadia": "2/8/2017",
+  "cancelado": true
+}, {
+  "id": 15,
+  "fechaInicioEstadia": "5/29/2016",
+  "fechaTerminacionEstadia": "3/25/2017",
+  "cancelado": false
+}, {
+  "id": 16,
+  "fechaInicioEstadia": "4/17/2016",
+  "fechaTerminacionEstadia": "2/22/2017",
+  "cancelado": true
+}, {
+  "id": 17,
+  "fechaInicioEstadia": "4/25/2016",
+  "fechaTerminacionEstadia": "2/25/2017",
+  "cancelado": true
+}, {
+  "id": 18,
+  "fechaInicioEstadia": "4/14/2016",
+  "fechaTerminacionEstadia": "2/9/2017",
+  "cancelado": false
+}, {
+  "id": 19,
+  "fechaInicioEstadia": "5/1/2016",
+  "fechaTerminacionEstadia": "3/28/2017",
+  "cancelado": false
+}, {
+  "id": 20,
+  "fechaInicioEstadia": "4/4/2016",
+  "fechaTerminacionEstadia": "3/11/2017",
+  "cancelado": false
+}, {
+  "id": 21,
+  "fechaInicioEstadia": "4/3/2016",
+  "fechaTerminacionEstadia": "2/11/2017",
+  "cancelado": false
+}, {
+  "id": 22,
+  "fechaInicioEstadia": "5/5/2016",
+  "fechaTerminacionEstadia": "3/20/2017",
+  "cancelado": false
+}, {
+  "id": 23,
+  "fechaInicioEstadia": "4/19/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "cancelado": false
+}, {
+  "id": 24,
+  "fechaInicioEstadia": "5/17/2016",
+  "fechaTerminacionEstadia": "2/22/2017",
+  "cancelado": false
+}, {
+  "id": 25,
+  "fechaInicioEstadia": "5/11/2016",
+  "fechaTerminacionEstadia": "3/7/2017",
+  "cancelado": false
+}, {
+  "id": 26,
+  "fechaInicioEstadia": "5/28/2016",
+  "fechaTerminacionEstadia": "3/3/2017",
+  "cancelado": true
+}, {
+  "id": 27,
+  "fechaInicioEstadia": "5/19/2016",
+  "fechaTerminacionEstadia": "3/28/2017",
+  "cancelado": false
+}, {
+  "id": 28,
+  "fechaInicioEstadia": "5/19/2016",
+  "fechaTerminacionEstadia": "2/17/2017",
+  "cancelado": true
+}, {
+  "id": 29,
+  "fechaInicioEstadia": "4/25/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "cancelado": true
+}, {
+  "id": 30,
+  "fechaInicioEstadia": "4/8/2016",
+  "fechaTerminacionEstadia": "3/9/2017",
+  "cancelado": false
+}, {
+  "id": 31,
+  "fechaInicioEstadia": "5/13/2016",
+  "fechaTerminacionEstadia": "2/21/2017",
+  "cancelado": false
+}, {
+  "id": 32,
+  "fechaInicioEstadia": "5/14/2016",
+  "fechaTerminacionEstadia": "2/17/2017",
+  "cancelado": true
+}, {
+  "id": 33,
+  "fechaInicioEstadia": "5/27/2016",
+  "fechaTerminacionEstadia": "3/30/2017",
+  "cancelado": true
+}, {
+  "id": 34,
+  "fechaInicioEstadia": "5/4/2016",
+  "fechaTerminacionEstadia": "2/9/2017",
+  "cancelado": false
+}, {
+  "id": 35,
+  "fechaInicioEstadia": "5/23/2016",
+  "fechaTerminacionEstadia": "2/17/2017",
+  "cancelado": true
+}, {
+  "id": 36,
+  "fechaInicioEstadia": "5/15/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "cancelado": true
+}, {
+  "id": 37,
+  "fechaInicioEstadia": "4/7/2016",
+  "fechaTerminacionEstadia": "3/13/2017",
+  "cancelado": false
+}, {
+  "id": 38,
+  "fechaInicioEstadia": "5/17/2016",
+  "fechaTerminacionEstadia": "3/27/2017",
+  "cancelado": false
+}, {
+  "id": 39,
+  "fechaInicioEstadia": "4/12/2016",
+  "fechaTerminacionEstadia": "3/12/2017",
+  "cancelado": false
+}, {
+  "id": 40,
+  "fechaInicioEstadia": "5/26/2016",
+  "fechaTerminacionEstadia": "3/7/2017",
+  "cancelado": true
+}, {
+  "id": 41,
+  "fechaInicioEstadia": "5/10/2016",
+  "fechaTerminacionEstadia": "2/14/2017",
+  "cancelado": true
+}, {
+  "id": 42,
+  "fechaInicioEstadia": "4/23/2016",
+  "fechaTerminacionEstadia": "3/6/2017",
+  "cancelado": false
+}, {
+  "id": 43,
+  "fechaInicioEstadia": "4/25/2016",
+  "fechaTerminacionEstadia": "2/25/2017",
+  "cancelado": false
+}, {
+  "id": 44,
+  "fechaInicioEstadia": "4/8/2016",
+  "fechaTerminacionEstadia": "2/17/2017",
+  "cancelado": true
+}, {
+  "id": 45,
+  "fechaInicioEstadia": "4/13/2016",
+  "fechaTerminacionEstadia": "2/22/2017",
+  "cancelado": false
+}, {
+  "id": 46,
+  "fechaInicioEstadia": "5/21/2016",
+  "fechaTerminacionEstadia": "3/9/2017",
+  "cancelado": false
+}, {
+  "id": 47,
+  "fechaInicioEstadia": "4/11/2016",
+  "fechaTerminacionEstadia": "2/28/2017",
+  "cancelado": false
+}, {
+  "id": 48,
+  "fechaInicioEstadia": "5/28/2016",
+  "fechaTerminacionEstadia": "2/15/2017",
+  "cancelado": true
+}, {
+  "id": 49,
+  "fechaInicioEstadia": "5/2/2016",
+  "fechaTerminacionEstadia": "2/6/2017",
+  "cancelado": false
+}, {
+  "id": 50,
+  "fechaInicioEstadia": "5/28/2016",
+  "fechaTerminacionEstadia": "2/7/2017",
+  "cancelado": true
+}, {
+  "id": 51,
+  "fechaInicioEstadia": "5/9/2016",
+  "fechaTerminacionEstadia": "3/14/2017",
+  "cancelado": false
+}, {
+  "id": 52,
+  "fechaInicioEstadia": "5/16/2016",
+  "fechaTerminacionEstadia": "3/10/2017",
+  "cancelado": false
+}, {
+  "id": 53,
+  "fechaInicioEstadia": "4/19/2016",
+  "fechaTerminacionEstadia": "3/4/2017",
+  "cancelado": false
+}, {
+  "id": 54,
+  "fechaInicioEstadia": "5/3/2016",
+  "fechaTerminacionEstadia": "3/26/2017",
+  "cancelado": false
+}, {
+  "id": 55,
+  "fechaInicioEstadia": "5/9/2016",
+  "fechaTerminacionEstadia": "3/26/2017",
+  "cancelado": false
+}]
