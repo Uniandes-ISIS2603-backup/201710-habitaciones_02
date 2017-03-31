@@ -6,6 +6,8 @@
         'anfitrionModule',
         'viajeroModule',
         'resenaModule',
+        'habitacionModule',
+        'disponibilidadModule',
 
         
     ]);
