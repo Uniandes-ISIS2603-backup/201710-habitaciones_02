@@ -1,0 +1,10 @@
+[{"id":1,"fechaInicioEstadia":"2/13/2017","fechaTerminacionEstadia":"9/14/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":2,"fechaInicioEstadia":"1/19/2017","fechaTerminacionEstadia":"8/8/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":3,"fechaInicioEstadia":"4/24/2016","fechaTerminacionEstadia":"12/8/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":4,"fechaInicioEstadia":"10/25/2016","fechaTerminacionEstadia":"9/16/2016","cancelado":false,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":5,"fechaInicioEstadia":"2/5/2017","fechaTerminacionEstadia":"5/2/2016","cancelado":false,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":6,"fechaInicioEstadia":"9/7/2016","fechaTerminacionEstadia":"6/20/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":7,"fechaInicioEstadia":"5/1/2016","fechaTerminacionEstadia":"4/25/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":8,"fechaInicioEstadia":"2/6/2017","fechaTerminacionEstadia":"11/18/2016","cancelado":false,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":9,"fechaInicioEstadia":"1/30/2017","fechaTerminacionEstadia":"7/9/2016","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]},
+{"id":10,"fechaInicioEstadia":"11/13/2016","fechaTerminacionEstadia":"1/16/2017","cancelado":true,"viajero":[{"idUsuario":1}],"anfitrion":[{"id":1}],"habitacion":[{"id":1}],"pago":[{"id":1}]}]
