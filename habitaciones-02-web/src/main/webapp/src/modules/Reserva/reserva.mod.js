@@ -9,7 +9,7 @@
             // Mostrar la lista de libros será el estado por defecto del módulo
             $urlRouterProvider.otherwise("/reservasList");
             // Definición del estado 'booksList' donde se listan los libros
-            $stateProvider.state('reservassList', {
+            $stateProvider.state('reservasList', {
                 // Url que aparecerá en el browser
                 url: '/reservas/list',
                 // Se define una variable reservas (del estado) que toma por valor  para el json
