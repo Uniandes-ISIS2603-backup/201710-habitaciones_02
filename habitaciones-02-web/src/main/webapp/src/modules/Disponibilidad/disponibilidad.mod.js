@@ -1,8 +1,8 @@
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("disponibilidadModule", ['ui.router']);
- 
-   // Configuración de los estados del módulo
+
+    // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Disponibilidad/';
@@ -13,35 +13,61 @@
                 // Url que aparecerá en el browser
                 url: '/disponibilidades',
                 abstract: true,
-    
-              
+
                 resolve: {
                     disponibilidades: ['$http', function ($http) {
-                            console.log("hi");
                             return $http.get('data/disponibilidades.json'); // $http retorna una promesa que aquí no se está manejando si viene con error.
                         }]
                 },
                 views: {
                     'mainView': {
+
                         templateUrl: basePath + 'disponibilidad.html',
-                        controller: ['$scope', 'disponibilidades', function ($scope, disponibilidades) {
-                                $scope.disponibilidadesRecords = disponibilidades.data;
-                            }]
+                        controller: 'disponibilidadListCtrl'
+
                     }
                 }
-                }).state('disponibilidadesList', {
-                url: '/list',
-                parent: 'disponibilidades',
+            }).state('disponibilidadesList', {
+                url: '/disponibilidades/list',
+
+                resolve: {
+                    disponibilidades: ['$http', function ($http) {
+                            return $http.get('data/disponibilidades.json');
+                        }]
+
+
+                },
+
                 views: {
+                    'mainView': {
+                        templateUrl: basePath + 'disponibilidad.list.html',
+                        controller: 'disponibilidadListCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
+
+            });
+
+            $stateProvider.state('disponibilidadDetail', {
+                url: '/{disponibilidadId:int}/detail',
+                parent: 'disponibilidades',
+                param: {
+                    disponibilidadId: null
+                },
+               views: {
                     'listView': {
                         templateUrl: basePath + 'disponibilidad.list.html'
+                    },
+                    'detailView': {
+                        templateUrl: basePath + 'disponibilidad.detail.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentDisponibilidad = $scope.disponibilidadesRecords[$params.disponibilidadId-1];
+                            }]
                     }
+
                 }
-                             
             });
-            
-            
-            
+
         }
     ]);
 })(window.angular);
