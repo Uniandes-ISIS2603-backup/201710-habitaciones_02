@@ -7,7 +7,7 @@
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Habitacion/';
             // Mostrar la lista de habitaciones será el estado por defecto del módulo
-            $urlRouterProvider.otherwise("/habitacionesList");
+            
             // Definición del estado 'habitacionesList' donde se listan las habitaciones
             $stateProvider.state('habitaciones', {
                 // Url que aparecerá en el browser
@@ -23,17 +23,25 @@
                 views: {
                     'mainView': {
                         templateUrl: basePath + 'habitacion.html',
-                        controller: ['$scope', 'habitaciones', function ($scope, habitaciones) {
-                                $scope.habitacionesRecords = habitaciones.data;
-                            }]
+                        controller: 'habitacionListCtrl'
+                            
                     }
                 }
             }).state('habitacionesList', {
-                url: '/list',
-                parent: 'habitaciones',
+                url: '/habitaciones/list',
+               
+                 resolve: {
+                    habitaciones: ['$http', function ($http) {
+                            return $http.get('data/habitaciones.json'); 
+                        }]
+                    
+                    
+                },
                 views: {
-                    'listView': {
-                        templateUrl: basePath + 'habitacion.list.html'
+                    'mainView': {
+                        templateUrl: basePath + 'habitacion.list.html',
+                        controller: 'habitacionListCtrl',
+                        controllerAs: 'ctrl'
                     }
                 }
             }).state('habitacionDetail', {
