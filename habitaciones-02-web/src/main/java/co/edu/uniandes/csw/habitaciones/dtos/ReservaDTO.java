@@ -18,16 +18,37 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ReservaDTO implements Serializable{
     
-    private Long id;
-    private Date fechaInicio;
-    private Date fechaTerminacion;
-    private Boolean cancelado;
-
-public ReservaDTO()
-{
+    //-----------------
+    //Atributos
+    //-----------------
     
-}
-
+    /**
+     * el id de la reserva
+     */
+    private Long id;
+    /**
+     * la fecha inicial cuando comienza una reserva
+     */
+    private Date fechaInicio;
+    /**
+     * la fecha final de la reserva
+     */
+    private Date fechaTerminacion;
+    /**
+     * estado de la reserva
+     */
+    private Boolean cancelado;
+    /**
+     * Metodo Constructor por defecto de la clase
+     */
+    public ReservaDTO()
+    {
+    
+    }
+/**
+ * Metodo constructor lo cual inicializa todo los atributos de serva
+ * @param entity 
+ */
 public ReservaDTO(ReservaEntity entity)
 {
     if(entity!= null)
@@ -38,6 +59,10 @@ public ReservaDTO(ReservaEntity entity)
         this.cancelado = entity.getCancelado();
     }
 }
+/**
+ * Metodo que cambia un dto a un entity
+ * @return el entity del dto modificado
+ */
 public ReservaEntity toEntity()
 {   
     ReservaEntity entity = new ReservaEntity(); 
@@ -55,7 +80,7 @@ public ReservaEntity toEntity()
     {
         return id;
     }
-     /**
+     /**asigna el valor al id
      * @param i long
      */ 
     public void setId(Long i)
@@ -69,7 +94,7 @@ public ReservaEntity toEntity()
     {
         return fechaInicio;
     }
-     /**
+     /**Asigna la fecha de inicio
      * @param fechaIn Date
      */ 
     public void setFechaInicio(Date fechaIn)
@@ -84,21 +109,21 @@ public ReservaEntity toEntity()
         return fechaTerminacion;
         
     }
-      /**
+      /**Asigna la fecha final de la reserva
      * @param fechaT date
      */ 
     public void setFechaTerminacion(Date fechaT)
     {
         this.fechaTerminacion = fechaT;
     }
-     /**
+    /**
      * @return cancelad un boolean
      */ 
     public Boolean getCancelado()
     {
         return cancelado;
     }
-      /**
+      /**Asigna el estado de la reserva
      * @param can lo que cancela
      */ 
     public void setCancelado (Boolean can)

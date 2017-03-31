@@ -44,6 +44,7 @@ public class ViajeroLogic
     {
         if(!entity.informacionCompleta())
         {
+            
             throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
         }
 
@@ -55,6 +56,7 @@ public class ViajeroLogic
      * @param entity la entidad que desea actualizar
      * @return la entidad actualizada
      */
+    
     public ViajeroEntity updateViajero (ViajeroEntity entity) throws BusinessLogicException
     {
         if(!entity.informacionCompleta())

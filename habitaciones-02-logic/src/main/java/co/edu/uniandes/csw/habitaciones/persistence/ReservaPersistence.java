@@ -20,20 +20,38 @@ import javax.persistence.TypedQuery;
 @Stateless
 public class ReservaPersistence {
     
+    /**
+     * Entity manager de la persistencia
+     */
     @PersistenceContext(unitName="habitacionesPU")
     protected EntityManager em;
     
+    /**
+     * Busca la clase reservaEntity por el id y la retorna
+     * @param id
+     * @return ReservaEntity
+     */
     public ReservaEntity find(Long id)
     {
         return em.find(ReservaEntity.class, id);
         
     }
+    
+    /**
+     * Crea una lista que retorna con todas las clases de ReservaEntity
+     * @return List de ReservaEntity
+     */
     public List<ReservaEntity> findAll()
     {
      Query q = em.createQuery("select u from ReservaEntity u");
      return q.getResultList();
     }
     
+    /**
+     * Busca todas las clases ReservaEntity que tenga un viajero por su id.
+     * @param idViajero
+     * @return List de ReservaEntity
+     */
     public List<ReservaEntity> findAllByViajero(Long idViajero)
     {
         TypedQuery<ReservaEntity> q
@@ -42,18 +60,30 @@ public class ReservaPersistence {
 
        return q.getResultList();
     }
-    
+    /**
+     * Crea una clase ReservaEntity a con el entity dado en parametro y la retorna
+     * @param entity
+     * @return la clase ReservaEntity
+     */
     public ReservaEntity create(ReservaEntity entity)
     {
         em.persist(entity);
         return entity;
     }
-    
+    /**
+     * Actualiza una reserva con lo que se da en parametro y la retorna
+     * @param entity
+     * @return 
+     */
     public ReservaEntity update(ReservaEntity entity)
     {
         em.merge(entity);
         return entity;
     }
+    /**
+     * Elimina una reserva por su eliminacion
+     * @param id 
+     */
     public void delete(Long id)
     {
         ReservaEntity entity = em.find(ReservaEntity.class, id);
@@ -62,7 +92,7 @@ public class ReservaPersistence {
     }
     
     /**
-     * Este metodo verifica si existe una reserva que relacione a un viajero con una habitaci'on
+     * Este metodo verifica si existe una reserva que relacione a un viajero con una habitacion
      * @param idViajero el id del viajero que se quiere relacionar a una habitacion
      * @param idHabitacion el id de una habitacion que se quiere relacionar con un viajero
      * @return true si existe una reserva con dicha relacion, false de lo contrario.
