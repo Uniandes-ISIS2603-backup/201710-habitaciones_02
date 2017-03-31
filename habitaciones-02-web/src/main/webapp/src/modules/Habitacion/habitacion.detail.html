@@ -25,6 +25,21 @@
                     <dd>{{currentHabitacion.descripcion}}</dd>
                 </dl>
             </div>
+             <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="col-md-6">
+                            <dt style="font-size: 20px "> Disponibilidades    </dt>
+                            <ul ng-repeat="disponibilidad in currentHabitacion.disponibilidades">
+                                <dt>Disponibilidad: {{disponibilidad.id}}</dt>
+                                <dd>Fecha inicio estadía: {{disponibilidad.fechaInicioEstadia}}</dd>
+                                <dd>Fecha terminación estadía: {{vivienda.fechaTerminacionEstadia}}</dd>
+                            </ul> 
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
