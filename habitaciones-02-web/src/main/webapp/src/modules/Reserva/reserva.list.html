@@ -1,19 +1,16 @@
 <div class="container-fluid">
-    <div class="row">
-         <!-- booksRecords fue inicializada en el controlador del estado booksList -->
-        <!-- Itera sobre cada uno de los libros en la colección booksRecords -->
-        <div class="col-sm-2 col-md-4" ng-repeat="recurso in recursoRecords">
-            <!--Despliega la imagen  -->
-            <div class="infoReserva">
-                
-                 <div class="caption text-center">
-                     <h4>Informacion Basica</h4>
-                     <p>{{reserva.precio}}</p>
-                     <p>{{reserva.fechaInicioEstadia}}</p>
-                     <p>{{reserva.fechaTerminacionEstadia}}</p>
-                     <p>{{reserva.cancelado}}</p>
-             
-            </div>
-        </div>
+    <div class = "row"> 
+    <div class="col-sm-2 col-md-2" ng-repeat="reserva in reservasRecords">
+        
+         <div class="thumbnail">
+        
+              <a ui-sref="reservaDetail({reservaId: reserva.id})">
+                    
+                    <div class="caption text-center">{{reserva.fechaInicioEstadia}}</div>
+                    <div class="caption text-center">{{reserva.cancelado}}</div>
+                </a>
+        
     </div>
+    </div>
+</div>
 </div>
