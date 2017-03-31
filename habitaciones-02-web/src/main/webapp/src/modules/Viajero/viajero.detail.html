@@ -14,7 +14,7 @@
             <div class="row">
                 
                 <dl>
-                    <dt style="font-size: 35px ">{{currentViajero.nombre}}</dt>
+                    <dt style="font-size: 20px ">{{currentViajero.nombre}}</dt>
                     <hr>
                     
                     <dt>Identificacion</dt>
@@ -34,15 +34,19 @@
             </div>
         </div>
         <div class="col-md-9">
-            <nav style="margin-top: -5px;border-top: none;background-color: white; border-color: #d1eeff"class="navbar navbar-default">
+            <nav style="margin-top: -5px;border-top: none;background-color: white; border-color: #d1eeff" class="navbar navbar-default">
                 
                 <ul class="nav navbar-nav">
-                
-                    <li><a  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><b>Reservas</b></a></li>
+                <!--->
+                    <li><a  ui-sref="viajeroReservasList"><b>Reservas</b></a></li>
                     <li><a href="https://www.youtube.com/watch?v=feA64wXhbjo"><b>Reseñas Escritas</b></a></li>
                 </ul>
+                </!--->
                 
             </nav>
         </div>
+        <!--->
+        <div ui-view="reservasViajeroView"></div>
+        </!--->
     </div>
 </div>

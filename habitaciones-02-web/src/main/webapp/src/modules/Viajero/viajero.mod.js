@@ -68,12 +68,40 @@
                     'detailView': {
                         templateUrl: basePath + 'viajero.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-6];
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
                             }]
                     }
 
                 } 
             });
+            $stateProvider.state('viajeroReservasList', {
+                url: '/{viajeroId:int}/reservas',
+                parent: 'viajeroDetail',
+                
+                param: {
+                    viajeroId: null
+                },
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'viajero.list.html'
+                    },
+                    'reservasViajeroView':{
+                        templateUrl: basePath + 'viajero.detail.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                            }]
+                        
+                    },
+                    'detailView': {
+                        templateUrl: basePath + 'viajero.reservas.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                            }]
+                    }
+
+                } 
+            });
+            
         }
     ]);
 })(window.angular);
