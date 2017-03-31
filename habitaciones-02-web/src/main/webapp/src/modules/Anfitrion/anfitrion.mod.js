@@ -14,6 +14,7 @@
                     anfitriones: ['$http', function ($http) {
                             return $http.get('data/anfitriones.json');
                         }]
+                    
                 },
                 views: {
                     'mainView': {
@@ -33,6 +34,8 @@
                     anfitriones: ['$http', function ($http) {
                             return $http.get('data/anfitriones.json'); 
                         }]
+                    
+                    
                 },
                 views:{
                     'mainView': {
@@ -49,8 +52,8 @@
                     anfitrionId: null
                 },
                 views: {
-                    'listView': {
-                        templateUrl: basePath + 'anfitrion.list.html'
+                    'anfitrionCarouselView': {
+                        templateUrl: basePath + 'anfitrion.carousel.html'
                     },
                     'detailView': {
                         templateUrl: basePath + 'anfitrion.detail.html',
