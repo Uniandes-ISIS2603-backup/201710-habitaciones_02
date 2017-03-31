@@ -1,19 +1,19 @@
 <div class="container-fluid"> 
     <div class="row">
-        <!-- booksRecords fue inicializada en el controlador del estado booksList -->
-        <!-- Itera sobre cada uno de los libros en la colección booksRecords -->
+        
         <div class="col-sm-2 col-md-2" ng-repeat="viajero in RecordsViajero">
-             <!--Despliega la imagen  -->
             <div class="thumbnail">
-                 <!-- Despliega en el caption de la imagen el nombre del libro -->
-                <div class="caption text-center">
-                    <h3>{{viajero.nombre}}</h3>
-                    <img class="img-responsive" align="middle" ng-src ='{{viajero.imagen}}' alt ="{{viajero.nombre}}"/>
-                </div>
-                <div class="caption text-center">
-                    <p>{{viajero.correoElectronico}}</p>
-                </div>
+                
+                <a ui-sref="viajeroDetail({viajeroId: viajero.idUsuario})">
+                    <div class="caption text-center">
+                        <div class="caption text-center">{{viajero.nombre}}</div>
+                        <img class="img-responsive" align="middle" ng-src ='{{viajero.imagen}}' alt ="{{viajero.nombre}}"/>
+                        <p>{{viajero.correoElectronico}}</p>
+                    </div>
+                </a>
+                
             </div>
         </div>
+        
     </div>
 </div>
