@@ -9,26 +9,39 @@
             // Mostrar la lista de dispponibilidades será el estado por defecto del módulo
             //$urlRouterProvider.otherwise("/disponibilidadesList");
             // Definición del estado 'disponibilidadesList' donde se listan las disponibilidades
-            $stateProvider.state('disponibilidadesList', {
+            $stateProvider.state('disponibilidades', {
                 // Url que aparecerá en el browser
-                url: '/disponibilidades/list',
-                // Se define una variable disponibilidades (del estado) que toma por valor 
-                // la colección de disponibilidades que obtiene utilizando $http.get 
-                // Template que se utilizara para ejecutar el estado
-                templateUrl: basePath + 'disponibilidad.list.html',
-                // El controlador guarda en el scope en la variable disponibilidadesRecords los datos que trajo el resolve
-                // disponibilidadesRecords será visible en el template
-                controller: ['$scope', 'disponibilidades', function ($scope, disponibilidades) {
-                        $scope.disponibilidadesRecords = disponibilidades.data;
-                    }],  
+                url: '/disponibilidades',
+                abstract: true,
+    
+              
                 resolve: {
                     disponibilidades: ['$http', function ($http) {
                             console.log("hi");
                             return $http.get('data/disponibilidades.json'); // $http retorna una promesa que aquí no se está manejando si viene con error.
                         }]
+                },
+                views: {
+                    'mainView': {
+                        templateUrl: basePath + 'disponibilidad.html',
+                        controller: ['$scope', 'disponibilidades', function ($scope, disponibilidades) {
+                                $scope.disponibilidadesRecords = disponibilidades.data;
+                            }]
+                    }
+                }
+                }).state('disponibilidadesList', {
+                url: '/list',
+                parent: 'disponibilidades',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'disponibilidad.list.html'
+                    }
                 }
                              
             });
+            
+            
+            
         }
     ]);
 })(window.angular);
