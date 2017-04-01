@@ -8,8 +8,7 @@
         'resenaModule',
         'habitacionModule',
         'disponibilidadModule',
-
-        'reservaModule'
+        'reservaModule',
         'viviendaModule',
         'pagoModule'
 
