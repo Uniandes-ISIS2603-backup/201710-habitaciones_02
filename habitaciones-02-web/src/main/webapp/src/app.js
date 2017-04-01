@@ -8,6 +8,7 @@
         'resenaModule',
         'habitacionModule',
         'disponibilidadModule',
+        'reservaModule'
 
         
     ]);

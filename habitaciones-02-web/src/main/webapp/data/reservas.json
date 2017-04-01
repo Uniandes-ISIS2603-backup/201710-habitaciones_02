@@ -1,276 +1,947 @@
 [{
-  "id": 1,
-  "fechaInicioEstadia": "4/11/2016",
-  "fechaTerminacionEstadia": "2/10/2017",
-  "cancelado": true
-}, {
   "id": 2,
-  "fechaInicioEstadia": "4/25/2016",
-  "fechaTerminacionEstadia": "2/13/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "5/22/2016",
+  "fechaTerminacionEstadia": "2/6/2017",
+  "precio": 22,
+  "cancelado": false,
+  "viajeros":
+                {
+                "idUsuario":16,
+                "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+                "nombre":"Victor Ferguson",
+                "contrasena":"nL3kWFxBtH",
+                "correoElectronico":"vferguson0@huffingtonpost.com",
+                "tipoDocumento":"Kashmiri",
+                "numeroDocumento":"86.43.72.46/30",
+                "direccion":"8 Evergreen Road",
+                "telefono":"57-(345)590-9519"
+                }
 }, {
   "id": 3,
-  "fechaInicioEstadia": "5/12/2016",
-  "fechaTerminacionEstadia": "2/28/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "2/2/2016",
+  "fechaTerminacionEstadia": "3/4/2017",
+  "precio": 95,
+  "cancelado": false,
+    "viajeros":
+                {
+                "idUsuario":16,
+                "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+                "nombre":"Victor Ferguson",
+                "contrasena":"nL3kWFxBtH",
+                "correoElectronico":"vferguson0@huffingtonpost.com",
+                "tipoDocumento":"Kashmiri",
+                "numeroDocumento":"86.43.72.46/30",
+                "direccion":"8 Evergreen Road",
+                "telefono":"57-(345)590-9519"
+                }      
+        
 }, {
   "id": 4,
-  "fechaInicioEstadia": "5/24/2016",
-  "fechaTerminacionEstadia": "2/25/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/16/2016",
+  "fechaTerminacionEstadia": "3/21/2017",
+  "precio": 41,
+  "cancelado": false,
+  "viajeros":
+                {
+                "idUsuario":16,
+                "imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+                "nombre":"Victor Ferguson",
+                "contrasena":"nL3kWFxBtH",
+                "correoElectronico":"vferguson0@huffingtonpost.com",
+                "tipoDocumento":"Kashmiri",
+                "numeroDocumento":"86.43.72.46/30",
+                "direccion":"8 Evergreen Road",
+                "telefono":"57-(345)590-9519"
+                }      
 }, {
   "id": 5,
-  "fechaInicioEstadia": "5/25/2016",
-  "fechaTerminacionEstadia": "2/10/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "1/19/2016",
+  "fechaTerminacionEstadia": "2/1/2017",
+  "precio": 48,
+  "cancelado": false,
+   "viajeros": 
+                {
+                "idUsuario":17,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Steven Banks",
+		"contrasena":"ViDtzl",
+		"correoElectronico":"sbanks1@surveymonkey.com",
+		"tipoDocumento":"Bulgarian",
+		"numeroDocumento":"81.112.165.137/3",
+		"direccion":"92037 Rowland Junction",
+		"telefono":"359-(472)543-3601"
+                }
 }, {
   "id": 6,
-  "fechaInicioEstadia": "4/3/2016",
-  "fechaTerminacionEstadia": "2/3/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/21/2016",
+  "fechaTerminacionEstadia": "3/12/2017",
+  "precio": 81,
+  "cancelado": true,
+   "viajeros": 
+                {
+                "idUsuario":17,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Steven Banks",
+		"contrasena":"ViDtzl",
+		"correoElectronico":"sbanks1@surveymonkey.com",
+		"tipoDocumento":"Bulgarian",
+		"numeroDocumento":"81.112.165.137/3",
+		"direccion":"92037 Rowland Junction",
+		"telefono":"359-(472)543-3601"
+                }        
 }, {
   "id": 7,
-  "fechaInicioEstadia": "4/19/2016",
-  "fechaTerminacionEstadia": "3/19/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/31/2016",
+  "fechaTerminacionEstadia": "3/3/2017",
+  "precio": 95,
+  "cancelado": false,
+   "viajeros": 
+                {
+                "idUsuario":17,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Steven Banks",
+		"contrasena":"ViDtzl",
+		"correoElectronico":"sbanks1@surveymonkey.com",
+		"tipoDocumento":"Bulgarian",
+		"numeroDocumento":"81.112.165.137/3",
+		"direccion":"92037 Rowland Junction",
+		"telefono":"359-(472)543-3601"
+                }        
 }, {
   "id": 8,
-  "fechaInicioEstadia": "5/28/2016",
-  "fechaTerminacionEstadia": "3/5/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/4/2016",
+  "fechaTerminacionEstadia": "2/8/2017",
+  "precio": 15,
+  "cancelado": false,
+  "viajero": {
+                		"idUsuario":18,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Earl Thomas",
+		"contrasena":"csIzdm3NxmF",
+		"correoElectronico":"ethomas2@dedecms.com",
+		"tipoDocumento":"Punjabi",
+		"numeroDocumento":"225.106.79.245/12",
+		"direccion":"10 Vernon Circle",
+		"telefono":"57-(934)731-0867"
+  }
 }, {
   "id": 9,
-  "fechaInicioEstadia": "5/22/2016",
-  "fechaTerminacionEstadia": "2/27/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "2/23/2016",
+  "fechaTerminacionEstadia": "3/21/2017",
+  "precio": 69,
+  "cancelado": true,
+  "viajero": 	{	"idUsuario":19,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Paul Hicks",
+		"contrasena":"h3oUb1cio",
+		"correoElectronico":"phicks3@edublogs.org",
+		"tipoDocumento":"Kurdish",
+		"numeroDocumento":"216.36.235.87/10",
+		"direccion":"55361 Birchwood Street",
+		"telefono":"62-(593)677-8286"
+  }
 }, {
   "id": 10,
-  "fechaInicioEstadia": "4/3/2016",
-  "fechaTerminacionEstadia": "3/30/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/9/2016",
+  "fechaTerminacionEstadia": "3/4/2017",
+  "precio": 17,
+  "cancelado": true,
+    "viajero": 	{	"idUsuario":19,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Paul Hicks",
+		"contrasena":"h3oUb1cio",
+		"correoElectronico":"phicks3@edublogs.org",
+		"tipoDocumento":"Kurdish",
+		"numeroDocumento":"216.36.235.87/10",
+		"direccion":"55361 Birchwood Street",
+		"telefono":"62-(593)677-8286"
+  }      
+        
 }, {
   "id": 11,
-  "fechaInicioEstadia": "4/24/2016",
-  "fechaTerminacionEstadia": "2/22/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/11/2016",
+  "fechaTerminacionEstadia": "3/18/2017",
+  "precio": 70,
+  "cancelado": false,
+  "viajero": 	{	"idUsuario":19,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Paul Hicks",
+		"contrasena":"h3oUb1cio",
+		"correoElectronico":"phicks3@edublogs.org",
+		"tipoDocumento":"Kurdish",
+		"numeroDocumento":"216.36.235.87/10",
+		"direccion":"55361 Birchwood Street",
+		"telefono":"62-(593)677-8286"
+  }        
 }, {
   "id": 12,
-  "fechaInicioEstadia": "5/27/2016",
-  "fechaTerminacionEstadia": "2/10/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "2/23/2016",
+  "fechaTerminacionEstadia": "2/3/2017",
+  "precio": 59,
+  "cancelado": true,
+   "viajero": 	{	"idUsuario":19,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Paul Hicks",
+		"contrasena":"h3oUb1cio",
+		"correoElectronico":"phicks3@edublogs.org",
+		"tipoDocumento":"Kurdish",
+		"numeroDocumento":"216.36.235.87/10",
+		"direccion":"55361 Birchwood Street",
+		"telefono":"62-(593)677-8286"
+  }       
 }, {
   "id": 13,
-  "fechaInicioEstadia": "5/1/2016",
-  "fechaTerminacionEstadia": "2/13/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/24/2016",
+  "fechaTerminacionEstadia": "3/23/2017",
+  "precio": 6,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }
 }, {
   "id": 14,
-  "fechaInicioEstadia": "5/1/2016",
-  "fechaTerminacionEstadia": "2/8/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "1/12/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "precio": 23,
+  "cancelado": false,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }        
 }, {
   "id": 15,
-  "fechaInicioEstadia": "5/29/2016",
-  "fechaTerminacionEstadia": "3/25/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/8/2016",
+  "fechaTerminacionEstadia": "3/23/2017",
+  "precio": 44,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }
+    
+    }, {
   "id": 16,
-  "fechaInicioEstadia": "4/17/2016",
-  "fechaTerminacionEstadia": "2/22/2017",
-  "cancelado": true
-}, {
+  "fechaInicioEstadia": "3/30/2016",
+  "fechaTerminacionEstadia": "3/1/2017",
+  "precio": 95,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }
+    }, {
   "id": 17,
-  "fechaInicioEstadia": "4/25/2016",
-  "fechaTerminacionEstadia": "2/25/2017",
-  "cancelado": true
-}, {
+  "fechaInicioEstadia": "1/6/2016",
+  "fechaTerminacionEstadia": "3/18/2017",
+  "precio": 71,
+  "cancelado": false,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }
+    }, {
   "id": 18,
-  "fechaInicioEstadia": "4/14/2016",
-  "fechaTerminacionEstadia": "2/9/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/12/2016",
+  "fechaTerminacionEstadia": "3/17/2017",
+  "precio": 61,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }
+    }, {
   "id": 19,
-  "fechaInicioEstadia": "5/1/2016",
-  "fechaTerminacionEstadia": "3/28/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "1/26/2016",
+  "fechaTerminacionEstadia": "3/21/2017",
+  "precio": 13,
+  "cancelado": false,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }
+    }, {
   "id": 20,
-  "fechaInicioEstadia": "4/4/2016",
-  "fechaTerminacionEstadia": "3/11/2017",
-  "cancelado": false
-}, {
-  "id": 21,
-  "fechaInicioEstadia": "4/3/2016",
+  "fechaInicioEstadia": "3/28/2016",
   "fechaTerminacionEstadia": "2/11/2017",
-  "cancelado": false
+  "precio": 44,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":20,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Larry Stone",
+		"contrasena":"7pI6jzSVS92",
+		"correoElectronico":"lstone4@java.com",
+		"tipoDocumento":"Italian",
+		"numeroDocumento":"212.60.188.211/7",
+		"direccion":"869 Karstens Trail",
+		"telefono":"53-(947)817-6269"      
+                }
+    }, {
+  "id": 21,
+  "fechaInicioEstadia": "3/14/2016",
+  "fechaTerminacionEstadia": "2/22/2017",
+  "precio": 39,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":21,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Nancy Lane",
+		"contrasena":"8N9SVW55",
+		"correoElectronico":"nlane5@desdev.cn",
+		"tipoDocumento":"Malagasy",
+		"numeroDocumento":"146.17.59.214/12",
+		"direccion":"04995 Jenifer Point",
+		"telefono":"63-(784)841-2121"
+                }
 }, {
   "id": 22,
-  "fechaInicioEstadia": "5/5/2016",
-  "fechaTerminacionEstadia": "3/20/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/22/2016",
+  "fechaTerminacionEstadia": "2/5/2017",
+  "precio": 14,
+  "cancelado": false,
+  "viajero": 
+                {
+                "idUsuario":21,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Nancy Lane",
+		"contrasena":"8N9SVW55",
+		"correoElectronico":"nlane5@desdev.cn",
+		"tipoDocumento":"Malagasy",
+		"numeroDocumento":"146.17.59.214/12",
+		"direccion":"04995 Jenifer Point",
+		"telefono":"63-(784)841-2121"
+                }        
 }, {
   "id": 23,
-  "fechaInicioEstadia": "4/19/2016",
-  "fechaTerminacionEstadia": "2/10/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/17/2016",
+  "fechaTerminacionEstadia": "2/28/2017",
+  "precio": 19,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  }      
 }, {
   "id": 24,
-  "fechaInicioEstadia": "5/17/2016",
-  "fechaTerminacionEstadia": "2/22/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/16/2016",
+  "fechaTerminacionEstadia": "3/5/2017",
+  "precio": 29,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  }        
 }, {
   "id": 25,
-  "fechaInicioEstadia": "5/11/2016",
-  "fechaTerminacionEstadia": "3/7/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/28/2016",
+  "fechaTerminacionEstadia": "3/15/2017",
+  "precio": 40,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  }
+    }, {
   "id": 26,
-  "fechaInicioEstadia": "5/28/2016",
-  "fechaTerminacionEstadia": "3/3/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "1/19/2016",
+  "fechaTerminacionEstadia": "3/4/2017",
+  "precio": 1,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  }        
 }, {
   "id": 27,
-  "fechaInicioEstadia": "5/19/2016",
-  "fechaTerminacionEstadia": "3/28/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/1/2016",
+  "fechaTerminacionEstadia": "2/25/2017",
+  "precio": 38,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  }         
 }, {
   "id": 28,
-  "fechaInicioEstadia": "5/19/2016",
-  "fechaTerminacionEstadia": "2/17/2017",
-  "cancelado": true
-}, {
+  "fechaInicioEstadia": "3/5/2016",
+  "fechaTerminacionEstadia": "2/14/2017",
+  "precio": 93,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  } 
+    }, {
   "id": 29,
-  "fechaInicioEstadia": "4/25/2016",
-  "fechaTerminacionEstadia": "2/10/2017",
-  "cancelado": true
-}, {
+  "fechaInicioEstadia": "3/30/2016",
+  "fechaTerminacionEstadia": "1/31/2017",
+  "precio": 48,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  } 
+    }, {
   "id": 30,
-  "fechaInicioEstadia": "4/8/2016",
-  "fechaTerminacionEstadia": "3/9/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "3/14/2016",
+  "fechaTerminacionEstadia": "2/4/2017",
+  "precio": 32,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":22,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Daniel Palmer",
+		"contrasena":"HQhMNplLKWl",
+		"correoElectronico":"dpalmer6@businessinsider.com",
+		"tipoDocumento":"Catalan",
+		"numeroDocumento":"215.9.109.218/27",
+		"direccion":"6 Park Meadow Avenue",
+		"telefono":"86-(199)374-4258"
+  } 
+    }, {
   "id": 31,
-  "fechaInicioEstadia": "5/13/2016",
-  "fechaTerminacionEstadia": "2/21/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "2/18/2016",
+  "fechaTerminacionEstadia": "3/29/2017",
+  "precio": 55,
+  "cancelado": true,
+  "viajero": {
+            	"idUsuario":23,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Ryan Cunningham",
+		"contrasena":"wtyM3DSAE6h",
+		"correoElectronico":"rcunningham7@unc.edu",
+		"tipoDocumento":"Fijian",
+		"numeroDocumento":"118.64.142.120/3",
+		"direccion":"0 Hazelcrest Terrace",
+		"telefono":"86-(670)357-9337"
+  }      
 }, {
   "id": 32,
-  "fechaInicioEstadia": "5/14/2016",
-  "fechaTerminacionEstadia": "2/17/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "2/18/2016",
+  "fechaTerminacionEstadia": "3/9/2017",
+  "precio": 72,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":24,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Gerald Kim",
+		"contrasena":"HgR0zVqB",
+		"correoElectronico":"gkim8@shareasale.com",
+		"tipoDocumento":"Assamese",
+		"numeroDocumento":"182.250.98.96/2",
+		"direccion":"5692 Bultman Center",
+		"telefono":"57-(531)225-0551"
+                }
 }, {
   "id": 33,
-  "fechaInicioEstadia": "5/27/2016",
-  "fechaTerminacionEstadia": "3/30/2017",
-  "cancelado": true
+  "fechaInicioEstadia":  "1/5/2016",
+  "fechaTerminacionEstadia": "2/17/2017",
+  "precio": 30,
+  "cancelado": false,
+  "viajero": 
+                {
+                "idUsuario":24,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Gerald Kim",
+		"contrasena":"HgR0zVqB",
+		"correoElectronico":"gkim8@shareasale.com",
+		"tipoDocumento":"Assamese",
+		"numeroDocumento":"182.250.98.96/2",
+		"direccion":"5692 Bultman Center",
+		"telefono":"57-(531)225-0551"
+                }        
 }, {
   "id": 34,
-  "fechaInicioEstadia": "5/4/2016",
-  "fechaTerminacionEstadia": "2/9/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/10/2016",
+  "fechaTerminacionEstadia": "3/26/2017",
+  "precio": 6,
+  "cancelado": false,
+  "viajero": 
+                {
+                "idUsuario":24,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Gerald Kim",
+		"contrasena":"HgR0zVqB",
+		"correoElectronico":"gkim8@shareasale.com",
+		"tipoDocumento":"Assamese",
+		"numeroDocumento":"182.250.98.96/2",
+		"direccion":"5692 Bultman Center",
+		"telefono":"57-(531)225-0551"
+                }
+    }, {
   "id": 35,
-  "fechaInicioEstadia": "5/23/2016",
-  "fechaTerminacionEstadia": "2/17/2017",
-  "cancelado": true
-}, {
+  "fechaInicioEstadia": "2/27/2016",
+  "fechaTerminacionEstadia": "3/19/2017",
+  "precio": 21,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":24,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Gerald Kim",
+		"contrasena":"HgR0zVqB",
+		"correoElectronico":"gkim8@shareasale.com",
+		"tipoDocumento":"Assamese",
+		"numeroDocumento":"182.250.98.96/2",
+		"direccion":"5692 Bultman Center",
+		"telefono":"57-(531)225-0551"
+                }
+    }, {
   "id": 36,
-  "fechaInicioEstadia": "5/15/2016",
-  "fechaTerminacionEstadia": "2/10/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "2/5/2016",
+  "fechaTerminacionEstadia": "3/30/2017",
+  "precio": 32,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":25,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Jean Hudson",
+		"contrasena":"ehopQ9v",
+		"correoElectronico":"jhudson9@yale.edu",
+		"tipoDocumento":"Azeri",
+		"numeroDocumento":"199.246.9.85/8",
+		"direccion":"30 Reindahl Point",
+		"telefono":"84-(594)659-5309"
+  }      
 }, {
   "id": 37,
-  "fechaInicioEstadia": "4/7/2016",
-  "fechaTerminacionEstadia": "3/13/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/17/2016",
+  "fechaTerminacionEstadia": "2/11/2017",
+  "precio": 76,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":25,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Jean Hudson",
+		"contrasena":"ehopQ9v",
+		"correoElectronico":"jhudson9@yale.edu",
+		"tipoDocumento":"Azeri",
+		"numeroDocumento":"199.246.9.85/8",
+		"direccion":"30 Reindahl Point",
+		"telefono":"84-(594)659-5309"
+  }         
 }, {
   "id": 38,
-  "fechaInicioEstadia": "5/17/2016",
-  "fechaTerminacionEstadia": "3/27/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/6/2016",
+  "fechaTerminacionEstadia": "2/27/2017",
+  "precio": 94,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":25,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Jean Hudson",
+		"contrasena":"ehopQ9v",
+		"correoElectronico":"jhudson9@yale.edu",
+		"tipoDocumento":"Azeri",
+		"numeroDocumento":"199.246.9.85/8",
+		"direccion":"30 Reindahl Point",
+		"telefono":"84-(594)659-5309"
+  } 
+    }, {
   "id": 39,
-  "fechaInicioEstadia": "4/12/2016",
-  "fechaTerminacionEstadia": "3/12/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/16/2016",
+  "fechaTerminacionEstadia": "3/17/2017",
+  "precio": 81,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":25,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Jean Hudson",
+		"contrasena":"ehopQ9v",
+		"correoElectronico":"jhudson9@yale.edu",
+		"tipoDocumento":"Azeri",
+		"numeroDocumento":"199.246.9.85/8",
+		"direccion":"30 Reindahl Point",
+		"telefono":"84-(594)659-5309"
+  } 
+    }, {
   "id": 40,
-  "fechaInicioEstadia": "5/26/2016",
-  "fechaTerminacionEstadia": "3/7/2017",
-  "cancelado": true
-}, {
+  "fechaInicioEstadia": "3/26/2016",
+  "fechaTerminacionEstadia": "3/14/2017",
+  "precio": 63,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":25,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Jean Hudson",
+		"contrasena":"ehopQ9v",
+		"correoElectronico":"jhudson9@yale.edu",
+		"tipoDocumento":"Azeri",
+		"numeroDocumento":"199.246.9.85/8",
+		"direccion":"30 Reindahl Point",
+		"telefono":"84-(594)659-5309"
+  } 
+    }, {
   "id": 41,
-  "fechaInicioEstadia": "5/10/2016",
-  "fechaTerminacionEstadia": "2/14/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "2/28/2016",
+  "fechaTerminacionEstadia": "3/8/2017",
+  "precio": 40,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":26,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Thomas Green",
+		"contrasena":"tmIYDQYalv",
+		"correoElectronico":"tgreena@mac.com",
+		"tipoDocumento":"Hungarian",
+		"numeroDocumento":"129.231.105.75/20",
+		"direccion":"2608 Homewood Drive",
+		"telefono":"62-(942)209-9163"
+  }      
 }, {
   "id": 42,
-  "fechaInicioEstadia": "4/23/2016",
-  "fechaTerminacionEstadia": "3/6/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/5/2016",
+  "fechaTerminacionEstadia": "3/25/2017",
+  "precio": 28,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":26,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Thomas Green",
+		"contrasena":"tmIYDQYalv",
+		"correoElectronico":"tgreena@mac.com",
+		"tipoDocumento":"Hungarian",
+		"numeroDocumento":"129.231.105.75/20",
+		"direccion":"2608 Homewood Drive",
+		"telefono":"62-(942)209-9163"
+  }        
 }, {
   "id": 43,
-  "fechaInicioEstadia": "4/25/2016",
-  "fechaTerminacionEstadia": "2/25/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "2/20/2016",
+  "fechaTerminacionEstadia": "3/5/2017",
+  "precio": 47,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":26,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Thomas Green",
+		"contrasena":"tmIYDQYalv",
+		"correoElectronico":"tgreena@mac.com",
+		"tipoDocumento":"Hungarian",
+		"numeroDocumento":"129.231.105.75/20",
+		"direccion":"2608 Homewood Drive",
+		"telefono":"62-(942)209-9163"
+  }        
 }, {
   "id": 44,
-  "fechaInicioEstadia": "4/8/2016",
-  "fechaTerminacionEstadia": "2/17/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "3/4/2016",
+  "fechaTerminacionEstadia": "3/28/2017",
+  "precio": 48,
+  "cancelado": false,
+  "viajero":
+                {
+                "idUsuario":27,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Janet Bradley",
+		"contrasena":"O3LxGEgKRP",
+		"correoElectronico":"jbradleyb@typepad.com",
+		"tipoDocumento":"Dutch",
+		"numeroDocumento":"83.205.61.56/17",
+		"direccion":"88 Prentice Trail",
+		"telefono":"58-(378)567-0970"
+                }
 }, {
   "id": 45,
-  "fechaInicioEstadia": "4/13/2016",
-  "fechaTerminacionEstadia": "2/22/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "2/1/2016",
+  "fechaTerminacionEstadia": "1/31/2017",
+  "precio": 83,
+  "cancelado": true,
+  "viajero":
+                {
+                "idUsuario":27,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Janet Bradley",
+		"contrasena":"O3LxGEgKRP",
+		"correoElectronico":"jbradleyb@typepad.com",
+		"tipoDocumento":"Dutch",
+		"numeroDocumento":"83.205.61.56/17",
+		"direccion":"88 Prentice Trail",
+		"telefono":"58-(378)567-0970"
+                }        
 }, {
   "id": 46,
-  "fechaInicioEstadia": "5/21/2016",
-  "fechaTerminacionEstadia": "3/9/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "1/3/2016",
+  "fechaTerminacionEstadia": "2/24/2017",
+  "precio": 75,
+  "cancelado": false,
+  "viajero":
+                {
+                "idUsuario":27,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Janet Bradley",
+		"contrasena":"O3LxGEgKRP",
+		"correoElectronico":"jbradleyb@typepad.com",
+		"tipoDocumento":"Dutch",
+		"numeroDocumento":"83.205.61.56/17",
+		"direccion":"88 Prentice Trail",
+		"telefono":"58-(378)567-0970"
+                }
+    }, {
   "id": 47,
-  "fechaInicioEstadia": "4/11/2016",
-  "fechaTerminacionEstadia": "2/28/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/8/2016",
+  "fechaTerminacionEstadia": "2/20/2017",
+  "precio": 61,
+  "cancelado": false,
+  "viajero":
+                {
+                "idUsuario":27,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Janet Bradley",
+		"contrasena":"O3LxGEgKRP",
+		"correoElectronico":"jbradleyb@typepad.com",
+		"tipoDocumento":"Dutch",
+		"numeroDocumento":"83.205.61.56/17",
+		"direccion":"88 Prentice Trail",
+		"telefono":"58-(378)567-0970"
+                }
+    }, {
   "id": 48,
-  "fechaInicioEstadia": "5/28/2016",
-  "fechaTerminacionEstadia": "2/15/2017",
-  "cancelado": true
-}, {
+  "fechaInicioEstadia": "3/12/2016",
+  "fechaTerminacionEstadia": "1/31/2017",
+  "precio": 72,
+  "cancelado": false,
+  "viajero":
+                {
+                "idUsuario":27,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Janet Bradley",
+		"contrasena":"O3LxGEgKRP",
+		"correoElectronico":"jbradleyb@typepad.com",
+		"tipoDocumento":"Dutch",
+		"numeroDocumento":"83.205.61.56/17",
+		"direccion":"88 Prentice Trail",
+		"telefono":"58-(378)567-0970"
+                }
+    }, {
   "id": 49,
-  "fechaInicioEstadia": "5/2/2016",
-  "fechaTerminacionEstadia": "2/6/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/7/2016",
+  "fechaTerminacionEstadia": "2/28/2017",
+  "precio": 12,
+  "cancelado": false,
+  "viajero":
+                {
+                "idUsuario":28,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Patrick Fuller",
+		"contrasena":"yQNMoLEv",
+		"correoElectronico":"pfullerc@dailymail.co.uk",
+		"tipoDocumento":"Chinese",
+		"numeroDocumento":"143.225.146.127/27",
+		"direccion":"61265 Ronald Regan Parkway",
+		"telefono":"234-(684)973-7430"
+                }
+                
 }, {
   "id": 50,
-  "fechaInicioEstadia": "5/28/2016",
-  "fechaTerminacionEstadia": "2/7/2017",
-  "cancelado": true
+  "fechaInicioEstadia": "2/12/2016",
+  "fechaTerminacionEstadia": "3/19/2017",
+  "precio": 32,
+  "cancelado": false,
+  "viajero":
+                {
+                "idUsuario":28,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Patrick Fuller",
+		"contrasena":"yQNMoLEv",
+		"correoElectronico":"pfullerc@dailymail.co.uk",
+		"tipoDocumento":"Chinese",
+		"numeroDocumento":"143.225.146.127/27",
+		"direccion":"61265 Ronald Regan Parkway",
+		"telefono":"234-(684)973-7430"
+                }        
 }, {
   "id": 51,
-  "fechaInicioEstadia": "5/9/2016",
-  "fechaTerminacionEstadia": "3/14/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "3/10/2016",
+  "fechaTerminacionEstadia": "2/12/2017",
+  "precio": 20,
+  "cancelado": true,
+  "viajero": 
+                {
+                "idUsuario":29,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Beverly Berry",
+		"contrasena":"rbapZxixr",
+		"correoElectronico":"bberryd@posterous.com",
+		"tipoDocumento":"Dhivehi",
+		"numeroDocumento":"7.217.83.182/2",
+		"direccion":"4567 Shoshone Alley",
+		"telefono":"86-(424)894-9836"
+                }
 }, {
   "id": 52,
-  "fechaInicioEstadia": "5/16/2016",
-  "fechaTerminacionEstadia": "3/10/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "1/2/2016",
+  "fechaTerminacionEstadia": "3/13/2017",
+  "precio": 92,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":30,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Virginia Arnold",
+		"contrasena":"hnAB9iYYRz",
+		"correoElectronico":"varnolde@slate.com",
+		"tipoDocumento":"West Frisian",
+		"numeroDocumento":"199.189.45.45/29",
+		"direccion":"423 Hermina Avenue",
+		"telefono":"359-(667)431-3583"
+  }      
 }, {
   "id": 53,
-  "fechaInicioEstadia": "4/19/2016",
-  "fechaTerminacionEstadia": "3/4/2017",
-  "cancelado": false
+  "fechaInicioEstadia": "2/1/2016",
+  "fechaTerminacionEstadia": "3/15/2017",
+  "precio": 16,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":30,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Virginia Arnold",
+		"contrasena":"hnAB9iYYRz",
+		"correoElectronico":"varnolde@slate.com",
+		"tipoDocumento":"West Frisian",
+		"numeroDocumento":"199.189.45.45/29",
+		"direccion":"423 Hermina Avenue",
+		"telefono":"359-(667)431-3583"
+  }          
 }, {
   "id": 54,
-  "fechaInicioEstadia": "5/3/2016",
-  "fechaTerminacionEstadia": "3/26/2017",
-  "cancelado": false
-}, {
+  "fechaInicioEstadia": "2/12/2016",
+  "fechaTerminacionEstadia": "2/10/2017",
+  "precio": 46,
+  "cancelado": false,
+  "viajero": {
+                "idUsuario":30,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Virginia Arnold",
+		"contrasena":"hnAB9iYYRz",
+		"correoElectronico":"varnolde@slate.com",
+		"tipoDocumento":"West Frisian",
+		"numeroDocumento":"199.189.45.45/29",
+		"direccion":"423 Hermina Avenue",
+		"telefono":"359-(667)431-3583"
+  }  
+    }, {
   "id": 55,
-  "fechaInicioEstadia": "5/9/2016",
-  "fechaTerminacionEstadia": "3/26/2017",
-  "cancelado": false
-}]
+  "fechaInicioEstadia": "1/24/2016",
+  "fechaTerminacionEstadia": "2/24/2017",
+  "precio": 64,
+  "cancelado": true,
+  "viajero": {
+                "idUsuario":30,
+		"imagen":"https://dummyimage.com/300x300.png/0784D1/ffffff",
+		"nombre":"Virginia Arnold",
+		"contrasena":"hnAB9iYYRz",
+		"correoElectronico":"varnolde@slate.com",
+		"tipoDocumento":"West Frisian",
+		"numeroDocumento":"199.189.45.45/29",
+		"direccion":"423 Hermina Avenue",
+		"telefono":"359-(667)431-3583"
+  }  
+    }]
