@@ -10,8 +10,8 @@
             </thead>
             <tbody>
                 <tr ng-repeat="pago in pagosRecords">
-                    <td id="{{$index}}-name">   <a ui-sref="pagosList({pagoId: pago.id})">{{pago.pago}}</a></td>
-                    <td id="{{$index}}-descrption">{{pago.pago}}</td>    
+                    <td id="{{$index}}-name">{{pago.pago}}</td>
+                    <td id="{{$index}}-descrption">{{pago.fechaDePago}}</td>    
                     <td id="{{$index}}-descrption">{{pago.tipoTramite}}</td>
                 </tr>
             </tbody>
