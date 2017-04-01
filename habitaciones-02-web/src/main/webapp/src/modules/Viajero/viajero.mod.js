@@ -82,23 +82,13 @@
                     viajeroId: null
                 },
                 views: {
-                    'listView': {
-                        templateUrl: basePath + 'viajero.list.html'
-                    },
                     'reservasViajeroView':{
-                        templateUrl: basePath + 'viajero.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
-                            }]
-                        
-                    },
-                    'detailView': {
                         templateUrl: basePath + 'viajero.reservas.list.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
                                 $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
                             }]
+                        
                     }
-
                 } 
             });
             
