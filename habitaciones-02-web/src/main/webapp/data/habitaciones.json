@@ -4,7 +4,18 @@
   "descripcion": "Leptospiral infect NEC",
   "rutaImagen": "http://dummyimage.com/116x208.jpg/5fa2dd/ffffff",
   "valorAlquiler": "$28.47",
-  "capacidad": 2
+  "capacidad": 2,
+  "disponibilidades":[
+    {
+      "id": 1,
+      "fechaInicioEstadia": "2017-01-26",
+      "fechaTerminacionEstadia": "2016-12-22"
+    },
+    {
+      "id": 3,
+      "fechaInicioEstadia": "2016-07-12",
+      "fechaTerminacionEstadia": "2016-07-04"
+    } ]
 }, {
   "id": 2,
   "area": 31.86,
