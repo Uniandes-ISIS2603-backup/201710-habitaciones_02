@@ -1,17 +1,77 @@
 <div class="panel panel-default"> 
     <div class="panel-body">
-        <div class="row">
-            
-            <div class="col-md-3">
-                <dl>     
-                    <dt>{{currentReserva.fechaInicioEstadia}}</dt>
-                  <dt>{{currentReserva.cancelado}}</dt>
-                </dl>
-               
-            </div>
+      <div class="col-md-4">
+          <div class="panel panel-default">
+          <div class="panel-body">
+          <div class="row">
+   
+              <center>  
+              <dt style="font-size: 25px ">Viajero: {{currentReserva.viajero.nombre}} </dt>
+              </center>
+              
+                <hr>
+                <center>
+                <dt > Contrasena </dt>
+                <dd > {{currentReserva.viajero.contrasena}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Correo Electronico </dt>
+                <dd > {{currentReserva.viajero.correoElectronico}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Tipo de Documento </dt>
+                <dd> {{currentReserva.viajero.tipoDocumento}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Numero de Documento </dt>
+                <dd  >{{currentReserva.viajero.numeroDocumento}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Direccion </dt>
+                <dd > {{currentReserva.viajero.direccion}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Telefono </dt>
+                <dd >{{currentReserva.viajero.telefono}} </dd>
+                <dt > &ensp; </dt>
+                 </center> 
+        
          
-            
-   </div>
+
+         </div>
+              </div>
+         </div>
+       </div>
+        
+          
+                  <div class="col-md-4">
+                <div class="panel panel-default">
+                 <div class="panel-body">
+              <center>  
+              <dt style="font-size: 25px ">Habitacion id: {{currentReserva.habitacion.id}} </dt>
+              </center>
+              
+                <hr>
+
+                <center>
+                <dt > Area </dt>
+                <dd > {{currentReserva.habitacion.area}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Descripcion </dt>
+                <dd > {{currentReserva.habitacion.descripcion}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Valor Alquiler </dt>
+                <dd > {{currentReserva.habitacion.valorAlquiler}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Capacidad </dt>
+                <dd  >{{currentReserva.habitacion.capacidad}}</dd>
+                <dt > &ensp; </dt>
+                <dt > &ensp; </dt>
+                <dt > &ensp; </dt>
+                <dt > &ensp; </dt>
+                <dt > &ensp; </dt>
+                <dt > &ensp; </dt>
+                <dt > &ensp; </dt>
+                 </center> 
+        
+          </div>
+         </div>
+          </div>
     </div>
 </div>          
             
