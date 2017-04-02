@@ -34,16 +34,27 @@
             </div>
         </div>
         <div class="col-md-9">
+            
             <nav style="margin-top: -5px;border-top: none;background-color: white; border-color: #d1eeff" class="navbar navbar-default">
+                <div class="col-md-8">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="viajeroReservasList"><b>Reservas</b></a></li>
+                        <li><a ui-sref="viajeroResenasList"><b>Reseñas Redactadas</b></a></li>  
+                    </ul>
+                    
+                </div>
+                <div class="col-md-4">
+                    
+                    <ul class="nav navbar-nav text-right">
+                        <li><a ui-sref="viajeroUpdate"><b>Actualizar Perfil</b></a></li>
+                    </ul>
+                    
+                </div>
                 
-                <ul class="nav navbar-nav">
-
-                    <li><a  ui-sref="viajeroReservasList"><b>Reservas</b></a></li>
-                    <li><a href="https://www.youtube.com/watch?v=feA64wXhbjo"><b>Reseñas Escritas</b></a></li>
-                </ul>
              
             </nav>
-            <div ui-view="reservasViajeroView"></div>
+            
+            <div ui-view="ListasViajeroView"></div>
         </div>
         
 

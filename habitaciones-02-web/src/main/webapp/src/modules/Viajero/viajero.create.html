@@ -1,1 +1,78 @@
-Reserva Create Html
+<div class="panel panel-default" style="border-color: #d1eeff;">
+            
+    <div class="panel-body">
+       
+        <div class="row">
+                
+                <h2 style="text-align: center;">Sign Up Viajero!<br></h2>
+
+                <p style="text-align: center; font-size: 14px; text-align: center;">
+                    Hola nuevo viajero! Estas a punto de registrar en la pagina de reservacion de habitaciones mas grande de la
+                    clase de Desarrollo de Software en Equipo!<br>
+                    A continuacion, debes ingresar algunos datos personales que son indispensables para la creacion de tu nueva cuenta. <br>
+                    Con ello, podras empezar a buscar y a disfrutar de los diversos beneficios que Habitaciones Uniandes trae para ti!
+                </p>
+                <br>
+                <hr>
+
+                <div class="col-md-7">
+                    
+                    <img src="http://symmetrydirectbuy.com/wp-content/uploads/2012/06/Home-HappyGroup+2.jpg" alt="symmetrydirectbuy.com">
+                    
+                </div>
+                
+                <div class="col-md-5">
+                    
+                    <div class="text-left">
+                        
+                        <form name="formaCreateV" style="margin-left: 20px;" novalidate>
+
+                            <h4>Informacion de Cuenta</h4><br>
+                            
+                            <b>Correo Electronico</b><br>
+                            <input class="Actualizacion" name="correoElectronico" type="email" size="40" ng-model='correoElectronico'required>
+                            <span ng-show="formaCreateV.correoElectronico.$touched && formaCreateV.correoElectronico.$invalid"><b style="color: red">X</b></span><br><br>
+
+                            <b>Contrasena:</b><br>
+                            <input type="password" name="contrasenaV1" size="40" ng-model='contrasenaV1' required><br><br>
+                            <span ng-show="formaCreateV.contrasenaV1.$touched && formaCreateV.contrasenaV1.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br>
+
+                            <b>Repita nuevamente la Contrasena:</b><br>
+                            <input type="password" name="contrasenaV2" size="40" ng-model='contrasenaV2' required><br><br>
+                            <span ng-show="formaCreateV.contrasenaV1.$touched && formaCreateV.contrasenaV2.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
+                            
+                            <h4>Informacion Personal</h4><br>
+                            
+                            <b>Nombre Completo:</b><br>
+                            <input class="Actualizacion" name="nombre" type="text" size="40" ng-model='nombre'required>
+                            <span ng-show="formaCreateV.nombre.$touched && formaCreateV.nombre.$invalid"><b style="color: red">X</b></span><br><br>
+
+                            <!-- Pede ser type='radio'?-->
+                            <b>Tipo Documento</b><br>
+                            <input class="Actualizacion" name="tipoDocumento" type="text" size="40" ng-model='tipoDocumento'required>
+                            <span ng-show="formaCreateV.tipoDocumento.$touched && formaCreateV.tipoDocumento.$invalid"><b style="color: red">X</b></span><br><br>
+
+                            <b>Numero Documento</b><br>
+                            <input class="Actualizacion" name="numeroDocumento" type="text" size="40" ng-model='numeroDocumento'required>
+                            <span ng-show="formaCreateV.numeroDocumento.$touched && formaCreateV.numeroDocumento.$invalid"><b style="color: red">X</b></span><br><br>
+
+                            <b>Direccion</b><br>
+                            <input class="Actualizacion" name="direccion" type="text" size="40" ng-model='direccion'required>
+                            <span ng-show="formaCreateV.direccion.$touched && formaCreateV.direccion.$invalid"><b style="color: red">X</b></span><br><br>
+
+                            <b>Telefono de Contacto</b><br>
+                            <input class="Actualizacion" name="telefono" type="text" size="40" ng-model='telefono'required>
+                            <span ng-show="formaCreateV.telefono.$touched && formaCreateV.telefono.$invalid"><b style="color: red">X</b></span><br><br>
+
+                            <input class='Actualizacion' type="submit" value="Actualizar datos">
+
+                        </form>
+                            
+                    </div>
+                    
+                </div>
+                
+                
+        </div>    
+    </div>
+</div>
