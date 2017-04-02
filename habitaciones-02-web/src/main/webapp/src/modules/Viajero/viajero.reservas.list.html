@@ -1,1 +1,50 @@
-<p style="font-size: 30px">lista de reservas</p>
+<div class="panel panel-default" style="border-color: #d1eeff;">
+    <style>
+            dt{
+                text-align: center;
+            }
+            dd{
+                text-align: center;
+            }
+    </style>
+    <div class="panel-body" >
+        
+        <div class = "row" style="border-bottom-color: black">
+            
+            <div class="col-sm-6 col-md-6"> </div>
+            <div class="col-sm-1 col-md-1"> <b>Filtrar: </b></div>
+            <div class="col-sm-5 col-md-5"> 
+                <form> 
+                    Fecha Inicio: <input type="date" name="fechaInicioEstadia">
+                    Fecha fin: <input type="date" name="fechaTerminacionEstadia">
+                </form>
+
+            </div>
+
+        </div>
+        
+        <div class = "row" style="margin-top: 10px;">
+            
+            <div class="col-sm-2 col-md-2" ng-repeat="reserva in currentViajero.reservas">
+                <div class="thumbnail" >
+                    
+                    <dl>
+                    <dt>Numero Reserva</dt>
+                    <dd>{{reserva.id}}</dd>
+                    
+                    <dt>Fecha Inicio</dt>
+                    <dd>{{reserva.fechaInicioEstadia}}</dd>
+                    
+                    <dt>Fecha Fin</dt>
+                    <dd>{{reserva.fechaTerminacionEstadia}}</dd>
+                    
+                    </dl>
+                    
+                </div>
+                
+            </div>
+        </div>
+            
+    </div>
+        
+</div>
