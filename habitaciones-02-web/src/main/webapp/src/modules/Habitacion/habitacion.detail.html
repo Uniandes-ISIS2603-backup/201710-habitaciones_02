@@ -29,8 +29,11 @@
 
                         <div class="col-md-6">
                             <dt style="font-size: 20px "> Disponibilidades    </dt>
+                            <hr>
                             <ul ng-repeat="disponibilidad in currentHabitacion.disponibilidades">
+                                <a ui-sref="disponibilidadDetail({disponibilidadId: disponibilidad.id})" >
                                 <dt>Disponibilidad: {{disponibilidad.id}}</dt>
+                                </a>
                                 <dd>Fecha inicio estadía: {{disponibilidad.fechaInicioEstadia}}</dd>
                                 <dd>Fecha terminación estadía: {{disponibilidad.fechaTerminacionEstadia}}</dd>
                             </ul> 

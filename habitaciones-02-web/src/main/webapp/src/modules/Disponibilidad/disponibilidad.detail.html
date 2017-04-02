@@ -20,7 +20,9 @@
                         <div class="col-md-10">
                             <dt style="font-size: 20px "> Habitación    </dt>
                             <hr>
+                            <a ui-sref="habitacionDetail({habitacionId: currentDisponibilidad.habitacion.id})" >
                             <dd>Habitación: {{currentDisponibilidad.habitacion.id}}</dd>
+                            </a>
                             <dd>Área: {{currentDisponibilidad.habitacion.area}}</dd>
                             <dd>Capacidad: {{currentDisponibilidad.habitacion.capacidad}}</dd>
                             <dd>Valor Alquiler: {{currentDisponibilidad.habitacion.valorAlquiler}}</dd>
