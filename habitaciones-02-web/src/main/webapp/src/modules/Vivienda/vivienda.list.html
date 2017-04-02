@@ -1,10 +1,18 @@
-<div class ="container-fluid">
-    <div class =" row">
-        <div class="col-sm-2 col-md-2" ng-repeat="vivienda in viviendasRecords">
-            <div class ="thumbnail">
-                <img class="img-responsive" ng-src ='{{vivienda.rutaImagen}}' alt ="{{vivienda.direccion}}"/>
-                <div class="caption text-center">{{vivienda.ciudad}}</div>
-                <div class="caption text-center">{{vivienda.direccion}}</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" ng-repeat="vivienda in viviendasRecords">
+            <div class="thumbnail">
+                <style scoped>
+                    img{
+                        width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                    }
+                </style>
+                <a ui-sref="viviendaDetail({viviendaId: vivienda.id})">                    
+                    <img class="img-responsive" ng-src='{{vivienda.rutaImagen}}' alt="{{vivienda.ciudad}}" />                  
+                </a>
+                <div class="caption text-center">
+                    <p>{{vivienda.direccion}}</p>
+                </div>
             </div>
         </div>
     </div>

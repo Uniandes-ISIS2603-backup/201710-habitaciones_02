@@ -27,7 +27,7 @@
                 // El controlador guarda en el scope en la variable reservaRecords los datos que trajo el resolve
                 // reservaRecords será visible en el template
                 controller:'reservaListCtrl',
-                controllerAs: 'ctrl',
+               
                 }
                 }
             }).state('reservasList', {
@@ -39,6 +39,9 @@
                 resolve: {
                     reservas: ['$http', function ($http) {
                             return $http.get('data/reservas.json'); 
+                        }],
+                    viajeros: ['$http', function ($http) {
+                            return $http.get('data/viajeros.json'); 
                         }]
                 },
                 views:{
@@ -62,7 +65,7 @@
                     'detailView': {
                         templateUrl: basePath + 'reserva.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId-1];
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId];
                             }]
                     }
 

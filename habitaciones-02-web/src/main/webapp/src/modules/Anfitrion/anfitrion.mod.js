@@ -6,10 +6,15 @@
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Anfitrion/';
+            var actual=1;
+            var presente=0;
+            var anterior;
+            var siguiente;
             // Definición del estado 'anfitrionesList' donde se listan los anfitriones
             $stateProvider.state('anfitrion', {
                 url: '/anfitriones',
                 abstract: true,
+                
                 resolve: {
                     anfitriones: ['$http', function ($http) {
                             return $http.get('data/anfitriones.json');
@@ -36,6 +41,7 @@
                         }]
                     
                     
+                    
                 },
                 views:{
                     'mainView': {
@@ -48,16 +54,51 @@
             $stateProvider.state('anfitrionDetail', {
                  url: '/{anfitrionId:int}/detail',
                 parent: 'anfitrion',
+                
                 param: {
-                    anfitrionId: null
+                    anfitrionId: null,        
                 },
+                resolve: {
+                anfitrionPresente: [function(){
+                        return presente;
+                }]
+                ,
+                anfitrionActual: ['$stateParams', function ( $params) {
+                                console.log($params.anfitrionId);
+                                
+                                
+                                return $params.anfitrionId-1;
+                         
+                        
+                }], anfitrionSiguiente: [ '$stateParams', function ( $params) {
+                                console.log($params.anfitrionId);
+                                
+                                
+                                return $params.anfitrionId;
+                         
+                        
+                }], anfitrionAnterior: ['$stateParams', function ( $params) {
+                                console.log($params.anfitrionId);
+                                
+                                
+                                return $params.anfitrionId-2;
+                         
+                        
+                }]},
+        
                 views: {
                     'anfitrionCarouselView': {
-                        templateUrl: basePath + 'anfitrion.carousel.html'
+                        templateUrl: basePath + 'anfitrion.carousel.html',
+                        controller: 'anfitrionCarouselCtrl'
+                        
                     },
                     'detailView': {
                         templateUrl: basePath + 'anfitrion.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                console.log($params.anfitrionId);
+                                
+                                
+                                actual=$params.anfitrionId-1;
                                 $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
                             }]
                     }

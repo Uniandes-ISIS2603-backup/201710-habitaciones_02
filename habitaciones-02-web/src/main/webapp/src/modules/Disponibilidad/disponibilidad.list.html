@@ -4,19 +4,18 @@
         <!-- disponibilidadesRecords fue inicializada en el controlador del estado disponibilidadesList -->
         <!-- Itera sobre cada uno de las disponibilidades en la colección disponibilidadesRecords -->
         <div class="col-sm-4 col-md-3" ng-repeat="disponibilidad in disponibilidadesRecords">
-             <!--Despliega la imagen  -->
-            <div class="disponibilidadesHabitacion">
-                 <!-- Despliega en el caption la informacion de la disponibilidad -->
-                 <!-- <h3>{{viajero.nombre}}</h3> -->
-                 
-                 <div class="caption text-center">
-                     
-                     <h4>Informacion Fechas Disponibilidad</h4>
-                     <p>Fecha Inicio</p>
-                     {{disponibilidad.fechaInicioEstadia}}
-                     <p>Fecha Terminacion</p>
-                     {{disponibilidad.fechaTerminacionEstadia}}
-                 </div>
+            <!--Despliega la imagen  -->
+            <div class="thumbnail">
+
+                <div class="caption text-center">
+                    <a ui-sref="disponibilidadDetail({disponibilidadId: disponibilidad.id})">
+                        <h4>Disponibilidad</h4>
+                        <p>Fecha Inicio: {{disponibilidad.fechaInicioEstadia}}</p>
+
+                        <p>Fecha Terminacion: {{disponibilidad.fechaTerminacionEstadia}}</p>
+
+                    </a>
+                </div>
             </div>
         </div>
     </div>
