@@ -1,0 +1,81 @@
+<div class="panel panel-default"> 
+    <div class="panel-body">
+
+        <style>
+            dd{
+                text-align: left;
+            }
+        </style>
+        
+        <div class="row">
+
+            <div class="col-sm-4 col-md-4">
+
+                <dl>
+                    <dt style="text-align-last: center; font-size: 20px;">Informacion Habitacion</dt>
+                    <hr>
+                    <img style="width: 100%; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px;" class="img-responsive" ng-src="{{currentResena.habitacion.rutaImagen}}"/>
+                    <hr>
+                    
+                    <dt>capacidad</dt>
+                    <dd>{{currentResena.habitacion.capacidad}}</dd>
+                    
+                    <dt>Valor Alquiler por dia</dt>
+                    <dd>{{currentResena.habitacion.valorAlquiler}}</dd>
+                    <hr>
+                    
+                    <dt>Descripcion</dt>
+                    <dd> <br> "{{currentResena.habitacion.descripcion}}" </br></dd>
+                    
+                </dl>
+                
+                <a ui-sref="habitacionDetail({habitacionId: currentResena.habitacion.id})" >
+                    <b style="color: lightblue; text-align: right"> mas informacion</b>
+                </a>
+
+            </div>
+            <div class="col-sm-5 col-md-5">
+
+                <dl>
+                    <dt style="text-align-last: center; font-size: 25px;">Resena</dt>
+                    <hr>
+                    <dt>Calificacion</dt>
+                    <dd style="color: rgb(185,133,36); font-size: 18px; "> <br> {{currentResena.calificacion}} de 5 estrellas </br> </dd>
+                    <hr>
+                    <dt>Comentario</dt>
+                    <dd> <br> "{{currentResena.comentario}}" </br></dd>
+
+                </dl>
+
+            </div>
+            <div class="col-sm-3 col-md-3">
+
+                <dl>
+                    <dt style="text-align-last: center; font-size: 20px;">Redactor de la Resena</dt>
+                    <hr>
+                    <img style="width: 100%; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px;" class="img-responsive" ng-src="{{currentResena.viajero.imagen}}" alt="{{currentResena.viajero.nombre}}"/>
+                    <hr>
+                    
+                    <dt>Nombre</dt>
+                    <dd>{{currentResena.viajero.nombre}}</dd>
+                    
+                    <hr>
+                    
+                    <dt>Correo Electronico</dt>
+                    <dd>{{currentResena.viajero.correoElectronico}}</dd>
+                    
+                    <dt>Telefono</dt>
+                    <dd>{{currentResena.viajero.telefono}}</dd>
+                    
+                </dl>
+                
+                <a ui-sref="viajeroDetail({viajeroId: currentResena.viajero.idUsuario})">
+                    <b style="color: lightblue; text-align: right"> mas informacion</b>
+                </a>
+                
+            </div>
+
+
+        </div>
+    </div>
+</div>

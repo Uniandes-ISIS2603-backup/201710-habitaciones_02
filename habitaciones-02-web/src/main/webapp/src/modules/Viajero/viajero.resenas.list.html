@@ -26,24 +26,23 @@
         
         <div class = "row" style="margin-top: 10px;">
             
-            <div class="col-sm-3 col-md-3" ng-repeat="reserva in currentViajero.reservas">
+            <div class="col-sm-3 col-md-3" ng-repeat="resena in currentViajero.resenas">
                 <div class="thumbnail" >
                     
                     <dl>
-                        <dt>Numero Reserva</dt>
-                        <dd>{{reserva.id}}</dd>
+                        <dt>Numero Resena</dt>
+                        <dd>{{resena.id}}<br></br></dd>
 
-                        <dt>Fecha Inicio</dt>
-                        <dd>{{reserva.fechaInicioEstadia}}</dd>
-
-                        <dt>Fecha Fin</dt>
-                        <dd>{{reserva.fechaTerminacionEstadia}}</dd>
+                        <dt>Calificacion</dt>
+                        <dd style="color: rgb(185,133,36); font-size: 16px">{{resena.calificacion}} estrellas </dd>
 
                     </dl>
-                    <a ui-sref="reservaDetail({reservaId: reserva.id})">
-                        <b style="color: lightblue;"> mas informacion</b>
-                    </a>
-                    
+                    <div class="text-center">
+                        <a ui-sref="resenaDetail({resenaId: resena.id})">
+                            <b style="color: lightblue;"> mas informacion</b>
+
+                        </a>
+                    </div>
                 </div>
                 
             </div>

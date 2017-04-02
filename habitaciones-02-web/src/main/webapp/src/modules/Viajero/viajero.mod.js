@@ -82,8 +82,42 @@
                     viajeroId: null
                 },
                 views: {
-                    'reservasViajeroView':{
+                    'ListasViajeroView':{
                         templateUrl: basePath + 'viajero.reservas.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                            }]
+                        
+                    }
+                } 
+            });
+            $stateProvider.state('viajeroResenasList', {
+                url: '/{viajeroId:int}/resenas',
+                parent: 'viajeroDetail',
+                
+                param: {
+                    viajeroId: null
+                },
+                views: {
+                    'ListasViajeroView':{
+                        templateUrl: basePath + 'viajero.resenas.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                            }]
+                        
+                    }
+                } 
+            });
+            $stateProvider.state('viajeroUpdate', {
+                url: '/{viajeroId:int}',
+                parent: 'viajeroDetail',
+                
+                param: {
+                    viajeroId: null
+                },
+                views: {
+                    'ListasViajeroView':{
+                        templateUrl: basePath + 'viajero.update.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
                                 $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
                             }]
