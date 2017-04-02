@@ -71,7 +71,41 @@
 
                 } 
             });
+            $stateProvider.state('reservaViajeroList', {
+                url: '/{reservaId:int}/viajero',
+                parent: 'reservaDetail',
+                
+                param: {
+                    reservaId: null
+                },
+                views: {
+                    'ListasReservaView':{
+                        templateUrl: basePath + 'reserva.viajero.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId];
+                            }]
+                        
+                    }
+                } 
+            });
                
+               $stateProvider.state('reservaAnfitrionList', {
+                url: '/{reservaId:int}/anfitrion',
+                parent: 'reservaDetail',
+                
+                param: {
+                    reservaId: null
+                },
+                views: {
+                    'ListasReservaView':{
+                        templateUrl: basePath + 'reserva.anfitrion.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId];
+                            }]
+                        
+                    }
+                } 
+            });
             
         }
     ]);
