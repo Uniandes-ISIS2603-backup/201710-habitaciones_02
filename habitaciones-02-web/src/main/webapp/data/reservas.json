@@ -24,6 +24,18 @@
                 "rutaImagen": "http://dummyimage.com/116x208.jpg/5fa2dd/ffffff",
                 "valorAlquiler": "$28.47",
                 "capacidad": 2  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 30,
+               "nombre": "Henry Schmidt",
+               "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+               "contrasena": "X2m64sp",
+               "correoElectronico": "hschmidtt@is.gd",
+               "tipoDocumento": "Bang Ban",
+               "numeroDocumento": "3582114600207723",
+               "direccion": "2556 Logan Drive",
+               "telefono": "66-(305)688-7015"   
                 }
 }, {
   "id": 3,
@@ -51,6 +63,18 @@
                "rutaImagen": "http://dummyimage.com/112x209.png/dddddd/000000",
                "valorAlquiler": "$23.72",
                "capacidad": 2                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 30,
+               "nombre": "Henry Schmidt",
+               "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+               "contrasena": "X2m64sp",
+               "correoElectronico": "hschmidtt@is.gd",
+               "tipoDocumento": "Bang Ban",
+               "numeroDocumento": "3582114600207723",
+               "direccion": "2556 Logan Drive",
+               "telefono": "66-(305)688-7015"                   
                 }      
         
 }, {
@@ -79,6 +103,18 @@
                   "rutaImagen": "http://dummyimage.com/112x209.png/dddddd/000000",
                   "valorAlquiler": "$23.72",
                   "capacidad": 2                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 30,
+               "nombre": "Henry Schmidt",
+               "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+               "contrasena": "X2m64sp",
+               "correoElectronico": "hschmidtt@is.gd",
+               "tipoDocumento": "Bang Ban",
+               "numeroDocumento": "3582114600207723",
+               "direccion": "2556 Logan Drive",
+               "telefono": "66-(305)688-7015"                   
                 }      
 }, {
   "id": 5,
@@ -106,6 +142,18 @@
                 "rutaImagen": "http://dummyimage.com/191x110.png/ff4444/ffffff",
                 "valorAlquiler": "$39.35",
                 "capacidad": 10  
+                },
+    "anfitrion": 
+                {
+                    "idUsuario": 29,
+                 "nombre": "Mark Fowler",
+                 "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+                 "contrasena": "feziYWjf8W",
+                 "correoElectronico": "mfowlers@altervista.org",
+                 "tipoDocumento": "Umingan",
+                 "numeroDocumento": "5602233147685470524",
+                 "direccion": "024 Saint Paul Street",
+                 "telefono": "63-(177)513-5574"                 
                 }
 }, {
   "id": 6,
@@ -133,7 +181,20 @@
                      "rutaImagen": "http://dummyimage.com/191x110.png/ff4444/ffffff",
                      "valorAlquiler": "$39.35",
                      "capacidad": 10                   
-                }        
+                },
+    "anfitrion": 
+                {
+                    "idUsuario": 29,
+                   "nombre": "Mark Fowler",
+                   "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+                   "contrasena": "feziYWjf8W",
+                   "correoElectronico": "mfowlers@altervista.org",
+                   "tipoDocumento": "Umingan",
+                   "numeroDocumento": "5602233147685470524",
+                   "direccion": "024 Saint Paul Street",
+                   "telefono": "63-(177)513-5574"                   
+                }
+                
 }, {
   "id": 7,
   "fechaInicioEstadia": "1/31/2016",
@@ -160,6 +221,18 @@
                  "rutaImagen": "http://dummyimage.com/191x110.png/ff4444/ffffff",
                  "valorAlquiler": "$39.35",
                  "capacidad": 10                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 1,
+               "nombre": "Eric Lewis",
+               "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+               "contrasena": "tg5ZPng3zG5D",
+               "correoElectronico": "elewis0@prweb.com",
+               "tipoDocumento": "Tianjiaba",
+               "numeroDocumento": "5610927266790273",
+               "direccion": "8556 Onsgard Pass",
+               "telefono": "86-(955)969-4771"                  
                 }        
 }, {
   "id": 8,
@@ -186,6 +259,18 @@
                 "rutaImagen": "http://dummyimage.com/167x166.png/dddddd/000000",
                 "valorAlquiler": "$13.07",
                 "capacidad": 10  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 28,
+              "nombre": "Shawn Mills",
+              "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+              "contrasena": "ky6wRLnpp",
+              "correoElectronico": "smillsr@loc.gov",
+              "tipoDocumento": "Roma",
+              "numeroDocumento": "3565999898740208",
+              "direccion": "54404 Muir Crossing",
+              "telefono": "39-(865)239-3992"                
                 }
 }, {
   "id": 9,
@@ -211,6 +296,18 @@
                 "rutaImagen": "http://dummyimage.com/123x216.bmp/ff4444/ffffff",
                 "valorAlquiler": "$31.27",
                 "capacidad": 5                    
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 3,
+              "nombre": "Raymond Larson",
+              "imagen": "http://dummyimage.com/994x890.bmp/dddddd/000000",
+              "contrasena": "XYE7OfnZOGE",
+              "correoElectronico": "rlarson2@surveymonkey.com",
+              "tipoDocumento": "Babasakhib",
+              "numeroDocumento": "374288064190076",
+              "direccion": "6 Truax Trail",
+              "telefono": "93-(112)658-4334"                  
                 }
 }, {
   "id": 10,
@@ -236,6 +333,18 @@
                 "rutaImagen": "http://dummyimage.com/123x216.bmp/ff4444/ffffff",
                 "valorAlquiler": "$31.27",
                 "capacidad": 5                    
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 2,
+               "nombre": "Rachel Washington",
+               "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+               "contrasena": "oJrPxt82V",
+               "correoElectronico": "rwashington1@mashable.com",
+               "tipoDocumento": "Veles",
+               "numeroDocumento": "3549014352723327",
+               "direccion": "8 Nelson Street",
+               "telefono": "389-(498)606-6756"                   
                 }      
         
 }, {
@@ -262,6 +371,18 @@
                    "rutaImagen": "http://dummyimage.com/123x216.bmp/ff4444/ffffff",
                    "valorAlquiler": "$31.27",
                    "capacidad": 5                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 27,
+              "nombre": "Shawn Carr",
+              "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+              "contrasena": "hqeRzjlag",
+              "correoElectronico": "scarrq@ucoz.com",
+              "tipoDocumento": "Nyapar",
+              "numeroDocumento": "3539028470837001",
+              "direccion": "47 Nevada Avenue",
+              "telefono": "62-(659)189-9250"                  
                 }        
 }, {
   "id": 12,
@@ -287,6 +408,18 @@
                "rutaImagen": "http://dummyimage.com/123x216.bmp/ff4444/ffffff",
                "valorAlquiler": "$31.27",
                "capacidad": 5                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 27,
+              "nombre": "Shawn Carr",
+              "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+              "contrasena": "hqeRzjlag",
+              "correoElectronico": "scarrq@ucoz.com",
+              "tipoDocumento": "Nyapar",
+              "numeroDocumento": "3539028470837001",
+              "direccion": "47 Nevada Avenue",
+              "telefono": "62-(659)189-9250"                  
                 }       
 }, {
   "id": 13,
@@ -314,6 +447,18 @@
                "rutaImagen": "http://dummyimage.com/120x160.jpg/5fa2dd/ffffff",
                "valorAlquiler": "$35.16",
                "capacidad": 6                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 26,
+               "nombre": "Deborah Ramos",
+               "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+               "contrasena": "ga8zMN6VutCa",
+               "correoElectronico": "dramosp@bigcartel.com",
+               "tipoDocumento": "Qiaojia",
+               "numeroDocumento": "5602224770304829",
+               "direccion": "07667 Golden Leaf Avenue",
+               "telefono": "86-(387)240-6780"                   
                 }
 }, {
   "id": 14,
@@ -341,7 +486,19 @@
                "rutaImagen": "http://dummyimage.com/120x160.jpg/5fa2dd/ffffff",
                "valorAlquiler": "$35.16",
                "capacidad": 6                  
-                }        
+                } ,
+    "anfitrion": 
+                {
+            "idUsuario": 26,
+           "nombre": "Deborah Ramos",
+           "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+           "contrasena": "ga8zMN6VutCa",
+           "correoElectronico": "dramosp@bigcartel.com",
+           "tipoDocumento": "Qiaojia",
+           "numeroDocumento": "5602224770304829",
+           "direccion": "07667 Golden Leaf Avenue",
+           "telefono": "86-(387)240-6780"                   
+                }       
 }, {
   "id": 15,
   "fechaInicioEstadia": "2/8/2016",
@@ -368,6 +525,18 @@
                    "rutaImagen": "http://dummyimage.com/120x160.jpg/5fa2dd/ffffff",
                    "valorAlquiler": "$35.16",
                    "capacidad": 6                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 8,
+               "nombre": "Kathryn Rose",
+               "imagen": "http://dummyimage.com/527x435.png/ff4444/ffffff",
+               "contrasena": "K1sGhV",
+               "correoElectronico": "krose7@yellowpages.com",
+               "tipoDocumento": "Las Parejas",
+               "numeroDocumento": "3544163754736653",
+               "direccion": "50 Mifflin Avenue",
+               "telefono": "54-(317)490-7075"                   
                 }
     
     }, {
@@ -396,6 +565,18 @@
                "rutaImagen": "http://dummyimage.com/178x223.jpg/dddddd/000000",
                "valorAlquiler": "$42.29",
                "capacidad": 9                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 8,
+               "nombre": "Kathryn Rose",
+               "imagen": "http://dummyimage.com/527x435.png/ff4444/ffffff",
+               "contrasena": "K1sGhV",
+               "correoElectronico": "krose7@yellowpages.com",
+               "tipoDocumento": "Las Parejas",
+               "numeroDocumento": "3544163754736653",
+               "direccion": "50 Mifflin Avenue",
+               "telefono": "54-(317)490-7075"                   
                 }
     }, {
   "id": 17,
@@ -423,6 +604,18 @@
               "rutaImagen": "http://dummyimage.com/178x223.jpg/dddddd/000000",
               "valorAlquiler": "$42.29",
               "capacidad": 9                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 7,
+               "nombre": "Amanda Snyder",
+               "imagen": "http://dummyimage.com/982x360.jpg/ff4444/ffffff",
+               "contrasena": "okk5UV",
+               "correoElectronico": "asnyder6@wired.com",
+               "tipoDocumento": "Urus-Martan",
+               "numeroDocumento": "3574498474189889",
+               "direccion": "39033 Del Mar Drive",
+               "telefono": "7-(775)409-6225"                   
                 }
     }, {
   "id": 18,
@@ -451,6 +644,19 @@
                "valorAlquiler": "$37.54",
                "capacidad": 9                   
                 }
+                ,
+    "anfitrion": 
+                {
+                "idUsuario": 11,
+               "nombre": "Walter Lopez",
+               "imagen": "http://dummyimage.com/839x537.jpg/dddddd/000000",
+               "contrasena": "9PukFYEL2H",
+               "correoElectronico": "wlopeza@networksolutions.com",
+               "tipoDocumento": "Fengpo",
+               "numeroDocumento": "30136941115988",
+               "direccion": "9 Kensington Way",
+               "telefono": "86-(594)237-4300"                   
+                }
     }, {
   "id": 19,
   "fechaInicioEstadia": "1/26/2016",
@@ -477,7 +683,20 @@
                   "rutaImagen": "http://dummyimage.com/200x241.jpg/dddddd/000000",
                   "valorAlquiler": "$17.75",
                   "capacidad": 4                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 10,
+              "nombre": "Tammy Ramirez",
+              "imagen": "http://dummyimage.com/828x819.png/dddddd/000000",
+              "contrasena": "2ZE3eqQB0",
+              "correoElectronico": "tramirez9@sciencedaily.com",
+              "tipoDocumento": "Kameyama",
+              "numeroDocumento": "4508155848371879",
+              "direccion": "51 Delaware Crossing",
+              "telefono": "81-(727)982-9715"                  
                 }
+                
     }, {
   "id": 20,
   "fechaInicioEstadia": "3/28/2016",
@@ -504,7 +723,20 @@
               "rutaImagen": "http://dummyimage.com/200x241.jpg/dddddd/000000",
               "valorAlquiler": "$17.75",
               "capacidad": 4                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 9,
+                "nombre": "Gary Adams",
+                "imagen": "http://dummyimage.com/746x636.png/dddddd/000000",
+                "contrasena": "nof3P4C7",
+                "correoElectronico": "gadams8@sun.com",
+                "tipoDocumento": "Arapuey",
+                "numeroDocumento": "3547085756511395",
+                "direccion": "73 Elmside Avenue",
+                "telefono": "58-(926)596-1621"                    
                 }
+                
     }, {
   "id": 21,
   "fechaInicioEstadia": "3/14/2016",
@@ -531,6 +763,18 @@
                "rutaImagen": "http://dummyimage.com/148x166.png/cc0000/ffffff",
                "valorAlquiler": "$12.94",
                "capacidad": 2                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 25,
+               "nombre": "Scott Fernandez",
+               "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+               "contrasena": "G87Kuvy9cEh1",
+               "correoElectronico": "sfernandezo@soup.io",
+               "tipoDocumento": "Granja",
+               "numeroDocumento": "5436978327776555",
+               "direccion": "80192 Gale Center",
+               "telefono": "351-(922)755-3814"                   
                 }
 }, {
   "id": 22,
@@ -558,7 +802,19 @@
                "rutaImagen": "http://dummyimage.com/148x166.png/cc0000/ffffff",
                "valorAlquiler": "$12.94",
                "capacidad": 2                   
-                }        
+                } ,
+    "anfitrion": 
+                {
+                "idUsuario": 25,
+               "nombre": "Scott Fernandez",
+               "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+               "contrasena": "G87Kuvy9cEh1",
+               "correoElectronico": "sfernandezo@soup.io",
+               "tipoDocumento": "Granja",
+               "numeroDocumento": "5436978327776555",
+               "direccion": "80192 Gale Center",
+               "telefono": "351-(922)755-3814"                   
+                }       
 }, {
   "id": 23,
   "fechaInicioEstadia": "1/17/2016",
@@ -584,7 +840,20 @@
                   "rutaImagen": "http://dummyimage.com/222x142.jpg/dddddd/000000",
                   "valorAlquiler": "$34.04",
                   "capacidad": 2                  
-                }      
+                },
+    "anfitrion": 
+                {
+                    "idUsuario": 24,
+                "nombre": "Gary Hart",
+                "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+                "contrasena": "CSFNt5Hr8ah",
+                "correoElectronico": "ghartn@example.com",
+                "tipoDocumento": "Koncang",
+                "numeroDocumento": "3534700572141103",
+                "direccion": "7 Mallory Lane",
+                "telefono": "62-(146)769-6566"                
+                }
+                
 }, {
   "id": 24,
   "fechaInicioEstadia": "3/16/2016",
@@ -610,6 +879,18 @@
                   "rutaImagen": "http://dummyimage.com/222x142.jpg/dddddd/000000",
                   "valorAlquiler": "$34.04",
                   "capacidad": 2                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 24,
+               "nombre": "Gary Hart",
+               "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+               "contrasena": "CSFNt5Hr8ah",
+               "correoElectronico": "ghartn@example.com",
+               "tipoDocumento": "Koncang",
+               "numeroDocumento": "3534700572141103",
+               "direccion": "7 Mallory Lane",
+               "telefono": "62-(146)769-6566"                   
                 }        
 }, {
   "id": 25,
@@ -636,6 +917,18 @@
                   "rutaImagen": "http://dummyimage.com/222x142.jpg/dddddd/000000",
                   "valorAlquiler": "$34.04",
                   "capacidad": 2                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 24,
+               "nombre": "Gary Hart",
+               "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+               "contrasena": "CSFNt5Hr8ah",
+               "correoElectronico": "ghartn@example.com",
+               "tipoDocumento": "Koncang",
+               "numeroDocumento": "3534700572141103",
+               "direccion": "7 Mallory Lane",
+               "telefono": "62-(146)769-6566"                   
                 }
     }, {
   "id": 26,
@@ -662,6 +955,18 @@
               "rutaImagen": "http://dummyimage.com/222x142.jpg/dddddd/000000",
               "valorAlquiler": "$34.04",
               "capacidad": 2                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 24,
+                "nombre": "Gary Hart",
+                "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+                "contrasena": "CSFNt5Hr8ah",
+                "correoElectronico": "ghartn@example.com",
+                "tipoDocumento": "Koncang",
+                "numeroDocumento": "3534700572141103",
+                "direccion": "7 Mallory Lane",
+                "telefono": "62-(146)769-6566"                    
                 }        
 }, {
   "id": 27,
@@ -688,6 +993,18 @@
                "rutaImagen": "http://dummyimage.com/219x139.jpg/dddddd/000000",
                "valorAlquiler": "$40.21",
                "capacidad": 1                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 24,
+               "nombre": "Gary Hart",
+               "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+               "contrasena": "CSFNt5Hr8ah",
+               "correoElectronico": "ghartn@example.com",
+               "tipoDocumento": "Koncang",
+               "numeroDocumento": "3534700572141103",
+               "direccion": "7 Mallory Lane",
+               "telefono": "62-(146)769-6566"                   
                 }         
 }, {
   "id": 28,
@@ -714,6 +1031,18 @@
                "rutaImagen": "http://dummyimage.com/216x206.bmp/ff4444/ffffff",
                "valorAlquiler": "$40.60",
                "capacidad": 8                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 24,
+                "nombre": "Gary Hart",
+                "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+                "contrasena": "CSFNt5Hr8ah",
+                "correoElectronico": "ghartn@example.com",
+                "tipoDocumento": "Koncang",
+                "numeroDocumento": "3534700572141103",
+                "direccion": "7 Mallory Lane",
+                "telefono": "62-(146)769-6566"                    
                 } 
     }, {
   "id": 29,
@@ -740,6 +1069,18 @@
                "rutaImagen": "http://dummyimage.com/174x186.bmp/ff4444/ffffff",
                "valorAlquiler": "$10.11",
                "capacidad": 10                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 24,
+               "nombre": "Gary Hart",
+               "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+               "contrasena": "CSFNt5Hr8ah",
+               "correoElectronico": "ghartn@example.com",
+               "tipoDocumento": "Koncang",
+               "numeroDocumento": "3534700572141103",
+               "direccion": "7 Mallory Lane",
+               "telefono": "62-(146)769-6566"                   
                 } 
     }, {
   "id": 30,
@@ -766,6 +1107,18 @@
                "rutaImagen": "http://dummyimage.com/219x139.jpg/dddddd/000000",
                "valorAlquiler": "$40.21",
                "capacidad": 1                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 24,
+                "nombre": "Gary Hart",
+                "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+                "contrasena": "CSFNt5Hr8ah",
+                "correoElectronico": "ghartn@example.com",
+                "tipoDocumento": "Koncang",
+                "numeroDocumento": "3534700572141103",
+                "direccion": "7 Mallory Lane",
+                "telefono": "62-(146)769-6566"                    
                 } 
     }, {
   "id": 31,
@@ -792,6 +1145,18 @@
                "rutaImagen": "http://dummyimage.com/177x134.bmp/cc0000/ffffff",
                "valorAlquiler": "$29.89",
                "capacidad": 5                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 23,
+               "nombre": "Kenneth Cooper",
+               "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+               "contrasena": "EUy9WW6",
+               "correoElectronico": "kcooperm@seesaa.net",
+               "tipoDocumento": "Nansan",
+               "numeroDocumento": "3535085622535283",
+               "direccion": "7848 Cottonwood Terrace",
+               "telefono": "86-(869)240-3260"                   
                 }      
 }, {
   "id": 32,
@@ -819,6 +1184,18 @@
                   "rutaImagen": "http://dummyimage.com/194x110.bmp/dddddd/000000",
                   "valorAlquiler": "$27.79",
                   "capacidad": 6                  
+                },
+    "anfitrion": 
+                {
+                    "idUsuario": 22,
+                   "nombre": "Shawn Phillips",
+                   "imagen": "http://dummyimage.com/300x300.jpg/dddddd/000000",
+                   "contrasena": "lt9D6t6Vg",
+                   "correoElectronico": "sphillipsl@scientificamerican.com",
+                   "tipoDocumento": "Az Zuwaytīnah",
+                   "numeroDocumento": "3530595509159259",
+                   "direccion": "4696 Westport Point",
+                   "telefono": "218-(308)431-9821"                   
                 }
 }, {
   "id": 33,
@@ -846,6 +1223,18 @@
               "rutaImagen": "http://dummyimage.com/194x110.bmp/dddddd/000000",
               "valorAlquiler": "$27.79",
               "capacidad": 6                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 22,
+               "nombre": "Shawn Phillips",
+               "imagen": "http://dummyimage.com/300x300.jpg/dddddd/000000",
+               "contrasena": "lt9D6t6Vg",
+               "correoElectronico": "sphillipsl@scientificamerican.com",
+               "tipoDocumento": "Az Zuwaytīnah",
+               "numeroDocumento": "3530595509159259",
+               "direccion": "4696 Westport Point",
+               "telefono": "218-(308)431-9821"                   
                 }        
 }, {
   "id": 34,
@@ -873,6 +1262,18 @@
               "rutaImagen": "http://dummyimage.com/225x156.bmp/dddddd/000000",
               "valorAlquiler": "$20.09",
               "capacidad": 2                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 6,
+               "nombre": "Melissa Kim",
+               "imagen": "http://dummyimage.com/846x951.jpg/ff4444/ffffff",
+               "contrasena": "vX6tHc68lGKU",
+               "correoElectronico": "mkim5@indiegogo.com",
+               "tipoDocumento": "Krajan Puger Wetan",
+               "numeroDocumento": "4405897752835159",
+               "direccion": "0 Moose Park",
+               "telefono": "62-(788)878-3112"                   
                 }
     }, {
   "id": 35,
@@ -900,6 +1301,18 @@
                "rutaImagen": "http://dummyimage.com/138x102.bmp/cc0000/ffffff",
                "valorAlquiler": "$49.80",
                "capacidad": 5                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 4,
+                "nombre": "Jacqueline Bowman",
+                "imagen": "http://dummyimage.com/300x300.jpg/ff4444/ffffff",
+                "contrasena": "OMKU0qWKs",
+                "correoElectronico": "jbowman3@devhub.com",
+                "tipoDocumento": "Norrköping",
+                "numeroDocumento": "3558703661680701",
+                "direccion": "943 Marcy Hill",
+                "telefono": "46-(819)167-1343"                    
                 }
     }, {
   "id": 36,
@@ -926,6 +1339,18 @@
                   "rutaImagen": "http://dummyimage.com/222x119.jpg/cc0000/ffffff",
                   "valorAlquiler": "$23.24",
                   "capacidad": 8                  
+                },
+    "anfitrion": 
+                {
+                    "idUsuario": 21,
+                  "nombre": "Eugene Howard",
+                  "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+                  "contrasena": "sl94kCFIWsC",
+                  "correoElectronico": "ehowardk@ask.com",
+                  "tipoDocumento": "Seaforth",
+                  "numeroDocumento": "5610284664526556",
+                  "direccion": "68 Melrose Drive",
+                  "telefono": "1-(110)850-6128"                  
                 }      
 }, {
   "id": 37,
@@ -952,6 +1377,18 @@
                 "rutaImagen": "http://dummyimage.com/114x182.jpg/dddddd/000000",
                 "valorAlquiler": "$33.44",
                 "capacidad": 10                    
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 21,
+               "nombre": "Eugene Howard",
+               "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+               "contrasena": "sl94kCFIWsC",
+               "correoElectronico": "ehowardk@ask.com",
+               "tipoDocumento": "Seaforth",
+               "numeroDocumento": "5610284664526556",
+               "direccion": "68 Melrose Drive",
+               "telefono": "1-(110)850-6128"                   
                 }         
 }, {
   "id": 38,
@@ -978,6 +1415,18 @@
                "rutaImagen": "http://dummyimage.com/126x186.jpg/ff4444/ffffff",
                "valorAlquiler": "$12.61",
                "capacidad": 9                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 21,
+               "nombre": "Eugene Howard",
+               "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+               "contrasena": "sl94kCFIWsC",
+               "correoElectronico": "ehowardk@ask.com",
+               "tipoDocumento": "Seaforth",
+               "numeroDocumento": "5610284664526556",
+               "direccion": "68 Melrose Drive",
+               "telefono": "1-(110)850-6128"                   
                 } 
     }, {
   "id": 39,
@@ -1004,6 +1453,18 @@
               "rutaImagen": "http://dummyimage.com/180x178.png/dddddd/000000",
               "valorAlquiler": "$18.76",
               "capacidad": 4                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 21,
+                "nombre": "Eugene Howard",
+                "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+                "contrasena": "sl94kCFIWsC",
+                "correoElectronico": "ehowardk@ask.com",
+                "tipoDocumento": "Seaforth",
+                "numeroDocumento": "5610284664526556",
+                "direccion": "68 Melrose Drive",
+                "telefono": "1-(110)850-6128"                    
                 } 
     }, {
   "id": 40,
@@ -1030,6 +1491,18 @@
               "rutaImagen": "http://dummyimage.com/180x178.png/dddddd/000000",
               "valorAlquiler": "$18.76",
               "capacidad": 4                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 21,
+               "nombre": "Eugene Howard",
+               "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+               "contrasena": "sl94kCFIWsC",
+               "correoElectronico": "ehowardk@ask.com",
+               "tipoDocumento": "Seaforth",
+               "numeroDocumento": "5610284664526556",
+               "direccion": "68 Melrose Drive",
+               "telefono": "1-(110)850-6128"                   
                 } 
     }, {
   "id": 41,
@@ -1056,6 +1529,18 @@
               "rutaImagen": "http://dummyimage.com/222x119.jpg/cc0000/ffffff",
               "valorAlquiler": "$23.24",
               "capacidad": 8                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 20,
+              "nombre": "Alan Turner",
+              "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+              "contrasena": "Uz2tsWRtKL",
+              "correoElectronico": "aturnerj@jalbum.net",
+              "tipoDocumento": "Xindian",
+              "numeroDocumento": "3580953075327538",
+              "direccion": "1250 Colorado Park",
+              "telefono": "86-(675)842-0376"                  
                 }      
 }, {
   "id": 42,
@@ -1082,6 +1567,18 @@
                   "rutaImagen": "http://dummyimage.com/222x119.jpg/cc0000/ffffff",
                   "valorAlquiler": "$23.24",
                   "capacidad": 8                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 20,
+               "nombre": "Alan Turner",
+               "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+               "contrasena": "Uz2tsWRtKL",
+               "correoElectronico": "aturnerj@jalbum.net",
+               "tipoDocumento": "Xindian",
+               "numeroDocumento": "3580953075327538",
+               "direccion": "1250 Colorado Park",
+               "telefono": "86-(675)842-0376"                   
                 }        
 }, {
   "id": 43,
@@ -1108,6 +1605,18 @@
                   "rutaImagen": "http://dummyimage.com/222x119.jpg/cc0000/ffffff",
                   "valorAlquiler": "$23.24",
                   "capacidad": 8                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 20,
+                "nombre": "Alan Turner",
+                "imagen": "http://dummyimage.com/300x300.bmp/5fa2dd/ffffff",
+                "contrasena": "Uz2tsWRtKL",
+                "correoElectronico": "aturnerj@jalbum.net",
+                "tipoDocumento": "Xindian",
+                "numeroDocumento": "3580953075327538",
+                "direccion": "1250 Colorado Park",
+                "telefono": "86-(675)842-0376"                    
                 }        
 }, {
   "id": 44,
@@ -1135,6 +1644,18 @@
                "rutaImagen": "http://dummyimage.com/199x130.jpg/cc0000/ffffff",
                "valorAlquiler": "$39.10",
                "capacidad": 3                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 19,
+              "nombre": "Evelyn Bryant",
+              "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+              "contrasena": "MZwM8KDNgpD",
+              "correoElectronico": "ebryanti@nydailynews.com",
+              "tipoDocumento": "Iwatsuki",
+              "numeroDocumento": "3542691885373840",
+              "direccion": "531 Aberg Road",
+              "telefono": "81-(680)106-5056"                  
                 }
 }, {
   "id": 45,
@@ -1162,6 +1683,18 @@
                "rutaImagen": "http://dummyimage.com/199x130.jpg/cc0000/ffffff",
                "valorAlquiler": "$39.10",
                "capacidad": 3                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 14,
+               "nombre": "Joan Cox",
+               "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+               "contrasena": "xyRiUHt",
+               "correoElectronico": "jcoxd@webmd.com",
+               "tipoDocumento": "Vila Nova de Gaia",
+               "numeroDocumento": "3535103715629150",
+               "direccion": "5 Shoshone Point",
+               "telefono": "351-(121)639-5730"                   
                 }        
 }, {
   "id": 46,
@@ -1189,6 +1722,17 @@
                   "rutaImagen": "http://dummyimage.com/209x175.png/dddddd/000000",
                   "valorAlquiler": "$46.11",
                   "capacidad": 4                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 13,
+                "nombre": "Martha Coleman",
+                "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+                "contrasena": "1JnM70bZRC",
+                "correoElectronico": "mcolemanc@wordpress.com",
+                "tipoDocumento": "Candon",
+                "numeroDocumento": "4421867449639058",
+                "direccion": "21931 Meadow Ridge Terrace"                    
                 }
     }, {
   "id": 47,
@@ -1216,6 +1760,18 @@
                   "rutaImagen": "http://dummyimage.com/209x175.png/dddddd/000000",
                   "valorAlquiler": "$46.11",
                   "capacidad": 4                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 12,
+               "nombre": "Lois Webb",
+               "imagen": "http://dummyimage.com/533x904.jpg/ff4444/ffffff",
+               "contrasena": "9RBtm4ADsc",
+               "correoElectronico": "lwebbb@ebay.com",
+               "tipoDocumento": "Tomakivka",
+               "numeroDocumento": "374288620171008",
+               "direccion": "97084 Porter Drive",
+               "telefono": "380-(800)941-6643"                   
                 }
     }, {
   "id": 48,
@@ -1243,6 +1799,18 @@
               "rutaImagen": "http://dummyimage.com/184x221.jpg/cc0000/ffffff",
               "valorAlquiler": "$31.89",
               "capacidad": 8                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 12,
+               "nombre": "Lois Webb",
+               "imagen": "http://dummyimage.com/533x904.jpg/ff4444/ffffff",
+               "contrasena": "9RBtm4ADsc",
+               "correoElectronico": "lwebbb@ebay.com",
+               "tipoDocumento": "Tomakivka",
+               "numeroDocumento": "374288620171008",
+               "direccion": "97084 Porter Drive",
+               "telefono": "380-(800)941-6643"                   
                 }
     }, {
   "id": 49,
@@ -1270,6 +1838,18 @@
                    "rutaImagen": "http://dummyimage.com/244x225.bmp/5fa2dd/ffffff",
                    "valorAlquiler": "$26.12",
                    "capacidad": 4                   
+                },
+    "anfitrion": 
+                {
+                    "idUsuario": 18,
+                    "nombre": "Jessica Austin",
+                    "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+                    "contrasena": "9r0PS1FON",
+                    "correoElectronico": "jaustinh@icq.com",
+                    "tipoDocumento": "Zeqin",
+                    "numeroDocumento": "3555837797821434",
+                    "direccion": "28 Buena Vista Parkway",
+                    "telefono": "86-(916)715-1782"                    
                 }
                 
 }, {
@@ -1298,6 +1878,18 @@
                   "rutaImagen": "http://dummyimage.com/244x225.bmp/5fa2dd/ffffff",
                   "valorAlquiler": "$26.12",
                   "capacidad": 4                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 18,
+                "nombre": "Jessica Austin",
+                "imagen": "http://dummyimage.com/300x300.bmp/dddddd/000000",
+                "contrasena": "9r0PS1FON",
+                "correoElectronico": "jaustinh@icq.com",
+                "tipoDocumento": "Zeqin",
+                "numeroDocumento": "3555837797821434",
+                "direccion": "28 Buena Vista Parkway",
+                "telefono": "86-(916)715-1782"                    
                 }        
 }, {
   "id": 51,
@@ -1325,6 +1917,18 @@
                "rutaImagen": "http://dummyimage.com/144x163.bmp/ff4444/ffffff",
                "valorAlquiler": "$39.19",
                "capacidad": 7                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 17,
+                "nombre": "Brenda Nelson",
+                "imagen": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+                "contrasena": "q2Zxg97om",
+                "correoElectronico": "bnelsong@gnu.org",
+                "tipoDocumento": "Kozloduy",
+                "numeroDocumento": "3539282731741466",
+                "direccion": "7791 Pleasure Way",
+                "telefono": "359-(695)527-1669"                    
                 }
 }, {
   "id": 52,
@@ -1351,6 +1955,18 @@
                 "rutaImagen": "http://dummyimage.com/121x105.bmp/dddddd/000000",
                 "valorAlquiler": "$33.54",
                 "capacidad": 9                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 16,
+               "nombre": "Wayne Bell",
+               "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+               "contrasena": "qik8XktrjTM",
+               "correoElectronico": "wbellf@fc2.com",
+               "tipoDocumento": "Bromma",
+               "numeroDocumento": "3548889783969057",
+               "direccion": "5 Cottonwood Place",
+               "telefono": "46-(184)749-8607"                   
                 }      
 }, {
   "id": 53,
@@ -1371,12 +1987,24 @@
   },
    "habitacion":
                 {
-   "id": 16,
-  "area": 16.54,
-  "descripcion": "Fetal distress-delivered",
-  "rutaImagen": "http://dummyimage.com/193x178.bmp/cc0000/ffffff",
-  "valorAlquiler": "$16.59",
-  "capacidad": 9                   
+                "id": 16,
+               "area": 16.54,
+               "descripcion": "Fetal distress-delivered",
+               "rutaImagen": "http://dummyimage.com/193x178.bmp/cc0000/ffffff",
+               "valorAlquiler": "$16.59",
+               "capacidad": 9                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 15,
+              "nombre": "Eric Gomez",
+              "imagen": "http://dummyimage.com/300x300.bmp/ff4444/ffffff",
+              "contrasena": "qVVQtzoKMYR",
+              "correoElectronico": "egomeze@mayoclinic.com",
+              "tipoDocumento": "Vlycháda",
+              "numeroDocumento": "3544001403784114",
+              "direccion": "0568 Milwaukee Plaza",
+              "telefono": "30-(753)669-7663"                  
                 }          
 }, {
   "id": 54,
@@ -1403,6 +2031,18 @@
                "rutaImagen": "http://dummyimage.com/121x105.bmp/dddddd/000000",
                "valorAlquiler": "$33.54",
                "capacidad": 9                  
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 16,
+                "nombre": "Wayne Bell",
+                "imagen": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+                "contrasena": "qik8XktrjTM",
+                "correoElectronico": "wbellf@fc2.com",
+                "tipoDocumento": "Bromma",
+                "numeroDocumento": "3548889783969057",
+                "direccion": "5 Cottonwood Place",
+                "telefono": "46-(184)749-8607"                    
                 }  
     }, {
   "id": 55,
@@ -1429,5 +2069,17 @@
                "rutaImagen": "http://dummyimage.com/113x183.jpg/5fa2dd/ffffff",
                "valorAlquiler": "$32.00",
                "capacidad": 8                   
+                },
+    "anfitrion": 
+                {
+                "idUsuario": 5,
+                "nombre": "Christine Oliver",
+                "imagen": "http://dummyimage.com/341x713.png/cc0000/ffffff",
+                "contrasena": "Hz8mjgm0",
+                "correoElectronico": "coliver4@mysql.com",
+                "tipoDocumento": "Si Somdet",
+                "numeroDocumento": "5324448307883701",
+                "direccion": "47 Stone Corner Point",
+                "telefono": "66-(376)854-8713"                   
                 }  
     }]

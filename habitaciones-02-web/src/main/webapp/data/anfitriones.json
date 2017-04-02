@@ -73,12 +73,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 65,
-      "fechaInicioEstadia": "10/28/2016",
-      "fechaTerminacionEstadia": "1/24/2018",
-      "cancelado": false
-    }
+ {
+                  "id": 7,
+                  "fechaInicioEstadia": "1/31/2016",
+                  "fechaTerminacionEstadia": "3/3/2017",
+                  "precio": 95,
+                  "cancelado": false
+                }
   ]
 }, {
   "idUsuario": 2,
@@ -211,36 +212,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 56,
-      "fechaInicioEstadia": "5/20/2016",
-      "fechaTerminacionEstadia": "3/30/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 73,
-      "fechaInicioEstadia": "6/21/2016",
-      "fechaTerminacionEstadia": "8/22/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 98,
-      "fechaInicioEstadia": "6/23/2016",
-      "fechaTerminacionEstadia": "2/19/2018",
-      "cancelado": false
-    },
-    {
-      "precio": 83,
-      "fechaInicioEstadia": "7/13/2016",
-      "fechaTerminacionEstadia": "5/19/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 87,
-      "fechaInicioEstadia": "3/18/2017",
-      "fechaTerminacionEstadia": "4/26/2017",
-      "cancelado": false
-    }
+ {
+                      "id": 10,
+                      "fechaInicioEstadia": "3/9/2016",
+                      "fechaTerminacionEstadia": "3/4/2017",
+                      "precio": 17,
+                      "cancelado": true
+                    }
   ]
 }, {
   "idUsuario": 3,
@@ -318,36 +296,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 55,
-      "fechaInicioEstadia": "9/5/2016",
-      "fechaTerminacionEstadia": "10/18/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 65,
-      "fechaInicioEstadia": "1/30/2017",
-      "fechaTerminacionEstadia": "12/8/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 98,
-      "fechaInicioEstadia": "1/18/2017",
-      "fechaTerminacionEstadia": "1/28/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 99,
-      "fechaInicioEstadia": "8/20/2016",
-      "fechaTerminacionEstadia": "9/22/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 60,
-      "fechaInicioEstadia": "5/6/2016",
-      "fechaTerminacionEstadia": "11/9/2017",
-      "cancelado": false
-    }
+{
+                      "id": 9,
+                      "fechaInicioEstadia": "2/23/2016",
+                      "fechaTerminacionEstadia": "3/21/2017",
+                      "precio": 69,
+                      "cancelado": true
+                    }
   ]
 }, {
   "idUsuario": 4,
@@ -424,36 +379,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 56,
-      "fechaInicioEstadia": "9/4/2016",
-      "fechaTerminacionEstadia": "7/9/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 95,
-      "fechaInicioEstadia": "7/28/2016",
-      "fechaTerminacionEstadia": "11/3/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 80,
-      "fechaInicioEstadia": "6/29/2016",
-      "fechaTerminacionEstadia": "1/29/2018",
-      "cancelado": false
-    },
-    {
-      "precio": 84,
-      "fechaInicioEstadia": "3/22/2017",
-      "fechaTerminacionEstadia": "12/8/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 97,
-      "fechaInicioEstadia": "5/5/2016",
-      "fechaTerminacionEstadia": "2/12/2018",
-      "cancelado": false
-    }
+{
+                          "id": 35,
+                          "fechaInicioEstadia": "2/27/2016",
+                          "fechaTerminacionEstadia": "3/19/2017",
+                          "precio": 21,
+                          "cancelado": true
+                        }
   ]
 }, {
   "idUsuario": 5,
@@ -598,36 +530,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 59,
-      "fechaInicioEstadia": "5/7/2016",
-      "fechaTerminacionEstadia": "9/14/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 84,
-      "fechaInicioEstadia": "4/1/2016",
-      "fechaTerminacionEstadia": "6/2/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 78,
-      "fechaInicioEstadia": "10/25/2016",
-      "fechaTerminacionEstadia": "11/14/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 84,
-      "fechaInicioEstadia": "12/7/2016",
-      "fechaTerminacionEstadia": "9/24/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 64,
-      "fechaInicioEstadia": "8/5/2016",
-      "fechaTerminacionEstadia": "5/16/2017",
-      "cancelado": true
-    }
+ {
+                          "id": 55,
+                          "fechaInicioEstadia": "1/24/2016",
+                          "fechaTerminacionEstadia": "2/24/2017",
+                          "precio": 64,
+                          "cancelado": true
+                        }
   ]
 }, {
   "idUsuario": 6,
@@ -704,30 +613,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 100,
-      "fechaInicioEstadia": "1/3/2017",
-      "fechaTerminacionEstadia": "7/5/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 90,
-      "fechaInicioEstadia": "1/23/2017",
-      "fechaTerminacionEstadia": "4/15/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 50,
-      "fechaInicioEstadia": "9/23/2016",
-      "fechaTerminacionEstadia": "10/12/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 59,
-      "fechaInicioEstadia": "1/28/2017",
-      "fechaTerminacionEstadia": "11/10/2017",
-      "cancelado": true
-    }
+ {
+                          "id": 34,
+                          "fechaInicioEstadia": "2/10/2016",
+                          "fechaTerminacionEstadia": "3/26/2017",
+                          "precio": 6,
+                          "cancelado": false
+                        }
   ]
 }, {
   "idUsuario": 7,
@@ -836,30 +728,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 73,
-      "fechaInicioEstadia": "9/21/2016",
-      "fechaTerminacionEstadia": "10/10/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 63,
-      "fechaInicioEstadia": "6/18/2016",
-      "fechaTerminacionEstadia": "1/28/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 95,
-      "fechaInicioEstadia": "8/4/2016",
-      "fechaTerminacionEstadia": "4/22/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 88,
-      "fechaInicioEstadia": "4/14/2016",
-      "fechaTerminacionEstadia": "10/3/2017",
-      "cancelado": true
-    }
+ {
+                "id": 17,
+                "fechaInicioEstadia": "1/6/2016",
+                "fechaTerminacionEstadia": "3/18/2017",
+                "precio": 71,
+                "cancelado": false
+              }
   ]
 }, {
   "idUsuario": 8,
@@ -911,18 +786,19 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 97,
-      "fechaInicioEstadia": "12/13/2016",
-      "fechaTerminacionEstadia": "6/25/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 99,
-      "fechaInicioEstadia": "2/7/2017",
-      "fechaTerminacionEstadia": "5/14/2017",
-      "cancelado": true
-    }
+ {
+                "id": 15,
+                "fechaInicioEstadia": "2/8/2016",
+                "fechaTerminacionEstadia": "3/23/2017",
+                "precio": 44,
+                "cancelado": true
+              }, {
+                "id": 16,
+                "fechaInicioEstadia": "3/30/2016",
+                "fechaTerminacionEstadia": "3/1/2017",
+                "precio": 95,
+                "cancelado": true
+              } 
   ]
 }, {
   "idUsuario": 9,
@@ -1018,12 +894,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 82,
-      "fechaInicioEstadia": "11/8/2016",
-      "fechaTerminacionEstadia": "12/31/2017",
-      "cancelado": true
-    }
+ {
+                "id": 20,
+                "fechaInicioEstadia": "3/28/2016",
+                "fechaTerminacionEstadia": "2/11/2017",
+                "precio": 44,
+                "cancelado": true
+              } 
   ]
 }, {
   "idUsuario": 10,
@@ -1125,12 +1002,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 69,
-      "fechaInicioEstadia": "10/18/2016",
-      "fechaTerminacionEstadia": "9/28/2017",
-      "cancelado": true
-    }
+{
+                "id": 19,
+                "fechaInicioEstadia": "1/26/2016",
+                "fechaTerminacionEstadia": "3/21/2017",
+                "precio": 13,
+                "cancelado": false
+              }
   ]
 }, {
   "idUsuario": 11,
@@ -1182,18 +1060,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 58,
-      "fechaInicioEstadia": "1/13/2017",
-      "fechaTerminacionEstadia": "6/4/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 51,
-      "fechaInicioEstadia": "1/16/2017",
-      "fechaTerminacionEstadia": "5/22/2017",
-      "cancelado": false
-    }
+ {
+                "id": 18,
+                "fechaInicioEstadia": "2/12/2016",
+                "fechaTerminacionEstadia": "3/17/2017",
+                "precio": 61,
+                "cancelado": true
+              }  
   ]
 }, {
   "idUsuario": 12,
@@ -1289,18 +1162,19 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 80,
-      "fechaInicioEstadia": "8/9/2016",
-      "fechaTerminacionEstadia": "11/15/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 73,
-      "fechaInicioEstadia": "8/7/2016",
-      "fechaTerminacionEstadia": "8/17/2017",
-      "cancelado": true
-    }
+ {
+                            "id": 47,
+                            "fechaInicioEstadia": "2/8/2016",
+                            "fechaTerminacionEstadia": "2/20/2017",
+                            "precio": 61,
+                            "cancelado": false
+                          }, {
+                            "id": 48,
+                            "fechaInicioEstadia": "3/12/2016",
+                            "fechaTerminacionEstadia": "1/31/2017",
+                            "precio": 72,
+                            "cancelado": false
+                          }
   ]
 }, {
   "idUsuario": 13,
@@ -1334,24 +1208,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 84,
-      "fechaInicioEstadia": "5/6/2016",
-      "fechaTerminacionEstadia": "1/5/2018",
-      "cancelado": false
-    },
-    {
-      "precio": 85,
-      "fechaInicioEstadia": "11/29/2016",
-      "fechaTerminacionEstadia": "12/8/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 80,
-      "fechaInicioEstadia": "7/17/2016",
-      "fechaTerminacionEstadia": "10/22/2017",
-      "cancelado": true
-    }
+ {
+                            "id": 46,
+                            "fechaInicioEstadia": "1/3/2016",
+                            "fechaTerminacionEstadia": "2/24/2017",
+                            "precio": 75,
+                            "cancelado": false
+                          }
   ]
 }, {
   "idUsuario": 14,
@@ -1397,36 +1260,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 98,
-      "fechaInicioEstadia": "1/20/2017",
-      "fechaTerminacionEstadia": "8/13/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 82,
-      "fechaInicioEstadia": "11/5/2016",
-      "fechaTerminacionEstadia": "11/27/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 97,
-      "fechaInicioEstadia": "5/1/2016",
-      "fechaTerminacionEstadia": "11/2/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 56,
-      "fechaInicioEstadia": "8/23/2016",
-      "fechaTerminacionEstadia": "6/4/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 67,
-      "fechaInicioEstadia": "11/6/2016",
-      "fechaTerminacionEstadia": "12/22/2017",
-      "cancelado": false
-    }
+  {
+                            "id": 45,
+                            "fechaInicioEstadia": "2/1/2016",
+                            "fechaTerminacionEstadia": "1/31/2017",
+                            "precio": 83,
+                            "cancelado": true
+                          }
   ]
 }, {
   "idUsuario": 15,
@@ -1528,36 +1368,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 61,
-      "fechaInicioEstadia": "11/29/2016",
-      "fechaTerminacionEstadia": "2/11/2018",
-      "cancelado": false
-    },
-    {
-      "precio": 63,
-      "fechaInicioEstadia": "8/29/2016",
-      "fechaTerminacionEstadia": "11/12/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 83,
-      "fechaInicioEstadia": "4/7/2016",
-      "fechaTerminacionEstadia": "4/13/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 91,
-      "fechaInicioEstadia": "8/28/2016",
-      "fechaTerminacionEstadia": "7/11/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 77,
-      "fechaInicioEstadia": "8/26/2016",
-      "fechaTerminacionEstadia": "9/5/2017",
-      "cancelado": true
-    }
+ {
+                          "id": 53,
+                          "fechaInicioEstadia": "2/1/2016",
+                          "fechaTerminacionEstadia": "3/15/2017",
+                          "precio": 16,
+                          "cancelado": true
+                        }
   ]
 }, {
   "idUsuario": 16,
@@ -1678,12 +1495,20 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 94,
-      "fechaInicioEstadia": "2/1/2017",
-      "fechaTerminacionEstadia": "5/7/2017",
-      "cancelado": true
-    }
+                               {
+                          "id": 52,
+                          "fechaInicioEstadia": "1/2/2016",
+                          "fechaTerminacionEstadia": "3/13/2017",
+                          "precio": 92,
+                          "cancelado": false
+                        }, {
+                          "id": 54,
+                          "fechaInicioEstadia": "2/12/2016",
+                          "fechaTerminacionEstadia": "2/10/2017",
+                          "precio": 46,
+                          "cancelado": false
+                        }
+   
   ]
 }, {
   "idUsuario": 17,
@@ -1761,36 +1586,14 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 59,
-      "fechaInicioEstadia": "11/27/2016",
-      "fechaTerminacionEstadia": "10/4/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 61,
-      "fechaInicioEstadia": "11/18/2016",
-      "fechaTerminacionEstadia": "1/6/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 90,
-      "fechaInicioEstadia": "3/9/2017",
-      "fechaTerminacionEstadia": "9/17/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 90,
-      "fechaInicioEstadia": "7/5/2016",
-      "fechaTerminacionEstadia": "1/20/2018",
-      "cancelado": false
-    },
-    {
-      "precio": 52,
-      "fechaInicioEstadia": "7/16/2016",
-      "fechaTerminacionEstadia": "12/2/2017",
-      "cancelado": false
-    }
+                                 {
+                          "id": 51,
+                          "fechaInicioEstadia": "3/10/2016",
+                          "fechaTerminacionEstadia": "2/12/2017",
+                          "precio": 20,
+                          "cancelado": true
+                        }   
+  
   ]
 }, {
   "idUsuario": 18,
@@ -1888,35 +1691,18 @@
   ],
   "reservas": [
     {
-      "precio": 59,
-      "fechaInicioEstadia": "10/13/2016",
-      "fechaTerminacionEstadia": "9/19/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 52,
-      "fechaInicioEstadia": "2/12/2017",
-      "fechaTerminacionEstadia": "2/22/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 76,
-      "fechaInicioEstadia": "5/7/2016",
-      "fechaTerminacionEstadia": "6/30/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 88,
-      "fechaInicioEstadia": "2/17/2017",
-      "fechaTerminacionEstadia": "6/2/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 66,
-      "fechaInicioEstadia": "8/23/2016",
-      "fechaTerminacionEstadia": "8/19/2017",
-      "cancelado": true
-    }
+                                "id": 49,
+                                "fechaInicioEstadia": "1/7/2016",
+                                "fechaTerminacionEstadia": "2/28/2017",
+                                "precio": 12,
+                                "cancelado": false
+                              }, {
+                                "id": 50,
+                                "fechaInicioEstadia": "2/12/2016",
+                                "fechaTerminacionEstadia": "3/19/2017",
+                                "precio": 32,
+                                "cancelado": false
+                              }
   ]
 }, {
   "idUsuario": 19,
@@ -1987,24 +1773,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 91,
-      "fechaInicioEstadia": "3/27/2017",
-      "fechaTerminacionEstadia": "8/27/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 92,
-      "fechaInicioEstadia": "10/6/2016",
-      "fechaTerminacionEstadia": "7/3/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 61,
-      "fechaInicioEstadia": "11/21/2016",
-      "fechaTerminacionEstadia": "10/29/2017",
-      "cancelado": true
-    }
+                {
+                            "id": 44,
+                            "fechaInicioEstadia": "3/4/2016",
+                            "fechaTerminacionEstadia": "3/28/2017",
+                            "precio": 48,
+                            "cancelado": false
+                          }
   ]
 }, {
   "idUsuario": 20,
@@ -2162,36 +1937,25 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 67,
-      "fechaInicioEstadia": "5/13/2016",
-      "fechaTerminacionEstadia": "11/2/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 72,
-      "fechaInicioEstadia": "1/20/2017",
-      "fechaTerminacionEstadia": "5/6/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 77,
-      "fechaInicioEstadia": "6/5/2016",
-      "fechaTerminacionEstadia": "3/20/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 97,
-      "fechaInicioEstadia": "7/14/2016",
-      "fechaTerminacionEstadia": "1/15/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 50,
-      "fechaInicioEstadia": "6/29/2016",
-      "fechaTerminacionEstadia": "9/5/2017",
-      "cancelado": false
-    }
+                                    {
+                          "id": 41,
+                          "fechaInicioEstadia": "2/28/2016",
+                          "fechaTerminacionEstadia": "3/8/2017",
+                          "precio": 40,
+                          "cancelado": true
+                        }, {
+                          "id": 42,
+                          "fechaInicioEstadia": "1/5/2016",
+                          "fechaTerminacionEstadia": "3/25/2017",
+                          "precio": 28,
+                          "cancelado": true
+                        }, {
+                          "id": 43,
+                          "fechaInicioEstadia": "2/20/2016",
+                          "fechaTerminacionEstadia": "3/5/2017",
+                          "precio": 47,
+                          "cancelado": true
+                        }
   ]
 }, {
   "idUsuario": 21,
@@ -2274,12 +2038,36 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 90,
-      "fechaInicioEstadia": "11/14/2016",
-      "fechaTerminacionEstadia": "2/9/2018",
-      "cancelado": false
-    }
+                        { "id": 36,
+                         "fechaInicioEstadia": "2/5/2016",
+                         "fechaTerminacionEstadia": "3/30/2017",
+                         "precio": 32,
+                         "cancelado": true
+                       }, {
+                         "id": 37,
+                         "fechaInicioEstadia": "3/17/2016",
+                         "fechaTerminacionEstadia": "2/11/2017",
+                         "precio": 76,
+                         "cancelado": false
+                       }, {
+                         "id": 38,
+                         "fechaInicioEstadia": "2/6/2016",
+                         "fechaTerminacionEstadia": "2/27/2017",
+                         "precio": 94,
+                         "cancelado": true
+                       }, {
+                         "id": 39,
+                         "fechaInicioEstadia": "2/16/2016",
+                         "fechaTerminacionEstadia": "3/17/2017",
+                         "precio": 81,
+                         "cancelado": false
+                       }, {
+                         "id": 40,
+                         "fechaInicioEstadia": "3/26/2016",
+                         "fechaTerminacionEstadia": "3/14/2017",
+                         "precio": 63,
+                         "cancelado": true
+                       }
   ]
 }, {
   "idUsuario": 22,
@@ -2332,24 +2120,19 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 88,
-      "fechaInicioEstadia": "2/15/2017",
-      "fechaTerminacionEstadia": "5/26/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 63,
-      "fechaInicioEstadia": "6/10/2016",
-      "fechaTerminacionEstadia": "8/14/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 66,
-      "fechaInicioEstadia": "3/21/2017",
-      "fechaTerminacionEstadia": "4/28/2017",
-      "cancelado": true
-    }
+                                    {
+                          "id": 32,
+                          "fechaInicioEstadia": "2/18/2016",
+                          "fechaTerminacionEstadia": "3/9/2017",
+                          "precio": 72,
+                          "cancelado": true
+                        }, {
+                          "id": 33,
+                          "fechaInicioEstadia": "1/5/2016",
+                          "fechaTerminacionEstadia": "2/17/2017",
+                          "precio": 30,
+                          "cancelado": false
+                        }
   ]
 }, {
   "idUsuario": 23,
@@ -2395,12 +2178,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 95,
-      "fechaInicioEstadia": "11/24/2016",
-      "fechaTerminacionEstadia": "11/8/2017",
-      "cancelado": true
-    }
+                             {
+                              "id": 31,
+                              "fechaInicioEstadia": "2/18/2016",
+                              "fechaTerminacionEstadia": "3/29/2017",
+                              "precio": 55,
+                              "cancelado": true
+                            }
   ]
 }, {
   "idUsuario": 24,
@@ -2440,30 +2224,56 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 53,
-      "fechaInicioEstadia": "12/31/2016",
-      "fechaTerminacionEstadia": "7/30/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 93,
-      "fechaInicioEstadia": "5/30/2016",
-      "fechaTerminacionEstadia": "8/28/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 67,
-      "fechaInicioEstadia": "4/30/2016",
-      "fechaTerminacionEstadia": "12/28/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 82,
-      "fechaInicioEstadia": "11/16/2016",
-      "fechaTerminacionEstadia": "10/4/2017",
-      "cancelado": true
-    }
+                            {
+                            "id": 23,
+                            "fechaInicioEstadia": "1/17/2016",
+                            "fechaTerminacionEstadia": "2/28/2017",
+                            "precio": 19,
+                            "cancelado": true
+                          }, {
+                            "id": 24,
+                            "fechaInicioEstadia": "3/16/2016",
+                            "fechaTerminacionEstadia": "3/5/2017",
+                            "precio": 29,
+                            "cancelado": false
+                          }, {
+                            "id": 25,
+                            "fechaInicioEstadia":  "2/28/2016",
+                            "fechaTerminacionEstadia": "3/15/2017",
+                            "precio": 40,
+                            "cancelado": false
+                          }, {
+                            "id": 26,
+                            "fechaInicioEstadia": "1/19/2016",
+                            "fechaTerminacionEstadia": "3/4/2017",
+                            "precio": 1,
+                            "cancelado": false
+                          }, {
+                            "id": 27,
+                            "fechaInicioEstadia": "1/1/2016",
+                            "fechaTerminacionEstadia": "2/25/2017",
+                            "precio": 38,
+                            "cancelado": true
+                          }, {
+                            "id": 28,
+                            "fechaInicioEstadia": "3/5/2016",
+                            "fechaTerminacionEstadia": "2/14/2017",
+                            "precio": 93,
+                            "cancelado": true
+                          }, {
+                            "id": 29,
+                            "fechaInicioEstadia": "3/30/2016",
+                            "fechaTerminacionEstadia": "1/31/2017",
+                            "precio": 48,
+                            "cancelado": false
+                          }, {
+                            "id": 30,
+                            "fechaInicioEstadia": "3/14/2016",
+                            "fechaTerminacionEstadia": "2/4/2017",
+                            "precio": 32,
+                            "cancelado": true
+                          }
+            
   ]
 }, {
   "idUsuario": 25,
@@ -2497,30 +2307,20 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 81,
-      "fechaInicioEstadia": "12/12/2016",
-      "fechaTerminacionEstadia": "9/7/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 65,
-      "fechaInicioEstadia": "5/24/2016",
-      "fechaTerminacionEstadia": "9/11/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 69,
-      "fechaInicioEstadia": "1/24/2017",
-      "fechaTerminacionEstadia": "5/21/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 57,
-      "fechaInicioEstadia": "10/29/2016",
-      "fechaTerminacionEstadia": "8/11/2017",
-      "cancelado": false
-    }
+{
+                        "id": 21,
+                        "fechaInicioEstadia": "3/14/2016",
+                        "fechaTerminacionEstadia": "2/22/2017",
+                        "precio": 39,
+                        "cancelado": true
+                      }, {
+                        "id": 22,
+                        "fechaInicioEstadia": "1/22/2016",
+                        "fechaTerminacionEstadia": "2/5/2017",
+                        "precio": 14,
+                        "cancelado": false
+                      }
+
   ]
 }, {
   "idUsuario": 26,
@@ -2560,12 +2360,21 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 67,
-      "fechaInicioEstadia": "12/24/2016",
-      "fechaTerminacionEstadia": "6/19/2017",
-      "cancelado": true
-    }
+{
+                "id": 13,
+                "fechaInicioEstadia": "1/24/2016",
+                "fechaTerminacionEstadia": "3/23/2017",
+                "precio": 6,
+                "cancelado": true
+
+              }, {
+                "id": 14,
+                "fechaInicioEstadia": "1/12/2016",
+                "fechaTerminacionEstadia": "2/10/2017",
+                "precio": 23,
+                "cancelado": false
+              }
+                
   ]
 }, {
   "idUsuario": 27,
@@ -2662,24 +2471,19 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 67,
-      "fechaInicioEstadia": "11/22/2016",
-      "fechaTerminacionEstadia": "5/13/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 99,
-      "fechaInicioEstadia": "6/12/2016",
-      "fechaTerminacionEstadia": "1/28/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 84,
-      "fechaInicioEstadia": "12/9/2016",
-      "fechaTerminacionEstadia": "11/7/2017",
-      "cancelado": false
-    }
+ {
+                      "id": 11,
+                      "fechaInicioEstadia": "3/11/2016",
+                      "fechaTerminacionEstadia": "3/18/2017",
+                      "precio": 70,
+                      "cancelado": false
+                    }, {
+                      "id": 12,
+                      "fechaInicioEstadia": "2/23/2016",
+                      "fechaTerminacionEstadia": "2/3/2017",
+                      "precio": 59,
+                      "cancelado": true
+                    }
   ]
 }, {
   "idUsuario": 28,
@@ -2831,24 +2635,13 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 96,
-      "fechaInicioEstadia": "11/23/2016",
-      "fechaTerminacionEstadia": "8/11/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 93,
-      "fechaInicioEstadia": "11/18/2016",
-      "fechaTerminacionEstadia": "7/27/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 99,
-      "fechaInicioEstadia": "10/18/2016",
-      "fechaTerminacionEstadia": "1/12/2018",
-      "cancelado": true
-    }
+                               {
+                            "id": 8,
+                            "fechaInicioEstadia": "3/4/2016",
+                            "fechaTerminacionEstadia": "2/8/2017",
+                            "precio": 15,
+                            "cancelado": false
+                          }
   ]
 }, {
   "idUsuario": 29,
@@ -2975,30 +2768,19 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 99,
-      "fechaInicioEstadia": "8/10/2016",
-      "fechaTerminacionEstadia": "5/10/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 98,
-      "fechaInicioEstadia": "11/28/2016",
-      "fechaTerminacionEstadia": "8/28/2017",
-      "cancelado": true
-    },
-    {
-      "precio": 94,
-      "fechaInicioEstadia": "6/14/2016",
-      "fechaTerminacionEstadia": "10/11/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 94,
-      "fechaInicioEstadia": "5/1/2016",
-      "fechaTerminacionEstadia": "4/2/2017",
-      "cancelado": true
-    }
+                                {
+                  "id": 5,
+                  "fechaInicioEstadia": "1/19/2016",
+                  "fechaTerminacionEstadia": "2/1/2017",
+                  "precio": 48,
+                  "cancelado": false
+                }, {
+                  "id": 6,
+                  "fechaInicioEstadia": "3/21/2016",
+                  "fechaTerminacionEstadia": "3/12/2017",
+                  "precio": 81,
+                  "cancelado": true
+                }
   ]
 }, {
   "idUsuario": 30,
@@ -3088,35 +2870,24 @@
     }
   ],
   "reservas": [
-    {
-      "precio": 64,
-      "fechaInicioEstadia": "2/11/2017",
-      "fechaTerminacionEstadia": "8/30/2017",
-      "cancelado": false
-    },
-    {
-      "precio": 75,
-      "fechaInicioEstadia": "2/28/2017",
-      "fechaTerminacionEstadia": "1/7/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 95,
-      "fechaInicioEstadia": "10/6/2016",
-      "fechaTerminacionEstadia": "2/5/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 79,
-      "fechaInicioEstadia": "12/13/2016",
-      "fechaTerminacionEstadia": "1/27/2018",
-      "cancelado": true
-    },
-    {
-      "precio": 77,
-      "fechaInicioEstadia": "11/16/2016",
-      "fechaTerminacionEstadia": "12/8/2017",
-      "cancelado": true
-    }
+                    {
+                        "id": 2,
+                        "fechaInicioEstadia": "5/22/2016",
+                        "fechaTerminacionEstadia": "2/6/2017",
+                        "precio": 22,
+                        "cancelado": false
+                      }, {
+                        "id": 3,
+                        "fechaInicioEstadia": "2/2/2016",
+                        "fechaTerminacionEstadia": "3/4/2017",
+                        "precio": 95,
+                        "cancelado": false
+                      }, {
+                        "id": 4,
+                        "fechaInicioEstadia": "3/16/2016",
+                        "fechaTerminacionEstadia": "3/21/2017",
+                        "precio": 41,
+                        "cancelado": false
+                      }
   ]
 }]
