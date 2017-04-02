@@ -11,11 +11,25 @@
         
         <div class = "row" style="border-bottom-color: black">
             
-            <div class="col-sm-1 col-md-1"> <b>Filtrar: </b></div>
-            <div class="col-sm-11 col-md-11"> 
+            <div class="col-sm-2 col-md-2"> <b>Filtrar por: </b></div>
+            <div class="col-sm-10 col-md-10"> 
                 <form> 
-                    Fecha Inicio: <input type="date" name="fechaInicioEstadia">
-                    Fecha fin: <input type="date" name="fechaTerminacionEstadia">
+                    Minimo: 
+                    <select name="numMinEstrellas">
+                        <option value="unaE">1 estrella</option>
+                        <option value="dosE">2 estrellas</option>
+                        <option value="tresE">3 estrellas</option>
+                        <option value="cuatroE">4 estrellas</option>
+                        <option value="cincoE">5 estrellas</option>
+                    </select>
+                     Maximo:
+                    <select name="numMaxEstrellas">
+                        <option value="cincoE">5 estrellas</option>
+                        <option value="cuatroE">4 estrellas</option>
+                        <option value="tresE">3 estrellas</option>
+                        <option value="dosE">2 estrellas</option>
+                        <option value="unaE">1 estrella</option>
+                    </select>
                     <input type="submit" value="submit">
                 </form>
 

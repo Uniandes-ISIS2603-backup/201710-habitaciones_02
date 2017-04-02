@@ -47,13 +47,31 @@
                     }]
                 },
                 views:{
-                    mainView: {
+                    'mainView': {
                         templateUrl: basePath + 'viajero.list.html',
                         controller: 'viajeroListCtrl',
                         controllerAs: 'ctrl'
                     }
                 }
                
+            }).state('viajeroCreate', {
+                url: '/holi',
+                
+                resolve: {
+                    viajeros: ['$http', function ($http) {
+                            return $http.get('data/viajeros.json');
+                        }]
+                },
+                views: {
+                    
+                    'mainView': {
+                       
+                        templateUrl: basePath + 'viajero.create.html',
+                        controller: ['$scope', 'viajeros', function ($scope, viajeros) {
+                                $scope.RecordsViajero = viajeros.data;
+                            }]
+                    }
+                } 
             });
             $stateProvider.state('viajeroDetail', {
                  url: '/{viajeroId:int}/detail',
@@ -125,6 +143,7 @@
                     }
                 } 
             });
+            
             
         }
     ]);
