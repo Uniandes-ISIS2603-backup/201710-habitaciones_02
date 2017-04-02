@@ -35,13 +35,6 @@
             }).state('resenasList', {
                 // Url que aparecerá en el browser
                 url: '/resenas/list',
-                // Se define una variable resenas (del estado) que toma por valor 
-                // la colección de libros que obtiene utilizando $http.get 
-                 
-                // Template que se utilizara para ejecutar el estado
-                
-                // El controlador guarda en el scope en la variable booksRecords los datos que trajo el resolve
-                // booksRecords será visible en el template
                 
                 resolve: 
                 {
