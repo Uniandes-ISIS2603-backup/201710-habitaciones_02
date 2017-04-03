@@ -13,7 +13,6 @@ and open the template in the editor.
             <li data-target="#anfitrionCarousel" data-slide-to="2"></li>
             <li data-target="#anfitrionCarousel" data-slide-to="3"></li>
         </ol>
-        <var>actual</var>=0;
             
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox" >
@@ -27,8 +26,8 @@ and open the template in the editor.
                         }
                     </style>
 
-                    <a ui-sref="anfitrionDetail({anfitrionId: anfitrionesRecords[0].idUsuario})">
-                        <img class="img-responsive" ng-src='{{anfitrionesRecords[0].imagen}}' alt="{{anfitrionesRecords[0].nombre}}" />
+                    <a ui-sref="anfitrionDetail({anfitrionId: anfitrionesRecords[anfitrionActual].idUsuario})">
+                        <img class="img-responsive" ng-src='{{anfitrionesRecords[anfitrionActual].imagen}}' alt="{{anfitrionesRecords[anfitrionActual].nombre}}" />
                         <div class="caption text-center">{{anfitrion.nombre}}</div>
                         <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
                     </a>
@@ -38,30 +37,17 @@ and open the template in the editor.
 
             </div>
 
-            <div class="carousel-item"  >
-                <div class="thumbnail" >
-
-                    <a ui-sref="anfitrionDetail({anfitrionId: anfitrionesRecords[actual].idUsuario})">
-                        <img style=" width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px;" class="img-responsive" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
-                        <div class="caption text-center">{{anfitrion.nombre}}</div>
-                        <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
-                    </a>
-                </div>
-
-
-
-            </div>
+           
         </div>
 
 
-        <a class="left carousel-control" href="#anfitrionCarousel" role="button" data-slide="prev">
-            actual=actual-1;
+        <a ui-sref="anfitrionDetail({anfitrionId: anfitrionesRecords[anfitrionAnterior].idUsuario})" class="left carousel-control" href="#anfitrionCarousel" role="button" data-slide="prev">
+           
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#anfitrionCarousel" role="button" data-slide="next">
-            actual=actual+1;
-            a
+        <a ui-sref="anfitrionDetail({anfitrionId: anfitrionesRecords[anfitrionSiguiente].idUsuario})" class="right carousel-control" href="#anfitrionCarousel" role="button" data-slide="next">
+            
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>

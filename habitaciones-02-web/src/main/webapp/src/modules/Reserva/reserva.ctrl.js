@@ -6,4 +6,10 @@
             $scope.reservasRecords = reservas.data;
         }
     ]);
+    mod.controller("viajerosListCtrl", ['$scope','reservas','viajeros',
+        function($scope,viajeros) {
+            
+            $scope.viaRecords = viajeros.data;
+        }
+    ]);
 })(window.angular);

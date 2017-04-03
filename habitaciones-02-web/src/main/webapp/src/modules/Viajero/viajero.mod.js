@@ -47,23 +47,46 @@
                     }]
                 },
                 views:{
-                    mainView: {
+                    'mainView': {
                         templateUrl: basePath + 'viajero.list.html',
                         controller: 'viajeroListCtrl',
                         controllerAs: 'ctrl'
                     }
                 }
                
+            }).state('viajeroCreate', {
+                url: '/',
+                
+                resolve: {
+                    viajeros: ['$http', function ($http) {
+                            return $http.get('data/viajeros.json');
+                        }]
+                },
+                views: {
+                    
+                    'mainView': {
+                       
+                        templateUrl: basePath + 'viajero.create.html',
+                        controller: ['$scope', 'viajeros', function ($scope, viajeros) {
+                                $scope.RecordsViajero = viajeros.data;
+                            }]
+                    }
+                } 
             });
             $stateProvider.state('viajeroDetail', {
-                 url: '/{viajeroId:int}/detail',
+                 url: '/{viajeroId:int}',
                 parent: 'viajero',
                 param: {
                     viajeroId: null
                 },
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'viajero.list.html'
+                        templateUrl: basePath + 'viajero.carousel.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                                $scope.nextViajero = $scope.RecordsViajero[$params.viajeroId-15];
+                                $scope.prevViajero = $scope.RecordsViajero[$params.viajeroId-17];
+                            }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'viajero.detail.html',
@@ -75,32 +98,57 @@
                 } 
             });
             $stateProvider.state('viajeroReservasList', {
-                url: '/{viajeroId:int}/reservas',
+                url: '/reservas',
                 parent: 'viajeroDetail',
                 
                 param: {
                     viajeroId: null
                 },
                 views: {
-                    'listView': {
-                        templateUrl: basePath + 'viajero.list.html'
-                    },
-                    'reservasViajeroView':{
-                        templateUrl: basePath + 'viajero.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
-                            }]
-                        
-                    },
-                    'detailView': {
+                    'ListasViajeroView':{
                         templateUrl: basePath + 'viajero.reservas.list.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
                                 $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
                             }]
+                        
                     }
-
                 } 
             });
+            $stateProvider.state('viajeroResenasList', {
+                url: '/resenas',
+                parent: 'viajeroDetail',
+                
+                param: {
+                    viajeroId: null
+                },
+                views: {
+                    'ListasViajeroView':{
+                        templateUrl: basePath + 'viajero.resenas.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                            }]
+                        
+                    }
+                } 
+            });
+            $stateProvider.state('viajeroUpdate', {
+                url: '/{viajeroId:int}',
+                parent: 'viajeroDetail',
+                
+                param: {
+                    viajeroId: null
+                },
+                views: {
+                    'ListasViajeroView':{
+                        templateUrl: basePath + 'viajero.update.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                            }]
+                        
+                    }
+                } 
+            });
+            
             
         }
     ]);

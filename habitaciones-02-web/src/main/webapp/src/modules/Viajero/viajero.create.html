@@ -1,1 +1,103 @@
-Reserva Create Html
+<div class="panel panel-default" style="border-color: #d1eeff;">
+    
+    <style>
+        
+        b.TextoCreacion{
+            
+            font-size: 16px;
+            margin-left: 60px;
+        }
+        input.Creacion{
+            margin-left: 60px;
+        }
+        input.ng-invalid{
+            
+            background-color: lightsalmon;
+        }
+        input.ng-valid{
+            
+            background-color: lightgreen;
+        }
+        
+    </style>
+            
+    <div class="panel-body">
+       
+        <div class="row">
+                
+                <h2 style="text-align: center;">Sign Up Viajero!<br></h2>
+
+                <p style="text-align: center; font-size: 14px; text-align: center;">
+                    Hola nuevo viajero! Estas a punto de registrar en la pagina de reservacion de habitaciones mas grande de la
+                    clase de Desarrollo de Software en Equipo!<br>
+                    A continuacion, debes ingresar algunos datos personales que son indispensables para la creacion de tu nueva cuenta. <br>
+                    Con ello, podras empezar a buscar y a disfrutar de los diversos beneficios que Habitaciones Uniandes trae para ti!
+                </p>
+                <br>
+                <hr>
+                
+                <div class="text-left">
+
+                    <form name="formaCreateV"  novalidate>
+
+                    <div class="col-md-1">
+                        
+                        <!-- ALGO -->
+                        
+                    </div>
+                    
+                    <div class=" thumbnail col-md-4" >
+                            
+                        <h3 style="text-align: center; color: #286090">Informacion de Cuenta</h3><br>
+
+                        <b class="TextoCreacion">Correo Electronico</b><br>
+                        <input class="Creacion" name="correoElectronico" type="email" size="40" ng-model='correoElectronico'required><br><br>
+                        
+                        <b class="TextoCreacion">Contrasena:</b><br>
+                        <input class="Creacion" type="password" name="contrasenaV1" size="40" ng-model='contrasenaV1' required><br><br>
+
+                        <b class="TextoCreacion">Repita nuevamente la Contrasena:</b><br>
+                        <input class="Creacion" type="password" name="contrasenaV2" size="40" ng-model='contrasenaV2' required>
+                        <span ng-show="formaCreateV.contrasenaV1.$touched && formaCreateV.contrasenaV2.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
+
+
+                        <input class="Creacion center-block" type="submit" value="Sign Up" style="font-size: 16px;">
+                        
+                    </div>
+                    
+                    
+                    <div class="col-md-1">
+                        
+                        <!-- ALGO -->
+                        
+                    </div>
+                    
+                    <div class=" thumbnail col-md-5">
+                        
+                        <h3 style="text-align: center; color: #286090">Informacion Personal</h3><br>
+
+                        <b class="TextoCreacion">Nombre Completo:</b><br>
+                        <input class="Creacion" name="nombre" type="text" size="40" ng-model='nombre'required><br><br>
+                        
+                        <!-- Pede ser type='radio'?-->
+                        <b class="TextoCreacion">Tipo Documento</b><br>
+                        <input class="Creacion" name="tipoDocumento" type="text" size="40" ng-model='tipoDocumento'required><br><br>
+                        
+                        <b class="TextoCreacion">Numero Documento</b><br>
+                        <input class="Creacion" name="numeroDocumento" type="text" size="40" ng-model='numeroDocumento'required><br><br>
+                        
+                        <b class="TextoCreacion">Direccion</b><br>
+                        <input class="Creacion" name="direccion" type="text" size="40" ng-model='direccion'required><br><br>
+                        
+                        <b class="TextoCreacion">Telefono de Contacto</b><br>
+                        <input class="Creacion" name="telefono" type="text" size="40" ng-model='telefono'required><br><br>
+                                                
+                    </div>
+                    
+
+                </form>
+
+            </div>
+        </div>    
+    </div>
+</div>

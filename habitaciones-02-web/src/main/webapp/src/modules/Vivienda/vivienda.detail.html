@@ -1,0 +1,41 @@
+<div class="panel panel-default"> 
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <style scoped>
+                        img{
+                            width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                        }
+                    </style>
+                    <img class="img-responsive" ng-src="{{currentVivienda.rutaImagen}}"/>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <dl>     
+                    <dt>{{currentVivienda.ciudad}}</dt>
+
+                    <hr>
+                    <dt>Direccion</dt>
+                    <dd>{{currentVivienda.direccion}}</dd>
+
+                </dl>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <a ui-sref="anfitrionDetail({anfitrionId: currentVivienda.anfitrion.idUsuario})">
+                                <dt style="font-size: 20px "> Anfitrion    </dt>
+                                <dt>Nombre: {{currentVivienda.anfitrion.nombre}} </dt>
+                                <img class="img-responsive" ng-src="{{currentVivienda.anfitrion.imagen}}"/>
+                                <dt>Telefono: {{currentVivienda.anfitrion.telefono}}</dt>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,10 @@
         'resenaModule',
         'habitacionModule',
         'disponibilidadModule',
+        'reservaModule',
+        'viviendaModule',
+        'pagoModule'
+
 
         
     ]);

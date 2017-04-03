@@ -64,6 +64,10 @@ SOFTWARE.
         <!-- Reserva -->
         <script src="src/modules/Reserva/reserva.mod.js" type="text/javascript"></script>
         <script src="src/modules/Reserva/reserva.ctrl.js" type="text/javascript"></script>
+        
+        <!-- Pago-->
+        <script src="src/modules/Pago/pago.mod.js" type="text/javascript"></script>
+        <script src="src/modules/Pago/pago.ctrl.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -73,10 +77,12 @@ SOFTWARE.
                     <a class="navbar-brand" href="#">Habitaciones</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up Anfitrion</a></li>
+                    <li><a ui-sref="viajeroCreate"><span class="glyphicon glyphicon-user"></span> Sign Up Viajero</a></li>
 
-                    </ul>
+                </ul>
             </div>
         </nav>
         <nav style="margin-top: -5px;border-top: none;"class="navbar navbar-inverse">
@@ -86,17 +92,31 @@ SOFTWARE.
 
                     <li><a ui-sref="anfitrionesList">Anfitriones</a></li>
                     <li><a ui-sref="viajerosList">Viajeros</a></li>
-                    <li><a href="#">Viviendas</a></li>
-
+                    <li><a ui-sref="viviendasList">Viviendas</a></li>
+                    <li><a ui-sref="pagosList">Pagos</a></li>
                     <li><a ui-sref="habitacionesList">Habitaciones</a></li>
                     <li><a ui-sref="reservasList">Reservas</a></li>
                     <li><a ui-sref="disponibilidadesList">Disponibilidades</a></li>
-                    <li><a href="#">Resenas</a></li>
+                    <li><a ui-sref="resenasList">Resenas</a></li>
 
 
                 </ul>
             </div>
         </nav>
         <div ui-view="mainView"></div>
+        <div class="row">
+        <hr>
+        <p class="center-block" style="color: darkslategrey; text-align: center">
+            
+            <br>
+            <b>Empresa Habitaciones.</b><br>
+            Santiago Cortes, Bibiana Gamba, Diego Sanabria, Nicolas Cabrera, David Guarin<br>
+            Desarrollo de Software En Equipo<br>
+            Universidad de los Andes<br>
+            Bogota, Cundinamarca, Colombia<br>
+            
+        </p>
+        
+    </div>
     </body>
 </html>

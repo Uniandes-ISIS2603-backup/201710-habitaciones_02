@@ -1,0 +1,70 @@
+<div class="panel panel-default"> 
+    <div class="panel-body">
+
+        <style>
+            dt{
+                text-align: center;
+            }
+            dd{
+                text-align: center;
+            }
+        </style>
+        
+        <div class="row">
+            
+            <div class="col-sm-5 col-md-5" style="margin-top: 100px">
+
+                <img style="max-height: 300px; min-height: 300px;" class="img-responsive center-block" ng-src="{{currentResena.habitacion.rutaImagen}}"/>
+
+            </div>
+            
+            <div class="col-md-1">
+                
+                
+            </div>
+
+            <div class="col-sm-5 col-md-5" >
+                
+                <div class="row thumbnail">
+                    
+                    <dl>
+                        <dt style="text-align-last: center; font-size: 25px;">Habitacion</dt>
+                        <hr>
+                        
+                        <dt style="font-size: 18px; text-align: left;">Descripcion</dt>
+                        <dd><b style="font-size: 16px;">"{{currentResena.habitacion.descripcion}}</b>"<br><br></dd>
+
+                        <dt>
+                            <br>
+                            <a ui-sref="habitacionDetail({habitacionId: currentResena.habitacion.id})" >
+                                <b class="center-block" style="color: lightseagreen;"> ir a Habitacion!</b>
+                            </a>
+                            
+                        </dt>
+                    </dl>
+
+                    
+                    
+                </div>
+                
+                
+                <div class="row thumbnail">
+                    
+                    <dl>
+
+                        <dt style="font-size: 20px;">Calificacion</dt>
+                        <dd style="color: rgb(185,133,36); font-size: 18px;"> <br> {{currentResena.calificacion}} de 5 estrellas </br> </dd>
+                        <hr>
+                        <dt style="font-size: 20px;">Comentario</dt>
+                        <dd> <br> "{{currentResena.comentario}}" </br></dd>
+
+                    </dl>
+                    
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </div>
+</div>

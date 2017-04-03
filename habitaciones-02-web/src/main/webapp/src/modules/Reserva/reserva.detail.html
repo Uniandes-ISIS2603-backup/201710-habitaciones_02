@@ -1,17 +1,85 @@
 <div class="panel panel-default"> 
     <div class="panel-body">
-        <div class="row">
-            
-            <div class="col-md-3">
-                <dl>     
-                    <dt>{{currentReserva.fechaInicioEstadia}}</dt>
-                  <dt>{{currentReserva.cancelado}}</dt>
-                </dl>
-               
-            </div>
-         
-            
-   </div>
+      <div class="col-md-4">
+          <div class="panel panel-default">
+          <div class="panel-body">
+          <div class="row">
+             <nav style="margin-top: -5px; font-size: 20px;  border-top: none;background-color: white; border-color: #d1eeff" class="navbar navbar-default"> 
+            <div class="col-md-10">
+                    <ul class="nav navbar-nav">
+                        
+                        <li><a ui-sref="reservaViajeroList"><b>Viajero</b></a></li>
+                        <li><a ui-sref="reservaAnfitrionList"><b>Anfitrion</b></a></li>
+                        
+                        <hr>
+                    </ul>
+                    
+                </div>
+              </nav>
+              <div ui-view="ListasReservaView"></div>
+         </div>
+              </div>
+         </div>
+          
+          
+       </div>
+        
+          
+                  <div class="col-md-4">
+                <div class="panel panel-default">
+                 <div class="panel-body">
+              <center>  
+              <dt style="font-size: 20px ">Reserva id: {{currentReserva.id}} </dt>
+              </center>
+              
+                <hr>
+
+                <center>
+                <dt > Fecha Inicio </dt>
+                <dd > {{currentReserva.fechaInicioEstadia}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Fecha final </dt>
+                <dd > {{currentReserva.fechaTerminacionEstadia}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Precio </dt>
+                <dd > {{currentReserva.precio}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Status </dt>
+                <dd  >{{currentReserva.cancelado}}</dd>
+
+                 </center> 
+        
+          </div>
+         </div>
+          </div>
+        
+         <div class="col-md-4">
+                <div class="panel panel-default">
+                 <div class="panel-body">
+               <center>  
+              <dt style="font-size: 20px ">Habitacion id: {{currentReserva.habitacion.id}} </dt>
+              </center>
+              
+                <hr>
+
+                <center>
+                <dt > Area </dt>
+                <dd > {{currentReserva.habitacion.area}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Descripcion </dt>
+                <dd > {{currentReserva.habitacion.descripcion}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Valor Alquiler </dt>
+                <dd > {{currentReserva.habitacion.valorAlquiler}}</dd>
+                <dt > &ensp; </dt>
+                <dt > Capacidad </dt>
+                <dd  >{{currentReserva.habitacion.capacidad}}</dd>
+
+          </div>
+         </div>
+          </div>
+        
+        
     </div>
 </div>          
             

@@ -27,7 +27,7 @@
                 // El controlador guarda en el scope en la variable reservaRecords los datos que trajo el resolve
                 // reservaRecords será visible en el template
                 controller:'reservaListCtrl',
-                controllerAs: 'ctrl',
+               
                 }
                 }
             }).state('reservasList', {
@@ -39,6 +39,9 @@
                 resolve: {
                     reservas: ['$http', function ($http) {
                             return $http.get('data/reservas.json'); 
+                        }],
+                    viajeros: ['$http', function ($http) {
+                            return $http.get('data/viajeros.json'); 
                         }]
                 },
                 views:{
@@ -62,13 +65,47 @@
                     'detailView': {
                         templateUrl: basePath + 'reserva.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId-1];
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId];
                             }]
                     }
 
                 } 
             });
+            $stateProvider.state('reservaViajeroList', {
+                url: '/{reservaId:int}/viajero',
+                parent: 'reservaDetail',
+                
+                param: {
+                    reservaId: null
+                },
+                views: {
+                    'ListasReservaView':{
+                        templateUrl: basePath + 'reserva.viajero.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId];
+                            }]
+                        
+                    }
+                } 
+            });
                
+               $stateProvider.state('reservaAnfitrionList', {
+                url: '/{reservaId:int}/anfitrion',
+                parent: 'reservaDetail',
+                
+                param: {
+                    reservaId: null
+                },
+                views: {
+                    'ListasReservaView':{
+                        templateUrl: basePath + 'reserva.anfitrion.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId];
+                            }]
+                        
+                    }
+                } 
+            });
             
         }
     ]);

@@ -113,19 +113,7 @@ public class ViajeroResource
         }
         return viajero;
     }
-
-    /**
-     * Metodo encargado de llamar a la clase ResenaResourse para retornar las
-     * resenas de un viajero respectivo
-     * @return la clase ResenaResourse encargada de retornar las resenas de el
-     * viajero.
-     */
-    @Path("{viajeroId: \\d+}/resenas")
-    public Class<ResenaResource> getResenasViajero()
-    {
-        return  ResenaResource.class;
-    }
-
+    
     /**
      * Metodo encargado de llamar a la clase ReservaResourse para retornar las
      * resenas de un viajero respectivo
