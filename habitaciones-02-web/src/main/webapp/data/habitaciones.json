@@ -15,7 +15,12 @@
       "id": 3,
       "fechaInicioEstadia": "2016-07-12",
       "fechaTerminacionEstadia": "2016-07-04"
-    } ]
+    } ],
+  "reservas":[{
+      "id": 1,
+      "fechaInicioEstadia": "2016-02-05",
+      "fechaTerminacionEstadia": "2016-02-12",
+      "cancelado": true }]
 }, {
   "id": 2,
   "area": 31.86,

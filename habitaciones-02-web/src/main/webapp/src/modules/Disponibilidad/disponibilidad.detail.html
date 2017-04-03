@@ -1,36 +1,49 @@
 <div class="panel panel-default"> 
     <div class="panel-body">
+
         <div class="row">
+
             <div class="col-md-3">
-                <dl> 
-                    <dt style="font-size: 20px "> Disponibilidad    </dt>    
-                    <dt>{{currentDisponibilidad.id}}</dt>
+
+
+                <div class="thumbnail">
+                    <img style="width: 100%; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px;" class="img-responsive" ng-src="{{currentDisponibilidad.habitacion.rutaImagen}}"/>
+                </div>
+
+
+
+                <dl>  
+                    <dt style="font-size: 20px "> Disponibilidad: {{currentDisponibilidad.id}}</dt>
+                    <hr>
                     <dt> Fecha Inicio Estadía</dt>
                     <dd>{{currentDisponibilidad.fechaInicioEstadia}}</dd>
-                    <hr>
+                    <dd>   </dd>
                     <dt>Fecha Terminación Estadía</dt>
                     <dd>{{currentDisponibilidad.fechaTerminacionEstadia}}</dd>
 
                 </dl>
+
             </div>
+
+
+
             <div class="col-md-4">
+
                 <div class="panel panel-default">
+
                     <div class="panel-body">
 
-                        <div class="col-md-10">
-                            <dt style="font-size: 20px "> Habitación    </dt>
-                            <hr>
-                            <a ui-sref="habitacionDetail({habitacionId: currentDisponibilidad.habitacion.id})" >
-                            <dd>Habitación: {{currentDisponibilidad.habitacion.id}}</dd>
-                            </a>
-                            <dd>Área: {{currentDisponibilidad.habitacion.area}}</dd>
-                            <dd>Capacidad: {{currentDisponibilidad.habitacion.capacidad}}</dd>
-                            <dd>Valor Alquiler: {{currentDisponibilidad.habitacion.valorAlquiler}}</dd>
-                            <dd>Descripción: {{currentDisponibilidad.habitacion.descripcion}}</dd>
-                            <div class="thumbnail">
-                                <img class="img-responsive" ng-src="{{currentDisponibilidad.habitacion.rutaImagen}}"/>
-                            </div>
-                        </div>
+
+                        <dt style="font-size: 22px"> Habitación    </dt>
+                        <hr>
+                        <a ui-sref="habitacionDetail({habitacionId: currentDisponibilidad.habitacion.id})" >
+                            <dd style="font-size: 18px">Habitación: {{currentDisponibilidad.habitacion.id}}</dd>
+                        </a>
+                        <dd style="font-size: 18px">Área: {{currentDisponibilidad.habitacion.area}}</dd>
+                        <dd style="font-size: 18px">Capacidad: {{currentDisponibilidad.habitacion.capacidad}}</dd>
+                        <dd style="font-size: 18px">Valor Alquiler: {{currentDisponibilidad.habitacion.valorAlquiler}}</dd>
+                        <dd style="font-size: 18px">Descripción: {{currentDisponibilidad.habitacion.descripcion}}</dd>
+
                     </div>
                 </div>
             </div>
