@@ -55,7 +55,7 @@
                 }
                
             }).state('viajeroCreate', {
-                url: '/holi',
+                url: '/',
                 
                 resolve: {
                     viajeros: ['$http', function ($http) {
@@ -74,14 +74,19 @@
                 } 
             });
             $stateProvider.state('viajeroDetail', {
-                 url: '/{viajeroId:int}/detail',
+                 url: '/{viajeroId:int}',
                 parent: 'viajero',
                 param: {
                     viajeroId: null
                 },
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'viajero.list.html'
+                        templateUrl: basePath + 'viajero.carousel.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                                $scope.nextViajero = $scope.RecordsViajero[$params.viajeroId-15];
+                                $scope.prevViajero = $scope.RecordsViajero[$params.viajeroId-17];
+                            }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'viajero.detail.html',
@@ -93,7 +98,7 @@
                 } 
             });
             $stateProvider.state('viajeroReservasList', {
-                url: '/{viajeroId:int}/reservas',
+                url: '/reservas',
                 parent: 'viajeroDetail',
                 
                 param: {
@@ -110,7 +115,7 @@
                 } 
             });
             $stateProvider.state('viajeroResenasList', {
-                url: '/{viajeroId:int}/resenas',
+                url: '/resenas',
                 parent: 'viajeroDetail',
                 
                 param: {
