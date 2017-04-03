@@ -5,13 +5,14 @@
             $scope.anfitrionesRecords = anfitriones.data;
         }
     ]);
-    mod.controller("anfitrionCarouselCtrl",['$scope','anfitriones','anfitrionActual', 'anfitrionSiguiente','anfitrionAnterior', 'anfitrionPresente',
-        function($scope,anfitriones,anfitrionActual, anfitrionSiguiente, anfitrionAnterior, anfitrionPresente){
+    mod.controller("anfitrionCarouselCtrl",['$scope','anfitriones','$stateParams', 'anfitrionPresente',
+        function($scope,anfitriones,$params, anfitrionPresente){
             $scope.anfitrionPresente = anfitrionPresente;
             $scope.anfitrionesRecords = anfitriones.data;
-            $scope.anfitrionActual=anfitrionActual;
-            $scope.anfitrionAnterior=anfitrionAnterior;
-            $scope.anfitrionSiguiente=anfitrionSiguiente;
+            
+                                $scope.anfitrionActual = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                                $scope.anfitrionSiguiente = $scope.anfitrionesRecords[$params.anfitrionId];
+                                $scope.anfitrionAnterior = $scope.anfitrionesRecords[$params.anfitrionId-2];
            
                     }]);
 })(window.angular);

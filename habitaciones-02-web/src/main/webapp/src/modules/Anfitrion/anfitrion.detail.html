@@ -1,31 +1,32 @@
 <div class="panel panel-default"> 
+    <style>
+        dt{
+            text-align: center;
+        }
+        dd{
+            text-align: center;
+        }
+    </style>
     <div class="panel-body">
-        <style>
-            dt{
-                font-size: 20px;
-            }
-            dd{
-                font-size: 18px;
-            }
-        </style>
-        <div style =" margin-bottom: 0px;border-bottom: 0px;  margin-bottom: 0px;" class="row">
-            <div class="col-sm-2 col-md-3">
 
+        <div class="col-md-3">
+            <div class ="row">
                 <div  class="thumbnail">
-                    <img style="width: 100%; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px;"class="img-responsive" ng-src="{{currentAnfitrion.imagen}}"alt="{{anfitrion.nombre}}"/>
+                    <img style="max-height: 300px; min-height: 300px;"class="img-responsive" ng-src="{{currentAnfitrion.imagen}}"alt="{{anfitrion.nombre}}"/>
                 </div>
-
             </div>
-            <div style=" border-left: none; margin-left: 0px; "class="col-md-4">
+            <div class="row">
+
                 <dl>     
 
-                    <dt style="font-size: 35px ">{{currentAnfitrion.nombre}}</dt>
+                    <dt style="font-size: 20px ">{{currentAnfitrion.nombre}}</dt>
                     <hr>
-                    <br></br>
-                    <dt > Correo</dt>
-                    <dd >{{currentAnfitrion.correoElectronico}}</dd>
+
                     <dt > Número de documento</dt>
                     <dd >{{currentAnfitrion.numeroDocumento}}</dd>
+                    <dt > Correo</dt>
+                    <dd >{{currentAnfitrion.correoElectronico}}</dd>
+
                     <dt > Dirección</dt>
                     <dd >{{currentAnfitrion.direccion}}</dd>
                     <dt > Teléfono</dt>
@@ -33,31 +34,42 @@
 
 
                 </dl>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
 
-                        <div class="col-md-6">
-                            <dt style="font-size: 20px "> Viviendas    </dt>
-                            <ul ng-repeat="vivienda in currentAnfitrion.viviendas">
-                                <dt>Vivienda: {{vivienda.id}}</dt>
-                                <dd>Ciudad: {{vivienda.ciudad}}</dd>
-                                <dd>Dirección: {{vivienda.direccion}}</dd>
-                            </ul>
-                        </div>    
-                        <div class="col-md-6">
-                            <dt> Reservas    </dt>
-                            <ul ng-repeat="reserva in currentAnfitrion.reservas">
-                                <dt>Inicio: {{reserva.fechaInicioEstadia}}</dt>
-                                <dt>Fin: {{reserva.fechaInicioEstadia}}</dt>
-                            </ul>
-                        </div>   
-
-                    </div>
-                </div>
-            </div>
-            
+            </div>    
         </div>
+
+        <div class="col-md-9">
+
+            <nav style="background-color: white; border-color: #286090" class="navbar navbar-default">
+                <div class="col-md-8">
+                    <ul class="nav navbar-nav">
+
+                        <li><a ui-sref="anfitrionViviendasList"><b>Viviendas</b></a></li> 
+                        <li><a ui-sref="anfitrionReservasList"><b>Reservas</b></a></li> 
+                    </ul>
+
+                </div>
+                <div class="col-md-4">
+
+                    <ul class="nav navbar-nav text-right">
+                        <li><a ui-sref="anfitrionUpdate"><span class="glyphicon glyphicon-pencil"></span><b> Actualizar información de Perfil</b></a></li>
+                    </ul>
+
+                </div>
+
+
+            </nav>
+
+            <div ui-view="ListasAnfitrionView">
+
+                <div class="text-center">
+
+                    <b style="color: #204d74; ">Por favor, escoja una de las opciones del menu.</b>
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </div>

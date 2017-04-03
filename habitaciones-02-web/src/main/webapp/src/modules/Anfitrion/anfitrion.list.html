@@ -1,19 +1,64 @@
 <div class="container-fluid">
     <div class="row">
+
+        <div class="thumbnail" style="margin-left: 5px; margin-right: 5px;">
+
+            <div class="row">
+
+                <form name="filtroViajeros" novalidate>
+
+                    <div class="col-md-1 text-right">
+
+                        <b style="text-align: center">Filtrar: </b>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <b style="color: #1b6d85">Nombre:  </b><input type="text" name="nombreViajero" size="25"> 
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <b style="color: #1b6d85">tipo Documento:  </b><input type="text" name="tipoDocumentoViajero" size="10">
+
+                        <b style="color: #1b6d85">Numero Documento:  </b><input type="text" name="numeroDocumentoViajero" size="20">
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <input type="submit" value="Realizar Busqueda" style="color: #1b6d85">
+
+                    </div>
+
+                </form>
+
+            </div> 
+
+        </div>
+
+    </div>
+
+    <div class="row">
         <div class="col-sm-2 col-md-2" ng-repeat="anfitrion in anfitrionesRecords">
 
 
             <div class="thumbnail">
                 <style scoped>
                     img{
-                        width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                         max-height: 300px; min-height: 300px; 
                     }
                 </style>
 
                 <a ui-sref="anfitrionDetail({anfitrionId: anfitrion.idUsuario})">
-                    <img class="img-responsive" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
-                    <div class="caption text-center">{{anfitrion.nombre}}</div>
-                    <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
+                    <div class =" caption text-center">
+                        <div class="caption text-center">{{anfitrion.nombre}}</div>
+                        <img class="img-responsive"  align="middle" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
+                        
+                        <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
+                    </div>
                 </a>
 
             </div>

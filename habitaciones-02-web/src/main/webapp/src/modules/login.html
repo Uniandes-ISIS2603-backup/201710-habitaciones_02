@@ -1,0 +1,67 @@
+<div class="panel panel-default" style="border-color: #d1eeff;">
+
+    <style>
+
+        b.TextoCreacion{
+
+            font-size: 16px;
+            margin-left: 60px;
+        }
+        input.Creacion{
+            margin-left: 60px;
+        }
+        input.ng-invalid{
+
+            background-color: lightsalmon;
+        }
+        input.ng-valid{
+
+            background-color: lightblue;
+        }
+
+    </style>
+
+    <div class="panel-body">
+
+        <div class="row">
+
+            <h2 style="text-align: center;">Iniciar Sesión <br></h2>
+
+            <p style="text-align: justify; font-size: 14px; text-align: center;">
+                ¡Bienvenido Usuario! ¡Estás a punto de acceder a la pagina de reserva de habitaciones mas grande de la
+                clase de Desarrollo de Software en Equipo!<br>
+                A continuación, ingresa tus datos de acceso a nuestro sistema. <br>
+                Con ello, podrás empezar a buscar y a disfrutar de los diversos beneficios que Habitaciones Uniandes trae para ti
+            </p>
+            <br>
+            <hr>
+            <div class="col-md-4">
+
+            </div>
+            <div class="text-center">
+
+                <form name="formaLogin"  style="align-content: center" novalidate>
+
+                    <div class=" thumbnail col-md-4" style="align-content: center">
+
+                        <h3 style="text-align: center; color: #286090">Informacion de Cuenta</h3><br>
+
+                        <b class="TextoLogin">Correo Electronico</b><br>
+                        <input class="Creacion" name="correoElectronico" type="email" size="40" ng-model='correoElectronico'required><br><br>
+
+                        <b class="TextoLogin">Contraseña:</b><br>
+                        <input class="Creacion" type="password" name="contrasenaV1" size="40" ng-model='contrasena' required><br><br>
+
+                        <input  type="submit" value="Log in" style="font-size: 16px;">
+
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>    
+    </div>
+</div>

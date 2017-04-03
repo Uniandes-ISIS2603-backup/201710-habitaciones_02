@@ -1,0 +1,127 @@
+<div class="panel panel-default" style="border-color: #286090">
+    <style>
+            dt{
+                text-align: center;
+            }
+            dd{
+                text-align: center;
+            }
+
+            input.Actualizacion.ng-invalid{
+            
+            background-color: lightsalmon;
+            }
+            input.Actualizacion.ng-valid{
+            
+            background-color: lightgreen;
+            }
+    </style>
+    
+    <div class="panel-body" >
+
+        <div class="col-md-5">
+            
+            <div class="row thumbnail">
+
+                <h3 style="text-align: center;">Verificacion de Usuario <br></h3>
+
+                <p style="text-align: center; font-size: 14px; text-align: center;">
+                    Por favor, antes de actualizar sus datos,<br>
+                    ingrese los siguientes datos para verificar su identidad.
+                </p>
+                <hr>
+
+                <div class="text-left">
+                    <form name="formaAu" novalidate>
+
+                        <b>Escriba su contraseña:</b><br>
+                        <input class="Actualizacion" type="password" name="contrasenaV1" size="30" ng-model='contrasenaV1' required>
+                        <span ng-show="formaAu.contrasenaV1.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
+
+                        <b>Escriba su contraseña nuevamente:</b><br>
+                        <input class="Actualizacion" type="password" name="contrasenaV2" size="30" ng-model='contrasenaV2' required>
+                        <span ng-show="formaAu.contrasenaV2.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
+
+                        <input class="center-block" type="button" value="verificar">
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="row thumbnail">
+
+                <h3 style="text-align: center;">Cambio de Contrasena<br></h3>
+                <hr>
+
+                <div class="text-left">
+                    <form name="formaCam" novalidate>
+
+                        <b>Contraseña actual:</b><br>
+                        <input type="password" name="contrasenaAntigua" size="30" ng-model='contrasenaAntigua' required>
+                        <span ng-show="formCam.contrasenaAntigua.$touched && formaCam.contrasenaAntigua.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <b>Nueva Contraseña:</b><br>
+                        <input type="password" name="contrasenaNueva1" size="30" ng-model='contrasenaNueva1' required>
+                        <span ng-show="formCam.contrasenaNueva1.$touched && formaCam.contrasenaNueva1.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <b>Vuelva a escribir la nueva Contraseña:</b><br>
+                        <input type="password" name="contrasenaNueva2" size="30" ng-model='contrasenaNueva2' required>
+                        <span ng-show="formCam.contrasenaNueva2.$touched && formaCam.contrasenaNueva2.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <input class="center-block" type="submit" value="cambiar Contrasena">
+
+                    </form>
+                </div>
+       
+            </div>
+        </div>
+        
+        <div class="col-md-7" >
+                
+            <div class="row thumbnail" style=" margin-left: 20px; width: 98%;">
+
+                <h3 style="text-align: center;">Actualizacion de Datos<br></h3>
+
+                <p style="text-align: center; font-size: 14px; text-align: center;">
+                    Por favor, ingrese los datos que desea modificar en su casilla correspondiente.<br>
+                    No olvide realizar la verificación de usuario antes de enviar la informacion.
+                </p>
+
+                <div class="text-left">
+                    <form name="formaA" novalidate>
+
+                        <b>Nombre Completo:</b><br>
+                        <input class="Actualizacion" name="nombre" type="text" size="40" ng-model='currentViajero.nombre'required>
+                        <span ng-show="formaA.nombre.$touched && formaA.nombre.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <b>Correo Electrónico</b><br>
+                        <input class="Actualizacion" name="correoElectronico" type="email" size="40" ng-model='currentViajero.correoElectronico' required>
+                        <span ng-show="formaA.correoElectronico.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        
+                        <b>Tipo Documento</b><br>
+                        <input class="Actualizacion" name="tipoDocumento" type="text" size="40" ng-model='currentViajero.tipoDocumento'required>
+                        <span ng-show="formaA.tipoDocumento.$touched && formaA.tipoDocumento.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <b>Número Documento</b><br>
+                        <input class="Actualizacion" name="numeroDocumento" type="text" size="40" ng-model='currentViajero.numeroDocumento'required>
+                        <span ng-show="formaA.numeroDocumento.$touched && formaA.numeroDocumento.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <b>Dirección</b><br>
+                        <input class="Actualizacion" name="direccion" type="text" size="40" ng-model='currentViajero.direccion'required>
+                        <span ng-show="formaA.direccion.$touched && formaA.direccion.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <b>Telefono de Contacto</b><br>
+                        <input class="Actualizacion" name="telefono" type="text" size="40" ng-model='currentViajero.telefono'required>
+                        <span ng-show="formaA.telefono.$touched && formaA.telefono.$invalid"><b style="color: red">X</b></span><br><br>
+
+                        <input class='Actualizacion center-block' type="submit" value="Actualizar datos">
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -50,9 +50,50 @@
                          controllerAs: 'ctrl',
                     }
                 }
+            }).state('anfitrionCreate', {
+                url: '/',
+                
+                resolve: {
+                    anfitriones: ['$http', function ($http) {
+                            return $http.get('data/anfitriones.json');
+                        }]
+                },
+                views: {
+                    
+                    'mainView': {
+                       
+                        templateUrl: basePath + 'anfitrion.create.html',
+                        controller: ['$scope', 'anfitriones', function ($scope, anfitriones) {
+                                $scope.anfitrionesRecords = anfitriones.data;
+                            }]
+                    }
+                } 
+            });
+            $stateProvider.state('login', {
+                url: '/login',
+                
+                resolve: {
+                    viajeros: ['$http', function ($http) {
+                            return $http.get('data/viajeros.json');
+                        }],
+                    anfitriones: ['$http', function ($http) {
+                            return $http.get('data/anfitriones.json');
+                        }]
+                },
+                views: {
+                    
+                    'mainView': {
+                       
+                        templateUrl: 'src/modules/login.html',
+                        controller: ['$scope', 'anfitriones','viajeros', function ($scope,anfitriones, viajeros) {
+                                $scope.RecordsViajero = viajeros.data;
+                                $scope.anfitrionesRecords = anfitriones.data;
+                            }]
+                    }
+                } 
             });
             $stateProvider.state('anfitrionDetail', {
-                 url: '/{anfitrionId:int}/detail',
+                 url: '/{anfitrionId:int}',
                 parent: 'anfitrion',
                 
                 param: {
@@ -95,14 +136,67 @@
                     'detailView': {
                         templateUrl: basePath + 'anfitrion.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                console.log($params.anfitrionId);
                                 
                                 
-                                actual=$params.anfitrionId-1;
+                                
+                                
                                 $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
                             }]
                     }
 
+                } 
+            });
+            
+          
+            $stateProvider.state('anfitrionReservasList', {
+                url: '/reservas',
+                parent: 'anfitrionDetail',
+                
+                param: {
+                    anfitrionId: null
+                },
+                views: {
+                    'ListasAnfitrionView':{
+                        templateUrl: basePath + 'anfitrion.reservas.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                            }]
+                        
+                    }
+                } 
+            });
+            $stateProvider.state('anfitrionUpdate', {
+                url: '/edit',
+                parent: 'anfitrionDetail',
+                
+                param: {
+                    anfitrionId: null
+                },
+                views: {
+                    'ListasAnfitrionView':{
+                        templateUrl: basePath + 'anfitrion.update.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                            }]
+                        
+                    }
+                } 
+            });
+             $stateProvider.state('anfitrionViviendasList', {
+                url: '/viviendas',
+                parent: 'anfitrionDetail',
+                
+                param: {
+                    anfitrionId: null
+                },
+                views: {
+                    'ListasAnfitrionView':{
+                        templateUrl: basePath + 'anfitrion.viviendas.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                            }]
+                        
+                    }
                 } 
             });
         }
