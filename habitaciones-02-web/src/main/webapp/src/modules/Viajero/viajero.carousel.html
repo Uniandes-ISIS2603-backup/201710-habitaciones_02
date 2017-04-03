@@ -1,0 +1,62 @@
+<div class="container">
+      
+    <div class="row">
+      
+        <div class="col-md-12">
+
+          <div class="carousel slide multi-item-carousel" id="theCarousel">
+
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <div class="col-xs-4">
+                        <a ui-sref="viajeroDetail({viajeroId: prevViajero.idUsuario})">
+                            <img ng-src="{{prevViajero.imagen}}" class="img-responsive" alt="{{prevViajero.nombre}}">
+
+                            <br>
+                            <div class="center-block"><b>{{prevViajero.nombre}}</b></div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="item active">
+                    <div class="col-xs-4">
+                        <a ui-sref="viajeroDetail({viajeroId: currentViajero.idUsuario})">
+                            <img ng-src="{{currentViajero.imagen}}" class="img-responsive" alt="{{currentViajero.nombre}}">
+
+                            <br>
+                            <div class="center-block"><b>{{currentViajero.nombre}}</b></div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="item active">
+                    <div class="col-xs-4">
+                        <a ui-sref="viajeroDetail({viajeroId: nextViajero.idUsuario })">
+                            <img ng-src="{{nextViajero.imagen}}" class="img-responsive" alt="{{nextViajero.nombre}}">
+
+                            <br>
+                            <div class="center-block"><b>{{nextViajero.nombre}}</b></div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a class="left carousel-control" ui-sref="viajeroDetail({viajeroId: prevViajero.idUsuario})" data-slide="prev">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+
+            <a class="right carousel-control" ui-sref="viajeroDetail({viajeroId: nextViajero.idUsuario})" data-slide="next">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+    </div>
+    
+</div>

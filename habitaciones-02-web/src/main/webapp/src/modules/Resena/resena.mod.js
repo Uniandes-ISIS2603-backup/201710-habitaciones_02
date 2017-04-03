@@ -15,10 +15,11 @@
                  url: '/resenas',
                  abstract: true,
                  
-                 resolve: {
+                resolve: {
                     resenas: ['$http', function ($http) {
                             return $http.get('data/resenas.json');
                         }]
+                    
                 },
                 views: {
                     'mainView': {
@@ -52,24 +53,95 @@
                 }
                 
             });
-            
             $stateProvider.state('resenaDetail', {
-                 url: '/{resenaId:int}/detail',
+
+                url: '/{resenaId:int}',
                 parent: 'resena',
+                param: {
+                    resenaId: null,
+                    viajeroId: null
+                },
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + 'resena.detail.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params ) { 
+                               $scope.currentResena = $scope.RecordsResena[$params.resenaId-1];
+                            }]
+                    }
+
+                } 
+            });
+            $stateProvider.state('resenaDetailViajero', {
+
+                url: '/{resenaId:int}/viajeros/{viajeroId:int}',
+                parent: 'resena',
+                param: {
+                    resenaId: null,
+                    viajeroId: null
+                },
+                resolve:{
+                  
+                    viajeros: ['$http', function ($http) 
+                    {
+                        return $http.get('data/viajeros.json'); // $http retorna un apromesa que aquí no se está manejando si viene con error.
+                    }]
+                },
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + 'resena.detail.viajero.html',
+                        controller: ['$scope', '$stateParams','viajeros', function ($scope, $params, viajeros ) { 
+                               $scope.currentResena = $scope.RecordsResena[$params.resenaId-1];
+                               $scope.RecordsViajero = viajeros.data;
+                               $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                               
+                            }]
+                    }
+
+                } 
+            });
+            $stateProvider.state('resenaDetailHabitacion', {
+
+                url: '/{resenaId:int/habitaciones/{habitacionId:int}}',
+                parent: 'resena',
+                param: {
+                    resenaId: null,
+                    habitacionId: null
+                },
+                resolve:{
+                  
+                    habitaciones: ['$http', function ($http) 
+                    {
+                        return $http.get('data/habitaciones.json'); // $http retorna un apromesa que aquí no se está manejando si viene con error.
+                    }]
+                },
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + 'resena.detail.habitacion.html',
+                        controller: ['$scope', '$stateParams','habitaciones', function ($scope, $params, habitaciones ) { 
+                               $scope.currentResena = $scope.RecordsResena[$params.resenaId-1];
+                               $scope.RecordsHabitacion = habitaciones.data;
+                               $scope.currentHabitaciones = $scope.RecordsHabitacion[$params.habitacionId-16];
+                               
+                            }]
+                    }
+
+                } 
+            });
+            $stateProvider.state('resenaUpdate', {
+                url: '/{resenaId:int}/viajeros/{viajeroId:int}',
+                parent: 'resenaDetailViajero',
+                
                 param: {
                     resenaId: null
                 },
                 views: {
-                    'listView': {
-                        templateUrl: basePath + 'resena.list.html'
-                    },
-                    'detailView': {
-                        templateUrl: basePath + 'resena.detail.html',
+                    'resenaUpdateView':{
+                        templateUrl: basePath + 'resena.update.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentResena = $scope.RecordsResena[$params.resenaId-1];
+                                 $scope.currentResena = $scope.RecordsResena[$params.resenaId-1];
                             }]
+                        
                     }
-
                 } 
             });
             
