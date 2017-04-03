@@ -8,8 +8,8 @@
             </div>
             <div class="col-md-3">
                 <dl>     
-                    <dt>{{currentHabitacion.name}}</dt>
-                    
+                    <dt style="font-size: 20px"> Habitacion </dt>
+                    <hr>
                     <dt> Área</dt>
                     <dd>{{currentHabitacion.area}}</dd>
                     <hr>
@@ -29,8 +29,11 @@
 
                         <div class="col-md-6">
                             <dt style="font-size: 20px "> Disponibilidades    </dt>
+                            <hr>
                             <ul ng-repeat="disponibilidad in currentHabitacion.disponibilidades">
+                                <a ui-sref="disponibilidadDetail({disponibilidadId: disponibilidad.id})" >
                                 <dt>Disponibilidad: {{disponibilidad.id}}</dt>
+                                </a>
                                 <dd>Fecha inicio estadía: {{disponibilidad.fechaInicioEstadia}}</dd>
                                 <dd>Fecha terminación estadía: {{disponibilidad.fechaTerminacionEstadia}}</dd>
                             </ul> 
@@ -46,7 +49,9 @@
                         <div class="col-md-6">
                             <dt style="font-size: 20px "> Reservas    </dt>
                             <ul ng-repeat="reserva in currentHabitacion.reservas">
+                                <a ui-sref="reservaDetail({reservaId: reserva.id})" >
                                 <dt>Reserva: {{reserva.id}}</dt>
+                                </a>
                                 <dd>Precio: {{reserva.precio}}</dd>
                                 <dd>Fecha inicio estadía: {{reserva.fechaInicioEstadia}}</dd>
                                 <dd>Fecha terminación estadía: {{reserva.fechaTerminacionEstadia}}</dd>
