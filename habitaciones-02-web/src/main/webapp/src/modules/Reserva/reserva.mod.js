@@ -65,7 +65,7 @@
                     'detailView': {
                         templateUrl: basePath + 'reserva.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId];
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId-2];
                             }]
                     }
 
