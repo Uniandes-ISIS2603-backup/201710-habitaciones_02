@@ -1,4 +1,4 @@
-<div class="panel panel-default"> 
+    <div class="panel panel-default"> 
     <div class="panel-body">
         <div class="row">
             <div class="col-md-3">
@@ -55,6 +55,42 @@
                                 <dd>Precio: {{reserva.precio}}</dd>
                                 <dd>Fecha inicio estadía: {{reserva.fechaInicioEstadia}}</dd>
                                 <dd>Fecha terminación estadía: {{reserva.fechaTerminacionEstadia}}</dd>
+                            </ul> 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="col-md-6">
+                            <dt style="font-size: 20px "> Reseñas    </dt>
+                            <ul ng-repeat="resena in currentHabitacion.resenas">
+                                <a ui-sref="resenaDetail({resenaId: resena.id})" >
+                                <dt>Reserva: {{resena.id}}</dt>
+                                </a>
+                                <dd>Calificación: {{reserva.calificacion}}</dd>
+                                <dd>Comentario: {{reserva.comentario}}</dd>
+                            </ul> 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="col-md-6">
+                            <dt style="font-size: 20px "> Vivienda    </dt>
+                            <ul ng-repeat="vivienda in currentHabitacion.vivienda">
+                                <a ui-sref="viviendaDetail({viviendaId: vivienda.id})" >
+                                <dt>Vivienda: {{vivienda.id}}</dt>
+                                </a>
+                                <dd>Ciudad: {{vivienda.ciudad}}</dd>
+                                <dd>Dirección: {{vivienda.direccion}}</dd>
                             </ul> 
 
                         </div>
