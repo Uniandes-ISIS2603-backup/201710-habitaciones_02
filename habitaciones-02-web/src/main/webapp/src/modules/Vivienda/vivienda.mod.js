@@ -1,17 +1,18 @@
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("viviendaModule", ['ui.router']);
-
+    
+    mod.constant("viviendasContext", "api/viviendas");
+    
     // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             var basePath = 'src/modules/Vivienda/';
-            var basePathHabitaciones = 'src/modules/Habitacion/';
             $stateProvider.state('viviendas', {
                 url: '/viviendas',
                 abstract: true,
                 resolve: {
-                    viviendas: ['$http', function ($http) {
-                            return $http.get('data/viviendas.json');
+                    viviendas: ['$http','viviendasContext', function ($http, viviendasContext) {
+                            return $http.get(viviendasContext);
                         }]
                 },
                 views: {

@@ -1,5 +1,6 @@
 (function (ng) {
     var mod = ng.module("pagoModule", ['ui.router']);
+    mod.constant("pagosContext", "api/pagos");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
             var basePath = 'src/modules/Pago/';
@@ -8,8 +9,8 @@
                 url: '/pagos',
                 abstract: true,
                 resolve: {
-                    pagos: ['$http', function ($http) {
-                            return $http.get('data/pagos.json');
+                    pagos: ['$http','pagosContext', function ($http, pagosContext) {
+                            return $http.get(pagosContext);
                         }]
                 },
                 views: {
