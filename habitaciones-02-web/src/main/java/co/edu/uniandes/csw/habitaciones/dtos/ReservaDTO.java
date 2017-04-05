@@ -38,6 +38,9 @@ public class ReservaDTO implements Serializable{
      * estado de la reserva
      */
     private Boolean cancelado;
+    
+    
+    private Integer precio;
     /**
      * Metodo Constructor por defecto de la clase
      */
@@ -57,6 +60,7 @@ public ReservaDTO(ReservaEntity entity)
         this.fechaInicio = entity.getFechaInicio();
         this.fechaTerminacion = entity.getFechaTerminacion();
         this.cancelado = entity.getCancelado();
+        this.precio = entity.getPrecio();
     }
 }
 /**
@@ -70,6 +74,7 @@ public ReservaEntity toEntity()
     entity.setFechaInicio(this.getFechaInicio());
     entity.setFechaTerminacion(this.getFechaTerminacion());
     entity.setCancelado(this.getCancelado());
+    entity.setPrecio(this.getPrecio());
     return entity;
     
 }
@@ -86,6 +91,14 @@ public ReservaEntity toEntity()
     public void setId(Long i)
     {
         this.id = i;
+    }
+    public Integer getPrecio()
+    {
+        return precio;
+    }
+    public void setPrecio(Integer precio)
+    {
+        this.precio = precio;
     }
      /**
      * @return fechaInicioEstadia Date
