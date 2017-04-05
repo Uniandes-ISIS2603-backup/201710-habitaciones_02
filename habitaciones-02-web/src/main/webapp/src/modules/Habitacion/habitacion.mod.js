@@ -1,6 +1,7 @@
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("habitacionModule", ['ui.router']);
+    mod.constant("habitacionContext", "api/habitaciones");
  
    // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -16,8 +17,8 @@
                 // Se define una variable habitaciones (del estado) que toma por valor 
                 // la colección de habitaciones que obtiene utilizando $http.get 
                  resolve: {
-                    habitaciones: ['$http', function ($http) {
-                            return $http.get('data/habitaciones.json'); // $http retorna una promesa que aquí no se está manejando si viene con error.
+                    habitaciones: ['$http', 'habitacionContext', function ($http, habitacionContext) {
+                            return $http.get(habitacionContext); // $http retorna una promesa que aquí no se está manejando si viene con error.
                         }]
                 },
                 views: {
@@ -31,8 +32,8 @@
                 url: '/habitaciones/list',
                
                  resolve: {
-                    habitaciones: ['$http', function ($http) {
-                            return $http.get('data/habitaciones.json'); 
+                    habitaciones: ['$http', 'habitacionContext', function ($http, habitacionContext) {
+                            return $http.get(habitacionContext); 
                         }]
                     
                     
