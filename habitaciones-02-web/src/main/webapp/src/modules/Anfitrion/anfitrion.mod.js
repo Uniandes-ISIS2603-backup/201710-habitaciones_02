@@ -6,7 +6,7 @@
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Anfitrion/';
-            
+
             var presente = 0;
 
             // Definición del estado 'anfitrionesList' donde se listan los anfitriones
@@ -110,15 +110,19 @@
 
                         }], anfitrionSiguiente: ['$http', 'anfitrionesContext', '$stateParams', function ($http, anfitrionesContext, $params) {
 
-
-                            return $http.get(anfitrionesContext + '/' + ($params.anfitrionId + 1));
-
+                            if ($params.anfitrionId + 1 !== 16) {
+                                return $http.get(anfitrionesContext + '/' + ($params.anfitrionId + 1));
+                            } else {
+                                return $http.get(anfitrionesContext + '/' + ($params.anfitrionId));
+                            }
 
                         }], anfitrionAnterior: ['$http', 'anfitrionesContext', '$stateParams', function ($http, anfitrionesContext, $params) {
 
-
-                            return $http.get(anfitrionesContext + '/' + ($params.anfitrionId - 1));
-
+                            if ($params.anfitrionId - 1 !== 0) {
+                                return $http.get(anfitrionesContext + '/' + ($params.anfitrionId - 1));
+                            } else {
+                                return $http.get(anfitrionesContext + '/' + ($params.anfitrionId));
+                            }
 
                         }], currentAnfitrion: ['$http', 'anfitrionesContext', '$stateParams', function ($http, anfitrionesContext, $params) {
 
@@ -129,14 +133,12 @@
                 views: {
                     'anfitrionCarouselView': {
                         templateUrl: basePath + 'anfitrion.carousel.html',
-                        controller: [ '$scope','anfitrionAnterior', 'anfitrionSiguiente',
+                        controller: ['$scope', 'anfitrionAnterior', 'anfitrionSiguiente',
                             'anfitrionActual', 'anfitriones', 'anfitrionPresente',
                             function ($scope, anfitrionAnterior, anfitrionSiguiente
                                     , anfitrionActual, anfitriones, anfitrionPresente) {
-                                
-                                console.log(anfitrionAnterior);
-                                console.log(anfitrionActual);
-                                console.log(anfitrionSiguiente);
+
+
                                 $scope.anfitrionPresente = anfitrionPresente;
                                 $scope.anfitrionesRecords = anfitriones.data;
                                 $scope.anfitrionActual = anfitrionActual.data;
