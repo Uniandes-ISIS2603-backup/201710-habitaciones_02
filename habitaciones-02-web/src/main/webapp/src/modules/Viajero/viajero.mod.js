@@ -16,7 +16,7 @@
                 url: '/viajeros',
                 abstract: true,
                 resolve: {
-                    viajeros: ['$http', function ($http, viajeroContext) {
+                    viajeros: ['$http', 'viajeroContext', function ($http, viajeroContext) {
                             return $http.get(viajeroContext);
                         }]
                 },
@@ -55,7 +55,10 @@
                 },
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'viajero.list.html'
+                        templateUrl: basePath + 'viajero.list.html',
+                        controller: ['$scope', 'viajeros', function ($scope, viajeros) {
+                                $scope.RecordsViajero = viajeros.data;
+                            }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'viajero.detail.html',
@@ -102,7 +105,7 @@
                 
                 views: {
                     
-                    'mainView': {
+                    'detailView': {
                        
                         templateUrl: basePath + 'viajero.create.html'
                         //necesita a los viajeros? creo que no
