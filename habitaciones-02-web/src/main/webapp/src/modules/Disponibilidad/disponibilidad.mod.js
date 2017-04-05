@@ -1,6 +1,7 @@
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("disponibilidadModule", ['ui.router']);
+    mod.constant("disponibilidadContext", "api/habitaciones/{idHabitacion: \\d+}/disponibilidades");
 
     // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -15,8 +16,8 @@
                 abstract: true,
 
                 resolve: {
-                    disponibilidades: ['$http', function ($http) {
-                            return $http.get('data/disponibilidades.json'); // $http retorna una promesa que aquí no se está manejando si viene con error.
+                    disponibilidades: ['$http', 'disponibilidadContext', function ($http, disponibilidadContext) {
+                            return $http.get(disponibilidadContext); // $http retorna una promesa que aquí no se está manejando si viene con error.
                         }]
                 },
                 views: {
@@ -31,8 +32,8 @@
                 url: '/disponibilidades/list',
 
                 resolve: {
-                    disponibilidades: ['$http', function ($http) {
-                            return $http.get('data/disponibilidades.json');
+                    disponibilidades: ['$http', 'disponibilidadContext', function ($http, disponibilidadContext) {
+                            return $http.get(disponibilidadContext);
                         }]
 
 

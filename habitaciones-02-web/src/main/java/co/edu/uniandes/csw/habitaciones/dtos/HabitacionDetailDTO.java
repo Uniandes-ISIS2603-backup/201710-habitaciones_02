@@ -24,44 +24,47 @@ public class HabitacionDetailDTO extends HabitacionDTO {
     private List<DisponibilidadDTO> disponibilidades = new ArrayList<>();
 
     private List<ReservaDTO> reservas = new ArrayList<>();
-    
+
     private List<ResenaDTO> resenas = new ArrayList<>();
 
     private ViviendaDTO vivienda;
 
     public HabitacionDetailDTO() {
-        
+
         super();
- 
+
     }
 
     public HabitacionDetailDTO(HabitacionEntity entity) {
         super(entity);
-        
+
         if (entity != null) {
-            
+
             for (DisponibilidadEntity entityDis : entity.getDisponibilidades()) {
-                
+
                 DisponibilidadDTO disponibilidad = new DisponibilidadDTO(entityDis);
                 disponibilidades.add(disponibilidad);
             }
-            
+
             for (ReservaEntity entityRes : entity.getReservas()) {
-                
+
                 ReservaDTO reserva = new ReservaDTO(entityRes);
                 reservas.add(reserva);
             }
-            
-            for(ResenaEntity entityResena : entity.getResenas())
-            {
-                
+
+            for (ResenaEntity entityResena : entity.getResenas()) {
+
                 ResenaDTO resena = new ResenaDTO(entityResena);
                 resenas.add(resena);
             }
             // TODO esto depende del valor que traiga el entity. Si no es null entity.getVivienda() entonces se hace el new con ese valor
-            vivienda = new ViviendaDTO();
+            if (vivienda != null) {
+                vivienda = new ViviendaDTO(entity.getVivienda());
+            } else {
+                vivienda = new ViviendaDTO();
+            }
         }
-        
+
     }
 
     public HabitacionEntity toEntity() {
@@ -79,19 +82,18 @@ public class HabitacionDetailDTO extends HabitacionDTO {
 
             listaReservas.add(dtoReserva.toEntity());
         }
-        
+
         List<ResenaEntity> listaResenas = new ArrayList<>();
-        for (ResenaDTO dtoResena : resenas)
-        {
-            
+        for (ResenaDTO dtoResena : resenas) {
+
             listaResenas.add(dtoResena.toEntity());
         }
 
         entity.setDisponibilidades(listaDisponibilidades);
         entity.setReservas(listaReservas);
-        
-        entity.setVivienda(vivienda.toEntity());
-        
+        if (vivienda != null) {
+            entity.setVivienda(vivienda.toEntity());
+        }
         return entity;
     }
 
@@ -126,7 +128,5 @@ public class HabitacionDetailDTO extends HabitacionDTO {
     public void setVivienda(ViviendaDTO vivienda) {
         this.vivienda = vivienda;
     }
-    
-    
 
 }
