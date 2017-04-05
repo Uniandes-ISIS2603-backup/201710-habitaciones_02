@@ -1,7 +1,7 @@
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("anfitrionModule", ['ui.router']);
-
+    mod.constant("anfitrionesContext", "api/anfitriones");
    // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             // En basePath se encuentran los templates y controladores de módulo
@@ -11,13 +11,13 @@
             var anterior;
             var siguiente;
             // Definición del estado 'anfitrionesList' donde se listan los anfitriones
-            $stateProvider.state('anfitrion', {
+            $stateProvider.state('anfitriones', {
                 url: '/anfitriones',
                 abstract: true,
                 
                 resolve: {
-                    anfitriones: ['$http', function ($http) {
-                            return $http.get('data/anfitriones.json');
+                    anfitriones: ['$http','anfitrionesContext', function ($http,anfitrionesContext) {
+                            return $http.get(anfitrionesContext);
                         }]
                     
                 },
@@ -36,8 +36,8 @@
                 // la colección de anfitriones que obtiene utilizando $http.get 
                 
                 resolve: {
-                    anfitriones: ['$http', function ($http) {
-                            return $http.get('data/anfitriones.json'); 
+                    anfitriones: ['$http','anfitrionesContext', function ($http,anfitrionesContext) {
+                            return $http.get(anfitrionesContext); 
                         }]
                     
                     
@@ -94,7 +94,7 @@
             });
             $stateProvider.state('anfitrionDetail', {
                  url: '/{anfitrionId:int}',
-                parent: 'anfitrion',
+                parent: 'anfitriones',
                 
                 param: {
                     anfitrionId: null,        
@@ -125,7 +125,12 @@
                                 return $params.anfitrionId-2;
                          
                         
-                }]},
+                }], currentAnfitrion:['$http','anfitrionesContext','$stateParams',function($http,anfitrionesContext,$params){
+                    return $http.get(anfitrionesContext+'/'+$params.anfitrionId);
+                }]
+        
+                
+                },
         
                 views: {
                     'anfitrionCarouselView': {
@@ -135,12 +140,12 @@
                     },
                     'detailView': {
                         templateUrl: basePath + 'anfitrion.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                        controller: ['$scope', 'currentAnfitrion', function ($scope, currentAnfitrion) {
                                 
                                 
                                 
                                 
-                                $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                                $scope.currentAnfitrion = currentAnfitrion.data;
                             }]
                     }
 
@@ -155,11 +160,16 @@
                 param: {
                     anfitrionId: null
                 },
+                resolve: {
+                  currentAnfitrion:['$http','anfitrionesContext','$stateParams',function($http,anfitrionesContext,$params){
+                    return $http.get(anfitrionesContext+'/'+$params.anfitrionId);
+                }]  
+                },
                 views: {
                     'ListasAnfitrionView':{
                         templateUrl: basePath + 'anfitrion.reservas.list.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                        controller: ['$scope', 'currentAnfitrion','$stateParams', function ($scope,currentAnfitrion, $params) {
+                                $scope.currentAnfitrion =currentAnfitrion.data;
                             }]
                         
                     }
@@ -172,13 +182,17 @@
                 param: {
                     anfitrionId: null
                 },
+                resolve: {
+                  currentAnfitrion:['$http','anfitrionesContext','$stateParams',function($http,anfitrionesContext,$params){
+                    return $http.get(anfitrionesContext+'/'+$params.anfitrionId);
+                }]  
+                },
                 views: {
                     'ListasAnfitrionView':{
                         templateUrl: basePath + 'anfitrion.update.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                       controller: ['$scope', 'currentAnfitrion', '$stateParams', function ($scope, currentAnfitrion, $params) {
+                                $scope.currentAnfitrion =currentAnfitrion.data;
                             }]
-                        
                     }
                 } 
             });
@@ -189,11 +203,17 @@
                 param: {
                     anfitrionId: null
                 },
+                resolve: {
+                  currentAnfitrion:['$http','anfitrionesContext','$stateParams',function($http,anfitrionesContext,$params){
+                    return $http.get(anfitrionesContext+'/'+$params.anfitrionId);
+                }]  
+                },
                 views: {
                     'ListasAnfitrionView':{
                         templateUrl: basePath + 'anfitrion.viviendas.list.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentAnfitrion = $scope.anfitrionesRecords[$params.anfitrionId-1];
+                        controller: ['$scope', 'currentAnfitrion', '$stateParams', function ($scope, currentAnfitrion, $params) {
+                                $scope.currentAnfitrion =currentAnfitrion.data;
+                            
                             }]
                         
                     }

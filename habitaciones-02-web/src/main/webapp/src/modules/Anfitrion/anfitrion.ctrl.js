@@ -5,14 +5,14 @@
             $scope.anfitrionesRecords = anfitriones.data;
         }
     ]);
-    mod.controller("anfitrionCarouselCtrl",['$scope','anfitriones','$stateParams', 'anfitrionPresente',
-        function($scope,anfitriones,$params, anfitrionPresente){
+    mod.controller("anfitrionCarouselCtrl",['$http','anfitrionesContext','$scope','anfitriones','$stateParams', 'anfitrionPresente',
+        function($http,$scope,anfitrionesContext,anfitriones,$params, anfitrionPresente){
             $scope.anfitrionPresente = anfitrionPresente;
             $scope.anfitrionesRecords = anfitriones.data;
             
-                                $scope.anfitrionActual = $scope.anfitrionesRecords[$params.anfitrionId-1];
-                                $scope.anfitrionSiguiente = $scope.anfitrionesRecords[$params.anfitrionId];
-                                $scope.anfitrionAnterior = $scope.anfitrionesRecords[$params.anfitrionId-2];
+                                $scope.anfitrionActual = $http.get(anfitrionesContext+'/'+($params.anfitrionId));
+                                $scope.anfitrionSiguiente = $http.get(anfitrionesContext+'/'+($params.anfitrionId+1));
+                                $scope.anfitrionAnterior = $http.get(anfitrionesContext+'/'+($params.anfitrionId-1)); 
            
                     }]);
 })(window.angular);
