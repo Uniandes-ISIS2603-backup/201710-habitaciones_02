@@ -60,6 +60,8 @@ public class AnfitrionResource {
         return new AnfitrionDetailDTO(logica.getAnfitrion(id));
     }
 
+    
+    
     @POST
     public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo) throws BusinessLogicException {
 
