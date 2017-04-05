@@ -16,8 +16,8 @@
                 url: '/viajeros',
                 abstract: true,
                 resolve: {
-                    viajeros: ['$http', function ($http) {
-                            return $http.get('data/viajeros.json');
+                    viajeros: ['$http', 'viajeroContext', function ($http, viajeroContext) {
+                            return $http.get(viajeroContext);
                         }]
                 },
                 views: {
@@ -30,16 +30,15 @@
                             }]
                     }
                 }
+                
             }).state('viajerosList',  {
                 // Url que aparecerá en el browser
-                url: '/viajeros/list',
+                url: '/list',
                 parent: 'viajero',
                 
                 views:{
                     'listView': {
-                        templateUrl: basePath + 'viajero.list.html',
-                        controller: 'viajeroListCtrl',
-                        controllerAs: 'ctrl'
+                        templateUrl: basePath + 'viajero.list.html'
                     }
                 }
                
@@ -49,19 +48,22 @@
                 param: {
                     viajeroId: null
                 },
+                resolve:{
+                    currentViajero:['$http', 'viajeroContext', '$stateParams', function ($http, viajeroContext, $params) {
+                            return $http.get(viajeroContext+'/'+$params.viajeroId);
+                    }]
+                },
                 views: {
                     'listView': {
-                        templateUrl: basePath + 'viajero.carousel.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
-                                $scope.nextViajero = $scope.RecordsViajero[$params.viajeroId-15];
-                                $scope.prevViajero = $scope.RecordsViajero[$params.viajeroId-17];
+                        templateUrl: basePath + 'viajero.list.html',
+                        controller: ['$scope', 'viajeros', function ($scope, viajeros) {
+                                $scope.RecordsViajero = viajeros.data;
                             }]
                     },
                     'detailView': {
                         templateUrl: basePath + 'viajero.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
+                        controller: ['$scope', 'currentViajero', function ($scope, currentViajero) {
+                                $scope.currentViajero = currentViajero.data;
                             }]
                     }
 
@@ -76,11 +78,9 @@
                 },
                 views: {
                     'ListasViajeroView':{
-                        templateUrl: basePath + 'viajero.reservas.list.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
-                            }]
-                        
+                        templateUrl: basePath + 'viajero.reservas.list.html'
+                        //hereda el currentViajero del viajeroDetail??
+                        //Yo puedo llamar las reservas del viajero desde HTML en vez de en el controlador?
                     }
                 } 
             });
@@ -93,31 +93,23 @@
                 },
                 views: {
                     'ListasViajeroView':{
-                        templateUrl: basePath + 'viajero.resenas.list.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
-                            }]
-                        
+                        templateUrl: basePath + 'viajero.resenas.list.html'
+                        //hereda el currentViajero del viajeroDetail??
                     }
                 } 
             });
             
             $stateProvider.state('viajeroCreate', {
-                url: '/',
+                url: '/signUpViajero',
+                parent: 'viajero',
                 
-                resolve: {
-                    viajeros: ['$http', function ($http) {
-                            return $http.get('data/viajeros.json');
-                        }]
-                },
                 views: {
                     
-                    'mainView': {
+                    'detailView': {
                        
-                        templateUrl: basePath + 'viajero.create.html',
-                        controller: ['$scope', 'viajeros', function ($scope, viajeros) {
-                                $scope.RecordsViajero = viajeros.data;
-                            }]
+                        templateUrl: basePath + 'viajero.create.html'
+                        //necesita a los viajeros? creo que no
+                        // si fuesen necesarios, sería mejor h
                     }
                 } 
             });
@@ -131,10 +123,9 @@
                 },
                 views: {
                     'ListasViajeroView':{
-                        templateUrl: basePath + 'viajero.update.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentViajero = $scope.RecordsViajero[$params.viajeroId-16];
-                            }]
+                        templateUrl: basePath + 'viajero.update.html'
+                        
+                        //hereda el currentViajero del detailViajero?
                         
                     }
                 } 
