@@ -89,8 +89,9 @@ public class HabitacionDetailDTO extends HabitacionDTO {
 
         entity.setDisponibilidades(listaDisponibilidades);
         entity.setReservas(listaReservas);
+        
         entity.setVivienda(vivienda.toEntity());
-
+        
         return entity;
     }
 

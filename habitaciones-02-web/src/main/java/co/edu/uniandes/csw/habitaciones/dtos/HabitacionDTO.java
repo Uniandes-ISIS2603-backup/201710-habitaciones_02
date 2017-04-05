@@ -148,7 +148,7 @@ public class HabitacionDTO implements Serializable {
      * Retorna la capacidad de la habitacion
      * @return 
      */
-    public int getCapacidad() {
+    public Integer getCapacidad() {
         return capacidad;
     }
 
