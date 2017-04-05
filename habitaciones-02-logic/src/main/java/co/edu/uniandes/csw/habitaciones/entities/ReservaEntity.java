@@ -51,6 +51,9 @@ public class ReservaEntity implements Serializable{
      */
     private Boolean cancelado;
     
+    
+    private Integer precio;
+    
     /**
      * Una relacion de many to one con viajero que hace la reserva
      */
@@ -88,6 +91,15 @@ public class ReservaEntity implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
+    
+    public Integer getPrecio(){
+        return precio;
+    }
+    
+    public void setPrecio(Integer precio){
+        this.precio = precio;
+    }
+    
     /**
      * Retorna la fecha de inicio de la reserva
      * @return el la fecha de inicio
