@@ -84,20 +84,7 @@
                     }
                 } 
             });
-            $stateProvider.state('viajeroResenasList', {
-                url: '/resenas',
-                parent: 'viajeroDetail',
-                
-                param: {
-                    viajeroId: null
-                },
-                views: {
-                    'ListasViajeroView':{
-                        templateUrl: basePath + 'viajero.resenas.list.html'
-                        //hereda el currentViajero del viajeroDetail??
-                    }
-                } 
-            });
+            
             
             $stateProvider.state('viajeroCreate', {
                 url: '/signUpViajero',

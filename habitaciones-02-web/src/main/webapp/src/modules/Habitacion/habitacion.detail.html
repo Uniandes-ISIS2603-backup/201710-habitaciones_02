@@ -67,12 +67,12 @@
 
                         <div class="col-md-6">
                             <dt style="font-size: 20px "> Reseñas    </dt>
-                            <ul ng-repeat="resena in currentHabitacion.resenas">
-                                <a ui-sref="resenaDetail({resenaId: resena.id})" >
+                            <ul ng-repeat="resena in recordsResenas">
+                                <a ui-sref="resenaDetailHabitacion({resenaId: resena.id})" >
                                 <dt>Reserva: {{resena.id}}</dt>
                                 </a>
-                                <dd>Calificación: {{reserva.calificacion}}</dd>
-                                <dd>Comentario: {{reserva.comentario}}</dd>
+                                <dd>Calificación: {{resena.calificacion}}</dd>
+                                <dd>Comentario: {{resena.comentario}}</dd>
                             </ul> 
 
                         </div>
@@ -97,6 +97,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div ui-view="childrenDetail"></div>
         </div>
     </div>
 </div>
