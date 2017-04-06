@@ -2,7 +2,8 @@
     // Definición del módulo
     var mod = ng.module("habitacionModule", ['ui.router']);
     mod.constant("habitacionContext", "api/habitaciones");
- 
+    mod.constant("resenaContext","api/resenas");
+    
    // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             // En basePath se encuentran los templates y controladores de módulo
@@ -51,14 +52,23 @@
                 param: {
                     habitacionId: null
                 },
+                resolve: {
+                    resenas: ['$http', 'resenaContext', '$stateParams', function ($http, resenaContext, $stateParams) {
+                            return $http.get(resenaContext+'/porHabitacion/'+ $stateParams.habitacionId); 
+                        }],
+                    currentHabitacion:['$http', 'habitacionContext', '$stateParams', function ($http, habitacionContext, $params) {
+                            return $http.get(habitacionContext+'/'+$params.habitacionId);
+                    }]
+                },
                 views: {
                     'listView': {
                         templateUrl: basePath + 'habitacion.list.html'
                     },
                     'detailView': {
                         templateUrl: basePath + 'habitacion.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentHabitacion = $scope.habitacionesRecords[$params.habitacionId-1];
+                        controller: ['$scope', 'currentHabitacion', 'resenas', function ($scope, currentHabitacion, resenas) {
+                                $scope.currentHabitacion = currentHabitacion.data;
+                                $scope.recordsResenas = resenas.data;
                             }]
                     }
 

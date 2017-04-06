@@ -14,6 +14,7 @@
                  url: '/resenas',
                  abstract: true,
                  parent:'viajeroDetail',
+                 
 
                 resolve: {
                     resenas: ['$http','resenaContext','$stateParams', function ($http, resenaContext, $stateParams) {
@@ -82,28 +83,26 @@
                 } 
             });
             
+            
+            
             $stateProvider.state('resenaDetailHabitacion', {
 
-                url: '/{resenaId:int/habitaciones/{habitacionId:int}}',
-                parent: 'resena',
+                url: '/resenas/{resenaId:int}',
+                parent: 'habitacionDetail',
                 param: {
-                    resenaId: null,
-                    habitacionId: null
+                    resenaId: null
                 },
                 resolve:{
                   
-                    habitaciones: ['$http', function ($http) 
-                    {
-                        return $http.get('data/habitaciones.json'); // $http retorna un apromesa que aquí no se está manejando si viene con error.
+                    currentResena:['$http', 'resenaContext', '$stateParams', function ($http, resenaContext, $params) {
+                            return $http.get(resenaContext+'/'+$params.resenaId);
                     }]
                 },
                 views: {
-                    'detailView': {
+                    'childrenDetail': {
                         templateUrl: basePath + 'resena.detail.habitacion.html',
-                        controller: ['$scope', '$stateParams','habitaciones', function ($scope, $params, habitaciones ) { 
-                               $scope.currentResena = $scope.RecordsResena[$params.resenaId-1];
-                               $scope.RecordsHabitacion = habitaciones.data;
-                               $scope.currentHabitaciones = $scope.RecordsHabitacion[$params.habitacionId-16];
+                        controller: ['$scope', 'currentResena', function ($scope, currentResena ) { 
+                               $scope.currentResena = currentResena.data;
                                
                             }]
                     }
