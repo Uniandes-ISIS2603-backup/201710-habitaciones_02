@@ -1,0 +1,15 @@
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (1, '2016-05-02', 8, 'aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien',1);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (2, '2016-06-30', 30, 'elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in',2);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (3, '2016-06-06', 59, 'justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris',3);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (4, '2016-12-22', 76, 'nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit',4);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (5, '2016-05-31', 39, 'ac est lacinia nisi venenatis tristique fusce congue diam id ornare',5);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (6, '2016-12-29', 6, 'commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel',6);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (7, '2017-02-24', 94, 'imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo',7);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (8, '2016-07-08', 74, 'ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus',8);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (9, '2016-07-11', 29, 'odio cras mi pede malesuada in imperdiet et commodo vulputate',9);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (10, '2016-12-20', 78, 'pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue',10);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (11, '2016-10-20', 82, 'pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus',11);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (12, '2016-05-06', 50, 'arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede',12);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (13, '2016-10-06', 30, 'porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non',13);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (14, '2017-01-16', 92, 'risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero',14);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (15, '2016-05-28', 77, 'mauris sit amet eros suspendisse accumsan tortor quis turpis sed',15);

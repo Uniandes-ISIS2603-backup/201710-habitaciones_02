@@ -37,6 +37,11 @@
                 param: {
                     viviendaId: null
                 },
+                resolve:{
+                    currentVivienda: ['$http','viviendasContext','$stateParams', function($http,viviendasContext,$params){
+                            return $http.get(viviendasContext + '/' + $params.viviendaId);
+                    }]
+                },
                 views: {
                     'listView': {
                         templateUrl: basePath + 'viviendaHabs.list.html',

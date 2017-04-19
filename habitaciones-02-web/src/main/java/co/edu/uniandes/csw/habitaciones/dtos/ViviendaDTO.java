@@ -31,7 +31,11 @@ public class ViviendaDTO implements Serializable
      * la direccion de la vivienda
      */
     private String direccion;
-
+    
+    /**
+     * la ruta de la imagen de la vivienda
+     */
+    private String rutaImagen;
     /**
      * constructor por defecto de la vivienda
      */
@@ -50,6 +54,7 @@ public class ViviendaDTO implements Serializable
             id = entity.getId();
             ciudad = entity.getCiudad();
             direccion = entity.getDireccion();
+            rutaImagen = entity.getRutaImagen();
         }
     }
 
@@ -62,6 +67,7 @@ public class ViviendaDTO implements Serializable
         entity.setId(this.getId());
         entity.setCiudad(this.getCiudad());
         entity.setDireccion(this.getDireccion());
+        entity.setRutaImagen(this.getRutaImagen());
         return entity;
     }
 
@@ -111,5 +117,19 @@ public class ViviendaDTO implements Serializable
     public void setDireccion(String direccion)
     {
         this.direccion = direccion;
+    }
+
+    /**
+     * @return the rutaImagen
+     */
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+
+    /**
+     * @param rutaImagen the rutaImagen to set
+     */
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
     }
 }
