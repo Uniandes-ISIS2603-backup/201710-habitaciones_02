@@ -64,7 +64,7 @@ public class HabitacionDetailDTO extends HabitacionDTO
                 ResenaDTO resena = new ResenaDTO(entityResena);
                 resenas.add(resena);
             }
-            // TODO esto depende del valor que traiga el entity. Si no es null entity.getVivienda() entonces se hace el new con ese valor
+            
             if (vivienda != null)
             {
                 vivienda = new ViviendaDTO(entity.getVivienda());

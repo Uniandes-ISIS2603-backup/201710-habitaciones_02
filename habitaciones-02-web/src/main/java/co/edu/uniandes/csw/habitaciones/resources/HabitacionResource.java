@@ -120,7 +120,8 @@ public class HabitacionResource
      */
     @PUT
     @Path("{id: \\d+}")
-    public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, HabitacionDetailDTO dto) throws BusinessLogicException
+    public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, 
+            HabitacionDetailDTO dto) throws BusinessLogicException
     {
         // TODO Si el id no existe debe disparar WebApplicationException 404
         if (habitacionLogic.getHabitacion(id) == null)
