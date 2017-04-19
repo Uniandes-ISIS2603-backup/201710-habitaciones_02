@@ -47,7 +47,7 @@
                     }
                 }
             }).state('habitacionDetail', {
-                url: '/{habitacionId:int}/detail',
+                url: '/{habitacionId:int}',
                 parent: 'habitaciones',
                 param: {
                     habitacionId: null

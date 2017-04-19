@@ -32,6 +32,7 @@
                         templateUrl: basePath + 'disponibilidad.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params)
                             {
+                                console.log("........");
                                 $scope.currentDisponibilidad = $scope.disponibilidadesRecords[$params.disponibilidadId - 1];
                             }]
                     }

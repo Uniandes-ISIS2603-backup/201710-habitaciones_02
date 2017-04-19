@@ -88,21 +88,21 @@ insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARI
 insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (14, 'Takikawa', '7 Carey Parkway', 'http://dummyimage.com/142x172.png/5fa2dd/ffffff',14);
 insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (15, 'Talitsy', '8 Schurz Park', 'http://dummyimage.com/216x192.bmp/5fa2dd/ffffff',15);
 
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (1, 35.9, 'Leptospiral infect NEC', 'http://dummyimage.com/116x208.jpg/5fa2dd/ffffff', 28.47, 2 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (2, 31.86, 'Forearm deformity NEC', 'http://dummyimage.com/191x110.png/ff4444/ffffff', 39.35, 10  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (3,21.21, 'Low birthwt 1500-1999g', 'http://dummyimage.com/167x166.png/dddddd/000000', 13.07, 10 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (4, 22.59, 'Spina bifida', 'http://dummyimage.com/123x216.bmp/ff4444/ffffff', 31.27, 5)
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (5, 18.79, 'Corneal grft malfunction', 'http://dummyimage.com/120x160.jpg/5fa2dd/ffffff', 35.16,6   )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (6, 38.47, 'Fx clavicle shaft-open', 'http://dummyimage.com/148x166.png/cc0000/ffffff', 12.94, 2 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (7, 37.6, 'Amniotic embolism-deliv', 'http://dummyimage.com/222x142.jpg/dddddd/000000', 34.04, 2  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (8, 27.5, 'Pois-skin/membr agnt NEC', 'http://dummyimage.com/177x134.bmp/cc0000/ffffff', 29.89, 5 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (9, 29.12, 'Tenosynov hand/wrist NEC', 'http://dummyimage.com/194x110.bmp/dddddd/000000', 27.79, 6  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (10, 19.22, 'Opn skul vlt fx w/o coma', 'http://dummyimage.com/222x119.jpg/cc0000/ffffff', 23.24, 8)
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (11, 49.78, 'Ac uterine inflammation', 'http://dummyimage.com/199x130.jpg/cc0000/ffffff', 39.10, 3 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (12, 16.66, 'Acute canaliculitis', 'http://dummyimage.com/244x225.bmp/5fa2dd/ffffff', 26.12, 4  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (13, 10.05, 'Status amput hand', 'http://dummyimage.com/144x163.bmp/ff4444/ffffff', 39.19, 7  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (14, 27.58, 'Chr iridocyl in oth dis', 'http://dummyimage.com/121x105.bmp/dddddd/000000', 33.54, 9  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (15, 40.94, 'Pois-sedative/hypnot NEC', 'http://dummyimage.com/112x209.png/dddddd/000000', 23.72, 2 )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (1, 35.9, 'Leptospiral infect NEC', 'http://dummyimage.com/116x208.jpg/5fa2dd/ffffff', 28.47, 2, 1)
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (2, 31.86, 'Forearm deformity NEC', 'http://dummyimage.com/191x110.png/ff4444/ffffff', 39.35, 10, 2  )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (3,21.21, 'Low birthwt 1500-1999g', 'http://dummyimage.com/167x166.png/dddddd/000000', 13.07, 10, 3 )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (4, 22.59, 'Spina bifida', 'http://dummyimage.com/123x216.bmp/ff4444/ffffff', 31.27, 5, 4)
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (5, 18.79, 'Corneal grft malfunction', 'http://dummyimage.com/120x160.jpg/5fa2dd/ffffff', 35.16,6 , 5)
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (6, 38.47, 'Fx clavicle shaft-open', 'http://dummyimage.com/148x166.png/cc0000/ffffff', 12.94, 2, 6)
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (7, 37.6, 'Amniotic embolism-deliv', 'http://dummyimage.com/222x142.jpg/dddddd/000000', 34.04, 2, 7  )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (8, 27.5, 'Pois-skin/membr agnt NEC', 'http://dummyimage.com/177x134.bmp/cc0000/ffffff', 29.89, 5, 8)
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (9, 29.12, 'Tenosynov hand/wrist NEC', 'http://dummyimage.com/194x110.bmp/dddddd/000000', 27.79, 6, 9  )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (10, 19.22, 'Opn skul vlt fx w/o coma', 'http://dummyimage.com/222x119.jpg/cc0000/ffffff', 23.24, 8, 10)
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (11, 49.78, 'Ac uterine inflammation', 'http://dummyimage.com/199x130.jpg/cc0000/ffffff', 39.10, 3, 11 )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (12, 16.66, 'Acute canaliculitis', 'http://dummyimage.com/244x225.bmp/5fa2dd/ffffff', 26.12, 4, 12  )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (13, 10.05, 'Status amput hand', 'http://dummyimage.com/144x163.bmp/ff4444/ffffff', 39.19, 7, 13  )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (14, 27.58, 'Chr iridocyl in oth dis', 'http://dummyimage.com/121x105.bmp/dddddd/000000', 33.54, 9, 14  )
+INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad, vivienda_id) VALUES (15, 40.94, 'Pois-sedative/hypnot NEC', 'http://dummyimage.com/112x209.png/dddddd/000000', 23.72, 2, 15 )
 
 INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('2','false','5/22/2016','2/6/2017','15','1','16','22');
 INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('3','false', '2/2/2016','3/4/2017','2','2','16','95');
