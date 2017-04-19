@@ -16,7 +16,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ne.cabrera
  */
 @XmlRootElement
-public class ViviendaDetailDTO extends ViviendaDTO {
+public class ViviendaDetailDTO extends ViviendaDTO
+{
 
     /**
      * lista de habitaciones
@@ -31,7 +32,8 @@ public class ViviendaDetailDTO extends ViviendaDTO {
     /**
      * Metodo constructor por defecto
      */
-    public ViviendaDetailDTO() {
+    public ViviendaDetailDTO()
+    {
         super();
     }
 
@@ -40,11 +42,14 @@ public class ViviendaDetailDTO extends ViviendaDTO {
      *
      * @param entity entidad de la vivienda
      */
-    public ViviendaDetailDTO(ViviendaEntity entity) {
+    public ViviendaDetailDTO(ViviendaEntity entity)
+    {
         super(entity);
-        if (entity != null) {
+        if (entity != null)
+        {
             habitacion = new ArrayList<>();
-            for (HabitacionEntity ent : entity.getHabitaciones()) {
+            for (HabitacionEntity ent : entity.getHabitaciones())
+            {
                 habitacion.add(new HabitacionDTO(ent));
             }
 
@@ -57,18 +62,23 @@ public class ViviendaDetailDTO extends ViviendaDTO {
     /**
      * @return viviendaEntity a partir de la informacion de la viviendaDTO
      */
-    public ViviendaEntity toEntity() {
+    public ViviendaEntity toEntity()
+    {
         ViviendaEntity entity = super.toEntity();
-        if (entity != null) {
-            if (getHabitaciones() == null) {
+        if (entity != null)
+        {
+            if (getHabitaciones() == null)
+            {
                 setHabitaciones(new ArrayList<>());
             }
             List<HabitacionEntity> habs = new ArrayList<>();
-            for (HabitacionDTO habs2 : this.getHabitaciones()) {
+            for (HabitacionDTO habs2 : this.getHabitaciones())
+            {
                 habs.add(habs2.toEntity());
             }
             entity.setHabitaciones(habs);
-            if (this.getAnfitrion() != null) {
+            if (this.getAnfitrion() != null)
+            {
                 entity.setAnfitrion(getAnfitrion().toEntity());
             }
         }
@@ -78,28 +88,32 @@ public class ViviendaDetailDTO extends ViviendaDTO {
     /**
      * @return the habitaciones
      */
-    public List<HabitacionDTO> getHabitaciones() {
+    public List<HabitacionDTO> getHabitaciones()
+    {
         return habitacion;
     }
 
     /**
      * @param habitaciones the habitaciones to set
      */
-    public void setHabitaciones(List<HabitacionDTO> habitaciones) {
+    public void setHabitaciones(List<HabitacionDTO> habitaciones)
+    {
         this.habitacion = habitaciones;
     }
 
     /**
      * @return the anfitrion
      */
-    public AnfitrionDTO getAnfitrion() {
+    public AnfitrionDTO getAnfitrion()
+    {
         return anfitrion;
     }
 
     /**
      * @param anfitrion the anfitrion to set
      */
-    public void setAnfitrion(AnfitrionDTO anfitrion) {
+    public void setAnfitrion(AnfitrionDTO anfitrion)
+    {
         this.anfitrion = anfitrion;
     }
 

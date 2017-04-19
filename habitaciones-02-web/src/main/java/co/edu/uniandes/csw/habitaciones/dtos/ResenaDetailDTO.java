@@ -15,11 +15,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ResenaDetailDTO extends ResenaDTO
 {
+
     /**
      * Viajero que publicó la reseña
      */
     private ViajeroDTO viajero;
-    
+
     /**
      * habitacion que fue reseñada
      */
@@ -28,73 +29,81 @@ public class ResenaDetailDTO extends ResenaDTO
     /**
      * metodo default para el DetailDTO
      */
-    public ResenaDetailDTO() 
+    public ResenaDetailDTO()
     {
         super();
     }
 
     /**
      * Metodo constructor
+     *
      * @param entity entidad de la reseña
      */
-    public ResenaDetailDTO(ResenaEntity entity) 
+    public ResenaDetailDTO(ResenaEntity entity)
     {
         super(entity);
-        if(entity!= null)
+        if (entity != null)
         {
             viajero = new ViajeroDTO(entity.getViajero());
-            habitacion = new HabitacionDTO( entity.getHabitacion( ) );
+            habitacion = new HabitacionDTO(entity.getHabitacion());
         }
     }
 
     /**
      * retorna el viajero creador de la reseña
-     * @return el viajero 
+     *
+     * @return el viajero
      */
-    public ViajeroDTO getViajero() {
+    public ViajeroDTO getViajero()
+    {
         return viajero;
     }
 
     /**
      * asigna el ciajero a la entidad
+     *
      * @param viajero el viajero
      */
-    public void setViajero(ViajeroDTO viajero) {
+    public void setViajero(ViajeroDTO viajero)
+    {
         this.viajero = viajero;
     }
-    
+
     /**
      * retorna la habitacin de la reseña
+     *
      * @return la habitacion
      */
-    public HabitacionDTO getHabitacion() {
+    public HabitacionDTO getHabitacion()
+    {
         return habitacion;
     }
 
-     /**
+    /**
      * asigna la habitacin a la reserva
+     *
      * @param habitacion la habitacion
      */
-    public void setHabitacion(HabitacionDTO habitacion) {
+    public void setHabitacion(HabitacionDTO habitacion)
+    {
         this.habitacion = habitacion;
     }
 
     @Override
-    public ResenaEntity toEntity() {
+    public ResenaEntity toEntity()
+    {
         ResenaEntity entity = super.toEntity();
-        
-        if(this.getViajero() != null)
+
+        if (this.getViajero() != null)
         {
             entity.setViajero(this.viajero.toEntity());
         }
-        if(this.getHabitacion() != null)
+        if (this.getHabitacion() != null)
         {
             entity.setHabitacion(this.habitacion.toEntity());
         }
-        
+
         return entity;
     }
-    
-    
-    
+
 }

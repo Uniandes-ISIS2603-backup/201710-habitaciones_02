@@ -17,7 +17,8 @@ import javax.inject.Inject;
  * @author ne.cabrera
  */
 @Stateless
-public class ViviendaLogic {
+public class ViviendaLogic
+{
 
     /**
      * persistencia para la entidad de la vivienda
@@ -28,7 +29,8 @@ public class ViviendaLogic {
     /**
      * @return lista de viviendas
      */
-    public List<ViviendaEntity> getViviendas() {
+    public List<ViviendaEntity> getViviendas()
+    {
         return persistence.findAll();
     }
 
@@ -36,7 +38,8 @@ public class ViviendaLogic {
      * @param id el id de la vivienda buscada
      * @return vivienda con el mismo id al dado por parametro
      */
-    public ViviendaEntity getVivienda(Long id) {
+    public ViviendaEntity getVivienda(Long id)
+    {
         return persistence.find(id);
     }
 
@@ -46,16 +49,19 @@ public class ViviendaLogic {
      * @throws BusinessLogicException si los datos de la vivienda estan
      * incompletos
      */
-    public ViviendaEntity createVivienda(ViviendaEntity vivienda) throws BusinessLogicException {
+    public ViviendaEntity createVivienda(ViviendaEntity vivienda) throws BusinessLogicException
+    {
         //if(vivienda.getHabitaciones().isEmpty())
         //{
         //    throw new BusinessLogicException("Se debe agregar almenos 1 habitacion");
         //}
         //else
         //{
-        if (!vivienda.informacionCompleta()) {
+        if (!vivienda.informacionCompleta())
+        {
             throw new BusinessLogicException("Algunos de los datos para registrar la vivienda no fueron ingresados. Por favor, intente nuevamente");
-        } else {
+        } else
+        {
             persistence.create(vivienda);
         }
         //}
@@ -66,14 +72,16 @@ public class ViviendaLogic {
      * @param vivienda la vivienda a actualizar
      * @return la vivienda actulizada
      */
-    public ViviendaEntity updateVivienda(ViviendaEntity vivienda) {
+    public ViviendaEntity updateVivienda(ViviendaEntity vivienda)
+    {
         return persistence.update(vivienda);
     }
 
     /**
      * @param id el id de la vivienda a eliminar
      */
-    public void deleteVivienda(Long id) {
+    public void deleteVivienda(Long id)
+    {
         persistence.delete(id);
     }
 }

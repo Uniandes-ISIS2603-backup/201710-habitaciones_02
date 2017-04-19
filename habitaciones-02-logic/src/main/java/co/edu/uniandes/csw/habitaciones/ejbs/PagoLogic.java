@@ -18,7 +18,8 @@ import javax.inject.Inject;
  * @author ne.cabrera
  */
 @Stateless
-public class PagoLogic {
+public class PagoLogic
+{
 
     /**
      * persistencia para la entidad del pago
@@ -31,7 +32,8 @@ public class PagoLogic {
      *
      * @return
      */
-    public List<PagoEntity> getPagos() {
+    public List<PagoEntity> getPagos()
+    {
         return persistence.findAll();
     }
 
@@ -41,7 +43,8 @@ public class PagoLogic {
      * @param id
      * @return pago entity con id igual al dado por parametro
      */
-    public PagoEntity getPago(Long id) {
+    public PagoEntity getPago(Long id)
+    {
         return persistence.find(id);
     }
 
@@ -52,32 +55,39 @@ public class PagoLogic {
      * completa, el pago es menor a 0, la fecha de pago es mayor a la actual o
      * el pago no esta asociado a una reserva
      */
-    public PagoEntity createPago(PagoEntity pago) throws BusinessLogicException {
+    public PagoEntity createPago(PagoEntity pago) throws BusinessLogicException
+    {
         // TODO se debe verificar que el pago esté asociado con una reserva
         String problemas = "Se generaron errores al intentar ingresar el registro de pago:\n";
         Boolean problema = false;
 
-        if (!pago.informacionCompleta()) {
+        if (!pago.informacionCompleta())
+        {
             problemas += "la informacion no esta completa:\n"
                     + "   -Pago: <" + pago.getPago() + ">\n"
                     + "   -Fecha: <" + pago.getFechaDePago().toString() + ">\n"
                     + "   -Tipo: <" + pago.getTipoTramite() + ">\n";
             problema = true;
-        } else {
-            if (pago.getPago() < 0) {
+        } else
+        {
+            if (pago.getPago() < 0)
+            {
                 problemas += "el pago debe ser mayor a 0.\n";
                 problema = true;
             }
-            if (pago.getFechaDePago().after(new Date())) {
+            if (pago.getFechaDePago().after(new Date()))
+            {
                 problemas += "la fecha de pago no puede ser mayor a la actual.\n";
                 problema = true;
             }
-            if (pago.getReserva() == null) {
+            if (pago.getReserva() == null)
+            {
                 problemas += "el pago debe estar asociado a una reserva.\n";
                 problema = true;
             }
         }
-        if (problema) {
+        if (problema)
+        {
             throw new BusinessLogicException(problemas);
         }
 
@@ -92,15 +102,18 @@ public class PagoLogic {
      * @throws BusinessLogicException si el pago no esta asociado a una reserva
      * o si la fecha de pago es mayor a la actual
      */
-    public PagoEntity updatePago(PagoEntity pago) throws BusinessLogicException {// TODO se debe verificar que el pago esté asociado con una reserva
+    public PagoEntity updatePago(PagoEntity pago) throws BusinessLogicException
+    {// TODO se debe verificar que el pago esté asociado con una reserva
         // Se debe volver a verificar las fechas, ...
         String problemas = "Se generaron errores al intentar actualizar el registro de pago:\n";
         boolean problema = false;
-        if (pago.getFechaDePago().after(new Date())) {
+        if (pago.getFechaDePago().after(new Date()))
+        {
             problemas += "la fecha de pago no puede ser mayor a la actual.\n";
             problema = true;
         }
-        if (problema) {
+        if (problema)
+        {
             throw new BusinessLogicException(problemas);
         }
         return persistence.update(pago);
@@ -109,7 +122,8 @@ public class PagoLogic {
     /**
      * @param id el id del pago a eliminar
      */
-    public void deletePago(Long id) {
+    public void deletePago(Long id)
+    {
         persistence.delete(id);
     }
 }

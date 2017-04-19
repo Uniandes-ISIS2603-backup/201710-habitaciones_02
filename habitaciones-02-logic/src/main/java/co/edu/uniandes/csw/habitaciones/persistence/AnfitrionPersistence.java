@@ -17,43 +17,52 @@ import javax.persistence.Query;
  * @author df.sanabria761
  */
 @Stateless
-public class AnfitrionPersistence {
+public class AnfitrionPersistence
+{
 
     @PersistenceContext(unitName = "habitacionesPU")
     protected EntityManager em;
 
-    public AnfitrionEntity find(Long id) {
+    public AnfitrionEntity find(Long id)
+    {
         return em.find(AnfitrionEntity.class, id);
     }
 
-    public Boolean findByDocumento(String documento) {
+    public Boolean findByDocumento(String documento)
+    {
         List<AnfitrionEntity> lista = findAll();
         Boolean encontrado = false;
 
-        for (AnfitrionEntity anfitrionEntity : lista) {
+        for (AnfitrionEntity anfitrionEntity : lista)
+        {
             AnfitrionEntity ent = anfitrionEntity;
-            if (ent.getNumeroDocumento().equals(documento)) {
+            if (ent.getNumeroDocumento().equals(documento))
+            {
                 encontrado = true;
             }
         }
         return encontrado;
     }
 
-    public List<AnfitrionEntity> findAll() {
+    public List<AnfitrionEntity> findAll()
+    {
         Query query = em.createQuery("select u from AnfitrionEntity u");
         return query.getResultList();
     }
 
-    public AnfitrionEntity create(AnfitrionEntity entity) {
+    public AnfitrionEntity create(AnfitrionEntity entity)
+    {
         em.persist(entity);
         return entity;
     }
 
-    public AnfitrionEntity update(AnfitrionEntity entity) {
+    public AnfitrionEntity update(AnfitrionEntity entity)
+    {
         return em.merge(entity);
     }
 
-    public void delete(Long id) {
+    public void delete(Long id)
+    {
         AnfitrionEntity entity = em.find(AnfitrionEntity.class, id);
         em.remove(entity);
     }

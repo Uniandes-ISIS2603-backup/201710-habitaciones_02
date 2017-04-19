@@ -30,14 +30,17 @@ import javax.ws.rs.core.MediaType;
 @Path("/anfitriones")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class AnfitrionResource {
+public class AnfitrionResource
+{
 
     @Inject
     private AnfitrionLogic logica;
 
-    private List<AnfitrionDetailDTO> listEntity2DTO(List<AnfitrionEntity> entityList) {
+    private List<AnfitrionDetailDTO> listEntity2DTO(List<AnfitrionEntity> entityList)
+    {
         List<AnfitrionDetailDTO> lista = new ArrayList<>();
-        for (AnfitrionEntity entity : entityList) {
+        for (AnfitrionEntity entity : entityList)
+        {
             AnfitrionDetailDTO nD = new AnfitrionDetailDTO(entity);
             lista.add(nD);
         }
@@ -46,24 +49,26 @@ public class AnfitrionResource {
     }
 
     @GET
-    public List<AnfitrionDetailDTO> getAnfitriones() {
+    public List<AnfitrionDetailDTO> getAnfitriones()
+    {
 
         return listEntity2DTO(logica.getAnfitriones());
     }
 
     @GET
     @Path("{id: \\d+}")
-    public AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id) {
-        if (logica.getAnfitrion(id) == null) {
+    public AnfitrionDetailDTO getAnfitrion(@PathParam("id") Long id)
+    {
+        if (logica.getAnfitrion(id) == null)
+        {
             throw new WebApplicationException(404);
         }
         return new AnfitrionDetailDTO(logica.getAnfitrion(id));
     }
 
-    
-    
     @POST
-    public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo) throws BusinessLogicException {
+    public AnfitrionDetailDTO createAnfitrion(AnfitrionDetailDTO dtoo) throws BusinessLogicException
+    {
 
         return new AnfitrionDetailDTO(logica.createAnfitrion(dtoo.toEntity()));
 
@@ -71,8 +76,10 @@ public class AnfitrionResource {
 
     @PUT
     @Path("{id: \\d+}")
-    public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id) {  
-        if (logica.getAnfitrion(id) == null) {
+    public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id)
+    {
+        if (logica.getAnfitrion(id) == null)
+        {
             throw new WebApplicationException(404);
         }
         AnfitrionEntity en = dto.toEntity();
@@ -82,8 +89,10 @@ public class AnfitrionResource {
 
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteAnfitrion(@PathParam("id") Long id) {  
-        if (logica.getAnfitrion(id) == null) {
+    public void deleteAnfitrion(@PathParam("id") Long id)
+    {
+        if (logica.getAnfitrion(id) == null)
+        {
             throw new WebApplicationException(404);
         }
         logica.deleteAnfitrion(id);

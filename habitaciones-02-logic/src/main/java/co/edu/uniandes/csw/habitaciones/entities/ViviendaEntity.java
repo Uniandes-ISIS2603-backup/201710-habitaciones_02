@@ -20,7 +20,8 @@ import javax.persistence.OneToMany;
  * @author ne.cabrera
  */
 @Entity
-public class ViviendaEntity implements Serializable {
+public class ViviendaEntity implements Serializable
+{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,7 +39,7 @@ public class ViviendaEntity implements Serializable {
      * Direccion de la vivienda
      */
     private String direccion;
-    
+
     /**
      * ruta de la imagen
      */
@@ -61,7 +62,8 @@ public class ViviendaEntity implements Serializable {
      *
      * @return habitacion
      */
-    public List<HabitacionEntity> getHabitaciones() {
+    public List<HabitacionEntity> getHabitaciones()
+    {
         return habitacion;
     }
 
@@ -70,16 +72,17 @@ public class ViviendaEntity implements Serializable {
      *
      * @param pHabitaciones
      */
-    public void setHabitaciones(List<HabitacionEntity> pHabitaciones) {
+    public void setHabitaciones(List<HabitacionEntity> pHabitaciones)
+    {
         this.habitacion = pHabitaciones;
     }
-    
+
     public AnfitrionEntity getAnfitrion()
     {
         return anfitrion;
     }
-    
-    public void setAnfitrion( AnfitrionEntity pAnfitrion)
+
+    public void setAnfitrion(AnfitrionEntity pAnfitrion)
     {
         anfitrion = pAnfitrion;
     }
@@ -87,58 +90,66 @@ public class ViviendaEntity implements Serializable {
     /**
      * @return the id
      */
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Long id) {
+    public void setId(Long id)
+    {
         this.id = id;
     }
 
     /**
      * @return the ciudad
      */
-    public String getCiudad() {
+    public String getCiudad()
+    {
         return ciudad;
     }
 
     /**
      * @param ciudad the ciudad to set
      */
-    public void setCiudad(String ciudad) {
+    public void setCiudad(String ciudad)
+    {
         this.ciudad = ciudad;
     }
 
     /**
      * @return the direccion
      */
-    public String getDireccion() {
+    public String getDireccion()
+    {
         return direccion;
     }
 
     /**
      * @param direccion the direccion to set
      */
-    public void setDireccion(String direccion) {
+    public void setDireccion(String direccion)
+    {
         this.direccion = direccion;
     }
 
     @Override
-    public boolean equals(Object obj) 
+    public boolean equals(Object obj)
     {
-        if (this.getId() != null) {
+        if (this.getId() != null)
+        {
             return this.getId().equals(((ViviendaEntity) obj).getId());
         }
         return super.equals(obj);
     }
 
     @Override
-    public int hashCode() 
+    public int hashCode()
     {
-        if (this.getId() != null) {
+        if (this.getId() != null)
+        {
             return this.getId().hashCode();
         }
         return super.hashCode();
@@ -149,7 +160,7 @@ public class ViviendaEntity implements Serializable {
      *
      * @return true si no sin null ni vacios, false de lo contrario
      */
-    public Boolean informacionCompleta() 
+    public Boolean informacionCompleta()
     {
         return (stringUtilizable(ciudad) && stringUtilizable(direccion));
     }
@@ -160,7 +171,7 @@ public class ViviendaEntity implements Serializable {
      * @param palabra el string a verificar
      * @return true si no es ni vacio ni null, false de lo contrario
      */
-    private Boolean stringUtilizable(String palabra) 
+    private Boolean stringUtilizable(String palabra)
     {
         return (palabra != null) ? !palabra.isEmpty() : false;
     }
@@ -168,14 +179,16 @@ public class ViviendaEntity implements Serializable {
     /**
      * @return the rutaImagen
      */
-    public String getRutaImagen() {
+    public String getRutaImagen()
+    {
         return rutaImagen;
     }
 
     /**
      * @param rutaImagen the rutaImagen to set
      */
-    public void setRutaImagen(String rutaImagen) {
+    public void setRutaImagen(String rutaImagen)
+    {
         this.rutaImagen = rutaImagen;
     }
 }

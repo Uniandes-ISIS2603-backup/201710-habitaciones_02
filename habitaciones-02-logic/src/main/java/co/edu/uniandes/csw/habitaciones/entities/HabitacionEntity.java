@@ -14,243 +14,289 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-
 /**
  *
  * @author b.gamba10
  */
 @Entity
-public class HabitacionEntity implements Serializable{
-    
+public class HabitacionEntity implements Serializable
+{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     private Double area;
-    
+
     private Double valorAlquiler;
-    
+
     private String rutaImagen;
-    
+
     private String descripcion;
-    
+
     private Integer capacidad;
-    
+
     @OneToMany(mappedBy = "habitacion")
     private List<DisponibilidadEntity> disponibilidades;
-    
+
     @OneToMany(mappedBy = "habitacion")
     private List<ReservaEntity> reservas;
-    
+
     @OneToMany(mappedBy = "habitacion")
     private List<ResenaEntity> resenas;
-    
+
     @ManyToOne
     private ViviendaEntity vivienda;
 
     /**
      * Retorna el id de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
     /**
      * Coloca el id de la habitacion
-     * @param id 
+     *
+     * @param id
      */
-    public void setId(Long id) {
+    public void setId(Long id)
+    {
         this.id = id;
     }
 
     /**
      * Retorna el area de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public Double getArea() {
+    public Double getArea()
+    {
         return area;
     }
 
     /**
      * Coloca el area de la habitacion
-     * @param area 
+     *
+     * @param area
      */
-    public void setArea(Double area) {
+    public void setArea(Double area)
+    {
         this.area = area;
     }
 
     /**
      * Retorna el valor del alquiler de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public Double getValorAlquiler() {
+    public Double getValorAlquiler()
+    {
         return valorAlquiler;
     }
 
     /**
      * Coloca el valor del alquiler de la habitacion
-     * @param valorAlquiler 
+     *
+     * @param valorAlquiler
      */
-    public void setValorAlquiler(Double valorAlquiler) {
+    public void setValorAlquiler(Double valorAlquiler)
+    {
         this.valorAlquiler = valorAlquiler;
     }
 
     /**
-     * Retorna la descripcion de la habitacion 
-     * @return 
+     * Retorna la descripcion de la habitacion
+     *
+     * @return
      */
-    public String getDescripcion() {
+    public String getDescripcion()
+    {
         return descripcion;
     }
 
     /**
-     * Coloca la descripcion de la habitacion     
-     * @param descripcion 
+     * Coloca la descripcion de la habitacion
+     *
+     * @param descripcion
      */
-    public void setDescripcion(String descripcion) {
+    public void setDescripcion(String descripcion)
+    {
         this.descripcion = descripcion;
     }
 
     /**
      * Retorna la ruta de la imagen de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public String getRutaImagen() {
+    public String getRutaImagen()
+    {
         return rutaImagen;
     }
 
     /**
      * Coloca la ruta de la imagen de la habitacion
-     * @param rutaImagen 
+     *
+     * @param rutaImagen
      */
-    public void setRutaImagen(String rutaImagen) {
+    public void setRutaImagen(String rutaImagen)
+    {
         this.rutaImagen = rutaImagen;
     }
 
     /**
-     * Retorna una lista con las disponibilidades 
-     * @return 
+     * Retorna una lista con las disponibilidades
+     *
+     * @return
      */
-    public List<DisponibilidadEntity> getDisponibilidades() {
+    public List<DisponibilidadEntity> getDisponibilidades()
+    {
         return disponibilidades;
     }
 
     /**
-     * Coloca una lista con las disponibilidades 
-     * @param disponibilidades 
+     * Coloca una lista con las disponibilidades
+     *
+     * @param disponibilidades
      */
-    public void setDisponibilidades(List<DisponibilidadEntity> disponibilidades) {
+    public void setDisponibilidades(List<DisponibilidadEntity> disponibilidades)
+    {
         this.disponibilidades = disponibilidades;
     }
 
     /**
-     * Retorna una lista con las reservas 
-     * @return 
+     * Retorna una lista con las reservas
+     *
+     * @return
      */
-    public List<ReservaEntity> getReservas() {
+    public List<ReservaEntity> getReservas()
+    {
         return reservas;
     }
 
     /**
      * Coloca una lista con las reservas
-     * @param reservas 
+     *
+     * @param reservas
      */
-    public void setReservas(List<ReservaEntity> reservas) {
+    public void setReservas(List<ReservaEntity> reservas)
+    {
         this.reservas = reservas;
     }
 
     /**
      * Retorna una vivienda
-     * @return 
+     *
+     * @return
      */
-    public ViviendaEntity getVivienda() {
+    public ViviendaEntity getVivienda()
+    {
         return vivienda;
     }
 
     /**
      * Coloca una vivienda
-     * @param vivienda 
+     *
+     * @param vivienda
      */
-    public void setVivienda(ViviendaEntity vivienda) {
+    public void setVivienda(ViviendaEntity vivienda)
+    {
         this.vivienda = vivienda;
     }
 
     /**
      * Retorna las resenas de una habitacion
-     * @return 
+     *
+     * @return
      */
-    public List<ResenaEntity> getResenas() {
+    public List<ResenaEntity> getResenas()
+    {
         return resenas;
     }
 
     /**
      * Coloca las resenas de una habitacion
-     * @param resenas 
+     *
+     * @param resenas
      */
-    public void setResenas(List<ResenaEntity> resenas) {
+    public void setResenas(List<ResenaEntity> resenas)
+    {
         this.resenas = resenas;
     }
 
     /**
      * Retorna la capacidad de una habitacion
-     * @return 
+     *
+     * @return
      */
-    public Integer getCapacidad() {
+    public Integer getCapacidad()
+    {
         return capacidad;
     }
 
     /**
      * Coloca la capacidad de una habitacion
-     * @param capacidad 
+     *
+     * @param capacidad
      */
-    public void setCapacidad(Integer capacidad) {
+    public void setCapacidad(Integer capacidad)
+    {
         this.capacidad = capacidad;
     }
-    
+
     /**
      * Verifica si la informacion es completa
-     * @return 
+     *
+     * @return
      */
     public Boolean informacionCompleta()
     {
-        return (stringUtilizable(area.toString()) && stringUtilizable(valorAlquiler.toString()) 
+        return (stringUtilizable(area.toString()) && stringUtilizable(valorAlquiler.toString())
                 && stringUtilizable(descripcion) && stringUtilizable(rutaImagen) && stringUtilizable(capacidad.toString()));
     }
-    
+
     /**
      * Verifia si un String puede ser utilizado
+     *
      * @param palabra
-     * @return 
+     * @return
      */
     private Boolean stringUtilizable(String palabra)
     {
-       return (palabra != null)? !palabra.isEmpty() : false;
+        return (palabra != null) ? !palabra.isEmpty() : false;
     }
-    
+
     /**
-     * 
+     *
      * @param obj
-     * @return 
+     * @return
      */
-     @Override
-    public boolean equals(Object obj) {
-        if (this.getId() != null) {
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this.getId() != null)
+        {
             return this.getId().equals(((HabitacionEntity) obj).getId());
         }
         return super.equals(obj);
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     @Override
-    public int hashCode() {
-        if (this.getId() != null) {
+    public int hashCode()
+    {
+        if (this.getId() != null)
+        {
             return this.getId().hashCode();
         }
         return super.hashCode();
     }
-    
+
 }

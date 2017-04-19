@@ -15,13 +15,13 @@ import javax.persistence.PrimaryKeyJoinColumn;
  * @author s.cortes
  */
 @Entity
-@PrimaryKeyJoinColumn(referencedColumnName="idUsuario")
+@PrimaryKeyJoinColumn(referencedColumnName = "idUsuario")
 public class ViajeroEntity extends UsuarioEntity
 {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
-      
+
     /**
      * Relacion One-to-Many con las Reservas
      */
@@ -33,42 +33,48 @@ public class ViajeroEntity extends UsuarioEntity
      */
     @OneToMany(mappedBy = "viajero")
     private List<ResenaEntity> resenas;
-    
+
     //----------------------------------------------------------------------------------------------------
     // METODO
     //----------------------------------------------------------------------------------------------------
-
     /**
      * Retorna las resevas del viajero
+     *
      * @return lista de reservas
      */
-    public List<ReservaEntity> getReservas() {
+    public List<ReservaEntity> getReservas()
+    {
         return reservas;
     }
 
     /**
      * asigna las reservas del viajero
+     *
      * @param reservas la lista de reservas a asignar
      */
-    public void setReservas(List<ReservaEntity> reservas) {
+    public void setReservas(List<ReservaEntity> reservas)
+    {
         this.reservas = reservas;
     }
 
     /**
      * retorna la lista de reseñas
+     *
      * @return lista de reseñas
      */
-    public List<ResenaEntity> getResenas() {
+    public List<ResenaEntity> getResenas()
+    {
         return resenas;
     }
 
     /**
      * asigna las reseñas del viajero
+     *
      * @param resenas la lista de las reseñas a asignar
      */
-    public void setResenas(List<ResenaEntity> resenas) {
+    public void setResenas(List<ResenaEntity> resenas)
+    {
         this.resenas = resenas;
     }
-    
-    
+
 }

@@ -37,7 +37,8 @@ import javax.ws.rs.core.MediaType;
 @Path("/viviendas")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ViviendaResource {
+public class ViviendaResource
+{
 
     /**
      * logic de la vivienda
@@ -61,9 +62,11 @@ public class ViviendaResource {
      * @param entityList lista de viviendaEntity
      * @return lista de vivienda DTO
      */
-    private List<ViviendaDTO> listEntity2DTO(List<ViviendaEntity> entityList) {
+    private List<ViviendaDTO> listEntity2DTO(List<ViviendaEntity> entityList)
+    {
         List<ViviendaDTO> list = new ArrayList<>();
-        for (ViviendaEntity entity : entityList) {
+        for (ViviendaEntity entity : entityList)
+        {
             list.add(new ViviendaDTO(entity));
         }
         return list;
@@ -73,9 +76,11 @@ public class ViviendaResource {
      * @param entityList lista de habitacionEntity
      * @return lista de habitacion DTO
      */
-    private List<HabitacionDTO> listEntityHabitacion2DTO(List<HabitacionEntity> entityList) {
+    private List<HabitacionDTO> listEntityHabitacion2DTO(List<HabitacionEntity> entityList)
+    {
         List<HabitacionDTO> list = new ArrayList<>();
-        for (HabitacionEntity entity : entityList) {
+        for (HabitacionEntity entity : entityList)
+        {
             list.add(new HabitacionDTO(entity));
         }
         return list;
@@ -87,7 +92,8 @@ public class ViviendaResource {
      * @return lista de viviendaDTO
      */
     @GET
-    public List<ViviendaDTO> getViviendas() {
+    public List<ViviendaDTO> getViviendas()
+    {
         return listEntity2DTO(viviendaLogic.getViviendas());
     }
 
@@ -97,9 +103,11 @@ public class ViviendaResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public ViviendaDetailDTO getVivienda(@PathParam("id") Long id) { // TODO Si la vivienda no existe debe disparar WebApplicationException 404
+    public ViviendaDetailDTO getVivienda(@PathParam("id") Long id)
+    { // TODO Si la vivienda no existe debe disparar WebApplicationException 404
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
-        if (vivienda == null) {
+        if (vivienda == null)
+        {
             throw new WebApplicationException(404);
         }
         return new ViviendaDetailDTO(viviendaLogic.getVivienda(id));
@@ -112,7 +120,8 @@ public class ViviendaResource {
      * completos
      */
     @POST
-    public ViviendaDetailDTO createVivienda(ViviendaDetailDTO dto) throws BusinessLogicException {
+    public ViviendaDetailDTO createVivienda(ViviendaDetailDTO dto) throws BusinessLogicException
+    {
         //System.out.println("aaaa");
         return new ViviendaDetailDTO(viviendaLogic.createVivienda(dto.toEntity()));
     }
@@ -125,9 +134,11 @@ public class ViviendaResource {
      */
     @PUT
     @Path("{id: \\d+}")
-    public ViviendaDetailDTO updateVivienda(@PathParam("id") Long id, ViviendaDetailDTO dto) {// TODO Si la vivienda no existe debe disparar WebApplicationException 404
+    public ViviendaDetailDTO updateVivienda(@PathParam("id") Long id, ViviendaDetailDTO dto)
+    {// TODO Si la vivienda no existe debe disparar WebApplicationException 404
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
-        if (vivienda == null) {
+        if (vivienda == null)
+        {
             throw new WebApplicationException(404);
         }
         ViviendaEntity entity = dto.toEntity();
@@ -140,9 +151,11 @@ public class ViviendaResource {
      */
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteVivienda(@PathParam("id") Long id) {// TODO Si la vivienda no existe debe disparar WebApplicationException 404
+    public void deleteVivienda(@PathParam("id") Long id)
+    {// TODO Si la vivienda no existe debe disparar WebApplicationException 404
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
-        if (vivienda == null) {
+        if (vivienda == null)
+        {
             throw new WebApplicationException(404);
         }
         viviendaLogic.deleteVivienda(id);
@@ -156,9 +169,11 @@ public class ViviendaResource {
      */
     @GET
     @Path("{id: \\d+}/habitaciones")
-    public List<HabitacionDTO> getHabitaciones(@PathParam("id") Long id) {
+    public List<HabitacionDTO> getHabitaciones(@PathParam("id") Long id)
+    {
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
-        if (vivienda == null) {
+        if (vivienda == null)
+        {
             throw new WebApplicationException(404);
         }
         return listEntityHabitacion2DTO(habitacionLogic.getHabitacionesVivienda(id));

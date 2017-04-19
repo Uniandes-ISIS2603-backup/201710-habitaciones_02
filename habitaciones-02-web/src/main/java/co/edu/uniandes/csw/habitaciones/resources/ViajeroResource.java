@@ -34,36 +34,39 @@ import javax.ws.rs.core.Context;
 @Path("/viajeros")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ViajeroResource 
+public class ViajeroResource
 {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS DEL RECURSO
     //----------------------------------------------------------------------------------------------------
-   
+
     /**
      * Atributo del logic del viajero
      */
-    @Inject private ViajeroLogic viajeroLogic;
-    
+    @Inject
+    private ViajeroLogic viajeroLogic;
+
     /**
      * Atributo Response
      */
-    @Context private HttpServletResponse response;
-    
+    @Context
+    private HttpServletResponse response;
+
     /**
      * Atributo page
      */
-    @QueryParam("page") private Integer page;
-    
+    @QueryParam("page")
+    private Integer page;
+
     /**
      * Atributo maxRecords
      */
-    @QueryParam("limit") private Integer maxRecords;
-    
+    @QueryParam("limit")
+    private Integer maxRecords;
+
     //----------------------------------------------------------------------------------------------------
     // METODOS AUXILIARES DEL RECURSO
     //----------------------------------------------------------------------------------------------------
-
     /**
      * Metodo encargado de convertir la entidad a DTO
      *
@@ -73,7 +76,8 @@ public class ViajeroResource
     public List<ViajeroDTO> listEntity2DTO(List<ViajeroEntity> listEntity)
     {
         List<ViajeroDTO> listDto = new ArrayList<>();
-        for (ViajeroEntity entity : listEntity) {
+        for (ViajeroEntity entity : listEntity)
+        {
             ViajeroDTO ndto = new ViajeroDTO(entity);
             listDto.add(ndto);
         }
@@ -84,7 +88,6 @@ public class ViajeroResource
     //----------------------------------------------------------------------------------------------------
     // METODOS GET DEL RECURSO
     //----------------------------------------------------------------------------------------------------
-    
     /**
      * Metodo encargado de obtener todos los DTOs de los viajeros
      *
@@ -105,18 +108,19 @@ public class ViajeroResource
     @GET
     @Path("{id: \\d+}")
     public ViajeroDetailDTO getViajero(@PathParam("id") Long id) throws WebApplicationException
-    { 
+    {
         ViajeroDetailDTO viajero = new ViajeroDetailDTO(viajeroLogic.getViajero(id));
-        if(viajero == null)
+        if (viajero == null)
         {
             throw new WebApplicationException(404);
         }
         return viajero;
     }
-    
+
     /**
      * Metodo encargado de llamar a la clase ReservaResourse para retornar las
      * resenas de un viajero respectivo
+     *
      * @return la clase ReservaResourse encargada de retornar las resenas de
      * viajero.
      */
@@ -126,12 +130,9 @@ public class ViajeroResource
         return ReservaResource.class;
     }
 
-    
     //----------------------------------------------------------------------------------------------------
     // METODOS POST DEL RECURSO
     //----------------------------------------------------------------------------------------------------
-    
-    
     /**
      * Metodo encargado de agregar un nuevo viajero a la base de datos
      *
@@ -149,7 +150,6 @@ public class ViajeroResource
     //----------------------------------------------------------------------------------------------------
     // METODOS PUT DEL RECURSO
     //----------------------------------------------------------------------------------------------------    
-
     /**
      * Metodo encargado de actualizar la informacion de un viajero
      *
@@ -161,8 +161,8 @@ public class ViajeroResource
     @PUT
     @Path("{id: \\d+}")
     public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto) throws BusinessLogicException, WebApplicationException
-    { 
-        if(viajeroLogic.getViajero(id) == null)
+    {
+        if (viajeroLogic.getViajero(id) == null)
         {
             throw new WebApplicationException(404);
         }
@@ -170,13 +170,10 @@ public class ViajeroResource
         entity.setIdUsuario(id);
         return new ViajeroDetailDTO(viajeroLogic.updateViajero(entity));
     }
-    
-    
+
     //----------------------------------------------------------------------------------------------------
     // METODOS DELETE DEL RECURSO
     //----------------------------------------------------------------------------------------------------    
-    
-
     /**
      * Elimina un viajero de la base de datos
      *
@@ -186,7 +183,7 @@ public class ViajeroResource
     @Path("{id: \\d+}")
     public void deleteViajero(@PathParam("id") Long id) throws WebApplicationException
     {
-        if(viajeroLogic.getViajero(id) == null)
+        if (viajeroLogic.getViajero(id) == null)
         {
             throw new WebApplicationException(404);
         }

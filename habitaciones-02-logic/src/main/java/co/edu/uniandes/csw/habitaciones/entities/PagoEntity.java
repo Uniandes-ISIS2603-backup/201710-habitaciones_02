@@ -20,7 +20,8 @@ import javax.persistence.Temporal;
  * @author ne.cabrera
  */
 @Entity
-public class PagoEntity implements Serializable {
+public class PagoEntity implements Serializable
+{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,84 +57,98 @@ public class PagoEntity implements Serializable {
      *
      * @return reserva
      */
-    public ReservaEntity getReserva() {
+    public ReservaEntity getReserva()
+    {
         return reserva;
     }
 
     /**
      * @param pReserva la reserva a asignar
      */
-    public void setReserva(ReservaEntity pReserva) {
+    public void setReserva(ReservaEntity pReserva)
+    {
         this.reserva = pReserva;
     }
 
     /**
      * @return the id
      */
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Long id) {
+    public void setId(Long id)
+    {
         this.id = id;
     }
 
     /**
      * @return the fechaDePago
      */
-    public Date getFechaDePago() {
+    public Date getFechaDePago()
+    {
         return fechaDePago;
     }
 
     /**
      * @param fechaDePago the fechaDePago to set
      */
-    public void setFechaDePago(Date fechaDePago) {
+    public void setFechaDePago(Date fechaDePago)
+    {
         this.fechaDePago = fechaDePago;
     }
 
     /**
      * @return the pago
      */
-    public Double getPago() {
+    public Double getPago()
+    {
         return pago;
     }
 
     /**
      * @param pago the pago to set
      */
-    public void setPago(Double pago) {
+    public void setPago(Double pago)
+    {
         this.pago = pago;
     }
 
     /**
      * @return the tipoTramite
      */
-    public String getTipoTramite() {
+    public String getTipoTramite()
+    {
         return tipoTramite;
     }
 
     /**
      * @param tipoTramite the tipoTramite to set
      */
-    public void setTipoTramite(String tipoTramite) {
+    public void setTipoTramite(String tipoTramite)
+    {
         this.tipoTramite = tipoTramite;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this.getId() != null) {
+    public boolean equals(Object obj)
+    {
+        if (this.getId() != null)
+        {
             return this.getId().equals(((PagoEntity) obj).getId());
         }
         return super.equals(obj);
     }
 
     @Override
-    public int hashCode() {
-        if (this.getId() != null) {
+    public int hashCode()
+    {
+        if (this.getId() != null)
+        {
             return this.getId().hashCode();
         }
         return super.hashCode();
@@ -142,12 +157,14 @@ public class PagoEntity implements Serializable {
     /**
      * @return
      */
-    public Boolean informacionCompleta() {
+    public Boolean informacionCompleta()
+    {
         return (stringUtilizable(fechaDePago.toString()) && stringUtilizable(tipoTramite)
                 && stringUtilizable(pago.toString()));
     }
 
-    private Boolean stringUtilizable(String palabra) {
+    private Boolean stringUtilizable(String palabra)
+    {
         return (palabra != null) ? !palabra.isEmpty() : false;
     }
 }

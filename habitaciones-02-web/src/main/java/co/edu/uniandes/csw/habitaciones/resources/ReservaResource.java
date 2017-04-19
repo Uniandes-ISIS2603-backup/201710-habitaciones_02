@@ -30,7 +30,9 @@ import javax.ws.rs.core.MediaType;
 @Path("/reservas")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ReservaResource {
+public class ReservaResource
+{
+
     /**
      * la logica de reserva
      */
@@ -39,12 +41,15 @@ public class ReservaResource {
 
     /**
      * Se encarga de convertirla entidad a dto y retorna una lista de esta
+     *
      * @param listEntity
      * @return List ReservaDetailDTO
      */
-    private List<ReservaDetailDTO> listEntity2DTO(List<ReservaEntity> listEntity) {
+    private List<ReservaDetailDTO> listEntity2DTO(List<ReservaEntity> listEntity)
+    {
         List<ReservaDetailDTO> lista = new ArrayList<>();
-        for (ReservaEntity entity : listEntity) {
+        for (ReservaEntity entity : listEntity)
+        {
 
             lista.add(new ReservaDetailDTO(entity));
         }
@@ -52,73 +57,81 @@ public class ReservaResource {
     }
 
     /**
-    @GET
-    public List<ReservaDetailDTO> getReservas() {
-
-        return listEntity2DTO(logic.findReservas());
-    }
-    **/
-    
+     * @GET public List<ReservaDetailDTO> getReservas() {
+     *
+     * return listEntity2DTO(logic.findReservas()); }
+    *
+     */
     /**
-     * Metodo que retorna una lista de las reservas relacionado al id del viajero entrado
-     * por parametro
+     * Metodo que retorna una lista de las reservas relacionado al id del
+     * viajero entrado por parametro
+     *
      * @param idViajero
      * @return List ReservaDetailDTO
      */
     @GET
-    public List<ReservaDetailDTO> getReservasByViajero(@PathParam("viajeroId")Long idViajero)
+    public List<ReservaDetailDTO> getReservasByViajero(@PathParam("viajeroId") Long idViajero)
     {
         return listEntity2DTO(logic.findReservasByViajero(idViajero));
     }
+
     /**
      * encargado de buscar la reserva con el id introducido
+     *
      * @param id
      * @return ReservaDetailDTO
      */
-    
+
     @GET
     @Path("{id: \\d+}")
-    public ReservaDetailDTO getReserva(@PathParam("id") Long id) {
+    public ReservaDetailDTO getReserva(@PathParam("id") Long id)
+    {
         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
-        if(logic.findReserva(id) == null)
+        if (logic.findReserva(id) == null)
         {
             throw new WebApplicationException(404);
         }
         return new ReservaDetailDTO(logic.findReserva(id));
     }
+
     /**
      * Busca la habitacion con el id de reservas
+     *
      * @return clase HabitacionResource
      */
-     @Path("{habitacionId: \\d+}/habitaciones")
+    @Path("{habitacionId: \\d+}/habitaciones")
     public Class<HabitacionResource> getHabitacionReservas()
     {
         return HabitacionResource.class;
     }
-    
+
     /**
      * Metodo encargado de crear una reserva
+     *
      * @param dto
      * @return ReservaDetailDTO
-     * @throws BusinessLogicException 
+     * @throws BusinessLogicException
      */
     @POST
-    public ReservaDetailDTO createReserva(ReservaDetailDTO dto) throws BusinessLogicException 
+    public ReservaDetailDTO createReserva(ReservaDetailDTO dto) throws BusinessLogicException
     {
         return new ReservaDetailDTO(logic.createReserva(dto.toEntity()));
     }
+
     /**
      * Metodo de actualizar una reserva buscado por su parametro
+     *
      * @param id
      * @param dto
      * @return ReservaDetailDTO
-     * @throws BusinessLogicException 
+     * @throws BusinessLogicException
      */
     @PUT
     @Path("{id: \\d+}")
-    public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO dto) throws BusinessLogicException {
-         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
-        if(logic.findReserva(id) == null)
+    public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO dto) throws BusinessLogicException
+    {
+        // TODO Si la reserva  no existe debe disparar WebApplicationException 404
+        if (logic.findReserva(id) == null)
         {
             throw new WebApplicationException(404);
         }
@@ -126,22 +139,23 @@ public class ReservaResource {
         entity.setId(id);
         return new ReservaDetailDTO(logic.updateReserva(entity));
     }
+
     /**
      * Elimina una reserva buscado por su id
-     * @param id 
+     *
+     * @param id
      */
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteReserva(@PathParam("id") Long id) {
-         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
-          if(logic.findReserva(id) == null)
+    public void deleteReserva(@PathParam("id") Long id)
+    {
+        // TODO Si la reserva  no existe debe disparar WebApplicationException 404
+        if (logic.findReserva(id) == null)
         {
             throw new WebApplicationException(404);
         }
         logic.delete(id);
     }
-    
-   
-    
+
     //TODO cómo se puede saber cuáles son las reservas de un ahabitación?
 }

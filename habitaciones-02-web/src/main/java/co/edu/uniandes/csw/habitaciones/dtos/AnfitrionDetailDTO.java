@@ -19,7 +19,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author df.sanabria761
  */
 @XmlRootElement
-public class AnfitrionDetailDTO extends AnfitrionDTO {
+public class AnfitrionDetailDTO extends AnfitrionDTO
+{
 
     private List<ViviendaDTO> viviendas;
     private List<ReservaDTO> reservas;
@@ -27,7 +28,8 @@ public class AnfitrionDetailDTO extends AnfitrionDTO {
     /**
      * Constructor por defecto del Detail DTO
      */
-    public AnfitrionDetailDTO() {
+    public AnfitrionDetailDTO()
+    {
 
     }
 
@@ -36,15 +38,19 @@ public class AnfitrionDetailDTO extends AnfitrionDTO {
      *
      * @param entity Entity del anfitrión a crear
      */
-    public AnfitrionDetailDTO(AnfitrionEntity entity) {
+    public AnfitrionDetailDTO(AnfitrionEntity entity)
+    {
         super(entity);
-        if (entity != null) {
+        if (entity != null)
+        {
             viviendas = new ArrayList<ViviendaDTO>();
-            for (ViviendaEntity entity2 : entity.getViviendas()) {
+            for (ViviendaEntity entity2 : entity.getViviendas())
+            {
                 viviendas.add(new ViviendaDTO(entity2));
             }
             reservas = new ArrayList<>();
-            for (ReservaEntity entityReserva : entity.getReservas()) {
+            for (ReservaEntity entityReserva : entity.getReservas())
+            {
                 ReservaDTO reserva = new ReservaDTO(entityReserva);
                 reservas.add(reserva);
             }
@@ -52,37 +58,46 @@ public class AnfitrionDetailDTO extends AnfitrionDTO {
     }
 
     @Override
-    public AnfitrionEntity toEntity() {
+    public AnfitrionEntity toEntity()
+    {
         AnfitrionEntity entity = super.toEntity();
-        if (reservas != null) {
+        if (reservas != null)
+        {
             List<ReservaEntity> reservasEntity = new ArrayList<>();
-            for (ReservaDTO dtoReserva : reservas) {
+            for (ReservaDTO dtoReserva : reservas)
+            {
                 reservasEntity.add(dtoReserva.toEntity());
             }
             entity.setReservas(reservasEntity);
         }
-        if (viviendas != null) {
+        if (viviendas != null)
+        {
             List<ViviendaEntity> viviendasEntity = new ArrayList<>();
-            for (ViviendaDTO vivienda : viviendas) {
+            for (ViviendaDTO vivienda : viviendas)
+            {
                 viviendasEntity.add(vivienda.toEntity());
             }
         }
         return entity;
     }
 
-    public List<ViviendaDTO> getViviendas() {
+    public List<ViviendaDTO> getViviendas()
+    {
         return viviendas;
     }
 
-    public void setViviendas(List<ViviendaDTO> viviendas) {
+    public void setViviendas(List<ViviendaDTO> viviendas)
+    {
         this.viviendas = viviendas;
     }
 
-    public List<ReservaDTO> getReservas() {
+    public List<ReservaDTO> getReservas()
+    {
         return reservas;
     }
 
-    public void setReservas(List<ReservaDTO> reservas) {
+    public void setReservas(List<ReservaDTO> reservas)
+    {
         this.reservas = reservas;
     }
 

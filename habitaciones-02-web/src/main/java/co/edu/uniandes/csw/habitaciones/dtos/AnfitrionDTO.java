@@ -9,17 +9,21 @@ import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author df.sanabria761
  */
-public class AnfitrionDTO extends UsuarioDTO {
+@XmlRootElement
+public class AnfitrionDTO extends UsuarioDTO
+{
 
     /*
     Constructor por defecto
      */
-    public AnfitrionDTO() {
+    public AnfitrionDTO()
+    {
 
     }
 
@@ -29,8 +33,10 @@ public class AnfitrionDTO extends UsuarioDTO {
      *
      * @param entity Entidad a partir de la cual se genera el DTO
      */
-    public AnfitrionDTO(AnfitrionEntity entity) {
-        if (entity != null) {
+    public AnfitrionDTO(AnfitrionEntity entity)
+    {
+        if (entity != null)
+        {
             this.nombre = entity.getNombre();
             this.imagen = entity.getImagen();
             this.correoElectronico = entity.getCorreoElectronico();
@@ -45,7 +51,8 @@ public class AnfitrionDTO extends UsuarioDTO {
 
     }
 
-    public AnfitrionEntity toEntity() {
+    public AnfitrionEntity toEntity()
+    {
         AnfitrionEntity entity = new AnfitrionEntity();
         entity.setCorreoElectronico(this.getCorreoElectronico());
         entity.setContrasena(this.getContrasena());

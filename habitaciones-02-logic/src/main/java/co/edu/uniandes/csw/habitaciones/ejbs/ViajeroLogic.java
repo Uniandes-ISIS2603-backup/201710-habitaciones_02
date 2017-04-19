@@ -17,12 +17,12 @@ import javax.inject.Inject;
  * @author s.cortes
  */
 @Stateless
-public class ViajeroLogic 
+public class ViajeroLogic
 {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
-    
+
     /**
      * persistencia para la entidad del viajero
      */
@@ -32,66 +32,70 @@ public class ViajeroLogic
     //----------------------------------------------------------------------------------------------------
     // METODOS
     //----------------------------------------------------------------------------------------------------
-
-    
     /**
      * Crea una nueva entidad en la base de datos
+     *
      * @param entity entidad que se desea agregar
      * @return la entidad que fue agregada a la base de datos
      * @throws BusinessLogicException
      */
-    public ViajeroEntity createViajero (ViajeroEntity entity) throws BusinessLogicException
+    public ViajeroEntity createViajero(ViajeroEntity entity) throws BusinessLogicException
     {
-        if(!entity.informacionCompleta())
+        if (!entity.informacionCompleta())
         {
-            
+
             throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
         }
 
         return persistence.create(entity);
     }
-    
+
     /**
-     * Actualiza la información de un ViajeroEntoty que se encuentre en la base de datos
+     * Actualiza la información de un ViajeroEntoty que se encuentre en la base
+     * de datos
+     *
      * @param entity la entidad que desea actualizar
      * @return la entidad actualizada
      */
-    
-    public ViajeroEntity updateViajero (ViajeroEntity entity) throws BusinessLogicException
+    public ViajeroEntity updateViajero(ViajeroEntity entity) throws BusinessLogicException
     {
-        if(!entity.informacionCompleta())
+        if (!entity.informacionCompleta())
         {
             throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
         }
         return persistence.update(entity);
     }
-    
+
     /**
      * Retorna un un ViajeroEntity a partir de un id dado por parámetro
+     *
      * @param id el id del ViajeroEntity que se desea buscar
-     * @return un VIajeroEntity si se encuentra en la base datos, de lo contrario null
+     * @return un VIajeroEntity si se encuentra en la base datos, de lo
+     * contrario null
      */
     public ViajeroEntity getViajero(Long id)
     {
         return persistence.find(id);
     }
-    
+
     /**
      * Retorna una lista con todos los viajeros que se encuentran persistidos
-     * @return 
+     *
+     * @return
      */
     public List<ViajeroEntity> getViajeros()
     {
         return persistence.findAll();
     }
-    
+
     /**
      * Elimina un viajero a partir del id dado por parámetro
-     * @param id 
+     *
+     * @param id
      */
     public void deleteViajero(Long id)
     {
         persistence.delete(id);
     }
-    
+
 }

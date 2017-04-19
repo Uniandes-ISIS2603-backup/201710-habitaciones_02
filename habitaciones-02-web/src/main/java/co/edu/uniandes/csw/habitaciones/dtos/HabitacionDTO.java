@@ -14,30 +14,32 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author b.gamba10
  */
 @XmlRootElement
-public class HabitacionDTO implements Serializable {
-    
+public class HabitacionDTO implements Serializable
+{
+
     private Long id;
     private Double area;
     private Double valorAlquiler;
     private String rutaImagen;
     private String descripcion;
     private Integer capacidad;
-    
+
     /**
      * Constructor
      */
     public HabitacionDTO()
     {
-        
+
     }
-    
+
     /**
      * Constructor con una habitacion por parametro
-     * @param entity 
+     *
+     * @param entity
      */
     public HabitacionDTO(HabitacionEntity entity)
     {
-        if(entity != null)
+        if (entity != null)
         {
             this.id = entity.getId();
             this.area = entity.getArea();
@@ -47,10 +49,11 @@ public class HabitacionDTO implements Serializable {
             this.capacidad = entity.getCapacidad();
         }
     }
-    
+
     /**
      * Pasa el objeto de DTO a Entidad
-     * @return 
+     *
+     * @return
      */
     public HabitacionEntity toEntity()
     {
@@ -66,99 +69,122 @@ public class HabitacionDTO implements Serializable {
 
     /**
      * Retorna el id de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
     /**
      * Coloca el id de la habitacion
-     * @param id 
+     *
+     * @param id
      */
-    public void setId(Long id) {
+    public void setId(Long id)
+    {
         this.id = id;
     }
 
     /**
      * Retorna el area de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public Double getArea() {
+    public Double getArea()
+    {
         return area;
     }
 
     /**
      * Coloca el area de la habitacion
-     * @param area 
+     *
+     * @param area
      */
-    public void setArea(Double area) {
+    public void setArea(Double area)
+    {
         this.area = area;
     }
 
     /**
      * Retorna el valor del alquiler de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public Double getValorAlquiler() {
+    public Double getValorAlquiler()
+    {
         return valorAlquiler;
     }
 
     /**
      * Coloca el valor del alquiler de la habitacion
-     * @param valorAlquiler 
+     *
+     * @param valorAlquiler
      */
-    public void setValorAlquiler(Double valorAlquiler) {
+    public void setValorAlquiler(Double valorAlquiler)
+    {
         this.valorAlquiler = valorAlquiler;
     }
 
     /**
      * Retorna la descripcion de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public String getDescripcion() {
+    public String getDescripcion()
+    {
         return descripcion;
     }
 
     /**
      * Coloca la descripcion de la habitacion
-     * @param descripcion 
+     *
+     * @param descripcion
      */
-    public void setDescripcion(String descripcion) {
+    public void setDescripcion(String descripcion)
+    {
         this.descripcion = descripcion;
     }
 
     /**
      * Retorna la ruta de la imagen de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public String getRutaImagen() {
+    public String getRutaImagen()
+    {
         return rutaImagen;
     }
 
     /**
      * Coloca la ruta de la imagen de la habitacion
-     * @param rutaImagen 
+     *
+     * @param rutaImagen
      */
-    public void setRutaImagen(String rutaImagen) {
+    public void setRutaImagen(String rutaImagen)
+    {
         this.rutaImagen = rutaImagen;
     }
 
     /**
      * Retorna la capacidad de la habitacion
-     * @return 
+     *
+     * @return
      */
-    public Integer getCapacidad() {
+    public Integer getCapacidad()
+    {
         return capacidad;
     }
 
     /**
      * Coloca la capacidad de la habitacion
-     * @param capacidad 
+     *
+     * @param capacidad
      */
-    public void setCapacidad(Integer capacidad) {
+    public void setCapacidad(Integer capacidad)
+    {
         this.capacidad = capacidad;
     }
-    
-    
+
 }

@@ -15,25 +15,30 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author b.gamba10
  */
 @XmlRootElement
-public class DisponibilidadDTO implements Serializable {
+public class DisponibilidadDTO implements Serializable
+{
 
     private Long id;
     private Date fechaInicioEstadia;
     private Date fechaTerminacionEstadia;
 
     /**
-     * Constructor 
+     * Constructor
      */
-    public DisponibilidadDTO() {
+    public DisponibilidadDTO()
+    {
 
     }
 
     /**
      * Constructor que recibe un entity por parametro
-     * @param entity 
+     *
+     * @param entity
      */
-    public DisponibilidadDTO(DisponibilidadEntity entity) {
-        if (entity != null) {
+    public DisponibilidadDTO(DisponibilidadEntity entity)
+    {
+        if (entity != null)
+        {
             this.id = entity.getId();
             this.fechaInicioEstadia = entity.getFechaInicioEstadia();
             this.fechaTerminacionEstadia = entity.getFechaTerminacionEstadia();
@@ -42,9 +47,11 @@ public class DisponibilidadDTO implements Serializable {
 
     /**
      * Pasa el objeto de DTO a Entidad
-     * @return 
+     *
+     * @return
      */
-    public DisponibilidadEntity toEntity() {
+    public DisponibilidadEntity toEntity()
+    {
         DisponibilidadEntity entity = new DisponibilidadEntity();
         entity.setId(this.getId());
         entity.setFechaInicioEstadia(this.getFechaInicioEstadia());
@@ -54,49 +61,61 @@ public class DisponibilidadDTO implements Serializable {
 
     /**
      * Retorna el id de la disponibilidad
-     * @return 
+     *
+     * @return
      */
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
     /**
      * Coloca el id de la disponibilidad
-     * @param id 
+     *
+     * @param id
      */
-    public void setId(Long id) {
+    public void setId(Long id)
+    {
         this.id = id;
     }
 
     /**
      * Retorna la fecha de inicio de la estadia
-     * @return 
+     *
+     * @return
      */
-    public Date getFechaInicioEstadia() {
+    public Date getFechaInicioEstadia()
+    {
         return fechaInicioEstadia;
     }
 
     /**
      * Coloca la fecha de inicio de la estadia
-     * @param fechaInicioEstadia 
+     *
+     * @param fechaInicioEstadia
      */
-    public void setFechaInicioEstadia(Date fechaInicioEstadia) {
+    public void setFechaInicioEstadia(Date fechaInicioEstadia)
+    {
         this.fechaInicioEstadia = fechaInicioEstadia;
     }
 
     /**
      * Retorna la fecha de terminacion de la estadia
-     * @return 
+     *
+     * @return
      */
-    public Date getFechaTerminacionEstadia() {
+    public Date getFechaTerminacionEstadia()
+    {
         return fechaTerminacionEstadia;
     }
 
     /**
      * Coloca la fecha de terminacion de la estadia
-     * @param fechaTerminacionEstadia 
+     *
+     * @param fechaTerminacionEstadia
      */
-    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia) {
+    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia)
+    {
         this.fechaTerminacionEstadia = fechaTerminacionEstadia;
     }
 

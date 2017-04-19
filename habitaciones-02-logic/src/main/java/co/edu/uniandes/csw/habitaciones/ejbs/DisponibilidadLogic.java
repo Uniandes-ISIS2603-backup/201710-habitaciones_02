@@ -17,7 +17,8 @@ import javax.inject.Inject;
  * @author b.gamba10
  */
 @Stateless
-public class DisponibilidadLogic {
+public class DisponibilidadLogic
+{
 
     @Inject
     private DisponibilidadPersistence persistence;
@@ -29,7 +30,8 @@ public class DisponibilidadLogic {
      * @param id
      * @return
      */
-    public DisponibilidadEntity getDisponibilidad(Long idHabitacion, Long id) {
+    public DisponibilidadEntity getDisponibilidad(Long idHabitacion, Long id)
+    {
 
         return persistence.find(idHabitacion, id);
     }
@@ -40,7 +42,8 @@ public class DisponibilidadLogic {
      * @param idHabitacion
      * @return
      */
-    public List<DisponibilidadEntity> getDisponibilidades(Long idHabitacion) {
+    public List<DisponibilidadEntity> getDisponibilidades(Long idHabitacion)
+    {
 
         return persistence.findAll(idHabitacion);
     }
@@ -52,9 +55,11 @@ public class DisponibilidadLogic {
      * @return
      * @throws BusinessLogicException
      */
-    public DisponibilidadEntity createDisponibilidad(DisponibilidadEntity entity) throws BusinessLogicException {
+    public DisponibilidadEntity createDisponibilidad(DisponibilidadEntity entity) throws BusinessLogicException
+    {
 
-        if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia())) {
+        if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia()))
+        {
 
             throw new BusinessLogicException("La fecha de termincion de la estadia debe ser posterior a la del inicio.");
 
@@ -72,9 +77,11 @@ public class DisponibilidadLogic {
      * @return
      * @throws BusinessLogicException
      */
-    public DisponibilidadEntity updateDisponibilidad(DisponibilidadEntity entity) throws BusinessLogicException {
+    public DisponibilidadEntity updateDisponibilidad(DisponibilidadEntity entity) throws BusinessLogicException
+    {
 
-        if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia())) {
+        if (entity.getFechaInicioEstadia().after(entity.getFechaTerminacionEstadia()))
+        {
 
             throw new BusinessLogicException("La fecha de termincion de la estadia debe ser posterior a la del inicio.");
 
@@ -87,7 +94,8 @@ public class DisponibilidadLogic {
      *
      * @param id
      */
-    public void deleteDisponibilidad(Long id) {
+    public void deleteDisponibilidad(Long id)
+    {
 
         persistence.delete(id);
     }

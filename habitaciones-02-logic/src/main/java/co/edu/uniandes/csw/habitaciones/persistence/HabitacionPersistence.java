@@ -17,74 +17,87 @@ import javax.persistence.Query;
  * @author b.gamba10
  */
 @Stateless
-public class HabitacionPersistence {
-    
+public class HabitacionPersistence
+{
+
     @PersistenceContext(unitName = "habitacionesPU")
     protected EntityManager em;
-    
+
     /**
      * Encuentra y retorna una habitacion por su id
+     *
      * @param id de la habitacion
      * @return Habitacion
      */
-    public HabitacionEntity find(Long id) {
+    public HabitacionEntity find(Long id)
+    {
         return em.find(HabitacionEntity.class, id);
     }
-    
+
     /**
      * Retorna todas las habitaciones
+     *
      * @return lista con las habitaciones
      */
-    public List<HabitacionEntity> findAll() {
-        
+    public List<HabitacionEntity> findAll()
+    {
+
         Query q = em.createQuery("select u from HabitacionEntity u");
         return q.getResultList();
     }
-    
+
     //Hecho por Nicolas, es parte de un TODO
     /**
      * Encuentra todas las habitaciones de una vivienda
+     *
      * @param idVivienda
-     * @return 
+     * @return
      */
-     public List<HabitacionEntity> findAllVivienda(Long idVivienda) {
+    public List<HabitacionEntity> findAllVivienda(Long idVivienda)
+    {
 
         Query q = em.createQuery("select u from HabitacionEntity u where (u.vivienda.id = :idVivienda) ", HabitacionEntity.class);
         q.setParameter("idVivienda", idVivienda);
         return q.getResultList();
     }
-    
-     /**
-      * Crea una nueva habitacion
-      * @param entity
-      * @return 
-      */
-    public HabitacionEntity create(HabitacionEntity entity) {
-        
+
+    /**
+     * Crea una nueva habitacion
+     *
+     * @param entity
+     * @return
+     */
+    public HabitacionEntity create(HabitacionEntity entity)
+    {
+
         em.persist(entity);
-        
+
         return entity;
     }
-    
+
     /**
      * Modidifca una habitacion ya existente
+     *
      * @param entity
      * @return Habitacion
      */
-    public HabitacionEntity update(HabitacionEntity entity) {
-        
+    public HabitacionEntity update(HabitacionEntity entity)
+    {
+
         return em.merge(entity);
-        
+
     }
-    
+
     /**
      * Elimina una habitacion
+     *
      * @param id de la habitacion
      */
-    public void delete(Long id) {
-        
+    public void delete(Long id)
+    {
+
         HabitacionEntity entity = em.find(HabitacionEntity.class, id);
         em.remove(entity);
     }
-    
+
 }

@@ -18,37 +18,41 @@ import javax.persistence.TypedQuery;
  * @author dg.guarin20
  */
 @Stateless
-public class ReservaPersistence {
-    
+public class ReservaPersistence
+{
+
     /**
      * Entity manager de la persistencia
      */
-    @PersistenceContext(unitName="habitacionesPU")
+    @PersistenceContext(unitName = "habitacionesPU")
     protected EntityManager em;
-    
+
     /**
      * Busca la clase reservaEntity por el id y la retorna
+     *
      * @param id
      * @return ReservaEntity
      */
     public ReservaEntity find(Long id)
     {
         return em.find(ReservaEntity.class, id);
-        
+
     }
-    
+
     /**
      * Crea una lista que retorna con todas las clases de ReservaEntity
+     *
      * @return List de ReservaEntity
      */
     public List<ReservaEntity> findAll()
     {
-     Query q = em.createQuery("select u from ReservaEntity u");
-     return q.getResultList();
+        Query q = em.createQuery("select u from ReservaEntity u");
+        return q.getResultList();
     }
-    
+
     /**
      * Busca todas las clases ReservaEntity que tenga un viajero por su id.
+     *
      * @param idViajero
      * @return List de ReservaEntity
      */
@@ -58,10 +62,13 @@ public class ReservaPersistence {
                 = em.createQuery("select u from ReservaEntity u where u.viajero.idUsuario = :idViajero", ReservaEntity.class);
         q = q.setParameter("idViajero", idViajero);
 
-       return q.getResultList();
+        return q.getResultList();
     }
+
     /**
-     * Crea una clase ReservaEntity a con el entity dado en parametro y la retorna
+     * Crea una clase ReservaEntity a con el entity dado en parametro y la
+     * retorna
+     *
      * @param entity
      * @return la clase ReservaEntity
      */
@@ -70,45 +77,54 @@ public class ReservaPersistence {
         em.persist(entity);
         return entity;
     }
+
     /**
      * Actualiza una reserva con lo que se da en parametro y la retorna
+     *
      * @param entity
-     * @return 
+     * @return
      */
     public ReservaEntity update(ReservaEntity entity)
     {
         em.merge(entity);
         return entity;
     }
+
     /**
      * Elimina una reserva por su eliminacion
-     * @param id 
+     *
+     * @param id
      */
     public void delete(Long id)
     {
         ReservaEntity entity = em.find(ReservaEntity.class, id);
         em.remove(entity);
-        
+
     }
-    
+
     /**
-     * Este metodo verifica si existe una reserva que relacione a un viajero con una habitacion
-     * @param idViajero el id del viajero que se quiere relacionar a una habitacion
-     * @param idHabitacion el id de una habitacion que se quiere relacionar con un viajero
-     * @return true si existe una reserva con dicha relacion, false de lo contrario.
+     * Este metodo verifica si existe una reserva que relacione a un viajero con
+     * una habitacion
+     *
+     * @param idViajero el id del viajero que se quiere relacionar a una
+     * habitacion
+     * @param idHabitacion el id de una habitacion que se quiere relacionar con
+     * un viajero
+     * @return true si existe una reserva con dicha relacion, false de lo
+     * contrario.
      */
     public ReservaEntity findReservaFromViajeroAndHabitacion(Long idViajero, Long idHabitacion)
     {
-       TypedQuery<ReservaEntity> q
+        TypedQuery<ReservaEntity> q
                 = em.createQuery("select u from ResenaEntity u where u.viajero.idUsuario = :idViajero AND u.habitacion.id = :idHabitacion AND u.cancelado = 0 ORDER BY u.FECHAINICIO DESC", ReservaEntity.class);
         q = q.setParameter("idViajero", idViajero);
         q = q.setParameter("idHabitacion", idHabitacion);
-        
-       List<ReservaEntity> sameCorreo = q.getResultList();
-        if (sameCorreo.isEmpty() ) 
+
+        List<ReservaEntity> sameCorreo = q.getResultList();
+        if (sameCorreo.isEmpty())
         {
-            return null; 
-        } else 
+            return null;
+        } else
         {
             return sameCorreo.get(0);
         }

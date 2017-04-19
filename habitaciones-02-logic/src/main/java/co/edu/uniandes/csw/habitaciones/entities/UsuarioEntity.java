@@ -21,7 +21,8 @@ import javax.persistence.Table;
 @Entity
 @Table
 @Inheritance(strategy = InheritanceType.JOINED)
-public class UsuarioEntity implements Serializable {
+public class UsuarioEntity implements Serializable
+{
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
@@ -80,7 +81,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return el id
      */
-    public Long getIdUsuario() {
+    public Long getIdUsuario()
+    {
         return idUsuario;
     }
 
@@ -89,7 +91,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @param idUsuario el id a asignar
      */
-    public void setIdUsuario(Long idUsuario) {
+    public void setIdUsuario(Long idUsuario)
+    {
         this.idUsuario = idUsuario;
     }
 
@@ -98,7 +101,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return el nombre
      */
-    public String getNombre() {
+    public String getNombre()
+    {
         return nombre;
     }
 
@@ -107,23 +111,29 @@ public class UsuarioEntity implements Serializable {
      *
      * @param nombre el nombre a asignar
      */
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre)
+    {
         this.nombre = nombre;
     }
+
     /**
      * Retorna la ruta de la imagen de la entidad
+     *
      * @return imagen
      */
-    
-    public String getImagen() {
+
+    public String getImagen()
+    {
         return imagen;
     }
-    
+
     /**
      * Asigna a la imagen el valor correspondiente
+     *
      * @param imagen Imagen que se va a agregar imagen != null imagen != ""
      */
-    public void setImagen(String imagen) {
+    public void setImagen(String imagen)
+    {
         this.imagen = imagen;
     }
 
@@ -132,7 +142,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return la contraseña
      */
-    public String getContrasena() {
+    public String getContrasena()
+    {
         return contrasena;
     }
 
@@ -141,7 +152,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @param contrasena la contraseña a asignar
      */
-    public void setContrasena(String contrasena) {
+    public void setContrasena(String contrasena)
+    {
         this.contrasena = contrasena;
     }
 
@@ -150,7 +162,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return el correo electronico
      */
-    public String getCorreoElectronico() {
+    public String getCorreoElectronico()
+    {
         return correoElectronico;
     }
 
@@ -159,7 +172,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @param correoElectronico el correo electronico a asignar
      */
-    public void setCorreoElectronico(String correoElectronico) {
+    public void setCorreoElectronico(String correoElectronico)
+    {
         this.correoElectronico = correoElectronico;
     }
 
@@ -168,7 +182,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return el tipo de documento
      */
-    public String getTipoDocumento() {
+    public String getTipoDocumento()
+    {
         return tipoDocumento;
     }
 
@@ -177,7 +192,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @param tipoDocumento el tipo de documento a asignar
      */
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(String tipoDocumento)
+    {
         this.tipoDocumento = tipoDocumento;
     }
 
@@ -186,7 +202,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return el numero de documento
      */
-    public String getNumeroDocumento() {
+    public String getNumeroDocumento()
+    {
         return numeroDocumento;
     }
 
@@ -195,7 +212,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @param numeroDocumento el numero de documento a asignar
      */
-    public void setNumeroDocumento(String numeroDocumento) {
+    public void setNumeroDocumento(String numeroDocumento)
+    {
         this.numeroDocumento = numeroDocumento;
     }
 
@@ -204,7 +222,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return la direccion
      */
-    public String getDireccion() {
+    public String getDireccion()
+    {
         return direccion;
     }
 
@@ -213,7 +232,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @param direccion la direccion a asignar
      */
-    public void setDireccion(String direccion) {
+    public void setDireccion(String direccion)
+    {
         this.direccion = direccion;
     }
 
@@ -222,7 +242,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return el telefono
      */
-    public String getTelefono() {
+    public String getTelefono()
+    {
         return telefono;
     }
 
@@ -231,7 +252,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @param telefono el telefono a asignar
      */
-    public void setTelefono(String telefono) {
+    public void setTelefono(String telefono)
+    {
         this.telefono = telefono;
     }
 
@@ -240,7 +262,8 @@ public class UsuarioEntity implements Serializable {
      *
      * @return true si no sin null ni vacios, false de lo contrario
      */
-    public Boolean informacionCompleta() {
+    public Boolean informacionCompleta()
+    {
         return (stringUtilizable(contrasena) && stringUtilizable(correoElectronico)
                 && stringUtilizable(direccion) && stringUtilizable(nombre) && stringUtilizable(tipoDocumento)
                 && stringUtilizable(telefono) && stringUtilizable(numeroDocumento));
@@ -252,7 +275,8 @@ public class UsuarioEntity implements Serializable {
      * @param palabra el string a verificar
      * @return true si no es ni vacio ni null, false de lo contrario
      */
-    private Boolean stringUtilizable(String palabra) {
+    private Boolean stringUtilizable(String palabra)
+    {
         return (palabra != null) ? !palabra.isEmpty() : false;
     }
 

@@ -20,27 +20,32 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-*/
+ */
 package co.edu.uniandes.csw.habitaciones.exceptions;
 
 import javax.ejb.ApplicationException;
 
 @ApplicationException(rollback = true)
-public class BusinessLogicException extends Exception {
+public class BusinessLogicException extends Exception
+{
 
-    public BusinessLogicException() {
+    public BusinessLogicException()
+    {
         super();
     }
 
-    public BusinessLogicException(String message) {
+    public BusinessLogicException(String message)
+    {
         super(message);
     }
 
-    public BusinessLogicException(Throwable cause) {
+    public BusinessLogicException(Throwable cause)
+    {
         super(cause);
     }
 
-    public BusinessLogicException(String message, Throwable cause) {
+    public BusinessLogicException(String message, Throwable cause)
+    {
         super(message, cause);
     }
 

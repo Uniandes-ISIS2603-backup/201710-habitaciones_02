@@ -5,7 +5,6 @@
  */
 package co.edu.uniandes.csw.habitaciones.dtos;
 
-
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -20,13 +19,10 @@ public class ViajeroDTO extends UsuarioDTO
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
-    
     //Se encuentran en la Clase UsuarioDTO
-    
     //----------------------------------------------------------------------------------------------------
     // METODOS CONSTRUCTORES
     //----------------------------------------------------------------------------------------------------
-    
     /**
      * Metodo Constructor por defecto de la clase
      */
@@ -36,12 +32,14 @@ public class ViajeroDTO extends UsuarioDTO
     }
 
     /**
-     * Metodo contructor que inicializa los atributos a partir de la información contenida en el objeto UsuarioEntity
+     * Metodo contructor que inicializa los atributos a partir de la información
+     * contenida en el objeto UsuarioEntity
+     *
      * @param entity Entidad con la que se crea el objeto DTO
      */
     public ViajeroDTO(ViajeroEntity entity)
     {
-        if(entity != null)
+        if (entity != null)
         {
             this.nombre = entity.getNombre();
             this.imagen = entity.getImagen();
@@ -50,23 +48,22 @@ public class ViajeroDTO extends UsuarioDTO
             this.idUsuario = entity.getIdUsuario();
             this.tipoDocumento = entity.getTipoDocumento();
             this.numeroDocumento = entity.getNumeroDocumento();
-            this.direccion  =entity.getDireccion();
+            this.direccion = entity.getDireccion();
             this.telefono = entity.getTelefono();
         }
     }
-    
-    
+
     //----------------------------------------------------------------------------------------------------
     // METODOS
     //----------------------------------------------------------------------------------------------------
-
     /**
-     * Metodo encargado de converitr un DTO a un Entity 
+     * Metodo encargado de converitr un DTO a un Entity
+     *
      * @return una entidad viajero
      */
     public ViajeroEntity toEntity()
     {
-        ViajeroEntity entity  = new ViajeroEntity();
+        ViajeroEntity entity = new ViajeroEntity();
         entity.setContrasena(this.getContrasena());
         entity.setCorreoElectronico(this.getCorreoElectronico());
         entity.setDireccion(this.getDireccion());
@@ -76,8 +73,8 @@ public class ViajeroDTO extends UsuarioDTO
         entity.setTelefono(this.getTelefono());
         entity.setTipoDocumento(this.getTipoDocumento());
         entity.setImagen(this.getImagen());
-        
+
         return entity;
     }
-    
+
 }
