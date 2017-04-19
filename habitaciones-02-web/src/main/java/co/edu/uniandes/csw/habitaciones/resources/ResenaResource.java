@@ -109,11 +109,12 @@ public class ResenaResource
     @Path("{id: \\d+}")
     public ResenaDetailDTO getResena(@PathParam("id") Long id) throws WebApplicationException
     {
-        ResenaDetailDTO resena = new ResenaDetailDTO(logic.findResena(id));
-        if (resena == null)
+        ResenaEntity entity = logic.findResena(id);
+        if (entity == null)
         {
             throw new WebApplicationException(404);
         }
+        ResenaDetailDTO resena = new ResenaDetailDTO();
         return resena;
     }
 
