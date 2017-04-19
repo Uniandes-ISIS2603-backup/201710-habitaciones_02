@@ -1,5 +1,8 @@
 
 DELETE FROM RESENAENTITY;
+DELETE FROM PAGOENTITY;
+
+DELETE FROM VIVIENDAENTITY;
 
 DELETE FROM ANFITRIONENTITY;
 DELETE FROM VIAJEROENTITY;
@@ -67,4 +70,51 @@ insert into VIAJEROENTITY (idUsuario) values (28);
 insert into VIAJEROENTITY (idUsuario) values (29);
 insert into VIAJEROENTITY (idUsuario) values (30);
 
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (1, 'Wangcun', '65927 Michigan Alley', 'http://dummyimage.com/101x150.bmp/dddddd/000000',1);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (2, 'Rizokárpaso', '82 Shoshone Alley', 'http://dummyimage.com/242x139.jpg/dddddd/000000',2);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (3, 'Vingåker', '069 Green Ridge Parkway', 'http://dummyimage.com/221x146.bmp/ff4444/ffffff',3);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (4, 'Karobokan', '40 4th Hill', 'http://dummyimage.com/160x234.png/ff4444/ffffff',4);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (5, 'Khorostkiv', '4351 Hovde Lane', 'http://dummyimage.com/176x223.jpg/cc0000/ffffff',5);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (6, 'União', '774 Coleman Hill', 'http://dummyimage.com/143x225.jpg/5fa2dd/ffffff',6);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (7, 'Cilolongokan', '88904 Thierer Circle', 'http://dummyimage.com/140x169.png/ff4444/ffffff',7);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (8, 'Mabini', '79 Towne Center', 'http://dummyimage.com/154x221.bmp/dddddd/000000',8);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (9, 'Turirejo', '34126 8th Hill', 'http://dummyimage.com/241x124.jpg/cc0000/ffffff',9);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (10, 'Palmar de Varela', '4482 Drewry Trail', 'http://dummyimage.com/136x238.bmp/5fa2dd/ffffff',10);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (11, 'Yuanjue', '00732 Armistice Hill', 'http://dummyimage.com/186x230.png/cc0000/ffffff',11);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (12, 'Sukhinichi', '20 Rigney Road', 'http://dummyimage.com/146x147.jpg/cc0000/ffffff',12);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (13, 'Alqueva', '37 Maryland Plaza', 'http://dummyimage.com/112x174.jpg/cc0000/ffffff',13);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (14, 'Takikawa', '7 Carey Parkway', 'http://dummyimage.com/142x172.png/5fa2dd/ffffff',14);
+insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (15, 'Talitsy', '8 Schurz Park', 'http://dummyimage.com/216x192.bmp/5fa2dd/ffffff',15);
 
+
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (1, '2016-05-02', 8, 'aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien',1);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (2, '2016-06-30', 30, 'elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in',2);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (3, '2016-06-06', 59, 'justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris',3);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (4, '2016-12-22', 76, 'nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit',4);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (5, '2016-05-31', 39, 'ac est lacinia nisi venenatis tristique fusce congue diam id ornare',5);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (6, '2016-12-29', 6, 'commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel',6);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (7, '2017-02-24', 94, 'imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo',7);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (8, '2016-07-08', 74, 'ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus',8);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (9, '2016-07-11', 29, 'odio cras mi pede malesuada in imperdiet et commodo vulputate',9);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (10, '2016-12-20', 78, 'pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue',10);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (11, '2016-10-20', 82, 'pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus',11);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (12, '2016-05-06', 50, 'arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede',12);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (13, '2016-10-06', 30, 'porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non',13);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (14, '2017-01-16', 92, 'risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero',14);
+insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (15, '2016-05-28', 77, 'mauris sit amet eros suspendisse accumsan tortor quis turpis sed',15);
+
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (1, 4, 'tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh', 1, 16);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (2, 3, 'rutrum nulla nunc purus phasellus in felis', 2, 17);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (3, 1, 'felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed', 3, 18);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (4, 4, 'posuere felis sed', 4, 19);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (5, 2, 'quis odio consequat varius integer ac', 5, 20);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (6, 2, 'suspendisse potenti cras in purus', 6, 21);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (7, 1, 'lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum', 7, 22);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (8, 1, 'quis lectus suspendisse potenti in', 8, 23);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (9, 5, 'sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices', 9, 24);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (10, 2, 'proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in', 10, 25);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (11, 1, 'quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id', 11, 26);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (12, 3, 'in felis eu sapien cursus', 12, 27);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (13, 2, 'turpis donec posuere metus vitae ipsum aliquam non mauris morbi', 13, 28);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (14, 2, 'est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce', 14, 29);
+insert into RESENAENTITY (id, CALIFICACION, COMENTARIO, HABITACION_ID, VIAJERO_IDUSUARIO) values (15, 4, 'sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor', 15, 30);
