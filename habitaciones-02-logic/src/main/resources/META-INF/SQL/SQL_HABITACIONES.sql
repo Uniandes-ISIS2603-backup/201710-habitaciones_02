@@ -1,7 +1,7 @@
 DELETE FROM RESENAENTITY;
 DELETE FROM PAGOENTITY;
---
 DELETE FROM DISPONIBILIDADENTITY;
+DELETE FROM ,
 
 DELETE FROM HABITACIONENTITY;
 DELETE FROM VIVIENDAENTITY;
@@ -103,6 +103,8 @@ INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, 
 INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (13, 10.05, 'Status amput hand', 'http://dummyimage.com/144x163.bmp/ff4444/ffffff', 39.19, 7  )
 INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (14, 27.58, 'Chr iridocyl in oth dis', 'http://dummyimage.com/121x105.bmp/dddddd/000000', 33.54, 9  )
 INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (15, 40.94, 'Pois-sedative/hypnot NEC', 'http://dummyimage.com/112x209.png/dddddd/000000', 23.72, 2 )
+
+
 
 INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (1, '2016-08-10 18:42:07', '2016-09-26 00:57:00', 1)
 INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (2, '2016-05-23 12:53:41', '2016-07-25 09:25:16', 2)
