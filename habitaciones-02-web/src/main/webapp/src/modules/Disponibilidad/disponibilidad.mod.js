@@ -1,7 +1,7 @@
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("disponibilidadModule", ['ui.router']);
-    mod.constant("disponibilidadContext", "api/habitaciones/{idHabitacion: \\d+}/disponibilidades");
+    mod.constant("disponibilidadContext", "api/habitaciones/{idHabitacion:int}/disponibilidades");
 
     // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
