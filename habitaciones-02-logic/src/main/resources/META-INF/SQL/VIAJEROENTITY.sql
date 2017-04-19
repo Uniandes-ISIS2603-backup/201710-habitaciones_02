@@ -1,0 +1,15 @@
+insert into VIAJEROENTITY (idUsuario) values (16);
+insert into VIAJEROENTITY (idUsuario) values (17);
+insert into VIAJEROENTITY (idUsuario) values (18);
+insert into VIAJEROENTITY (idUsuario) values (19);
+insert into VIAJEROENTITY (idUsuario) values (20);
+insert into VIAJEROENTITY (idUsuario) values (21);
+insert into VIAJEROENTITY (idUsuario) values (22);
+insert into VIAJEROENTITY (idUsuario) values (23);
+insert into VIAJEROENTITY (idUsuario) values (24);
+insert into VIAJEROENTITY (idUsuario) values (25);
+insert into VIAJEROENTITY (idUsuario) values (26);
+insert into VIAJEROENTITY (idUsuario) values (27);
+insert into VIAJEROENTITY (idUsuario) values (28);
+insert into VIAJEROENTITY (idUsuario) values (29);
+insert into VIAJEROENTITY (idUsuario) values (30);
