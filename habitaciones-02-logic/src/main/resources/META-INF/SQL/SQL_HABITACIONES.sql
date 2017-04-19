@@ -1,7 +1,7 @@
 DELETE FROM RESENAENTITY;
 DELETE FROM PAGOENTITY;
 DELETE FROM DISPONIBILIDADENTITY;
-DELETE FROM RESERVAS;
+DELETE FROM RESERVAENTITY;
 
 DELETE FROM HABITACIONENTITY;
 DELETE FROM VIVIENDAENTITY;
@@ -88,54 +88,54 @@ insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARI
 insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (14, 'Takikawa', '7 Carey Parkway', 'http://dummyimage.com/142x172.png/5fa2dd/ffffff',14);
 insert into VIVIENDAENTITY (id, ciudad, direccion, rutaImagen,ANFITRION_IDUSUARIO) values (15, 'Talitsy', '8 Schurz Park', 'http://dummyimage.com/216x192.bmp/5fa2dd/ffffff',15);
 
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (1, 35.9, 'Leptospiral infect NEC', 'http://dummyimage.com/116x208.jpg/5fa2dd/ffffff', 28.47, 2 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (2, 31.86, 'Forearm deformity NEC', 'http://dummyimage.com/191x110.png/ff4444/ffffff', 39.35, 10  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (3,21.21, 'Low birthwt 1500-1999g', 'http://dummyimage.com/167x166.png/dddddd/000000', 13.07, 10 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (4, 22.59, 'Spina bifida', 'http://dummyimage.com/123x216.bmp/ff4444/ffffff', 31.27, 5)
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (5, 18.79, 'Corneal grft malfunction', 'http://dummyimage.com/120x160.jpg/5fa2dd/ffffff', 35.16,6   )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (6, 38.47, 'Fx clavicle shaft-open', 'http://dummyimage.com/148x166.png/cc0000/ffffff', 12.94, 2 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (7, 37.6, 'Amniotic embolism-deliv', 'http://dummyimage.com/222x142.jpg/dddddd/000000', 34.04, 2  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (8, 27.5, 'Pois-skin/membr agnt NEC', 'http://dummyimage.com/177x134.bmp/cc0000/ffffff', 29.89, 5 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (9, 29.12, 'Tenosynov hand/wrist NEC', 'http://dummyimage.com/194x110.bmp/dddddd/000000', 27.79, 6  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (10, 19.22, 'Opn skul vlt fx w/o coma', 'http://dummyimage.com/222x119.jpg/cc0000/ffffff', 23.24, 8)
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (11, 49.78, 'Ac uterine inflammation', 'http://dummyimage.com/199x130.jpg/cc0000/ffffff', 39.10, 3 )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (12, 16.66, 'Acute canaliculitis', 'http://dummyimage.com/244x225.bmp/5fa2dd/ffffff', 26.12, 4  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (13, 10.05, 'Status amput hand', 'http://dummyimage.com/144x163.bmp/ff4444/ffffff', 39.19, 7  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (14, 27.58, 'Chr iridocyl in oth dis', 'http://dummyimage.com/121x105.bmp/dddddd/000000', 33.54, 9  )
-INSERT INTO HABITACIONENTITY (id, area, descripcion, rutaImagen, valorAlquiler, capacidad) VALUES (15, 40.94, 'Pois-sedative/hypnot NEC', 'http://dummyimage.com/112x209.png/dddddd/000000', 23.72, 2 )
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (1, 18, 1, 'in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur', 'http://dummyimage.com/135x229.bmp/dddddd/000000', 3, 1);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (2, 59, 1, 'magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus', 'http://dummyimage.com/199x192.jpg/cc0000/ffffff', 40, 2);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (3, 8, 1, 'lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra', 'http://dummyimage.com/208x195.jpg/ff4444/ffffff', 77, 3);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (4, 58, 7, 'pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue', 'http://dummyimage.com/219x215.png/dddddd/000000', 19, 4);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (5, 54, 9, 'sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit', 'http://dummyimage.com/186x112.png/cc0000/ffffff', 43, 5);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (6, 32, 9, 'velit id pretium iaculis diam erat fermentum justo nec condimentum', 'http://dummyimage.com/153x118.jpg/cc0000/ffffff', 99, 6);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (7, 8, 4, 'eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas', 'http://dummyimage.com/177x201.png/5fa2dd/ffffff', 19, 7);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (8, 60, 6, 'sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices', 'http://dummyimage.com/140x229.bmp/ff4444/ffffff', 34, 8);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (9, 76, 10, 'a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet', 'http://dummyimage.com/160x221.png/dddddd/000000', 17, 9);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (10, 55, 5, 'vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer', 'http://dummyimage.com/122x193.jpg/5fa2dd/ffffff', 55, 10);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (11, 70, 9, 'enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices', 'http://dummyimage.com/131x227.png/ff4444/ffffff', 78, 11);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (12, 44, 5, 'erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate', 'http://dummyimage.com/219x111.bmp/cc0000/ffffff', 37, 12);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (13, 42, 5, 'justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est', 'http://dummyimage.com/226x131.png/dddddd/000000', 33, 13);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (14, 96, 3, 'donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum', 'http://dummyimage.com/212x205.png/dddddd/000000', 76, 14);
+insert into HABITACIONENTITY (id, area, capacidad, descripcion, rutaimagen, valoralquiler, vivienda_id) values (15, 32, 2, 'molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam', 'http://dummyimage.com/199x112.jpg/dddddd/000000', 33, 15);
 
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('2','false','5/22/2016','2/6/2017','15','1','16','22');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('3','false', '2/2/2016','3/4/2017','2','2','16','95');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('4','false','3/16/2016','3/21/2017','2','3','17','47');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('5','false','1/19/2016','2/1/2017','3','4','18','48');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('6','true','3/21/2016','3/12/2017','4','5','18','81');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('7','false','1/31/2016','3/3/2017', '4','6','19','95');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('8','false','3/4/2016','2/8/2017','5','7','19','15');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('9','true','2/23/2016','3/21/2017','6','8','20','69');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('10','true','3/9/2016','3/4/2017','6','9','21','17');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('11','false','3/11/2016','3/18/2017','7','10','22','70');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('12','true','2/23/2016','2/3/2017','8','11','23','59');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('13','true','1/24/2016','3/23/2017','9','12','24','6');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('14','false','1/12/2016','2/10/2017','10','13','25','27');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('15','false','1/6/2016','3/18/2017','11','14','26','71');
-INSERT INTO RESERVAS(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES ('16','false','3/30/2016','3/1/2017','11','15','27','95');
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (1,0,'1/19/2016','2/1/2017',15,1,16,22);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (2,0, '1/19/2016','2/1/2017',2,2,16,95);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (3,0,'1/19/2016','2/1/2017',2,3,17,47);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (4,0,'1/19/2016','2/1/2017',3,4,18,48);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (5,1,'3/21/2016','3/12/2017',4,5,18,81);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (6,0,'1/31/2016','3/3/2017', 4,6,19,95);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (7,0,'3/4/2016','2/8/2017',5,7,19,15);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (8,1,'2/23/2016','3/21/2017',6,8,20,69);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (9,1,'3/9/2016','3/4/2017',6,9,21,17);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (10,0,'3/11/2016','3/18/2017',7,10,22,70);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (11,1,'2/23/2016','2/3/2017',8,11,23,59);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (12,1,'1/24/2016','3/23/2017',9,12,24,6);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (13,0,'1/12/2016','2/10/2017',10,13,25,27);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (14,0,'1/6/2016','3/18/2017',11,14,26,71);
+INSERT INTO RESERVAENTITY(ID, CANCELADO, FECHAINICIO, FECHATERMINACION, ANFITRION_IDUSUARIO, HABITACION_ID, VIAJERO_IDUSUARIO, PRECIO) VALUES (15,0,'3/30/2016','3/1/2017',11,15,27,95);
 
 
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (1, '2016-08-10 18:42:07', '2016-09-26 00:57:00', 1)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (2, '2016-05-23 12:53:41', '2016-07-25 09:25:16', 2)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (3, '2016-10-20 07:18:05', '2016-11-18 12:24:10', 3)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (4, '2016-11-09 21:16:19', '2017-03-31 03:11:04', 4)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (5, '2016-09-15 18:45:23', '2016-10-01 22:31:27', 5)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (6, '2016-05-26 19:14:56', '2016-08-07 07:07:01', 6)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (7, '2016-06-13 14:30:50', '2017-01-11 04:14:01', 7)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (8, '2016-10-16 01:56:55', '2016-10-31 08:11:42', 8)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (9, '2016-06-08 12:51:38', '2017-03-07 08:58:34', 9)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (10, '2016-06-16 03:27:59', '2016-10-24 15:16:24', 10)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (11, '2016-09-19 13:49:07', '2016-10-26 03:55:54', 11)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (12, '2016-07-30 18:34:06', '2016-11-08 09:32:48', 12)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (13, '2016-05-26 14:19:18', '2017-01-11 04:29:14', 13)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (14, '2016-06-12 04:17:26', '2016-09-15 14:23:23', 14)
-INSERT INTO DISPONIBILIDADENTITY (id, fechaInicioEstadia, fechaTerminacionEstadia, habitacion_id) VALUES (15, '2016-05-01 12:43:43', '2016-07-05 07:29:51', 15)
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (1, '2016-08-10 18:42:07', '2016-09-26 00:57:00', 1);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (2, '2016-05-23 12:53:41', '2016-07-25 09:25:16', 2);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (3, '2016-10-20 07:18:05', '2016-11-18 12:24:10', 3);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (4, '2016-11-09 21:16:19', '2017-03-31 03:11:04', 4);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (5, '2016-09-15 18:45:23', '2016-10-01 22:31:27', 5);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (6, '2016-05-26 19:14:56', '2016-08-07 07:07:01', 6);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (7, '2016-06-13 14:30:50', '2017-01-11 04:14:01', 7);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (8, '2016-10-16 01:56:55', '2016-10-31 08:11:42', 8);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (9, '2016-06-08 12:51:38', '2017-03-07 08:58:34', 9);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (10, '2016-06-16 03:27:59', '2016-10-24 15:16:24', 10);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (11, '2016-09-19 13:49:07', '2016-10-26 03:55:54', 11);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (12, '2016-07-30 18:34:06', '2016-11-08 09:32:48', 12);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (13, '2016-05-26 14:19:18', '2017-01-11 04:29:14', 13);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (14, '2016-06-12 04:17:26', '2016-09-15 14:23:23', 14);
+INSERT INTO DISPONIBILIDADENTITY (ID, FECHAINICIOESTADIA, FECHATERMINACIONESTADIA, HABITACION_ID) VALUES (15, '2016-05-01 12:43:43', '2016-07-05 07:29:51', 15);
 
 insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (1, '2016-05-02', 8, 'aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien',1);
 insert into PAGOENTITY (id, fechaDePago, pago, tipoTramite, RESERVA_ID) values (2, '2016-06-30', 30, 'elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in',2);
