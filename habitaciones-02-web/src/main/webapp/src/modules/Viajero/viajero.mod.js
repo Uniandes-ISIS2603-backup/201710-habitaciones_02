@@ -2,32 +2,38 @@
     // Definición del módulo
     var mod = ng.module("viajeroModule", ['ui.router']);
         mod.constant("viajeroContext","api/viajeros");
+        
    // Configuración de los estados del módulo
-    mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    mod.config(['$stateProvider', '$urlRouterProvider', 
+        function ($stateProvider, $urlRouterProvider) 
+        {
             
-            // En basePath se encuentran los templates y controladores de módulo
+        // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Viajero/';
-            // Mostrar la lista de viajeros será el estado por defecto del módulo
+        // Mostrar la lista de viajeros será el estado por defecto del módulo
             $urlRouterProvider.otherwise("/viajerosList");
             
-            // Definición del estado 'ViajerosList' donde se listan los libros
             $stateProvider.state('viajero', {
                 
                 url: '/viajeros',
                 abstract: true,
                 resolve: {
-                    viajeros: ['$http', 'viajeroContext', function ($http, viajeroContext) {
+                    viajeros: ['$http', 'viajeroContext', 
+                        function ($http, viajeroContext)
+                        {
                             return $http.get(viajeroContext);
-                        }]
+                        }
+                    ]
                 },
                 views: {
                     'mainView': {
-                        
-                       
                         templateUrl: basePath + 'viajero.html',
-                        controller: ['$scope', 'viajeros', function ($scope, viajeros) {
+                        controller: ['$scope', 'viajeros', 
+                            function ($scope, viajeros)
+                            {
                                 $scope.RecordsViajero = viajeros.data;
-                            }]
+                            }
+                        ]
                     }
                 }
                 
@@ -49,22 +55,32 @@
                     viajeroId: null
                 },
                 resolve:{
-                    currentViajero:['$http', 'viajeroContext', '$stateParams', function ($http, viajeroContext, $params) {
-                            return $http.get(viajeroContext+'/'+$params.viajeroId);
-                    }]
+                    currentViajero:['$http', 'viajeroContext', '$stateParams', 
+                        function ($http, viajeroContext, $params) 
+                        {
+                            return $http.get(viajeroContext + '/'
+                                    + $params.viajeroId);
+                        }
+                    ]
                 },
                 views: {
                     'listView': {
                         templateUrl: basePath + 'viajero.list.html',
-                        controller: ['$scope', 'viajeros', function ($scope, viajeros) {
+                        controller: ['$scope', 'viajeros', 
+                            function ($scope, viajeros)
+                            {
                                 $scope.RecordsViajero = viajeros.data;
-                            }]
+                            }
+                        ]
                     },
                     'detailView': {
                         templateUrl: basePath + 'viajero.detail.html',
-                        controller: ['$scope', 'currentViajero', function ($scope, currentViajero) {
+                        controller: ['$scope', 'currentViajero', 
+                            function ($scope, currentViajero)
+                            {
                                 $scope.currentViajero = currentViajero.data;
-                            }]
+                            }
+                        ]
                     }
 
                 } 
@@ -80,7 +96,9 @@
                     'ListasViajeroView':{
                         templateUrl: basePath + 'viajero.reservas.list.html'
                         //hereda el currentViajero del viajeroDetail??
-                        //Yo puedo llamar las reservas del viajero desde HTML en vez de en el controlador?
+                        
+                        //Yo puedo llamar las reservas del viajero 
+                        //desde HTML en vez de en el controlador?
                     }
                 } 
             });
@@ -116,9 +134,7 @@
                         
                     }
                 } 
-            });
-            
-            
+            });  
         }
     ]);
 })(window.angular);
