@@ -62,7 +62,8 @@ public class ViajeroLogic
         if (!entity.informacionCompleta())
         {
 
-            throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
+            throw new BusinessLogicException("Algunos de los datos para registrase"
+                    + " no fueron ingresados. Por favor, intente nuevamente");
         }
 
         return persistence.create(entity);
@@ -79,7 +80,8 @@ public class ViajeroLogic
     {
         if (!entity.informacionCompleta())
         {
-            throw new BusinessLogicException("Algunos de los datos para registrase no fueron ingresados. Por favor, intente nuevamente");
+            throw new BusinessLogicException("Algunos de los datos para registrase"
+                    + " no fueron ingresados. Por favor, intente nuevamente");
         }
         return persistence.update(entity);
     }

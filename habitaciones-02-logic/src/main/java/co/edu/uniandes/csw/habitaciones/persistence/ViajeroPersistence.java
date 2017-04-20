@@ -108,8 +108,8 @@ public class ViajeroPersistence
      */
     public ViajeroEntity searchByEmail(String correoElectronico)
     {
-        TypedQuery<ViajeroEntity> q
-                = em.createQuery("select u from UsuarioEntity u where u.correoElectronico = :correo", ViajeroEntity.class);
+        TypedQuery<ViajeroEntity> q;
+        q = em.createQuery("select u from UsuarioEntity u where u.correoElectronico = :correo", ViajeroEntity.class);
         q = q.setParameter("correo", correoElectronico);
 
         List<ViajeroEntity> sameCorreo = q.getResultList();

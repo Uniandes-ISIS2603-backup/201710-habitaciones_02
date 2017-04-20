@@ -37,6 +37,10 @@ import javax.ws.rs.core.Context;
 public class ViajeroResource
 {
     //----------------------------------------------------------------------------------------------------
+    // CONSTANTES
+    //----------------------------------------------------------------------------------------------------
+        private final static int ERROR_404 = 404;
+    //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS DEL RECURSO
     //----------------------------------------------------------------------------------------------------
 
@@ -109,11 +113,12 @@ public class ViajeroResource
     @Path("{id: \\d+}")
     public ViajeroDetailDTO getViajero(@PathParam("id") Long id) throws WebApplicationException
     {
-        ViajeroDetailDTO viajero = new ViajeroDetailDTO(viajeroLogic.getViajero(id));
-        if (viajero == null)
+        ViajeroEntity entity = viajeroLogic.getViajero(id);
+        if (entity == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
+        ViajeroDetailDTO viajero = new ViajeroDetailDTO(entity);
         return viajero;
     }
 
@@ -160,11 +165,12 @@ public class ViajeroResource
      */
     @PUT
     @Path("{id: \\d+}")
-    public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto) throws BusinessLogicException, WebApplicationException
+    public ViajeroDetailDTO updateViajero(@PathParam("id") Long id, ViajeroDetailDTO dto)
+    throws BusinessLogicException, WebApplicationException
     {
         if (viajeroLogic.getViajero(id) == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         ViajeroEntity entity = dto.toEntity();
         entity.setIdUsuario(id);
@@ -173,7 +179,8 @@ public class ViajeroResource
 
     //----------------------------------------------------------------------------------------------------
     // METODOS DELETE DEL RECURSO
-    //----------------------------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------------------------
+    
     /**
      * Elimina un viajero de la base de datos
      *
@@ -185,7 +192,7 @@ public class ViajeroResource
     {
         if (viajeroLogic.getViajero(id) == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         viajeroLogic.deleteViajero(id);
     }
