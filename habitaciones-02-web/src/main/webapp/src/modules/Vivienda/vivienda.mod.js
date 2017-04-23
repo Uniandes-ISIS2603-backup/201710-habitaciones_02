@@ -49,7 +49,7 @@
                 views: {
                     'listView': {
                         templateUrl: basePath + 'viviendaHabs.list.html',
-                        controller: ['$scope', '$stateParams', 
+                        controller: ['$scope', 'currentVivienda', 
                                     function ($scope, currentVivienda) {
          $scope.currentVivienda = currentVivienda.data;
                             }]

@@ -33,6 +33,30 @@
                         
                     }
                 }
+            }).state('pagoDetail',{
+                url: '/{pagoId:int}/detail',
+                parent:'pagos',
+                param:{
+                    pagoId: null
+                },
+                resolve:{
+                    currentPago:['$http','$stateParams','pagosContext',
+                    function($http, $params,pagosContext){
+                        return $http.get(pagosContext + '/' + $params.pagoId);
+                    }]
+                },
+                views:{
+                    'detailView':{
+                        templateUrl:basePath + 'pago.detail.html',
+                        controller:['$scope','currentPago',
+                                    function($scope,currentPago){
+                                        $scope.currentPago = currentPago.data;
+                                    }]
+                    },
+                    'listView':{
+                        templateUrl: basePath + 'pago.list.html'
+                    }
+                }
             });
         }]
     );
