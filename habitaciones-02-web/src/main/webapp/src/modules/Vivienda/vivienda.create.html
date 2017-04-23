@@ -1,1 +1,37 @@
-vivienda Create Html
+<div class="panel-default">
+    <style>
+        
+        b.TextoCreacion{
+            
+            font-size: 16px;
+            margin-left: 60px;
+        }
+        input.Crear{
+            margin-left: 60px;
+        }
+        input.ng-invalid{
+            
+            background-color: lightsalmon;
+        }
+        input.ng-valid{
+            
+            background-color: lightgreen;
+        }
+        
+    </style>
+    <div class="panel-body">
+        <div class="row">
+            <h2 style="text-align: center;">
+                Registrar Vivienda<br>
+            </h2>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input class="Crear" name="ciudad" type="text" required ng-model="ciudad"><br><br>
+                <input class="Crear" name="direccion" type="text" required ng-model="direccion"><br><br>
+                <input class="Crear" name="rutaImagen" type="text" required ng-model="rutaImagen"><br><br>
+                <input class="Crear center-block" type="submit" value="Registrar" style="font-size: 16px;">
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>
