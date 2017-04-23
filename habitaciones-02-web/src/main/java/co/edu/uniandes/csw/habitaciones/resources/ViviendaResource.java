@@ -29,6 +29,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 /**
  *
@@ -39,7 +40,8 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class ViviendaResource
 {
-
+    private final static int ERROR_404 = 404;
+    
     /**
      * logic de la vivienda
      */
@@ -108,7 +110,7 @@ public class ViviendaResource
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
         if (vivienda == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException();
         }
         return new ViviendaDetailDTO(viviendaLogic.getVivienda(id));
     }
@@ -139,7 +141,7 @@ public class ViviendaResource
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
         if (vivienda == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         ViviendaEntity entity = dto.toEntity();
         entity.setId(id);
@@ -156,7 +158,7 @@ public class ViviendaResource
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
         if (vivienda == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         viviendaLogic.deleteVivienda(id);
     }
@@ -174,7 +176,7 @@ public class ViviendaResource
         ViviendaEntity vivienda = viviendaLogic.getVivienda(id);
         if (vivienda == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         return listEntityHabitacion2DTO(habitacionLogic.getHabitacionesVivienda(id));
     }

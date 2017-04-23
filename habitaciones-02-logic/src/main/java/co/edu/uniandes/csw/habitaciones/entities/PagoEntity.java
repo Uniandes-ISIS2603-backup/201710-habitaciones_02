@@ -183,6 +183,11 @@ public class PagoEntity implements Serializable
 
     private Boolean stringUtilizable(String palabra)
     {
-        return (palabra != null) ? !palabra.isEmpty() : false;
+        Boolean respuesta = false;
+        if(palabra != null && !palabra.isEmpty())
+        {
+            respuesta = true;
+        }
+        return respuesta;
     }
 }
