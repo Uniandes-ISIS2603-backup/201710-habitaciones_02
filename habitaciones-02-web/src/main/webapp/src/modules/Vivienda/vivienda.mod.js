@@ -65,6 +65,15 @@
                 }
            
             });
+            
+            $stateProvider.state('createVivienda',{
+                url: '/registrarVivienda',
+                views:{
+                    'mainView':{
+                        templateUrl: basePath + "vivienda.create.html"
+                    }
+                }
+            });
         }
     ]);
 })(window.angular);
