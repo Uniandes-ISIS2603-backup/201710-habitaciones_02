@@ -118,7 +118,6 @@
                     }
                 } 
             });
-            
             $stateProvider.state('viajeroUpdate', {
                 url: '/{viajeroId:int}',
                 parent: 'viajeroDetail',
