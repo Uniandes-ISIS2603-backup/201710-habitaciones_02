@@ -41,6 +41,14 @@ import javax.inject.Inject;
 public class ResenaLogic
 {
     //----------------------------------------------------------------------------------------------------
+    // CONSTANTES  
+    //----------------------------------------------------------------------------------------------------
+    
+    private final static int CALIFICACION_MIN = 0;
+    
+    private final static int CALIFICACION_MAX = 5;
+    
+    //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
 
@@ -97,7 +105,7 @@ public class ResenaLogic
      */
     public ResenaEntity createResena(ResenaEntity entity) throws BusinessLogicException
     {
-        if (entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
+        if (entity.getCalificacion() == null || (entity.getCalificacion() < CALIFICACION_MIN) || (entity.getCalificacion() > CALIFICACION_MAX))
         {
             throw new BusinessLogicException("La reseña debe tener una calificacion que sea entre 0 y 5");
         }
@@ -109,11 +117,14 @@ public class ResenaLogic
 
             if (reserva == null)
             {
-                throw new BusinessLogicException("No se puede generar la resena debido a que no hay registro de que el viajero "
+                throw new BusinessLogicException("No se puede generar la resena debido"
+                        + " a que no hay registro de que el viajero "
                         + "haya hecho una reserva en la habitacion");
+                
             } else if (reserva.getFechaInicio().compareTo(new Date()) > 0)
             {
-                throw new BusinessLogicException("No se puede generar la resena debido a que aun no aun no ha iniciado la fecha inicial de la reserva");
+                throw new BusinessLogicException("No se puede generar la resena debido "
+                        + "a que aun no aun no ha iniciado la fecha inicial de la reserva");
             }
         } else
         {
@@ -135,7 +146,7 @@ public class ResenaLogic
      */
     public ResenaEntity updateResena(ResenaEntity entity) throws BusinessLogicException
     {
-        if (entity.getCalificacion() == null || (entity.getCalificacion() < 0) || (entity.getCalificacion() > 5))
+        if (entity.getCalificacion() == null || (entity.getCalificacion() < CALIFICACION_MIN) || (entity.getCalificacion() > CALIFICACION_MAX))
         {
             throw new BusinessLogicException("La reseña debe tener una calificacion que sea entre 0 y 5");
         }
@@ -147,11 +158,13 @@ public class ResenaLogic
 
             if (reserva == null)
             {
-                throw new BusinessLogicException("No se puede generar la resena debido a que no hay registro de que el viajero "
+                throw new BusinessLogicException("No se puede generar la resena debido"
+                        + " a que no hay registro de que el viajero "
                         + "haya hecho una reserva en la habitacion");
             } else if (reserva.getFechaInicio().compareTo(new Date()) > 0)
             {
-                throw new BusinessLogicException("No se puede generar la resena debido a que aun no aun no ha iniciado la fecha inicial de la reserva");
+                throw new BusinessLogicException("No se puede generar la resena debido"
+                        + " a que aun no aun no ha iniciado la fecha inicial de la reserva");
             }
         } else
         {

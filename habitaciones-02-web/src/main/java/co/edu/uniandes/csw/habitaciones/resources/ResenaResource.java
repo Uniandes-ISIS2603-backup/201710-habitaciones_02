@@ -36,9 +36,15 @@ import javax.ws.rs.core.MediaType;
 public class ResenaResource
 {
 
-    /**
-     * Atributo del logic de la reserva
-     */
+    //----------------------------------------------------------------------------------------------------
+    // CONSTANTES
+    //----------------------------------------------------------------------------------------------------
+        private final static int ERROR_404 = 404;
+        
+    //----------------------------------------------------------------------------------------------------
+    // ATRIBUTOS DE RECURSO
+    //----------------------------------------------------------------------------------------------------
+        
     @Inject
     private ResenaLogic logic;
     @Context
@@ -48,6 +54,10 @@ public class ResenaResource
     @QueryParam("limit")
     private Integer maxRecords;
 
+    //----------------------------------------------------------------------------------------------------
+    // METODOS
+    //----------------------------------------------------------------------------------------------------
+    
     /**
      * Metodo encargado de convertir la entidad a DTO
      *
@@ -59,7 +69,6 @@ public class ResenaResource
         List<ResenaDetailDTO> lista = new ArrayList<>();
         for (ResenaEntity entity : listEntity)
         {
-
             lista.add(new ResenaDetailDTO(entity));
         }
         return lista;
@@ -69,17 +78,8 @@ public class ResenaResource
     // TODO deberia ser get /viajeros/:id/resenas las reseñas del viajero (en el recurso viajero) COMPLETADO
     // TODO deberia ser get /habitaciones/:id/resenas las reseñas de la habitacion (en el recurso habitación)
     // TODO deberia ser get /anfitriones/:id/resenas las reseñas del anfitrion (en el recurso anfitrion)
-    /**
-     * Metodo encargado de obtener todos los DTOs de los reseñas
-     *
-     * @return
-     */
-    /**
-     * @GET public List<ResenaDetailDTO> getResenas() {
-     *
-     * return listEntity2DTO(logic.findResenas()); }
-    *
-     */
+    
+    
     /**
      *
      * @param idViajero
@@ -112,7 +112,7 @@ public class ResenaResource
         ResenaEntity entity = logic.findResena(id);
         if (entity == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         ResenaDetailDTO resena = new ResenaDetailDTO();
         return resena;
@@ -141,11 +141,12 @@ public class ResenaResource
      */
     @PUT
     @Path("{id: \\d+}")
-    public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto) throws BusinessLogicException, WebApplicationException
+    public ResenaDetailDTO updateResena(@PathParam("id") Long id, ResenaDetailDTO dto)
+    throws BusinessLogicException, WebApplicationException
     {
         if (logic.findResena(id) == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         ResenaEntity entity = dto.toEntity();
         entity.setId(id);
@@ -163,7 +164,7 @@ public class ResenaResource
     {
         if (logic.findResena(id) == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         logic.delete(id);
     }

@@ -7,13 +7,13 @@
                 text-align: center;
             }
 
-            input.Actualizacion.ng-invalid{
+            input.ActualizacionViajero.ng-invalid{
             
-            background-color: lightsalmon;
+                background-color: lightsalmon;
             }
-            input.Actualizacion.ng-valid{
+            input.ActualizacionViajero.ng-valid{
             
-            background-color: lightgreen;
+                background-color: lightgreen;
             }
     </style>
     
@@ -35,12 +35,8 @@
                     <form name="formaAu" novalidate>
 
                         <b>Escriba su contrasena:</b><br>
-                        <input class="Actualizacion" type="password" name="contrasenaV1" size="30" ng-model='contrasenaV1' required>
+                        <input class="ActualizacionViajero center-block" type="password" name="contrasenaV1" size="30" ng-model='contrasenaV1' required>
                         <span ng-show="formaAu.contrasenaV1.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
-
-                        <b>Escriba su contrasena nuevamente:</b><br>
-                        <input class="Actualizacion" type="password" name="contrasenaV2" size="30" ng-model='contrasenaV2' required>
-                        <span ng-show="formaAu.contrasenaV2.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
 
                         <input class="center-block" type="button" value="verificar">
 
@@ -57,16 +53,12 @@
                 <div class="text-left">
                     <form name="formaCam" novalidate>
 
-                        <b>Antigua Contrasena:</b><br>
-                        <input type="password" name="contrasenaAntigua" size="30" ng-model='contrasenaAntigua' required>
-                        <span ng-show="formCam.contrasenaAntigua.$touched && formaCam.contrasenaAntigua.$invalid"><b style="color: red">X</b></span><br><br>
-
                         <b>Nueva Contrasena:</b><br>
-                        <input type="password" name="contrasenaNueva1" size="30" ng-model='contrasenaNueva1' required>
+                        <input class="ActualizacionViajero" type="password" name="contrasenaNueva1" size="30" ng-model='contrasenaNueva1' required>
                         <span ng-show="formCam.contrasenaNueva1.$touched && formaCam.contrasenaNueva1.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <b>Vuelva a Escribir la nueva Contrasena:</b><br>
-                        <input type="password" name="contrasenaNueva2" size="30" ng-model='contrasenaNueva2' required>
+                        <input class="ActualizacionViajero" type="password" name="contrasenaNueva2" size="30" ng-model='contrasenaNueva2' required>
                         <span ng-show="formCam.contrasenaNueva2.$touched && formaCam.contrasenaNueva2.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <input class="center-block" type="submit" value="cambiar Contrasena">
@@ -92,28 +84,28 @@
                     <form name="formaA" novalidate>
 
                         <b>Nombre Completo:</b><br>
-                        <input class="Actualizacion" name="nombre" type="text" size="40" ng-model='currentViajero.nombre'required>
+                        <input class="ActualizacionViajero" name="nombre" type="text" size="40" ng-model='currentViajero.nombre'required>
                         <span ng-show="formaA.nombre.$touched && formaA.nombre.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <b>Correo Electronico</b><br>
-                        <input class="Actualizacion" name="correoElectronico" type="email" size="40" ng-model='currentViajero.correoElectronico' required>
+                        <input class="ActualizacionViajero" name="correoElectronico" type="email" size="40" ng-model='currentViajero.correoElectronico' required>
                         <span ng-show="formaA.correoElectronico.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <!-- Pede ser type='radio'?-->
                         <b>Tipo Documento</b><br>
-                        <input class="Actualizacion" name="tipoDocumento" type="text" size="40" ng-model='currentViajero.tipoDocumento'required>
+                        <input class="ActualizacionViajero" name="tipoDocumento" type="text" size="40" ng-model='currentViajero.tipoDocumento'required>
                         <span ng-show="formaA.tipoDocumento.$touched && formaA.tipoDocumento.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <b>Numero Documento</b><br>
-                        <input class="Actualizacion" name="numeroDocumento" type="text" size="40" ng-model='currentViajero.numeroDocumento'required>
+                        <input class="ActualizacionViajero" name="numeroDocumento" type="text" size="40" ng-model='currentViajero.numeroDocumento'required>
                         <span ng-show="formaA.numeroDocumento.$touched && formaA.numeroDocumento.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <b>Direccion</b><br>
-                        <input class="Actualizacion" name="direccion" type="text" size="40" ng-model='currentViajero.direccion'required>
+                        <input class="ActualizacionViajero" name="direccion" type="text" size="40" ng-model='currentViajero.direccion'required>
                         <span ng-show="formaA.direccion.$touched && formaA.direccion.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <b>Telefono de Contacto</b><br>
-                        <input class="Actualizacion" name="telefono" type="text" size="40" ng-model='currentViajero.telefono'required>
+                        <input class="ActualizacionViajero" name="telefono" type="text" size="40" ng-model='currentViajero.telefono'required>
                         <span ng-show="formaA.telefono.$touched && formaA.telefono.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <input class='Actualizacion center-block' type="submit" value="Actualizar datos">
