@@ -28,12 +28,12 @@
                     disponibilidadId: null
                 },
                 views: {
-                    'detailView': {
+                    'detailViewD': {
                         templateUrl: basePath + 'disponibilidad.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params)
                             {
                                 console.log("........");
-                                $scope.currentDisponibilidad = $scope.disponibilidadesRecords[$params.disponibilidadId - 1];
+                                $scope.currentDisponibilidad = $scope.disponibilidades.data[$params.disponibilidadId - 1];
                             }]
                     }
 
