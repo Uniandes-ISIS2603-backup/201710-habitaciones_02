@@ -33,12 +33,15 @@
         
         <div class = "row" style="margin-top: 10px;">
             
-            <div class="col-sm-3 col-md-3" ng-repeat="resena in currentViajero.resenas">
+            <div class="col-sm-3 col-md-3" ng-repeat="resena in RecordsResena">
                 <div class="thumbnail" >
                     
                     <dl>
-                        <dt>Numero Resena</dt>
-                        <dd>{{resena.id}}<br></br></dd>
+                        <div class="thumbnail">
+                            
+                            <img style="max-height: 200px; min-height: 200px;" class="img-responsive" ng-src="{{resena.habitacion.rutaImagen}}" alt="{{resena.habitacion.rutaImagen}}"/>
+                        
+                        </div>
 
                         <dt>Calificacion</dt>
                         <dd style="color: rgb(185,133,36); font-size: 16px">{{resena.calificacion}} estrellas </dd>
@@ -46,7 +49,7 @@
                     </dl>
                     <div class="text-center">
                         <a ui-sref="resenaDetailViajero({resenaId: resena.id, viajeroId: currentViajero.idUsuario})">
-                            <b style="color: lightblue;"> mas informacion</b>
+                            <b class="center-block" style="color: lightblue;"> mas informacion</b>
 
                         </a>
                     </div>

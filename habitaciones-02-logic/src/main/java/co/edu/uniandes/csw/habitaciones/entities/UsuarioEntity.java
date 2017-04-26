@@ -282,9 +282,11 @@ public class UsuarioEntity implements Serializable
      */
     public Boolean informacionCompleta()
     {
-        return (stringUtilizable(contrasena) && stringUtilizable(correoElectronico)
+        boolean info = (stringUtilizable(contrasena) && stringUtilizable(correoElectronico)
                 && stringUtilizable(direccion) && stringUtilizable(nombre) && stringUtilizable(tipoDocumento)
                 && stringUtilizable(telefono) && stringUtilizable(numeroDocumento));
+        
+        return info;
     }
 
     /**
@@ -295,7 +297,12 @@ public class UsuarioEntity implements Serializable
      */
     private Boolean stringUtilizable(String palabra)
     {
-        return (palabra != null) ? !palabra.isEmpty() : false;
+        boolean resultado = false;
+        if(palabra != null)
+        {
+            resultado = !palabra.isEmpty();
+        }
+        return resultado;
     }
 
 }

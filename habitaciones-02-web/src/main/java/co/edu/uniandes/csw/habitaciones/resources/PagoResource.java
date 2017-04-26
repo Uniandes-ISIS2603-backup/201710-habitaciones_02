@@ -36,6 +36,7 @@ import javax.ws.rs.core.MediaType;
 public class PagoResource
 {
 
+    private final static int ERROR_404 = 404;
     /**
      * la logica del pago
      */
@@ -84,7 +85,7 @@ public class PagoResource
         PagoEntity pago = pagoLogic.getPago(id);
         if (pago == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         return new PagoDTO(pago);
     }
@@ -117,7 +118,7 @@ public class PagoResource
         PagoEntity pago = pagoLogic.getPago(id);
         if (pago == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         PagoEntity entity = dto.toEntity();
         entity.setId(id);
@@ -134,7 +135,7 @@ public class PagoResource
         PagoEntity pago = pagoLogic.getPago(id);
         if (pago == null)
         {
-            throw new WebApplicationException(404);
+            throw new WebApplicationException(ERROR_404);
         }
         pagoLogic.deletePago(id);
     }

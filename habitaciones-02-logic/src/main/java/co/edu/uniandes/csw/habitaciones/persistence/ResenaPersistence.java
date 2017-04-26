@@ -72,8 +72,9 @@ public class ResenaPersistence
 
     public List<ResenaEntity> findAllByViajero(Long idViajero)
     {
-        TypedQuery<ResenaEntity> q
-                = em.createQuery("select u from ResenaEntity u where u.viajero.idUsuario = :idViajero", ResenaEntity.class);
+        TypedQuery<ResenaEntity> q;
+        q = em.createQuery("select u from ResenaEntity u where u.viajero.idUsuario = :idViajero", ResenaEntity.class);
+        
         q = q.setParameter("idViajero", idViajero);
 
         return q.getResultList();
@@ -82,8 +83,9 @@ public class ResenaPersistence
 
     public List<ResenaEntity> findAllByHabitacion(Long idHabitacion)
     {
-        TypedQuery<ResenaEntity> q
-                = em.createQuery("select u from ResenaEntity u where u.habitacion.id = :idHabitacion", ResenaEntity.class);
+        TypedQuery<ResenaEntity> q;
+        q = em.createQuery("select u from ResenaEntity u where u.habitacion.id = :idHabitacion", ResenaEntity.class);
+        
         q = q.setParameter("idHabitacion", idHabitacion);
 
         return q.getResultList();

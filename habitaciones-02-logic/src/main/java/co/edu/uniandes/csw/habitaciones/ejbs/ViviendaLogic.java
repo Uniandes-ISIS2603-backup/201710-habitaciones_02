@@ -77,7 +77,8 @@ public class ViviendaLogic
         //{
         if (!vivienda.informacionCompleta())
         {
-            throw new BusinessLogicException("Algunos de los datos para registrar la vivienda no fueron ingresados. Por favor, intente nuevamente");
+            throw new BusinessLogicException("Algunos de los datos para registrar la "
+                    + "vivienda no fueron ingresados. Por favor, intente nuevamente");
         } else
         {
             persistence.create(vivienda);
