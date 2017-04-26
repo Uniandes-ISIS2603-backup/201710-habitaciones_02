@@ -285,8 +285,12 @@ public class HabitacionEntity implements Serializable
      */
     private Boolean stringUtilizable(String palabra)
     {
-        
-        return (palabra != null) ? !palabra.isEmpty() : false;
+        boolean resultado = false;
+        if(palabra != null)
+        {
+            resultado = !palabra.isEmpty();
+        }
+        return resultado;
     }
 
     /**
