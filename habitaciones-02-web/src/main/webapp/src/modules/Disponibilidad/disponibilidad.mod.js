@@ -18,22 +18,24 @@
                 
                 parent: 'habitacionDetail',
 
-                resolve: {
-                    disponibilidades: ['$http', 'disponibilidadContext', '$stateParams', function ($http, disponibilidadContext, $params)
-                        {
-                            return $http.get('api/habitaciones/' + $params.habitacionId + disponibilidadContext); // $http retorna una promesa que aquí no se está manejando si viene con error.
-                        }]
-                },
                 param: {
                     disponibilidadId: null
                 },
+                
+                resolve: {
+                    currentDisponibilidad: ['$http', 'disponibilidadContext', '$stateParams', function ($http, disponibilidadContext, $params)
+                        {
+                            return $http.get('api/habitaciones/' + $params.habitacionId + disponibilidadContext + '/' + $params.disponibilidadId); // $http retorna una promesa que aquí no se está manejando si viene con error.
+                        }]
+                },
+               
                 views: {
-                    'detailViewD': {
+                    'childrenDetail': {
                         templateUrl: basePath + 'disponibilidad.detail.html',
-                        controller: ['$scope', '$stateParams', function ($scope, $params)
+                        controller: ['$scope', 'currentDisponibilidad', function ($scope, currentDisponibilidad)
                             {
                                 console.log("........");
-                                $scope.currentDisponibilidad = $scope.disponibilidades.data[$params.disponibilidadId - 1];
+                                $scope.currentDisponibilidad = currentDisponibilidad.data;
                             }]
                     }
 
