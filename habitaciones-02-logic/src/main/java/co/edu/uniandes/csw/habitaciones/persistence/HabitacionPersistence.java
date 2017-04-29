@@ -35,8 +35,7 @@ import javax.persistence.Query;
  * @author b.gamba10
  */
 @Stateless
-public class HabitacionPersistence
-{
+public class HabitacionPersistence {
 
     @PersistenceContext(unitName = "habitacionesPU")
     protected EntityManager em;
@@ -47,8 +46,7 @@ public class HabitacionPersistence
      * @param id de la habitacion
      * @return Habitacion
      */
-    public HabitacionEntity find(Long id)
-    {
+    public HabitacionEntity find(Long id) {
         return em.find(HabitacionEntity.class, id);
     }
 
@@ -57,8 +55,7 @@ public class HabitacionPersistence
      *
      * @return lista con las habitaciones
      */
-    public List<HabitacionEntity> findAll()
-    {
+    public List<HabitacionEntity> findAll() {
 
         Query q = em.createQuery("select u from HabitacionEntity u");
         return q.getResultList();
@@ -71,8 +68,7 @@ public class HabitacionPersistence
      * @param idVivienda
      * @return
      */
-    public List<HabitacionEntity> findAllVivienda(Long idVivienda)
-    {
+    public List<HabitacionEntity> findAllVivienda(Long idVivienda) {
 
         Query q = em.createQuery("select u from HabitacionEntity u where (u.vivienda.id = :idVivienda) ", HabitacionEntity.class);
         q.setParameter("idVivienda", idVivienda);
@@ -85,8 +81,7 @@ public class HabitacionPersistence
      * @param entity
      * @return
      */
-    public HabitacionEntity create(HabitacionEntity entity)
-    {
+    public HabitacionEntity create(HabitacionEntity entity) {
 
         em.persist(entity);
 
@@ -99,8 +94,7 @@ public class HabitacionPersistence
      * @param entity
      * @return Habitacion
      */
-    public HabitacionEntity update(HabitacionEntity entity)
-    {
+    public HabitacionEntity update(HabitacionEntity entity) {
 
         return em.merge(entity);
 
@@ -111,8 +105,7 @@ public class HabitacionPersistence
      *
      * @param id de la habitacion
      */
-    public void delete(Long id)
-    {
+    public void delete(Long id) {
 
         HabitacionEntity entity = em.find(HabitacionEntity.class, id);
         em.remove(entity);

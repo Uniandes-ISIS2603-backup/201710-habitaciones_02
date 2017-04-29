@@ -17,8 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author s.cortes
  */
 @XmlRootElement
-public class ViajeroDetailDTO extends ViajeroDTO
-{
+public class ViajeroDetailDTO extends ViajeroDTO {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS DEL DETAIL DTO
     //----------------------------------------------------------------------------------------------------
@@ -39,8 +38,7 @@ public class ViajeroDetailDTO extends ViajeroDTO
     /**
      * Metodo constructor por defecto
      */
-    public ViajeroDetailDTO()
-    {
+    public ViajeroDetailDTO() {
         super();
         //metodo constructor por defecto
     }
@@ -50,20 +48,16 @@ public class ViajeroDetailDTO extends ViajeroDTO
      *
      * @param entity entidad del viajero
      */
-    public ViajeroDetailDTO(ViajeroEntity entity)
-    {
+    public ViajeroDetailDTO(ViajeroEntity entity) {
         super(entity);
-        if (entity != null)
-        {
+        if (entity != null) {
             reservas = new ArrayList<>();
-            for (ReservaEntity entityReserva : entity.getReservas())
-            {
+            for (ReservaEntity entityReserva : entity.getReservas()) {
                 reservas.add(new ReservaDTO(entityReserva));
             }
 
             resenas = new ArrayList<>();
-            for (ResenaEntity enitytResena : entity.getResenas())
-            {
+            for (ResenaEntity enitytResena : entity.getResenas()) {
                 resenas.add(new ResenaDTO(enitytResena));
             }
         }
@@ -77,8 +71,7 @@ public class ViajeroDetailDTO extends ViajeroDTO
      *
      * @return lista de reservas
      */
-    public List<ReservaDTO> getReservas()
-    {
+    public List<ReservaDTO> getReservas() {
         return reservas;
     }
 
@@ -87,8 +80,7 @@ public class ViajeroDetailDTO extends ViajeroDTO
      *
      * @param reservas la lista de reservas a asignar
      */
-    public void setReservas(List<ReservaDTO> reservas)
-    {
+    public void setReservas(List<ReservaDTO> reservas) {
         this.reservas = reservas;
     }
 
@@ -97,8 +89,7 @@ public class ViajeroDetailDTO extends ViajeroDTO
      *
      * @return lista de reseñas
      */
-    public List<ResenaDTO> getResenas()
-    {
+    public List<ResenaDTO> getResenas() {
         return resenas;
     }
 
@@ -107,29 +98,23 @@ public class ViajeroDetailDTO extends ViajeroDTO
      *
      * @param resenas la lista de las reseñas a asignar
      */
-    public void setResenas(List<ResenaDTO> resenas)
-    {
+    public void setResenas(List<ResenaDTO> resenas) {
         this.resenas = resenas;
     }
 
     @Override
-    public ViajeroEntity toEntity()
-    {
+    public ViajeroEntity toEntity() {
         ViajeroEntity entity = super.toEntity();
-        if (reservas != null)
-        {
+        if (reservas != null) {
             List<ReservaEntity> reservasEntity = new ArrayList<>();
-            for (ReservaDTO dtoReserva : reservas)
-            {
+            for (ReservaDTO dtoReserva : reservas) {
                 reservasEntity.add(dtoReserva.toEntity());
             }
             entity.setReservas(reservasEntity);
         }
-        if (resenas != null)
-        {
+        if (resenas != null) {
             List<ResenaEntity> resenasEntity = new ArrayList<>();
-            for (ResenaDTO dtoResena : resenas)
-            {
+            for (ResenaDTO dtoResena : resenas) {
                 resenasEntity.add(dtoResena.toEntity());
             }
             entity.setResenas(resenasEntity);

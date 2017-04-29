@@ -27,7 +27,6 @@ package co.edu.uniandes.csw.habitaciones.ejbs;
  *
  * @author s.cortes
  */
-public class UsuarioLogic
-{
+public class UsuarioLogic {
 
 }

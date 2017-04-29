@@ -38,8 +38,7 @@ import javax.persistence.OneToOne;
  * @author dg.guarin20
  */
 @Entity
-public class ReservaEntity implements Serializable
-{
+public class ReservaEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -95,8 +94,7 @@ public class ReservaEntity implements Serializable
      *
      * @return el id de la reserva
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -105,18 +103,15 @@ public class ReservaEntity implements Serializable
      *
      * @param id
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getPrecio()
-    {
+    public Integer getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Integer precio)
-    {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 
@@ -125,8 +120,7 @@ public class ReservaEntity implements Serializable
      *
      * @return el la fecha de inicio
      */
-    public Date getFechaInicio()
-    {
+    public Date getFechaInicio() {
         return fechaInicio;
     }
 
@@ -135,9 +129,7 @@ public class ReservaEntity implements Serializable
      *
      * @param fechaInicio
      */
-
-    public void setFechaInicio(Date fechaInicio)
-    {
+    public void setFechaInicio(Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
@@ -146,8 +138,7 @@ public class ReservaEntity implements Serializable
      *
      * @return la ultima fecha de la reserva
      */
-    public Date getFechaTerminacion()
-    {
+    public Date getFechaTerminacion() {
         return fechaTerminacion;
     }
 
@@ -156,8 +147,7 @@ public class ReservaEntity implements Serializable
      *
      * @param fechaTerminacion
      */
-    public void setFechaTerminacion(Date fechaTerminacion)
-    {
+    public void setFechaTerminacion(Date fechaTerminacion) {
         this.fechaTerminacion = fechaTerminacion;
     }
 
@@ -166,8 +156,7 @@ public class ReservaEntity implements Serializable
      *
      * @return cancelado
      */
-    public Boolean getCancelado()
-    {
+    public Boolean getCancelado() {
         return cancelado;
     }
 
@@ -176,8 +165,7 @@ public class ReservaEntity implements Serializable
      *
      * @param cancelado
      */
-    public void setCancelado(Boolean cancelado)
-    {
+    public void setCancelado(Boolean cancelado) {
         this.cancelado = cancelado;
     }
 
@@ -186,8 +174,7 @@ public class ReservaEntity implements Serializable
      *
      * @return viajero
      */
-    public ViajeroEntity getViajero()
-    {
+    public ViajeroEntity getViajero() {
         return viajero;
     }
 
@@ -196,8 +183,7 @@ public class ReservaEntity implements Serializable
      *
      * @param viajero
      */
-    public void setViajero(ViajeroEntity viajero)
-    {
+    public void setViajero(ViajeroEntity viajero) {
         this.viajero = viajero;
     }
 
@@ -206,8 +192,7 @@ public class ReservaEntity implements Serializable
      *
      * @return anfitrion
      */
-    public AnfitrionEntity getAnfitrion()
-    {
+    public AnfitrionEntity getAnfitrion() {
         return anfitrion;
     }
 
@@ -216,8 +201,7 @@ public class ReservaEntity implements Serializable
      *
      * @param anfitrion
      */
-    public void setAnfitrion(AnfitrionEntity anfitrion)
-    {
+    public void setAnfitrion(AnfitrionEntity anfitrion) {
         this.anfitrion = anfitrion;
     }
 
@@ -226,8 +210,7 @@ public class ReservaEntity implements Serializable
      *
      * @return habitacion
      */
-    public HabitacionEntity getHabitacion()
-    {
+    public HabitacionEntity getHabitacion() {
         return habitacion;
     }
 
@@ -236,8 +219,7 @@ public class ReservaEntity implements Serializable
      *
      * @param habitacion
      */
-    public void setHabitacion(HabitacionEntity habitacion)
-    {
+    public void setHabitacion(HabitacionEntity habitacion) {
         this.habitacion = habitacion;
     }
 
@@ -246,8 +228,7 @@ public class ReservaEntity implements Serializable
      *
      * @return pago
      */
-    public PagoEntity getPago()
-    {
+    public PagoEntity getPago() {
         return pago;
     }
 
@@ -256,8 +237,7 @@ public class ReservaEntity implements Serializable
      *
      * @param pago
      */
-    public void setPago(PagoEntity pago)
-    {
+    public void setPago(PagoEntity pago) {
         this.pago = pago;
     }
 
@@ -267,14 +247,11 @@ public class ReservaEntity implements Serializable
      *
      * @return el estado de la informacion
      */
-    public boolean informacionCompleta()
-    {
-        if (fechaInicio == null || fechaTerminacion == null)
-        {
+    public boolean informacionCompleta() {
+        if (fechaInicio == null || fechaTerminacion == null) {
             return false;
         }
-        if (viajero.informacionCompleta() == false || anfitrion.informacionCompleta() == false || habitacion.informacionCompleta() == false)
-        {
+        if (viajero.informacionCompleta() == false || anfitrion.informacionCompleta() == false || habitacion.informacionCompleta() == false) {
             return false;
         }
 
@@ -287,11 +264,9 @@ public class ReservaEntity implements Serializable
      *
      * @return el estado de las fechas
      */
-    public boolean checkInfoFechas()
-    {
+    public boolean checkInfoFechas() {
 
-        if (fechaInicio.after(fechaTerminacion))
-        {
+        if (fechaInicio.after(fechaTerminacion)) {
             return false;
         }
         return true;
@@ -302,26 +277,21 @@ public class ReservaEntity implements Serializable
      *
      * @return estado
      */
-    public boolean checkInfo()
-    {
+    public boolean checkInfo() {
         return true;
     }
 
     @Override
-    public boolean equals(Object obj)
-    {
-        if (this.getId() != null)
-        {
+    public boolean equals(Object obj) {
+        if (this.getId() != null) {
             return this.getId().equals(((ReservaEntity) obj).getId());
         }
         return super.equals(obj);
     }
 
     @Override
-    public int hashCode()
-    {
-        if (this.getId() != null)
-        {
+    public int hashCode() {
+        if (this.getId() != null) {
             return this.getId().hashCode();
         }
         return super.hashCode();

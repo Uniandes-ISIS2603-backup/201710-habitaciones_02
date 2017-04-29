@@ -3,16 +3,16 @@
         <div class="col-sm-3 col-md-3" ng-repeat="resena in RecordsResena">
             <div class="thumbnail">
                 <div class="caption text-center">
-                        <h4 style="color: rgb(185,133,36)">{{resena.calificacion}} de 5 estrellas </h4>
-                        <p>{{resena.comentario}}</p>
+                    <h4 style="color: rgb(185,133,36)">{{resena.calificacion}} de 5 estrellas </h4>
+                    <p>{{resena.comentario}}</p>
                 </div>
                 <a ui-sref="resenaDetail({resenaId: resena.id})">
 
                     <b style="color: lightseagreen"> mas informacion </b>
-                    
+
                 </a>
             </div>
-            
+
         </div>
     </div>
 </div>

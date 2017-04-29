@@ -15,8 +15,7 @@ import javax.ws.rs.ext.Provider;
  * @author s.cortes
  */
 @Provider
-public class BussinesLogicExceptionMapper implements ExceptionMapper<BusinessLogicException>
-{
+public class BussinesLogicExceptionMapper implements ExceptionMapper<BusinessLogicException> {
 
     /**
      * Generador de una respuesta a partir de una excepción
@@ -24,8 +23,7 @@ public class BussinesLogicExceptionMapper implements ExceptionMapper<BusinessLog
      * @param ex excecpión a convertir a una respuesta REST
      */
     @Override
-    public Response toResponse(BusinessLogicException ex)
-    {
+    public Response toResponse(BusinessLogicException ex) {
         // retorna una respuesta
         return Response
                 .status(Response.Status.NOT_FOUND) // estado HTTP 404

@@ -33,8 +33,7 @@ import javax.ws.rs.core.MediaType;
 @Path("/habitaciones")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class HabitacionResource
-{
+public class HabitacionResource {
 
     @Inject
     private HabitacionLogic habitacionLogic;
@@ -51,13 +50,11 @@ public class HabitacionResource
      * @param listEntity la lista con las entidades
      * @return una lista con DTOs
      */
-    private List<HabitacionDetailDTO> listEntity2DTO(List<HabitacionEntity> entityList)
-    {
+    private List<HabitacionDetailDTO> listEntity2DTO(List<HabitacionEntity> entityList) {
 
         List<HabitacionDetailDTO> list = new ArrayList<>();
 
-        for (HabitacionEntity entity : entityList)
-        {
+        for (HabitacionEntity entity : entityList) {
 
             list.add(new HabitacionDetailDTO(entity));
         }
@@ -70,8 +67,7 @@ public class HabitacionResource
      * @return lista con habitaciones
      */
     @GET
-    public List<HabitacionDetailDTO> getHabitaciones()
-    {
+    public List<HabitacionDetailDTO> getHabitaciones() {
 
         return listEntity2DTO(habitacionLogic.getHabitaciones());
     }
@@ -84,11 +80,9 @@ public class HabitacionResource
      */
     @GET
     @Path("{id: \\d+}")
-    public HabitacionDetailDTO getHabitacion(@PathParam("id") Long id)
-    {
+    public HabitacionDetailDTO getHabitacion(@PathParam("id") Long id) {
         // TODO Si el id no existe debe disparar WebApplicationException 404
-        if (habitacionLogic.getHabitacion(id) == null)
-        {
+        if (habitacionLogic.getHabitacion(id) == null) {
             throw new WebApplicationException(404);
         }
         return new HabitacionDetailDTO(habitacionLogic.getHabitacion(id));
@@ -102,8 +96,7 @@ public class HabitacionResource
      * @throws BusinessLogicException
      */
     @POST
-    public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) throws BusinessLogicException
-    {
+    public HabitacionDetailDTO createHabitacion(HabitacionDetailDTO dto) throws BusinessLogicException {
 
         HabitacionDetailDTO nuevaH = new HabitacionDetailDTO(habitacionLogic.createHabitacion(dto.toEntity()));
 
@@ -120,12 +113,10 @@ public class HabitacionResource
      */
     @PUT
     @Path("{id: \\d+}")
-    public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id, 
-            HabitacionDetailDTO dto) throws BusinessLogicException
-    {
+    public HabitacionDetailDTO updateHabitacion(@PathParam("id") Long id,
+            HabitacionDetailDTO dto) throws BusinessLogicException {
         // TODO Si el id no existe debe disparar WebApplicationException 404
-        if (habitacionLogic.getHabitacion(id) == null)
-        {
+        if (habitacionLogic.getHabitacion(id) == null) {
             throw new WebApplicationException(404);
         }
         HabitacionEntity entity = dto.toEntity();
@@ -142,11 +133,9 @@ public class HabitacionResource
     @DELETE
     @Path("{id: \\d+}")
     // TODO Si el id no existe debe disparar WebApplicationException 404
-    public void deleteHabitacion(@PathParam("id") Long id)
-    {
+    public void deleteHabitacion(@PathParam("id") Long id) {
 
-        if (habitacionLogic.getHabitacion(id) == null)
-        {
+        if (habitacionLogic.getHabitacion(id) == null) {
             throw new WebApplicationException(404);
         }
         habitacionLogic.deleteHabitacion(id);

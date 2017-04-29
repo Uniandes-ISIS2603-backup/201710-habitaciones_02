@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author s.cortes
  */
 @XmlRootElement
-public class ViajeroDTO extends UsuarioDTO
-{
+public class ViajeroDTO extends UsuarioDTO {
 
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
@@ -26,8 +25,7 @@ public class ViajeroDTO extends UsuarioDTO
     /**
      * Metodo Constructor por defecto de la clase
      */
-    public ViajeroDTO()
-    {
+    public ViajeroDTO() {
         // metodo default del constructor
     }
 
@@ -37,10 +35,8 @@ public class ViajeroDTO extends UsuarioDTO
      *
      * @param entity Entidad con la que se crea el objeto DTO
      */
-    public ViajeroDTO(ViajeroEntity entity)
-    {
-        if (entity != null)
-        {
+    public ViajeroDTO(ViajeroEntity entity) {
+        if (entity != null) {
             this.nombre = entity.getNombre();
             this.imagen = entity.getImagen();
             this.correoElectronico = entity.getCorreoElectronico();
@@ -61,8 +57,7 @@ public class ViajeroDTO extends UsuarioDTO
      *
      * @return una entidad viajero
      */
-    public ViajeroEntity toEntity()
-    {
+    public ViajeroEntity toEntity() {
         ViajeroEntity entity = new ViajeroEntity();
         entity.setContrasena(this.getContrasena());
         entity.setCorreoElectronico(this.getCorreoElectronico());

@@ -14,8 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author s.cortes
  */
 @XmlRootElement
-public class ResenaDTO implements Serializable
-{
+public class ResenaDTO implements Serializable {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
@@ -41,8 +40,7 @@ public class ResenaDTO implements Serializable
     /**
      * Constructor default del DTO
      */
-    public ResenaDTO()
-    {
+    public ResenaDTO() {
         //constructor vacio
     }
 
@@ -51,10 +49,8 @@ public class ResenaDTO implements Serializable
      *
      * @param entity entity de la reseña
      */
-    public ResenaDTO(ResenaEntity entity)
-    {
-        if (entity != null)
-        {
+    public ResenaDTO(ResenaEntity entity) {
+        if (entity != null) {
             calificacion = entity.getCalificacion();
             comentario = entity.getComentario();
             id = entity.getId();
@@ -66,8 +62,7 @@ public class ResenaDTO implements Serializable
      *
      * @return id de la reseña
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -76,8 +71,7 @@ public class ResenaDTO implements Serializable
      *
      * @param id el id a asignar
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -86,8 +80,7 @@ public class ResenaDTO implements Serializable
      *
      * @return calificacion de la reseña
      */
-    public Double getCalificacion()
-    {
+    public Double getCalificacion() {
         return calificacion;
     }
 
@@ -96,8 +89,7 @@ public class ResenaDTO implements Serializable
      *
      * @param calificacion la nueva calificacion
      */
-    public void setCalificacion(Double calificacion)
-    {
+    public void setCalificacion(Double calificacion) {
         this.calificacion = calificacion;
     }
 
@@ -106,8 +98,7 @@ public class ResenaDTO implements Serializable
      *
      * @return el comentario de la reseña
      */
-    public String getComentario()
-    {
+    public String getComentario() {
         return comentario;
     }
 
@@ -116,8 +107,7 @@ public class ResenaDTO implements Serializable
      *
      * @param comentario el nuevo comentario
      */
-    public void setComentario(String comentario)
-    {
+    public void setComentario(String comentario) {
         this.comentario = comentario;
     }
 
@@ -126,8 +116,7 @@ public class ResenaDTO implements Serializable
      *
      * @return la entidad de la reseña
      */
-    public ResenaEntity toEntity()
-    {
+    public ResenaEntity toEntity() {
         ResenaEntity entity = new ResenaEntity();
         entity.setCalificacion(this.getCalificacion());
         entity.setComentario(this.getComentario());

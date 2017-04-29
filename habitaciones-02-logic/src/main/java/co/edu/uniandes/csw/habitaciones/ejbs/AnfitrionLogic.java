@@ -36,46 +36,40 @@ import javax.ws.rs.WebApplicationException;
  * @author df.sanabria761
  */
 @Stateless
-public class AnfitrionLogic
-{
+public class AnfitrionLogic {
 
     @Inject
     private AnfitrionPersistence persistence;
 
-    public List<AnfitrionEntity> getAnfitriones()
-    {
+    public List<AnfitrionEntity> getAnfitriones() {
         return persistence.findAll();
 
     }
 
-    public AnfitrionEntity getAnfitrion(Long id)
-    {
+    public AnfitrionEntity getAnfitrion(Long id) {
         return persistence.find(id);
     }
 
-    public AnfitrionEntity createAnfitrion(AnfitrionEntity entity) throws BusinessLogicException
-    {
-        if (!entity.informacionCompleta())
-        {
-            throw new BusinessLogicException("La información ingresada no está completa. Favor rectificar e intentar nuevamente");
+    public AnfitrionEntity createAnfitrion(AnfitrionEntity entity)
+            throws BusinessLogicException {
+        if (!entity.informacionCompleta()) {
+            throw new BusinessLogicException("La información ingresada "
+                    + "no está completa. Favor rectificar e intentar nuevamente");
         }
         return persistence.create(entity);
     }
 
-    public AnfitrionEntity updateAnfitrion(AnfitrionEntity entity)
-    {
+    public AnfitrionEntity updateAnfitrion(AnfitrionEntity entity) {
         AnfitrionEntity en = getAnfitrion(entity.getIdUsuario());
-        if (en == null)
-        {
-            throw new WebApplicationException("No existe tal anftrión para actualizar ");
-        } else
-        {
+        if (en == null) {
+            throw new WebApplicationException("No existe tal"
+                    + " anftrión para actualizar ");
+        } else {
             return persistence.update(entity);
         }
     }
 
-    public void deleteAnfitrion(Long id)
-    {
+    public void deleteAnfitrion(Long id) {
         persistence.delete(id);
     }
 }

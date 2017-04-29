@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author dg.guarin20
  */
 @XmlRootElement
-public class ReservaDetailDTO extends ReservaDTO
-{
+public class ReservaDetailDTO extends ReservaDTO {
 
     //--------------
     //Atributos
@@ -39,8 +38,7 @@ public class ReservaDetailDTO extends ReservaDTO
     /**
      * Metodo contructor
      */
-    public ReservaDetailDTO()
-    {
+    public ReservaDetailDTO() {
         super();
     }
 
@@ -50,11 +48,9 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @param entity
      */
-    public ReservaDetailDTO(ReservaEntity entity)
-    {
+    public ReservaDetailDTO(ReservaEntity entity) {
         super(entity);
-        if (entity != null)
-        {
+        if (entity != null) {
             habitacion = new HabitacionDTO(entity.getHabitacion());
             pago = new PagoDTO(entity.getPago());
             viajero = new ViajeroDTO(entity.getViajero());
@@ -68,8 +64,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @return viajero
      */
-    public ViajeroDTO getViajero()
-    {
+    public ViajeroDTO getViajero() {
         return viajero;
     }
 
@@ -78,9 +73,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @param viajero
      */
-
-    public void setViajero(ViajeroDTO viajero)
-    {
+    public void setViajero(ViajeroDTO viajero) {
         this.viajero = viajero;
     }
 
@@ -89,8 +82,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @return anfitrion
      */
-    public AnfitrionDTO getAnfitrion()
-    {
+    public AnfitrionDTO getAnfitrion() {
         return anfitrion;
     }
 
@@ -99,8 +91,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @return pago
      */
-    public PagoDTO getPago()
-    {
+    public PagoDTO getPago() {
         return pago;
     }
 
@@ -109,8 +100,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @param pago
      */
-    public void setPago(PagoDTO pago)
-    {
+    public void setPago(PagoDTO pago) {
         this.pago = pago;
     }
 
@@ -119,8 +109,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @param anfitrion
      */
-    public void setAnfitrion(AnfitrionDTO anfitrion)
-    {
+    public void setAnfitrion(AnfitrionDTO anfitrion) {
         this.anfitrion = anfitrion;
     }
 
@@ -129,8 +118,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @return habitacion
      */
-    public HabitacionDTO getHabitacion()
-    {
+    public HabitacionDTO getHabitacion() {
         return habitacion;
     }
 
@@ -139,8 +127,7 @@ public class ReservaDetailDTO extends ReservaDTO
      *
      * @param habitacion
      */
-    public void setHabitacion(HabitacionDTO habitacion)
-    {
+    public void setHabitacion(HabitacionDTO habitacion) {
         this.habitacion = habitacion;
     }
 
@@ -150,20 +137,16 @@ public class ReservaDetailDTO extends ReservaDTO
      * @return la clase ReservaEntity
      */
     @Override
-    public ReservaEntity toEntity()
-    {
+    public ReservaEntity toEntity() {
         ReservaEntity entity = super.toEntity();
 
-        if (this.getViajero() != null)
-        {
+        if (this.getViajero() != null) {
             entity.setViajero(viajero.toEntity());
         }
-        if (this.getAnfitrion() != null)
-        {
+        if (this.getAnfitrion() != null) {
             entity.setAnfitrion(anfitrion.toEntity());
         }
-        if (this.getPago() != null)
-        {
+        if (this.getPago() != null) {
             entity.setPago(this.pago.toEntity());
         }
 
