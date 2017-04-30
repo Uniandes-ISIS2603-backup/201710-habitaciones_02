@@ -15,8 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author dg.guarin20
  */
 @XmlRootElement
-public class ReservaDTO implements Serializable
-{
+public class ReservaDTO implements Serializable {
 
     //-----------------
     //Atributos
@@ -43,8 +42,7 @@ public class ReservaDTO implements Serializable
     /**
      * Metodo Constructor por defecto de la clase
      */
-    public ReservaDTO()
-    {
+    public ReservaDTO() {
 
     }
 
@@ -53,10 +51,8 @@ public class ReservaDTO implements Serializable
      *
      * @param entity
      */
-    public ReservaDTO(ReservaEntity entity)
-    {
-        if (entity != null)
-        {
+    public ReservaDTO(ReservaEntity entity) {
+        if (entity != null) {
             this.id = entity.getId();
             this.fechaInicio = entity.getFechaInicio();
             this.fechaTerminacion = entity.getFechaTerminacion();
@@ -70,8 +66,7 @@ public class ReservaDTO implements Serializable
      *
      * @return el entity del dto modificado
      */
-    public ReservaEntity toEntity()
-    {
+    public ReservaEntity toEntity() {
         ReservaEntity entity = new ReservaEntity();
         entity.setId(this.getId());
         entity.setFechaInicio(this.getFechaInicio());
@@ -85,8 +80,7 @@ public class ReservaDTO implements Serializable
     /**
      * @return id long
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -95,26 +89,22 @@ public class ReservaDTO implements Serializable
      *
      * @param i long
      */
-    public void setId(Long i)
-    {
+    public void setId(Long i) {
         this.id = i;
     }
 
-    public Integer getPrecio()
-    {
+    public Integer getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Integer precio)
-    {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 
     /**
      * @return fechaInicioEstadia Date
      */
-    public Date getFechaInicio()
-    {
+    public Date getFechaInicio() {
         return fechaInicio;
     }
 
@@ -123,16 +113,14 @@ public class ReservaDTO implements Serializable
      *
      * @param fechaIn Date
      */
-    public void setFechaInicio(Date fechaIn)
-    {
+    public void setFechaInicio(Date fechaIn) {
         this.fechaInicio = fechaIn;
     }
 
     /**
      * @return fechaTerminacionEstadia date
      */
-    public Date getFechaTerminacion()
-    {
+    public Date getFechaTerminacion() {
         return fechaTerminacion;
 
     }
@@ -142,16 +130,14 @@ public class ReservaDTO implements Serializable
      *
      * @param fechaT date
      */
-    public void setFechaTerminacion(Date fechaT)
-    {
+    public void setFechaTerminacion(Date fechaT) {
         this.fechaTerminacion = fechaT;
     }
 
     /**
      * @return cancelad un boolean
      */
-    public Boolean getCancelado()
-    {
+    public Boolean getCancelado() {
         return cancelado;
     }
 
@@ -160,8 +146,7 @@ public class ReservaDTO implements Serializable
      *
      * @param can lo que cancela
      */
-    public void setCancelado(Boolean can)
-    {
+    public void setCancelado(Boolean can) {
         this.cancelado = can;
     }
 

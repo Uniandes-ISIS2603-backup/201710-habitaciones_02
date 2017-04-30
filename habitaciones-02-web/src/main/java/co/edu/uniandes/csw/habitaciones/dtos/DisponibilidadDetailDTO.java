@@ -13,44 +13,36 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author b.gamba10
  */
 @XmlRootElement
-public class DisponibilidadDetailDTO extends DisponibilidadDTO
-{
+public class DisponibilidadDetailDTO extends DisponibilidadDTO {
 
     private HabitacionDTO habitacion;
 
-    public HabitacionDTO getHabitacion()
-    {
+    public HabitacionDTO getHabitacion() {
         return habitacion;
     }
 
-    public void setHabitacion(HabitacionDTO habitacion)
-    {
+    public void setHabitacion(HabitacionDTO habitacion) {
         this.habitacion = habitacion;
     }
 
-    public DisponibilidadDetailDTO()
-    {
+    public DisponibilidadDetailDTO() {
         super();
     }
 
-    public DisponibilidadDetailDTO(DisponibilidadEntity entity)
-    {
+    public DisponibilidadDetailDTO(DisponibilidadEntity entity) {
         super(entity);
         // TODO Si entity.getHabitacion() != null se hace el new
-        if (entity != null)
-        {
+        if (entity != null) {
             habitacion = new HabitacionDTO(entity.getHabitacion());
         }
 
     }
 
-    public DisponibilidadEntity toEntity()
-    {
+    public DisponibilidadEntity toEntity() {
 
         DisponibilidadEntity entity = super.toEntity();
 // TODO aquí no hace falta el if
-        if (this.getHabitacion() != null)
-        {
+        if (this.getHabitacion() != null) {
             entity.setHabitacion(habitacion.toEntity());
         }
         return entity;

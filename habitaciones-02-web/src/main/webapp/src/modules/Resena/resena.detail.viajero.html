@@ -9,7 +9,7 @@
                 text-align: center;
             }
         </style>
-        
+
         <div class="row">
 
             <div class="col-sm-5 col-md-5 thumbnail">
@@ -22,31 +22,31 @@
 
                     <dt style="font-size: 20px;">Descripcion</dt>
                     <dd> <br> "{{currentResena.habitacion.descripcion}}" </br></dd>
-                    
+
                 </dl>
-                
+
                 <a ui-sref="habitacionDetail({habitacionId: currentResena.habitacion.id})" style="text-align: center;" >
                     <b style="color: lightblue;"> mas informacion</b>
                 </a>
 
             </div>
             <div class="col-sm-7 col-md-7">
-                
+
                 <nav style="background-color: white; border-color: #286090; width: 30%; margin-left: 20px;" class="navbar navbar-default">
-                    
+
                     <div class="col-md-12 text-center">
-                        
+
                         <ul class="nav navbar-nav">
                             <li><a ui-sref="resenaUpdate"><span class="glyphicon glyphicon-pencil"></span><b>Editar Resena</b></a></li>
                         </ul>
-                        
+
                     </div>                    
                 </nav>
 
                 <div class="row thumbnail" style=" margin-left: 20px; width: 95%; border-color: #286090">
-                    
+
                     <dl>
-                        
+
                         <dt style="font-size: 20px;">Calificacion</dt>
                         <dd style="color: rgb(185,133,36); font-size: 18px;"> <br> {{currentResena.calificacion}} de 5 estrellas </br> </dd>
                         <hr>
@@ -54,16 +54,16 @@
                         <dd> <br> "{{currentResena.comentario}}" </br></dd>
 
                     </dl>
-                    
+
                 </div>
-                
+
                 <div ui-view="resenaUpdateView">
-                    
-                    
-                    
+
+
+
                 </div>
-                
-                
+
+
 
             </div>
         </div>

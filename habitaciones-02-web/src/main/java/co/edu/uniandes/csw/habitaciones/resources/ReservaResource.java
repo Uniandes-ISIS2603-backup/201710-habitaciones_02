@@ -30,8 +30,7 @@ import javax.ws.rs.core.MediaType;
 @Path("/reservas")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ReservaResource
-{
+public class ReservaResource {
 
     /**
      * la logica de reserva
@@ -45,11 +44,9 @@ public class ReservaResource
      * @param listEntity
      * @return List ReservaDetailDTO
      */
-    private List<ReservaDetailDTO> listEntity2DTO(List<ReservaEntity> listEntity)
-    {
+    private List<ReservaDetailDTO> listEntity2DTO(List<ReservaEntity> listEntity) {
         List<ReservaDetailDTO> lista = new ArrayList<>();
-        for (ReservaEntity entity : listEntity)
-        {
+        for (ReservaEntity entity : listEntity) {
 
             lista.add(new ReservaDetailDTO(entity));
         }
@@ -60,7 +57,7 @@ public class ReservaResource
      * @GET public List<ReservaDetailDTO> getReservas() {
      *
      * return listEntity2DTO(logic.findReservas()); }
-    *
+     *
      */
     /**
      * Metodo que retorna una lista de las reservas relacionado al id del
@@ -70,8 +67,7 @@ public class ReservaResource
      * @return List ReservaDetailDTO
      */
     @GET
-    public List<ReservaDetailDTO> getReservasByViajero(@PathParam("viajeroId") Long idViajero)
-    {
+    public List<ReservaDetailDTO> getReservasByViajero(@PathParam("viajeroId") Long idViajero) {
         return listEntity2DTO(logic.findReservasByViajero(idViajero));
     }
 
@@ -81,14 +77,11 @@ public class ReservaResource
      * @param id
      * @return ReservaDetailDTO
      */
-
     @GET
     @Path("{id: \\d+}")
-    public ReservaDetailDTO getReserva(@PathParam("id") Long id)
-    {
+    public ReservaDetailDTO getReserva(@PathParam("id") Long id) {
         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
-        if (logic.findReserva(id) == null)
-        {
+        if (logic.findReserva(id) == null) {
             throw new WebApplicationException(404);
         }
         return new ReservaDetailDTO(logic.findReserva(id));
@@ -100,8 +93,7 @@ public class ReservaResource
      * @return clase HabitacionResource
      */
     @Path("{habitacionId: \\d+}/habitaciones")
-    public Class<HabitacionResource> getHabitacionReservas()
-    {
+    public Class<HabitacionResource> getHabitacionReservas() {
         return HabitacionResource.class;
     }
 
@@ -113,8 +105,7 @@ public class ReservaResource
      * @throws BusinessLogicException
      */
     @POST
-    public ReservaDetailDTO createReserva(ReservaDetailDTO dto) throws BusinessLogicException
-    {
+    public ReservaDetailDTO createReserva(ReservaDetailDTO dto) throws BusinessLogicException {
         return new ReservaDetailDTO(logic.createReserva(dto.toEntity()));
     }
 
@@ -128,11 +119,9 @@ public class ReservaResource
      */
     @PUT
     @Path("{id: \\d+}")
-    public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO dto) throws BusinessLogicException
-    {
+    public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO dto) throws BusinessLogicException {
         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
-        if (logic.findReserva(id) == null)
-        {
+        if (logic.findReserva(id) == null) {
             throw new WebApplicationException(404);
         }
         ReservaEntity entity = dto.toEntity();
@@ -147,11 +136,9 @@ public class ReservaResource
      */
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteReserva(@PathParam("id") Long id)
-    {
+    public void deleteReserva(@PathParam("id") Long id) {
         // TODO Si la reserva  no existe debe disparar WebApplicationException 404
-        if (logic.findReserva(id) == null)
-        {
+        if (logic.findReserva(id) == null) {
             throw new WebApplicationException(404);
         }
         logic.delete(id);

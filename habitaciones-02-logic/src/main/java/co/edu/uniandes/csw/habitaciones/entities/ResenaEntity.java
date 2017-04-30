@@ -35,8 +35,7 @@ import javax.persistence.ManyToOne;
  * @author s.cortes
  */
 @Entity
-public class ResenaEntity implements Serializable
-{
+public class ResenaEntity implements Serializable {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
@@ -78,8 +77,7 @@ public class ResenaEntity implements Serializable
      *
      * @return id de la reseña
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -88,8 +86,7 @@ public class ResenaEntity implements Serializable
      *
      * @param id el id a asignar
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -98,8 +95,7 @@ public class ResenaEntity implements Serializable
      *
      * @return calificacion de la reseña
      */
-    public Double getCalificacion()
-    {
+    public Double getCalificacion() {
         return calificacion;
     }
 
@@ -108,8 +104,7 @@ public class ResenaEntity implements Serializable
      *
      * @param calificacion la nueva calificacion
      */
-    public void setCalificacion(Double calificacion)
-    {
+    public void setCalificacion(Double calificacion) {
         this.calificacion = calificacion;
     }
 
@@ -118,8 +113,7 @@ public class ResenaEntity implements Serializable
      *
      * @return el comentario de la reseña
      */
-    public String getComentario()
-    {
+    public String getComentario() {
         return comentario;
     }
 
@@ -128,8 +122,7 @@ public class ResenaEntity implements Serializable
      *
      * @param comentario el nuevo comentario
      */
-    public void setComentario(String comentario)
-    {
+    public void setComentario(String comentario) {
         this.comentario = comentario;
     }
 
@@ -138,8 +131,7 @@ public class ResenaEntity implements Serializable
      *
      * @return el viajero
      */
-    public ViajeroEntity getViajero()
-    {
+    public ViajeroEntity getViajero() {
         return viajero;
     }
 
@@ -148,8 +140,7 @@ public class ResenaEntity implements Serializable
      *
      * @param viajero el viajero
      */
-    public void setViajero(ViajeroEntity viajero)
-    {
+    public void setViajero(ViajeroEntity viajero) {
         this.viajero = viajero;
     }
 
@@ -158,8 +149,7 @@ public class ResenaEntity implements Serializable
      *
      * @return la habitacion
      */
-    public HabitacionEntity getHabitacion()
-    {
+    public HabitacionEntity getHabitacion() {
         return habitacion;
     }
 
@@ -168,8 +158,7 @@ public class ResenaEntity implements Serializable
      *
      * @param habitacion la habitacion
      */
-    public void setHabitacion(HabitacionEntity habitacion)
-    {
+    public void setHabitacion(HabitacionEntity habitacion) {
         this.habitacion = habitacion;
     }
 

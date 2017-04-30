@@ -35,8 +35,7 @@ import javax.inject.Inject;
  * @author b.gamba10
  */
 @Stateless
-public class HabitacionLogic
-{
+public class HabitacionLogic {
 
     @Inject
     private HabitacionPersistence persistence;
@@ -46,8 +45,7 @@ public class HabitacionLogic
      *
      * @return
      */
-    public List<HabitacionEntity> getHabitaciones()
-    {
+    public List<HabitacionEntity> getHabitaciones() {
 
         return persistence.findAll();
     }
@@ -59,8 +57,7 @@ public class HabitacionLogic
      * @param idVivienda
      * @return
      */
-    public List<HabitacionEntity> getHabitacionesVivienda(Long idVivienda)
-    {
+    public List<HabitacionEntity> getHabitacionesVivienda(Long idVivienda) {
 
         return persistence.findAllVivienda(idVivienda);
     }
@@ -71,8 +68,7 @@ public class HabitacionLogic
      * @param id
      * @return
      */
-    public HabitacionEntity getHabitacion(Long id)
-    {
+    public HabitacionEntity getHabitacion(Long id) {
 
         return persistence.find(id);
     }
@@ -84,14 +80,12 @@ public class HabitacionLogic
      * @return
      * @throws BusinessLogicException
      */
-    public HabitacionEntity createHabitacion(HabitacionEntity entity) throws BusinessLogicException
-    {
+    public HabitacionEntity createHabitacion(HabitacionEntity entity) throws BusinessLogicException {
 
         String problemas = "Se generaron errores al intentar agregar una habitacion:\n";
         Boolean problema = false;
 
-        if (!entity.informacionCompleta())
-        {
+        if (!entity.informacionCompleta()) {
             problemas += "La informacion no esta completa:\n"
                     + "   -Area: <" + entity.getArea().toString() + ">\n"
                     + "   -Valor Alquier: <" + entity.getValorAlquiler().toString() + ">\n"
@@ -99,30 +93,25 @@ public class HabitacionLogic
                     + "   -Capacidad: <" + entity.getCapacidad() + ">\n"
                     + "   -Descripcion: <" + entity.getDescripcion() + ">\n";
             problema = true;
-        } else
-        {
-            if (entity.getArea() <= 0)
-            {
+        } else {
+            if (entity.getArea() <= 0) {
                 problemas += "El area debe ser mayor que cero. \n";
                 problema = true;
             }
 
-            if (entity.getValorAlquiler() <= 0)
-            {
+            if (entity.getValorAlquiler() <= 0) {
                 problemas += "El valor del alquiler debe ser mayor que cero.";
                 problema = true;
             }
 
-            if (entity.getCapacidad() <= 0)
-            {
+            if (entity.getCapacidad() <= 0) {
                 problemas += "La capacidad debe ser mayor que cero.";
                 problema = true;
             }
 
         }
 
-        if (problema)
-        {
+        if (problema) {
             throw new BusinessLogicException(problemas);
         }
 
@@ -138,38 +127,32 @@ public class HabitacionLogic
      * @return
      * @throws BusinessLogicException
      */
-    public HabitacionEntity updateHabitacion(HabitacionEntity entity) throws BusinessLogicException
-    {
+    public HabitacionEntity updateHabitacion(HabitacionEntity entity) throws BusinessLogicException {
 
         String problemas = "Se generaron errores al intentar actualizar la habitacion:\n";
         Boolean problema = false;
 
-        if (!entity.informacionCompleta())
-        {
+        if (!entity.informacionCompleta()) {
             problemas += "La informacion no esta completa:\n"
                     + "   -Area: <" + entity.getArea().toString() + ">\n"
                     + "   -Valor Alquier: <" + entity.getValorAlquiler().toString() + ">\n"
                     + "   -Ruta imagen: <" + entity.getRutaImagen() + ">\n"
                     + "   -Descripcion: <" + entity.getDescripcion() + ">\n";
             problema = true;
-        } else
-        {
-            if (entity.getArea() <= 0)
-            {
+        } else {
+            if (entity.getArea() <= 0) {
                 problemas += "El area debe ser mayor que cero. \n";
                 problema = true;
             }
 
-            if (entity.getValorAlquiler() <= 0)
-            {
+            if (entity.getValorAlquiler() <= 0) {
                 problemas += "El valor del alquiler debe ser mayor que cero.";
                 problema = true;
             }
 
         }
 
-        if (problema)
-        {
+        if (problema) {
             throw new BusinessLogicException(problemas);
         }
 
@@ -182,8 +165,7 @@ public class HabitacionLogic
      *
      * @param id
      */
-    public void deleteHabitacion(Long id)
-    {
+    public void deleteHabitacion(Long id) {
 
         persistence.delete(id);
     }

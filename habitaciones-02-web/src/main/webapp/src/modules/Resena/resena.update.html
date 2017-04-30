@@ -1,7 +1,7 @@
 <div class="panel panel-default" style=" margin-left: 20px; width: 95%;">
-    
+
     <style>
-        
+
         input.ActualizacionResena.ng-invalid{
 
             background-color: lightsalmon;
@@ -11,11 +11,11 @@
             background-color: lightgreen;
         }
     </style>
-    
+
     <div class="panel-body" >
-        
+
         <div class="row">
-            
+
             <h3 style="text-align: center;">Editar Resena <br></h3>
 
             <p style="text-align: center; font-size: 14px; text-align: center;">
@@ -23,16 +23,16 @@
                 Recuerde que es necesario de la resena tenga una calificacion.
             </p>
             <hr>
-            
+
         </div>
-        
+
         <form>
-            
+
             <h4> Calificacion:</h4>
-            
+
             <div class="col-md-2">
-                
-                
+
+
             </div>
             <div class="col-md-2">
                 <input type="radio" name="updateCalificacion" ng-model='currentResena.calificacion' value="1">  1 estrella
@@ -51,16 +51,16 @@
             </div>
 
             <br><br>
-            
+
             <h4> Comentario: </h4>
             <textarea name="updateComentario" rows="10" cols="70" ng-model='currentResena.comentario' style="text-align: center"></textarea>
-            
+
             <hr>
-            
+
             <input class="center-block" type="submit" value="Guardar Modificaciones">
-            
+
         </form>
-        
+
     </div>
-    
+
 </div>

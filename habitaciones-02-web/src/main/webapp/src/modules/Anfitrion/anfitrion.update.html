@@ -1,26 +1,26 @@
 <div class="panel panel-default" style="border-color: #286090">
     <style>
-            dt{
-                text-align: center;
-            }
-            dd{
-                text-align: center;
-            }
+        dt{
+            text-align: center;
+        }
+        dd{
+            text-align: center;
+        }
 
-            input.Actualizacion.ng-invalid{
-            
+        input.Actualizacion.ng-invalid{
+
             background-color: lightsalmon;
-            }
-            input.Actualizacion.ng-valid{
-            
+        }
+        input.Actualizacion.ng-valid{
+
             background-color: lightgreen;
-            }
+        }
     </style>
-    
+
     <div class="panel-body" >
 
         <div class="col-md-5">
-            
+
             <div class="row thumbnail">
 
                 <h3 style="text-align: center;">Verificacion de Usuario <br></h3>
@@ -73,12 +73,12 @@
 
                     </form>
                 </div>
-       
+
             </div>
         </div>
-        
+
         <div class="col-md-7" >
-                
+
             <div class="row thumbnail" style=" margin-left: 20px; width: 98%;">
 
                 <h3 style="text-align: center;">Actualizacion de Datos<br></h3>
@@ -99,7 +99,7 @@
                         <input class="Actualizacion" name="correoElectronico" type="email" size="40" ng-model='currentViajero.correoElectronico' required>
                         <span ng-show="formaA.correoElectronico.$invalid"><b style="color: red">X</b></span><br><br>
 
-                        
+
                         <b>Tipo Documento</b><br>
                         <input class="Actualizacion" name="tipoDocumento" type="text" size="40" ng-model='currentViajero.tipoDocumento'required>
                         <span ng-show="formaA.tipoDocumento.$touched && formaA.tipoDocumento.$invalid"><b style="color: red">X</b></span><br><br>

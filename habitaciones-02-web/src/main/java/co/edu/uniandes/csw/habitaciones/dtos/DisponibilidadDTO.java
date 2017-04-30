@@ -15,8 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author b.gamba10
  */
 @XmlRootElement
-public class DisponibilidadDTO implements Serializable
-{
+public class DisponibilidadDTO implements Serializable {
 
     private Long id;
     private Date fechaInicioEstadia;
@@ -25,8 +24,7 @@ public class DisponibilidadDTO implements Serializable
     /**
      * Constructor
      */
-    public DisponibilidadDTO()
-    {
+    public DisponibilidadDTO() {
 
     }
 
@@ -35,10 +33,8 @@ public class DisponibilidadDTO implements Serializable
      *
      * @param entity
      */
-    public DisponibilidadDTO(DisponibilidadEntity entity)
-    {
-        if (entity != null)
-        {
+    public DisponibilidadDTO(DisponibilidadEntity entity) {
+        if (entity != null) {
             this.id = entity.getId();
             this.fechaInicioEstadia = entity.getFechaInicioEstadia();
             this.fechaTerminacionEstadia = entity.getFechaTerminacionEstadia();
@@ -50,8 +46,7 @@ public class DisponibilidadDTO implements Serializable
      *
      * @return
      */
-    public DisponibilidadEntity toEntity()
-    {
+    public DisponibilidadEntity toEntity() {
         DisponibilidadEntity entity = new DisponibilidadEntity();
         entity.setId(this.getId());
         entity.setFechaInicioEstadia(this.getFechaInicioEstadia());
@@ -64,8 +59,7 @@ public class DisponibilidadDTO implements Serializable
      *
      * @return
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -74,8 +68,7 @@ public class DisponibilidadDTO implements Serializable
      *
      * @param id
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -84,8 +77,7 @@ public class DisponibilidadDTO implements Serializable
      *
      * @return
      */
-    public Date getFechaInicioEstadia()
-    {
+    public Date getFechaInicioEstadia() {
         return fechaInicioEstadia;
     }
 
@@ -94,8 +86,7 @@ public class DisponibilidadDTO implements Serializable
      *
      * @param fechaInicioEstadia
      */
-    public void setFechaInicioEstadia(Date fechaInicioEstadia)
-    {
+    public void setFechaInicioEstadia(Date fechaInicioEstadia) {
         this.fechaInicioEstadia = fechaInicioEstadia;
     }
 
@@ -104,8 +95,7 @@ public class DisponibilidadDTO implements Serializable
      *
      * @return
      */
-    public Date getFechaTerminacionEstadia()
-    {
+    public Date getFechaTerminacionEstadia() {
         return fechaTerminacionEstadia;
     }
 
@@ -114,8 +104,7 @@ public class DisponibilidadDTO implements Serializable
      *
      * @param fechaTerminacionEstadia
      */
-    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia)
-    {
+    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia) {
         this.fechaTerminacionEstadia = fechaTerminacionEstadia;
     }
 
