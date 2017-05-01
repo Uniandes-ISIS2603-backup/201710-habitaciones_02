@@ -27,6 +27,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -42,12 +43,14 @@ public class ViajeroEntity extends UsuarioEntity {
     /**
      * Relacion One-to-Many con las Reservas
      */
+    @PodamExclude
     @OneToMany(mappedBy = "viajero")
     private List<ReservaEntity> reservas;
 
     /**
      * Relacion One-to-Many con las reseñas
      */
+    @PodamExclude
     @OneToMany(mappedBy = "viajero")
     private List<ResenaEntity> resenas;
 
