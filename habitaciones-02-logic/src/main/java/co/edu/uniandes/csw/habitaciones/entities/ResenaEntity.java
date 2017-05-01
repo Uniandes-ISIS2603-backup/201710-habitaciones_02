@@ -29,6 +29,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -60,12 +61,14 @@ public class ResenaEntity implements Serializable {
     /**
      * Viajero que publicó la reseña
      */
+    @PodamExclude
     @ManyToOne
     private ViajeroEntity viajero;
 
     /**
      * habitacion que fue reseñada
      */
+    @PodamExclude
     @ManyToOne
     private HabitacionEntity habitacion;
 

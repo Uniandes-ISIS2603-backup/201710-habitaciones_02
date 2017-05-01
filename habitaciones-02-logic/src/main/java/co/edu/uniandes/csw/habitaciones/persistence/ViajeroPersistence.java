@@ -99,30 +99,6 @@ public class ViajeroPersistence
     }
 
     /**
-     * Metodo auxiliar para buscar de acuerdo a un correo electrónico
-     *
-     * @param correoElectronico el correo electrónico de la entidad que se desea
-     * encontrar
-     * @return la primera entidad que tenga ese correo electronico, null si no
-     * encuentra ninguna con ese correo electronico
-     */
-    public ViajeroEntity searchByEmail(String correoElectronico)
-    {
-        TypedQuery<ViajeroEntity> q;
-        q = em.createQuery("select u from UsuarioEntity u where u.correoElectronico = :correo", ViajeroEntity.class);
-        q = q.setParameter("correo", correoElectronico);
-
-        List<ViajeroEntity> sameCorreo = q.getResultList();
-        if (sameCorreo.isEmpty())
-        {
-            return null;
-        } else
-        {
-            return sameCorreo.get(0);
-        }
-    }
-
-    /**
      * Elimina una entidad (tupla) de la tabla a partir de su id
      *
      * @param id el id de la entidad que se desea eliminar.

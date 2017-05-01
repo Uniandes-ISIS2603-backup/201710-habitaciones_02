@@ -28,12 +28,7 @@
                 views: {
                     'mainView': {
                         templateUrl: basePath + 'viajero.html',
-                        controller: ['$scope', 'viajeros', 
-                            function ($scope, viajeros)
-                            {
-                                $scope.RecordsViajero = viajeros.data;
-                            }
-                        ]
+                        controller: 'viajeroListCtrl'
                     }
                 }
                 
@@ -112,19 +107,17 @@
                     
                     'detailView': {
                        
-                        templateUrl: basePath + 'viajero.create.html'
+                        templateUrl: basePath + 'viajero.create.html',
+                        controller: 'viajeroCreateCtrl'
                         //necesita a los viajeros? creo que no
                         // si fuesen necesarios, sería mejor h
                     }
                 } 
             });
             $stateProvider.state('viajeroUpdate', {
-                url: '/{viajeroId:int}',
+                url: '/update',
                 parent: 'viajeroDetail',
                 
-                param: {
-                    viajeroId: null
-                },
                 views: {
                     'ListasViajeroView':{
                         templateUrl: basePath + 'viajero.update.html'
