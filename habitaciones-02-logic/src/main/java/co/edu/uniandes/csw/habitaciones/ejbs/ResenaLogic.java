@@ -74,10 +74,25 @@ public class ResenaLogic
         return persistence.findAll();
     }
 
+    /**
+     * Retorna una lista con las resenas de un viajero en especifico
+     * @param idViajero
+     * @return la lista de resenas
+     */
     public List<ResenaEntity> findResenasViajero(Long idViajero)
     {
         return persistence.findAllByViajero(idViajero);
     }
+    
+    /**
+     * Retorna una lista con las resenas de un viajero especifico cuya calificaion
+     * se encuentre dentro de un rango.
+     * @param idViajero el viajero
+     * @param minimo el minimo del rango
+     * @param maximo el maximo del rango
+     * @return una lista con las resenas
+     * @throws BusinessLogicException si el minimo del rango es mayor al maximo del rango
+     */
     public List<ResenaEntity> finResenasViajeroPorRango(Long idViajero, 
             Long minimo, Long maximo) throws BusinessLogicException
     {
@@ -89,11 +104,25 @@ public class ResenaLogic
         return persistence.findAllByViajeroAndRange(idViajero, minimo, maximo);
     }
 
+    /**
+     * Retorna una lista de resenas de una habitacion en especifico
+     * @param idHabitacion
+     * @return la lista de resenas
+     */
     public List<ResenaEntity> findResenasHabitacion(Long idHabitacion)
     {
         return persistence.findAllByHabitacion(idHabitacion);
     }
 
+    /**
+     * Retorna una lista con las resenas de una habitacion en especifico cuya calificaion
+     * se encuentre dentro de un rango.
+     * @param idHabitacion la habitacion
+     * @param minimo el minimo del rango
+     * @param maximo el maximo del rango
+     * @return una lista con las resenas
+     * @throws BusinessLogicException si el minimo del rango es mayor al maximo del rango
+     */
     public List<ResenaEntity> finResenasHabitacionPorRango(Long idHabitacion, 
             Long minimo, Long maximo) throws BusinessLogicException
     {

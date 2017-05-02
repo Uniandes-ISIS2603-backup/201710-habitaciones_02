@@ -4,6 +4,7 @@
     mod.controller("viajeroCreateCtrl", ['$scope', '$http', 
         function ($scope, $http) 
         {
+            console.log("inicio del controlador");
             $scope.viajero = {};
             $scope.signup = function () {
                 $http.post('api/viajeros', $scope.viajero)
