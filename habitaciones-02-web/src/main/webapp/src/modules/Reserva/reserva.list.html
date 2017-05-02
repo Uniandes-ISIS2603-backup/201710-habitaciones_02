@@ -1,21 +1,21 @@
 <div class="container-fluid">
     <div class = "row"> 
-    <div class="col-sm-2 col-md-2" ng-repeat="reserva in reservasRecords">
-        
-         <div class="thumbnail">
-        
-              <a ui-sref="reservaDetail({reservaId: reserva.id})">
-                    
+        <div class="col-sm-2 col-md-2" ng-repeat="reserva in reservasRecords">
+
+            <div class="thumbnail">
+
+                <a ui-sref="reservaDetail({reservaId: reserva.id})">
+
                     <h4 class="caption text-center">Viajero</h4>
                     <h5 class="caption text-center">{{reserva.viajero.nombre}}</h5>
                     <h4 class="caption text-center">Fecha Inicio</h4>
                     <h5 class="caption text-center">{{reserva.fechaInicioEstadia}}</h5>
-                    
+
                 </a>
-           
-                   
+
+
+            </div>
+        </div>
+
     </div>
-    </div>
-          
-</div>
 </div>

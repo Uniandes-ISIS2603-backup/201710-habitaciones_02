@@ -36,8 +36,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
  */
 @Entity
 @PrimaryKeyJoinColumn(referencedColumnName = "idUsuario")
-public class AnfitrionEntity extends UsuarioEntity
-{
+public class AnfitrionEntity extends UsuarioEntity {
 
     @OneToMany(mappedBy = "anfitrion")
     private List<ViviendaEntity> viviendas;
@@ -45,23 +44,19 @@ public class AnfitrionEntity extends UsuarioEntity
     @OneToMany(mappedBy = "anfitrion")
     private List<ReservaEntity> reservas;
 
-    public List<ReservaEntity> getReservas()
-    {
+    public List<ReservaEntity> getReservas() {
         return reservas;
     }
 
-    public void setReservas(List<ReservaEntity> reservas)
-    {
+    public void setReservas(List<ReservaEntity> reservas) {
         this.reservas = reservas;
     }
 
-    public List<ViviendaEntity> getViviendas()
-    {
+    public List<ViviendaEntity> getViviendas() {
         return viviendas;
     }
 
-    public void setViviendas(List<ViviendaEntity> viviendas)
-    {
+    public void setViviendas(List<ViviendaEntity> viviendas) {
         this.viviendas = viviendas;
     }
 

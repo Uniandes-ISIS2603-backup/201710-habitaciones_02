@@ -27,6 +27,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -34,8 +35,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
  */
 @Entity
 @PrimaryKeyJoinColumn(referencedColumnName = "idUsuario")
-public class ViajeroEntity extends UsuarioEntity
-{
+public class ViajeroEntity extends UsuarioEntity {
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
     //----------------------------------------------------------------------------------------------------
@@ -43,12 +43,14 @@ public class ViajeroEntity extends UsuarioEntity
     /**
      * Relacion One-to-Many con las Reservas
      */
+    @PodamExclude
     @OneToMany(mappedBy = "viajero")
     private List<ReservaEntity> reservas;
 
     /**
      * Relacion One-to-Many con las reseñas
      */
+    @PodamExclude
     @OneToMany(mappedBy = "viajero")
     private List<ResenaEntity> resenas;
 
@@ -60,8 +62,7 @@ public class ViajeroEntity extends UsuarioEntity
      *
      * @return lista de reservas
      */
-    public List<ReservaEntity> getReservas()
-    {
+    public List<ReservaEntity> getReservas() {
         return reservas;
     }
 
@@ -70,8 +71,7 @@ public class ViajeroEntity extends UsuarioEntity
      *
      * @param reservas la lista de reservas a asignar
      */
-    public void setReservas(List<ReservaEntity> reservas)
-    {
+    public void setReservas(List<ReservaEntity> reservas) {
         this.reservas = reservas;
     }
 
@@ -80,8 +80,7 @@ public class ViajeroEntity extends UsuarioEntity
      *
      * @return lista de reseñas
      */
-    public List<ResenaEntity> getResenas()
-    {
+    public List<ResenaEntity> getResenas() {
         return resenas;
     }
 
@@ -90,8 +89,7 @@ public class ViajeroEntity extends UsuarioEntity
      *
      * @param resenas la lista de las reseñas a asignar
      */
-    public void setResenas(List<ResenaEntity> resenas)
-    {
+    public void setResenas(List<ResenaEntity> resenas) {
         this.resenas = resenas;
     }
 

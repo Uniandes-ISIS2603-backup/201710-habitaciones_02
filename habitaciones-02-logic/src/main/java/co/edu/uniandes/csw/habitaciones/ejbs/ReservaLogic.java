@@ -35,8 +35,7 @@ import javax.inject.Inject;
  * @author dg.guarin20
  */
 @Stateless
-public class ReservaLogic
-{
+public class ReservaLogic {
 
     /**
      * La persistencia de la reserva
@@ -49,8 +48,7 @@ public class ReservaLogic
      *
      * @return una lista de las entidades de la reserva
      */
-    public List<ReservaEntity> findReservas()
-    {
+    public List<ReservaEntity> findReservas() {
         return persistence.findAll();
     }
 
@@ -60,8 +58,7 @@ public class ReservaLogic
      * @param idViajero
      * @return una lista de las entidades de reserva
      */
-    public List<ReservaEntity> findReservasByViajero(Long idViajero)
-    {
+    public List<ReservaEntity> findReservasByViajero(Long idViajero) {
         return persistence.findAllByViajero(idViajero);
     }
 
@@ -71,8 +68,7 @@ public class ReservaLogic
      * @param id
      * @return retorna una reserva
      */
-    public ReservaEntity findReserva(Long id)
-    {
+    public ReservaEntity findReserva(Long id) {
         return persistence.find(id);
     }
 
@@ -84,20 +80,15 @@ public class ReservaLogic
      * @return entitad de la reserva creada
      * @throws BusinessLogicException
      */
-
-    public ReservaEntity createReserva(ReservaEntity entity) throws BusinessLogicException
-    { //TODO no hay ninguna validación de las reglas de negocio. QUé pasa si la habitación no está disponible
+    public ReservaEntity createReserva(ReservaEntity entity) throws BusinessLogicException { //TODO no hay ninguna validación de las reglas de negocio. QUé pasa si la habitación no está disponible
         //TOD qué pasa con la validez de las fechas de las reservas
-        if (!entity.informacionCompleta())
-        {
+        if (!entity.informacionCompleta()) {
             throw new BusinessLogicException("falta informacion");
         }
-        if (!entity.checkInfoFechas())
-        {
+        if (!entity.checkInfoFechas()) {
             throw new BusinessLogicException("las fechas no estan en orden ");
         }
-        if (!entity.checkInfo())
-        {
+        if (!entity.checkInfo()) {
             throw new BusinessLogicException("Ya tiene reservas en esta fecha");
         }
 
@@ -111,19 +102,15 @@ public class ReservaLogic
      * @return la entidad de la reserva modificada
      * @throws BusinessLogicException
      */
-    public ReservaEntity updateReserva(ReservaEntity entity) throws BusinessLogicException
-    {//TODO no hay ninguna validación de las reglas de negocio. QUé pasa si la habitación no está disponible
+    public ReservaEntity updateReserva(ReservaEntity entity) throws BusinessLogicException {//TODO no hay ninguna validación de las reglas de negocio. QUé pasa si la habitación no está disponible
         //TOD qué pasa con la validez de las fechas de las reservas
-        if (!entity.informacionCompleta())
-        {
+        if (!entity.informacionCompleta()) {
             throw new BusinessLogicException("falta informacion");
         }
-        if (!entity.checkInfoFechas())
-        {
+        if (!entity.checkInfoFechas()) {
             throw new BusinessLogicException("las fechas no estan en orden ");
         }
-        if (!entity.checkInfo())
-        {
+        if (!entity.checkInfo()) {
             throw new BusinessLogicException("Ya tiene reservas en esta fecha");
         }
 
@@ -135,8 +122,7 @@ public class ReservaLogic
      *
      * @param id
      */
-    public void delete(Long id)
-    {
+    public void delete(Long id) {
         persistence.delete(id);
 
     }

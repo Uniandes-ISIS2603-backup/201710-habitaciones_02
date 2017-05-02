@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author s.cortes
  */
 @XmlRootElement
-public class UsuarioDTO implements Serializable
-{
+public class UsuarioDTO implements Serializable {
 
     //----------------------------------------------------------------------------------------------------
     // ATRIBUTOS
@@ -106,15 +105,14 @@ public class UsuarioDTO implements Serializable
      *
      *
      * return entity; }
-    *
+     *
      */
     /**
      * retorna el atributo ID de el DTO
      *
      * @return el id
      */
-    public Long getIdUsuario()
-    {
+    public Long getIdUsuario() {
         return idUsuario;
     }
 
@@ -123,8 +121,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param idUsuario el id a asignar
      */
-    public void setIdUsuario(Long idUsuario)
-    {
+    public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
 
@@ -133,8 +130,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return el nombre
      */
-    public String getNombre()
-    {
+    public String getNombre() {
         return nombre;
     }
 
@@ -143,8 +139,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return Imagen del usuario
      */
-    public String getImagen()
-    {
+    public String getImagen() {
         return imagen;
     }
 
@@ -153,8 +148,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param imagen La imagen a asignar
      */
-    public void setImagen(String imagen)
-    {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 
@@ -163,8 +157,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param nombre el nombre a asignar
      */
-    public void setNombre(String nombre)
-    {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -173,8 +166,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return la contraseña
      */
-    public String getContrasena()
-    {
+    public String getContrasena() {
         return contrasena;
     }
 
@@ -183,8 +175,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param contrasena la contraseña a asignar
      */
-    public void setContrasena(String contrasena)
-    {
+    public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
 
@@ -193,8 +184,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return el correo electronico
      */
-    public String getCorreoElectronico()
-    {
+    public String getCorreoElectronico() {
         return correoElectronico;
     }
 
@@ -203,8 +193,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param correoElectronico el correo electronico a asignar
      */
-    public void setCorreoElectronico(String correoElectronico)
-    {
+    public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }
 
@@ -213,8 +202,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return el tipo de documento
      */
-    public String getTipoDocumento()
-    {
+    public String getTipoDocumento() {
         return tipoDocumento;
     }
 
@@ -223,8 +211,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param tipoDocumento el tipo de documento a asignar
      */
-    public void setTipoDocumento(String tipoDocumento)
-    {
+    public void setTipoDocumento(String tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
@@ -233,8 +220,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return el numero de documento
      */
-    public String getNumeroDocumento()
-    {
+    public String getNumeroDocumento() {
         return numeroDocumento;
     }
 
@@ -243,8 +229,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param numeroDocumento el numero de documento a asignar
      */
-    public void setNumeroDocumento(String numeroDocumento)
-    {
+    public void setNumeroDocumento(String numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
     }
 
@@ -253,8 +238,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return la direccion
      */
-    public String getDireccion()
-    {
+    public String getDireccion() {
         return direccion;
     }
 
@@ -263,8 +247,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param direccion la direccion a asignar
      */
-    public void setDireccion(String direccion)
-    {
+    public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
@@ -273,8 +256,7 @@ public class UsuarioDTO implements Serializable
      *
      * @return el telefono
      */
-    public String getTelefono()
-    {
+    public String getTelefono() {
         return telefono;
     }
 
@@ -283,8 +265,7 @@ public class UsuarioDTO implements Serializable
      *
      * @param telefono el telefono a asignar
      */
-    public void setTelefono(String telefono)
-    {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

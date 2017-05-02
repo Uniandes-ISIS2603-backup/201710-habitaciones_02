@@ -14,8 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author b.gamba10
  */
 @XmlRootElement
-public class HabitacionDTO implements Serializable
-{
+public class HabitacionDTO implements Serializable {
 
     private Long id;
     private Double area;
@@ -27,8 +26,7 @@ public class HabitacionDTO implements Serializable
     /**
      * Constructor
      */
-    public HabitacionDTO()
-    {
+    public HabitacionDTO() {
 
     }
 
@@ -37,10 +35,8 @@ public class HabitacionDTO implements Serializable
      *
      * @param entity
      */
-    public HabitacionDTO(HabitacionEntity entity)
-    {
-        if (entity != null)
-        {
+    public HabitacionDTO(HabitacionEntity entity) {
+        if (entity != null) {
             this.id = entity.getId();
             this.area = entity.getArea();
             this.valorAlquiler = entity.getValorAlquiler();
@@ -55,8 +51,7 @@ public class HabitacionDTO implements Serializable
      *
      * @return
      */
-    public HabitacionEntity toEntity()
-    {
+    public HabitacionEntity toEntity() {
         HabitacionEntity entity = new HabitacionEntity();
         entity.setId(this.getId());
         entity.setArea(this.getArea());
@@ -72,8 +67,7 @@ public class HabitacionDTO implements Serializable
      *
      * @return
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -82,8 +76,7 @@ public class HabitacionDTO implements Serializable
      *
      * @param id
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -92,8 +85,7 @@ public class HabitacionDTO implements Serializable
      *
      * @return
      */
-    public Double getArea()
-    {
+    public Double getArea() {
         return area;
     }
 
@@ -102,8 +94,7 @@ public class HabitacionDTO implements Serializable
      *
      * @param area
      */
-    public void setArea(Double area)
-    {
+    public void setArea(Double area) {
         this.area = area;
     }
 
@@ -112,8 +103,7 @@ public class HabitacionDTO implements Serializable
      *
      * @return
      */
-    public Double getValorAlquiler()
-    {
+    public Double getValorAlquiler() {
         return valorAlquiler;
     }
 
@@ -122,8 +112,7 @@ public class HabitacionDTO implements Serializable
      *
      * @param valorAlquiler
      */
-    public void setValorAlquiler(Double valorAlquiler)
-    {
+    public void setValorAlquiler(Double valorAlquiler) {
         this.valorAlquiler = valorAlquiler;
     }
 
@@ -132,8 +121,7 @@ public class HabitacionDTO implements Serializable
      *
      * @return
      */
-    public String getDescripcion()
-    {
+    public String getDescripcion() {
         return descripcion;
     }
 
@@ -142,8 +130,7 @@ public class HabitacionDTO implements Serializable
      *
      * @param descripcion
      */
-    public void setDescripcion(String descripcion)
-    {
+    public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
@@ -152,8 +139,7 @@ public class HabitacionDTO implements Serializable
      *
      * @return
      */
-    public String getRutaImagen()
-    {
+    public String getRutaImagen() {
         return rutaImagen;
     }
 
@@ -162,8 +148,7 @@ public class HabitacionDTO implements Serializable
      *
      * @param rutaImagen
      */
-    public void setRutaImagen(String rutaImagen)
-    {
+    public void setRutaImagen(String rutaImagen) {
         this.rutaImagen = rutaImagen;
     }
 
@@ -172,8 +157,7 @@ public class HabitacionDTO implements Serializable
      *
      * @return
      */
-    public Integer getCapacidad()
-    {
+    public Integer getCapacidad() {
         return capacidad;
     }
 
@@ -182,8 +166,7 @@ public class HabitacionDTO implements Serializable
      *
      * @param capacidad
      */
-    public void setCapacidad(Integer capacidad)
-    {
+    public void setCapacidad(Integer capacidad) {
         this.capacidad = capacidad;
     }
 

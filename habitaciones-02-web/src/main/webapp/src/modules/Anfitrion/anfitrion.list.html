@@ -1,38 +1,38 @@
 <style>
-* {
-  box-sizing: border-box;
-}
+    * {
+        box-sizing: border-box;
+    }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
 
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
+    #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+    }
 
-#myTable th, #myTable td {
-  text-align: left;
-  padding: 12px;
-}
+    #myTable th, #myTable td {
+        text-align: left;
+        padding: 12px;
+    }
 
-#myTable tr {
-  border-bottom: 1px solid #ddd;
-}
+    #myTable tr {
+        border-bottom: 1px solid #ddd;
+    }
 
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
-}
+    #myTable tr.header, #myTable tr:hover {
+        background-color: #f1f1f1;
+    }
 </style>
 
 <div class="container-fluid">
@@ -85,7 +85,7 @@
             <div class="thumbnail">
                 <style scoped>
                     img{
-                         max-height: 300px; min-height: 300px; 
+                        max-height: 300px; min-height: 300px; 
                     }
                 </style>
 
@@ -93,7 +93,7 @@
                     <div class =" caption text-center">
                         <div class="caption text-center">{{anfitrion.nombre}}</div>
                         <img class="img-responsive"  align="middle" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
-                        
+
                         <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
                     </div>
                 </a>

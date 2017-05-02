@@ -1,80 +1,80 @@
 <div class="panel panel-default"> 
-    
+
     <style>
-            dt{
-                text-align: center;
-            }
-            dd{
-                text-align: center;
-            }
+        dt{
+            text-align: center;
+        }
+        dd{
+            text-align: center;
+        }
     </style>
-    
+
     <div class="panel-body">
-        
+
         <div class="col-md-3">
-            
+
             <div class="row">
-                
+
                 <div class="thumbnail">
                     <img style="max-height: 300px; min-height: 300px;" class="img-responsive" ng-src="{{currentViajero.imagen}}" alt="{{currentViajero.nombre}}"/>
                 </div>
-                
+
             </div>
-            
+
             <div class="row">
-                
+
                 <dl>
                     <dt style="font-size: 20px ">{{currentViajero.nombre}}</dt>
                     <hr>
-                    
+
                     <dt>Identificacion</dt>
                     <dd>{{currentViajero.tipoDocumento}} : {{currentViajero.numeroDocumento}}</dd>
                     <hr />
                     <dt>correo Electronico</dt>
                     <dd>{{currentViajero.correoElectronico}}</dd>
-                    
+
                     <dt>telefono</dt>
                     <dd>{{currentViajero.telefono}}</dd>
-                    
+
                     <dt>direccion</dt>
                     <dd>{{currentViajero.direccion}}</dd>
-                    
+
                 </dl>
-                
+
             </div>
         </div>
         <div class="col-md-9">
-            
+
             <nav style="background-color: white; border-color: #286090" class="navbar navbar-default">
                 <div class="col-md-8">
                     <ul class="nav navbar-nav">
                         <li><a ui-sref="viajeroReservasList"><b>Reservas</b></a></li>
                         <li><a ui-sref="viajeroResenasList"><b>Reseñas Redactadas</b></a></li>  
                     </ul>
-                    
+
                 </div>
                 <div class="col-md-4">
-                    
+
                     <ul class="nav navbar-nav text-right">
                         <li><a ui-sref="viajeroUpdate"><span class="glyphicon glyphicon-pencil"></span><b> Actualizar Infromacion de Perfil</b></a></li>
                     </ul>
-                    
+
                 </div>
-                
-             
+
+
             </nav>
-            
+
             <div ui-view="ListasViajeroView">
-                
+
                 <div class="text-center">
-                    
+
                     <b style="color: #204d74; ">Por favor, escoje una de las opciones del menu.</b>
-                    
+
                 </div>
-                
+
             </div>
         </div>
-        
+
 
     </div>
 </div>

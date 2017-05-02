@@ -65,7 +65,7 @@ public class ResenaPersistence
      */
     public List<ResenaEntity> findAll()
     {
-        Query q = em.createQuery("select u from ReservaEntity u");
+        Query q = em.createQuery("select u from ResenaEntity u");
         return q.getResultList();
 
     }
@@ -81,6 +81,19 @@ public class ResenaPersistence
 
     }
 
+    public List<ResenaEntity> findAllByViajeroAndRange(Long idViajero, Long minimo, Long maximo)
+    {
+        TypedQuery<ResenaEntity> q;
+        q = em.createQuery("select u from ResenaEntity u where u.viajero.idUsuario = :idViajero AND u.calificacion between :minimo AND :maximo", ResenaEntity.class);
+        
+        q = q.setParameter("idViajero", idViajero);
+        q = q.setParameter("minimo", minimo);
+        q = q.setParameter("maximo", maximo);
+
+        return q.getResultList();
+
+    }
+    
     public List<ResenaEntity> findAllByHabitacion(Long idHabitacion)
     {
         TypedQuery<ResenaEntity> q;
@@ -90,6 +103,20 @@ public class ResenaPersistence
 
         return q.getResultList();
     }
+    
+    public List<ResenaEntity> findAllByHabitacionAndRange(Long idHabitacion, Long minimo, Long maximo)
+    {
+        TypedQuery<ResenaEntity> q;
+        q = em.createQuery("select u from ResenaEntity u where u.habitacion.id = :idHabitacion AND u.calificacion between :minimo AND :maximo", ResenaEntity.class);
+        
+        q = q.setParameter("idHabitacion", idHabitacion);
+        q = q.setParameter("minimo", minimo);
+        q = q.setParameter("maximo", maximo);
+
+        return q.getResultList();
+    }
+    
+    
 
     /**
      * inserta a la tabla de Resenas un nuevo ViajeroEntity

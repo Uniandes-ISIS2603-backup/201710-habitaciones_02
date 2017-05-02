@@ -91,6 +91,14 @@ public class ResenaResource
     {
         return listEntity2DTO(logic.findResenasViajero(idViajero));
     }
+    
+    @GET
+    @Path("porViajero/{viajeroId: \\d+}/{minimo: \\d+}/{maximo: \\d+}") 
+    public List<ResenaDetailDTO> getResenasByViajeroAndRange(@PathParam("viajeroId") Long idViajero,
+            @PathParam("minimo") Long minimo, @PathParam("maximo") Long maximo) throws BusinessLogicException
+    {
+        return listEntity2DTO(logic.finResenasViajeroPorRango(idViajero, minimo, maximo));
+    }
 
     @GET
     @Path("porHabitacion/{habitacionId: \\d+}")
@@ -98,7 +106,15 @@ public class ResenaResource
     {
         return listEntity2DTO(logic.findResenasHabitacion(idHabitacion));
     }
-
+    
+    @GET
+    @Path("porHabitacion/{habitacionId: \\d+}/{minimo: \\d+}/{maximo: \\d+}") 
+    public List<ResenaDetailDTO> getResenasByHabitacionAndRange(@PathParam("habitacionId") Long idHabitacion,
+            @PathParam("minimo") Long minimo, @PathParam("maximo") Long maximo) throws BusinessLogicException
+    {
+        return listEntity2DTO(logic.finResenasHabitacionPorRango(idHabitacion, minimo, maximo));
+    }
+    
     /**
      * Metodo encargado de retornar un DTO reseña a partir de un id
      *

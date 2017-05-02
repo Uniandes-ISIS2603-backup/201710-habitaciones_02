@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author s.cortes
  */
 @XmlRootElement
-public class ResenaDetailDTO extends ResenaDTO
-{
+public class ResenaDetailDTO extends ResenaDTO {
 
     /**
      * Viajero que publicó la reseña
@@ -29,8 +28,7 @@ public class ResenaDetailDTO extends ResenaDTO
     /**
      * metodo default para el DetailDTO
      */
-    public ResenaDetailDTO()
-    {
+    public ResenaDetailDTO() {
         super();
     }
 
@@ -39,11 +37,9 @@ public class ResenaDetailDTO extends ResenaDTO
      *
      * @param entity entidad de la reseña
      */
-    public ResenaDetailDTO(ResenaEntity entity)
-    {
+    public ResenaDetailDTO(ResenaEntity entity) {
         super(entity);
-        if (entity != null)
-        {
+        if (entity != null) {
             viajero = new ViajeroDTO(entity.getViajero());
             habitacion = new HabitacionDTO(entity.getHabitacion());
         }
@@ -54,8 +50,7 @@ public class ResenaDetailDTO extends ResenaDTO
      *
      * @return el viajero
      */
-    public ViajeroDTO getViajero()
-    {
+    public ViajeroDTO getViajero() {
         return viajero;
     }
 
@@ -64,8 +59,7 @@ public class ResenaDetailDTO extends ResenaDTO
      *
      * @param viajero el viajero
      */
-    public void setViajero(ViajeroDTO viajero)
-    {
+    public void setViajero(ViajeroDTO viajero) {
         this.viajero = viajero;
     }
 
@@ -74,8 +68,7 @@ public class ResenaDetailDTO extends ResenaDTO
      *
      * @return la habitacion
      */
-    public HabitacionDTO getHabitacion()
-    {
+    public HabitacionDTO getHabitacion() {
         return habitacion;
     }
 
@@ -84,22 +77,18 @@ public class ResenaDetailDTO extends ResenaDTO
      *
      * @param habitacion la habitacion
      */
-    public void setHabitacion(HabitacionDTO habitacion)
-    {
+    public void setHabitacion(HabitacionDTO habitacion) {
         this.habitacion = habitacion;
     }
 
     @Override
-    public ResenaEntity toEntity()
-    {
+    public ResenaEntity toEntity() {
         ResenaEntity entity = super.toEntity();
 
-        if (this.getViajero() != null)
-        {
+        if (this.getViajero() != null) {
             entity.setViajero(this.viajero.toEntity());
         }
-        if (this.getHabitacion() != null)
-        {
+        if (this.getHabitacion() != null) {
             entity.setHabitacion(this.habitacion.toEntity());
         }
 

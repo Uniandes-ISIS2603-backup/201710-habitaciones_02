@@ -37,8 +37,7 @@ import javax.persistence.Temporal;
  * @author b.gamba10
  */
 @Entity
-public class DisponibilidadEntity implements Serializable
-{
+public class DisponibilidadEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -58,8 +57,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @return
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -68,8 +66,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @param id
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -78,8 +75,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @return
      */
-    public Date getFechaInicioEstadia()
-    {
+    public Date getFechaInicioEstadia() {
         return fechaInicioEstadia;
     }
 
@@ -88,8 +84,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @param fechaInicioEstadia
      */
-    public void setFechaInicioEstadia(Date fechaInicioEstadia)
-    {
+    public void setFechaInicioEstadia(Date fechaInicioEstadia) {
         this.fechaInicioEstadia = fechaInicioEstadia;
     }
 
@@ -98,8 +93,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @return
      */
-    public Date getFechaTerminacionEstadia()
-    {
+    public Date getFechaTerminacionEstadia() {
         return fechaTerminacionEstadia;
     }
 
@@ -108,8 +102,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @param fechaTerminacionEstadia
      */
-    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia)
-    {
+    public void setFechaTerminacionEstadia(Date fechaTerminacionEstadia) {
         this.fechaTerminacionEstadia = fechaTerminacionEstadia;
     }
 
@@ -118,8 +111,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @return
      */
-    public HabitacionEntity getHabitacion()
-    {
+    public HabitacionEntity getHabitacion() {
         return habitacion;
     }
 
@@ -128,8 +120,7 @@ public class DisponibilidadEntity implements Serializable
      *
      * @param habitacion
      */
-    public void setHabitacion(HabitacionEntity habitacion)
-    {
+    public void setHabitacion(HabitacionEntity habitacion) {
         this.habitacion = habitacion;
     }
 
@@ -139,10 +130,8 @@ public class DisponibilidadEntity implements Serializable
      * @return
      */
     @Override
-    public boolean equals(Object obj)
-    {
-        if (this.getId() != null)
-        {
+    public boolean equals(Object obj) {
+        if (this.getId() != null) {
             return this.getId().equals(((DisponibilidadEntity) obj).getId());
         }
         return super.equals(obj);
@@ -153,10 +142,8 @@ public class DisponibilidadEntity implements Serializable
      * @return
      */
     @Override
-    public int hashCode()
-    {
-        if (this.getId() != null)
-        {
+    public int hashCode() {
+        if (this.getId() != null) {
             return this.getId().hashCode();
         }
         return super.hashCode();

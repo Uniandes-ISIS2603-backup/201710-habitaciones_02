@@ -15,8 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ne.cabrera
  */
 @XmlRootElement
-public class PagoDTO implements Serializable
-{
+public class PagoDTO implements Serializable {
 
     /**
      * id del pago
@@ -46,8 +45,7 @@ public class PagoDTO implements Serializable
     /**
      * constructor por defecto
      */
-    public PagoDTO()
-    {
+    public PagoDTO() {
 
     }
 
@@ -57,10 +55,8 @@ public class PagoDTO implements Serializable
      *
      * @param entity Entidad con la que se crea el objeto DTO
      */
-    public PagoDTO(PagoEntity entity)
-    {
-        if (entity != null)
-        {
+    public PagoDTO(PagoEntity entity) {
+        if (entity != null) {
             id = entity.getId();
             fechaDePago = entity.getFechaDePago();
             pago = entity.getPago();
@@ -74,15 +70,13 @@ public class PagoDTO implements Serializable
      *
      * @return una entidad pago
      */
-    public PagoEntity toEntity()
-    {
+    public PagoEntity toEntity() {
         PagoEntity entity = new PagoEntity();
         entity.setId(this.id);
         entity.setFechaDePago(this.getFechaDePago());
         entity.setTipoTramite(this.tipoTramite);
         entity.setPago(this.pago);
-        if (getReserva() != null)
-        {
+        if (getReserva() != null) {
             entity.setReserva(getReserva().toEntity());
         }
         return entity;
@@ -91,80 +85,70 @@ public class PagoDTO implements Serializable
     /**
      * @return the id
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
     /**
      * @return the fechaDePago
      */
-    public Date getFechaDePago()
-    {
+    public Date getFechaDePago() {
         return fechaDePago;
     }
 
     /**
      * @param fechaDePago the fechaDePago to set
      */
-    public void setFechaDePago(Date fechaDePago)
-    {
+    public void setFechaDePago(Date fechaDePago) {
         this.fechaDePago = fechaDePago;
     }
 
     /**
      * @return the pago
      */
-    public Double getPago()
-    {
+    public Double getPago() {
         return pago;
     }
 
     /**
      * @param pago the pago to set
      */
-    public void setPago(Double pago)
-    {
+    public void setPago(Double pago) {
         this.pago = pago;
     }
 
     /**
      * @return the tipoTramite
      */
-    public String getTipoTramite()
-    {
+    public String getTipoTramite() {
         return tipoTramite;
     }
 
     /**
      * @param tipoTramite the tipoTramite to set
      */
-    public void setTipoTramite(String tipoTramite)
-    {
+    public void setTipoTramite(String tipoTramite) {
         this.tipoTramite = tipoTramite;
     }
 
     /**
      * @return the reserva
      */
-    public ReservaDTO getReserva()
-    {
+    public ReservaDTO getReserva() {
         return reserva;
     }
 
     /**
      * @param reserva the reserva to set
      */
-    public void setReserva(ReservaDTO reserva)
-    {
+    public void setReserva(ReservaDTO reserva) {
         this.reserva = reserva;
     }
 

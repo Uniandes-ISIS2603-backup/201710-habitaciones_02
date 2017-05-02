@@ -78,12 +78,32 @@ public class ResenaLogic
     {
         return persistence.findAllByViajero(idViajero);
     }
+    public List<ResenaEntity> finResenasViajeroPorRango(Long idViajero, 
+            Long minimo, Long maximo) throws BusinessLogicException
+    {
+        if(minimo > maximo)
+        {
+            throw new BusinessLogicException("El rango dado no genera error: el "
+                    + "valor minimo debe ser menor al valor maximo");
+        }
+        return persistence.findAllByViajeroAndRange(idViajero, minimo, maximo);
+    }
 
     public List<ResenaEntity> findResenasHabitacion(Long idHabitacion)
     {
         return persistence.findAllByHabitacion(idHabitacion);
     }
 
+    public List<ResenaEntity> finResenasHabitacionPorRango(Long idHabitacion, 
+            Long minimo, Long maximo) throws BusinessLogicException
+    {
+        if(minimo > maximo)
+        {
+            throw new BusinessLogicException("El rango dado no genera error: el "
+                    + "valor minimo debe ser menor al valor maximo");
+        }
+        return persistence.findAllByHabitacionAndRange(idHabitacion, minimo, maximo);
+    }
     /**
      * Retorna un un ResenaEntity a partir de un id dado por parámetro
      *
