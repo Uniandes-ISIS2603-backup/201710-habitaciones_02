@@ -29,6 +29,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -38,9 +39,11 @@ import javax.persistence.PrimaryKeyJoinColumn;
 @PrimaryKeyJoinColumn(referencedColumnName = "idUsuario")
 public class AnfitrionEntity extends UsuarioEntity {
 
+    @PodamExclude
     @OneToMany(mappedBy = "anfitrion")
     private List<ViviendaEntity> viviendas;
 
+    @PodamExclude
     @OneToMany(mappedBy = "anfitrion")
     private List<ReservaEntity> reservas;
 

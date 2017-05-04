@@ -31,6 +31,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -54,15 +55,19 @@ public class HabitacionEntity implements Serializable
 
     private Integer capacidad;
 
+    @PodamExclude
     @OneToMany(mappedBy = "habitacion")
     private List<DisponibilidadEntity> disponibilidades;
 
+    @PodamExclude
     @OneToMany(mappedBy = "habitacion")
     private List<ReservaEntity> reservas;
 
+    @PodamExclude
     @OneToMany(mappedBy = "habitacion")
     private List<ResenaEntity> resenas;
 
+    @PodamExclude
     @ManyToOne
     private ViviendaEntity vivienda;
 

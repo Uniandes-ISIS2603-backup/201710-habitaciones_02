@@ -17,9 +17,13 @@ import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.runner.RunWith;
+import uk.co.jemos.podam.api.PodamFactory;
+import uk.co.jemos.podam.api.PodamFactoryImpl;
 
 /**
  *
@@ -27,6 +31,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith (Arquillian.class)
 public class AnfitrionPersistenceTest {
+    
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
@@ -39,22 +44,121 @@ public class AnfitrionPersistenceTest {
     @Inject 
     private AnfitrionPersistence anfitrionPersistence;
     
-    @PersistenceContext
+    @PersistenceContext (unitName = "habitacionesPU")
     private EntityManager em;
     
     @Inject
     UserTransaction utx;
     
+    private final PodamFactory factory = new PodamFactoryImpl();
     private List<AnfitrionEntity> data = new ArrayList<AnfitrionEntity>();
-   
+ 
     
-    
-    
-    public AnfitrionPersistenceTest() {
+    @Before
+    public void setUp(){
+        try{
+            utx.begin();
+            em.joinTransaction();
+            clearData();
+            insertData();
+            utx.commit();
+        }catch(Exception e){
+            e.printStackTrace();
+            try{
+                utx.rollback();
+            }catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
     }
-
+    private void clearData(){
+        em.createQuery("delete from AnfitrionEntity").executeUpdate();
+        em.createQuery("delete from UsuarioEntity").executeUpdate();
+    }
+    
+    private void insertData(){
+        for (int i = 0; i < 3; i++) {
+            AnfitrionEntity entity = factory.manufacturePojo(AnfitrionEntity.class);
+            em.persist(entity);
+            data.add(entity);
+        }
+    }
+    
     @Test
-    public void testSomeMethod() {
+    public void createAnfitrion() {
+        AnfitrionEntity entity = factory.manufacturePojo(AnfitrionEntity.class);
+        
+        AnfitrionEntity result = anfitrionPersistence.create(entity);
+        Assert.assertNotNull(result);
+        AnfitrionEntity e2 = em.find(AnfitrionEntity.class, result.getIdUsuario());
+        Assert.assertNotNull(e2);
+        Assert.assertEquals(entity.getIdUsuario(), e2.getIdUsuario());        
+        Assert.assertEquals(entity.getNombre(), e2.getNombre());
+        Assert.assertEquals(entity.getContrasena(), e2.getContrasena());
+        Assert.assertEquals(entity.getCorreoElectronico(), e2.getCorreoElectronico());
+        Assert.assertEquals(entity.getNumeroDocumento(),e2.getNumeroDocumento());
     }
     
+    @Test
+    public void getAnfitrionesTest(){
+        List<AnfitrionEntity> list = anfitrionPersistence.findAll();
+        Assert.assertEquals(list.size(), data.size());
+        for (AnfitrionEntity anfitrionEntity : list) {
+            boolean encontrado = false;
+            for (AnfitrionEntity anfitrionEntity1 : data) {
+                if(anfitrionEntity.getIdUsuario()
+                        .equals(anfitrionEntity1.getIdUsuario())){
+                    encontrado = true;
+                }
+                
+            }
+            Assert.assertTrue(encontrado);
+        }
+    }
+    
+    @Test 
+    public void getAnfitrionTest(){
+        AnfitrionEntity entity = data.get(0);
+        AnfitrionEntity e2 = anfitrionPersistence.find(entity.getIdUsuario());
+        Assert.assertNotNull(e2);
+        Assert.assertEquals(entity.getNombre(),e2.getNombre());
+  
+    }
+    
+    @Test 
+    public void getAnfitrionByIDTestNull(){
+       boolean e2 = true;
+       e2 = anfitrionPersistence.findByDocumento("");
+       Assert.assertFalse(e2);
+    }
+    
+    @Test
+    public void getAnfitrionByIDTestTrue(){
+        boolean existe = false;
+        AnfitrionEntity entity = data.get(0);
+        existe = anfitrionPersistence.findByDocumento(entity.getNumeroDocumento());
+        Assert.assertTrue(existe);
+    }
+    @Test
+    public void deleteAnfitrionTest(){
+        AnfitrionEntity entity = data.get(0);
+        anfitrionPersistence.delete(entity.getIdUsuario());
+        AnfitrionEntity e2 = anfitrionPersistence.find(entity.getIdUsuario());
+        Assert.assertNull(e2);
+        
+    }
+    
+    @Test
+    
+    public void updateAnfitrionTest(){
+        AnfitrionEntity entity = data.get(0);
+        AnfitrionEntity update = factory.manufacturePojo(AnfitrionEntity.class);
+        update.setIdUsuario(entity.getIdUsuario());
+        AnfitrionEntity updated = anfitrionPersistence.update(update);
+        Assert.assertNotNull(updated);
+        Assert.assertEquals(updated.getNombre(), update.getNombre());
+        Assert.assertEquals(updated.getDireccion(), update.getDireccion());
+        Assert.assertEquals(updated.getContrasena(),update.getContrasena());
+        Assert.assertEquals(updated.getCorreoElectronico(),update.getCorreoElectronico());
+    }
 }
