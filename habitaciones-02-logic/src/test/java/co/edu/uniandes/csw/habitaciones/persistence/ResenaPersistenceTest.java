@@ -135,7 +135,7 @@ public class ResenaPersistenceTest {
     }
     
     @Test
-    public void deleteREsena()
+    public void deleteResena()
     {
         ResenaEntity entity = data.get(0);
         persistence.delete(entity.getId());
