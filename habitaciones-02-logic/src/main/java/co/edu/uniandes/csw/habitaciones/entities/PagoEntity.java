@@ -32,6 +32,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -67,6 +68,7 @@ public class PagoEntity implements Serializable
     /**
      * Relacion one to one entre el pago y la reserva
      */
+    @PodamExclude
     @OneToOne(fetch = FetchType.LAZY)
     private ReservaEntity reserva;
 

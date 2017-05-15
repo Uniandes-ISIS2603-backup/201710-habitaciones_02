@@ -32,6 +32,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -69,23 +70,27 @@ public class ReservaEntity implements Serializable {
     /**
      * Una relacion de many to one con viajero que hace la reserva
      */
+    @PodamExclude
     @ManyToOne
     private ViajeroEntity viajero;
     /**
      * Una relacion de many to one con el anfitrion a que le hicieron la reserva
      */
+    @PodamExclude
     @ManyToOne
     private AnfitrionEntity anfitrion;
 
     /**
      * Una relacion de many to one a la habitacion que le hicieron la reserva
      */
+    @PodamExclude
     @ManyToOne
     private HabitacionEntity habitacion;
 
     /**
      * Una relacion de one to one con el pago
      */
+    @PodamExclude
     @OneToOne(mappedBy = "reserva")
     private PagoEntity pago;
 
