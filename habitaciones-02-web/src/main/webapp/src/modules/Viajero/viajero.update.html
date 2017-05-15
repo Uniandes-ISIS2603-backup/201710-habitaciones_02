@@ -38,8 +38,6 @@
                         <input class="ActualizacionViajero center-block" type="password" name="contrasenaV1" size="30" ng-model='contrasenaV1' required>
                         <span ng-show="formaAu.contrasenaV1.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
 
-                        <input class="center-block" type="button" value="verificar">
-
                     </form>
                 </div>
             </div>
@@ -81,7 +79,7 @@
                 </p>
 
                 <div class="text-left">
-                    <form name="formaA" novalidate>
+                    <form name="formaUpdateV"  novalidate ng-submit="update()">
 
                         <b>Nombre Completo:</b><br>
                         <input class="ActualizacionViajero" name="nombre" type="text" size="40" ng-model='currentViajero.nombre'required>

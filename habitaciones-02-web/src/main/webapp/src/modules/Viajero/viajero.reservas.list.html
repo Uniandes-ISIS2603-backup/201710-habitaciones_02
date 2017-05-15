@@ -6,7 +6,7 @@
 
             <div class="col-sm-1 col-md-1"> <b>Filtrar: </b></div>
             <div class="col-sm-11 col-md-11"> 
-                <form> 
+                <form name="formaBusqReserva"  novalidate ng-submit="buscarResenaRango()">
                     Fecha Inicio: <input type="date" name="fechaInicioEstadia">
                     Fecha fin: <input type="date" name="fechaTerminacionEstadia">
                     <input type="submit" value="submit">
