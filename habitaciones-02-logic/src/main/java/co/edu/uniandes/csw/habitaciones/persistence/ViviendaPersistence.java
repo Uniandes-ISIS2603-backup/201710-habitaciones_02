@@ -29,6 +29,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -83,5 +84,14 @@ public class ViviendaPersistence {
     public void delete(Long id) {
         ViviendaEntity entity = em.find(ViviendaEntity.class, id);
         em.remove(entity);
+    }
+    
+    public List<ViviendaEntity> buscarPorCiudad(String pCiudad)
+    {
+        TypedQuery<ViviendaEntity> q;
+        q = em.createQuery("select u from ViviendaEntity u where u.ciudad = :ciudad", ViviendaEntity.class);
+        q = q.setParameter("ciudad", pCiudad);
+        List<ViviendaEntity> respuesta = q.getResultList();
+        return respuesta;
     }
 }

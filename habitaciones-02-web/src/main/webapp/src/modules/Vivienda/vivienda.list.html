@@ -1,12 +1,23 @@
 <div class="container-fluid">
+    <div class="thumbnail">
     <div class="row">
-        <div class="col-md-11"></div>
         <div class="col-md-1">
+            <b style="text-align: center">Filtrar: </b>
+        </div>
+            <div class="col-md-9">
+                <form name="formaFiltrrar" ng-submit="filtrar()">
+                     <b style="color: #1b6d85">Ciudad:  </b>
+                     <input type="text" name="ciudad" ng-model="vivienda.ciudad">
+                <input type="submit" value="Filtrar">
+                </form>
+            </div>
+        <div class="col-md-2">
             <a ui-sref="createVivienda">
             <dd>Registrar vivienda</dd><br>
             </a>
         </div>
     </div>
+  </div>
     <div class="row">
         <div class="col-sm-2" ng-repeat="vivienda in viviendasRecords">
             <div class="thumbnail">
