@@ -150,24 +150,33 @@ public class ResenaLogic {
      * @throws BusinessLogicException
      */
     public ResenaEntity createResena(ResenaEntity entity) throws BusinessLogicException {
-        if (entity.getCalificacion() == null || (entity.getCalificacion() < CALIFICACION_MIN) || (entity.getCalificacion() > CALIFICACION_MAX)) {
+        if (entity.getCalificacion() == null 
+            || (entity.getCalificacion() < CALIFICACION_MIN) 
+            || (entity.getCalificacion() > CALIFICACION_MAX)) {
+            
             throw new BusinessLogicException("La reseña debe tener una calificacion que sea entre 0 y 5");
         }
         if (entity.getHabitacion() != null && entity.getViajero() != null) {
+            
             Long idViajero = entity.getViajero().getIdUsuario();
             Long idHabitacion = entity.getHabitacion().getId();
             ReservaEntity reserva = persistenceReserva.findReservaFromViajeroAndHabitacion(idViajero, idHabitacion);
 
             if (reserva == null) {
+                
                 throw new BusinessLogicException("No se puede generar la resena debido"
                         + " a que no hay registro de que el viajero "
                         + "haya hecho una reserva en la habitacion");
 
-            } else if (reserva.getFechaInicio().compareTo(new Date()) > 0) {
+            } 
+            else if (reserva.getFechaInicio().compareTo(new Date()) > 0) {
+                
                 throw new BusinessLogicException("No se puede generar la resena debido "
                         + "a que aun no aun no ha iniciado la fecha inicial de la reserva");
             }
-        } else {
+        } 
+        else {
+            
             throw new BusinessLogicException("La reseña debe ser diligenciada por un viajero especifico"
                     + " y debe estar dirijida a una habitacion especifica");
         }
@@ -185,23 +194,32 @@ public class ResenaLogic {
      * co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException
      */
     public ResenaEntity updateResena(ResenaEntity entity) throws BusinessLogicException {
-        if (entity.getCalificacion() == null || (entity.getCalificacion() < CALIFICACION_MIN) || (entity.getCalificacion() > CALIFICACION_MAX)) {
+        if (entity.getCalificacion() == null 
+            || (entity.getCalificacion() < CALIFICACION_MIN) 
+            || (entity.getCalificacion() > CALIFICACION_MAX)) {
+            
             throw new BusinessLogicException("La reseña debe tener una calificacion que sea entre 0 y 5");
         }
         if (entity.getHabitacion() != null && entity.getViajero() != null) {
+            
             Long idViajero = entity.getViajero().getIdUsuario();
             Long idHabitacion = entity.getHabitacion().getId();
             ReservaEntity reserva = persistenceReserva.findReservaFromViajeroAndHabitacion(idViajero, idHabitacion);
 
             if (reserva == null) {
+                
                 throw new BusinessLogicException("No se puede generar la resena debido"
                         + " a que no hay registro de que el viajero "
                         + "haya hecho una reserva en la habitacion");
-            } else if (reserva.getFechaInicio().compareTo(new Date()) > 0) {
+            } 
+            else if (reserva.getFechaInicio().compareTo(new Date()) > 0) {
+                
                 throw new BusinessLogicException("No se puede generar la resena debido"
                         + " a que aun no aun no ha iniciado la fecha inicial de la reserva");
             }
-        } else {
+        } 
+        else {
+            
             throw new BusinessLogicException("La reseña debe ser diligenciada por un viajero especifico"
                     + " y debe estar dirijida a una habitacion especifica");
         }

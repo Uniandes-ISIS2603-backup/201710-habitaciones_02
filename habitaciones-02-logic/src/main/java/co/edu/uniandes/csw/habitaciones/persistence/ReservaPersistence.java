@@ -112,6 +112,7 @@ public class ReservaPersistence {
         em.remove(entity);
 
     }
+    
 
     /**
      * Este metodo verifica si existe una reserva que relacione a un viajero con
@@ -126,7 +127,7 @@ public class ReservaPersistence {
      */
     public ReservaEntity findReservaFromViajeroAndHabitacion(Long idViajero, Long idHabitacion) {
         TypedQuery<ReservaEntity> q
-                = em.createQuery("select u from ResenaEntity u where u.viajero.idUsuario = :idViajero AND u.habitacion.id = :idHabitacion AND u.cancelado = 0 ORDER BY u.FECHAINICIO DESC", ReservaEntity.class);
+                = em.createQuery("select u from ReservaEntity u where u.viajero.idUsuario = :idViajero AND u.habitacion.id = :idHabitacion AND u.cancelado = 0", ReservaEntity.class);
         q = q.setParameter("idViajero", idViajero);
         q = q.setParameter("idHabitacion", idHabitacion);
 
