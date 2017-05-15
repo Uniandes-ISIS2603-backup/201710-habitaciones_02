@@ -4,21 +4,40 @@
     mod.controller("viajeroCreateCtrl", ['$scope', '$http', 
         function ($scope, $http) 
         {
-            console.log("inicio del controlador");
+            
             $scope.viajero = {};
             $scope.signup = function () {
                 $http.post('api/viajeros', $scope.viajero)
-                        .then(function (data) {
-                    console.log(data);
-                });
+                    .then(function (data) {
+                        console.log(data);
+                    });
             };
         }]
     );
     
-    mod.controller("viajeroUpdateCtrl", ['$scope', '$http',
-        function($scope, $http){
+    mod.controller("viajeroUpdateCtrl", ['$scope', '$http','currentViajero','$stateParams', 
+        function($scope, $http, currentViajero, $stateParams ){
             
-            $scope.viajero = {};
+            $scope.update = function(){
+                
+                console.log(currentViajero);
+                
+                $http.put('api/viajeros/'+ $stateParams.viajeroId, currentViajero)
+                    .then(function(data){
+                        console.log(data);
+                    });
+            };
+            
+        }
+    ]);
+    
+    mod.controller("listReservControl", ['$scope', '$http','currentViajero',
+        function($scope, $http, currentViajero){
+            
+            $scope.rango = {};
+            $scope.update = function(){
+                
+            };
             
         }
     ]);
