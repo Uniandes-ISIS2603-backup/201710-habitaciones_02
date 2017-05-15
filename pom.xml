@@ -6,7 +6,10 @@
     <name>habitaciones-02</name>
     <packaging>pom</packaging>
     <version>0.1.0</version>
-    <modules></modules>
+    <modules>
+        <module>habitaciones-02-web</module>
+        <module>habitaciones-02-logic</module>
+    </modules>
     
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
