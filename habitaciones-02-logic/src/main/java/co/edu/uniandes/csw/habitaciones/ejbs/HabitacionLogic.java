@@ -109,6 +109,7 @@ public class HabitacionLogic {
                 problema = true;
             }
 
+            
         }
 
         if (problema) {
@@ -136,20 +137,25 @@ public class HabitacionLogic {
             problemas += "La informacion no esta completa:\n"
                     + "   -Area: <" + entity.getArea().toString() + ">\n"
                     + "   -Valor Alquier: <" + entity.getValorAlquiler().toString() + ">\n"
+                    + "   -Capacidad: <" + entity.getCapacidad().toString() + ">\n"
                     + "   -Ruta imagen: <" + entity.getRutaImagen() + ">\n"
                     + "   -Descripcion: <" + entity.getDescripcion() + ">\n";
             problema = true;
         } else {
             if (entity.getArea() <= 0) {
-                problemas += "El area debe ser mayor que cero. \n";
+                problemas += " El area debe ser mayor que cero. \n";
                 problema = true;
             }
 
             if (entity.getValorAlquiler() <= 0) {
-                problemas += "El valor del alquiler debe ser mayor que cero.";
+                problemas += " El valor del alquiler debe ser mayor que cero.";
                 problema = true;
             }
 
+            if (entity.getCapacidad() <= 0) {
+                problemas += " La capacidad debe ser mayor que cero.";
+                problema = true;
+            }
         }
 
         if (problema) {
