@@ -66,26 +66,27 @@
 
             });
 
-//            $stateProvider.state('filtrarViviendas', {
-//                url: '/ciudad/{ciudad:String}',
-//                parent: 'viviendasList',
-//                param: {
-//                    ciudad: null
-//                },
-//                resolve: {
-//                    viviendas: ['$http', '$scope', 'viviendasContext', function ($http, $params, viviendasContext) {
-//                            $params.vivienda = {};
-//                            $params.filtrar = function () {
-//                                return $http.get(viviendasContext + '/' + $params.vivienda.ciudad);
-//                            };
-//                        }]
-//                },
-//                views: {
-//                    'listview': {
-//                        templateUrl: basePath + 'vivienda.list.html'
-//                    }
-//                }
-//            });
+            $stateProvider.state('viviendaFiltrar', {
+                url: '/{viviendaCiudad}',
+                parent: 'viviendas',
+                param: {
+                    viviendaCiudad: null
+                },
+                resolve: {
+                    viviendas: ['$http', '$stateParams', 'viviendasContext', function ($http, $params, viviendasContext) {
+                            return $http.get(viviendasContext + '/' + $params.viviendaCiudad);
+                        }]
+                },
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'vivienda.list.html',
+                        controller: ['$scope', 'viviendas',
+                            function ($scope, viviendas) {
+                                $scope.viviendasRecords = viviendas.data;
+                            }]
+                    }
+                }
+            });
 
             $stateProvider.state('createVivienda', {
                 url: '/registrarVivienda',
@@ -95,25 +96,6 @@
                     }
                 }
             });
-
-//            $stateProvider.state('filtrarViviendas',{
-//                url: '/ciudad/{viviendaCiudad:String}',
-//                parent: 'viviendasList',
-//                param:{
-//                    viviendaCiudad:null
-//                },
-//                resolve:{
-//                    viviendas:['$http','viviendasContext','$stateParams','$http',
-//                        function($scope,viviendasContext,$stateParams,$http){
-//                            $stateParams = {};
-//                            $stateParams.ciudad = function()
-//                            {
-//                                return $http.get( viviendasContext + "/" + $stateParams.ciudad)
-//                            }
-//                        }
-//                    ]
-//                }
-//            })
         }
     ]);
 })(window.angular);
