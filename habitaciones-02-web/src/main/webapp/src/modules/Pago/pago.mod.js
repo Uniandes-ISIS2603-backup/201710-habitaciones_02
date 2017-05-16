@@ -5,7 +5,6 @@
         function ($stateProvider, $urlRouterProvider) {
 
             var basePath = 'src/modules/Pago/';
-            $urlRouterProvider.otherwise("/pagosList");
             $stateProvider.state('pagos', {
                 url: '/pagos',
                 abstract: true,

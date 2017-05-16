@@ -9,7 +9,6 @@
             var basePath = 'src/modules/Anfitrion/';
 
             var presente = 0;
-
             // Definición del estado 'anfitrionesList' 
             // donde se listan los anfitriones
             $stateProvider.state('anfitriones', {
@@ -52,7 +51,7 @@
                     },
                 },
             }).state('anfitrionCreate', {
-                url: '/',
+                url: '/signUp/anfitrion',
 
                 resolve: {
                     anfitriones: ['$http', function ($http) {
@@ -166,11 +165,16 @@
                     },
                     'detailView': {
                         templateUrl: basePath + 'anfitrion.detail.html',
-                        controller: ['$scope','$http', 'currentAnfitrion', '$stateParams',
-                            function ($scope, $http ,currentAnfitrion, $params) {
+                        controller: ['$state','$scope','$http', 'currentAnfitrion', '$stateParams',
+                            function ($state,$scope, $http ,currentAnfitrion, $params) {
                                 console.log($params.anfitrionId);
+                                const object={};
                                 $scope.delete =function(){
-                                     $http.delete('api/anfitriones'+$params.anfitrionId)   
+                                     $http.delete('api/anfitriones'+'/'+$params.anfitrionId, object).then(function(){
+                                       $state.go('anfitrionesList',{},{reload:true});  
+                                     });   
+                                     
+                                     
                                 }
 
 
