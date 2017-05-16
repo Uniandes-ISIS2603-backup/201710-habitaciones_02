@@ -8,11 +8,16 @@
             margin-left: 60px;
         }
         input.Creacion{
-            margin-left: 60px;
+            width: 80%; 
+            background-color: rgba(255,255,255,0.6);
+            border: 0; 
+            color: azure; 
+            font-size: 18px;
         }
         input.ng-invalid{
 
-            background-color: lightsalmon;
+            background-color: rgba(255,255,255,0.6);
+            border-bottom-color: brown;
         }
         input.ng-valid{
 
@@ -35,6 +40,8 @@
             </p>
             <br>
             <hr>
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="SignUp Viajero!" style="width: 100%; position: absolute; margin-top: -5px;">
 
             <div class="text-left">
 
@@ -46,51 +53,39 @@
 
                     </div>
 
-                    <div class=" thumbnail col-md-4" >
+                    <div class=" thumbnail col-md-5" style=" background-color: transparent; border: 0;">
 
-                        <h3 style="text-align: center; color: #286090">Información de Cuenta</h3><br>
+                        <h3 style="text-align: left; color: ghostwhite">Información Personal</h3><br>
 
-                        <b class="TextoCreacion">Correo Electrónico</b><br>
-                        <input class="Creacion" name="correoElectronico" type="email" size="40" ng-model='viajero.correoElectronico'required><br><br>
+                        <input class="form-control Creacion" name="nombre" type="text" placeholder="Nombre Completo" ng-model='viajero.nombre'required><br><br>
 
-                        <b class="TextoCreacion">Contraseña:</b><br>
-                        <input class="Creacion" type="password" name="contrasena" size="40" ng-model='viajero.contrasena' required><br><br>
+                        <input class="form-control Creacion" name="tipoDocumento" type="text" placeholder="Tipo Documento" ng-model='viajero.tipoDocumento'required><br><br>
 
-                        <b class="TextoCreacion">Repita nuevamente la contraseña:</b><br>
-                        <input class="Creacion" type="password" name="contrasenaV2" size="40"  required>
-                        <span ng-show="formaCreateV.contrasena.$touched && formaCreateV.contrasenaV2.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
+                        <input class="form-control Creacion" name="numeroDocumento" type="text" placeholder="Numero Documento" ng-model='viajero.numeroDocumento'required><br><br>
 
+                        <input class="form-control Creacion" name="direccion" type="text" placeholder="Dirección" ng-model='viajero.direccion'required><br><br>
 
-                        <input class="Creacion center-block" type="submit" value="Sign Up" style="font-size: 16px;">
+                        <input class="form-control Creacion" name="telefono" type="text" placeholder="Telefono" ng-model='viajero.telefono'required><br><br>
 
                     </div>
-
-
+                    
                     <div class="col-md-1">
 
 
 
                     </div>
+                    
+                    <div class=" thumbnail col-md-4" style=" margin-top: 100px; background-color: transparent; border: 0;">
 
-                    <div class=" thumbnail col-md-5">
+                        <h3 style="text-align: center; color: #286090">Información de Cuenta</h3><br>
 
-                        <h3 style="text-align: center; color: #286090">Información Personal</h3><br>
+                        <input id="email" type="email" class="form-control Creacion" name="email" placeholder="Email" ng-model='viajero.correoElectronico' placeholder="Correo Electronico" required><br>
 
-                        <b class="TextoCreacion">Nombre Completo:</b><br>
-                        <input class="Creacion" name="nombre" type="text" size="40" ng-model='viajero.nombre'required><br><br>
+                        <input class="form-control Creacion" type="password" name="contrasena" ng-model='viajero.contrasena' placeholder="Contraseña" required><br>
 
-                        <!-- Pede ser type='radio'?-->
-                        <b class="TextoCreacion">Tipo Documento</b><br>
-                        <input class="Creacion" name="tipoDocumento" type="text" size="40" ng-model='viajero.tipoDocumento'required><br><br>
-
-                        <b class="TextoCreacion">Número de Documento</b><br>
-                        <input class="Creacion" name="numeroDocumento" type="text" size="40" ng-model='viajero.numeroDocumento'required><br><br>
-
-                        <b class="TextoCreacion">Dirección</b><br>
-                        <input class="Creacion" name="direccion" type="text" size="40" ng-model='viajero.direccion'required><br><br>
-
-                        <b class="TextoCreacion">Telefono de Contacto</b><br>
-                        <input class="Creacion" name="telefono" type="text" size="40" ng-model='viajero.telefono'required><br><br>
+                        <input class="form-control Creacion" type="password" name="contrasenaV2"  placeholder="Repetir Contraseña" required><br>
+                        
+                        <input class="form-control center-block" type="submit" value="Sign Up" style="font-size: 16px;">
 
                     </div>
 

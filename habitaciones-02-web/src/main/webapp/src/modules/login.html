@@ -1,3 +1,5 @@
+
+<!-- Autor: Santaigo Cortés Fernández -->
 <div class="panel panel-default" style="border-color: #d1eeff;">
 
     <style>
@@ -35,33 +37,42 @@
             </p>
             <br>
             <hr>
-            <div class="col-md-4">
-
-            </div>
-            <div class="text-center">
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="login Usuario!" style="width: 100%; position: absolute; margin-top: -35px;">
+            
+            <div class="text-center" >
 
                 <form name="formaLogin"  style="align-content: center" novalidate>
 
-                    <div class=" thumbnail col-md-4" style="align-content: center">
+                    <div class=" thumbnail col-md-4" style="align-content: center; margin-top: 48px; background-color: transparent; border: 0;">
 
-                        <h3 style="text-align: center; color: #286090">Informacion de Cuenta</h3><br>
+                        <h2 style="text-align: center; color: seashell">Informacion de Cuenta</h2><br>
 
-                        <b class="TextoLogin">Correo Electronico</b><br>
-                        <input class="Creacion" name="correoElectronico" type="email" size="40" ng-model='correoElectronico'required><br><br>
+                        <div class="input-group" style="margin-left:70px;">
+                            <span class="input-group-addon" style="color: honeydew; background-color: #045377; border: 0;"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email" type="email" class="form-control" style="width: 80%; background-color: rgba(0,0,0,0.6); border: 0; color: azure; font-size: 18px;" name="email" placeholder="Email">
+                        </div>
+                        
+                        <br>
+                        
+                        <div class="input-group" style="margin-left:70px;">
+                            <span class="input-group-addon" style="color: honeydew; background-color: #045377; border: 0;"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" style="width: 80%; background-color: rgba(0,0,0,0.6); border: 0; color: azure; font-size: 18px;" name="password" placeholder="Password">
+                        </div>
+                        
+                        <br>
+                        
+                        <input  type="submit" value="Ingresar" style="font-size: 18px; color: #08234f; width: 40%;">
 
-                        <b class="TextoLogin">Contraseña:</b><br>
-                        <input class="Creacion" type="password" name="contrasenaV1" size="40" ng-model='contrasena' required><br><br>
-
-                        <input  type="submit" value="Log in" style="font-size: 16px;">
-
+                        <br>
+                        
                     </div>
 
                 </form>
 
             </div>
-            <div class="col-md-4">
-
-            </div>
-        </div>    
+            
+        </div>
+        
     </div>
 </div>

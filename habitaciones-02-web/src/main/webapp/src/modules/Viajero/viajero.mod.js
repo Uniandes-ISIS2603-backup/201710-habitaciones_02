@@ -84,16 +84,24 @@
                 url: '/reservas',
                 parent: 'viajeroDetail',
                 
+                resolve:{
+                    listaReservas:['$http', 'viajeroContext', '$stateParams', 
+                        function ($http, viajeroContext, $params) 
+                        {
+                            return $http.get(viajeroContext + '/'
+                                    + $params.viajeroId + '/' + 'reservas');
+                        }
+                    ]
+                },
                 param: {
                     viajeroId: null
                 },
                 views: {
-                    'ListasViajeroView':{
+                        'ListasViajeroView':{
                         templateUrl: basePath + 'viajero.reservas.list.html',
-                        //hereda el currentViajero del viajeroDetail??
+                        
                         controller: 'listReservControl'
-                        //Yo puedo llamar las reservas del viajero 
-                        //desde HTML en vez de en el controlador?
+
                     }
                 } 
             });
