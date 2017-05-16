@@ -33,10 +33,11 @@
         }
     ]);
     
-    mod.controller("listReservControl", ['$scope','listaReservas',
+    mod.controller("listReservControl", ['$scope', '$http','listaReservas', '$state',
         function($scope,  listaReservas, $state)
         {
             $scope.RecordsReservas = listaReservas.data;
+
         }
     ]);
 

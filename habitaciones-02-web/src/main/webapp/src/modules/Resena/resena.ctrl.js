@@ -40,9 +40,32 @@
         }]
     );
     
-    mod.controller("resenaListCtrl", ['$scope', 'resenas',
-        function ($scope, resenas)
+    mod.controller("resenaViajeroListCtrl", ['$scope', '$http', '$stateParams', 'resenas',
+        function ($scope, $http, $stateParams, resenas)
         {
             $scope.RecordsResena = resenas.data;
+            
+            $scope.rango = {
+                min: 0,
+                max: 5
+            };
+            
+            $scope.cambiarMin = function(otroMin){
+                $scope.rango.min = otroMin;
+            };
+            
+            $scope.cambiarMax = function(otroMax){
+                $scope.rango.max = otroMax;
+            };
+            
+            $scope.filtrar = function(){
+                $http.get('api/resenas/'+$stateParams.viajeroId + '/'
+                            + $scope.rango.min + '/'
+                            + $scope.rango.max)
+                    .then(function(lista){
+                        
+                        $scope.RecordsResena = lista.data;
+                });
+            };
         }]);
 })(window.angular);

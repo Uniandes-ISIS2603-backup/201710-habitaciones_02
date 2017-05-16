@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/05/2017, 04:19:54 PM
+    Author     : s.cortes
+*/
+
+/* ESTILOS DE USUARIOS */
+
+    /* VISTAS LOGIN & SIGNUP */
+    
+input.form-control::placeholder{
+    color: white;
+}
+input.form-control{
+    width: 75%; 
+    background-color: rgba(0,0,0,0.6); 
+    border: 0; 
+    color: azure; 
+    font-size: 18px;
+
+}
+input.usuarios.ng-valid:not(#vcont2){
+
+    background-color: rgba(0,255,191,0.65);
+    color: black;
+}
+        /* VISTA LOGIN */
+        
+div#loginID1{
+    align-content: center;
+    margin-top: 48px; 
+    background-color: transparent; 
+    border: 0;
+}
+h2#loginID2{
+    text-align: center; 
+    color: seashell
+}
+
+div#loginID3,
+div#loginID5{
+    margin-left:70px;
+}
+
+span#loginID4,
+span#loginID6{
+    color: honeydew; 
+    background-color: #045377; 
+    border: 0;
+}
+
+img#loginID7{
+    width: 100%; 
+    position: absolute; 
+    margin-top: -35px;
+}
+
+input#loginID8{
+    font-size: 18px;
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+    color: #045377; 
+    width: 40%;
+}
+h2#loginID9{
+    text-align: center;
+}
+
+p#loginID10{
+    text-align: justify;
+    font-size: 14px;
+    text-align: center;
+}
+
+form#loginID11{
+    align-content: center
+}
+
+
+        /* VISTA SIGNUP */
+        
+img#idSingV1{
+    width: 100%; 
+    position: absolute; 
+    margin-top: -5px;     
+}
+
+div#idSingV2{
+    background-color: transparent; 
+    border: 0;
+}
+h3#idSingV3{
+    text-align: left; 
+    color: ghostwhite
+}
+
+div#idSingV4{
+    margin-top: 75px; 
+    background-color: transparent;
+    border: 0;
+}
+
+h2#idSingV5{
+    text-align: left; 
+    color: #045377
+}
+
+input#idSingV6{
+    font-size: 18px;
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+    color: #045377; 
+    width: 40%;
+    margin-left: 50px;
+}
+
+h2#idSingV7{
+    text-align: center;
+}
+
+p#idSingV8{
+    text-align: justify;
+    font-size: 14px; 
+    text-align: center;
+}
+        

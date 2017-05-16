@@ -1,35 +1,14 @@
 
 <!-- Autor: Santaigo Cortés Fernández -->
 <div class="panel panel-default" style="border-color: #d1eeff;">
-
-    <style>
-
-        b.TextoCreacion{
-
-            font-size: 16px;
-            margin-left: 0px;
-        }
-        input.Creacion{
-            margin-left: 0px;
-        }
-        input.ng-invalid{
-
-            background-color: lightsalmon;
-        }
-        input.ng-valid{
-
-            background-color: lightblue;
-        }
-
-    </style>
-
+    
     <div class="panel-body">
 
         <div class="row">
 
-            <h2 style="text-align: center;">Iniciar Sesión <br></h2>
+            <h2 id="loginID9">Iniciar Sesión <br></h2>
 
-            <p style="text-align: justify; font-size: 14px; text-align: center;">
+            <p id="loginID10">
                 ¡Bienvenido Usuario! ¡Estás a punto de acceder a la pagina de reserva de habitaciones mas grande de la
                 clase de Desarrollo de Software en Equipo!<br>
                 A continuación, ingresa tus datos de acceso a nuestro sistema. <br>
@@ -38,31 +17,31 @@
             <br>
             <hr>
             
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="login Usuario!" style="width: 100%; position: absolute; margin-top: -35px;">
+            <img id="loginID7" src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="login Usuario!">
             
             <div class="text-center" >
 
-                <form name="formaLogin"  style="align-content: center" novalidate>
+                <form id="loginID11" name="formaLogin"   novalidate>
 
-                    <div class=" thumbnail col-md-4" style="align-content: center; margin-top: 48px; background-color: transparent; border: 0;">
+                    <div id="loginID1" class=" thumbnail col-md-4">
 
-                        <h2 style="text-align: center; color: seashell">Informacion de Cuenta</h2><br>
+                        <h2 id="loginID2">Informacion de Cuenta</h2><br>
 
-                        <div class="input-group" style="margin-left:70px;">
-                            <span class="input-group-addon" style="color: honeydew; background-color: #045377; border: 0;"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="email" type="email" class="form-control" style="width: 80%; background-color: rgba(0,0,0,0.6); border: 0; color: azure; font-size: 18px;" name="email" placeholder="Email">
+                        <div id="loginID3" class="input-group">
+                            <span id="loginID4" class="input-group-addon" ><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email" type="email" class="form-control" name="email" placeholder="Email" required>
                         </div>
                         
                         <br>
                         
-                        <div class="input-group" style="margin-left:70px;">
-                            <span class="input-group-addon" style="color: honeydew; background-color: #045377; border: 0;"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="password" type="password" class="form-control" style="width: 80%; background-color: rgba(0,0,0,0.6); border: 0; color: azure; font-size: 18px;" name="password" placeholder="Password">
+                        <div id="loginID5" class="input-group">
+                            <span id="loginID6" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
                         </div>
                         
                         <br>
                         
-                        <input  type="submit" value="Ingresar" style="font-size: 18px; color: #08234f; width: 40%;">
+                        <input id="loginID8" type="submit" value="Ingresar">
 
                         <br>
                         

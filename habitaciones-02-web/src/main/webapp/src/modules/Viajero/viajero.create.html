@@ -1,38 +1,12 @@
 <div class="panel panel-default" style="border-color: #d1eeff;">
 
-    <style>
-
-        b.TextoCreacion{
-
-            font-size: 16px;
-            margin-left: 60px;
-        }
-        input.Creacion{
-            width: 80%; 
-            background-color: rgba(255,255,255,0.6);
-            border: 0; 
-            color: azure; 
-            font-size: 18px;
-        }
-        input.ng-invalid{
-
-            background-color: rgba(255,255,255,0.6);
-            border-bottom-color: brown;
-        }
-        input.ng-valid{
-
-            background-color: lightblue;
-        }
-
-    </style>
-
     <div class="panel-body">
 
         <div class="row">
 
-            <h2 style="text-align: center;">Sign Up Viajero<br></h2>
+            <h2 id="idSingV7">Sign Up Viajero<br></h2>
 
-            <p style="text-align: justify; font-size: 14px; text-align: center;">
+            <p id="idSingV8">
                 ¡Bienvenido Viajero! ¡Estás a punto de registrar en la pagina de reserva de habitaciones mas grande de la
                 clase de Desarrollo de Software en Equipo!<br>
                 A continuación, deberás ingresar algunos datos personales que son indispensables para la creacion de tu nueva cuenta. <br>
@@ -41,7 +15,7 @@
             <br>
             <hr>
             
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="SignUp Viajero!" style="width: 100%; position: absolute; margin-top: -5px;">
+            <img id="idSingV1" src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="SignUp Viajero!">
 
             <div class="text-left">
 
@@ -53,42 +27,42 @@
 
                     </div>
 
-                    <div class=" thumbnail col-md-5" style=" background-color: transparent; border: 0;">
+                    <div id="idSingV2" class=" thumbnail col-md-5">
 
-                        <h3 style="text-align: left; color: ghostwhite">Información Personal</h3><br>
+                        <h3 id="idSingV3">Información Personal</h3><br>
 
-                        <input class="form-control Creacion" name="nombre" type="text" placeholder="Nombre Completo" ng-model='viajero.nombre'required><br><br>
+                        <input class="form-control usuarios" name="nombre" type="text" placeholder="Nombre Completo" ng-model='viajero.nombre'required><br><br>
 
-                        <input class="form-control Creacion" name="tipoDocumento" type="text" placeholder="Tipo Documento" ng-model='viajero.tipoDocumento'required><br><br>
+                        <input class="form-control usuarios" name="tipoDocumento" type="text" placeholder="Tipo Documento" ng-model='viajero.tipoDocumento'required><br><br>
 
-                        <input class="form-control Creacion" name="numeroDocumento" type="text" placeholder="Numero Documento" ng-model='viajero.numeroDocumento'required><br><br>
+                        <input class="form-control usuarios" name="numeroDocumento" type="text" placeholder="Numero Documento" ng-model='viajero.numeroDocumento'required><br><br>
 
-                        <input class="form-control Creacion" name="direccion" type="text" placeholder="Dirección" ng-model='viajero.direccion'required><br><br>
+                        <input class="form-control usuarios" name="direccion" type="text" placeholder="Dirección" ng-model='viajero.direccion'required><br><br>
 
-                        <input class="form-control Creacion" name="telefono" type="text" placeholder="Telefono" ng-model='viajero.telefono'required><br><br>
-
-                    </div>
-                    
-                    <div class="col-md-1">
-
-
+                        <input class="form-control usuarios" name="telefono" type="text" placeholder="Telefono" ng-model='viajero.telefono'required><br><br>
 
                     </div>
                     
-                    <div class=" thumbnail col-md-4" style=" margin-top: 100px; background-color: transparent; border: 0;">
+                    
+                    <div id="idSingV4" class=" thumbnail col-md-4">
 
-                        <h3 style="text-align: center; color: #286090">Información de Cuenta</h3><br>
+                        <h2 id="idSingV5">Información de Cuenta</h2><br>
 
                         <input id="email" type="email" class="form-control Creacion" name="email" placeholder="Email" ng-model='viajero.correoElectronico' placeholder="Correo Electronico" required><br>
 
-                        <input class="form-control Creacion" type="password" name="contrasena" ng-model='viajero.contrasena' placeholder="Contraseña" required><br>
+                        <input class="form-control usuarios" type="password" name="contrasena" ng-model='viajero.contrasena' placeholder="Contraseña" required><br>
 
-                        <input class="form-control Creacion" type="password" name="contrasenaV2"  placeholder="Repetir Contraseña" required><br>
+                        <input class="form-control usuarios" type="password" name="contrasenaV2" id="vcont2" ng-model='usuario.segundaContraseña'  placeholder="Repetir Contraseña" required ><br>
                         
-                        <input class="form-control center-block" type="submit" value="Sign Up" style="font-size: 16px;">
+                        <input id="idSingV6" class="center-block" type="submit" value="Sign Up">
 
                     </div>
 
+                    <div class="col-md-1">
+
+                        <!-- ALGO -->
+
+                    </div>
 
                 </form>
 
