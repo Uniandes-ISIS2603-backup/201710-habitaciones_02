@@ -85,7 +85,7 @@ public class AnfitrionPersistenceTest {
     }
     
     @Test
-    public void createAnfitrion() {
+    public void testCreateAnfitrion() {
         AnfitrionEntity entity = factory.manufacturePojo(AnfitrionEntity.class);
         
         AnfitrionEntity result = anfitrionPersistence.create(entity);
@@ -100,7 +100,7 @@ public class AnfitrionPersistenceTest {
     }
     
     @Test
-    public void getAnfitrionesTest(){
+    public void testGetAnfitriones(){
         List<AnfitrionEntity> list = anfitrionPersistence.findAll();
         Assert.assertEquals(list.size(), data.size());
         for (AnfitrionEntity anfitrionEntity : list) {
@@ -117,7 +117,7 @@ public class AnfitrionPersistenceTest {
     }
     
     @Test 
-    public void getAnfitrionTest(){
+    public void testGetAnfitrion(){
         AnfitrionEntity entity = data.get(0);
         AnfitrionEntity e2 = anfitrionPersistence.find(entity.getIdUsuario());
         Assert.assertNotNull(e2);
@@ -126,21 +126,21 @@ public class AnfitrionPersistenceTest {
     }
     
     @Test 
-    public void getAnfitrionByIDTestNull(){
+    public void testGetAnfitrionByIDNull(){
        boolean e2 = true;
        e2 = anfitrionPersistence.findByDocumento("");
        Assert.assertFalse(e2);
     }
     
     @Test
-    public void getAnfitrionByIDTestTrue(){
+    public void testGetAnfitrionByIDTrue(){
         boolean existe = false;
         AnfitrionEntity entity = data.get(0);
         existe = anfitrionPersistence.findByDocumento(entity.getNumeroDocumento());
         Assert.assertTrue(existe);
     }
     @Test
-    public void deleteAnfitrionTest(){
+    public void testDeleteAnfitrion(){
         AnfitrionEntity entity = data.get(0);
         anfitrionPersistence.delete(entity.getIdUsuario());
         AnfitrionEntity e2 = anfitrionPersistence.find(entity.getIdUsuario());
@@ -150,7 +150,7 @@ public class AnfitrionPersistenceTest {
     
     @Test
     
-    public void updateAnfitrionTest(){
+    public void testUpdateAnfitrion(){
         AnfitrionEntity entity = data.get(0);
         AnfitrionEntity update = factory.manufacturePojo(AnfitrionEntity.class);
         update.setIdUsuario(entity.getIdUsuario());

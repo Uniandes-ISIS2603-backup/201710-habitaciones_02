@@ -25,6 +25,7 @@ package co.edu.uniandes.csw.habitaciones.entities;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -60,7 +61,7 @@ public class HabitacionEntity implements Serializable
     private List<DisponibilidadEntity> disponibilidades;
 
     @PodamExclude
-    @OneToMany(mappedBy = "habitacion")
+    @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL)
     private List<ReservaEntity> reservas;
 
     @PodamExclude
