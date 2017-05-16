@@ -38,11 +38,11 @@ import uk.co.jemos.podam.common.PodamExclude;
 @Entity
 public class AnfitrionEntity extends UsuarioEntity {
 
-   
+    @PodamExclude
     @OneToMany(mappedBy = "anfitrion", cascade = CascadeType.ALL)
     private List<ViviendaEntity> viviendas;
 
-    
+    @PodamExclude
     @OneToMany(mappedBy = "anfitrion", cascade = CascadeType.ALL)
     private List<ReservaEntity> reservas;
 
