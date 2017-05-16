@@ -36,15 +36,14 @@ import uk.co.jemos.podam.common.PodamExclude;
  * @author df.sanabria761
  */
 @Entity
-@PrimaryKeyJoinColumn(referencedColumnName = "idUsuario")
 public class AnfitrionEntity extends UsuarioEntity {
 
     @PodamExclude
-    @OneToMany(mappedBy = "anfitrion")
+    @OneToMany(mappedBy = "anfitrion", cascade = CascadeType.ALL)
     private List<ViviendaEntity> viviendas;
 
     @PodamExclude
-    @OneToMany(mappedBy = "anfitrion")
+    @OneToMany(mappedBy = "anfitrion", cascade = CascadeType.ALL)
     private List<ReservaEntity> reservas;
 
     public List<ReservaEntity> getReservas() {
