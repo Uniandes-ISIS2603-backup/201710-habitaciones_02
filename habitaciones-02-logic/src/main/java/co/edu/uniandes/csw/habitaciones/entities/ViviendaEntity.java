@@ -33,6 +33,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
@@ -67,12 +68,16 @@ public class ViviendaEntity implements Serializable
     /**
      * Relacion one to many entre vivienda y habitacion
      */
-    @OneToMany( mappedBy = "vivienda", cascade =CascadeType.ALL )
+
+    @PodamExclude
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "vivienda")
+
     private List<HabitacionEntity> habitacion;
 
     /**
      * Relacion many to one entre vivienda y anfitrion
      */
+    @PodamExclude
     @ManyToOne
     private AnfitrionEntity anfitrion;
 

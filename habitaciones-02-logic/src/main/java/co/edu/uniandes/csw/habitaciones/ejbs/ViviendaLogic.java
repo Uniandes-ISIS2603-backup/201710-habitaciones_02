@@ -103,4 +103,9 @@ public class ViviendaLogic
     {
         persistence.delete(id);
     }
+    
+    public List<ViviendaEntity> buscarPorCiudad(String pCiudad)
+    {
+        return persistence.buscarPorCiudad(pCiudad);
+    }
 }

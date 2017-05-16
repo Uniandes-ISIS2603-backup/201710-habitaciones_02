@@ -96,11 +96,27 @@
                 },
                 views: {
                     'resenaUpdateView':{
-                        templateUrl: basePath + 'resena.update.html'
-
+                        templateUrl: basePath + 'resena.update.html',
+                        controller: 'resenaUpdateCtrl'
                     }
                 } 
             });
+            $stateProvider.state('resenaCreate', {
+                url: '/{viajeroId:int}/{habitacionId:int}/create',
+                parent: 'resena',
+                
+                param: {
+                    viajeroId: null,
+                    habitacionId: null
+                },
+                views: {
+                    'detailView':{
+                        templateUrl: basePath + 'resena.create.html',
+                        controller: 'resenaCreateCtrl'
+                    }
+                } 
+            });
+            
 
             $stateProvider.state('resenaDetailHabitacion', {
 

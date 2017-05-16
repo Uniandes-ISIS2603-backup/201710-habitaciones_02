@@ -130,7 +130,7 @@ public class ResenaResource
         {
             throw new WebApplicationException(ERROR_404);
         }
-        ResenaDetailDTO resena = new ResenaDetailDTO();
+        ResenaDetailDTO resena = new ResenaDetailDTO(entity);
         return resena;
     }
 

@@ -6,7 +6,7 @@
 
             <div class="col-sm-1 col-md-1"> <b>Filtrar: </b></div>
             <div class="col-sm-11 col-md-11"> 
-                <form> 
+                <form name="formaBusqReserva"  novalidate ng-submit="buscarResenaRango()">
                     Fecha Inicio: <input type="date" name="fechaInicioEstadia">
                     Fecha fin: <input type="date" name="fechaTerminacionEstadia">
                     <input type="submit" value="submit">
@@ -18,28 +18,36 @@
 
         <hr>
 
-        <div class = "row" style="margin-top: 10px;">
+        <div class = "row" style="margin-top: 10px; overflow: auto;">
 
-            <div class="col-sm-3 col-md-3" ng-repeat="reserva in currentViajero.reservas">
-                <div class="thumbnail" >
-
-                    <dl>
-                        <dt>Numero Reserva</dt>
-                        <dd>{{reserva.id}}</dd>
-
-                        <dt>Fecha Inicio</dt>
-                        <dd>{{reserva.fechaInicioEstadia}}</dd>
-
-                        <dt>Fecha Fin</dt>
-                        <dd>{{reserva.fechaTerminacionEstadia}}</dd>
-
-                    </dl>
-                    <div class="text-center">
+            <div class="thumbnail row" style="width: 95%; margin-left: 20px" ng-repeat="reserva in RecordsReservas">
+                
+                    <div class="col-sm-3 col-md-3 text-center">
+                        
+                        <b>Reserva #{{reserva.id}}</b><br>
                         <a ui-sref="reservaDetail({reservaId: reserva.id})">
                             <b style="color: lightblue;"> mas informacion</b>
                         </a>
+                        
                     </div>
-                </div>
+                    
+                <div class="col-sm-6 col-md-6" style="text-align: center;">
+                            
+                        <b>Fecha Inicio: </b>{{reserva.fechaInicio}}
+                        <br>
+                        <b>Fecha Fin: </b>{{reserva.fechaTerminacion}}
+
+                    </div>
+                    
+                    <div class="col-sm-3 col-md-3">
+ 
+                        <a ui-sref="resenaCreate({viajeroId: reserva.viajero.idUsuario, habitacionId: reserva.habitacion.id,})">
+                            <!--button type="button"-->
+                                <b style="color: dodgerblue;"> Escribir Reseña</b>
+                                
+                            <!--/button-->
+                        </a>
+                    </div>
 
             </div>
         </div>

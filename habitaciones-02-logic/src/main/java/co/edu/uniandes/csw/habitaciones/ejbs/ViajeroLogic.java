@@ -75,13 +75,21 @@ public class ViajeroLogic
      *
      * @param entity la entidad que desea actualizar
      * @return la entidad actualizada
+     * @throws BusinessLogicException
      */
     public ViajeroEntity updateViajero(ViajeroEntity entity) throws BusinessLogicException
     {
         if (!entity.informacionCompleta())
         {
             throw new BusinessLogicException("Algunos de los datos para registrase"
-                    + " no fueron ingresados. Por favor, intente nuevamente");
+                    + " no fueron ingresados. Por favor, intente nuevamente ["
+                    + "contraseña: "+entity.getContrasena()
+                    + ", correo: " + entity.getCorreoElectronico()
+                    + ", direccion: " + entity.getDireccion()
+                    + ", nombre " + entity.getNombre()
+                    + ", tipoD: " + entity.getTipoDocumento()
+                    + ", telefono: " + entity.getTelefono()
+                    + ", numeroD: " + entity.getNumeroDocumento() + "]");
         }
         return persistence.update(entity);
     }
