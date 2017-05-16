@@ -8,7 +8,9 @@
                 <form name="formaFiltrrar" ng-submit="filtrar()">
                      <b style="color: #1b6d85">Ciudad:  </b>
                      <input type="text" name="ciudad" ng-model="vivienda.ciudad">
-                <input type="submit" value="Filtrar">
+                     <a ui-sref="viviendaFiltrar({viviendaCiudad: vivienda.ciudad})">
+                          <input type="submit" value="Filtrar">
+                     </a>
                 </form>
             </div>
         <div class="col-md-2">
