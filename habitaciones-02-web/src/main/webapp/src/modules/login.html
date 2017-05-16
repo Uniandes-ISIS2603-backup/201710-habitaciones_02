@@ -1,33 +1,14 @@
+
+<!-- Autor: Santaigo Cortés Fernández -->
 <div class="panel panel-default" style="border-color: #d1eeff;">
-
-    <style>
-
-        b.TextoCreacion{
-
-            font-size: 16px;
-            margin-left: 0px;
-        }
-        input.Creacion{
-            margin-left: 0px;
-        }
-        input.ng-invalid{
-
-            background-color: lightsalmon;
-        }
-        input.ng-valid{
-
-            background-color: lightblue;
-        }
-
-    </style>
-
+    
     <div class="panel-body">
 
         <div class="row">
 
-            <h2 style="text-align: center;">Iniciar Sesión <br></h2>
+            <h2 id="loginID9">Iniciar Sesión <br></h2>
 
-            <p style="text-align: justify; font-size: 14px; text-align: center;">
+            <p id="loginID10">
                 ¡Bienvenido Usuario! ¡Estás a punto de acceder a la pagina de reserva de habitaciones mas grande de la
                 clase de Desarrollo de Software en Equipo!<br>
                 A continuación, ingresa tus datos de acceso a nuestro sistema. <br>
@@ -35,33 +16,42 @@
             </p>
             <br>
             <hr>
-            <div class="col-md-4">
+            
+            <img id="loginID7" src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="login Usuario!">
+            
+            <div class="text-center" >
 
-            </div>
-            <div class="text-center">
+                <form id="loginID11" name="formaLogin"   novalidate>
 
-                <form name="formaLogin"  style="align-content: center" novalidate>
+                    <div id="loginID1" class=" thumbnail col-md-4">
 
-                    <div class=" thumbnail col-md-4" style="align-content: center">
+                        <h2 id="loginID2">Informacion de Cuenta</h2><br>
 
-                        <h3 style="text-align: center; color: #286090">Informacion de Cuenta</h3><br>
+                        <div id="loginID3" class="input-group">
+                            <span id="loginID4" class="input-group-addon" ><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email" type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+                        
+                        <br>
+                        
+                        <div id="loginID5" class="input-group">
+                            <span id="loginID6" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                        
+                        <br>
+                        
+                        <input id="loginID8" type="submit" value="Ingresar">
 
-                        <b class="TextoLogin">Correo Electronico</b><br>
-                        <input class="Creacion" name="correoElectronico" type="email" size="40" ng-model='correoElectronico'required><br><br>
-
-                        <b class="TextoLogin">Contraseña:</b><br>
-                        <input class="Creacion" type="password" name="contrasenaV1" size="40" ng-model='contrasena' required><br><br>
-
-                        <input  type="submit" value="Log in" style="font-size: 16px;">
-
+                        <br>
+                        
                     </div>
 
                 </form>
 
             </div>
-            <div class="col-md-4">
-
-            </div>
-        </div>    
+            
+        </div>
+        
     </div>
 </div>
