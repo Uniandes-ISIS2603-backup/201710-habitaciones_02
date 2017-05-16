@@ -145,7 +145,7 @@
                                     + $params.anfitrionId);
 
                         }]},
-
+               
                 views: {
                     'anfitrionCarouselView': {
                         templateUrl: basePath + 'anfitrion.carousel.html',
@@ -166,10 +166,12 @@
                     },
                     'detailView': {
                         templateUrl: basePath + 'anfitrion.detail.html',
-                        controller: ['$scope', 'currentAnfitrion', '$stateParams',
-                            function ($scope, currentAnfitrion, $params) {
-
-
+                        controller: ['$scope','$http', 'currentAnfitrion', '$stateParams',
+                            function ($scope, $http ,currentAnfitrion, $params) {
+                                console.log($params.anfitrionId);
+                                $scope.delete =function(){
+                                     $http.delete('api/anfitriones'+$params.anfitrionId)   
+                                }
 
 
                                 $scope.currentAnfitrion = currentAnfitrion.data;
