@@ -114,6 +114,14 @@ public class ViviendaResource
         }
         return new ViviendaDetailDTO(viviendaLogic.getVivienda(id));
     }
+    
+    @GET
+    @Path("{ciudad}")
+    public List<ViviendaDTO> getViviendas(@PathParam("ciudad") String ciudad)
+    {
+        List<ViviendaEntity> list = viviendaLogic.buscarPorCiudad(ciudad);
+            return  listEntity2DTO(list);
+    }
 
     /**
      * @param dto viviendaDetailDTO a agregar
