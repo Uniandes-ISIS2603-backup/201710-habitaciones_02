@@ -1,23 +1,17 @@
-    
 <div class="panel panel-default"> 
-
-    <style>
-        dt{
-            text-align: center;
-        }
-        dd{
-            text-align: center;
-        }
-    </style>
     <div class="panel-body">
-
-        <div class="col-md-3">
-            <div class="row">
-                <div class="thumbnail">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumb">
                     <img class="img-responsive" ng-src="{{currentHabitacion.rutaImagen}}"/>
                 </div>
+                <p>
+                      </p>
+                <a ui-sref="updateHabitacion" >
+                                <dt>Actualizar Informaci&oacute;n</dt>
+                                </a>
             </div>
-            <div class="row">
+            <div class="col-md-3">
                 <dl>     
                     <dt style="font-size: 20px"> Habitacion </dt>
                     <hr>
@@ -34,104 +28,79 @@
                     <dd>{{currentHabitacion.descripcion}}</dd>
                 </dl>
             </div>
-        </div>
-        <div class="col-md-9">
-            <nav style="background-color: white; border-color: #286090" class="navbar navbar-default">
-                <div class="col-md-6">
-                    <ul class="nav navbar-nav">
-                        <li><a ui-sref="viajeroReservasList"><b>Reservas</b></a></li>
-                        <li><a ui-sref="viajeroResenasList"><b>Reseñas Redactadas</b></a></li>  
-                    </ul>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
 
-                </div>
-                <div class="col-md-6">
+                        <div class="col-md-6">
+                            <dt style="font-size: 20px "> Disponibilidades    </dt>
+                            <hr>
+                            <ul ng-repeat="disponibilidad in currentHabitacion.disponibilidades">
+                               
+                                <dt>Disponibilidad: {{disponibilidad.id}}</dt>
+                                </a>
+                                <dd>Fecha inicio estadía: {{disponibilidad.fechaInicioEstadia}}</dd>
+                                <dd>Fecha terminación estadía: {{disponibilidad.fechaTerminacionEstadia}}</dd>
+                            </ul> 
+                            
 
-                    <ul class="nav navbar-nav text-right">
-                        <li><a ui-sref="viajeroUpdate"><span class="glyphicon glyphicon-pencil"></span><b> Actualizar Infromacion de Perfil</b></a></li>
-                        <li><a ui-sref="viajeroUpdate"><span class="glyphicon glyphicon-remove" style="color: #d43f3a"></span><b style="color: #d43f3a"> Eliminar Cuenta</b></a></li>
-                    </ul>
-
-                </div>
-
-
-            </nav>
-            <div class="panel panel-default">
-                <div class="panel-body">
-
-                    <div class="col-md-6">
-                        <dt style="font-size: 20px "> Disponibilidades    </dt>
-                        <hr>
-                        <ul ng-repeat="disponibilidad in currentHabitacion.disponibilidades">
-
-                            <dt>Disponibilidad: {{disponibilidad.id}}</dt>
-                            </a>
-                            <dd>Fecha inicio estadía: {{disponibilidad.fechaInicioEstadia}}</dd>
-                            <dd>Fecha terminación estadía: {{disponibilidad.fechaTerminacionEstadia}}</dd>
-                        </ul> 
-
-
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
+            
+                <div class="panel panel-default">
+                    <div class="panel-body">
 
-                    <div class="col-md-6">
-                        <dt style="font-size: 20px "> Reservas    </dt>
-                        <ul ng-repeat="reserva in currentHabitacion.reservas">
-                            <a ui-sref="reservaDetail({reservaId: reserva.id})" >
+                        <div class="col-md-6">
+                            <dt style="font-size: 20px "> Reservas    </dt>
+                            <ul ng-repeat="reserva in currentHabitacion.reservas">
+                                <a ui-sref="reservaDetail({reservaId: reserva.id})" >
                                 <dt>Reserva: {{reserva.id}}</dt>
-                            </a>
-                            <dd>Precio: {{reserva.precio}}</dd>
-                            <dd>Fecha inicio estadía: {{reserva.fechaInicioEstadia}}</dd>
-                            <dd>Fecha terminación estadía: {{reserva.fechaTerminacionEstadia}}</dd>
-                        </ul> 
+                                </a>
+                                <dd>Precio: {{reserva.precio}}</dd>
+                                <dd>Fecha inicio estadía: {{reserva.fechaInicioEstadia}}</dd>
+                                <dd>Fecha terminación estadía: {{reserva.fechaTerminacionEstadia}}</dd>
+                            </ul> 
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
+            
+                <div class="panel panel-default">
+                    <div class="panel-body">
 
-                    <div class="col-md-6">
-                        <dt style="font-size: 20px "> Reseñas    </dt>
-                        <ul ng-repeat="resena in recordsResenas">
-                            <a ui-sref="resenaDetailHabitacion({resenaId: resena.id})" >
-                                <dt>Reserva: {{resena.id}}</dt>
-                            </a>
-                            <dd>Calificación: {{resena.calificacion}}</dd>
-                            <dd>Comentario: {{resena.comentario}}</dd>
-                        </ul> 
+                        <div class="col-md-6">
+                            <dt style="font-size: 20px "> Reseñas    </dt>
+                            <ul ng-repeat="resena in recordsResenas">
+                                <a ui-sref="resenaDetailHabitacion({resenaId: resena.id})" >
+                                <dt>Resena: {{resena.id}}</dt>
+                                </a>
+                                <dd>Calificación: {{resena.calificacion}}</dd>
+                                <dd>Comentario: {{resena.comentario}}</dd>
+                            </ul> 
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
+            
+                <div class="panel panel-default">
+                    <div class="panel-body">
 
-                    <div class="col-md-6">
-                        <dt style="font-size: 20px "> Vivienda    </dt>
-                        <ul ng-repeat="vivienda in currentHabitacion.vivienda">
-                            <a ui-sref="viviendaDetail({viviendaId: vivienda.id})" >
+                        <div class="col-md-6">
+                            <dt style="font-size: 20px "> Vivienda    </dt>
+                            <ul ng-repeat="vivienda in currentHabitacion.vivienda">
+                                <a ui-sref="viviendaDetail({viviendaId: vivienda.id})" >
                                 <dt>Vivienda: {{vivienda.id}}</dt>
-                            </a>
-                            <dd>Ciudad: {{vivienda.ciudad}}</dd>
-                            <dd>Dirección: {{vivienda.direccion}}</dd>
-                        </ul> 
+                                </a>
+                                <dd>Ciudad: {{vivienda.ciudad}}</dd>
+                                <dd>Dirección: {{vivienda.direccion}}</dd>
+                            </ul> 
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+       
     </div>
-    <div class="row">
-        <div ui-view="childrenDetail"></div>
-    </div>
-</div>
 </div>
