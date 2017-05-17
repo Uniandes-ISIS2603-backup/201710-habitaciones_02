@@ -166,7 +166,7 @@ public class DisponibilidadLogicTest {
     @Test
     public void findResenas() {
         List<DisponibilidadEntity> lista = logic.getDisponibilidades(dataHabitacion.get(0).getId());
-        Assert.assertEquals(data.size(), lista.size());//expected data.size()
+        Assert.assertEquals(data.size()/2, lista.size());//expected data.size()
 
         for (DisponibilidadEntity entityUno : lista) {
             boolean encontrado = false;
@@ -183,7 +183,7 @@ public class DisponibilidadLogicTest {
 
     @Test
     public void findResena() {
-        DisponibilidadEntity entity = dataHabitacion.get(0).getDisponibilidades().get(0);
+        DisponibilidadEntity entity = data.get(0);
         DisponibilidadEntity newEntity;
         newEntity = logic.getDisponibilidad(dataHabitacion.get(0).getId(), entity.getId());
 
@@ -199,7 +199,7 @@ public class DisponibilidadLogicTest {
         DisponibilidadEntity entity = data.get(0);
         logic.deleteDisponibilidad(entity.getId());
 
-        DisponibilidadEntity entityBusq = logic.getDisponibilidad(entity.getHabitacion().getId(), entity.getId());
+        DisponibilidadEntity entityBusq = logic.getDisponibilidad(dataHabitacion.get(0).getId(), data.get(0).getId());
         Assert.assertNull(entityBusq);
     }
 
@@ -218,8 +218,8 @@ public class DisponibilidadLogicTest {
             entityUp.setFechaInicioEstadia(new Date(fechaActual.getTime() - 86400000));
             entityUp.setFechaTerminacionEstadia(new Date(fechaActual.getTime() + 86400000));
 
-            logic.updateDisponibilidad(entityUp);
-            DisponibilidadEntity newEntity = logic.getDisponibilidad(entity.getHabitacion().getId(), entity.getId());
+            
+            DisponibilidadEntity newEntity = logic.updateDisponibilidad(entityUp);
 
             Assert.assertNotNull(newEntity);
             Assert.assertEquals(newEntity.getId(), entityUp.getId());

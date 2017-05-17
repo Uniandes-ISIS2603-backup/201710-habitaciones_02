@@ -49,5 +49,22 @@
             }
         }
     ]);
+    
+    mod.controller("habitacionDeleteCtrl", ['$scope', 'currentHabitacion', '$http', '$stateParams', '$state',
+        function ($scope, currentHabitacion, $http, $stateParams, $state) 
+        {
+            $scope.currentHabitacion = currentHabitacion.data; 
+            
+            $scope.delete = function(){
+                
+                $http.delete('api/habitaciones/'+ $stateParams.id)
+                    .then(function(data){
+                        $state.go('habitacionesList');
+                        console.log(data);
+                    });
+            };
+
+        }]
+    );
 
 })(window.angular);
