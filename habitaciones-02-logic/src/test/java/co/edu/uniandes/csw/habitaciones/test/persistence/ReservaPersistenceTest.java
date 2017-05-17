@@ -51,11 +51,12 @@ public class ReservaPersistenceTest {
     public static JavaArchive createDeployment()
     {
                 return ShrinkWrap.create(JavaArchive.class)
-                .addPackage(AnfitrionEntity.class.getPackage())
-                .addPackage(AnfitrionPersistence.class.getPackage())
+                .addPackage(ReservaEntity.class.getPackage())
+                .addPackage(ReservaPersistence.class.getPackage())
                 .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
                 .addAsManifestResource("META-INF/beans.xml", "beans.xml");
     }
+    
   @Before
     public void setUp(){
         try{
@@ -119,17 +120,24 @@ public class ReservaPersistenceTest {
     public void findAllByViajeroTest(){
         ReservaEntity entity = data.get(0);
         List<ReservaEntity> list = reservaPersistence.findAllByViajero(entity.getViajero().getIdUsuario());
+        if(list==null)
+        {
+            
+            Assert.assertNull(list);
+        }
+        else{
         Assert.assertEquals(list.size(), data.size());
         for (ReservaEntity reservaEntity : list) {
             boolean encontrado = false;
             for (ReservaEntity reservaEntity1 : data) {
+                if(reservaEntity!= null && entity!= null){
                 if(reservaEntity.getViajero().getIdUsuario()
                         .equals(entity.getViajero().getIdUsuario())){
                     encontrado = true;
-                }   
+                }   }
             }
             Assert.assertTrue(encontrado);
-        }
+        }}
     }
         public void findReservaFromViajeroAndHabitacionTest(){
         ReservaEntity entity = data.get(0);

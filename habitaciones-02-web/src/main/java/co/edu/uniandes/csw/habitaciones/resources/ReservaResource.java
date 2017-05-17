@@ -128,7 +128,31 @@ public class ReservaResource {
         entity.setId(id);
         return new ReservaDetailDTO(logic.updateReserva(entity));
     }
-
+    @PUT
+    @Path("{id: \\d+}")
+    public ReservaDetailDTO updatecancelado(@PathParam("id") Long id) throws BusinessLogicException{
+        
+        if(logic.findReserva(id) == null)
+        {
+            throw new WebApplicationException(404);
+        }
+        
+        ReservaEntity entity =  logic.findReserva(id);
+        Boolean nuevo = entity.getCancelado();
+        if(!nuevo)
+        {
+            nuevo = true;
+        }
+        else
+        {
+            nuevo = false;
+        }
+        entity.setId(id);
+        entity.setCancelado(nuevo);
+        return new ReservaDetailDTO(logic.updateCancelado(entity));
+        
+        
+    }
     /**
      * Elimina una reserva buscado por su id
      *
