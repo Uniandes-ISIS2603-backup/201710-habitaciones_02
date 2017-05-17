@@ -97,7 +97,24 @@
         }
     ]);
     
-    
+    mod.controller("viajeroDetailCtrl", ['$scope', '$http', '$stateParams', 'currentViajero', '$state',
+        function ($scope, $http, $stateParams, currentViajero, $state)
+        {
+            $scope.currentViajero = currentViajero.data;
+            
+            $scope.deleteViajero = function (){
+                $http.delete('api/viajeros/'+ $stateParams.viajeroId)
+                    .then(function(data){
+                        $state.go('viajerosList');
+                        console.log(data);
+                    }).catch (function(error){
+                        document.getElementById('errorDeleteViajero').innerHTML = 'No se ha podido eliminar '
+                        + 'su cuenta debido a que aun tiene reservas pendientes!';
+                        console.log('se genero error al eliminar el cliente!' );
+                    });
+            };
+        }
+    ]);
     
     
     

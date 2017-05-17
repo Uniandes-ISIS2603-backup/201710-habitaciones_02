@@ -29,8 +29,16 @@
 
                     <div id="loginID1" class=" thumbnail col-md-4">
 
-                        <h2 id="loginID2">Informacion de Cuenta</h2><br>
-
+                        <h2 id="loginID2">Informacion de Cuenta</h2>
+                        
+                        <div id="radioLogin" class="text-center">
+                            
+                            <input type="radio" name="saberViajero" ng-model='usuario.tipo' value="1"> viajero
+                            <input type="radio" name="saberAnfitrion" ng-model='usuario.tipo' value="2"> anfitrion
+                            
+                        </div>
+                        
+                        <br>
                         <div id="loginID3" class="input-group">
                             <span id="loginID4" class="input-group-addon" ><i class="glyphicon glyphicon-user"></i></span>
                             <input id="email" type="email" class="form-control" name="email" placeholder="Email" ng-model='usuario.correo' required>
