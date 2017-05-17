@@ -81,11 +81,14 @@ p#errorUpdate{
 
         /* VISTA LOGIN */
 
+p#errorSignUpV,
 p#errorLogin{
     font-size: 18px;
     color: white;
-    background-color: rgba(4,83,119,0.8); 
-
+    border-radius: 5px;
+    background-color: rgba(221,15,15,0.6);
+    width: 90%;
+    margin-left: 40px;
 }
 
 p#errorDeleteViajero{
@@ -94,6 +97,15 @@ p#errorDeleteViajero{
     border-radius: 5px;
     background-color: rgba(221,15,15,0.6);
     width: 90%;
+}
+
+p#errorCreateResena{
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(221,15,15,0.6);
+    width: 90%;
+    margin-left: 20px;
 }
 
 div#radioLogin{
