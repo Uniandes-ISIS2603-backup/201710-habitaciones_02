@@ -7,7 +7,17 @@ package co.edu.uniandes.csw.habitaciones.resources;
 
 import co.edu.uniandes.csw.habitaciones.dtos.AnfitrionDetailDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.AnfitrionLogic;
+import co.edu.uniandes.csw.habitaciones.ejbs.DisponibilidadLogic;
+import co.edu.uniandes.csw.habitaciones.ejbs.HabitacionLogic;
+import co.edu.uniandes.csw.habitaciones.ejbs.PagoLogic;
+import co.edu.uniandes.csw.habitaciones.ejbs.ReservaLogic;
+import co.edu.uniandes.csw.habitaciones.ejbs.ViviendaLogic;
 import co.edu.uniandes.csw.habitaciones.entities.AnfitrionEntity;
+import co.edu.uniandes.csw.habitaciones.entities.DisponibilidadEntity;
+import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
+import co.edu.uniandes.csw.habitaciones.entities.PagoEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
+import co.edu.uniandes.csw.habitaciones.entities.ViviendaEntity;
 import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +45,17 @@ public class AnfitrionResource {
 
     @Inject
     private AnfitrionLogic logica;
-
+    @Inject
+    private ViviendaLogic viviendaLogica;
+    @Inject
+    private HabitacionLogic habitacionLogic;
+    @Inject
+    private DisponibilidadLogic dispoLogic;
+    @Inject
+    private ReservaLogic reservaLogic;
+    @Inject
+    private PagoLogic pagoLogic;
+    
     private List<AnfitrionDetailDTO> listEntity2DTO(List<AnfitrionEntity> entityList) {
         List<AnfitrionDetailDTO> lista = new ArrayList<>();
         for (AnfitrionEntity entity : entityList) {
@@ -67,13 +87,14 @@ public class AnfitrionResource {
         return new AnfitrionDetailDTO(logica.createAnfitrion(dtoo.toEntity()));
 
     }
+
     @GET
     @Path("loginViajero")
-    public AnfitrionDetailDTO getViajeroPorLogin(@QueryParamam("correoE")String correo,
-        @QueryParam("contrasena")String contrasena) throws BusinessLogicException
-    {
+    public AnfitrionDetailDTO getViajeroPorLogin(@QueryParam("correoE") String correo,
+            @QueryParam("contrasena") String contrasena) throws BusinessLogicException {
         return new AnfitrionDetailDTO(logica.getAnfitrionLogin(correo, contrasena));
     }
+
     @PUT
     @Path("{id: \\d+}")
     public AnfitrionDetailDTO updateAnfitrion(AnfitrionDetailDTO dto, @PathParam("id") Long id) {
@@ -88,9 +109,11 @@ public class AnfitrionResource {
     @DELETE
     @Path("{id: \\d+}")
     public void deleteAnfitrion(@PathParam("id") Long id) {
+        
         if (logica.getAnfitrion(id) == null) {
             throw new WebApplicationException(404);
         }
+
         logica.deleteAnfitrion(id);
     }
 
