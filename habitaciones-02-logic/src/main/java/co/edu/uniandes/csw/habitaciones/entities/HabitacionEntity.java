@@ -25,34 +25,40 @@ package co.edu.uniandes.csw.habitaciones.entities;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import uk.co.jemos.podam.common.PodamDoubleValue;
 import uk.co.jemos.podam.common.PodamExclude;
+import uk.co.jemos.podam.common.PodamIntValue;
+import uk.co.jemos.podam.common.PodamLongValue;
 
 /**
  *
  * @author b.gamba10
  */
 @Entity
-public class HabitacionEntity implements Serializable
-{
+public class HabitacionEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @PodamDoubleValue(maxValue = 0)
     private Double area;
 
+    @PodamDoubleValue(maxValue = 0)
     private Double valorAlquiler;
 
     private String rutaImagen;
 
     private String descripcion;
 
+    @PodamIntValue(maxValue = 0)
     private Integer capacidad;
 
     @PodamExclude
@@ -60,7 +66,7 @@ public class HabitacionEntity implements Serializable
     private List<DisponibilidadEntity> disponibilidades;
 
     @PodamExclude
-    @OneToMany(mappedBy = "habitacion")
+    @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL)
     private List<ReservaEntity> reservas;
 
     @PodamExclude
@@ -76,8 +82,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public Long getId()
-    {
+    public Long getId() {
         return id;
     }
 
@@ -86,8 +91,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param id
      */
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -96,8 +100,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public Double getArea()
-    {
+    public Double getArea() {
         return area;
     }
 
@@ -106,8 +109,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param area
      */
-    public void setArea(Double area)
-    {
+    public void setArea(Double area) {
         this.area = area;
     }
 
@@ -116,8 +118,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public Double getValorAlquiler()
-    {
+    public Double getValorAlquiler() {
         return valorAlquiler;
     }
 
@@ -126,8 +127,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param valorAlquiler
      */
-    public void setValorAlquiler(Double valorAlquiler)
-    {
+    public void setValorAlquiler(Double valorAlquiler) {
         this.valorAlquiler = valorAlquiler;
     }
 
@@ -136,8 +136,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public String getDescripcion()
-    {
+    public String getDescripcion() {
         return descripcion;
     }
 
@@ -146,8 +145,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param descripcion
      */
-    public void setDescripcion(String descripcion)
-    {
+    public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
@@ -156,8 +154,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public String getRutaImagen()
-    {
+    public String getRutaImagen() {
         return rutaImagen;
     }
 
@@ -166,8 +163,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param rutaImagen
      */
-    public void setRutaImagen(String rutaImagen)
-    {
+    public void setRutaImagen(String rutaImagen) {
         this.rutaImagen = rutaImagen;
     }
 
@@ -176,8 +172,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public List<DisponibilidadEntity> getDisponibilidades()
-    {
+    public List<DisponibilidadEntity> getDisponibilidades() {
         return disponibilidades;
     }
 
@@ -186,8 +181,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param disponibilidades
      */
-    public void setDisponibilidades(List<DisponibilidadEntity> disponibilidades)
-    {
+    public void setDisponibilidades(List<DisponibilidadEntity> disponibilidades) {
         this.disponibilidades = disponibilidades;
     }
 
@@ -196,8 +190,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public List<ReservaEntity> getReservas()
-    {
+    public List<ReservaEntity> getReservas() {
         return reservas;
     }
 
@@ -206,8 +199,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param reservas
      */
-    public void setReservas(List<ReservaEntity> reservas)
-    {
+    public void setReservas(List<ReservaEntity> reservas) {
         this.reservas = reservas;
     }
 
@@ -216,8 +208,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public ViviendaEntity getVivienda()
-    {
+    public ViviendaEntity getVivienda() {
         return vivienda;
     }
 
@@ -226,8 +217,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param vivienda
      */
-    public void setVivienda(ViviendaEntity vivienda)
-    {
+    public void setVivienda(ViviendaEntity vivienda) {
         this.vivienda = vivienda;
     }
 
@@ -236,8 +226,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public List<ResenaEntity> getResenas()
-    {
+    public List<ResenaEntity> getResenas() {
         return resenas;
     }
 
@@ -246,8 +235,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param resenas
      */
-    public void setResenas(List<ResenaEntity> resenas)
-    {
+    public void setResenas(List<ResenaEntity> resenas) {
         this.resenas = resenas;
     }
 
@@ -256,8 +244,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public Integer getCapacidad()
-    {
+    public Integer getCapacidad() {
         return capacidad;
     }
 
@@ -266,8 +253,7 @@ public class HabitacionEntity implements Serializable
      *
      * @param capacidad
      */
-    public void setCapacidad(Integer capacidad)
-    {
+    public void setCapacidad(Integer capacidad) {
         this.capacidad = capacidad;
     }
 
@@ -276,8 +262,7 @@ public class HabitacionEntity implements Serializable
      *
      * @return
      */
-    public Boolean informacionCompleta()
-    {
+    public Boolean informacionCompleta() {
         return (stringUtilizable(area.toString()) && stringUtilizable(valorAlquiler.toString())
                 && stringUtilizable(descripcion) && stringUtilizable(rutaImagen) && stringUtilizable(capacidad.toString()));
     }
@@ -288,11 +273,9 @@ public class HabitacionEntity implements Serializable
      * @param palabra
      * @return
      */
-    private Boolean stringUtilizable(String palabra)
-    {
+    private Boolean stringUtilizable(String palabra) {
         boolean resultado = false;
-        if(palabra != null)
-        {
+        if (palabra != null) {
             resultado = !palabra.isEmpty();
         }
         return resultado;
@@ -304,10 +287,8 @@ public class HabitacionEntity implements Serializable
      * @return
      */
     @Override
-    public boolean equals(Object obj)
-    {
-        if (this.getId() != null)
-        {
+    public boolean equals(Object obj) {
+        if (this.getId() != null) {
             return this.getId().equals(((HabitacionEntity) obj).getId());
         }
         return super.equals(obj);
@@ -318,10 +299,8 @@ public class HabitacionEntity implements Serializable
      * @return
      */
     @Override
-    public int hashCode()
-    {
-        if (this.getId() != null)
-        {
+    public int hashCode() {
+        if (this.getId() != null) {
             return this.getId().hashCode();
         }
         return super.hashCode();

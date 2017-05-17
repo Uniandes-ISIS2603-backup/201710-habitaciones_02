@@ -25,7 +25,7 @@ package co.edu.uniandes.csw.habitaciones.entities;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -68,8 +68,10 @@ public class ViviendaEntity implements Serializable
     /**
      * Relacion one to many entre vivienda y habitacion
      */
+
     @PodamExclude
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "vivienda")
+
     private List<HabitacionEntity> habitacion;
 
     /**

@@ -11,7 +11,7 @@
         // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Viajero/';
         // Mostrar la lista de viajeros será el estado por defecto del módulo
-            $urlRouterProvider.otherwise("/viajerosList");
+            
             
             $stateProvider.state('viajero', {
                 
@@ -84,16 +84,24 @@
                 url: '/reservas',
                 parent: 'viajeroDetail',
                 
+                resolve:{
+                    listaReservas:['$http', 'viajeroContext', '$stateParams', 
+                        function ($http, viajeroContext, $params) 
+                        {
+                            return $http.get(viajeroContext + '/'
+                                    + $params.viajeroId + '/' + 'reservas');
+                        }
+                    ]
+                },
                 param: {
                     viajeroId: null
                 },
                 views: {
-                    'ListasViajeroView':{
+                        'ListasViajeroView':{
                         templateUrl: basePath + 'viajero.reservas.list.html',
-                        //hereda el currentViajero del viajeroDetail??
+                        
                         controller: 'listReservControl'
-                        //Yo puedo llamar las reservas del viajero 
-                        //desde HTML en vez de en el controlador?
+
                     }
                 } 
             });
