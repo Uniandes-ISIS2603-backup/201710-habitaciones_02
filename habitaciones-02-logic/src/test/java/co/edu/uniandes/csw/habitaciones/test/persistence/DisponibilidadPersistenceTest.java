@@ -6,6 +6,7 @@ import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
 import co.edu.uniandes.csw.habitaciones.persistence.DisponibilidadPersistence;
 import co.edu.uniandes.csw.habitaciones.persistence.HabitacionPersistence;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -55,6 +56,9 @@ public class DisponibilidadPersistenceTest {
     
     private List<DisponibilidadEntity> data = new ArrayList<DisponibilidadEntity>();
     
+    private List<HabitacionEntity> dataHabitacion = new ArrayList<HabitacionEntity>();
+
+    
     /**
      * Configuración inicial de la prueba.
      */
@@ -91,10 +95,29 @@ public class DisponibilidadPersistenceTest {
      */
     private void insertData() {
         
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
+            HabitacionEntity habitacion = factory.manufacturePojo(HabitacionEntity.class);
+            dataHabitacion.add(habitacion);
+            em.persist(habitacion);
+        }
+
+        //Se agregan reservas y resenas a la base de datos y a las listas
+        //la mitad de las resenas y reservas tendran viajeros y habitaciones distintas
+        //a la otra mitad
+        Date fechaActual = new Date();
+        for (int i = 0; i < 4; i++) {
+
             DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
+            entity.setFechaInicioEstadia(fechaActual);
+
+            int j = (i < (4 / 2)) ? 0 : 1;
+
+            entity.setHabitacion(dataHabitacion.get(j));
+
             em.persist(entity);
+
             data.add(entity);
+
         }
     }
     
