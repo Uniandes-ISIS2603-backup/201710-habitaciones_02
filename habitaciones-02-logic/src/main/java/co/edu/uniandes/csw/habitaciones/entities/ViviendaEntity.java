@@ -43,11 +43,11 @@ import uk.co.jemos.podam.common.PodamExclude;
 public class ViviendaEntity implements Serializable
 {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     /**
      * El id de la vivienda
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /**
