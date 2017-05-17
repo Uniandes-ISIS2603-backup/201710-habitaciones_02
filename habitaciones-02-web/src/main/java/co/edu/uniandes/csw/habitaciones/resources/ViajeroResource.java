@@ -121,6 +121,14 @@ public class ViajeroResource
         ViajeroDetailDTO viajero = new ViajeroDetailDTO(entity);
         return viajero;
     }
+    
+    @GET
+    @Path("loginViajero")
+    public ViajeroDetailDTO getViajeroPorLogin(@QueryParam("correoE")String correo,
+        @QueryParam("contrasena")String contrasena) throws BusinessLogicException
+    {
+        return new ViajeroDetailDTO(viajeroLogic.getViajeroLogin(correo, contrasena));
+    }
 
     /**
      * Metodo encargado de llamar a la clase ReservaResourse para retornar las

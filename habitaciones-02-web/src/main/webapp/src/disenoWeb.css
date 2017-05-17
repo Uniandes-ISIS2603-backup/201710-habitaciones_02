@@ -35,10 +35,10 @@ input.actV{
 
 b.actV{
     margin-left: 70px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-button.actVButton{
+input.actVButton{
     font-size: 18px;
     background-color: #204d74;
     border: 4px;
@@ -48,7 +48,21 @@ button.actVButton{
     margin-bottom: 10px;
 }
 
+p#errorUpdate{
+    font-size: 18px;
+    color: white;
+    background-color: rgba(221,15,15,0.6);
+    border-radius: 5px;
+}
+
         /* VISTA LOGIN */
+
+p#errorLogin{
+    font-size: 18px;
+    color: white;
+    background-color: rgba(4,83,119,0.8); 
+
+}
         
 div#loginID1{
     align-content: center;

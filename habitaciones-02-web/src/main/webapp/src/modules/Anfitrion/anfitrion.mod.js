@@ -68,30 +68,7 @@
                     },
                 },
             });
-            $stateProvider.state('login', {
-                url: '/login',
-
-                resolve: {
-                    viajeros: ['$http', function ($http) {
-                            return $http.get('data/viajeros.json');
-                        }],
-                    anfitriones: ['$http', function ($http) {
-                            return $http.get('data/anfitriones.json');
-                        }],
-                },
-                views: {
-
-                    'mainView': {
-
-                        templateUrl: 'src/modules/login.html',
-                        controller: ['$scope', 'anfitriones', 'viajeros',
-                            function ($scope, anfitriones, viajeros) {
-                                $scope.RecordsViajero = viajeros.data;
-                                $scope.anfitrionesRecords = anfitriones.data;
-                            }]
-                    },
-                },
-            });
+            
             $stateProvider.state('anfitrionDetail', {
                 url: '/{anfitrionId:int}',
                 parent: 'anfitriones',

@@ -1,21 +1,4 @@
 <div class="panel panel-default" style="border-color: #286090">
-    <style>
-            dt{
-                text-align: center;
-            }
-            dd{
-                text-align: center;
-            }
-
-            input.ActualizacionViajero.ng-invalid{
-            
-                background-color: lightsalmon;
-            }
-            input.ActualizacionViajero.ng-valid{
-            
-                background-color: lightgreen;
-            }
-    </style>
     
     <div class="panel-body" >
 
@@ -34,10 +17,10 @@
                 <div class="text-left">
                     <form name="formaAu" novalidate>
 
-                        <b class="actV" >Escriba su contrasena:</b><br>
+                        <b class="actV" >Escriba su contraseña:</b><br>
                         <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasenaVer' required>
-                        
-                        <br><br>
+                        <span ng-show="formaAu.contrasenaV1.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
+
                     </form>
                 </div>
             </div>
@@ -45,27 +28,39 @@
 
             <div class="row thumbnail">
 
-                <h3 style="text-align: center;">Cambio de Contrasena<br></h3>
+                <h3 style="text-align: center;">Cambio de Contraseña<br></h3>
                 <hr>
 
                 <div class="text-left">
-                    <form name="formaCam" novalidate>
+                    <form name="formaCam" novalidate ng-submit="cambiarContrasena()">
 
-                        <b class="actV" >Nueva Contrasena:</b><br>
-                        <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasena' required>
-                        
+                        <b class="actV" >Nueva Contraseña:</b><br>
+                        <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasenaUno' required>
+
                         <br>
                         
-                        <b class="actV" >Vuelva a Escribir la nueva Contrasena:</b><br>
+                        <b class="actV" >Vuelva a Escribir la nueva Contraseña:</b><br>
                         <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasenaDos' required>
                         
-
-                        <button class='actVButton center-block' type="button">Cambiar Contraseña</button>
+                        <br>
+                        <br>
+                        
+                        <input class='actVButton center-block' type="submit" value="Cambiar Contraseña">
 
                     </form>
                 </div>
        
             </div>
+            
+            <div class="row text-center">
+                
+                <p id="errorUpdate">
+                    
+                </p>
+                
+            </div>
+            
+            
         </div>
         
         <div class="col-md-7" >
@@ -109,7 +104,7 @@
                         <input class="form-control usuarios actV" name="telefono" type="text" ng-model='currentViajero.telefono'required>
                         <span ng-show="formaA.telefono.$touched && formaA.telefono.$invalid"><b style="color: red">X</b></span><br><br>
 
-                        <button class='actVButton center-block' type="button"> Actualizar datos </button>
+                        <input class='actVButton center-block' type="submit" value="Actualizar datos">
                         
                     </form>
                 </div>

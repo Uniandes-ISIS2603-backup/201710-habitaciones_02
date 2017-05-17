@@ -21,13 +21,62 @@
     mod.controller("viajeroUpdateCtrl", ['$scope', '$http','$stateParams', '$state',
         function($scope, $http, $stateParams, $state ){
             
+            $scope.viajero = {};
+            
             $scope.update = function(){
                 
-                $http.put('api/viajeros/'+ $stateParams.viajeroId, $scope.currentViajero)
+                if($scope.viajero.contrasenaVer === $scope.currentViajero.contrasena){
+                    
+                    $http.put('api/viajeros/'+ $stateParams.viajeroId, $scope.currentViajero)
                     .then(function(data){
                         $state.go('viajeroDetail',{viajeroId: $stateParams.viajeroId});
                         console.log(data);
+                    }).catch (function(error){
+                        document.getElementById('errorUpdate').innerHTML = error.data;
+                        console.log('se genero este error: ' + error.data);
                     });
+                }
+                else
+                {
+                    document.getElementById('errorUpdate').innerHTML = '*No se pudo '
+                    + 'realizar la acutalizacion debido a que la contraseña ingresada '
+                    + 'no coincide con la contraseña de la cuenta!';
+                }
+                
+            };
+            
+            $scope.cambiarContrasena = function(){
+                
+                if($scope.viajero.contrasenaVer === $scope.currentViajero.contrasena){
+                    
+                    if($scope.viajero.contrasenaUno === $scope.viajero.contrasenaDos)
+                    {
+                        $scope.currentViajero.contrasena = $scope.viajero.contrasenaUno;
+                        
+                        $http.put('api/viajeros/'+ $stateParams.viajeroId, $scope.currentViajero)
+                            .then(function(data){
+                                $state.go('viajeroDetail',{viajeroId: $stateParams.viajeroId});
+                                console.log(data);
+                            }).catch (function(error){
+                                document.getElementById('errorUpdate').innerHTML = error.data;
+                                console.log('se genero este error: ' + error.data);
+                            });
+                    }
+                    else
+                    {
+                        document.getElementById('errorUpdate').innerHTML = '*No se pudo '
+                        + 'realizar el cambio de contraseña debido que estas '
+                        + 'no coinciden entre si!';
+                    }
+                    
+                }
+                else
+                {
+                    document.getElementById('errorUpdate').innerHTML = '*No se pudo '
+                    + 'realizar la acutalizacion debido a que la contraseña ingresada '
+                    + 'no coincide con la contraseña de la cuenta!';
+                }
+                
             };
             
         }
