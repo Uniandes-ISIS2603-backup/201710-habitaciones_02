@@ -12,7 +12,7 @@
 
         <div class="row">
 
-            <div class="col-sm-5 col-md-5 thumbnail">
+            <div class="col-sm-5 col-md-5 thumbnail" style="background-color: rgba(255,255,255,0.8); ">
 
                 <dl>
                     <dt style="text-align-last: center; font-size: 20px;">Informacion Habitacion</dt>
@@ -26,25 +26,25 @@
                 </dl>
 
                 <a ui-sref="habitacionDetail({habitacionId: currentResena.habitacion.id})" style="text-align: center;" >
-                    <b style="color: lightblue;"> mas informacion</b>
+                    <b style="color: #286090; margin-left: 50px; font-size: 16px;"> mas informacion</b>
                 </a>
 
             </div>
             <div class="col-sm-7 col-md-7">
 
-                <nav style="background-color: white; border-color: #286090; width: 45%; margin-left: 20px;" class="navbar navbar-default">
+                <nav style="background-color: rgba(255,255,255,0.9); border-color: #286090; width: 45%; margin-left: 20px;" class="navbar navbar-default">
 
                     <div class="col-md-12 text-center">
 
                         <ul class="nav navbar-nav">
                             <li><a ui-sref="resenaUpdate"><span class="glyphicon glyphicon-pencil"></span><b>Editar Resena</b></a></li>
-                            <li><button class="btn" style="background-color: white; margin-top: 8px;" ng-click="deleteResena()"><span class="glyphicon glyphicon-remove" style="color: #d43f3a"></span><b style="color: #d43f3a">Borrar Reseña</b></button></li>
+                            <li><button class="btn" style="background-color: rgba(255,255,255,0.9); margin-top: 8px;" ng-click="deleteResena()"><span class="glyphicon glyphicon-remove" style="color: #d43f3a"></span><b style="color: #d43f3a">Borrar Reseña</b></button></li>
                         </ul>
 
                     </div>                    
                 </nav>
 
-                <div class="row thumbnail" style=" margin-left: 20px; width: 95%; border-color: #286090">
+                <div class="row thumbnail" style=" background-color: rgba(255,255,255,0.8); margin-left: 20px; width: 95%; border-color: #286090">
 
                     <dl>
 
