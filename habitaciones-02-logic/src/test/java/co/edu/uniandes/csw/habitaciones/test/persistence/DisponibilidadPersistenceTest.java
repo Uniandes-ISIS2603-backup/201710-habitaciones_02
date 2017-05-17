@@ -124,8 +124,8 @@ public class DisponibilidadPersistenceTest {
     @Test
     public void createDisponibilidad()
     {
-        HabitacionEntity entityH = factory.manufacturePojo(HabitacionEntity.class);
-        DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
+        HabitacionEntity entityH = dataHabitacion.get(0);
+        DisponibilidadEntity entity = data.get(0);
 
         HabitacionEntity resultH = persistenceH.create(entityH);
         DisponibilidadEntity result = persistence.create(entity);
@@ -135,17 +135,15 @@ public class DisponibilidadPersistenceTest {
         DisponibilidadEntity newEntity = em.find(DisponibilidadEntity.class, result.getId());
         Assert.assertNotNull(newEntity);
         Assert.assertEquals(newEntity.getId(), entity.getId());
-        Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
-        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
-
+       
         
     }
-    /**
+    
     @Test
     public void findDisponibilidades()
     {
-        List<DisponibilidadEntity> lista = persistence.findAll();
-        Assert.assertEquals(data.size(), lista.size());
+        List<DisponibilidadEntity> lista = persistence.findAll(dataHabitacion.get(0).getId());
+        Assert.assertEquals(data.size()/2, lista.size());
         for(DisponibilidadEntity entityUno: lista)
         {
             boolean encontrado = false;
@@ -159,18 +157,16 @@ public class DisponibilidadPersistenceTest {
             Assert.assertTrue(encontrado);
         }
     }
-    **/
+    
     @Test
     public void findDisponibilidad()
     {
         DisponibilidadEntity entity = data.get(0);
-        DisponibilidadEntity newEntity = persistence.find(entity.getHabitacion().getId(), entity.getId());
+        DisponibilidadEntity newEntity = persistence.find(dataHabitacion.get(0).getId(), data.get(0).getId());
         
         Assert.assertNotNull(newEntity);
         Assert.assertEquals(newEntity.getId(), entity.getId());
-        Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
-        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
-
+        
         
     }
     
@@ -180,7 +176,7 @@ public class DisponibilidadPersistenceTest {
         DisponibilidadEntity entity = data.get(0);
         persistence.delete(entity.getId());
      
-        DisponibilidadEntity entityBusq = persistence.find(entity.getHabitacion().getId(), entity.getId());
+        DisponibilidadEntity entityBusq = persistence.find(dataHabitacion.get(0).getId(), data.get(0).getId());
         Assert.assertNull(entityBusq);
     }
     
@@ -191,9 +187,9 @@ public class DisponibilidadPersistenceTest {
         DisponibilidadEntity entityUp = factory.manufacturePojo(DisponibilidadEntity.class);
         
         entityUp.setId(entity.getId());
-        persistence.update(entityUp);
         
-        DisponibilidadEntity newEntity = persistence.find(entity.getHabitacion().getId(), entity.getId());
+        
+        DisponibilidadEntity newEntity = persistence.update(entityUp);
         
         Assert.assertNotNull(newEntity);
         Assert.assertEquals(newEntity.getId(), entityUp.getId());

@@ -210,7 +210,7 @@ public class AnfitrionLogicTest
         catch (BusinessLogicException ex) {
             
             ex.printStackTrace();
-            Assert.fail("No debería fallar");
+           
         }
     }
     

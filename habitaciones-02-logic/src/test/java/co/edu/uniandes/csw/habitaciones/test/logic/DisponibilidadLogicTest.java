@@ -101,8 +101,8 @@ public class DisponibilidadLogicTest {
             em.persist(habitacion);
         }
 
-        //Se agregan reservas y resenas a la base de datos y a las listas
-        //la mitad de las resenas y reservas tendran viajeros y habitaciones distintas
+        //Se agregan reservas y Disponibilidads a la base de datos y a las listas
+        //la mitad de las Disponibilidads y reservas tendran viajeros y habitaciones distintas
         //a la otra mitad
         Date fechaActual = new Date();
         for (int i = 0; i < 4; i++) {
@@ -137,9 +137,7 @@ public class DisponibilidadLogicTest {
             DisponibilidadEntity newEntity = em.find(DisponibilidadEntity.class, result.getId());
             Assert.assertNotNull(newEntity);
             Assert.assertEquals(newEntity.getId(), entity.getId());
-            Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
-            Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
-
+           
         } catch (BusinessLogicException e) {
             Assert.fail("No deberia generar excepcion: " + e.getMessage());
         }
@@ -164,7 +162,7 @@ public class DisponibilidadLogicTest {
     }
 
     @Test
-    public void findResenas() {
+    public void findDisponibilidads() {
         List<DisponibilidadEntity> lista = logic.getDisponibilidades(dataHabitacion.get(0).getId());
         Assert.assertEquals(data.size()/2, lista.size());//expected data.size()
 
@@ -182,20 +180,18 @@ public class DisponibilidadLogicTest {
     }
 
     @Test
-    public void findResena() {
+    public void findDisponibilidad() {
         DisponibilidadEntity entity = data.get(0);
         DisponibilidadEntity newEntity;
         newEntity = logic.getDisponibilidad(dataHabitacion.get(0).getId(), entity.getId());
 
         Assert.assertNotNull(newEntity);
         Assert.assertEquals(newEntity.getId(), entity.getId());
-        Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
-        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
-
+       
     }
 
     @Test
-    public void deleteResena() {
+    public void deleteDisponibilidad() {
         DisponibilidadEntity entity = data.get(0);
         logic.deleteDisponibilidad(entity.getId());
 
