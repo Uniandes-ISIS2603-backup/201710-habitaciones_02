@@ -20,6 +20,9 @@
                     .then(function (data) {
                         $state.go('viajeroDetail',{viajeroId: $stateParams.viajeroId});
                         console.log(data);
+                    }).catch (function(error){
+                        document.getElementById('errorCreateResena').innerHTML = error.data;
+                        console.log('se genero este error: ' + error.data);
                     });
             };
         }]
@@ -38,40 +41,6 @@
                     });
             };
             
-            
-            $scope.currentStar = 0;
-
-            $scope.overStar = function (s) {
-                $scope.resetStars();
-                for (var i = 1; i <= s; i++) {
-                  document.getElementById('star' + i).style.color = '#dcb40a';
-                }
-                 console.log('overStar');
-            };
-                  
-            $scope.leaveStar = function (s) {
-                for (var i = s; i > 0; i--) {
-                  document.getElementById('star' + i).style.color = '#212121';
-                }
-                console.log('leaveStar');
-            };
-            $scope.setDefaultStar = function (s) {
-                $scope.currentStar = s;
-                $scope.showSelectedStar();
-                console.log('setDefaultStar');
-            };
-            $scope.showSelectedStar = function () {
-                if ($scope.currentStar !== 0) {
-                  $scope.overStar($scope.currentStar);
-                }
-                console.log('showSelectedStar');
-            };
-            $scope.resetStars = function () {
-                for (var i = 5; i > 0; i--) {
-                  document.getElementById('star' + i).style.color = '#212121';
-                }
-                console.log('resetStars');
-            };
         }]
     );
     
