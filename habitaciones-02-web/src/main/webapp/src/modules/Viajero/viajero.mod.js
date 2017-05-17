@@ -13,6 +13,50 @@
         // Mostrar la lista de viajeros será el estado por defecto del módulo
             
             
+            $stateProvider.state('login', {
+                url: '/login',
+
+                resolve: {
+                    viajeros: ['$http', 'viajeroContext', 
+                        function ($http, viajeroContext) {
+                            return $http.get(viajeroContext);
+                        }],
+                    anfitriones: ['$http', function ($http) {
+                            return $http.get('api/anfitriones');
+                        }]
+                },
+                views: {
+
+                    'mainView': {
+
+                        templateUrl: 'src/modules/login.html',
+                        controller: ['$scope', 'anfitriones', 'viajeros', '$http', '$state',
+                            function ($scope, anfitriones, viajeros, $http, $state) {
+                                $scope.RecordsViajero = viajeros.data;
+                                $scope.anfitrionesRecords = anfitriones.data;
+                                
+                                $scope.usuario = {};
+                                
+                                $scope.login = function (){
+                                  
+                                    $http.get('api/viajeros/loginViajero?correoE='
+                                            + $scope.usuario.correo +'&contrasena='+$scope.usuario.contrasena)
+                                    .then(function(resultado){
+                                            console.log('Econtro viajero!');
+                                            $state.go('viajeroDetail',{viajeroId: resultado.data.idUsuario});
+                                            console.log(resultado);
+                                    }).catch (function(error){
+                                        document.getElementById('errorLogin').innerHTML = error.data;
+                                        console.log('se genero este error: ' + error.data);
+                                    });
+
+
+                                };
+                            }]
+                    }
+                }
+            });
+            
             $stateProvider.state('viajero', {
                 
                 url: '/viajeros',

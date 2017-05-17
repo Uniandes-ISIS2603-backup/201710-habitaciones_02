@@ -6,24 +6,26 @@
             
             <div class="col-sm-2 col-md-2"> <b>Filtrar por: </b></div>
             <div class="col-sm-10 col-md-10"> 
-                <form> 
+                <form name="formaCreateV">
                     Minimo: 
-                    <select name="numMinEstrellas">
-                        <option value="unaE">1 estrella</option>
-                        <option value="dosE">2 estrellas</option>
-                        <option value="tresE">3 estrellas</option>
-                        <option value="cuatroE">4 estrellas</option>
-                        <option value="cincoE">5 estrellas</option>
+                    <select id="listVRMin" name="numMinEstrellas">
+                        <option value="1">1 estrella</option>
+                        <option value="2">2 estrellas</option>
+                        <option value="3">3 estrellas</option>
+                        <option value="4">4 estrellas</option>
+                        <option value="5">5 estrellas</option>
                     </select>
                      Maximo:
-                    <select name="numMaxEstrellas">
-                        <option value="cincoE">5 estrellas</option>
-                        <option value="cuatroE">4 estrellas</option>
-                        <option value="tresE">3 estrellas</option>
-                        <option value="dosE">2 estrellas</option>
-                        <option value="unaE">1 estrella</option>
+                    <select id="listVRMax" name="numMaxEstrellas">
+                        <option value="5">5 estrellas</option>
+                        <option value="4">4 estrellas</option>
+                        <option value="3">3 estrellas</option>
+                        <option value="2">2 estrellas</option>
+                        <option value="1">1 estrella</option>
                     </select>
-                    <input type="submit" value="Buscar Resenas">
+                    
+                     <button ng-click="filtrar()"> Filtrar </button>
+                    
                 </form>
 
             </div>

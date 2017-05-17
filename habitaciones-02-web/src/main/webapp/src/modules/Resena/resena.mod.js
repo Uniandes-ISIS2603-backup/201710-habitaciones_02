@@ -49,12 +49,7 @@
                 views:{
                     'listViewResena':{
                         templateUrl: basePath + 'viajero.resenas.list.html',
-                        controller: ['$scope', 'resenas', 
-                            function ($scope, resenas) 
-                            {
-                                $scope.RecordsResena = resenas.data;
-                            }
-                        ]
+                        controller: 'resenaViajeroListCtrl'
                         //hereda el currentViajero del viajeroDetail??
                     }
                 }
@@ -78,12 +73,7 @@
                 views: {
                     'detailView': {
                         templateUrl: basePath + 'resena.detail.viajero.html',
-                        controller: ['$scope', 'currentResena', 
-                            function ($scope, currentResena ) 
-                            { 
-                               $scope.currentResena = currentResena.data;           
-                            }
-                        ]
+                        controller: 'resenaDetailViajeroCtrl'
                     }
 
                 } 
