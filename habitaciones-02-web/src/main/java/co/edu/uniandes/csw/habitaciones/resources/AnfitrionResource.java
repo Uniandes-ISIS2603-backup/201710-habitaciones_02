@@ -90,8 +90,9 @@ public class AnfitrionResource {
 
     @GET
     @Path("loginViajero")
-    public AnfitrionDetailDTO getViajeroPorLogin(@QueryParam("correoE") String correo,
-            @QueryParam("contrasena") String contrasena) throws BusinessLogicException {
+    public AnfitrionDetailDTO getViajeroPorLogin(@QueryParam("correoE")String correo,
+        @QueryParam("contrasena")String contrasena) throws BusinessLogicException
+    {
         return new AnfitrionDetailDTO(logica.getAnfitrionLogin(correo, contrasena));
     }
 
