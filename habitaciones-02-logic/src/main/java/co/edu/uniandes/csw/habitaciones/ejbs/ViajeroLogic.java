@@ -105,6 +105,19 @@ public class ViajeroLogic
     {
         return persistence.find(id);
     }
+    
+    public ViajeroEntity getViajeroLogin(String pCorreo, String pContrasena) throws BusinessLogicException
+    {
+        ViajeroEntity resultado = persistence.findLogin(pCorreo, pContrasena);
+        
+        if(resultado == null)
+        {
+            throw new BusinessLogicException("No existe un usuario registrao con los datos "
+                    + "que fueron ingresados! Por favor intente nuevamente.");
+        }
+        
+        return resultado;
+    }
 
     /**
      * Retorna una lista con todos los viajeros que se encuentran persistidos

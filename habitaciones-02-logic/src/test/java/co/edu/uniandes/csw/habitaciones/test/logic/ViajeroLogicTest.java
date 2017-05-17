@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.habitaciones.ejbs;
+package co.edu.uniandes.csw.habitaciones.test.logic;
 
+import co.edu.uniandes.csw.habitaciones.ejbs.ViajeroLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
 import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -104,7 +107,7 @@ public class ViajeroLogicTest
     }
     
     @Test
-    public void createViajeroTest()
+    public void testCreateViajeroTest()
     {
         try 
         {
@@ -147,7 +150,7 @@ public class ViajeroLogicTest
     }
     
     @Test
-    public void getViajeros()
+    public void testGetViajeros()
     {
         List<ViajeroEntity> lista = logic.getViajeros();
         Assert.assertEquals(data.size(), lista.size());
@@ -168,7 +171,7 @@ public class ViajeroLogicTest
     }
     
     @Test
-    public void getViajero()
+    public void testGetViajero()
     {
         ViajeroEntity entity = data.get(0);
         ViajeroEntity entityBusq = logic.getViajero(entity.getIdUsuario());
@@ -186,7 +189,50 @@ public class ViajeroLogicTest
     }
     
     @Test
-    public void deleteViajero()
+    public void testFindViajeroLoginUno(){
+        
+        
+        try {
+            
+            ViajeroEntity entity = data.get(0);
+            ViajeroEntity entityBusq = logic.getViajeroLogin(entity.getCorreoElectronico(), entity.getContrasena());
+            
+            Assert.assertNotNull(entityBusq);
+            Assert.assertEquals(entity.getCorreoElectronico(), entityBusq.getCorreoElectronico());
+            Assert.assertEquals(entity.getContrasena(), entityBusq.getContrasena());
+            Assert.assertEquals(entity.getDireccion(), entityBusq.getDireccion());
+            Assert.assertEquals(entity.getImagen(), entityBusq.getImagen());
+            Assert.assertEquals(entity.getNombre(), entityBusq.getNombre());
+            Assert.assertEquals(entity.getNumeroDocumento(), entityBusq.getNumeroDocumento());
+            Assert.assertEquals(entity.getTelefono(), entityBusq.getTelefono());
+            Assert.assertEquals(entity.getTipoDocumento(), entityBusq.getTipoDocumento());
+        } 
+        catch (BusinessLogicException ex) {
+            
+            ex.printStackTrace();
+            Assert.fail("No debería fallar");
+        }
+    }
+    
+    @Test
+    public void testFindViajeroLoginDos(){
+        
+        try {
+            
+            ViajeroEntity entity = data.get(0);
+            ViajeroEntity entityBusq = logic.getViajeroLogin(entity.getNombre(), entity.getDireccion());
+            
+            Assert.fail("Debería fallar");
+        } 
+        catch (BusinessLogicException ex) {
+            
+        }
+    }
+    
+    
+    
+    @Test
+    public void testDeleteViajero()
     {
         ViajeroEntity entity = data.get(0);
         logic.deleteViajero(entity.getIdUsuario());
@@ -196,7 +242,7 @@ public class ViajeroLogicTest
     }
     
     @Test
-    public void updateViajero() 
+    public void testUpdateViajero() 
     {
         try 
         {

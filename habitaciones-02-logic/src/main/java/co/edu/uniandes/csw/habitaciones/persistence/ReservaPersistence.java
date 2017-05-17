@@ -72,8 +72,8 @@ public class ReservaPersistence {
      * @return List de ReservaEntity
      */
     public List<ReservaEntity> findAllByViajero(Long idViajero) {
-        TypedQuery<ReservaEntity> q
-                = em.createQuery("select u from ReservaEntity u where u.viajero.idUsuario = :idViajero", ReservaEntity.class);
+        TypedQuery<ReservaEntity> q;
+        q = em.createQuery("select u from ReservaEntity u where u.viajero.idUsuario = :idViajero", ReservaEntity.class);
         q = q.setParameter("idViajero", idViajero);
 
         return q.getResultList();
@@ -101,7 +101,10 @@ public class ReservaPersistence {
         em.merge(entity);
         return entity;
     }
-
+    public ReservaEntity updateC(ReservaEntity entity) {
+        em.merge(entity);
+        return entity;
+    }
     /**
      * Elimina una reserva por su eliminacion
      *

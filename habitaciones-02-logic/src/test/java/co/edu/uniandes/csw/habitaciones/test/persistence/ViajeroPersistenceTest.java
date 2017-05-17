@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.habitaciones.persistence;
+package co.edu.uniandes.csw.habitaciones.test.persistence;
 
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
+import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -97,7 +98,7 @@ public class ViajeroPersistenceTest {
     }
     
     @Test
-    public void createViajero()
+    public void testCreateViajero()
     {
         ViajeroEntity entity = factory.manufacturePojo(ViajeroEntity.class);
 
@@ -118,7 +119,7 @@ public class ViajeroPersistenceTest {
     }
     
     @Test
-    public void findViajeros()
+    public void testFindViajeros()
     {
         List<ViajeroEntity> lista = persistence.findAll();
         Assert.assertEquals(data.size(), lista.size());
@@ -137,7 +138,7 @@ public class ViajeroPersistenceTest {
     }
     
     @Test
-    public void findViajero()
+    public void testFindViajero()
     {
         ViajeroEntity entity = data.get(0);
         ViajeroEntity entityBusq = persistence.find(entity.getIdUsuario());
@@ -155,7 +156,24 @@ public class ViajeroPersistenceTest {
     }
     
     @Test
-    public void deleteViajero()
+    public void testFindViajeroLogin(){
+        
+        ViajeroEntity entity = data.get(0);
+        ViajeroEntity entityBusq = persistence.findLogin(entity.getCorreoElectronico(), entity.getContrasena());
+        
+        Assert.assertNotNull(entityBusq);
+        Assert.assertEquals(entity.getCorreoElectronico(), entityBusq.getCorreoElectronico());
+        Assert.assertEquals(entity.getContrasena(), entityBusq.getContrasena());
+        Assert.assertEquals(entity.getDireccion(), entityBusq.getDireccion());
+        Assert.assertEquals(entity.getImagen(), entityBusq.getImagen());
+        Assert.assertEquals(entity.getNombre(), entityBusq.getNombre());
+        Assert.assertEquals(entity.getNumeroDocumento(), entityBusq.getNumeroDocumento());
+        Assert.assertEquals(entity.getTelefono(), entityBusq.getTelefono());
+        Assert.assertEquals(entity.getTipoDocumento(), entityBusq.getTipoDocumento());
+    }
+    
+    @Test
+    public void testDeleteViajero()
     {
         ViajeroEntity entity = data.get(0);
         persistence.delete(entity.getIdUsuario());
@@ -165,7 +183,7 @@ public class ViajeroPersistenceTest {
     }
     
     @Test
-    public void updateViajero()
+    public void testUpdateViajero()
     {
         ViajeroEntity entity = data.get(0);
         ViajeroEntity entityUp = factory.manufacturePojo(ViajeroEntity.class);

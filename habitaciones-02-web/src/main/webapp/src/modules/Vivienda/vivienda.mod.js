@@ -92,7 +92,8 @@
                 url: '/registrarVivienda',
                 views: {
                     'mainView': {
-                        templateUrl: basePath + "vivienda.create.html"
+                        templateUrl: basePath + "vivienda.create.html",
+                        controller: 'viviendaCrearCtrl'
                     }
                 }
             });

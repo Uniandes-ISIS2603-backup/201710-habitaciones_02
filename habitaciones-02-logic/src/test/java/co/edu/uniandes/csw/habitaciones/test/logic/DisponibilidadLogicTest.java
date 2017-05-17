@@ -31,6 +31,8 @@ import uk.co.jemos.podam.api.PodamFactoryImpl;
 @RunWith(Arquillian.class)
 public class DisponibilidadLogicTest {
 
+    private final static int MAX_HABITACIONES = 2;
+
     @PersistenceContext
     private EntityManager em;
 
@@ -55,6 +57,7 @@ public class DisponibilidadLogicTest {
                 .addPackage(DisponibilidadEntity.class.getPackage())
                 .addPackage(DisponibilidadLogic.class.getPackage())
                 .addPackage(DisponibilidadPersistence.class.getPackage())
+                .addPackage(HabitacionEntity.class.getPackage())
                 .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
                 .addAsManifestResource("META-INF/beans.xml", "beans.xml");
     }
@@ -83,30 +86,38 @@ public class DisponibilidadLogicTest {
 
     /**
      * Limpia las tablas que están implicadas en la prueba.
-     *
-     *
      */
     private void clearData() {
         em.createQuery("delete from DisponibilidadEntity").executeUpdate();
         em.createQuery("delete from HabitacionEntity").executeUpdate();
+
     }
 
-    /**
-     * Inserta los datos iniciales para el correcto funcionamiento de las
-     * pruebas.
-     *
-     */
     private void insertData() {
 
-        for (int i = 0; i < 3; i++) {
-            DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
-            em.persist(entity);
-            data.add(entity);
-        }
-
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < MAX_HABITACIONES; i++) {
             HabitacionEntity habitacion = factory.manufacturePojo(HabitacionEntity.class);
             dataHabitacion.add(habitacion);
+            em.persist(habitacion);
+        }
+
+        //Se agregan reservas y resenas a la base de datos y a las listas
+        //la mitad de las resenas y reservas tendran viajeros y habitaciones distintas
+        //a la otra mitad
+        Date fechaActual = new Date();
+        for (int i = 0; i < 4; i++) {
+
+            DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
+            entity.setFechaInicioEstadia(fechaActual);
+
+            int j = (i < (4 / 2)) ? 0 : 1;
+
+            entity.setHabitacion(dataHabitacion.get(j));
+
+            em.persist(entity);
+
+            data.add(entity);
+
         }
     }
 
@@ -115,258 +126,142 @@ public class DisponibilidadLogicTest {
 
         DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
         entity.setHabitacion(dataHabitacion.get(0));
-        
-        Date fecha1 = new Date(System.currentTimeMillis());
-        Date fecha2 = new Date(System.currentTimeMillis() + 10);
-        
-        entity.setFechaInicioEstadia(fecha1);
-        entity.setFechaTerminacionEstadia(fecha2);
+
+        Date fechaActual = new Date();
+        entity.setFechaInicioEstadia(new Date(fechaActual.getTime() - 86400000));
+        entity.setFechaTerminacionEstadia(new Date(fechaActual.getTime() + 86400000));
 
         try {
-
             DisponibilidadEntity result = logic.createDisponibilidad(entity);
-
             Assert.assertNotNull(result);
-
             DisponibilidadEntity newEntity = em.find(DisponibilidadEntity.class, result.getId());
-
             Assert.assertNotNull(newEntity);
             Assert.assertEquals(newEntity.getId(), entity.getId());
             Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
             Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
 
         } catch (BusinessLogicException e) {
+            Assert.fail("No deberia generar excepcion: " + e.getMessage());
+        }
+    }
 
-           Assert.fail("No deberia generar excepcion     " + e.getMessage());
+    @Test
+    public void createDisponibilidad2() {
+        try {
+            DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
+            entity.setHabitacion(dataHabitacion.get(0));
 
+            Date fechaActual = new Date();
+            entity.setFechaInicioEstadia(new Date(fechaActual.getTime() + 86400000));
+            entity.setFechaTerminacionEstadia(new Date(fechaActual.getTime() - 86400000));
+
+            DisponibilidadEntity result = logic.createDisponibilidad(entity);
+            Assert.fail("Deberia generar excepcion. Fehcas mal definidas "
+                    + "al maximo establecida");
+        } catch (BusinessLogicException e) {
+
+        }
+    }
+
+    @Test
+    public void findResenas() {
+        List<DisponibilidadEntity> lista = logic.getDisponibilidades(dataHabitacion.get(0).getId());
+        Assert.assertEquals(data.size(), lista.size());//expected data.size()
+
+        for (DisponibilidadEntity entityUno : lista) {
+            boolean encontrado = false;
+
+            for (DisponibilidadEntity entityDos : data) {
+                if (entityUno.getId().equals(entityDos.getId())) {
+                    encontrado = true;
+
+                }
+            }
+            Assert.assertTrue(encontrado);
+        }
+    }
+
+    @Test
+    public void findResena() {
+        DisponibilidadEntity entity = dataHabitacion.get(0).getDisponibilidades().get(0);
+        DisponibilidadEntity newEntity;
+        newEntity = logic.getDisponibilidad(dataHabitacion.get(0).getId(), entity.getId());
+
+        Assert.assertNotNull(newEntity);
+        Assert.assertEquals(newEntity.getId(), entity.getId());
+        Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
+        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
+
+    }
+
+    @Test
+    public void deleteResena() {
+        DisponibilidadEntity entity = data.get(0);
+        logic.deleteDisponibilidad(entity.getId());
+
+        DisponibilidadEntity entityBusq = logic.getDisponibilidad(entity.getHabitacion().getId(), entity.getId());
+        Assert.assertNull(entityBusq);
+    }
+
+    @Test
+    public void updateDisponibilidad() {
+        try {
+            DisponibilidadEntity entity = data.get(0);
+            DisponibilidadEntity entityUp
+                    = factory.manufacturePojo(DisponibilidadEntity.class);
+
+            entityUp.setId(entity.getId());
+
+            entityUp.setHabitacion(dataHabitacion.get(0));
+
+            Date fechaActual = new Date();
+            entityUp.setFechaInicioEstadia(new Date(fechaActual.getTime() - 86400000));
+            entityUp.setFechaTerminacionEstadia(new Date(fechaActual.getTime() + 86400000));
+
+            logic.updateDisponibilidad(entityUp);
+            DisponibilidadEntity newEntity = logic.getDisponibilidad(entity.getHabitacion().getId(), entity.getId());
+
+            Assert.assertNotNull(newEntity);
+            Assert.assertEquals(newEntity.getId(), entityUp.getId());
+            Assert.assertEquals(newEntity.getFechaInicioEstadia(), entityUp.getFechaInicioEstadia());
+            Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entityUp.getFechaTerminacionEstadia());
+
+        } catch (BusinessLogicException e) {
+
+            Assert.fail("No deberia generar excepcion: " + e.getMessage());
         }
 
     }
-//
-//    @Test
-//    public void getViajeros() {
-//        List<ViajeroEntity> lista = logic.getViajeros();
-//        Assert.assertEquals(data.size(), lista.size());
-//        for (ViajeroEntity entityUno : lista) {
-//            boolean encontrado = false;
-//
-//            for (ViajeroEntity entityDos : data) {
-//                if (entityUno.getIdUsuario().equals(entityDos.getIdUsuario())) {
-//                    encontrado = true;
-//                }
-//            }
-//
-//            Assert.assertTrue(encontrado);
-//        }
-//    }
-//
-//    @Test
-//    public void getViajero() {
-//        ViajeroEntity entity = data.get(0);
-//        ViajeroEntity entityBusq = logic.getViajero(entity.getIdUsuario());
-//
-//        Assert.assertNotNull(entityBusq);
-//        Assert.assertEquals(entity.getCorreoElectronico(), entityBusq.getCorreoElectronico());
-//        Assert.assertEquals(entity.getContrasena(), entityBusq.getContrasena());
-//        Assert.assertEquals(entity.getDireccion(), entityBusq.getDireccion());
-//        Assert.assertEquals(entity.getImagen(), entityBusq.getImagen());
-//        Assert.assertEquals(entity.getNombre(), entityBusq.getNombre());
-//        Assert.assertEquals(entity.getNumeroDocumento(), entityBusq.getNumeroDocumento());
-//        Assert.assertEquals(entity.getTelefono(), entityBusq.getTelefono());
-//        Assert.assertEquals(entity.getTipoDocumento(), entityBusq.getTipoDocumento());
-//
-//    }
-//
-//    @Test
-//    public void deleteViajero() {
-//        ViajeroEntity entity = data.get(0);
-//        logic.deleteViajero(entity.getIdUsuario());
-//
-//        ViajeroEntity entityBusq = logic.getViajero(entity.getIdUsuario());
-//        Assert.assertNull(entityBusq);
-//    }
-//
-//    @Test
-//    public void updateViajero() {
-//        try {
-//            ViajeroEntity entity = data.get(0);
-//            ViajeroEntity entityUp = factory.manufacturePojo(ViajeroEntity.class);
-//            entityUp.setIdUsuario(entity.getIdUsuario());
-//
-//            logic.updateViajero(entityUp);
-//
-//            ViajeroEntity entityBusq = logic.getViajero(entity.getIdUsuario());
-//
-//            Assert.assertNotNull(entityBusq);
-//            Assert.assertEquals(entityUp.getNombre(), entityBusq.getNombre());
-//            Assert.assertEquals(entityUp.getContrasena(), entityBusq.getContrasena());
-//            Assert.assertEquals(entityUp.getCorreoElectronico(), entityBusq.getCorreoElectronico());
-//            Assert.assertEquals(entityUp.getDireccion(), entityBusq.getDireccion());
-//            Assert.assertEquals(entityUp.getImagen(), entityBusq.getImagen());
-//            Assert.assertEquals(entityUp.getNumeroDocumento(), entityBusq.getNumeroDocumento());
-//            Assert.assertEquals(entityUp.getTelefono(), entityBusq.getTelefono());
-//            Assert.assertEquals(entityUp.getTipoDocumento(), entityBusq.getTipoDocumento());
-//
-//        } catch (BusinessLogicException e) {
-//            Assert.fail("No deberia lanzar excepcion");
-//        }
-//
-//        try {
-//            ViajeroEntity entity = data.get(0);
-//            ViajeroEntity entityUp = factory.manufacturePojo(ViajeroEntity.class);
-//            entityUp.setContrasena("");
-//            entityUp.setNombre(null);
-//            entityUp.setIdUsuario(entity.getIdUsuario());
-//
-//            logic.updateViajero(entityUp);
-//
-//            Assert.fail("Deberia lanzar excepcion. "
-//                    + "Se esta intentando actualizar datos en Null o vacio");
-//        } catch (BusinessLogicException e) {
-//
-//        }
-//    }
-//
-//////////////////
-//    /**
-//     * Configuración inicial de la prueba.
-//     *
-//     * @generated
-//     */
-//    @Before
-//    public void configTest() {
-//        try {
-//            utx.begin();
-//            clearData();
-//            insertData();
-//            utx.commit();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            try {
-//                utx.rollback();
-//            } catch (Exception e1) {
-//                e1.printStackTrace();
-//            }
-//        }
-//    }
-//
-//    /**
-//     * Limpia las tablas que están implicadas en la prueba.
-//     *
-//     * @generated
-//     */
-//    private void clearData() {
-//        em.createQuery("delete from DisponibilidadEntity").executeUpdate();
-//    }
-//
-//    /**
-//     * @generated
-//     */
-//    private List<DisponibilidadEntity> data = new ArrayList<DisponibilidadEntity>();
-//
-//    /**
-//     * Inserta los datos iniciales para el correcto funcionamiento de las
-//     * pruebas.
-//     *
-//     * @generated
-//     */
-//    private void insertData() {
-//        for (int i = 0; i < 3; i++) {
-//            PodamFactory factory = new PodamFactoryImpl();
-//            DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
-//
-//            em.persist(entity);
-//            data.add(entity);
-//        }
-//    }
-//
-//    /**
-//     * Prueba para crear un Disponibilidad.
-//     *
-//     * @generated
-//     */
-//    @Test
-//    public void createDisponibilidadTest() throws BusinessLogicException {
-//        PodamFactory factory = new PodamFactoryImpl();
-//
-//        DisponibilidadEntity entity = factory.manufacturePojo(DisponibilidadEntity.class);
-//        DisponibilidadEntity newEntity = disponibilidadLogic.createDisponibilidad(entity);
-//
-//        Assert.assertNotNull(newEntity);
-//        Assert.assertEquals(newEntity.getId(), entity.getId());
-//        Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
-//        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
-//    }
-//
-//    /**
-//     * Prueba para consultar la lista de Disponibilidades.
-//     *
-//     * @generated
-//     */
-////    @Test
-////    public void getDisponibilidadsTest() {
-////        List<DisponibilidadEntity> list = disponibilidadLogic.getDisponibilidades();
-////        Assert.assertEquals(data.size(), list.size());
-////        for (DisponibilidadEntity entity : list) {
-////            boolean found = false;
-////            for (DisponibilidadEntity storedEntity : data) {
-////                if (entity.getId().equals(storedEntity.getId())) {
-////                    found = true;
-////                }
-////            }
-////            Assert.assertTrue(found);
-////        }
-////    }
-//    /**
-//     * Prueba para consultar un Disponibilidad.
-//     *
-//     * @generated
-//     */
-//    @Test
-//    public void getDisponibilidadTest() {
-//        DisponibilidadEntity entity = data.get(0);
-//        DisponibilidadEntity newEntity = disponibilidadLogic.getDisponibilidad(entity.getHabitacion().getId(), entity.getId());
-//
-//        Assert.assertNotNull(newEntity);
-//        Assert.assertEquals(newEntity.getId(), entity.getId());
-//        Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
-//        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
-//    }
-//
-//    /**
-//     * Prueba para eliminar un Disponibilidad.
-//     *
-//     * @generated
-//     */
-//    @Test
-//    public void deleteDisponibilidadTest() {
-//        DisponibilidadEntity entity = data.get(0);
-//        disponibilidadLogic.deleteDisponibilidad(entity.getId());
-//        DisponibilidadEntity deleted = em.find(DisponibilidadEntity.class, entity.getId());
-//        Assert.assertNull(deleted);
-//    }
-//
-//    /**
-//     * Prueba para actualizar un Disponibilidad.
-//     *
-//     * @generated
-//     */
-//    @Test
-//    public void updateDisponibilidadTest() throws BusinessLogicException {
-//        DisponibilidadEntity entity = data.get(0);
-//        PodamFactory factory = new PodamFactoryImpl();
-//        DisponibilidadEntity pojoEntity = factory.manufacturePojo(DisponibilidadEntity.class);
-//        pojoEntity.setId(entity.getId());
-//
-//        disponibilidadLogic.updateDisponibilidad(pojoEntity);
-//
-//        DisponibilidadEntity newEntity = em.find(DisponibilidadEntity.class, entity.getId());
-//
-//        Assert.assertNotNull(newEntity);
-//        Assert.assertEquals(newEntity.getId(), pojoEntity.getId());
-//        Assert.assertEquals(newEntity.getFechaInicioEstadia(), pojoEntity.getFechaInicioEstadia());
-//        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), pojoEntity.getFechaTerminacionEstadia());
-//
-//    }
 
+    @Test
+    public void updateDisponibilidad2() {
+
+        try {
+
+            DisponibilidadEntity entity = data.get(0);
+            DisponibilidadEntity entityUp
+                    = factory.manufacturePojo(DisponibilidadEntity.class);
+
+            entityUp.setId(entity.getId());
+
+            entityUp.setHabitacion(dataHabitacion.get(0));
+
+            Date fechaActual = new Date();
+            entityUp.setFechaInicioEstadia(new Date(fechaActual.getTime() + 86400000));
+            entityUp.setFechaTerminacionEstadia(new Date(fechaActual.getTime() - 86400000));
+
+            logic.updateDisponibilidad(entityUp);
+
+            Assert.fail("Deberia generar excepcion");
+        } catch (BusinessLogicException e) {
+
+        }
+    }
+
+
+//        Assert.assertNotNull(newEntity);
+//        Assert.assertEquals(newEntity.getId(), entity.getId());
+//        Assert.assertEquals(newEntity.getFechaInicioEstadia(), entity.getFechaInicioEstadia());
+//        Assert.assertEquals(newEntity.getFechaTerminacionEstadia(), entity.getFechaTerminacionEstadia());
+//    }
 }

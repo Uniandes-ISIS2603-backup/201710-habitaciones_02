@@ -10,6 +10,8 @@ DELETE FROM ANFITRIONENTITY;
 DELETE FROM VIAJEROENTITY;
 DELETE FROM USUARIOENTITY;
 
+
+
 insert into USUARIOENTITY ( DTYPE, imagen, nombre, contrasena, correoElectronico, tipoDocumento, numeroDocumento, direccion, telefono) values ('AnfitrionEntity', 'http://dummyimage.com/335x343.jpg/ff4444/ffffff', 'Lillian Fowler',  'oWuOQCWL', 'lfowler0@cdc.gov', 'Yabrūd', '6304028405010839248', '1627 Dryden Circle', '963-(515)512-6540');
 insert into USUARIOENTITY ( DTYPE,imagen, nombre, contrasena, correoElectronico, tipoDocumento, numeroDocumento, direccion, telefono) values ('AnfitrionEntity', 'http://dummyimage.com/354x403.bmp/ff4444/ffffff', 'Debra Hart', 'UR874h', 'dhart1@delicious.com', 'Communal', '3562116852444239', '031 Norway Maple Court', '63-(434)680-2453');
 insert into USUARIOENTITY (DTYPE, imagen, nombre, contrasena, correoElectronico, tipoDocumento, numeroDocumento, direccion, telefono) values ('AnfitrionEntity', 'http://dummyimage.com/470x322.bmp/ff4444/ffffff', 'Louise Gonzalez', 'NHtjqTsJUKc', 'lgonzalez2@hud.gov', 'Qaţanah', '201444903251970', '82207 Londonderry Hill', '970-(725)406-0730');
@@ -25,6 +27,7 @@ insert into USUARIOENTITY ( DTYPE,imagen, nombre, contrasena, correoElectronico,
 insert into USUARIOENTITY ( DTYPE,imagen, nombre, contrasena, correoElectronico, tipoDocumento, numeroDocumento, direccion, telefono) values ('AnfitrionEntity', 'http://dummyimage.com/405x370.bmp/dddddd/000000', 'Chris Howard', 'D22oYaYgQoDX', 'chowardc@vimeo.com', 'Grand Junction', '3557107518141597', '17 Petterle Drive', '1-(970)407-2663');
 insert into USUARIOENTITY ( DTYPE,imagen, nombre, contrasena, correoElectronico, tipoDocumento, numeroDocumento, direccion, telefono) values ('AnfitrionEntity', 'http://dummyimage.com/441x459.bmp/dddddd/000000', 'Donald Little', 'hcuknUCn7ED', 'dlittled@purevolume.com', 'Sharïngol', '3547466021230872', '26 Arizona Avenue', '976-(887)534-8160');
 insert into USUARIOENTITY ( DTYPE,imagen, nombre, contrasena, correoElectronico, tipoDocumento, numeroDocumento, direccion, telefono) values ('AnfitrionEntity', 'http://dummyimage.com/303x414.jpg/5fa2dd/ffffff','Donald Hanson', 'EO8rEWqQri', 'dhansone@jalbum.net', 'Tanda', '67094227250948598', '0 Ruskin Street', '225-(290)301-4945');
+
 
 insert into ANFITRIONENTITY (idUsuario) values (1);
 insert into ANFITRIONENTITY (idUsuario) values (2);
