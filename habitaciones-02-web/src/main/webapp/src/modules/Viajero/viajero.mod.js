@@ -56,7 +56,16 @@
                                             });
                                     }
                                     else if($scope.usuario.tipo == 2){
-                                        //anfitiron
+                                       $http.get('api/anfitriones/loginAnfitrion?correoE='
+                                            + $scope.usuario.correo +'&contrasena='+$scope.usuario.contrasena)
+                                            .then(function(resultado){
+                                                    console.log('Encontró anfitrión!');
+                                                    $state.go('anfitrionDetail',{anfitrionId: resultado.data.idUsuario});
+                                                    console.log(resultado);
+                                            }).catch (function(error){
+                                                document.getElementById('errorLogin').innerHTML = error.data;
+                                                console.log('se genero este error: ' + error.data);
+                                            });
                                     }
                                     
 

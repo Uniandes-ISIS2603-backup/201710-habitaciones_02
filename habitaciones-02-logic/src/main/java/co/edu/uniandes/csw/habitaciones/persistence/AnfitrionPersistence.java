@@ -29,6 +29,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -70,7 +71,16 @@ public class AnfitrionPersistence {
     public AnfitrionEntity update(AnfitrionEntity entity) {
         return em.merge(entity);
     }
-
+    public AnfitrionEntity findLogin(String pCorreo, String pConstrasena){
+        TypedQuery<AnfitrionEntity> q;
+        q = em.createQuery("select u from ViajeroEntity u where u.correoElectronico = :pCorreo ANd u.contrasena = :pConstrasena",AnfitrionEntity.class);
+        q = q.setParameter("pCorreo", pCorreo);
+        q = q.setParameter("pConstrasena", pConstrasena);
+        
+        List<AnfitrionEntity> lista =  q.getResultList();
+        
+        return (!lista.isEmpty()) ? lista.get(0) : null ;
+    }
     public void delete(Long id) {
         AnfitrionEntity entity = em.find(AnfitrionEntity.class, id);
         em.remove(entity);
