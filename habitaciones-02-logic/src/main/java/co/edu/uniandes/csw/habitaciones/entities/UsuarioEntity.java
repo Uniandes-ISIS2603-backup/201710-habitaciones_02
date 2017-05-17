@@ -152,6 +152,7 @@ public class UsuarioEntity implements Serializable
      */
     public void setImagen(String imagen)
     {
+
         this.imagen = imagen;
     }
 

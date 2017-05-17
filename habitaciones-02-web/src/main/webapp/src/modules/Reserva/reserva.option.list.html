@@ -1,0 +1,36 @@
+<div class = "row">
+    <center>
+<dt > Nombre </dt>
+
+        
+         
+        <form action= api/reservas/{{currentReserva.id}} method=”put” if-match=”q1w2e3r4t5”>
+            
+            <input  class="Creacion center-block" value=”false” type=”submit” style="font-size: 16px;" />
+         <input class="Creacion center-block" type="submit" value="Sign Up" style="font-size: 16px;">
+        </form>
+        
+        
+       
+       
+       
+      
+       
+       <button class="delete" data-target="http://localhost:8080/habitaciones-02-web/api/reservas" data-method="DELETE" data-disabled="true">Eliminar Reserva</button>
+         
+       <form action=”http://localhost:8080/habitaciones-02-web/api/reservas/currentReservas.ID” method=”delete” if-match=”q1w2e3r4t5”>
+            <input type=”submit” />
+        </form>
+     </center>
+
+</div>      
+       
+ <script> 
+ $(".delete").restintag(optionsObj, function(data) {
+    console.log(data);
+},
+function(error) {
+    console.log(error);
+});
+</script>
+        

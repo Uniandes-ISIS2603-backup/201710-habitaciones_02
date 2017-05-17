@@ -1,4 +1,4 @@
-<div class="panel panel-default"> 
+<div id="idV1" class="panel panel-default"> 
 
     <style>
         dt{
@@ -9,35 +9,35 @@
         }
     </style>
 
-    <div class="panel-body">
+    <div class="panel-body" style="background-color: rgba(255,255,255,0.2)">
 
         <div class="col-md-3">
 
-            <div class="row">
+            <div  class="row">
 
-                <div class="thumbnail">
+                <div id="idV1" class="thumbnail">
                     <img style="max-height: 300px; min-height: 300px;" class="img-responsive" ng-src="{{currentViajero.imagen}}" alt="{{currentViajero.nombre}}"/>
                 </div>
 
             </div>
 
-            <div class="row">
+            <div id="idV1" class="row">
 
                 <dl>
-                    <dt style="font-size: 20px ">{{currentViajero.nombre}}</dt>
+                    <dt id="dt1" style="font-size: 20px ">{{currentViajero.nombre}}</dt>
                     <hr>
 
-                    <dt>Identificacion</dt>
-                    <dd>{{currentViajero.tipoDocumento}} : {{currentViajero.numeroDocumento}}</dd>
+                    <dt id="dt1">Identificacion</dt>
+                    <dd  id="dd1">{{currentViajero.tipoDocumento}} : {{currentViajero.numeroDocumento}}</dd>
                     <hr />
-                    <dt>correo Electronico</dt>
-                    <dd>{{currentViajero.correoElectronico}}</dd>
+                    <dt id="dt1">correo Electronico</dt>
+                    <dd id="dd1">{{currentViajero.correoElectronico}}</dd>
 
-                    <dt>telefono</dt>
-                    <dd>{{currentViajero.telefono}}</dd>
+                    <dt id="dt1">telefono</dt>
+                    <dd id="dd1">{{currentViajero.telefono}}</dd>
 
-                    <dt>direccion</dt>
-                    <dd>{{currentViajero.direccion}}</dd>
+                    <dt id="dt1">direccion</dt>
+                    <dd id="dd1">{{currentViajero.direccion}}</dd>
 
                 </dl>
 
@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-9">
 
-            <nav style="background-color: white; border-color: #286090" class="navbar navbar-default">
+            <nav style="background-color: rgba(255,255,255,0.6)" class="navbar navbar-default">
                 <div class="col-md-6">
                     <ul class="nav navbar-nav">
                         <li><a ui-sref="viajeroReservasList"><b>Reservas</b></a></li>

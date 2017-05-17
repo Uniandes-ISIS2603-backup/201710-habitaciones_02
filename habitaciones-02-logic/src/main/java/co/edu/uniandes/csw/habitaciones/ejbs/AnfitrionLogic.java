@@ -68,7 +68,19 @@ public class AnfitrionLogic {
             return persistence.update(entity);
         }
     }
-
+    
+    public AnfitrionEntity getAnfitrionLogin(String pCorreo, String pContrasena) throws BusinessLogicException
+    {
+        AnfitrionEntity resultado = persistence.findLogin(pCorreo, pContrasena);
+        
+        if(resultado == null)
+        {
+            throw new BusinessLogicException("No existe un usuario registrao con los datos "
+                    + "que fueron ingresados! Por favor intente nuevamente.");
+        }
+        
+        return resultado;
+    }
     public void deleteAnfitrion(Long id) {
         persistence.delete(id);
     }

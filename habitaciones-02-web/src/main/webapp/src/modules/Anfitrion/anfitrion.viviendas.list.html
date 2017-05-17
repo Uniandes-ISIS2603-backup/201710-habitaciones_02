@@ -1,8 +1,8 @@
-<div class="panel panel-default" style="border-color: #d1eeff;">
+<div style="background-color: transparent;" class="panel panel-default" style="border-color: #d1eeff;">
 
-    <div class="panel-body" >
+    <div class="panel-body" style="background-color: rgba(255,255,255,0.2)">
 
-        <div class = "row" style="border-bottom-color: black">
+        <div class = "row" >
 
             <div class="col-sm-1 col-md-1"> <b>Filtrar: </b></div>
             <div class="col-sm-11 col-md-11"> 
@@ -20,33 +20,33 @@
 
         <div class = "row" style="margin-top: 10px;">
 
-            <div class="col-sm-3 col-md-3" ng-repeat="vivienda in currentAnfitrion.viviendas">
-                <div class="thumbnail" >
+            <div  class="col-sm-3 col-md-3" ng-repeat="vivienda in currentAnfitrion.viviendas">
+                <div id="idV1" class="thumbnail" >
 
                     <dl>
-                        <dt>Ciudad</dt>
-                        <dd>{{vivienda.ciudad}}</dd>
+                        <dt id="dt2">Ciudad</dt>
+                        <dd id="dd2">{{vivienda.ciudad}}</dd>
 
-                        <dt>Dirección</dt>
-                        <dd>{{vivienda.direccion}}</dd>
+                        <dt id="dt2">Dirección</dt>
+                        <dd id="dd2">{{vivienda.direccion}}</dd>
 
                     </dl>
                     <div class="text-center">
                         <a ui-sref="viviendaDetail({viviendaId: vivienda.id})">
-                            <b style="color: lightblue;"> mas informacion</b>
+                            <b style="color: #000;"> Más información</b>
                         </a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <div>
             <div class="text-center">
-                        <a ui-sref="createVivienda">
-                            <b style="color: #4cae4c;"> Crear nueva vivienda</b>
-                        </a>
-           </div>
-            
+                <a ui-sref="createVivienda">
+                    <b style="color: #000;"> Crear nueva vivienda</b>
+                </a>
+            </div>
+
         </div>
     </div>
 

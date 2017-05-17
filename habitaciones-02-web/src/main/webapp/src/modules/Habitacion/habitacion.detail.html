@@ -1,4 +1,3 @@
-    
 <div class="panel panel-default"> 
     <div class="panel-body">
         <div class="row">
@@ -6,6 +5,18 @@
                 <div class="thumb">
                     <img class="img-responsive" ng-src="{{currentHabitacion.rutaImagen}}"/>
                 </div>
+                <p>
+                </p>
+
+                <li><a ui-sref="updateHabitacion"><span class="glyphicon glyphicon-pencil"></span><b>Actualizar Informaci&oacute;n</b></a></li>
+
+                <p>
+                </p>
+
+
+                <li><button class="btn" style="background-color: white; margin-top: 8px;" ng-click="delete()"><span class="glyphicon glyphicon-remove" style="color: #d43f3a"></span><b style="color: #d43f3a">Eliminar Habitaci&oacute;n</b></button></li>
+
+
             </div>
             <div class="col-md-3">
                 <dl>     
@@ -32,19 +43,18 @@
                             <dt style="font-size: 20px "> Disponibilidades    </dt>
                             <hr>
                             <ul ng-repeat="disponibilidad in currentHabitacion.disponibilidades">
-                               
+
                                 <dt>Disponibilidad: {{disponibilidad.id}}</dt>
                                 </a>
                                 <dd>Fecha inicio estadía: {{disponibilidad.fechaInicioEstadia}}</dd>
                                 <dd>Fecha terminación estadía: {{disponibilidad.fechaTerminacionEstadia}}</dd>
                             </ul> 
-                            
+
 
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+
                 <div class="panel panel-default">
                     <div class="panel-body">
 
@@ -52,7 +62,7 @@
                             <dt style="font-size: 20px "> Reservas    </dt>
                             <ul ng-repeat="reserva in currentHabitacion.reservas">
                                 <a ui-sref="reservaDetail({reservaId: reserva.id})" >
-                                <dt>Reserva: {{reserva.id}}</dt>
+                                    <dt>Reserva: {{reserva.id}}</dt>
                                 </a>
                                 <dd>Precio: {{reserva.precio}}</dd>
                                 <dd>Fecha inicio estadía: {{reserva.fechaInicioEstadia}}</dd>
@@ -62,8 +72,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+
                 <div class="panel panel-default">
                     <div class="panel-body">
 
@@ -71,7 +80,7 @@
                             <dt style="font-size: 20px "> Reseñas    </dt>
                             <ul ng-repeat="resena in recordsResenas">
                                 <a ui-sref="resenaDetailHabitacion({resenaId: resena.id})" >
-                                <dt>Reserva: {{resena.id}}</dt>
+                                    <dt>Resena: {{resena.id}}</dt>
                                 </a>
                                 <dd>Calificación: {{resena.calificacion}}</dd>
                                 <dd>Comentario: {{resena.comentario}}</dd>
@@ -80,8 +89,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+
                 <div class="panel panel-default">
                     <div class="panel-body">
 
@@ -89,7 +97,7 @@
                             <dt style="font-size: 20px "> Vivienda    </dt>
                             <ul ng-repeat="vivienda in currentHabitacion.vivienda">
                                 <a ui-sref="viviendaDetail({viviendaId: vivienda.id})" >
-                                <dt>Vivienda: {{vivienda.id}}</dt>
+                                    <dt>Vivienda: {{vivienda.id}}</dt>
                                 </a>
                                 <dd>Ciudad: {{vivienda.ciudad}}</dd>
                                 <dd>Dirección: {{vivienda.direccion}}</dd>
@@ -100,8 +108,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div ui-view="childrenDetail"></div>
-        </div>
+
     </div>
 </div>

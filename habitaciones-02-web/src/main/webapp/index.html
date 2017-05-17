@@ -29,12 +29,12 @@ SOFTWARE.
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Habitaciones</title>
-        
+
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="icon" href="http://www.clipartbest.com/cliparts/aiq/6EK/aiq6EK75T.png">
-        
+
         <link rel="stylesheet" href="src/disenoWeb.css">
-        
+        <link rel="stylesheet" href="src/modules/Anfitrion/anfitrionStyles.css"  />
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -56,7 +56,7 @@ SOFTWARE.
         <!-- Habitación -->
         <script src="src/modules/Habitacion/habitacion.mod.js" type="text/javascript"></script>
         <script src="src/modules/Habitacion/habitacion.ctrl.js" type="text/javascript"></script>
-        
+
         <!-- Disponibilidad -->
         <script src="src/modules/Disponibilidad/disponibilidad.mod.js" type="text/javascript"></script>
         <script src="src/modules/Disponibilidad/disponibilidad.ctrl.js" type="text/javascript"></script>
@@ -64,30 +64,36 @@ SOFTWARE.
         <!-- Reseña -->
         <script src="src/modules/Resena/resena.mod.js" type="text/javascript"></script>
         <script src="src/modules/Resena/resena.ctrl.js" type="text/javascript"></script>
-       
+
         <!-- Reserva -->
         <script src="src/modules/Reserva/reserva.mod.js" type="text/javascript"></script>
         <script src="src/modules/Reserva/reserva.ctrl.js" type="text/javascript"></script>
-        
+
         <!-- Pago-->
         <script src="src/modules/Pago/pago.mod.js" type="text/javascript"></script>
         <script src="src/modules/Pago/pago.ctrl.js" type="text/javascript"></script>
 
     </head>
-    
+    <style>
+        body{
+            background-image: url("https://s-media-cache-ak0.pinimg.com/originals/cf/05/b1/cf05b15b1c91b66698f4307b5ce73a72.jpg");
+        }
+
+    </style>
+
     <body >
-       
+
         <nav onload="refresh()" style="margin-bottom: 0px;border-bottom: 0px;margin-top: -3px;border-top: -3px;" class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" ui-sref="startPage">Habitaciones</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                     <li><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     <li><a ui-sref="viajeroCreate"><span class="glyphicon glyphicon-user"></span> Sign Up Viajero</a></li>
                     <li><a ui-sref="anfitrionCreate"><span class="glyphicon glyphicon-user"></span> Sign Up Anfitrion</a></li>
-                    
+
                 </ul>
             </div>
         </nav>

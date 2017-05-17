@@ -144,7 +144,7 @@
                         templateUrl: basePath + 'anfitrion.detail.html',
                         controller: ['$state','$scope','$http', 'currentAnfitrion', '$stateParams',
                             function ($state,$scope, $http ,currentAnfitrion, $params) {
-                                console.log($params.anfitrionId);
+                                console.log(currentAnfitrion);
                                 const object={};
                                 $scope.delete =function(){
                                      $http.delete('api/anfitriones'+'/'+$params.anfitrionId, object).then(function(){
@@ -192,11 +192,7 @@
                 views: {
                     'ListasAnfitrionView': {
                         templateUrl: basePath + 'anfitrion.update.html',
-                        controller: ['$scope', '$stateParams',
-                            function ($scope, $params) {
-                                $scope.currentAnfitrion =
-                                        $scope.anfitrionesRecords[$params.anfitrionId - 1];
-                            }],
+                        controller: 'anfitrionUpdateCtrl',
 
                     }
                 },

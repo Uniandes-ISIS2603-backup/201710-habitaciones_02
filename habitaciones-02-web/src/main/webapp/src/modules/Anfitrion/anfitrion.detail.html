@@ -1,55 +1,44 @@
-<div class="panel panel-default"> 
-    <style>
-        dt{
-            text-align: center;
-        }
-        dd{
-            text-align: center;
-        }
-    </style>
+<div id="idV1" class="panel panel-default" > 
+
     <script src="anfitrion.mod.js" type="text/javascript"></script>
     <script src="anfitrion.ctrl.js" type="text/javascript"></script>
-    <div class="panel-body">
+    <div class="panel-body" style="background-color: rgba(255,255,255,0.2)" >
 
-        <div class="col-md-3">
+        <div class="col-md-3" >
             <div class ="row">
-                <div  class="thumbnail">
+                <div id="idV1" class="thumbnail"   >
                     <img style="max-height: 300px; min-height: 300px;"class="img-responsive" ng-src="{{currentAnfitrion.imagen}}"alt="{{anfitrion.nombre}}"/>
                 </div>
             </div>
-            <div class="row">
+            <div id="idV1" class="row">
 
                 <dl>     
 
-                    <dt style="font-size: 20px ">{{currentAnfitrion.nombre}}</dt>
+                    <dt id="dt1" style="font-size: 20px ">{{currentAnfitrion.nombre}}</dt>
                     <hr>
 
-                    <dt > Número de documento</dt>
-                    <dd >{{currentAnfitrion.numeroDocumento}}</dd>
-                    <dt > Correo</dt>
-                    <dd >{{currentAnfitrion.correoElectronico}}</dd>
+                    <dt id="dt1"> Número de documento</dt>
+                    <dd id="dd1">{{currentAnfitrion.numeroDocumento}}</dd>
+                    <dt id="dt1"> Correo</dt>
+                    <dd id="dd1">{{currentAnfitrion.correoElectronico}}</dd>
 
-                    <dt > Dirección</dt>
-                    <dd >{{currentAnfitrion.direccion}}</dd>
-                    <dt > Teléfono</dt>
-                    <dd >{{currentAnfitrion.telefono}}</dd>
+                    <dt id="dt1"> Dirección</dt>
+                    <dd id="dd1">{{currentAnfitrion.direccion}}</dd>
+                    <dt id="dt1"> Teléfono</dt>
+                    <dd id="dd1">{{currentAnfitrion.telefono}}</dd>
 
 
                 </dl>
-                <div class="col-md-5">
-                    <!-- Acá debería ir algo :)-->
-                </div>
-                <div class="col-md-4" style="border-left: 50px">
-                    <form name="formaDelete"  novalidate ng-submit="delete()">
-                        <input type="submit" value="Borrar" name="Borrar" />
-                    </form>
-                </div>
-            </div>    
-        </div>
+
+
+
+            </div>
+        </div>    
+
 
         <div class="col-md-9">
 
-            <nav style="background-color: white; border-color: #286090" class="navbar navbar-default">
+            <nav  style="background-color: rgba(255,255,255,0.6)" class="navbar navbar-default">
                 <div class="col-md-8">
                     <ul class="nav navbar-nav">
 
@@ -62,6 +51,18 @@
 
                     <ul class="nav navbar-nav text-right">
                         <li><a ui-sref="anfitrionUpdate"><span class="glyphicon glyphicon-pencil"></span><b> Actualizar información de Perfil</b></a></li>
+                        <form name="formaDelete"  novalidate ng-submit="delete()">
+
+                            <li>
+
+                                <span class="glyphicon glyphicon-remove" style="color: #d43f3a">
+                                    <b style="color: #d43f3a">
+                                        <input style="background-color: transparent; border-color: transparent; border-left: -50px" type="submit" value="Eliminar" name="Eliminar" />
+
+                                    </b>
+                                </span>
+
+                        </form>
                     </ul>
 
                 </div>

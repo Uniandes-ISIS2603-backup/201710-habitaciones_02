@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/05/2017, 06:49:07 PM
+    Author     : df.sanabria761
+*/
+
+div#idV1{
+    align-content: center;
+    background-color: transparent;
+    border-color: transparent;
+}
+dt#dt1{
+    text-align: center;
+    color: white;
+}
+dd#dd1{
+    text-align: center;
+    color: white;
+}
+dt#dt2{
+    text-align: center;
+    color: #000;
+}
+dd#dd2{
+    text-align: center;
+    color: #000;
+}

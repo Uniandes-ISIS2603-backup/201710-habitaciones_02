@@ -116,6 +116,21 @@ public class ReservaLogic {
 
         return persistence.update(entity);
     }
+        public ReservaEntity updateCancelado(ReservaEntity entity) throws BusinessLogicException {//TODO no hay ninguna validación de las reglas de negocio. QUé pasa si la habitación no está disponible
+        //TOD qué pasa con la validez de las fechas de las reservas
+        if (!entity.informacionCompleta()) {
+            throw new BusinessLogicException("falta informacion");
+        }
+        if (!entity.checkInfoFechas()) {
+            throw new BusinessLogicException("las fechas no estan en orden ");
+        }
+        if (!entity.checkInfo()) {
+            throw new BusinessLogicException("Ya tiene reservas en esta fecha");
+        }
+
+        return persistence.updateC(entity);
+    }
+    
 
     /**
      * Elimina la reserva con el id entrado en parametro
