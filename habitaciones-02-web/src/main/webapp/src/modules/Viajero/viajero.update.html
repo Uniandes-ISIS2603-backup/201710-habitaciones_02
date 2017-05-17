@@ -34,10 +34,10 @@
                 <div class="text-left">
                     <form name="formaAu" novalidate>
 
-                        <b>Escriba su contrasena:</b><br>
-                        <input class="ActualizacionViajero center-block" type="password" name="contrasenaV1" size="30" ng-model='contrasenaV1' required>
-                        <span ng-show="formaAu.contrasenaV1.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
-
+                        <b class="actV" >Escriba su contrasena:</b><br>
+                        <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasenaVer' required>
+                        
+                        <br><br>
                     </form>
                 </div>
             </div>
@@ -51,15 +51,16 @@
                 <div class="text-left">
                     <form name="formaCam" novalidate>
 
-                        <b>Nueva Contrasena:</b><br>
-                        <input class="ActualizacionViajero" type="password" name="contrasenaNueva1" size="30" ng-model='contrasenaNueva1' required>
-                        <span ng-show="formCam.contrasenaNueva1.$touched && formaCam.contrasenaNueva1.$invalid"><b style="color: red">X</b></span><br><br>
+                        <b class="actV" >Nueva Contrasena:</b><br>
+                        <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasena' required>
+                        
+                        <br>
+                        
+                        <b class="actV" >Vuelva a Escribir la nueva Contrasena:</b><br>
+                        <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasenaDos' required>
+                        
 
-                        <b>Vuelva a Escribir la nueva Contrasena:</b><br>
-                        <input class="ActualizacionViajero" type="password" name="contrasenaNueva2" size="30" ng-model='contrasenaNueva2' required>
-                        <span ng-show="formCam.contrasenaNueva2.$touched && formaCam.contrasenaNueva2.$invalid"><b style="color: red">X</b></span><br><br>
-
-                        <input class="center-block" type="submit" value="cambiar Contrasena">
+                        <button class='actVButton center-block' type="button">Cambiar Contraseña</button>
 
                     </form>
                 </div>
@@ -77,38 +78,39 @@
                     Por favor, ingrese los datos que desea modificar en su casilla correspondiente.<br>
                     No olvide realizar la verificacion de usuario antes de enviar la informacion.
                 </p>
-
+                
+                <br>
+                
                 <div class="text-left">
                     <form name="formaUpdateV"  novalidate ng-submit="update()">
 
-                        <b>Nombre Completo:</b><br>
-                        <input class="ActualizacionViajero" name="nombre" type="text" size="40" ng-model='currentViajero.nombre'required>
+                        <b class="actV" >Nombre Completo:</b><br>
+                        <input class="form-control usuarios actV" name="nombre" type="text" ng-model='currentViajero.nombre' required>
                         <span ng-show="formaA.nombre.$touched && formaA.nombre.$invalid"><b style="color: red">X</b></span><br><br>
 
-                        <b>Correo Electronico</b><br>
-                        <input class="ActualizacionViajero" name="correoElectronico" type="email" size="40" ng-model='currentViajero.correoElectronico' required>
+                        <b class="actV">Correo Electronico</b><br>
+                        <input id="email" type="email" class="form-control usuarios actV" name="email" ng-model='currentViajero.correoElectronico' required>
                         <span ng-show="formaA.correoElectronico.$invalid"><b style="color: red">X</b></span><br><br>
 
                         <!-- Pede ser type='radio'?-->
-                        <b>Tipo Documento</b><br>
-                        <input class="ActualizacionViajero" name="tipoDocumento" type="text" size="40" ng-model='currentViajero.tipoDocumento'required>
+                        <b class="actV">Tipo Documento</b><br>
+                        <input class="form-control usuarios actV" name="tipoDocumento" type="text" ng-model='currentViajero.tipoDocumento' required>
                         <span ng-show="formaA.tipoDocumento.$touched && formaA.tipoDocumento.$invalid"><b style="color: red">X</b></span><br><br>
 
-                        <b>Numero Documento</b><br>
-                        <input class="ActualizacionViajero" name="numeroDocumento" type="text" size="40" ng-model='currentViajero.numeroDocumento'required>
+                        <b class="actV">Numero Documento</b><br>
+                        <input class="form-control usuarios actV" name="numeroDocumento" type="text" ng-model='currentViajero.numeroDocumento' required>
                         <span ng-show="formaA.numeroDocumento.$touched && formaA.numeroDocumento.$invalid"><b style="color: red">X</b></span><br><br>
 
-                        <b>Direccion</b><br>
-                        <input class="ActualizacionViajero" name="direccion" type="text" size="40" ng-model='currentViajero.direccion'required>
+                        <b class="actV">Direccion</b><br>
+                        <input class="form-control usuarios actV" name="direccion" type="text" ng-model='currentViajero.direccion' required>
                         <span ng-show="formaA.direccion.$touched && formaA.direccion.$invalid"><b style="color: red">X</b></span><br><br>
 
-                        <b>Telefono de Contacto</b><br>
-                        <input class="ActualizacionViajero" name="telefono" type="text" size="40" ng-model='currentViajero.telefono'required>
+                        <b class="actV">Telefono de Contacto</b><br>
+                        <input class="form-control usuarios actV" name="telefono" type="text" ng-model='currentViajero.telefono'required>
                         <span ng-show="formaA.telefono.$touched && formaA.telefono.$invalid"><b style="color: red">X</b></span><br><br>
 
-                        <input class='Actualizacion center-block' type="submit" value="Actualizar datos">
-
-
+                        <button class='actVButton center-block' type="button"> Actualizar datos </button>
+                        
                     </form>
                 </div>
             </div>
