@@ -1,17 +1,5 @@
 <div class="panel panel-default" style=" margin-left: 20px; width: 95%;">
 
-    <style>
-
-        input.ActualizacionResena.ng-invalid{
-
-            background-color: lightsalmon;
-        }
-        input.ActualizacionResena.ng-valid{
-
-            background-color: lightgreen;
-        }
-    </style>
-
     <div class="panel-body" >
 
         <div class="row">
@@ -53,11 +41,11 @@
             <br><br>
             
             <h4> Comentario: </h4>
-            <textarea name="updateComentario" rows="10" cols="70" ng-model='currentResena.comentario' style="text-align: center"></textarea>
+            <textarea name="updateComentario" rows="10" cols="70" ng-model='currentResena.comentario' style="text-align: center; border-radius: 10px;"></textarea>
 
             <hr>
 
-            <input class="center-block" type="submit" value="Guardar Modificaciones">
+            <input class="actVButton center-block" type="submit" value="Guardar">
 
         </form>
 
