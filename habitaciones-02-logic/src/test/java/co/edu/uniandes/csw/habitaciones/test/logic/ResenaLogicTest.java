@@ -171,7 +171,7 @@ public class ResenaLogicTest {
         }
     }
    
-    @Test public void createResenaUno() { 
+    @Test public void testCreateResenaUno() { 
         
         ResenaEntity entity = factory.manufacturePojo(ResenaEntity.class);
         entity.setHabitacion(dataHabitacion.get(0));
@@ -193,7 +193,7 @@ public class ResenaLogicTest {
         } 
     }
 
-    @Test public void createResenaDos() { 
+    @Test public void testCreateResenaDos() { 
         try { 
             ResenaEntity entity = factory.manufacturePojo(ResenaEntity.class);
             entity.setHabitacion(dataHabitacion.get(0));
@@ -210,7 +210,7 @@ public class ResenaLogicTest {
         }
     }
 
-    @Test public void createResenaTres() 
+    @Test public void testCreateResenaTres() 
     { 
         try { 
             ResenaEntity entity =factory.manufacturePojo(ResenaEntity.class); 
@@ -228,7 +228,7 @@ public class ResenaLogicTest {
     }
 
 
-    @Test public void findResenas() { 
+    @Test public void testFindResenas() { 
         List<ResenaEntity> lista = logic.findResenas(); 
         Assert.assertEquals(data.size(), lista.size());//expected data.size()
 
@@ -246,7 +246,7 @@ public class ResenaLogicTest {
         }
     }
 
-    @Test public void findResenasPorViajero() { 
+    @Test public void testFindResenasPorViajero() { 
         
         List<ResenaEntity> lista;
         lista = logic.findResenasViajero(dataViajero.get(0).getIdUsuario());
@@ -271,7 +271,7 @@ public class ResenaLogicTest {
         } 
     }
 
-    @Test public void findResenasPorHabitacion() { 
+    @Test public void testFindResenasPorHabitacion() { 
         
         List<ResenaEntity> lista;
         lista = logic.findResenasHabitacion(dataHabitacion.get(0).getId());
@@ -295,7 +295,7 @@ public class ResenaLogicTest {
         } 
     }
 
-    @Test public void findResenasPorViajeroYRangoUno() {
+    @Test public void testFindResenasPorViajeroYRangoUno() {
 
         try { 
             
@@ -336,7 +336,7 @@ public class ResenaLogicTest {
 
     }
 
-    @Test public void findResenasPorViajeroYRangoDos() { 
+    @Test public void testFindResenasPorViajeroYRangoDos() { 
         try {
             logic.finResenasViajeroPorRango(dataViajero.get(0).getIdUsuario(),
             CALIFICACION_MAYOR,CALIFICACION_MENOR);
@@ -348,7 +348,7 @@ public class ResenaLogicTest {
         } 
     }
 
-    @Test public void findResenasPorHabitacionYRangoUno() { 
+    @Test public void testFindResenasPorHabitacionYRangoUno() { 
         try {
             List<ResenaEntity> lista; lista =
             logic.finResenasHabitacionPorRango(dataHabitacion.get(1).getId(),
@@ -387,7 +387,7 @@ public class ResenaLogicTest {
         } 
     }
 
-    @Test public void findResenasPorHabitacionYRangoDos() {
+    @Test public void testFindResenasPorHabitacionYRangoDos() {
         
         try {
             
@@ -401,7 +401,7 @@ public class ResenaLogicTest {
         } 
     }
 
-    @Test public void findResena() { ResenaEntity entity = data.get(0);
+    @Test public void testFindResena() { ResenaEntity entity = data.get(0);
     ResenaEntity entityBusq = logic.findResena(entity.getId());
 
     Assert.assertNotNull(entityBusq);
@@ -410,7 +410,7 @@ public class ResenaLogicTest {
     Assert.assertEquals(entity.getComentario(), entityBusq.getComentario());
     }
 
-    @Test public void deleteResena() { 
+    @Test public void testDeleteResena() { 
         ResenaEntity entity = data.get(0);
         logic.delete(entity.getId());
 
@@ -418,7 +418,7 @@ public class ResenaLogicTest {
         Assert.assertNull(entityBusq); 
     }
 
-    @Test public void updateResenaUno() {
+    @Test public void testUpdateResenaUno() {
         try { 
             ResenaEntity entity = data.get(0); ResenaEntity entityUp =
             factory.manufacturePojo(ResenaEntity.class);
@@ -444,7 +444,7 @@ public class ResenaLogicTest {
 
     }
 
-    @Test public void updateResenaDos() { 
+    @Test public void testUpdateResenaDos() { 
         
         try { 
             
@@ -464,7 +464,7 @@ public class ResenaLogicTest {
         }
     }
 
-    @Test public void updateResenaTres() {
+    @Test public void testUpdateResenaTres() {
         try { 
             ResenaEntity entity = data.get(0); ResenaEntity entityUp =
             factory.manufacturePojo(ResenaEntity.class);
