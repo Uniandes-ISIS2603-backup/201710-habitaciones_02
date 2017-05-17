@@ -12,10 +12,12 @@
         }]
             );
     mod.controller("anfitrionListCtrl", ['$scope', 'anfitriones',
-        function ($scope, anfitriones) {
-
+        function ($scope,  anfitriones) {
+            
             $scope.anfitrionesRecords = anfitriones.data;
         }
 
     ]);
+    
+    
 })(window.angular);

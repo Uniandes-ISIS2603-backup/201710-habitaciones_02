@@ -3,21 +3,38 @@
         // External dependencies
         'ui.router',
         // Internal modules dependencies       
-        'anfitrionModule',
+
         'viajeroModule',
         'resenaModule',
         'habitacionModule',
         'disponibilidadModule',
         'reservaModule',
         'viviendaModule',
-        'pagoModule'
+        'pagoModule',
+        'anfitrionModule'
 
 
 
     ]);
     // Resuelve problemas de las promesas
-    app.config(['$qProvider', function ($qProvider) {
+    app.config(['$stateProvider', '$qProvider', function ($stateProvider, $qProvider) {
             $qProvider.errorOnUnhandledRejections(false);
-
+            $stateProvider.state('startPage', {
+                url: '',
+                views: {
+                    'mainView': {
+                        templateUrl: 'src/' + "start.html"
+                    }
+                }
+            });
         }]);
+
+    app.controller("indexCtrl", ['$scope', '$state',
+        function ($scope, $state) {
+            $scope.refresh = function(){
+                $state.go('startPage',{},{reload: true});
+            };
+        }
+    ]);
+
 })(window.angular);

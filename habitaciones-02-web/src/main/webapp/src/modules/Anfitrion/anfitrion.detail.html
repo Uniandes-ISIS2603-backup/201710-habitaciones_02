@@ -7,6 +7,8 @@
             text-align: center;
         }
     </style>
+    <script src="anfitrion.mod.js" type="text/javascript"></script>
+    <script src="anfitrion.ctrl.js" type="text/javascript"></script>
     <div class="panel-body">
 
         <div class="col-md-3">
@@ -34,7 +36,14 @@
 
 
                 </dl>
-
+                <div class="col-md-5">
+                    <!-- Acá debería ir algo :)-->
+                </div>
+                <div class="col-md-4" style="border-left: 50px">
+                    <form name="formaDelete"  novalidate ng-submit="delete()">
+                        <input type="submit" value="Borrar" name="Borrar" />
+                    </form>
+                </div>
             </div>    
         </div>
 

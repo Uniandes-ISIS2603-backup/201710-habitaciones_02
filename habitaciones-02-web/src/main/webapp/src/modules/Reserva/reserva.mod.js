@@ -7,7 +7,7 @@
             // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/Reserva/';
             // Mostrar la lista de libros será el estado por defecto del módulo
-            $urlRouterProvider.otherwise("/reservasList");
+            
             // Definición del estado 'booksList' donde se listan los libros
             $stateProvider.state('reserva', {
                 // Url que aparecerá en el browser
