@@ -6,14 +6,26 @@
         {
             
             $scope.viajero = {};
+            $scope.usuario = {};
             $scope.signup = function () {
                 
-                $http.post('api/viajeros', $scope.viajero)
+                if($scope.usuario.segundaContrasena === $scope.viajero.contrasena){
+                    $http.post('api/viajeros', $scope.viajero)
                     .then(function (data) {
                         
                         $state.go('viajeroDetail',{viajeroId: data.data.idUsuario});
                         console.log(data);
+                    }).catch (function(error){
+                        document.getElementById('errorSignUpV').innerHTML = error.data;
+                        console.log('se genero este error: ' + error.data);
                     });
+                }
+                else{
+                    document.getElementById('errorSignUpV').innerHTML = '*No se pudo '
+                    + 'realizar el cambio de contraseña debido que estas '
+                    + 'no coinciden entre si!';
+                }
+                
             };
         }]
     );
