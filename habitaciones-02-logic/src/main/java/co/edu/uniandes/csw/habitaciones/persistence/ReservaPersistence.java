@@ -101,7 +101,10 @@ public class ReservaPersistence {
         em.merge(entity);
         return entity;
     }
-
+    public ReservaEntity updateC(ReservaEntity entity) {
+        em.merge(entity);
+        return entity;
+    }
     /**
      * Elimina una reserva por su eliminacion
      *

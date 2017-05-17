@@ -105,7 +105,59 @@
 
                     }
                 }
+            } );
+            
+             $stateProvider.state('reservaoptionlist', {
+                url: '/{reservaId:int}/option',
+                parent: 'reservaDetail',
+
+                param: {
+                    reservaId: null
+                },
+                views: {
+                    'ListasReservaView': {
+                        templateUrl: basePath + 'reserva.option.list.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId-1];
+                            }]
+
+                    }
+                }
+            });             $stateProvider.state('reservaCreate', {
+                url: '/{reservaId:int}/create',
+                parent: 'reservaDetail',
+
+                param: {
+                    reservaId: null
+                },
+                views: {
+                    'ListasReservaView': {
+                        templateUrl: basePath + 'reserva.create.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId-1];
+                            }]
+
+                    }
+                }
             });
+                 $stateProvider.state('reservadisp', {
+                url: '/{reservaId:int}/disponible',
+                parent: 'reservaDetail',
+
+                param: {
+                    reservaId: null,
+                    reservac: true
+                },
+                views: {
+                    'ListasReservaView': {
+                        templateUrl: basePath + 'reserva.list.disp.html',
+                        controller: ['$scope', '$stateParams', function ($scope, $params) {
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservac];
+                            }]
+
+                    }
+                }
+            } );
 
         }
     ]);
