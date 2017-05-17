@@ -1,29 +1,43 @@
 <div class="container-fluid">
-    <div class="row">
-        <!-- habitacionesRecords fue inicializada en el controlador del estado habitacionesList -->
-        <!-- Itera sobre cada uno de las habitaciones en la colección habitacionesRecords -->
-        <div class="col-sm-4 col-md-3" ng-repeat="habitacion in habitacionesRecords">
-            <!--Despliega la imagen  -->
-            <div class="thumbnail">
+    <fieldset>
 
-                <style scoped>
-                    img{
-                        width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
-                    }
-                </style>
+        <fieldset>
+        <div class="col-sm-12   text-right" >
+            <a ui-sref="createHabitacion">
+                
+                <dd>Registrar Habitaci&oacute;n</dd><br>
+            </a>
+        </div>
+</fieldset>
 
-                <a ui-sref="habitacionDetail({habitacionId: habitacion.id})" >
-                    <img class="img-responsive" ng-src='{{habitacion.rutaImagen}}' />
+     
 
-                    <div class="caption text-center">
-                        <h4>Información Habitación</h4>
-                        <p>Área: {{habitacion.area}}</p>
-                        <p>Capacidad: {{habitacion.capacidad}}</p>
-                        <p>Valor Alquiler: {{habitacion.valorAlquiler}}</p>
-                        <p>Descripción: {{habitacion.descripcion}}</p>
-                    </div>
-                </a>
+        <div class="row">
+            <!-- habitacionesRecords fue inicializada en el controlador del estado habitacionesList -->
+            <!-- Itera sobre cada uno de las habitaciones en la colección habitacionesRecords -->
+            <div class="col-sm-4 col-md-3" ng-repeat="habitacion in habitacionesRecords">
+                <!--Despliega la imagen  -->
+                <div class="thumbnail">
+
+                    <style scoped>
+                        img{
+                            width: 300px; border-right: 0; margin-right: 0; height: 300px; max-height: 300px; min-height: 300px; 
+                        }
+                    </style>
+
+                    <a ui-sref="habitacionDetail({habitacionId: habitacion.id})" >
+                        <img class="img-responsive" ng-src='{{habitacion.rutaImagen}}' />
+
+                        <div class="caption text-center">
+                            <h4>Información Habitación</h4>
+                            <p>Área: {{habitacion.area}}</p>
+                            <p>Capacidad: {{habitacion.capacidad}}</p>
+                            <p>Valor Alquiler: {{habitacion.valorAlquiler}}</p>
+                            <p>Descripción: {{habitacion.descripcion}}</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </fieldset>
 </div>
