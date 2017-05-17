@@ -10,7 +10,8 @@
 
                                     <li><a ui-sref="reservaViajeroList"><b>Viajero</b></a></li>
                                     <li><a ui-sref="reservaAnfitrionList"><b>Anfitrion</b></a></li>
-
+                                    <li><a ui-sref="reservaoptionlist"><b>Option</b></a></li>
+                                    <li><a ui-sref="reservaCreate"><b>Crea Reserva</b></a></li>
                                     <hr>
                                 </ul>
 
@@ -46,6 +47,9 @@
                         <dt > &ensp; </dt>
                         <dt > Status </dt>
                         <dd  >{{currentReserva.cancelado}}</dd>
+                        <a ui-sref="reservadisp({reservac: currentReserva.precio})">
+                            <h4 class="caption text-center">Otras reservas con el mismo precio</h4>
+                        </a>
 
                     </center> 
 

@@ -10,6 +10,7 @@ import co.edu.uniandes.csw.habitaciones.ejbs.ViajeroLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import co.edu.uniandes.csw.habitaciones.exceptions.BusinessLogicException;
+import co.edu.uniandes.csw.habitaciones.persistence.ReservaPersistence;
 import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,9 +51,9 @@ public class ReservasLogicTest {
         @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addPackage(ViajeroEntity.class.getPackage())
-                .addPackage(ViajeroLogic.class.getPackage())
-                .addPackage(ViajeroPersistence.class.getPackage())
+                .addPackage(ReservaEntity.class.getPackage())
+                .addPackage(ReservaLogic.class.getPackage())
+                .addPackage(ReservaPersistence.class.getPackage())
                 .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
                 .addAsManifestResource("META-INF/beans.xml", "beans.xml");
     }
@@ -78,7 +79,7 @@ public class ReservasLogicTest {
      */
     private void clearData() {
         em.createQuery("delete from ReservaEntity").executeUpdate();
-        em.createQuery("delete from UsuarioEntity").executeUpdate();
+       
     }
     
     /**
@@ -113,7 +114,7 @@ public class ReservasLogicTest {
                 }
         
     }
-           @Test
+       @Test
     public void getReservasTest(){
         List<ReservaEntity> list = logic.findReservas();
         Assert.assertEquals(list.size(), data.size());
