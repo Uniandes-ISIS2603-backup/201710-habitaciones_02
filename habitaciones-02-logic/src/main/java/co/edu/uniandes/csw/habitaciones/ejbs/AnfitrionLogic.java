@@ -84,4 +84,14 @@ public class AnfitrionLogic {
     public void deleteAnfitrion(Long id) {
         persistence.delete(id);
     }
+    public AnfitrionEntity getNextAnfitrion(Long id){
+        return persistence.find(id+1);
+    }
+    public AnfitrionEntity getPrevAnfitrion(Long id) throws BusinessLogicException{
+        if(id!=1){
+            return persistence.find(id-1);
+        }else{
+            throw new BusinessLogicException("No hay anfitrion anterior.");
+        }
+    }
 }
