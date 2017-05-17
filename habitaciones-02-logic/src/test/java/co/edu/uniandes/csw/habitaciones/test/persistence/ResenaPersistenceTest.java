@@ -92,7 +92,7 @@ public class ResenaPersistenceTest {
     }
     
     @Test
-    public void createResena()
+    public void testCreateResena()
     {
         ResenaEntity entity = factory.manufacturePojo(ResenaEntity.class);
         ResenaEntity result = persistence.create(entity);
@@ -106,7 +106,7 @@ public class ResenaPersistenceTest {
     }
     
     @Test
-    public void findAllResenas()
+    public void testFindAllResenas()
     {
         List<ResenaEntity> lista = persistence.findAll();
         Assert.assertEquals(data.size(), lista.size());
@@ -125,7 +125,7 @@ public class ResenaPersistenceTest {
     }
     
     @Test
-    public void findResena()
+    public void testFindResena()
     {
         ResenaEntity entity = data.get(0);
         ResenaEntity entityBusq = persistence.find(entity.getId());
@@ -136,7 +136,7 @@ public class ResenaPersistenceTest {
     }
     
     @Test
-    public void deleteResena()
+    public void testDeleteResena()
     {
         ResenaEntity entity = data.get(0);
         persistence.delete(entity.getId());
@@ -146,7 +146,7 @@ public class ResenaPersistenceTest {
     }
     
     @Test 
-    public void updateResena()
+    public void testUpdateResena()
     {
         ResenaEntity entity = data.get(0);   
         ResenaEntity entityUp = factory.manufacturePojo(ResenaEntity.class);
