@@ -35,10 +35,10 @@ input.actV{
 
 b.actV{
     margin-left: 70px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-button.actVButton{
+input.actVButton{
     font-size: 18px;
     background-color: #204d74;
     border: 4px;
@@ -48,8 +48,75 @@ button.actVButton{
     margin-bottom: 10px;
 }
 
+button.actVButton{
+    font-size: 17px;
+    background-color: #204d74;
+    border: 4px;
+    border-radius: 10px;
+    color: white; 
+    width: 70%;
+    margin-top: 7px;
+}
+
+select.selectFR{
+    border-radius: 5px;
+}
+
+button#btnFiltroResenas{
+    font-size: 17px;
+    background-color: #204d74;
+    border: 4px;
+    border-radius: 10px;
+    color: white; 
+    width: 20%;
+    margin-top: 7px;
+}
+
+p#errorUpdate{
+    font-size: 18px;
+    color: white;
+    background-color: rgba(221,15,15,0.6);
+    border-radius: 5px;
+}
+
         /* VISTA LOGIN */
-        
+
+p#errorSignUpV,
+p#errorLogin{
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(221,15,15,0.6);
+    width: 90%;
+    margin-left: 40px;
+}
+
+p#errorDeleteViajero{
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(221,15,15,0.6);
+    width: 90%;
+}
+
+p#errorCreateResena{
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(221,15,15,0.6);
+    width: 90%;
+    margin-left: 20px;
+}
+
+div#radioLogin{
+    background-color: rgba(0,0,0,0.7);
+    width: 45%;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 120px;
+}
+
 div#loginID1{
     align-content: center;
     margin-top: 48px; 
@@ -105,7 +172,7 @@ form#loginID11{
         /* VISTA SIGNUP */
         
 img#idSingV1{
-    width: 100%; 
+    width: 100%;
     position: absolute; 
     margin-top: -5px;     
 }

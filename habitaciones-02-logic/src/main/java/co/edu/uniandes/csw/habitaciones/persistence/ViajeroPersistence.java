@@ -23,6 +23,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.persistence;
 
+import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -98,6 +99,17 @@ public class ViajeroPersistence
         return entity;
     }
 
+    public ViajeroEntity findLogin(String pCorreo, String pConstrasena){
+        TypedQuery<ViajeroEntity> q;
+        q = em.createQuery("select u from ViajeroEntity u where u.correoElectronico = :pCorreo ANd u.contrasena = :pConstrasena",ViajeroEntity.class);
+        q = q.setParameter("pCorreo", pCorreo);
+        q = q.setParameter("pConstrasena", pConstrasena);
+        
+        List<ViajeroEntity> lista =  q.getResultList();
+        
+        return (!lista.isEmpty()) ? lista.get(0) : null ;
+    }
+    
     /**
      * Elimina una entidad (tupla) de la tabla a partir de su id
      *

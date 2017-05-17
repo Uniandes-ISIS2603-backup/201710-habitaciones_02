@@ -1,4 +1,5 @@
 (function (ng) { 
+    
     // Definición del módulo
     var mod = ng.module("viajeroModule", ['ui.router']);
         mod.constant("viajeroContext","api/viajeros");
@@ -12,6 +13,59 @@
             var basePath = 'src/modules/Viajero/';
         // Mostrar la lista de viajeros será el estado por defecto del módulo
             
+            
+            $stateProvider.state('login', {
+                url: '/login',
+
+                resolve: {
+                    viajeros: ['$http', 'viajeroContext', 
+                        function ($http, viajeroContext) {
+                            return $http.get(viajeroContext);
+                        }],
+                    anfitriones: ['$http', function ($http) {
+                            return $http.get('api/anfitriones');
+                        }]
+                },
+                views: {
+
+                    'mainView': {
+
+                        templateUrl: 'src/modules/login.html',
+                        controller: ['$scope', 'anfitriones', 'viajeros', '$http', '$state',
+                            function ($scope, anfitriones, viajeros, $http, $state) {
+                                $scope.RecordsViajero = viajeros.data;
+                                $scope.anfitrionesRecords = anfitriones.data;
+                                
+                                $scope.usuario = {};
+                                
+                                $scope.login = function (){
+                                  
+                                  console.log($scope.usuario.tipo);
+                                  
+                                    if($scope.usuario.tipo == 1){
+                                        
+                                        $http.get('api/viajeros/loginViajero?correoE='
+                                            + $scope.usuario.correo +'&contrasena='+$scope.usuario.contrasena)
+                                            .then(function(resultado){
+                                                    console.log('Econtro viajero!');
+                                                    $state.go('viajeroDetail',{viajeroId: resultado.data.idUsuario});
+                                                    console.log(resultado);
+                                            }).catch (function(error){
+                                                document.getElementById('errorLogin').innerHTML = error.data;
+                                                console.log('se genero este error: ' + error.data);
+                                            });
+                                    }
+                                    else if($scope.usuario.tipo == 2){
+                                        //anfitiron
+                                    }
+                                    
+
+
+                                };
+                            }]
+                    }
+                }
+            });
             
             $stateProvider.state('viajero', {
                 
@@ -70,12 +124,7 @@
                     },
                     'detailView': {
                         templateUrl: basePath + 'viajero.detail.html',
-                        controller: ['$scope', 'currentViajero', 
-                            function ($scope, currentViajero)
-                            {
-                                $scope.currentViajero = currentViajero.data;
-                            }
-                        ]
+                        controller:'viajeroDetailCtrl'
                     }
 
                 } 

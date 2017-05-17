@@ -57,13 +57,19 @@
 
                     <ul class="nav navbar-nav text-right">
                         <li><a ui-sref="viajeroUpdate"><span class="glyphicon glyphicon-pencil"></span><b> Actualizar Infromacion de Perfil</b></a></li>
-                        <li><a ui-sref="viajeroUpdate"><span class="glyphicon glyphicon-remove" style="color: #d43f3a"></span><b style="color: #d43f3a"> Eliminar Cuenta</b></a></li>
+                        <li><button class="btn" style="background-color: white; margin-top: 8px;" ng-click="deleteViajero()"><span class="glyphicon glyphicon-remove" style="color: #d43f3a"></span><b style="color: #d43f3a">Eliminar Cuenta</b></button></li>
                     </ul>
 
                 </div>
 
 
             </nav>
+            
+            <div class="row text-center">
+                <p id="errorDeleteViajero" class="center-block">
+                    
+                </p>
+            </div>
 
             <div ui-view="ListasViajeroView">
 

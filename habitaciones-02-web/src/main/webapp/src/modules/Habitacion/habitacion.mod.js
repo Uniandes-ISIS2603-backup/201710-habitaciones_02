@@ -74,7 +74,18 @@
 
                 }
            
+            }).state('createHabitacion', {
+                url: '/registrarHabitacion',
+                
+                views: {
+                    'mainView': {
+                        templateUrl: basePath + "habitacion.create.html",
+                        controller: 'habitacionCreateCtrl'
+                    }
+                }
             });
+            
+           
         }
     ]);
 })(window.angular);

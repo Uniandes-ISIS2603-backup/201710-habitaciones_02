@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.habitaciones.ejbs;
+package co.edu.uniandes.csw.habitaciones.test.logic;
 
+import co.edu.uniandes.csw.habitaciones.ejbs.ResenaLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
 import co.edu.uniandes.csw.habitaciones.entities.HabitacionEntity;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
