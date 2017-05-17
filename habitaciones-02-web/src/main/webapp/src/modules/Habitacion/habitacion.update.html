@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="panel-default">
+    <style>
+
+        b.TextoCreacion{
+
+            font-size: 16px;
+            margin-left: 60px;
+        }
+        input.Crear{
+            margin-left: 60px;
+        }
+        input.ng-invalid{
+
+            background-color: lightsalmon;
+        }
+        input.ng-valid{
+
+            background-color: lightgreen;
+        }
+
+    </style>
+    <div class="panel-body">
+        <div class="row">
+            <h2 style="text-align: center;">
+                Actualizar Habitaci&oacute;n<br>
+            </h2>
+
+            
+                    <form name="formaCrearH" ng-submit="actualizar()">
+                        <fieldset>
+                            <b class="TextoCreacion">&Aacute;rea:</b><br>
+                            <input class="Crear" name="area" type="number" size="10" min= "0" placeholder="m2" required ng-model="currentHabitacion.area"><br><br>
+                            <b class="TextoCreacion">Capacidad:</b><br>
+                            <input class="Crear" name="capacidad" type="number" size="10" min="1" max="10" step="1"  required ng-model="currentHabitacion.capacidad"><br><br>
+                            <b class="TextoCreacion">Valor Alquiler:</b><br>
+                            <input class="Crear" name="valorAlquiler" type="number" size="10" min="0" required ng-model="currentHabitacion.valorAlquiler"><br><br>
+                            <b class="TextoCreacion">Ruta Imagen:</b><br>
+                            <input class="Crear" name="rutaImagen" type="text" size="100" required ng-model="currentHabitacion.rutaImagen"><br><br>
+                            
+                            <b class="TextoCreacion">Descripci&oacute;n:</b><br>
+                            <input class="Crear" name="descripcion" type="text" size="100" required ng-model="currentHabitacion.descripcion"><br><br>
+                            <input class="Crear center-block" type="submit" value="Actualizar" style="font-size: 16px;">
+                        </fieldset>
+                    </form>
+          
+
+        </div>
+    </div>
+</div>
