@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.csw.habitaciones.persistence;
+package co.edu.uniandes.csw.habitaciones.test.persistence;
 
 import co.edu.uniandes.csw.habitaciones.entities.ViajeroEntity;
+import co.edu.uniandes.csw.habitaciones.persistence.ViajeroPersistence;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
