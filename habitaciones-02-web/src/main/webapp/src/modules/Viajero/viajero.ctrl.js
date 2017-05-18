@@ -1,6 +1,50 @@
 (function (ng) {
     var mod = ng.module("viajeroModule");
 
+    mod.controller("loginCtrl",['$scope', 'anfitriones', 'viajeros', '$http', '$state',
+        function ($scope, anfitriones, viajeros, $http, $state) {
+            $scope.RecordsViajero = viajeros.data;
+            $scope.anfitrionesRecords = anfitriones.data;
+
+            $scope.usuario = {};
+
+            $scope.login = function (){
+
+              console.log($scope.usuario.tipo);
+
+                if($scope.usuario.tipo == 1){
+
+                    $http.get('api/viajeros/loginViajero?correoE='
+                        + $scope.usuario.correo +'&contrasena='+$scope.usuario.contrasena)
+                        .then(function(resultado){
+                                console.log('Econtro viajero!');
+                                $state.go('viajeroDetail',{viajeroId: resultado.data.idUsuario});
+                                console.log(resultado);
+                        }).catch (function(error){
+                            document.getElementById('errorLogin').innerHTML = error.data;
+                            console.log('se genero este error: ' + error.data);
+                        });
+                }
+                else if($scope.usuario.tipo == 2){
+                   $http.get('api/anfitriones/loginAnfitrion?correoE='
+                        + $scope.usuario.correo +'&contrasena='+$scope.usuario.contrasena)
+                        .then(function(resultado){
+                                console.log('Encontró anfitrión!');
+                                $state.go('anfitrionDetail',{anfitrionId: resultado.data.idUsuario});
+                                console.log(resultado);
+                        }).catch (function(error){
+                            document.getElementById('errorLogin').innerHTML = error.data;
+                            console.log('se genero este error: ' + error.data);
+                        });
+                }
+
+
+
+            };
+        }]);
+    
+
+
     mod.controller("viajeroCreateCtrl", ['$scope', '$http', '$state',
         function ($scope, $http, $state) 
         {
