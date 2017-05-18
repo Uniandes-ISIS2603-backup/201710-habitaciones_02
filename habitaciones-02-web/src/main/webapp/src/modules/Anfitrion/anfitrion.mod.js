@@ -80,40 +80,7 @@
                             return presente;
                         }]
                     ,
-                    anfitrionActual: ['$http', 'anfitrionesContext',
-                        '$stateParams', function ($http, anfitrionesContext
-                                , $params) {
-
-
-                            return $http.get(anfitrionesContext + '/' +
-                                    ($params.anfitrionId));
-
-
-                        }], anfitrionSiguiente: ['$http', 'anfitrionesContext',
-                        '$stateParams',
-                        function ($http, anfitrionesContext, $params) {
-
-                            if ($params.anfitrionId + 1 !== 16) {
-                                return $http.get(anfitrionesContext + '/'
-                                        + ($params.anfitrionId + 1));
-                            } else {
-                                return $http.get(anfitrionesContext + '/'
-                                        + ($params.anfitrionId));
-                            }
-
-                        }], anfitrionAnterior: ['$http', 'anfitrionesContext',
-                        '$stateParams',
-                        function ($http, anfitrionesContext, $params) {
-
-                            if ($params.anfitrionId - 1 !== 0) {
-                                return $http.get(anfitrionesContext + '/'
-                                        + ($params.anfitrionId - 1));
-                            } else {
-                                return $http.get(anfitrionesContext + '/'
-                                        + ($params.anfitrionId));
-                            }
-
-                        }], currentAnfitrion: ['$http', 'anfitrionesContext'
+                    currentAnfitrion: ['$http', 'anfitrionesContext'
                                 , '$stateParams',
                         function ($http, anfitrionesContext, $params) {
 
@@ -123,23 +90,6 @@
                         }]},
                
                 views: {
-                    'anfitrionCarouselView': {
-                        templateUrl: basePath + 'anfitrion.carousel.html',
-                        controller: ['$scope', 'anfitrionAnterior', 'anfitrionSiguiente',
-                            'anfitrionActual', 'anfitriones', 'anfitrionPresente',
-                            function ($scope, anfitrionAnterior, anfitrionSiguiente
-                                    , anfitrionActual, anfitriones, anfitrionPresente) {
-
-
-                                $scope.anfitrionPresente = anfitrionPresente;
-                                $scope.anfitrionesRecords = anfitriones.data;
-                                $scope.anfitrionActual = anfitrionActual.data;
-                                $scope.anfitrionSiguiente = anfitrionSiguiente.data;
-                                $scope.anfitrionAnterior = anfitrionAnterior.data;
-
-                            }],
-
-                    },
                     'detailView': {
                         templateUrl: basePath + 'anfitrion.detail.html',
                         controller: ['$state','$scope','$http', 'currentAnfitrion', '$stateParams',
