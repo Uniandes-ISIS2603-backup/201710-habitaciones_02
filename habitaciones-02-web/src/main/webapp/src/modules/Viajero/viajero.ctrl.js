@@ -13,7 +13,7 @@
                     $http.post('api/viajeros', $scope.viajero)
                     .then(function (data) {
                         
-                        $state.go('viajeroDetail',{viajeroId: data.data.idUsuario});
+                        $state.go('viajeroDetail',{viajeroId: data.data.idUsuario},{reload: true});
                         console.log(data);
                     }).catch (function(error){
                         document.getElementById('errorSignUpV').innerHTML = error.data;
@@ -117,7 +117,7 @@
             $scope.deleteViajero = function (){
                 $http.delete('api/viajeros/'+ $stateParams.viajeroId)
                     .then(function(data){
-                        $state.go('viajerosList');
+                        $state.go('viajerosList',{reload: true});
                         console.log(data);
                     }).catch (function(error){
                         document.getElementById('errorDeleteViajero').innerHTML = 'No se ha podido eliminar '

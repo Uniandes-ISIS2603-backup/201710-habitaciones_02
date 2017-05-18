@@ -11,33 +11,33 @@
 
     <div class="panel-body" style="background-color: rgba(255,255,255,0.2)">
 
-        <div class="col-md-3">
+        <div class="col-md-3" style="background-color: rgba(255,255,255,0.8); border-radius: 10px;">
 
             <div  class="row">
 
                 <div id="idV1" class="thumbnail">
-                    <img style="max-height: 300px; min-height: 300px;" class="img-responsive" ng-src="{{currentViajero.imagen}}" alt="{{currentViajero.nombre}}"/>
+                    <img style="max-height: 300px; min-height: 300px; border-radius: 5px;" class="img-responsive" ng-src="{{currentViajero.imagen}}" alt="{{currentViajero.nombre}}"/>
                 </div>
 
             </div>
 
-            <div id="idV1" class="row">
+            <div id="idV1" class="row" >
 
                 <dl>
-                    <dt id="dt1" style="font-size: 20px ">{{currentViajero.nombre}}</dt>
+                    <dt id="dt1" style="font-size: 20px; color: #204d74; ">{{currentViajero.nombre}}</dt>
                     <hr>
 
-                    <dt id="dt1">Identificacion</dt>
-                    <dd  id="dd1">{{currentViajero.tipoDocumento}} : {{currentViajero.numeroDocumento}}</dd>
-                    <hr />
-                    <dt id="dt1">correo Electronico</dt>
-                    <dd id="dd1">{{currentViajero.correoElectronico}}</dd>
+                    <dt id="dt1" style="color: #204d74;">Identificacion</dt>
+                    <dd  id="dd1" style="color: #204d74;">{{currentViajero.tipoDocumento}} : {{currentViajero.numeroDocumento}}</dd>
+                    <hr>
+                    <dt id="dt1" style="color: #204d74;">correo Electronico</dt>
+                    <dd id="dd1" style="color: #204d74;">{{currentViajero.correoElectronico}}</dd>
 
-                    <dt id="dt1">telefono</dt>
-                    <dd id="dd1">{{currentViajero.telefono}}</dd>
+                    <dt id="dt1" style="color: #204d74;">telefono</dt>
+                    <dd id="dd1" style="color: #204d74;">{{currentViajero.telefono}}</dd>
 
-                    <dt id="dt1">direccion</dt>
-                    <dd id="dd1">{{currentViajero.direccion}}</dd>
+                    <dt id="dt1" style="color: #204d74;">direccion</dt>
+                    <dd id="dd1" style="color: #204d74;">{{currentViajero.direccion}}</dd>
 
                 </dl>
 
@@ -45,18 +45,18 @@
         </div>
         <div class="col-md-9">
 
-            <nav style="background-color: rgba(255,255,255,0.6)" class="navbar navbar-default">
+            <nav style="background-color: rgba(255,255,255,0.8)" class="navbar navbar-default">
                 <div class="col-md-6">
                     <ul class="nav navbar-nav">
-                        <li><a ui-sref="viajeroReservasList"><b>Reservas</b></a></li>
-                        <li><a ui-sref="viajeroResenasList"><b>Reseñas Redactadas</b></a></li>  
+                        <li><a ui-sref="viajeroReservasList"><b style="color: #204d74;">Reservas</b></a></li>
+                        <li><a ui-sref="viajeroResenasList"><b style="color: #204d74;">Reseñas Redactadas</b></a></li>  
                     </ul>
 
                 </div>
                 <div class="col-md-6">
 
                     <ul class="nav navbar-nav text-right">
-                        <li><a ui-sref="viajeroUpdate"><span class="glyphicon glyphicon-pencil"></span><b> Actualizar Infromacion de Perfil</b></a></li>
+                        <li><a ui-sref="viajeroUpdate"><span class="glyphicon glyphicon-pencil" style="color: #204d74;"></span><b style="color: #204d74;"> Actualizar Infromacion de Perfil</b></a></li>
                         <li><button class="btn" style="background-color: rgba(255,255,255,0.9); margin-top: 8px;" ng-click="deleteViajero()"><span class="glyphicon glyphicon-remove" style="color: #d43f3a"></span><b style="color: #d43f3a">Eliminar Cuenta</b></button></li>
                     </ul>
 

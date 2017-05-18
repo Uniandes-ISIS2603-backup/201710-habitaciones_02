@@ -92,6 +92,7 @@ public class ViajeroPersistenceTest {
         
         for (int i = 0; i < 3; i++) {
             ViajeroEntity entity = factory.manufacturePojo(ViajeroEntity.class);
+            entity.setActivo(true);
             em.persist(entity);
             data.add(entity);
         }
