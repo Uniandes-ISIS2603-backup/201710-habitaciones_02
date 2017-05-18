@@ -53,6 +53,7 @@ public class ViajeroDTO extends UsuarioDTO {
             this.numeroDocumento = entity.getNumeroDocumento();
             this.direccion = entity.getDireccion();
             this.telefono = entity.getTelefono();
+            this.activo = (entity.getActivo() != null) ? entity.getActivo() : true;
         }
     }
 
@@ -75,6 +76,7 @@ public class ViajeroDTO extends UsuarioDTO {
         entity.setTelefono(this.getTelefono());
         entity.setTipoDocumento(this.getTipoDocumento());
         entity.setImagen(this.getImagen());
+        entity.setActivo(this.getActivo());
 
         return entity;
     }

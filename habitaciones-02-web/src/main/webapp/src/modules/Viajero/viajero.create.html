@@ -1,4 +1,4 @@
-<div class="panel panel-default" style="border-color: #d1eeff;">
+<div class="panel panel-default plantillaUsu" style="border-color: #d1eeff;">
 
     <div class="panel-body">
 
@@ -21,12 +21,8 @@
                 </p>
                 
             </div>
-            
-            <hr>
-            
-            <img id="idSingV1" src="https://upload.wikimedia.org/wikipedia/commons/3/39/NYC_Top_of_the_Rock_Pano.jpg" alt="SignUp Viajero!">
 
-            <div class=" row text-left">
+            <div class=" text-left plantillaUsu">
 
                 <form name="formaCreateV"  novalidate ng-submit="signup()">
 
@@ -38,7 +34,7 @@
 
                     <div id="idSingV2" class=" thumbnail col-md-5">
 
-                        <h3 id="idSingV3">Información Personal</h3><br>
+                        <h2 id="idSingV3">Información Personal</h2><br>
 
                         <input class="form-control usuarios" name="nombre" type="text" placeholder="Nombre Completo" ng-model='viajero.nombre'required><br><br>
 
@@ -57,11 +53,13 @@
 
                         <h2 id="idSingV5">Información de Cuenta</h2><br>
 
-                        <input id="email" type="email" class="form-control Creacion" name="email" placeholder="Email" ng-model='viajero.correoElectronico' placeholder="Correo Electronico" required><br>
+                        <input id="email" type="email" class="form-control usuarios" name="email" placeholder="Email" ng-model='viajero.correoElectronico' placeholder="Correo Electronico" required><br>
 
                         <input class="form-control usuarios" type="password" name="contrasena" ng-model='viajero.contrasena' placeholder="Contraseña" required><br>
 
                         <input class="form-control usuarios" type="password" name="contrasenaV2" id="vcont2" ng-model='usuario.segundaContrasena'  placeholder="Repetir Contraseña" required ><br>
+                        
+                        <br>
                         
                         <input id="idSingV6" class="center-block" type="submit" value="Sign Up">
 

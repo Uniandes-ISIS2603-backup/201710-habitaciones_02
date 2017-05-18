@@ -112,7 +112,7 @@ public class ViajeroLogic
         
         if(resultado == null)
         {
-            throw new BusinessLogicException("No existe un usuario registrao con los datos "
+            throw new BusinessLogicException("No existe un usuario registrado con los datos "
                     + "que fueron ingresados! Por favor intente nuevamente.");
         }
         

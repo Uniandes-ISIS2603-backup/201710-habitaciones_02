@@ -82,7 +82,7 @@ public class ViajeroPersistence
      */
     public List<ViajeroEntity> findAll()
     {
-        Query query = em.createQuery("select u from ViajeroEntity u");
+        Query query = em.createQuery("select u from ViajeroEntity u where u.activo = true");
         return query.getResultList();
     }
 

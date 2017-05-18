@@ -129,6 +129,17 @@ public class ReservaResource {
 //        return new ReservaDetailDTO(logic.updateReserva(entity));
 //    }
     @PUT
+    @Path("{id: \\d+}")
+    public ReservaDetailDTO updateReserva(@PathParam("id") Long id, ReservaDetailDTO dto) throws BusinessLogicException {
+        // TODO Si la reserva  no existe debe disparar WebApplicationException 404
+        if (logic.findReserva(id) == null) {
+            throw new WebApplicationException(404);
+        }
+        ReservaEntity entity = dto.toEntity();
+        entity.setId(id);
+        return new ReservaDetailDTO(logic.updateReserva(entity));
+    }
+    @PUT
     @Path("{id: \\d+}/algo")
     public ReservaDetailDTO updatecancelado(@PathParam("id") Long id) throws BusinessLogicException{
         
