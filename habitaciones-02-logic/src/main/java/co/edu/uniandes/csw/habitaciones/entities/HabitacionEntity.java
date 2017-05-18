@@ -62,7 +62,7 @@ public class HabitacionEntity implements Serializable {
     private Integer capacidad;
 
     @PodamExclude
-    @OneToMany(mappedBy = "habitacion")
+    @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL ) 
     private List<DisponibilidadEntity> disponibilidades;
 
     @PodamExclude
@@ -70,7 +70,7 @@ public class HabitacionEntity implements Serializable {
     private List<ReservaEntity> reservas;
 
     @PodamExclude
-    @OneToMany(mappedBy = "habitacion")
+    @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL)
     private List<ResenaEntity> resenas;
 
     @PodamExclude
