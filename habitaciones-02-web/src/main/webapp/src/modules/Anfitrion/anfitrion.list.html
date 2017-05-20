@@ -5,7 +5,7 @@
         <div  class="col-sm-2 col-md-2" ng-repeat="anfitrion in anfitrionesRecords">
 
 
-            <div style="background-color: rgba(255,255,255,0.3)" class="thumbnail">
+            <div style="background-color: rgba(255,255,255,0.7)" class="thumbnail">
                 <style scoped>
                     img{
                         max-height: 300px; min-height: 300px; 
@@ -14,10 +14,10 @@
 
                 <a ui-sref="anfitrionDetail({anfitrionId: anfitrion.idUsuario})">
                     <div class =" caption text-center">
-                        <div class="caption text-center">{{anfitrion.nombre}}</div>
+                        <div style="color: #1b6d85; font-size: medium; " class="caption text-center"><b>{{anfitrion.nombre}}</b></div>
                         <img class="img-responsive"  align="middle" ng-src='{{anfitrion.imagen}}' alt="{{anfitrion.nombre}}" />
 
-                        <div class="caption text-center">{{anfitrion.correoElectronico}}</div>
+                        <div style="color: #1b6d85; font-size: medium; " class="caption text-center"><b>{{anfitrion.correoElectronico}}</b></div>
                     </div>
                 </a>
 

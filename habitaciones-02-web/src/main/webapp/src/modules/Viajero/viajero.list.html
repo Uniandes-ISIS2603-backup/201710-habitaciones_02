@@ -4,13 +4,12 @@
     <div class="row">
 
         <div class="col-sm-2 col-md-2" ng-repeat="viajero in RecordsViajero">
-            <div style="background-color: rgba(255,255,255,0.3)" class="thumbnail">
+            <div style="background-color: rgba(255,255,255,0.9)" class="thumbnail">
 
                 <a ui-sref="viajeroDetail({viajeroId: viajero.idUsuario})">
                     <div class="caption text-center">
-                        <div class="caption text-center">{{viajero.nombre}}</div>
+                        <div class="caption text-center" style="font-size: 18px; color: #204d74; ">{{viajero.nombre}}</div>
                         <img class="img-responsive" align="middle" ng-src ='{{viajero.imagen}}' alt ="{{viajero.nombre}}"/>
-                        <p>{{viajero.correoElectronico}}</p>
                     </div>
                 </a>
 

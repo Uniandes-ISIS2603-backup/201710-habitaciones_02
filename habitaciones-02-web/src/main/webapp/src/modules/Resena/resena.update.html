@@ -1,8 +1,8 @@
-<div class="panel panel-default" style=" margin-left: 20px; width: 95%;">
+<div class="panel panel-default plantillaUsu" style=" margin-left: 20px; width: 95%;">
 
-    <div class="panel-body" >
+    <div class="panel-body plantillaUsu" >
 
-        <div class="row">
+        <div class="plantillaUsu">
 
             <h3 style="text-align: center;">Editar Resena <br></h3>
 
@@ -14,28 +14,31 @@
 
         </div>
 
-        <form name="formaCreateV"  novalidate ng-submit="updateResena()">
+        <form name="formaCreateV"  novalidate >
 
             <h4> Calificacion:</h4>
 
-            <div class="col-md-2">
-
-
-            </div>
-            <div class="col-md-2">
-                <input type="radio" name="updateCalificacion" ng-model='currentResena.calificacion' value="1">  1 estrella
-            </div>
-            <div class="col-md-2">
-                <input type="radio" name="updateCalificacion" ng-model='currentResena.calificacion' value="2">  2 estrellas
-            </div>
-            <div class="col-md-2">
-                <input type="radio" name="updateCalificacion" ng-model='currentResena.calificacion' value="3">  3 estrellas
-            </div>
-            <div class="col-md-2">
-                <input type="radio" name="updateCalificacion" ng-model='currentResena.calificacion' value="4">  4 estrellas
-            </div>
-            <div class="col-md-2">
-                <input type="radio" name="updateCalificacion" ng-model='currentResena.calificacion' value="5">  5 estrellas
+            <div class="text-center">
+                <button class="btn star" id="star1" ng-mouseover="overStar(1)" ng-mouseleave="leaveStar(1)"
+                        ng-click="setDefaultStar(1)">
+                    ★
+                </button>
+                <button class="btn star" id="star2" ng-mouseover="overStar(2)" ng-mouseleave="leaveStar(2)"
+                        ng-click="setDefaultStar(2)">
+                    ★
+                </button>
+                <button class="btn star" id="star3" ng-mouseover="overStar(3)" ng-mouseleave="leaveStar(3)"
+                        ng-click="setDefaultStar(3)">
+                    ★
+                </button>
+                <button class="btn star" id="star4" ng-mouseover="overStar(4)" ng-mouseleave="leaveStar(4)"
+                        ng-click="setDefaultStar(4)">
+                    ★
+                </button>
+                <button class="btn star" id="star5" ng-mouseover="overStar(5)" ng-mouseleave="leaveStar(5)"
+                        ng-click="setDefaultStar(5)">
+                    ★
+                </button>
             </div>
 
             <br><br>
@@ -45,7 +48,7 @@
 
             <hr>
 
-            <input class="actVButton center-block" type="submit" value="Guardar">
+            <button class="actVButton center-block" type="button" ng-click="updateResena()"> Guardar </button>
 
         </form>
 

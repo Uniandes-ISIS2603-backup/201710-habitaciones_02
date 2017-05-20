@@ -90,6 +90,8 @@ public class UsuarioEntity implements Serializable
      * telefono del usuario
      */
     private String telefono;
+    
+    private Boolean activo;
 
     //----------------------------------------------------------------------------------------------------
     // METODOS
@@ -276,6 +278,15 @@ public class UsuarioEntity implements Serializable
         this.telefono = telefono;
     }
 
+    public Boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(Boolean activo) {
+        this.activo = activo;
+    }
+    
+    
     /**
      * Verfica que los atributos String no sean ni null ni vacios
      *

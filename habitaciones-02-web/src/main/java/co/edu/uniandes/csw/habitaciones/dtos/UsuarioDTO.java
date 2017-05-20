@@ -62,6 +62,11 @@ public class UsuarioDTO implements Serializable {
      * telefono del usuario
      */
     protected String telefono;
+    
+    /**
+     * Verifica si la cuenta se encuentra activa o cancelada
+     */
+    protected Boolean activo;
 
     //----------------------------------------------------------------------------------------------------
     // CONTRUCTORES
@@ -268,5 +273,15 @@ public class UsuarioDTO implements Serializable {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    public Boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(Boolean activo) {
+        this.activo = activo;
+    }
+    
+    
 
 }

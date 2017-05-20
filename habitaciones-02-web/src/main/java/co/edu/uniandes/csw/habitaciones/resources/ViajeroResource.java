@@ -116,7 +116,7 @@ public class ViajeroResource
         ViajeroEntity entity = viajeroLogic.getViajero(id);
         if (entity == null)
         {
-            throw new WebApplicationException(ERROR_404);
+            throw new WebApplicationException((entity == null)+"", ERROR_404);
         }
         ViajeroDetailDTO viajero = new ViajeroDetailDTO(entity);
         return viajero;
@@ -193,16 +193,20 @@ public class ViajeroResource
      * Elimina un viajero de la base de datos
      *
      * @param id el id del viajero
+     * @throws BusinessLogicException
      */
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteViajero(@PathParam("id") Long id) throws WebApplicationException
+    public void deleteViajero(@PathParam("id") Long id)
+    throws BusinessLogicException, WebApplicationException
     {
-        if (viajeroLogic.getViajero(id) == null)
+        ViajeroEntity entity = viajeroLogic.getViajero(id);
+        if (entity == null)
         {
             throw new WebApplicationException(ERROR_404);
         }
-        viajeroLogic.deleteViajero(id);
+        entity.setActivo(false);
+        viajeroLogic.updateViajero(entity);
     }
 
 }

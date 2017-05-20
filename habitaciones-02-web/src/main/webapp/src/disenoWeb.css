@@ -23,9 +23,24 @@ input.form-control{
     font-size: 18px;
 
 }
+
+
+
 input.usuarios.ng-valid:not(#vcont2){
 
     background-color: rgba(0,255,191,0.65);
+    color: black;
+}
+
+input#emailLogin,
+input#passwordLogin{
+    
+    width: 80%;
+}
+
+input.usuariosLogin.ng-valid{
+
+    background-color: rgba(0,255,191,0.8);
     color: black;
 }
 
@@ -36,6 +51,7 @@ input.actV{
 b.actV{
     margin-left: 70px;
     font-size: 16px;
+    color: #204d74;
 }
 
 input.actVButton{
@@ -58,8 +74,23 @@ button.actVButton{
     margin-top: 7px;
 }
 
+button.actVButtonDos{
+    font-size: 17px;
+    background-color: #204d74;
+    border: 4px;
+    border-radius: 10px;
+    color: white; 
+    margin-top: 7px;
+}
+
 select.selectFR{
     border-radius: 5px;
+}
+
+div#labelFiltro{
+    margin-top: 7px;
+    color: #204d74;
+    font-size: 17px;
 }
 
 button#btnFiltroResenas{
@@ -68,7 +99,7 @@ button#btnFiltroResenas{
     border: 4px;
     border-radius: 10px;
     color: white; 
-    width: 20%;
+    width: 15%;
     margin-top: 7px;
 }
 
@@ -110,11 +141,11 @@ p#errorCreateResena{
 
 div#radioLogin{
     background-color: rgba(0,0,0,0.7);
-    width: 45%;
+    width: 30%;
     color: white;
     font-size: 18px;
     border-radius: 10px;
-    margin-left: 120px;
+    margin-left: 100px;
 }
 
 div#loginID1{
@@ -122,10 +153,11 @@ div#loginID1{
     margin-top: 48px; 
     background-color: transparent; 
     border: 0;
+    margin-left: 80px;
 }
 h2#loginID2{
     text-align: center; 
-    color: seashell
+    color: #23527c;
 }
 
 div#loginID3,
@@ -148,10 +180,10 @@ img#loginID7{
 
 input#loginID8{
     font-size: 18px;
-    background-color: white;
+    background-color: #045377;
     border: 0;
     border-radius: 10px;
-    color: #045377; 
+    color: white; 
     width: 40%;
 }
 h2#loginID9{
@@ -181,9 +213,9 @@ div#idSingV2{
     background-color: transparent; 
     border: 0;
 }
-h3#idSingV3{
+h2#idSingV3{
     text-align: left; 
-    color: ghostwhite
+    color: #245269;
 }
 
 div#idSingV4{
@@ -199,11 +231,11 @@ h2#idSingV5{
 
 input#idSingV6{
     font-size: 18px;
-    background-color: white;
+    background-color: #045377;
     border: 0;
     border-radius: 10px;
-    color: #045377; 
-    width: 40%;
+    color: white; 
+    width: 60%;
     margin-left: 50px;
 }
 
@@ -231,4 +263,25 @@ p#idHover:hover{
     -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0) !important;
     box-shadow: inset 0 0 0 rgba(0, 0, 0, 0) !important;
 }
-        
+
+div.plantillaUsu{
+    background-color: rgba(255,255,255,0.7);
+}
+
+div.plantillaUsuUpdate{
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 10px;
+}
+
+div.listaViajeroReserva{
+    background-color: rgba(255,255,255,0.1);
+    border: 0;
+}
+
+div.listaViajeroReservaFiltro{
+    background-color: rgba(255,255,255,0.5);
+    height: 40px;
+    width: 95%;
+    margin-left: 20px;
+    border-radius: 5px;
+}

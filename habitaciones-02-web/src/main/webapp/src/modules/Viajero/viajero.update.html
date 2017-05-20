@@ -1,12 +1,12 @@
-<div class="panel panel-default" style="border-color: #286090">
+<div class="panel panel-default plantillaUsuUpdate">
     
-    <div class="panel-body" >
+    <div class="panel-body plantillaUsuUpdate"  >
 
-        <div class="col-md-5">
+        <div class="col-md-5" style="background-color: transparent;">
             
             <div id="idV1" class="row thumbnail">
 
-                <h3 style="text-align: center;">Verificacion de Usuario <br></h3>
+                <h3 style="text-align: center; color: #204d74;">Verificacion de Usuario <br></h3>
 
                 <p style="text-align: center; font-size: 14px; text-align: center;">
                     Por favor, antes de actualizar sus datos,<br>
@@ -19,8 +19,8 @@
 
                         <b class="actV" >Escriba su contraseña:</b><br>
                         <input class="form-control usuarios actV" type="password" name="contrasena" ng-model='viajero.contrasenaVer' required>
-                        <span ng-show="formaAu.contrasenaV1.$invalid"><b style="color: red; font-size: 12px;">X</b></span><br><br>
-
+                        
+                        <hr style="border: 2px;">
                     </form>
                 </div>
             </div>
@@ -28,7 +28,7 @@
 
             <div id="idV1" class="row thumbnail">
 
-                <h3 style="text-align: center;">Cambio de Contraseña<br></h3>
+                <h3 style="text-align: center; color: #204d74;">Cambio de Contraseña<br></h3>
                 <hr>
 
                 <div class="text-left">
@@ -63,17 +63,18 @@
             
         </div>
         
-        <div class="col-md-7" >
+        <div class="col-md-7 " style="background-color: transparent;" >
                 
             <div id="idV1" class="row thumbnail" style=" margin-left: 20px; width: 98%;">
 
-                <h3 style="text-align: center;">Actualizacion de Datos<br></h3>
+                <h3 style="text-align: center; color: #204d74;">Actualizacion de Datos<br></h3>
 
                 <p style="text-align: center; font-size: 14px; text-align: center;">
                     Por favor, ingrese los datos que desea modificar en su casilla correspondiente.<br>
                     No olvide realizar la verificacion de usuario antes de enviar la informacion.
                 </p>
                 
+                <hr>
                 <br>
                 
                 <div class="text-left">
@@ -81,28 +82,32 @@
 
                         <b class="actV" >Nombre Completo:</b><br>
                         <input class="form-control usuarios actV" name="nombre" type="text" ng-model='currentViajero.nombre' required>
-                        <span ng-show="formaA.nombre.$touched && formaA.nombre.$invalid"><b style="color: red">X</b></span><br><br>
+                        <br>
+                        
+                        <b class="actV" >Imagen de Perfil:</b><br>
+                        <input class="form-control usuarios actV" name="imagen" type="text" ng-model='currentViajero.imagen' required>
+                        <br>
 
                         <b class="actV">Correo Electronico</b><br>
                         <input id="email" type="email" class="form-control usuarios actV" name="email" ng-model='currentViajero.correoElectronico' required>
-                        <span ng-show="formaA.correoElectronico.$invalid"><b style="color: red">X</b></span><br><br>
+                        <br>
 
                         <!-- Pede ser type='radio'?-->
                         <b class="actV">Tipo Documento</b><br>
                         <input class="form-control usuarios actV" name="tipoDocumento" type="text" ng-model='currentViajero.tipoDocumento' required>
-                        <span ng-show="formaA.tipoDocumento.$touched && formaA.tipoDocumento.$invalid"><b style="color: red">X</b></span><br><br>
+                        <br>
 
                         <b class="actV">Numero Documento</b><br>
                         <input class="form-control usuarios actV" name="numeroDocumento" type="text" ng-model='currentViajero.numeroDocumento' required>
-                        <span ng-show="formaA.numeroDocumento.$touched && formaA.numeroDocumento.$invalid"><b style="color: red">X</b></span><br><br>
+                        <br>
 
                         <b class="actV">Direccion</b><br>
                         <input class="form-control usuarios actV" name="direccion" type="text" ng-model='currentViajero.direccion' required>
-                        <span ng-show="formaA.direccion.$touched && formaA.direccion.$invalid"><b style="color: red">X</b></span><br><br>
+                        <br>
 
                         <b class="actV">Telefono de Contacto</b><br>
                         <input class="form-control usuarios actV" name="telefono" type="text" ng-model='currentViajero.telefono'required>
-                        <span ng-show="formaA.telefono.$touched && formaA.telefono.$invalid"><b style="color: red">X</b></span><br><br>
+                        <br>
 
                         <input class='actVButton center-block' type="submit" value="Actualizar datos">
                         
