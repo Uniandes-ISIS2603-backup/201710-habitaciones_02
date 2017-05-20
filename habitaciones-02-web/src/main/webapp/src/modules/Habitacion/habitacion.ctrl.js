@@ -16,7 +16,7 @@
             $scope.habitacion = {};
             $scope.crear = function ()
             {
-console.log($scope.habitacion);
+
                 $http.post('api/habitaciones', $scope.habitacion)
                         .then(function (data)
                         {
