@@ -129,7 +129,7 @@ public class ReservaResource {
         return new ReservaDetailDTO(logic.updateReserva(entity));
     }
     @PUT
-    @Path("{id: \\d+}")
+    @Path("davidEsUnIdiota/{id: \\d+}")
     public ReservaDetailDTO updatecancelado(@PathParam("id") Long id) throws BusinessLogicException{
         
         if(logic.findReserva(id) == null)
