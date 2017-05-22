@@ -36,7 +36,8 @@
             {
 
 
-                $http.put('api/habitaciones/' + $stateParams.id, $scope.currentHabitacion)
+                $http.put('api/habitaciones/' , $scope.currentHabitacion.id)
+                
                         .then(function (data)
                         {
                             $state.go('habitacionDetail', {habitacionId: $stateParams.id});
@@ -57,14 +58,15 @@
             
             $scope.delete = function(){
                 
-                $http.delete('api/habitaciones/'+ $stateParams.id)
+                $http.delete('api/habitaciones/'+ currentHabitacion.data.id)
                     .then(function(data){
-                        $state.go('habitacionesList');
+                        $state.go('habitacionesList',{reload: true});
                         console.log(data);
                     });
             };
 
         }]
     );
+    
 
 })(window.angular);
