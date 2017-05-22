@@ -6,10 +6,11 @@
          
         <form action= api/reservas/{{currentReserva.id}} method=”put” if-match=”q1w2e3r4t5”>
             
-            <input  class="Creacion center-block" value=”false” type=”submit” style="font-size: 16px;" />
-         <input class="Creacion center-block" type="submit" value="Sign Up" style="font-size: 16px;">
+            <input  class="Creacion center-block" value=0 type=”submit” style="font-size: 16px;" />
+            <dd></dd>
+         <input class="Creacion center-block" type="submit" value="Change status" style="font-size: 16px;">
         </form>
-        
+        <dd></dd>
         
        
        
@@ -17,10 +18,7 @@
       
        
        <button class="delete" data-target="http://localhost:8080/habitaciones-02-web/api/reservas" data-method="DELETE" data-disabled="true">Eliminar Reserva</button>
-         
-       <form action=”http://localhost:8080/habitaciones-02-web/api/reservas/currentReservas.ID” method=”delete” if-match=”q1w2e3r4t5”>
-            <input type=”submit” />
-        </form>
+
      </center>
 
 </div>      

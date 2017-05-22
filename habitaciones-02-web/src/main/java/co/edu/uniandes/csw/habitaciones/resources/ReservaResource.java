@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.habitaciones.resources;
 
+import co.edu.uniandes.csw.habitaciones.dtos.HabitacionDetailDTO;
 import co.edu.uniandes.csw.habitaciones.dtos.ReservaDetailDTO;
 import co.edu.uniandes.csw.habitaciones.ejbs.ReservaLogic;
 import co.edu.uniandes.csw.habitaciones.entities.ReservaEntity;
@@ -66,11 +67,16 @@ public class ReservaResource {
      * @param idViajero
      * @return List ReservaDetailDTO
      */
-    @GET
-    public List<ReservaDetailDTO> getReservasByViajero(@PathParam("viajeroId") Long idViajero) {
-        return listEntity2DTO(logic.findReservasByViajero(idViajero));
-    }
+    //@GET
+    //public List<ReservaDetailDTO> getReservasByViajero(@PathParam("viajeroId") Long idViajero) {
+      //  return listEntity2DTO(logic.findReservasByViajero(idViajero));
+    //}
 
+    @GET
+    public List<ReservaDetailDTO> getReservas() {
+
+        return listEntity2DTO(logic.findReservas());
+    }
     /**
      * encargado de buscar la reserva con el id introducido
      *

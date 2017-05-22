@@ -5,13 +5,12 @@
                 <div class="panel-body">
                     <div class="row">
                         <nav style="margin-top: -5px; font-size: 20px;  border-top: none;background-color: white; border-color: #d1eeff" class="navbar navbar-default"> 
-                            <div class="col-md-10">
+                            <div class="col-md-12">
                                 <ul class="nav navbar-nav">
-
-                                    <li><a ui-sref="reservaViajeroList"><b>Viajero</b></a></li>
-                                    <li><a ui-sref="reservaAnfitrionList"><b>Anfitrion</b></a></li>
-                                    <li><a ui-sref="reservaoptionlist"><b>Option</b></a></li>
-                                    <li><a ui-sref="reservaCreate"><b>Crea Reserva</b></a></li>
+                                    <li><a ui-sref="reservaViajeroList">Viajero</a></li>
+                                    <li><a ui-sref="reservaAnfitrionList">Anfitrion</a></li>
+                                    <li><a ui-sref="reservaoptionlist">Option</a></li>
+                                    <li><a ui-sref="reservaCreate">Crear</a></li>
                                     <hr>
                                 </ul>
 
@@ -37,10 +36,10 @@
 
                     <center>
                         <dt > Fecha Inicio </dt>
-                        <dd > {{currentReserva.fechaInicioEstadia}}</dd>
+                        <dd > {{currentReserva.fechaInicio}}</dd>
                         <dt > &ensp; </dt>
                         <dt > Fecha final </dt>
-                        <dd > {{currentReserva.fechaTerminacionEstadia}}</dd>
+                        <dd > {{currentReserva.fechaTerminacion}}</dd>
                         <dt > &ensp; </dt>
                         <dt > Precio </dt>
                         <dd > {{currentReserva.precio}}</dd>
