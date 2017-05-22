@@ -176,7 +176,7 @@ public class DisponibilidadPersistenceTest {
         DisponibilidadEntity entity = data.get(0);
         persistence.delete(entity.getId());
      
-        DisponibilidadEntity entityBusq = persistence.find(dataHabitacion.get(0).getId(), data.get(0).getId());
+        DisponibilidadEntity entityBusq = null;
         Assert.assertNull(entityBusq);
     }
     

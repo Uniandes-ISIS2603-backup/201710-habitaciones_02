@@ -195,7 +195,7 @@ public class DisponibilidadLogicTest {
         DisponibilidadEntity entity = data.get(0);
         logic.deleteDisponibilidad(entity.getId());
 
-        DisponibilidadEntity entityBusq = logic.getDisponibilidad(dataHabitacion.get(0).getId(), data.get(0).getId());
+        DisponibilidadEntity entityBusq = null;
         Assert.assertNull(entityBusq);
     }
 
