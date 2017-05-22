@@ -1,6 +1,7 @@
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("reservaModule", ['ui.router']);
+    mod.constant("reservasContext", "api/reservas");
 
     // Configuración de los estados del módulo
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -15,8 +16,9 @@
                 // Se define una variable reservas (del estado) que toma por valor  para el json
                 // la colección de libros que obtiene utilizando $http.get 
                 resolve: {
-                    reservas: ['$http', function ($http) {
-                            return $http.get('data/reservas.json'); // $http retorna un apromesa que aquí no se está manejando si viene con error.
+                     reservas: ['$http', 'reservasContext',
+                        function ($http, reservasContext) {
+                            return $http.get(reservasContext);
                         }]
                 },
                 // Template que se utilizara para ejecutar el estado
@@ -37,8 +39,9 @@
                 // la colección de anfitriones que obtiene utilizando $http.get 
 
                 resolve: {
-                    reservas: ['$http', function ($http) {
-                            return $http.get('data/reservas.json');
+                     reservas: ['$http', 'reservasContext',
+                        function ($http, reservasContext) {
+                            return $http.get(reservasContext);
                         }],
                     viajeros: ['$http', function ($http) {
                             return $http.get('data/viajeros.json');
@@ -65,7 +68,7 @@
                     'detailView': {
                         templateUrl: basePath + 'reserva.detail.html',
                         controller: ['$scope', '$stateParams', function ($scope, $params) {
-                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId - 2];
+                                $scope.currentReserva = $scope.reservasRecords[$params.reservaId - 1];
                             }]
                     }
 

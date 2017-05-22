@@ -30,6 +30,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import uk.co.jemos.podam.common.PodamExclude;
@@ -91,7 +92,7 @@ public class ReservaEntity implements Serializable {
      * Una relacion de one to one con el pago
      */
     @PodamExclude
-    @OneToOne(mappedBy = "reserva")
+    @OneToOne(mappedBy = "reserva",fetch = FetchType.LAZY)
     private PagoEntity pago;
 
     /**
