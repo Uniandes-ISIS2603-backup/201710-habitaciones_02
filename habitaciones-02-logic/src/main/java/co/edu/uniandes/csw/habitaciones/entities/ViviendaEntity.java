@@ -33,6 +33,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import uk.co.jemos.podam.common.PodamExclude;
 
 /**
@@ -47,7 +48,12 @@ public class ViviendaEntity implements Serializable
      * El id de la vivienda
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="viv_seq")
+	@SequenceGenerator(
+		name="viv_seq",
+		sequenceName="viv_sequence",
+		allocationSize=20
+	)
     private Long id;
 
     /**
@@ -70,8 +76,7 @@ public class ViviendaEntity implements Serializable
      */
 
     @PodamExclude
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "vivienda")
-
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "vivienda", cascade = CascadeType.ALL)
     private List<HabitacionEntity> habitacion;
 
     /**
